@@ -8268,6 +8268,125 @@
                     { from: 'AI Event Bus', to: 'AI Queue Manager', content: '事件广播' },
                     { from: 'AI Queue Manager', to: 'AI PubSub Engine', content: '订阅确认' }
                 ]
+            },
+            // Cycle 312 新增模板
+            {
+                id: 'ai-agent-orchestration',
+                name: 'AI Agent编排流程',
+                icon: '🎼',
+                desc: '从Agent编排到协作执行的完整流程',
+                agents: ['AI Agent Orchestrator', 'AI Team Lead', 'AI Task Coordinator', 'AI Agent Architect', 'QA'],
+                positions: [
+                    { role: 'AI Agent Orchestrator', x: 400, y: 30 },
+                    { role: 'AI Team Lead', x: 200, y: 150 },
+                    { role: 'AI Task Coordinator', x: 600, y: 150 },
+                    { role: 'AI Agent Architect', x: 400, y: 270 },
+                    { role: 'QA', x: 400, y: 390 }
+                ],
+                messageFlows: [
+                    { from: 'AI Agent Orchestrator', to: 'AI Team Lead', content: '编排需求' },
+                    { from: 'AI Team Lead', to: 'AI Task Coordinator', content: '任务分配' },
+                    { from: 'AI Task Coordinator', to: 'AI Agent Architect', content: 'Agent设计' },
+                    { from: 'AI Agent Architect', to: 'QA', content: '提交测试' },
+                    { from: 'QA', to: 'AI Agent Orchestrator', content: '测试报告' }
+                ]
+            },
+            {
+                id: 'ai-quality-assurance',
+                name: 'AI质量保证流程',
+                icon: '✅',
+                desc: '从质量检测到保证的完整流程',
+                agents: ['AI Quality Assurance', 'AI Test Automation', 'AI Performance Tester', 'AI Agent Tester'],
+                positions: [
+                    { role: 'AI Quality Assurance', x: 400, y: 30 },
+                    { role: 'AI Test Automation', x: 200, y: 150 },
+                    { role: 'AI Performance Tester', x: 600, y: 150 },
+                    { role: 'AI Agent Tester', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Quality Assurance', to: 'AI Test Automation', content: '测试计划' },
+                    { from: 'AI Test Automation', to: 'AI Performance Tester', content: '测试脚本' },
+                    { from: 'AI Performance Tester', to: 'AI Agent Tester', content: '性能报告' },
+                    { from: 'AI Agent Tester', to: 'AI Quality Assurance', content: '测试结果' }
+                ]
+            },
+            {
+                id: 'ai-devops-pipeline',
+                name: 'AI DevOps流水线',
+                icon: '🛠️',
+                desc: '从代码提交到持续部署的完整流程',
+                agents: ['AI DevOps Engineer', 'AI Release Manager', 'AI CI/CD Engineer', 'AI Infrastructure as Code', 'Security'],
+                positions: [
+                    { role: 'AI DevOps Engineer', x: 400, y: 30 },
+                    { role: 'AI Release Manager', x: 200, y: 150 },
+                    { role: 'AI CI/CD Engineer', x: 600, y: 150 },
+                    { role: 'AI Infrastructure as Code', x: 400, y: 270 },
+                    { role: 'Security', x: 400, y: 390 }
+                ],
+                messageFlows: [
+                    { from: 'AI DevOps Engineer', to: 'AI Release Manager', content: '部署需求' },
+                    { from: 'AI Release Manager', to: 'AI CI/CD Engineer', content: '发布计划' },
+                    { from: 'AI CI/CD Engineer', to: 'AI Infrastructure as Code', content: 'CI/CD配置' },
+                    { from: 'AI Infrastructure as Code', to: 'Security', content: '安全检查' },
+                    { from: 'Security', to: 'AI DevOps Engineer', content: '安全报告' }
+                ]
+            },
+            {
+                id: 'ai-collaboration-workflow',
+                name: 'AI协作工作流',
+                icon: '🤝',
+                desc: '多Agent协作的完整工作流程',
+                agents: ['AI Collaboration Hub', 'AI Workflow Designer', 'AI Agent Orchestrator', 'AI Task Coordinator'],
+                positions: [
+                    { role: 'AI Collaboration Hub', x: 400, y: 30 },
+                    { role: 'AI Workflow Designer', x: 200, y: 150 },
+                    { role: 'AI Agent Orchestrator', x: 600, y: 150 },
+                    { role: 'AI Task Coordinator', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Collaboration Hub', to: 'AI Workflow Designer', content: '协作需求' },
+                    { from: 'AI Workflow Designer', to: 'AI Agent Orchestrator', content: '工作流设计' },
+                    { from: 'AI Agent Orchestrator', to: 'AI Task Coordinator', content: '编排方案' },
+                    { from: 'AI Task Coordinator', to: 'AI Collaboration Hub', content: '执行结果' }
+                ]
+            },
+            {
+                id: 'ai-security-testing',
+                name: 'AI安全测试流程',
+                icon: '🔒',
+                desc: '从安全检测到风险控制的完整流程',
+                agents: ['AI Security Tester', 'AI Security Engineer', 'AI Vulnerability Scanner', 'AI Threat Detector'],
+                positions: [
+                    { role: 'AI Security Tester', x: 400, y: 30 },
+                    { role: 'AI Security Engineer', x: 200, y: 150 },
+                    { role: 'AI Vulnerability Scanner', x: 600, y: 150 },
+                    { role: 'AI Threat Detector', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Security Tester', to: 'AI Security Engineer', content: '安全需求' },
+                    { from: 'AI Security Engineer', to: 'AI Vulnerability Scanner', content: '漏洞扫描' },
+                    { from: 'AI Vulnerability Scanner', to: 'AI Threat Detector', content: '漏洞报告' },
+                    { from: 'AI Threat Detector', to: 'AI Security Tester', content: '威胁分析' }
+                ]
+            },
+            {
+                id: 'ai-performance-optimization',
+                name: 'AI性能优化流程',
+                icon: '⚡',
+                desc: '从性能分析到优化的完整流程',
+                agents: ['AI Performance Tester', 'AI Latency Optimizer', 'AI Inference Optimizer', 'AI Cache Engineer'],
+                positions: [
+                    { role: 'AI Performance Tester', x: 400, y: 30 },
+                    { role: 'AI Latency Optimizer', x: 200, y: 150 },
+                    { role: 'AI Inference Optimizer', x: 600, y: 150 },
+                    { role: 'AI Cache Engineer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Performance Tester', to: 'AI Latency Optimizer', content: '性能报告' },
+                    { from: 'AI Latency Optimizer', to: 'AI Inference Optimizer', content: '优化方案' },
+                    { from: 'AI Inference Optimizer', to: 'AI Cache Engineer', content: '缓存策略' },
+                    { from: 'AI Cache Engineer', to: 'AI Performance Tester', content: '优化结果' }
+                ]
             }
         ];
 
@@ -8653,7 +8772,25 @@
             'AI Kubernetes Admin': { icon: '☸️', color: '#3b82f6', role: 'AI Kubernetes管理员' },
             'AI Cloud Native': { icon: '☁️', color: '#06b6d4', role: 'AI云原生工程师' },
             'AI Serverless Architect': { icon: 'λ', color: '#f97316', role: 'AI无服务器架构师' },
-            'AI Edge Computing': { icon: '📡', color: '#dc2626', role: 'AI边缘计算工程师' }
+            'AI Edge Computing': { icon: '📡', color: '#dc2626', role: 'AI边缘计算工程师' },
+            // Cycle 311 新增角色 - AI Agent 开发与运维
+            'AI Agent Architect': { icon: '🏛️', color: '#0ea5e9', role: 'AI Agent架构师' },
+            'AI Agent Tester': { icon: '🧪', color: '#22c55e', role: 'AI Agent测试工程师' },
+            'AI Agent Debugger': { icon: '🔧', color: '#f97316', role: 'AI Agent调试工程师' },
+            'AI Agent Monitor': { icon: '📊', color: '#a855f7', role: 'AI Agent监控师' },
+            'AI Agent Scheduler': { icon: '⏰', color: '#ec4899', role: 'AI Agent调度器' },
+            // Cycle 311 新增角色 - AI 安全与合规
+            'AI Security Engineer': { icon: '🔒', color: '#dc2626', role: 'AI安全工程师' },
+            'AI Privacy Officer': { icon: '🔐', color: '#0891b2', role: 'AI隐私官' },
+            'AI Compliance Auditor': { icon: '📋', color: '#14b8a6', role: 'AI合规审计员' },
+            'AI Threat Detector': { icon: '⚠️', color: '#ef4444', role: 'AI威胁检测器' },
+            'AI Vulnerability Scanner': { icon: '🔎', color: '#f59e0b', role: 'AI漏洞扫描器' },
+            // Cycle 311 新增角色 - AI 数据与知识
+            'AI Data Curator': { icon: '📚', color: '#8b5cf6', role: 'AI数据管理师' },
+            'AI Knowledge Engineer': { icon: '🗂️', color: '#06b6d4', role: 'AI知识工程师' },
+            'AI Data Quality': { icon: '✅', color: '#22c55e', role: 'AI数据质量师' },
+            'AI ETL Developer': { icon: '🔄', color: '#f97316', role: 'AI ETL开发工程师' },
+            'AI Data Pipeline': { icon: '📊', color: '#a855f7', role: 'AI数据管道工程师' }
         };
 
         // 拖拽相关变量
