@@ -3160,6 +3160,130 @@
                     { from: 'Growth Hacker', to: 'Marketing', content: '实验推广计划' },
                     { from: 'Marketing', to: 'Growth Hacker', content: '实验结果反馈' }
                 ]
+            },
+            // 新增模板
+            {
+                id: 'risk-management',
+                name: '风险管理',
+                icon: '⚠️',
+                desc: '从风险识别到应对措施的风险管理流程',
+                agents: ['Risk Control', 'CFO', 'Legal Counsel', 'CEO'],
+                positions: [
+                    { role: 'Risk Control', x: 400, y: 30 },
+                    { role: 'CFO', x: 200, y: 150 },
+                    { role: 'Legal Counsel', x: 600, y: 150 },
+                    { role: 'CEO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Risk Control', to: 'CFO', content: '财务风险评估报告' },
+                    { from: 'CFO', to: 'Risk Control', content: '风险应对建议' },
+                    { from: 'Risk Control', to: 'Legal Counsel', content: '法律风险评估需求' },
+                    { from: 'Legal Counsel', to: 'Risk Control', content: '合规风险分析' },
+                    { from: 'Risk Control', to: 'CEO', content: '综合风险评估报告' }
+                ]
+            },
+            {
+                id: 'business-development',
+                name: '商务拓展',
+                icon: '🤝',
+                desc: '从市场开拓到合作达成的商务拓展流程',
+                agents: ['Business Development', 'Sales', 'Legal Counsel', 'CEO'],
+                positions: [
+                    { role: 'Business Development', x: 400, y: 30 },
+                    { role: 'Sales', x: 200, y: 150 },
+                    { role: 'Legal Counsel', x: 600, y: 150 },
+                    { role: 'CEO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Business Development', to: 'Sales', content: '潜在客户名单' },
+                    { from: 'Sales', to: 'Business Development', content: '客户需求分析' },
+                    { from: 'Business Development', to: 'Legal Counsel', content: '合同条款审核' },
+                    { from: 'Legal Counsel', to: 'Business Development', content: '法律意见' },
+                    { from: 'Business Development', to: 'CEO', content: '合作成果报告' }
+                ]
+            },
+            {
+                id: 'pr-campaign',
+                name: '公关活动',
+                icon: '📣',
+                desc: '从策划到执行的品牌公关活动流程',
+                agents: ['PR Manager', 'Brand Strategist', 'Content Strategist', 'CEO'],
+                positions: [
+                    { role: 'PR Manager', x: 400, y: 30 },
+                    { role: 'Brand Strategist', x: 200, y: 150 },
+                    { role: 'Content Strategist', x: 600, y: 150 },
+                    { role: 'CEO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'PR Manager', to: 'Brand Strategist', content: '品牌公关策略需求' },
+                    { from: 'Brand Strategist', to: 'PR Manager', content: '品牌定位建议' },
+                    { from: 'PR Manager', to: 'Content Strategist', content: '公关内容需求' },
+                    { from: 'Content Strategist', to: 'PR Manager', content: '内容素材' },
+                    { from: 'PR Manager', to: 'CEO', content: '公关活动效果报告' }
+                ]
+            },
+            {
+                id: 'strategic-planning',
+                name: '战略规划',
+                icon: '🎯',
+                desc: '从目标设定到战略执行的规划流程',
+                agents: ['Strategic Planner', 'CEO', 'CFO', 'Operations'],
+                positions: [
+                    { role: 'Strategic Planner', x: 400, y: 30 },
+                    { role: 'CEO', x: 200, y: 150 },
+                    { role: 'CFO', x: 600, y: 150 },
+                    { role: 'Operations', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Strategic Planner', to: 'CEO', content: '战略目标建议' },
+                    { from: 'CEO', to: 'Strategic Planner', content: '战略方向确认' },
+                    { from: 'Strategic Planner', to: 'CFO', content: '财务预测需求' },
+                    { from: 'CFO', to: 'Strategic Planner', content: '财务可行性分析' },
+                    { from: 'Strategic Planner', to: 'Operations', content: '执行计划' },
+                    { from: 'Operations', to: 'CEO', content: '执行进度报告' }
+                ]
+            },
+            {
+                id: 'channel-management',
+                name: '渠道管理',
+                icon: '📡',
+                desc: '从渠道开发到运营管理的渠道策略流程',
+                agents: ['Channel Manager', 'Sales', 'Operations', 'Marketing'],
+                positions: [
+                    { role: 'Channel Manager', x: 400, y: 30 },
+                    { role: 'Sales', x: 200, y: 150 },
+                    { role: 'Operations', x: 600, y: 150 },
+                    { role: 'Marketing', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Channel Manager', to: 'Sales', content: '渠道销售目标' },
+                    { from: 'Sales', to: 'Channel Manager', content: '渠道业绩反馈' },
+                    { from: 'Channel Manager', to: 'Operations', content: '渠道物流需求' },
+                    { from: 'Operations', to: 'Channel Manager', content: '渠道运营报告' },
+                    { from: 'Channel Manager', to: 'Marketing', content: '渠道推广计划' },
+                    { from: 'Marketing', to: 'Channel Manager', content: '推广效果数据' }
+                ]
+            },
+            {
+                id: 'investor-relations',
+                name: '投资者关系',
+                icon: '💼',
+                desc: '从信息披露到投资者沟通的IR流程',
+                agents: ['Investment Analyst', 'CFO', 'CEO', 'PR Manager'],
+                positions: [
+                    { role: 'Investment Analyst', x: 400, y: 30 },
+                    { role: 'CFO', x: 200, y: 150 },
+                    { role: 'CEO', x: 600, y: 150 },
+                    { role: 'PR Manager', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Investment Analyst', to: 'CFO', content: '财务数据需求' },
+                    { from: 'CFO', to: 'Investment Analyst', content: '财务数据提供' },
+                    { from: 'Investment Analyst', to: 'CEO', content: '投资者会议准备' },
+                    { from: 'CEO', to: 'Investment Analyst', content: '路演材料确认' },
+                    { from: 'Investment Analyst', to: 'PR Manager', content: '信息披露需求' },
+                    { from: 'PR Manager', to: 'Investment Analyst', content: '媒体关系报告' }
+                ]
             }
         ];
 
@@ -3205,7 +3329,13 @@
             'Brand Strategist': { icon: '💎', color: '#f59e0b', role: '品牌策略师' },
             'Product Marketing': { icon: '📣', color: '#8b5cf6', role: '产品营销经理' },
             'Investment Analyst': { icon: '💼', color: '#0ea5e9', role: '投资分析师' },
-            'Customer Success': { icon: '🤝', color: '#22c55e', role: '客户成功经理' }
+            'Customer Success': { icon: '🤝', color: '#22c55e', role: '客户成功经理' },
+            // 新增角色
+            'Risk Control': { icon: '⚠️', color: '#dc2626', role: '风险控制专员' },
+            'Business Development': { icon: '🤝', color: '#7c3aed', role: '商务拓展经理' },
+            'PR Manager': { icon: '📣', color: '#f59e0b', role: '公关经理' },
+            'Strategic Planner': { icon: '🎯', color: '#0d9488', role: '战略规划师' },
+            'Channel Manager': { icon: '📡', color: '#06b6d4', role: '渠道管理经理' }
         };
 
         // 拖拽相关变量
