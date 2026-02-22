@@ -4031,6 +4031,135 @@
                     { from: 'DevOps', to: 'Tech Lead', content: '部署状态' },
                     { from: 'Tech Lead', to: 'Security', content: '安全审查需求' }
                 ]
+            },
+            // Cycle 280 新增模板
+            {
+                id: 'mobile-development',
+                name: '移动应用开发',
+                icon: '📱',
+                desc: '从需求分析到移动端发布的开发流程',
+                agents: ['CEO', 'Mobile Developer', 'Backend Developer', 'QA', 'Product Designer'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Mobile Developer', x: 200, y: 150 },
+                    { role: 'Backend Developer', x: 600, y: 150 },
+                    { role: 'Product Designer', x: 200, y: 270 },
+                    { role: 'QA', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Mobile Developer', content: '确定移动端需求' },
+                    { from: 'Mobile Developer', to: 'Backend Developer', content: 'API 接口需求' },
+                    { from: 'Backend Developer', to: 'Mobile Developer', content: 'API 开发完成' },
+                    { from: 'Mobile Developer', to: 'Product Designer', content: 'UI 调整需求' },
+                    { from: 'Product Designer', to: 'Mobile Developer', content: '设计稿更新' },
+                    { from: 'Mobile Developer', to: 'QA', content: '提交测试' }
+                ]
+            },
+            {
+                id: 'cloud-architecture',
+                name: '云架构设计',
+                icon: '☁️',
+                desc: '从业务需求到云架构方案的设计流程',
+                agents: ['CTO', 'Cloud Architect', 'DevOps', 'Security', 'Backend Developer'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'Cloud Architect', x: 400, y: 130 },
+                    { role: 'DevOps', x: 200, y: 250 },
+                    { role: 'Security', x: 600, y: 250 },
+                    { role: 'Backend Developer', x: 400, y: 350 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Cloud Architect', content: '设计云架构方案' },
+                    { from: 'Cloud Architect', to: 'DevOps', content: '部署架构需求' },
+                    { from: 'Cloud Architect', to: 'Security', content: '安全架构要求' },
+                    { from: 'Cloud Architect', to: 'Backend Developer', content: '开发架构规范' },
+                    { from: 'DevOps', to: 'Cloud Architect', content: '部署方案确认' },
+                    { from: 'Security', to: 'Cloud Architect', content: '安全合规确认' }
+                ]
+            },
+            {
+                id: 'fullstack-development',
+                name: '全栈开发项目',
+                icon: '🌐',
+                desc: '从前端到后端的全栈开发流程',
+                agents: ['Tech Lead', 'Frontend Developer', 'Backend Developer', 'Database Admin', 'QA'],
+                positions: [
+                    { role: 'Tech Lead', x: 400, y: 30 },
+                    { role: 'Frontend Developer', x: 200, y: 150 },
+                    { role: 'Backend Developer', x: 600, y: 150 },
+                    { role: 'Database Admin', x: 200, y: 270 },
+                    { role: 'QA', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Tech Lead', to: 'Frontend Developer', content: '前端开发任务' },
+                    { from: 'Tech Lead', to: 'Backend Developer', content: '后端开发任务' },
+                    { from: 'Backend Developer', to: 'Database Admin', content: '数据库设计需求' },
+                    { from: 'Database Admin', to: 'Backend Developer', content: '数据库设计完成' },
+                    { from: 'Frontend Developer', to: 'Backend Developer', content: '前后端联调' },
+                    { from: 'Backend Developer', to: 'QA', content: '提交测试' }
+                ]
+            },
+            {
+                id: 'database-optimization',
+                name: '数据库优化',
+                icon: '🗄️',
+                desc: '从性能分析到数据库优化的流程',
+                agents: ['CTO', 'Database Admin', 'Backend Developer', 'DevOps', 'QA'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'Database Admin', x: 400, y: 130 },
+                    { role: 'Backend Developer', x: 200, y: 250 },
+                    { role: 'DevOps', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Database Admin', content: '需要进行数据库性能优化' },
+                    { from: 'Database Admin', to: 'Backend Developer', content: '查询优化需求' },
+                    { from: 'Backend Developer', to: 'Database Admin', content: 'SQL 优化完成' },
+                    { from: 'Database Admin', to: 'DevOps', content: '数据库配置调整' },
+                    { from: 'DevOps', to: 'QA', content: '性能测试' }
+                ]
+            },
+            {
+                id: 'frontend-refactoring',
+                name: '前端重构',
+                icon: '🎭',
+                desc: '从代码审查到前端重构的流程',
+                agents: ['Tech Lead', 'Frontend Developer', 'Product Designer', 'QA', 'CEO'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Tech Lead', x: 400, y: 120 },
+                    { role: 'Frontend Developer', x: 200, y: 230 },
+                    { role: 'Product Designer', x: 600, y: 230 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Tech Lead', content: '需要重构前端代码' },
+                    { from: 'Tech Lead', to: 'Frontend Developer', content: '制定重构计划' },
+                    { from: 'Frontend Developer', to: 'Product Designer', content: 'UI 组件需求' },
+                    { from: 'Product Designer', to: 'Frontend Developer', content: '设计稿交付' },
+                    { from: 'Frontend Developer', to: 'QA', content: '重构后测试' }
+                ]
+            },
+            {
+                id: 'backend-microservices',
+                name: '微服务架构迁移',
+                icon: '🔧',
+                desc: '从单体应用到微服务架构的迁移流程',
+                agents: ['CTO', 'Cloud Architect', 'Backend Developer', 'DevOps', 'QA'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'Cloud Architect', x: 200, y: 150 },
+                    { role: 'Backend Developer', x: 600, y: 150 },
+                    { role: 'DevOps', x: 200, y: 270 },
+                    { role: 'QA', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Cloud Architect', content: '设计微服务架构' },
+                    { from: 'Cloud Architect', to: 'Backend Developer', content: '服务拆分方案' },
+                    { from: 'Backend Developer', to: 'DevOps', content: '容器化部署需求' },
+                    { from: 'DevOps', to: 'Backend Developer', content: 'K8s 集群就绪' },
+                    { from: 'Backend Developer', to: 'QA', content: '服务测试' },
+                    { from: 'QA', to: 'CTO', content: '迁移验证报告' }
+                ]
             }
         ];
 
@@ -4122,7 +4251,14 @@
             'Tech Lead': { icon: '👨‍💻', color: '#14b8a6', role: '技术负责人' },
             'Data Scientist': { icon: '🔮', color: '#06b6d4', role: '数据科学家' },
             'Infrastructure Engineer': { icon: '🏗️', color: '#64748b', role: '基础架构工程师' },
-            'Performance Engineer': { icon: '⚡', color: '#f59e0b', role: '性能工程师' }
+            'Performance Engineer': { icon: '⚡', color: '#f59e0b', role: '性能工程师' },
+            // Cycle 280 新增角色
+            'Full Stack Developer': { icon: '🌐', color: '#06b6d4', role: '全栈工程师' },
+            'Mobile Developer': { icon: '📱', color: '#f43f5e', role: '移动端工程师' },
+            'Frontend Developer': { icon: '🎭', color: '#8b5cf6', role: '前端工程师' },
+            'Backend Developer': { icon: '⚙️', color: '#14b8a6', role: '后端工程师' },
+            'Database Admin': { icon: '🗄️', color: '#f97316', role: '数据库管理员' },
+            'Cloud Architect': { icon: '☁️', color: '#0ea5e9', role: '云架构师' }
         };
 
         // 拖拽相关变量
