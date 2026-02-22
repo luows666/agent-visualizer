@@ -1943,7 +1943,7 @@
         <aside class="agent-list">
             <h2>Agent 列表</h2>
             <div id="agentList"></div>
-            <button class="add-agent-btn" onclick="addNewAgent()">
+            <button class="add-agent-btn" id="addAgentBtn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-right:8px">
                     <line x1="12" y1="5" x2="12" y2="19"/>
                     <line x1="5" y1="12" x2="19" y2="12"/>
@@ -2706,6 +2706,30 @@
         <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
         <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
         <script>
+        // 全局错误处理
+        window.onerror = function(msg, url, line, col, error) {
+            console.error('JavaScript Error:', msg, 'at line', line);
+            return false;
+        };
+
+        // 确保 DOM 加载完成后初始化
+        window.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing...');
+
+            // 绑定添加 Agent 按钮事件
+            const addAgentBtn = document.getElementById('addAgentBtn');
+            if (addAgentBtn) {
+                addAgentBtn.addEventListener('click', function() {
+                    console.log('Add Agent button clicked');
+                    if (typeof addNewAgent === 'function') {
+                        addNewAgent();
+                    } else {
+                        console.error('addNewAgent function not found');
+                    }
+                });
+            }
+        });
+
         // Three.js 3D 场景变量
         let scene, camera, renderer, controls;
         let agentMeshes = [];
