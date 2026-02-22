@@ -3619,6 +3619,145 @@
                     { from: 'Customer Support', to: 'CEO', content: '客户反馈汇总' },
                     { from: 'CEO', to: 'Social Media Manager', content: '社交媒体舆情监控' }
                 ]
+            },
+            // Cycle 277 新增模板
+            {
+                id: 'financial-planning',
+                name: '财务规划',
+                icon: '💳',
+                desc: '从预算编制到财务分析的规划流程',
+                agents: ['CEO', 'CFO', 'VP Finance', 'Business Analyst', 'Head of Sales'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'CFO', x: 200, y: 150 },
+                    { role: 'VP Finance', x: 600, y: 150 },
+                    { role: 'Business Analyst', x: 200, y: 270 },
+                    { role: 'Head of Sales', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'CFO', content: '制定年度财务目标' },
+                    { from: 'CFO', to: 'CEO', content: '财务预算方案' },
+                    { from: 'CEO', to: 'VP Finance', content: '现金流管理需求' },
+                    { from: 'VP Finance', to: 'CEO', content: '现金流分析报告' },
+                    { from: 'CEO', to: 'Business Analyst', content: '业务财务分析需求' },
+                    { from: 'Business Analyst', to: 'CEO', content: '业务财务洞察' },
+                    { from: 'CEO', to: 'Head of Sales', content: '销售预算分配' }
+                ]
+            },
+            {
+                id: 'talent-acquisition',
+                name: '人才招聘',
+                icon: '🎯',
+                desc: '从岗位需求到候选人入职的招聘流程',
+                agents: ['CEO', 'Head of HR', 'Technical Recruiter', 'Department Head', 'HR'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Head of HR', x: 200, y: 150 },
+                    { role: 'Technical Recruiter', x: 600, y: 150 },
+                    { role: 'Department Head', x: 200, y: 270 },
+                    { role: 'HR', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Head of HR', content: '制定人才招聘计划' },
+                    { from: 'Head of HR', to: 'CEO', content: '招聘策略方案' },
+                    { from: 'Head of HR', to: 'Technical Recruiter', content: '技术岗位招聘需求' },
+                    { from: 'Technical Recruiter', to: 'Head of HR', content: '候选人筛选报告' },
+                    { from: 'Head of HR', to: 'Department Head', content: '面试安排' },
+                    { from: 'Department Head', to: 'Head of HR', content: '面试反馈' },
+                    { from: 'Head of HR', to: 'HR', content: '候选人入职办理' }
+                ]
+            },
+            {
+                id: 'product-roadmap',
+                name: '产品路线图',
+                icon: '🗺️',
+                desc: '从产品愿景到版本规划的流程',
+                agents: ['CEO', 'VP Product', 'Head of Product', 'Product Designer', 'Product Manager'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'VP Product', x: 200, y: 150 },
+                    { role: 'Head of Product', x: 600, y: 150 },
+                    { role: 'Product Designer', x: 200, y: 270 },
+                    { role: 'Product Manager', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'VP Product', content: '确定产品长期愿景' },
+                    { from: 'VP Product', to: 'CEO', content: '产品路线图草案' },
+                    { from: 'VP Product', to: 'Head of Product', content: '产品规划需求' },
+                    { from: 'Head of Product', to: 'VP Product', content: '产品版本规划' },
+                    { from: 'Head of Product', to: 'Product Designer', content: '产品设计需求' },
+                    { from: 'Product Designer', to: 'Head of Product', content: '产品设计方案' },
+                    { from: 'Head of Product', to: 'Product Manager', content: '产品需求评审' }
+                ]
+            },
+            {
+                id: 'sales-leadership',
+                name: '销售领导力',
+                icon: '💵',
+                desc: '从销售目标到业绩达成的领导流程',
+                agents: ['CEO', 'Head of Sales', 'VP Sales', 'Sales', 'Customer Success'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Head of Sales', x: 200, y: 150 },
+                    { role: 'VP Sales', x: 600, y: 150 },
+                    { role: 'Sales', x: 200, y: 270 },
+                    { role: 'Customer Success', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Head of Sales', content: '确定销售目标' },
+                    { from: 'Head of Sales', to: 'CEO', content: '销售策略方案' },
+                    { from: 'Head of Sales', to: 'VP Sales', content: '区域销售任务分配' },
+                    { from: 'VP Sales', to: 'Head of Sales', content: '销售业绩报告' },
+                    { from: 'Head of Sales', to: 'Sales', content: '销售技巧培训' },
+                    { from: 'Sales', to: 'Head of Sales', content: '客户跟进反馈' },
+                    { from: 'Head of Sales', to: 'Customer Success', content: '客户交付协调' }
+                ]
+            },
+            {
+                id: 'tech-innovation',
+                name: '技术创新',
+                icon: '🔧',
+                desc: '从技术研究到创新产品开发的流程',
+                agents: ['CTO', 'Chief Technology Officer', 'ML Engineer', 'Data Engineer', 'Architect'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'Chief Technology Officer', x: 200, y: 150 },
+                    { role: 'ML Engineer', x: 600, y: 150 },
+                    { role: 'Data Engineer', x: 200, y: 270 },
+                    { role: 'Architect', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Chief Technology Officer', content: '确定技术研究方向' },
+                    { from: 'Chief Technology Officer', to: 'CTO', content: '技术创新路线图' },
+                    { from: 'CTO', to: 'ML Engineer', content: 'AI/ML 技术应用需求' },
+                    { from: 'ML Engineer', to: 'CTO', content: '机器学习模型方案' },
+                    { from: 'CTO', to: 'Data Engineer', content: '数据平台建设需求' },
+                    { from: 'Data Engineer', to: 'CTO', content: '数据架构方案' },
+                    { from: 'CTO', to: 'Architect', content: '系统架构升级需求' }
+                ]
+            },
+            {
+                id: 'ops-optimization',
+                name: '运营优化',
+                icon: '⚡',
+                desc: '从运营分析到效率提升的优化流程',
+                agents: ['CEO', 'VP Operations', 'Operations', 'Data Analyst', 'Product Operations'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'VP Operations', x: 200, y: 150 },
+                    { role: 'Operations', x: 600, y: 150 },
+                    { role: 'Data Analyst', x: 200, y: 270 },
+                    { role: 'Product Operations', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'VP Operations', content: '运营效率提升目标' },
+                    { from: 'VP Operations', to: 'CEO', content: '运营优化方案' },
+                    { from: 'VP Operations', to: 'Operations', content: '日常运营任务分配' },
+                    { from: 'Operations', to: 'VP Operations', content: '运营报告' },
+                    { from: 'VP Operations', to: 'Data Analyst', content: '运营数据分析需求' },
+                    { from: 'Data Analyst', to: 'VP Operations', content: '运营数据洞察' },
+                    { from: 'VP Operations', to: 'Product Operations', content: '产品运营协调' }
+                ]
             }
         ];
 
@@ -3689,7 +3828,14 @@
             'Chief Design Officer': { icon: '🎨', color: '#ec4899', role: '首席设计官' },
             'Chief People Officer': { icon: '👥', color: '#8b5cf6', role: '首席人力官' },
             'VP Research': { icon: '🔬', color: '#06b6d4', role: '研究副总裁' },
-            'Social Media Manager': { icon: '📱', color: '#3b82f6', role: '社交媒体经理' }
+            'Social Media Manager': { icon: '📱', color: '#3b82f6', role: '社交媒体经理' },
+            // Cycle 277 新增角色
+            'VP Finance': { icon: '💳', color: '#0d9488', role: '财务副总裁' },
+            'Head of HR': { icon: '👔', color: '#a855f7', role: '人力资源总监' },
+            'VP Product': { icon: '📦', color: '#f97316', role: '产品副总裁' },
+            'Head of Sales': { icon: '💵', color: '#22c55e', role: '销售总监' },
+            'Chief Technology Officer': { icon: '🔧', color: '#6366f1', role: '首席技术官' },
+            'VP Operations': { icon: '⚡', color: '#ec4899', role: '运营副总裁' }
         };
 
         // 拖拽相关变量
