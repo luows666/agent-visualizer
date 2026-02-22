@@ -2865,6 +2865,154 @@
                     { from: 'Marketing', to: 'Operations', content: '海外运营准备' },
                     { from: 'Operations', to: 'CEO', content: '全球发布准备就绪' }
                 ]
+            },
+            // Cycle 271 新增模板
+            {
+                id: 'viral-marketing',
+                name: '病毒式营销',
+                icon: '🦠',
+                desc: '从病毒传播策划到全网裂变的营销流程',
+                agents: ['Growth Hacker', 'Content Strategist', 'Designer', 'Community Manager', 'Marketing'],
+                positions: [
+                    { role: 'Growth Hacker', x: 400, y: 30 },
+                    { role: 'Content Strategist', x: 200, y: 130 },
+                    { role: 'Designer', x: 600, y: 130 },
+                    { role: 'Community Manager', x: 200, y: 250 },
+                    { role: 'Marketing', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Growth Hacker', to: 'Content Strategist', content: '病毒内容创意需求' },
+                    { from: 'Content Strategist', to: 'Designer', content: '视觉素材需求' },
+                    { from: 'Designer', to: 'Community Manager', content: '传播素材完成' },
+                    { from: 'Community Manager', to: 'Growth Hacker', content: '传播策略建议' },
+                    { from: 'Growth Hacker', to: 'Marketing', content: '病毒传播效果报告' }
+                ]
+            },
+            {
+                id: 'product-update',
+                name: '产品更新发布',
+                icon: '📦',
+                desc: '从版本规划到用户通知的完整发布流程',
+                agents: ['Product Manager', 'Developer', 'QA', 'Marketing', 'Community Manager'],
+                positions: [
+                    { role: 'Product Manager', x: 400, y: 30 },
+                    { role: 'Developer', x: 200, y: 130 },
+                    { role: 'QA', x: 600, y: 130 },
+                    { role: 'Marketing', x: 200, y: 250 },
+                    { role: 'Community Manager', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Product Manager', to: 'Developer', content: '版本开发需求' },
+                    { from: 'Developer', to: 'QA', content: '提交测试' },
+                    { from: 'QA', to: 'Product Manager', content: '测试报告' },
+                    { from: 'Product Manager', to: 'Marketing', content: '更新说明文档' },
+                    { from: 'Marketing', to: 'Community Manager', content: '用户通知内容' },
+                    { from: 'Community Manager', to: 'Product Manager', content: '用户反馈汇总' }
+                ]
+            },
+            {
+                id: 'paid-ads',
+                name: '付费广告投放',
+                icon: '💳',
+                desc: '从广告策略制定到效果优化的投放流程',
+                agents: ['Marketing', 'Data Analyst', 'Content Strategist', 'Operations'],
+                positions: [
+                    { role: 'Marketing', x: 400, y: 30 },
+                    { role: 'Data Analyst', x: 200, y: 150 },
+                    { role: 'Content Strategist', x: 600, y: 150 },
+                    { role: 'Operations', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Marketing', to: 'Data Analyst', content: '目标受众分析需求' },
+                    { from: 'Data Analyst', to: 'Marketing', content: '用户画像报告' },
+                    { from: 'Marketing', to: 'Content Strategist', content: '广告创意需求' },
+                    { from: 'Content Strategist', to: 'Marketing', content: '广告素材' },
+                    { from: 'Marketing', to: 'Operations', content: '投放计划' },
+                    { from: 'Operations', to: 'Marketing', content: '投放效果报告' }
+                ]
+            },
+            {
+                id: 'partnership',
+                name: '战略合作',
+                icon: '🤝',
+                desc: '从合作伙伴筛选到合作达成的商务流程',
+                agents: ['CEO', 'Sales', 'Legal Counsel', 'Operations'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Sales', x: 200, y: 150 },
+                    { role: 'Legal Counsel', x: 600, y: 150 },
+                    { role: 'Operations', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Sales', content: '合作伙伴筛选标准' },
+                    { from: 'Sales', to: 'CEO', content: '潜在合作伙伴名单' },
+                    { from: 'CEO', to: 'Legal Counsel', content: '合作条款审核' },
+                    { from: 'Legal Counsel', to: 'Sales', content: '合同草案' },
+                    { from: 'Sales', to: 'Operations', content: '合作执行计划' },
+                    { from: 'Operations', to: 'CEO', content: '合作成果报告' }
+                ]
+            },
+            {
+                id: 'crisis-pr',
+                name: '危机公关',
+                icon: '🛡️',
+                desc: '从危机识别到公关应对的应急流程',
+                agents: ['CEO', 'Marketing', 'Community Manager', 'Legal Counsel'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Marketing', x: 200, y: 150 },
+                    { role: 'Community Manager', x: 600, y: 150 },
+                    { role: 'Legal Counsel', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Marketing', content: '启动危机公关预案' },
+                    { from: 'Marketing', to: 'Community Manager', content: '社交媒体监控需求' },
+                    { from: 'Community Manager', to: 'Marketing', content: '舆情分析报告' },
+                    { from: 'Marketing', to: 'Legal Counsel', content: '法律风险评估' },
+                    { from: 'Legal Counsel', to: 'CEO', content: '应对策略建议' },
+                    { from: 'Marketing', to: 'CEO', content: '公关效果评估' }
+                ]
+            },
+            {
+                id: 'user-interview',
+                name: '用户访谈',
+                icon: '🎤',
+                desc: '从访谈准备到洞察提炼的用户研究流程',
+                agents: ['UX Researcher', 'Product Manager', 'Data Analyst', 'Customer Support'],
+                positions: [
+                    { role: 'UX Researcher', x: 400, y: 30 },
+                    { role: 'Product Manager', x: 200, y: 150 },
+                    { role: 'Data Analyst', x: 600, y: 150 },
+                    { role: 'Customer Support', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'UX Researcher', to: 'Product Manager', content: '访谈目标确定' },
+                    { from: 'Product Manager', to: 'Customer Support', content: '筛选访谈用户' },
+                    { from: 'Customer Support', to: 'UX Researcher', content: '用户名单提供' },
+                    { from: 'UX Researcher', to: 'Data Analyst', content: '访谈数据分析' },
+                    { from: 'Data Analyst', to: 'UX Researcher', content: '分析结果' },
+                    { from: 'UX Researcher', to: 'Product Manager', content: '用户洞察报告' }
+                ]
+            },
+            {
+                id: 'app-store-optimization',
+                name: 'ASO 优化',
+                icon: '📱',
+                desc: '从关键词优化到应用商店排名的优化流程',
+                agents: ['SEO Specialist', 'Designer', 'Developer', 'Marketing'],
+                positions: [
+                    { role: 'SEO Specialist', x: 400, y: 30 },
+                    { role: 'Designer', x: 200, y: 150 },
+                    { role: 'Developer', x: 600, y: 150 },
+                    { role: 'Marketing', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'SEO Specialist', to: 'Developer', content: 'ASO 技术优化需求' },
+                    { from: 'Developer', to: 'SEO Specialist', content: '技术优化完成' },
+                    { from: 'SEO Specialist', to: 'Designer', content: '应用图标和截图优化' },
+                    { from: 'Designer', to: 'Marketing', content: '素材完成' },
+                    { from: 'Marketing', to: 'SEO Specialist', content: '优化效果报告' }
+                ]
             }
         ];
 
