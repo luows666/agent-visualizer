@@ -10442,6 +10442,138 @@
                     { from: 'AI Carbon Tracker', to: 'AI Sustainability', content: '碳排放数据' },
                     { from: 'AI Sustainability', to: 'AI Energy Analyst', content: '可持续性报告' }
                 ]
+            },
+            // Cycle 329 新增模板 - AI 智能教育系统
+            {
+                id: 'ai-education',
+                name: 'AI智能教育系统',
+                icon: '📚',
+                description: '从课程设计到学生评估的完整教育流程',
+                agents: ['AI Curriculum Designer', 'AI Online Tutor', 'AI Exam Proctor', 'AI Student Assessment', 'AI Learning Analytics'],
+                positions: [
+                    { role: 'AI Curriculum Designer', x: 400, y: 30 },
+                    { role: 'AI Online Tutor', x: 200, y: 150 },
+                    { role: 'AI Exam Proctor', x: 600, y: 150 },
+                    { role: 'AI Student Assessment', x: 200, y: 270 },
+                    { role: 'AI Learning Analytics', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Curriculum Designer', to: 'AI Online Tutor', content: '课程内容已发布' },
+                    { from: 'AI Online Tutor', to: 'AI Exam Proctor', content: '学员学习进度' },
+                    { from: 'AI Exam Proctor', to: 'AI Student Assessment', content: '考试结果' },
+                    { from: 'AI Student Assessment', to: 'AI Learning Analytics', content: '评估数据' },
+                    { from: 'AI Learning Analytics', to: 'AI Curriculum Designer', content: '分析报告' }
+                ]
+            },
+            // Cycle 329 新增模板 - AI 智能媒体系统
+            {
+                id: 'ai-media',
+                name: 'AI智能媒体系统',
+                icon: '📱',
+                description: '从内容创作到社交媒体运营的完整媒体流程',
+                agents: ['AI Content Writer', 'AI Social Media Manager', 'AI Influencer Manager', 'AI Ad Campaign Manager', 'AI SEO Specialist'],
+                positions: [
+                    { role: 'AI Content Writer', x: 400, y: 30 },
+                    { role: 'AI Social Media Manager', x: 200, y: 150 },
+                    { role: 'AI Influencer Manager', x: 600, y: 150 },
+                    { role: 'AI Ad Campaign Manager', x: 200, y: 270 },
+                    { role: 'AI SEO Specialist', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Content Writer', to: 'AI Social Media Manager', content: '内容稿件' },
+                    { from: 'AI Social Media Manager', to: 'AI Influencer Manager', content: '分发计划' },
+                    { from: 'AI Influencer Manager', to: 'AI Ad Campaign Manager', content: '网红合作' },
+                    { from: 'AI Ad Campaign Manager', to: 'AI SEO Specialist', content: '广告数据' },
+                    { from: 'AI SEO Specialist', to: 'AI Content Writer', content: 'SEO优化建议' }
+                ]
+            },
+            // Cycle 329 新增模板 - AI 智能金融系统
+            {
+                id: 'ai-finance',
+                name: 'AI智能金融系统',
+                icon: '💰',
+                description: '从投资分析到风险管理的完整金融流程',
+                agents: ['AI Financial Analyst', 'AI Investment Advisor', 'AI Risk Manager', 'AI Fraud Detector', 'AI Tax Advisor'],
+                positions: [
+                    { role: 'AI Financial Analyst', x: 400, y: 30 },
+                    { role: 'AI Investment Advisor', x: 200, y: 150 },
+                    { role: 'AI Risk Manager', x: 600, y: 150 },
+                    { role: 'AI Fraud Detector', x: 200, y: 270 },
+                    { role: 'AI Tax Advisor', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Financial Analyst', to: 'AI Investment Advisor', content: '财务分析报告' },
+                    { from: 'AI Investment Advisor', to: 'AI Risk Manager', content: '投资建议' },
+                    { from: 'AI Risk Manager', to: 'AI Fraud Detector', content: '风险评估' },
+                    { from: 'AI Fraud Detector', to: 'AI Tax Advisor', content: '合规检查' },
+                    { from: 'AI Tax Advisor', to: 'AI Financial Analyst', content: '税务建议' }
+                ]
+            },
+            // Cycle 329 新增模板 - AI 智能医疗系统
+            {
+                id: 'ai-healthcare',
+                name: 'AI智能医疗系统',
+                icon: '🏥',
+                description: '从诊断到健康管理的完整医疗流程',
+                agents: ['AI Medical Diagnostician', 'AI Drug Advisor', 'AI Patient Coordinator', 'AI Health Coach', 'AI Medical Records'],
+                positions: [
+                    { role: 'AI Medical Diagnostician', x: 400, y: 30 },
+                    { role: 'AI Drug Advisor', x: 200, y: 150 },
+                    { role: 'AI Patient Coordinator', x: 600, y: 150 },
+                    { role: 'AI Health Coach', x: 200, y: 270 },
+                    { role: 'AI Medical Records', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Medical Diagnostician', to: 'AI Drug Advisor', content: '诊断结果' },
+                    { from: 'AI Drug Advisor', to: 'AI Patient Coordinator', content: '用药方案' },
+                    { from: 'AI Patient Coordinator', to: 'AI Health Coach', content: '患者信息' },
+                    { from: 'AI Health Coach', to: 'AI Medical Records', content: '健康数据' },
+                    { from: 'AI Medical Records', to: 'AI Medical Diagnostician', content: '历史病历' }
+                ]
+            },
+            // Cycle 329 新增模板 - AI 智能零售系统
+            {
+                id: 'ai-retail',
+                name: 'AI智能零售系统',
+                icon: '🏪',
+                description: '从店铺运营到客户洞察的完整零售流程',
+                agents: ['AI Store Analyst', 'AI Inventory Manager', 'AI Pricing Strategy', 'AI Customer Insights', 'AI Visual Merchandiser'],
+                positions: [
+                    { role: 'AI Store Analyst', x: 400, y: 30 },
+                    { role: 'AI Inventory Manager', x: 200, y: 150 },
+                    { role: 'AI Pricing Strategy', x: 600, y: 150 },
+                    { role: 'AI Customer Insights', x: 200, y: 270 },
+                    { role: 'AI Visual Merchandiser', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Store Analyst', to: 'AI Inventory Manager', content: '销售分析' },
+                    { from: 'AI Inventory Manager', to: 'AI Pricing Strategy', content: '库存情况' },
+                    { from: 'AI Pricing Strategy', to: 'AI Customer Insights', content: '定价策略' },
+                    { from: 'AI Customer Insights', to: 'AI Visual Merchandiser', content: '客户画像' },
+                    { from: 'AI Visual Merchandiser', to: 'AI Store Analyst', content: '陈列效果' }
+                ]
+            },
+            // Cycle 329 新增模板 - AI 智能物流系统
+            {
+                id: 'ai-logistics-2',
+                name: 'AI智能物流系统',
+                icon: '🚚',
+                description: '从仓储管理到配送优化的完整物流流程',
+                agents: ['AI Logistics Planner', 'AI Route Optimizer', 'AI Delivery Tracker', 'AI Warehouse Manager', 'AI Fleet Dispatcher'],
+                positions: [
+                    { role: 'AI Logistics Planner', x: 400, y: 30 },
+                    { role: 'AI Route Optimizer', x: 200, y: 150 },
+                    { role: 'AI Delivery Tracker', x: 600, y: 150 },
+                    { role: 'AI Warehouse Manager', x: 200, y: 270 },
+                    { role: 'AI Fleet Dispatcher', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Logistics Planner', to: 'AI Route Optimizer', content: '物流计划' },
+                    { from: 'AI Route Optimizer', to: 'AI Delivery Tracker', content: '路线方案' },
+                    { from: 'AI Delivery Tracker', to: 'AI Fleet Dispatcher', content: '配送状态' },
+                    { from: 'AI Fleet Dispatcher', to: 'AI Warehouse Manager', content: '调度指令' },
+                    { from: 'AI Warehouse Manager', to: 'AI Logistics Planner', content: '库存更新' }
+                ]
             }
         ];
 
@@ -11300,7 +11432,37 @@
             'AI Interior Designer': { icon: '🛋️', color: '#ec4899', role: 'AI室内设计师' },
             'AI Construction Manager': { icon: '👷', color: '#f59e0b', role: 'AI工程管理' },
             'AI Building Monitor': { icon: '🏢', color: '#06b6d4', role: 'AI楼宇监控' },
-            'AI Real Estate Analyst': { icon: '🏠', color: '#14b8a6', role: 'AI房产分析' }
+            'AI Real Estate Analyst': { icon: '🏠', color: '#14b8a6', role: 'AI房产分析' },
+            // Cycle 329 新增角色 - AI 智能教育
+            'AI Curriculum Designer': { icon: '📚', color: '#0ea5e9', role: 'AI课程设计师' },
+            'AI Online Tutor': { icon: '🎓', color: '#22c55e', role: 'AI在线导师' },
+            'AI Exam Proctor': { icon: '👁️', color: '#f97316', role: 'AI监考系统' },
+            'AI Student Assessment': { icon: '📊', color: '#a855f7', role: 'AI学生评估师' },
+            'AI Learning Analytics': { icon: '📈', color: '#ec4899', role: 'AI学习分析师' },
+            // Cycle 329 新增角色 - AI 智能媒体
+            'AI Content Writer': { icon: '✍️', color: '#f59e0b', role: 'AI内容撰写师' },
+            'AI Social Media Manager': { icon: '📱', color: '#06b6d4', role: 'AI社交媒体经理' },
+            'AI Influencer Manager': { icon: '🌟', color: '#ec4899', role: 'AI网红经纪人' },
+            'AI Ad Campaign Manager': { icon: '📢', color: '#22c55e', role: 'AI广告投放经理' },
+            'AI SEO Specialist': { icon: '🔍', color: '#8b5cf6', role: 'AI SEO专家' },
+            // Cycle 329 新增角色 - AI 智能金融
+            'AI Financial Analyst': { icon: '💰', color: '#f59e0b', role: 'AI金融分析师' },
+            'AI Investment Advisor': { icon: '📈', color: '#22c55e', role: 'AI投资顾问' },
+            'AI Risk Manager': { icon: '⚠️', color: '#dc2626', role: 'AI风险管理师' },
+            'AI Fraud Detector': { icon: '🔒', color: '#ef4444', role: 'AI反欺诈检测' },
+            'AI Tax Advisor': { icon: '💵', color: '#14b8a6', role: 'AI税务顾问' },
+            // Cycle 329 新增角色 - AI 智能医疗
+            'AI Medical Diagnostician': { icon: '🏥', color: '#0ea5e9', role: 'AI医疗诊断师' },
+            'AI Drug Advisor': { icon: '💊', color: '#22c55e', role: 'AI用药顾问' },
+            'AI Patient Coordinator': { icon: '🤝', color: '#ec4899', role: 'AI患者协调员' },
+            'AI Health Coach': { icon: '💪', color: '#f97316', role: 'AI健康教练' },
+            'AI Medical Records': { icon: '📋', color: '#a855f7', role: 'AI病历管理师' },
+            // Cycle 329 新增角色 - AI 智能零售
+            'AI Store Analyst': { icon: '🏪', color: '#f59e0b', role: 'AI店铺分析师' },
+            'AI Inventory Manager': { icon: '📦', color: '#06b6d4', role: 'AI库存经理' },
+            'AI Pricing Strategy': { icon: '💲', color: '#22c55e', role: 'AI定价策略师' },
+            'AI Customer Insights': { icon: '👥', color: '#ec4899', role: 'AI客户洞察师' },
+            'AI Visual Merchandiser': { icon: '🛍️', color: '#a855f7', role: 'AI视觉陈列师' }
         };
 
         // 拖拽相关变量
