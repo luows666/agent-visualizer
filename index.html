@@ -12004,6 +12004,132 @@
                     { from: 'AI Stain Remover', to: 'AI Fabric Care', content: '去渍完成' },
                     { from: 'AI Fabric Care', to: 'AI Laundry Route', content: '护理报告' }
                 ]
+            },
+            // Cycle 342 新增模板 - AI智能文化创意系统
+            {
+                id: 'ai-cultural-creative',
+                name: 'AI智能文化创意系统',
+                icon: '🎭',
+                description: '从文化创意到遗产保护的完整文化创意流程',
+                agents: ['AI Cultural Creative', 'AI Heritage Protector', 'AI Museum Curator', 'AI Art Restorer', 'AI Cultural Interpreter'],
+                positions: [
+                    { role: 'AI Cultural Creative', x: 400, y: 50 },
+                    { role: 'AI Heritage Protector', x: 200, y: 180 },
+                    { role: 'AI Museum Curator', x: 400, y: 180 },
+                    { role: 'AI Art Restorer', x: 600, y: 180 },
+                    { role: 'AI Cultural Interpreter', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Cultural Creative', to: 'AI Heritage Protector', content: '文化创意方案' },
+                    { from: 'AI Heritage Protector', to: 'AI Museum Curator', content: '保护方案' },
+                    { from: 'AI Museum Curator', to: 'AI Art Restorer', content: '策展需求' },
+                    { from: 'AI Art Restorer', to: 'AI Cultural Interpreter', content: '修复报告' }
+                ]
+            },
+            // Cycle 342 新增模板 - AI智能体育赛事系统
+            {
+                id: 'ai-sports-event',
+                name: 'AI智能体育赛事系统',
+                icon: '🏆',
+                description: '从赛事策划到场馆管理的完整体育赛事流程',
+                agents: ['AI Sports Event Planner', 'AI Referee Assistant', 'AI Athlete Manager', 'AI Sports Commentator', 'AI Venue Manager'],
+                positions: [
+                    { role: 'AI Sports Event Planner', x: 400, y: 50 },
+                    { role: 'AI Referee Assistant', x: 200, y: 180 },
+                    { role: 'AI Athlete Manager', x: 400, y: 180 },
+                    { role: 'AI Sports Commentator', x: 600, y: 180 },
+                    { role: 'AI Venue Manager', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sports Event Planner', to: 'AI Athlete Manager', content: '赛事安排' },
+                    { from: 'AI Athlete Manager', to: 'AI Referee Assistant', content: '选手信息' },
+                    { from: 'AI Referee Assistant', to: 'AI Sports Commentator', content: '裁判安排' },
+                    { from: 'AI Sports Commentator', to: 'AI Venue Manager', content: '解说准备' }
+                ]
+            },
+            // Cycle 342 新增模板 - AI智能会展活动系统
+            {
+                id: 'ai-exhibition',
+                name: 'AI智能会展活动系统',
+                icon: '🎪',
+                description: '从会展设计到观众管理的完整会展活动流程',
+                agents: ['AI Exhibition Designer', 'AI Event Coordinator', 'AI Conference Host', 'AI Booth Builder', 'AI Attendee Manager'],
+                positions: [
+                    { role: 'AI Exhibition Designer', x: 400, y: 50 },
+                    { role: 'AI Event Coordinator', x: 200, y: 180 },
+                    { role: 'AI Conference Host', x: 400, y: 180 },
+                    { role: 'AI Booth Builder', x: 600, y: 180 },
+                    { role: 'AI Attendee Manager', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Exhibition Designer', to: 'AI Event Coordinator', content: '设计方案' },
+                    { from: 'AI Event Coordinator', to: 'AI Booth Builder', content: '搭建需求' },
+                    { from: 'AI Booth Builder', to: 'AI Conference Host', content: '搭建完成' },
+                    { from: 'AI Conference Host', to: 'AI Attendee Manager', content: '活动安排' }
+                ]
+            },
+            // Cycle 342 新增模板 - AI智能人力资源系统
+            {
+                id: 'ai-hr',
+                name: 'AI智能人力资源系统',
+                icon: '👔',
+                description: '从招聘到绩效管理的人力资源完整流程',
+                agents: ['AI Resume Screener', 'AI Interview Scheduler', 'AI Onboarding Coach', 'AI Performance Analyst', 'AI Training Designer'],
+                positions: [
+                    { role: 'AI Resume Screener', x: 400, y: 50 },
+                    { role: 'AI Interview Scheduler', x: 200, y: 180 },
+                    { role: 'AI Onboarding Coach', x: 400, y: 180 },
+                    { role: 'AI Performance Analyst', x: 600, y: 180 },
+                    { role: 'AI Training Designer', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Resume Screener', to: 'AI Interview Scheduler', content: '筛选简历' },
+                    { from: 'AI Interview Scheduler', to: 'AI Onboarding Coach', content: '面试安排' },
+                    { from: 'AI Onboarding Coach', to: 'AI Performance Analyst', content: '入职完成' },
+                    { from: 'AI Performance Analyst', to: 'AI Training Designer', content: '绩效报告' }
+                ]
+            },
+            // Cycle 342 新增模板 - AI智能金融服务系统
+            {
+                id: 'ai-financial',
+                name: 'AI智能金融服务系统',
+                icon: '💰',
+                description: '从投资顾问到财富管理的完整金融服务流程',
+                agents: ['AI Investment Advisor', 'AI Insurance Broker', 'AI Tax Planner', 'AI Wealth Manager', 'AI Credit Analyst'],
+                positions: [
+                    { role: 'AI Investment Advisor', x: 400, y: 50 },
+                    { role: 'AI Insurance Broker', x: 200, y: 180 },
+                    { role: 'AI Tax Planner', x: 400, y: 180 },
+                    { role: 'AI Wealth Manager', x: 600, y: 180 },
+                    { role: 'AI Credit Analyst', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Investment Advisor', to: 'AI Insurance Broker', content: '投资方案' },
+                    { from: 'AI Insurance Broker', to: 'AI Tax Planner', content: '保险方案' },
+                    { from: 'AI Tax Planner', to: 'AI Credit Analyst', content: '税务规划' },
+                    { from: 'AI Credit Analyst', to: 'AI Wealth Manager', content: '信用评估' }
+                ]
+            },
+            // Cycle 342 新增模板 - AI智能健康管理系统
+            {
+                id: 'ai-health',
+                name: 'AI智能健康管理系统',
+                icon: '💪',
+                description: '从健康教练到心理健康的完整健康管理流程',
+                agents: ['AI Health Coach', 'AI Nutrition Planner', 'AI Fitness Trainer', 'AI Sleep Analyst', 'AI Mental Wellness Advisor'],
+                positions: [
+                    { role: 'AI Health Coach', x: 400, y: 50 },
+                    { role: 'AI Nutrition Planner', x: 200, y: 180 },
+                    { role: 'AI Fitness Trainer', x: 400, y: 180 },
+                    { role: 'AI Sleep Analyst', x: 600, y: 180 },
+                    { role: 'AI Mental Wellness Advisor', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Health Coach', to: 'AI Nutrition Planner', content: '健康需求' },
+                    { from: 'AI Nutrition Planner', to: 'AI Fitness Trainer', content: '营养方案' },
+                    { from: 'AI Fitness Trainer', to: 'AI Sleep Analyst', content: '健身计划' },
+                    { from: 'AI Sleep Analyst', to: 'AI Mental Wellness Advisor', content: '睡眠报告' }
+                ]
             }
         ];
 
@@ -13279,7 +13405,49 @@
             'AI Dry Cleaner': { icon: '👔', color: '#06b6d4', role: 'AI干洗师' },
             'AI Stain Remover': { icon: '✨', color: '#14b8a6', role: 'AI去渍师' },
             'AI Fabric Care': { icon: '🧵', color: '#a855f7', role: 'AI面料护理师' },
-            'AI Laundry Route': { icon: '🚲', color: '#84cc16', role: 'AI取送路线规划师' }
+            'AI Laundry Route': { icon: '🚲', color: '#84cc16', role: 'AI取送路线规划师' },
+            // Cycle 342 新增角色 - AI 智能文化创意
+            'AI Cultural Creative': { icon: '🎭', color: '#f43f5e', role: 'AI文化创意师' },
+            'AI Heritage Protector': { icon: '🏛️', color: '#d97706', role: 'AI文化遗产保护师' },
+            'AI Museum Curator': { icon: '🎨', color: '#7c3aed', role: 'AI博物馆策展师' },
+            'AI Art Restorer': { icon: '🖼️', color: '#0891b2', role: 'AI文物修复师' },
+            'AI Cultural Interpreter': { icon: '📜', color: '#65a30d', role: 'AI文化解说师' },
+            // Cycle 342 新增角色 - AI 智能体育赛事
+            'AI Sports Event Planner': { icon: '🏆', color: '#fbbf24', role: 'AI体育赛事策划师' },
+            'AI Referee Assistant': { icon: '⚖️', color: '#94a3b8', role: 'AI裁判助理' },
+            'AI Athlete Manager': { icon: '🏃', color: '#22c55e', role: 'AI运动员经纪人' },
+            'AI Sports Commentator': { icon: '📺', color: '#3b82f6', role: 'AI体育解说员' },
+            'AI Venue Manager': { icon: '🏟️', color: '#ec4899', role: 'AI场馆经理' },
+            // Cycle 342 新增角色 - AI 智能会展活动
+            'AI Exhibition Designer': { icon: '🎪', color: '#8b5cf6', role: 'AI会展设计师' },
+            'AI Event Coordinator': { icon: '📋', color: '#14b8a6', role: 'AI会展协调师' },
+            'AI Conference Host': { icon: '🎤', color: '#f97316', role: 'AI会议主持人' },
+            'AI Booth Builder': { icon: '🏗️', color: '#64748b', role: 'AI展位搭建师' },
+            'AI Attendee Manager': { icon: '👥', color: '#0ea5e9', role: 'AI会展 attendee 管理师' },
+            // Cycle 342 新增角色 - AI 智能人力资源服务
+            'AI Resume Screener': { icon: '📄', color: '#10b981', role: 'AI简历筛选师' },
+            'AI Interview Scheduler': { icon: '📅', color: '#8b5cf6', role: 'AI面试安排师' },
+            'AI Onboarding Coach': { icon: '👋', color: '#ec4899', role: 'AI入职教练' },
+            'AI Performance Analyst': { icon: '📊', color: '#3b82f6', role: 'AI绩效分析师' },
+            'AI Training Designer': { icon: '📚', color: '#f59e0b', role: 'AI培训设计师' },
+            // Cycle 342 新增角色 - AI 智能金融服务
+            'AI Investment Advisor': { icon: '💰', color: '#fbbf24', role: 'AI投资顾问' },
+            'AI Insurance Broker': { icon: '🛡️', color: '#22c55e', role: 'AI保险经纪人' },
+            'AI Tax Planner': { icon: '💵', color: '#ef4444', role: 'AI税务规划师' },
+            'AI Wealth Manager': { icon: '💎', color: '#a855f7', role: 'AI财富管理师' },
+            'AI Credit Analyst': { icon: '📈', color: '#06b6d4', role: 'AI信用分析师' },
+            // Cycle 342 新增角色 - AI 智能健康管理
+            'AI Health Coach': { icon: '💪', color: '#f43f5e', role: 'AI健康教练' },
+            'AI Nutrition Planner': { icon: '🥗', color: '#84cc16', role: 'AI营养规划师' },
+            'AI Fitness Trainer': { icon: '🏋️', color: '#14b8a6', role: 'AI健身教练' },
+            'AI Sleep Analyst': { icon: '😴', color: '#6366f1', role: 'AI睡眠分析师' },
+            'AI Mental Wellness Advisor': { icon: '🧠', color: '#ec4899', role: 'AI心理健康顾问' },
+            // Cycle 342 新增角色 - AI 智能法律服务
+            'AI Legal Consultant': { icon: '⚖️', color: '#64748b', role: 'AI法律顾问' },
+            'AI Contract Reviewer': { icon: '📜', color: '#d97706', role: 'AI合同审查师' },
+            'AI Compliance Officer': { icon: '✅', color: '#22c55e', role: 'AI合规官' },
+            'AI Dispute Mediator': { icon: '🤝', color: '#8b5cf6', role: 'AI纠纷调解师' },
+            'AI Intellectual Property': { icon: '💡', color: '#0ea5e9', role: 'AI知识产权师' }
         };
 
         // 拖拽相关变量
