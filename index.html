@@ -11626,6 +11626,132 @@
                     { from: 'AI Citizen Service', to: 'AI Urban Manager', content: '公民服务需求' },
                     { from: 'AI Urban Manager', to: 'AI Emergency Planner', content: '城市管理方案' }
                 ]
+            },
+            // Cycle 339 新增模板 - AI智能金融科技系统
+            {
+                id: 'ai-fintech',
+                name: 'AI智能金融科技系统',
+                icon: '💳',
+                description: '从投资策略到风险管理的完整金融科技流程',
+                agents: ['AI Fintech Engineer', 'AI Investment Strategist', 'AI Risk Analyst', 'AI Fraud Detector', 'AI Insurance Advisor'],
+                positions: [
+                    { role: 'AI Fintech Engineer', x: 200, y: 50 },
+                    { role: 'AI Investment Strategist', x: 400, y: 50 },
+                    { role: 'AI Risk Analyst', x: 600, y: 50 },
+                    { role: 'AI Fraud Detector', x: 300, y: 200 },
+                    { role: 'AI Insurance Advisor', x: 500, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fintech Engineer', to: 'AI Investment Strategist', content: '金融科技需求' },
+                    { from: 'AI Investment Strategist', to: 'AI Risk Analyst', content: '投资策略方案' },
+                    { from: 'AI Risk Analyst', to: 'AI Fraud Detector', content: '风险评估报告' },
+                    { from: 'AI Fraud Detector', to: 'AI Insurance Advisor', content: '反欺诈检测结果' }
+                ]
+            },
+            // Cycle 339 新增模板 - AI智能房地产系统
+            {
+                id: 'ai-real-estate',
+                name: 'AI智能房地产系统',
+                icon: '🏠',
+                description: '从房产交易到物业管理的完整房地产流程',
+                agents: ['AI Real Estate Agent', 'AI Property Valuer', 'AI Property Manager', 'AI Interior Designer', 'AI Architecture Planner'],
+                positions: [
+                    { role: 'AI Real Estate Agent', x: 200, y: 50 },
+                    { role: 'AI Property Valuer', x: 400, y: 50 },
+                    { role: 'AI Property Manager', x: 600, y: 50 },
+                    { role: 'AI Interior Designer', x: 300, y: 200 },
+                    { role: 'AI Architecture Planner', x: 500, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Real Estate Agent', to: 'AI Property Valuer', content: '房产交易需求' },
+                    { from: 'AI Property Valuer', to: 'AI Property Manager', content: '房产估价报告' },
+                    { from: 'AI Property Manager', to: 'AI Interior Designer', content: '物业管理需求' },
+                    { from: 'AI Interior Designer', to: 'AI Architecture Planner', content: '室内设计方案' }
+                ]
+            },
+            // Cycle 339 新增模板 - AI智能媒体娱乐系统
+            {
+                id: 'ai-media-entertainment',
+                name: 'AI智能媒体娱乐系统',
+                icon: '🎬',
+                description: '从内容创作到媒体发布的完整媒体娱乐流程',
+                agents: ['AI Film Producer', 'AI Music Composer', 'AI Game Designer', 'AI Streamer', 'AI Content Creator'],
+                positions: [
+                    { role: 'AI Film Producer', x: 200, y: 50 },
+                    { role: 'AI Music Composer', x: 400, y: 50 },
+                    { role: 'AI Game Designer', x: 600, y: 50 },
+                    { role: 'AI Streamer', x: 300, y: 200 },
+                    { role: 'AI Content Creator', x: 500, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Film Producer', to: 'AI Music Composer', content: '影视制作需求' },
+                    { from: 'AI Music Composer', to: 'AI Game Designer', content: '音乐制作方案' },
+                    { from: 'AI Game Designer', to: 'AI Streamer', content: '游戏设计方案' },
+                    { from: 'AI Streamer', to: 'AI Content Creator', content: '直播内容需求' }
+                ]
+            },
+            // Cycle 339 新增模板 - AI智能航空航天系统
+            {
+                id: 'ai-aerospace',
+                name: 'AI智能航空航天系统',
+                icon: '🚀',
+                description: '从飞行计划到航空安全的完整航空航天流程',
+                agents: ['AI Aerospace Engineer', 'AI Pilot', 'AI Air Traffic Controller', 'AI Satellite Engineer', 'AI Flight Planner'],
+                positions: [
+                    { role: 'AI Aerospace Engineer', x: 200, y: 50 },
+                    { role: 'AI Pilot', x: 400, y: 50 },
+                    { role: 'AI Air Traffic Controller', x: 600, y: 50 },
+                    { role: 'AI Satellite Engineer', x: 300, y: 200 },
+                    { role: 'AI Flight Planner', x: 500, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Aerospace Engineer', to: 'AI Pilot', content: '航空技术支持' },
+                    { from: 'AI Pilot', to: 'AI Air Traffic Controller', content: '飞行请求' },
+                    { from: 'AI Air Traffic Controller', to: 'AI Flight Planner', content: '空管指令' },
+                    { from: 'AI Flight Planner', to: 'AI Satellite Engineer', content: '航班规划需求' }
+                ]
+            },
+            // Cycle 339 新增模板 - AI智能海洋工程系统
+            {
+                id: 'ai-marine',
+                name: 'AI智能海洋工程系统',
+                icon: '🌊',
+                description: '从海洋探测到海洋开发的完整海洋工程流程',
+                agents: ['AI Marine Engineer', 'AI Oceanographer', 'AI Port Operator', 'AI Shipping Coordinator', 'AI Subsea Engineer'],
+                positions: [
+                    { role: 'AI Marine Engineer', x: 200, y: 50 },
+                    { role: 'AI Oceanographer', x: 400, y: 50 },
+                    { role: 'AI Port Operator', x: 600, y: 50 },
+                    { role: 'AI Shipping Coordinator', x: 300, y: 200 },
+                    { role: 'AI Subsea Engineer', x: 500, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Marine Engineer', to: 'AI Oceanographer', content: '海洋工程需求' },
+                    { from: 'AI Oceanographer', to: 'AI Port Operator', content: '海洋研究数据' },
+                    { from: 'AI Port Operator', to: 'AI Shipping Coordinator', content: '港口运营需求' },
+                    { from: 'AI Shipping Coordinator', to: 'AI Subsea Engineer', content: '航运协调需求' }
+                ]
+            },
+            // Cycle 339 新增模板 - AI智能农业系统
+            {
+                id: 'ai-agriculture',
+                name: 'AI智能农业系统',
+                icon: '🌾',
+                description: '从作物种植到收获管理的完整智慧农业流程',
+                agents: ['AI Agriculture Engineer', 'AI Crop Scientist', 'AI Irrigation Specialist', 'AI Pest Control', 'AI Harvest Planner'],
+                positions: [
+                    { role: 'AI Agriculture Engineer', x: 200, y: 50 },
+                    { role: 'AI Crop Scientist', x: 400, y: 50 },
+                    { role: 'AI Irrigation Specialist', x: 600, y: 50 },
+                    { role: 'AI Pest Control', x: 300, y: 200 },
+                    { role: 'AI Harvest Planner', x: 500, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Agriculture Engineer', to: 'AI Crop Scientist', content: '农业工程需求' },
+                    { from: 'AI Crop Scientist', to: 'AI Irrigation Specialist', content: '作物研究数据' },
+                    { from: 'AI Irrigation Specialist', to: 'AI Pest Control', content: '灌溉方案' },
+                    { from: 'AI Pest Control', to: 'AI Harvest Planner', content: '病虫害防治方案' }
+                ]
             }
         ];
 
@@ -12775,7 +12901,55 @@
             'AI Citizen Service': { icon: '🏛️', color: '#8b5cf6', role: 'AI公民服务师' },
             'AI Urban Manager': { icon: '🏙️', color: '#64748b', role: 'AI城市管理师' },
             'AI Emergency Planner': { icon: '🚨', color: '#ef4444', role: 'AI应急规划师' },
-            'AI Grant Writer': { icon: '💵', color: '#22c55e', role: 'AI补助撰写师' }
+            'AI Grant Writer': { icon: '💵', color: '#22c55e', role: 'AI补助撰写师' },
+            // Cycle 339 新增角色 - AI 智能金融科技
+            'AI Fintech Engineer': { icon: '💳', color: '#10b981', role: 'AI金融科技工程师' },
+            'AI Investment Strategist': { icon: '📈', color: '#f59e0b', role: 'AI投资策略师' },
+            'AI Risk Analyst': { icon: '⚠️', color: '#ef4444', role: 'AI风险分析师' },
+            'AI Fraud Detector': { icon: '🔒', color: '#8b5cf6', role: 'AI反欺诈检测师' },
+            'AI Insurance Advisor': { icon: '🛡️', color: '#3b82f6', role: 'AI保险顾问' },
+            // Cycle 339 新增角色 - AI 智能房地产
+            'AI Real Estate Agent': { icon: '🏠', color: '#f97316', role: 'AI房产经纪人' },
+            'AI Property Valuer': { icon: '💰', color: '#22c55e', role: 'AI房产估价师' },
+            'AI Property Manager': { icon: '🏢', color: '#64748b', role: 'AI物业经理' },
+            'AI Interior Designer': { icon: '🎨', color: '#ec4899', role: 'AI室内设计师' },
+            'AI Architecture Planner': { icon: '🏛️', color: '#14b8a6', role: 'AI建筑规划师' },
+            // Cycle 339 新增角色 - AI 智能媒体娱乐
+            'AI Film Producer': { icon: '🎬', color: '#f43f5e', role: 'AI电影制片人' },
+            'AI Music Composer': { icon: '🎵', color: '#a855f7', role: 'AI音乐制作人' },
+            'AI Game Designer': { icon: '🎮', color: '#22c55e', role: 'AI游戏设计师' },
+            'AI Streamer': { icon: '📺', color: '#ef4444', role: 'AI主播' },
+            'AI Content Creator': { icon: '✨', color: '#f59e0b', role: 'AI内容创作者' },
+            // Cycle 339 新增角色 - AI 智能航空航天
+            'AI Aerospace Engineer': { icon: '🚀', color: '#3b82f6', role: 'AI航空航天工程师' },
+            'AI Pilot': { icon: '✈️', color: '#06b6d4', role: 'AI飞行员' },
+            'AI Air Traffic Controller': { icon: '🛩️', color: '#14b8a6', role: 'AI空管员' },
+            'AI Satellite Engineer': { icon: '🛰️', color: '#8b5cf6', role: 'AI卫星工程师' },
+            'AI Flight Planner': { icon: '🗺️', color: '#f97316', role: 'AI航班规划师' },
+            // Cycle 339 新增角色 - AI 智能海洋工程
+            'AI Marine Engineer': { icon: '🌊', color: '#0ea5e9', role: 'AI海洋工程师' },
+            'AI Oceanographer': { icon: '🔬', color: '#06b6d4', role: 'AI海洋学家' },
+            'AI Port Operator': { icon: '⚓', color: '#64748b', role: 'AI港口操作员' },
+            'AI Shipping Coordinator': { icon: '🚢', color: '#3b82f6', role: 'AI航运协调员' },
+            'AI Subsea Engineer': { icon: '⚓', color: '#1e40af', role: 'AI海底工程师' },
+            // Cycle 339 新增角色 - AI 智能农业
+            'AI Agriculture Engineer': { icon: '🌾', color: '#22c55e', role: 'AI农业工程师' },
+            'AI Crop Scientist': { icon: '🌱', color: '#10b981', role: 'AI作物科学家' },
+            'AI Irrigation Specialist': { icon: '💧', color: '#0ea5e9', role: 'AI灌溉专家' },
+            'AI Pest Control': { icon: '🐛', color: '#84cc16', role: 'AI病虫害防治' },
+            'AI Harvest Planner': { icon: '🌽', color: '#f59e0b', role: 'AI收获规划师' },
+            // Cycle 339 新增角色 - AI 智能物流运输
+            'AI Logistics Planner': { icon: '🚚', color: '#f97316', role: 'AI物流规划师' },
+            'AI Fleet Manager': { icon: '🚛', color: '#64748b', role: 'AI车队管理师' },
+            'AI Route Optimizer': { icon: '🛤️', color: '#14b8a6', role: 'AI路线优化师' },
+            'AI Warehouse Manager': { icon: '🏭', color: '#8b5cf6', role: 'AI仓储管理师' },
+            'AI Delivery Tracker': { icon: '📍', color: '#ec4899', role: 'AI配送追踪师' },
+            // Cycle 339 新增角色 - AI 智能体育
+            'AI Sports Coach': { icon: '🏃', color: '#f59e0b', role: 'AI体育教练' },
+            'AI Athletic Trainer': { icon: '💪', color: '#22c55e', role: 'AI运动训练师' },
+            'AI Sports Analyst': { icon: '📊', color: '#3b82f6', role: 'AI体育分析师' },
+            'AI Referee': { icon: '⚖️', color: '#ef4444', role: 'AI裁判' },
+            'AI Sports Manager': { icon: '🏆', color: '#f97316', role: 'AI体育经理' }
         };
 
         // 拖拽相关变量
