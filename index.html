@@ -4413,6 +4413,137 @@
                     { from: 'Security', to: 'Site Reliability Engineer', content: '安全检查报告' },
                     { from: 'Site Reliability Engineer', to: 'CTO', content: '故障恢复报告' }
                 ]
+            },
+            // Cycle 283 新增模板
+            {
+                id: 'data-privacy',
+                name: '数据隐私合规',
+                icon: '🔐',
+                desc: '从数据隐私评估到合规审计的完整流程',
+                agents: ['Data Privacy Officer', 'Legal Counsel', 'Security', 'CTO', 'CEO'],
+                positions: [
+                    { role: 'Data Privacy Officer', x: 400, y: 30 },
+                    { role: 'Legal Counsel', x: 200, y: 130 },
+                    { role: 'Security', x: 600, y: 130 },
+                    { role: 'CTO', x: 200, y: 250 },
+                    { role: 'CEO', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Data Privacy Officer', to: 'Legal Counsel', content: '隐私法规解读' },
+                    { from: 'Data Privacy Officer', to: 'Security', content: '安全风险评估' },
+                    { from: 'Legal Counsel', to: 'CTO', content: '合规整改要求' },
+                    { from: 'Security', to: 'CTO', content: '技术安全建议' },
+                    { from: 'CTO', to: 'CEO', content: '合规方案汇报' }
+                ]
+            },
+            {
+                id: 'ai-ethics-review',
+                name: 'AI伦理审查',
+                icon: '⚖️',
+                desc: '从AI系统伦理评估到上线审批的流程',
+                agents: ['AI Ethics Researcher', 'Product Manager', 'Technical Product Manager', 'Legal Counsel', 'CEO'],
+                positions: [
+                    { role: 'AI Ethics Researcher', x: 400, y: 30 },
+                    { role: 'Product Manager', x: 200, y: 130 },
+                    { role: 'Technical Product Manager', x: 600, y: 130 },
+                    { role: 'Legal Counsel', x: 200, y: 250 },
+                    { role: 'CEO', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'AI Ethics Researcher', to: 'Product Manager', content: '伦理风险评估报告' },
+                    { from: 'AI Ethics Researcher', to: 'Technical Product Manager', content: '技术伦理要求' },
+                    { from: 'Product Manager', to: 'Legal Counsel', content: '合规性确认' },
+                    { from: 'Technical Product Manager', to: 'Legal Counsel', content: '技术实现合规' },
+                    { from: 'Legal Counsel', to: 'CEO', content: '伦理审查结论' }
+                ]
+            },
+            {
+                id: 'cro-optimization',
+                name: '转化率优化',
+                icon: '📈',
+                desc: '从数据分析到优化方案落地的完整流程',
+                agents: ['Conversion Rate Optimizer', 'UX Writer', 'Frontend Developer', 'Data Analyst', 'Product Manager'],
+                positions: [
+                    { role: 'Conversion Rate Optimizer', x: 400, y: 30 },
+                    { role: 'UX Writer', x: 200, y: 130 },
+                    { role: 'Frontend Developer', x: 600, y: 130 },
+                    { role: 'Data Analyst', x: 200, y: 250 },
+                    { role: 'Product Manager', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Conversion Rate Optimizer', to: 'Data Analyst', content: '需要转化数据分析' },
+                    { from: 'Data Analyst', to: 'Conversion Rate Optimizer', content: '漏斗分析报告' },
+                    { from: 'Conversion Rate Optimizer', to: 'UX Writer', content: '需要优化文案' },
+                    { from: 'Conversion Rate Optimizer', to: 'Frontend Developer', content: '需要 UI 调整' },
+                    { from: 'UX Writer', to: 'Product Manager', content: '文案优化完成' },
+                    { from: 'Frontend Developer', to: 'Product Manager', content: '开发完成' }
+                ]
+            },
+            {
+                id: 'knowledge-management',
+                name: '知识管理',
+                icon: '📚',
+                desc: '从知识采集到知识库建设的完整流程',
+                agents: ['Knowledge Manager', 'Technical Writer', 'Content Strategist', 'Product Manager', 'CEO'],
+                positions: [
+                    { role: 'Knowledge Manager', x: 400, y: 30 },
+                    { role: 'Technical Writer', x: 200, y: 130 },
+                    { role: 'Content Strategist', x: 600, y: 130 },
+                    { role: 'Product Manager', x: 200, y: 250 },
+                    { role: 'CEO', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Knowledge Manager', to: 'Technical Writer', content: '需要技术文档整理' },
+                    { from: 'Knowledge Manager', to: 'Content Strategist', content: '需要内容策略规划' },
+                    { from: 'Technical Writer', to: 'Knowledge Manager', content: '文档整理完成' },
+                    { from: 'Content Strategist', to: 'Knowledge Manager', content: '内容规划完成' },
+                    { from: 'Knowledge Manager', to: 'Product Manager', content: '知识库架构方案' },
+                    { from: 'Product Manager', to: 'CEO', content: '知识管理项目汇报' }
+                ]
+            },
+            {
+                id: 'tech-product-dev',
+                name: '技术产品开发',
+                icon: '💼',
+                desc: '从技术需求分析到产品上线的完整流程',
+                agents: ['Technical Product Manager', 'Technical Architect', 'Frontend Developer', 'Backend Developer', 'QA'],
+                positions: [
+                    { role: 'Technical Product Manager', x: 400, y: 30 },
+                    { role: 'Technical Architect', x: 200, y: 130 },
+                    { role: 'Frontend Developer', x: 600, y: 130 },
+                    { role: 'Backend Developer', x: 200, y: 250 },
+                    { role: 'QA', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Technical Product Manager', to: 'Technical Architect', content: '技术需求文档' },
+                    { from: 'Technical Architect', to: 'Frontend Developer', content: '前端技术方案' },
+                    { from: 'Technical Architect', to: 'Backend Developer', content: '后端技术方案' },
+                    { from: 'Frontend Developer', to: 'QA', content: '前端测试完成' },
+                    { from: 'Backend Developer', to: 'QA', content: '后端测试完成' },
+                    { from: 'QA', to: 'Technical Product Manager', content: '产品测试报告' }
+                ]
+            },
+            {
+                id: 'ux-writing',
+                name: '用户体验文案',
+                icon: '✍️',
+                desc: '从文案策略到内容交付的完整流程',
+                agents: ['UX Writer', 'UI/UX Designer', 'Product Manager', 'Frontend Developer', 'CEO'],
+                positions: [
+                    { role: 'UX Writer', x: 400, y: 30 },
+                    { role: 'UI/UX Designer', x: 200, y: 130 },
+                    { role: 'Product Manager', x: 600, y: 130 },
+                    { role: 'Frontend Developer', x: 200, y: 250 },
+                    { role: 'CEO', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'UX Writer', to: 'UI/UX Designer', content: '文案风格指南' },
+                    { from: 'UX Writer', to: 'Product Manager', content: '文案需求清单' },
+                    { from: 'UI/UX Designer', to: 'UX Writer', content: 'UI 设计稿' },
+                    { from: 'Product Manager', to: 'Frontend Developer', content: '产品需求确认' },
+                    { from: 'Frontend Developer', to: 'UX Writer', content: '文案实施确认' },
+                    { from: 'UX Writer', to: 'CEO', content: '文案交付总结' }
+                ]
             }
         ];
 
@@ -4521,7 +4652,14 @@
             '3D Artist': { icon: '🎲', color: '#06b6d4', role: '3D艺术家' },
             'Technical Architect': { icon: '🏗️', color: '#eab308', role: '技术架构师' },
             'Platform Engineer': { icon: '🌍', color: '#10b981', role: '平台工程师' },
-            'Site Reliability Engineer': { icon: '📡', color: '#3b82f6', role: 'SRE工程师' }
+            'Site Reliability Engineer': { icon: '📡', color: '#3b82f6', role: 'SRE工程师' },
+            // Cycle 283 新增角色
+            'Data Privacy Officer': { icon: '🔐', color: '#0d9488', role: '数据隐私官' },
+            'AI Ethics Researcher': { icon: '⚖️', color: '#7c3aed', role: 'AI伦理研究员' },
+            'Technical Product Manager': { icon: '💼', color: '#f43f5e', role: '技术产品经理' },
+            'UX Writer': { icon: '✍️', color: '#06b6d4', role: '用户体验文案' },
+            'Conversion Rate Optimizer': { icon: '📈', color: '#22c55e', role: '转化率优化师' },
+            'Knowledge Manager': { icon: '📚', color: '#a855f7', role: '知识管理经理' }
         };
 
         // 拖拽相关变量
