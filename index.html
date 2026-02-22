@@ -130,6 +130,74 @@
             letter-spacing: 0.5px;
         }
 
+        /* Agent 分组样式 */
+        .agent-group {
+            margin-bottom: 12px;
+        }
+
+        .agent-group-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 12px;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 8px;
+        }
+
+        .agent-group-header:hover {
+            background: var(--border-color);
+        }
+
+        .agent-group-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .agent-group-count {
+            font-size: 12px;
+            color: var(--text-secondary);
+            background: var(--bg-primary);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .agent-group-actions {
+            display: flex;
+            gap: 4px;
+        }
+
+        .agent-group-btn {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .agent-group-btn:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .agent-group-btn.delete:hover {
+            background: var(--error);
+        }
+
+        .agent-group-items {
+            padding-left: 8px;
+        }
+
         .agent-item {
             display: flex;
             align-items: center;
@@ -909,6 +977,90 @@
             gap: 10px;
         }
 
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px 14px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        textarea.form-input {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .my-template-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 12px;
+            background: var(--bg-primary);
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .my-template-item:hover {
+            background: var(--bg-tertiary);
+        }
+
+        .my-template-info {
+            flex: 1;
+        }
+
+        .my-template-name {
+            font-weight: 500;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .my-template-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .my-template-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .my-template-btn {
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .my-template-btn.load {
+            background: var(--accent);
+            color: white;
+        }
+
+        .my-template-btn.delete {
+            background: var(--error);
+            color: white;
+        }
+
         .api-key-list {
             margin-top: 12px;
         }
@@ -1188,6 +1340,14 @@
                 </svg>
                 克隆
             </button>
+            <button class="btn btn-secondary" onclick="openSaveTemplateModal()" title="保存当前工作流为模板">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                    <polyline points="17 21 17 13 7 13 7 21"/>
+                    <polyline points="7 3 7 8 15 8"/>
+                </svg>
+                保存模板
+            </button>
             <button class="btn btn-secondary" id="batchSelectBtn" onclick="toggleBatchMode()" title="批量选择模式">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
@@ -1201,6 +1361,15 @@
                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
                 </svg>
                 批量删除
+            </button>
+            <button class="btn btn-secondary" onclick="openGroupModal()" title="管理 Agent 分组">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                分组
             </button>
         </div>
     </header>
@@ -1389,6 +1558,92 @@
             <div class="modal-footer">
                 <button class="btn btn-secondary" onclick="closeApiKeysModal()">关闭</button>
                 <button class="btn btn-primary" onclick="exportKeys()">导出密钥</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 保存模板 Modal -->
+    <div class="modal-overlay" id="saveTemplateModal">
+        <div class="modal" style="max-width: 500px;">
+            <div class="modal-header">
+                <h2>💾 保存工作流模板</h2>
+                <button class="modal-close" onclick="closeSaveTemplateModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group" style="margin-bottom: 16px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">模板名称 *</label>
+                    <input type="text" id="templateName" class="form-input" placeholder="输入模板名称，如：我的产品开发流程" maxlength="30">
+                </div>
+                <div class="form-group" style="margin-bottom: 16px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">模板描述</label>
+                    <textarea id="templateDesc" class="form-input" rows="3" placeholder="简要描述这个模板的用途" maxlength="100"></textarea>
+                </div>
+                <div class="form-group">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">保存位置</label>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn btn-secondary" onclick="saveTemplateToLocal()" style="flex:1;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                            </svg>
+                            本地保存
+                        </button>
+                        <button class="btn btn-primary" onclick="generateShareLink()" style="flex:1;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="18" cy="5" r="3"/>
+                                <circle cx="6" cy="12" r="3"/>
+                                <circle cx="18" cy="19" r="3"/>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                            </svg>
+                            生成分享链接
+                        </button>
+                    </div>
+                </div>
+                <div id="shareLinkSection" style="display: none; margin-top: 16px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">分享链接</label>
+                    <div style="display: flex; gap: 8px;">
+                        <input type="text" id="shareLinkInput" class="form-input" readonly style="flex:1;">
+                        <button class="btn btn-primary" onclick="copyShareLink()">复制</button>
+                    </div>
+                    <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px;">
+                        复制链接分享给他人，打开链接即可导入此模板
+                    </p>
+                </div>
+                <div id="myTemplatesSection" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                    <label style="display: block; margin-bottom: 12px; font-weight: 500;">📁 我的模板</label>
+                    <div id="myTemplatesList" style="max-height: 200px; overflow-y: auto;">
+                        <p style="color: var(--text-secondary); font-size: 13px; text-align: center; padding: 20px;">暂无保存的模板</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeSaveTemplateModal()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分组管理 Modal -->
+    <div class="modal-overlay" id="groupModal">
+        <div class="modal" style="max-width: 500px;">
+            <div class="modal-header">
+                <h2>👥 Agent 分组管理</h2>
+                <button class="modal-close" onclick="closeGroupModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group" style="margin-bottom: 16px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 500;">创建新分组</label>
+                    <div style="display: flex; gap: 8px;">
+                        <input type="text" id="newGroupName" class="form-input" placeholder="输入分组名称" maxlength="20" style="flex:1;">
+                        <input type="color" id="newGroupColor" class="form-input" value="#8b5cf6" style="width: 50px; padding: 4px;">
+                        <button class="btn btn-primary" onclick="createGroup()">创建</button>
+                    </div>
+                </div>
+                <div id="groupsList" style="max-height: 300px; overflow-y: auto;">
+                    <!-- 分组列表由 JS 渲染 -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeGroupModal()">关闭</button>
             </div>
         </div>
     </div>
@@ -1880,7 +2135,61 @@
         // 渲染 Agent 列表
         function renderAgents() {
             const list = document.getElementById('agentList');
-            list.innerHTML = agents.map(agent => `
+
+            // 如果有分组，按分组显示
+            if (agentGroups.length > 0) {
+                let html = '';
+
+                // 已分组的 Agent
+                agentGroups.forEach(group => {
+                    const groupAgents = agents.filter(a => group.agents.includes(a.id));
+                    if (groupAgents.length > 0) {
+                        html += `
+                            <div class="agent-group">
+                                <div class="agent-group-header" onclick="toggleGroupExpand('${group.id}')">
+                                    <div class="agent-group-title">
+                                        <span style="width: 10px; height: 10px; border-radius: 50%; background: ${group.color};"></span>
+                                        ${group.name}
+                                        <span class="agent-group-count">${groupAgents.length}</span>
+                                    </div>
+                                </div>
+                                <div class="agent-group-items" id="group_${group.id}">
+                                    ${groupAgents.map(agent => renderAgentItem(agent)).join('')}
+                                </div>
+                            </div>
+                        `;
+                    }
+                });
+
+                // 未分组的 Agent
+                const ungroupedAgents = agents.filter(a => !agentGroups.some(g => g.agents.includes(a.id)));
+                if (ungroupedAgents.length > 0) {
+                    html += `
+                        <div class="agent-group">
+                            <div class="agent-group-header" onclick="toggleGroupExpand('ungrouped')">
+                                <div class="agent-group-title">
+                                    <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--text-secondary);"></span>
+                                    未分组
+                                    <span class="agent-group-count">${ungroupedAgents.length}</span>
+                                </div>
+                            </div>
+                            <div class="agent-group-items" id="group_ungrouped">
+                                ${ungroupedAgents.map(agent => renderAgentItem(agent)).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+
+                list.innerHTML = html;
+            } else {
+                // 无分组，正常显示
+                list.innerHTML = agents.map(agent => renderAgentItem(agent)).join('');
+            }
+        }
+
+        // 渲染单个 Agent 项
+        function renderAgentItem(agent) {
+            return `
                 <div class="agent-item ${selectedAgent === agent.id ? 'active' : ''} ${selectedAgents.has(agent.id) ? 'selected' : ''}" onclick="${batchMode ? `toggleAgentSelection(${agent.id})` : `selectAgent(${agent.id})`}">
                     ${batchMode ? `<div class="agent-checkbox ${selectedAgents.has(agent.id) ? 'checked' : ''}">${selectedAgents.has(agent.id) ? '✓' : ''}</div>` : ''}
                     <div class="agent-avatar" style="background: ${agentRoles[agent.role]?.color || '#6b7280'}20; color: ${agentRoles[agent.role]?.color || '#6b7280'}">
@@ -1892,7 +2201,15 @@
                     </div>
                     <div class="agent-status status-${agent.status}"></div>
                 </div>
-            `).join('');
+            `;
+        }
+
+        // 切换分组展开/收起
+        function toggleGroupExpand(groupId) {
+            const el = document.getElementById('group_' + groupId);
+            if (el) {
+                el.style.display = el.style.display === 'none' ? 'block' : 'none';
+            }
         }
 
         // 渲染流程图
@@ -2665,6 +2982,25 @@
             alert('导出 PNG 功能开发中...');
         }
 
+        // 加载工作流数据
+        function loadWorkflowData(data) {
+            if (!data || !data.agents) return;
+
+            // 重置状态
+            agents = data.agents.map(a => ({
+                ...a,
+                status: a.status || 'waiting'
+            }));
+            messages = data.messages || [];
+            connections = data.connections || [];
+
+            // 重新渲染
+            renderAgents();
+            renderFlow();
+            updateTimeline();
+            clearSelection();
+        }
+
         function exportJSON() {
             const data = {
                 agents: agents,
@@ -2682,6 +3018,7 @@
 
         // 初始化
         initDemo();
+        checkUrlForTemplate();
 
         // ======== Three.js 3D 场景功能 ========
 
@@ -3000,6 +3337,314 @@
         // 关闭模板 Modal
         function closeTemplateModal() {
             document.getElementById('templateModal').classList.remove('show');
+        }
+
+        // ======== 保存模板功能 ========
+        function openSaveTemplateModal() {
+            renderMyTemplates();
+            document.getElementById('saveTemplateModal').classList.add('show');
+            document.getElementById('shareLinkSection').style.display = 'none';
+            document.getElementById('templateName').value = '';
+            document.getElementById('templateDesc').value = '';
+        }
+
+        function closeSaveTemplateModal() {
+            document.getElementById('saveTemplateModal').classList.remove('show');
+        }
+
+        // 获取当前工作流数据
+        function getCurrentWorkflowData() {
+            const agents = window.agents || [];
+            const messages = window.messages || [];
+            const connections = window.connections || [];
+            return { agents, messages, connections };
+        }
+
+        // 保存模板到本地
+        function saveTemplateToLocal() {
+            const name = document.getElementById('templateName').value.trim();
+            if (!name) {
+                showNotification('请输入模板名称', 'error');
+                return;
+            }
+
+            const data = getCurrentWorkflowData();
+            if (data.agents.length === 0) {
+                showNotification('当前没有 Agent，无法保存模板', 'error');
+                return;
+            }
+
+            const templates = JSON.parse(localStorage.getItem('myTemplates') || '[]');
+            const template = {
+                id: 'template_' + Date.now(),
+                name: name,
+                desc: document.getElementById('templateDesc').value.trim(),
+                data: data,
+                createdAt: new Date().toISOString()
+            };
+            templates.push(template);
+            localStorage.setItem('myTemplates', JSON.stringify(templates));
+
+            showNotification('模板保存成功', 'success');
+            renderMyTemplates();
+        }
+
+        // 生成分享链接
+        function generateShareLink() {
+            const name = document.getElementById('templateName').value.trim();
+            if (!name) {
+                showNotification('请输入模板名称', 'error');
+                return;
+            }
+
+            const data = getCurrentWorkflowData();
+            if (data.agents.length === 0) {
+                showNotification('当前没有 Agent，无法生成链接', 'error');
+                return;
+            }
+
+            // 压缩数据并编码为 URL 参数
+            const templateData = {
+                n: name,
+                d: document.getElementById('templateDesc').value.trim(),
+                a: data.agents.map(a => ({
+                    id: a.id,
+                    name: a.name,
+                    role: a.role,
+                    model: a.model,
+                    status: 'waiting'
+                })),
+                m: data.messages,
+                c: data.connections
+            };
+
+            // 使用 Base64 编码
+            const encoded = btoa(encodeURIComponent(JSON.stringify(templateData)));
+            const shareUrl = window.location.origin + window.location.pathname + '?template=' + encoded;
+
+            document.getElementById('shareLinkInput').value = shareUrl;
+            document.getElementById('shareLinkSection').style.display = 'block';
+        }
+
+        // 复制分享链接
+        function copyShareLink() {
+            const input = document.getElementById('shareLinkInput');
+            input.select();
+            document.execCommand('copy');
+            showNotification('链接已复制到剪贴板', 'success');
+        }
+
+        // 渲染我的模板列表
+        function renderMyTemplates() {
+            const list = document.getElementById('myTemplatesList');
+            const templates = JSON.parse(localStorage.getItem('myTemplates') || '[]');
+
+            if (templates.length === 0) {
+                list.innerHTML = '<p style="color: var(--text-secondary); font-size: 13px; text-align: center; padding: 20px;">暂无保存的模板</p>';
+                return;
+            }
+
+            list.innerHTML = templates.map(t => `
+                <div class="my-template-item" onclick="loadMyTemplate('${t.id}')">
+                    <div class="my-template-info">
+                        <div class="my-template-name">${t.name}</div>
+                        <div class="my-template-desc">${t.desc || '无描述'} · ${t.data.agents.length} 个 Agent</div>
+                    </div>
+                    <div class="my-template-actions" onclick="event.stopPropagation()">
+                        <button class="my-template-btn load" onclick="loadMyTemplate('${t.id}')">加载</button>
+                        <button class="my-template-btn delete" onclick="deleteMyTemplate('${t.id}')">删除</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 加载我的模板
+        function loadMyTemplate(templateId) {
+            const templates = JSON.parse(localStorage.getItem('myTemplates') || '[]');
+            const template = templates.find(t => t.id === templateId);
+            if (!template) return;
+
+            loadWorkflowData(template.data);
+            closeSaveTemplateModal();
+            showNotification(`已加载模板: ${template.name}`, 'success');
+        }
+
+        // 删除我的模板
+        function deleteMyTemplate(templateId) {
+            if (!confirm('确定要删除这个模板吗？')) return;
+
+            let templates = JSON.parse(localStorage.getItem('myTemplates') || '[]');
+            templates = templates.filter(t => t.id !== templateId);
+            localStorage.setItem('myTemplates', JSON.stringify(templates));
+            renderMyTemplates();
+            showNotification('模板已删除', 'success');
+        }
+
+        // ======== 分组功能 ========
+        let agentGroups = JSON.parse(localStorage.getItem('agentGroups') || '[]');
+
+        // 打开分组 Modal
+        function openGroupModal() {
+            renderGroupsList();
+            document.getElementById('groupModal').classList.add('show');
+        }
+
+        // 关闭分组 Modal
+        function closeGroupModal() {
+            document.getElementById('groupModal').classList.remove('show');
+        }
+
+        // 创建分组
+        function createGroup() {
+            const name = document.getElementById('newGroupName').value.trim();
+            const color = document.getElementById('newGroupColor').value;
+
+            if (!name) {
+                showNotification('请输入分组名称', 'error');
+                return;
+            }
+
+            if (agentGroups.find(g => g.name === name)) {
+                showNotification('分组名称已存在', 'error');
+                return;
+            }
+
+            agentGroups.push({
+                id: 'group_' + Date.now(),
+                name: name,
+                color: color,
+                agents: []
+            });
+
+            saveGroups();
+            renderGroupsList();
+            renderAgents();
+            document.getElementById('newGroupName').value = '';
+            showNotification('分组创建成功', 'success');
+        }
+
+        // 删除分组
+        function deleteGroup(groupId) {
+            if (!confirm('确定要删除这个分组吗？')) return;
+
+            agentGroups = agentGroups.filter(g => g.id !== groupId);
+            saveGroups();
+            renderGroupsList();
+            renderAgents();
+            showNotification('分组已删除', 'success');
+        }
+
+        // 将 Agent 添加到分组
+        function addAgentToGroup(agentId, groupId) {
+            // 从所有分组中移除
+            agentGroups.forEach(g => {
+                g.agents = g.agents.filter(a => a !== agentId);
+            });
+
+            // 添加到指定分组
+            const group = agentGroups.find(g => g.id === groupId);
+            if (group && !group.agents.includes(agentId)) {
+                group.agents.push(agentId);
+            }
+
+            saveGroups();
+            renderGroupsList();
+            renderAgents();
+        }
+
+        // 将 Agent 从分组中移除
+        function removeAgentFromGroup(agentId, groupId) {
+            const group = agentGroups.find(g => g.id === groupId);
+            if (group) {
+                group.agents = group.agents.filter(a => a !== agentId);
+                saveGroups();
+                renderGroupsList();
+                renderAgents();
+            }
+        }
+
+        // 保存分组到 localStorage
+        function saveGroups() {
+            localStorage.setItem('agentGroups', JSON.stringify(agentGroups));
+        }
+
+        // 渲染分组列表
+        function renderGroupsList() {
+            const list = document.getElementById('groupsList');
+
+            if (agentGroups.length === 0) {
+                list.innerHTML = '<p style="color: var(--text-secondary); font-size: 13px; text-align: center; padding: 20px;">暂无分组，请先创建分组</p>';
+                return;
+            }
+
+            list.innerHTML = agentGroups.map(group => {
+                const groupAgents = agents.filter(a => group.agents.includes(a.id));
+                const ungroupedAgents = agents.filter(a => !agentGroups.some(g => g.agents.includes(a.id)));
+
+                return `
+                    <div class="agent-group" style="margin-bottom: 16px; padding: 12px; background: var(--bg-primary); border-radius: 8px;">
+                        <div class="agent-group-header" style="margin-bottom: 12px;">
+                            <div class="agent-group-title">
+                                <span style="width: 12px; height: 12px; border-radius: 50%; background: ${group.color};"></span>
+                                ${group.name}
+                                <span class="agent-group-count">${groupAgents.length}</span>
+                            </div>
+                            <div class="agent-group-actions">
+                                <button class="agent-group-btn delete" onclick="deleteGroup('${group.id}')" title="删除分组">×</button>
+                            </div>
+                        </div>
+                        <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 8px;">将 Agent 拖入分组:</div>
+                        <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                            ${agents.map(a => `
+                                <div class="agent-draggable" draggable="true" ondragstart="dragAgent(event, '${a.id}', '${group.id}')"
+                                     style="padding: 6px 12px; background: ${group.agents.includes(a.id) ? group.color + '30' : 'var(--bg-tertiary)'};
+                                            border: 1px solid ${group.agents.includes(a.id) ? group.color : 'transparent'};
+                                            border-radius: 6px; cursor: grab; font-size: 12px; display: flex; align-items: center; gap: 6px;">
+                                    <span>${agentRoles[a.role]?.icon || '🤖'}</span>
+                                    <span>${a.name}</span>
+                                    ${group.agents.includes(a.id) ? `<span onclick="removeAgentFromGroup('${a.id}', '${group.id}'); event.stopPropagation();" style="cursor:pointer;color:var(--text-secondary)">×</span>` : ''}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // 拖拽 Agent
+        function dragAgent(event, agentId, groupId) {
+            event.dataTransfer.setData('agentId', agentId);
+            event.dataTransfer.setData('targetGroupId', groupId);
+        }
+
+        // 获取 Agent 所属分组
+        function getAgentGroup(agentId) {
+            return agentGroups.find(g => g.agents.includes(agentId));
+        }
+
+        // 检查 URL 参数并加载分享的模板
+        function checkUrlForTemplate() {
+            const params = new URLSearchParams(window.location.search);
+            const templateParam = params.get('template');
+
+            if (templateParam) {
+                try {
+                    const decoded = JSON.parse(decodeURIComponent(atob(templateParam)));
+                    const workflowData = {
+                        agents: decoded.a || [],
+                        messages: decoded.m || [],
+                        connections: decoded.c || []
+                    };
+                    loadWorkflowData(workflowData);
+                    showNotification(`已加载分享的模板: ${decoded.n}`, 'success');
+
+                    // 清除 URL 参数
+                    window.history.replaceState({}, document.title, window.location.pathname);
+                } catch (e) {
+                    console.error('Failed to load template from URL:', e);
+                    showNotification('无效的模板链接', 'error');
+                }
+            }
         }
 
         // ======== 导入功能 ========
