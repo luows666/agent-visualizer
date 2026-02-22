@@ -8504,6 +8504,123 @@
                     { from: 'AI Metrics Engineer', to: 'AI Budget Manager', content: '收益指标' },
                     { from: 'AI Budget Manager', to: 'AI ROI Analyzer', content: 'ROI报告' }
                 ]
+            },
+            // Cycle 313 新增模板
+            {
+                id: 'ai-edge-computing',
+                name: 'AI边缘计算部署',
+                icon: '📡',
+                desc: '从边缘设备需求到分布式计算的完整流程',
+                agents: ['AI Edge Computing', 'AI IoT Engineer', 'AI Network Engineer', 'AI Security'],
+                positions: [
+                    { role: 'AI Edge Computing', x: 400, y: 30 },
+                    { role: 'AI IoT Engineer', x: 200, y: 150 },
+                    { role: 'AI Network Engineer', x: 600, y: 150 },
+                    { role: 'AI Security', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Edge Computing', to: 'AI IoT Engineer', content: '边缘设备需求' },
+                    { from: 'AI IoT Engineer', to: 'AI Network Engineer', content: '设备连接方案' },
+                    { from: 'AI Network Engineer', to: 'AI Security', content: '网络安全方案' },
+                    { from: 'AI Security', to: 'AI Edge Computing', content: '安全评估报告' }
+                ]
+            },
+            {
+                id: 'ai-autonomous-driving',
+                name: 'AI自动驾驶系统',
+                icon: '🚗',
+                desc: '从自动驾驶需求到系统上线的完整开发流程',
+                agents: ['AI Autonomous Systems', 'AI Computer Vision', 'AI Sensor Engineer', 'AI Robotics Engineer', 'QA'],
+                positions: [
+                    { role: 'AI Autonomous Systems', x: 400, y: 30 },
+                    { role: 'AI Computer Vision', x: 200, y: 150 },
+                    { role: 'AI Sensor Engineer', x: 600, y: 150 },
+                    { role: 'AI Robotics Engineer', x: 400, y: 270 },
+                    { role: 'QA', x: 400, y: 390 }
+                ],
+                messageFlows: [
+                    { from: 'AI Autonomous Systems', to: 'AI Computer Vision', content: '视觉算法需求' },
+                    { from: 'AI Computer Vision', to: 'AI Sensor Engineer', content: '传感器规格' },
+                    { from: 'AI Sensor Engineer', to: 'AI Robotics Engineer', content: '硬件集成方案' },
+                    { from: 'AI Robotics Engineer', to: 'QA', content: '系统测试' },
+                    { from: 'QA', to: 'AI Autonomous Systems', content: '测试报告' }
+                ]
+            },
+            {
+                id: 'ai-blockchain-app',
+                name: 'AI区块链应用开发',
+                icon: '⛓️',
+                desc: '从智能合约到去中心化应用开发的完整流程',
+                agents: ['AI Blockchain Dev', 'AI Smart Contract Dev', 'AI Security Auditor', 'AI Frontend Developer'],
+                positions: [
+                    { role: 'AI Blockchain Dev', x: 400, y: 30 },
+                    { role: 'AI Smart Contract Dev', x: 200, y: 150 },
+                    { role: 'AI Security Auditor', x: 600, y: 150 },
+                    { role: 'AI Frontend Developer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Blockchain Dev', to: 'AI Smart Contract Dev', content: '智能合约需求' },
+                    { from: 'AI Smart Contract Dev', to: 'AI Security Auditor', content: '合约代码' },
+                    { from: 'AI Security Auditor', to: 'AI Blockchain Dev', content: '安全审计报告' },
+                    { from: 'AI Blockchain Dev', to: 'AI Frontend Developer', content: 'DApp开发需求' }
+                ]
+            },
+            {
+                id: 'ai-biotech-research',
+                name: 'AI生物信息学研究',
+                icon: '🧬',
+                desc: '从基因数据分析到生物发现的完整研究流程',
+                agents: ['AI BioTech Engineer', 'AI Data Scientist', 'AI Research Scientist', 'AI ML Engineer'],
+                positions: [
+                    { role: 'AI BioTech Engineer', x: 400, y: 30 },
+                    { role: 'AI Data Scientist', x: 200, y: 150 },
+                    { role: 'AI Research Scientist', x: 600, y: 150 },
+                    { role: 'AI ML Engineer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI BioTech Engineer', to: 'AI Data Scientist', content: '基因数据需求' },
+                    { from: 'AI Data Scientist', to: 'AI Research Scientist', content: '数据分析报告' },
+                    { from: 'AI Research Scientist', to: 'AI ML Engineer', content: '模型训练需求' },
+                    { from: 'AI ML Engineer', to: 'AI BioTech Engineer', content: '模型结果' }
+                ]
+            },
+            {
+                id: 'ai-quantum-computing',
+                name: 'AI量子计算研究',
+                icon: '⚛️',
+                desc: '从量子算法研究到实验验证的完整流程',
+                agents: ['AI Quantum Researcher', 'AI Algorithm Engineer', 'AI Research Lead', 'AI Physics Expert'],
+                positions: [
+                    { role: 'AI Quantum Researcher', x: 400, y: 30 },
+                    { role: 'AI Algorithm Engineer', x: 200, y: 150 },
+                    { role: 'AI Research Lead', x: 600, y: 150 },
+                    { role: 'AI Physics Expert', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Quantum Researcher', to: 'AI Algorithm Engineer', content: '量子算法需求' },
+                    { from: 'AI Algorithm Engineer', to: 'AI Research Lead', content: '算法设计方案' },
+                    { from: 'AI Research Lead', to: 'AI Physics Expert', content: '物理可行性验证' },
+                    { from: 'AI Physics Expert', to: 'AI Quantum Researcher', content: '验证结果' }
+                ]
+            },
+            {
+                id: 'ai-robotics-development',
+                name: 'AI机器人开发',
+                icon: '🤖',
+                desc: '从机器人需求到原型开发的完整流程',
+                agents: ['AI Robotics Engineer', 'AI Mechanical Designer', 'AI Control Systems', 'AI QA'],
+                positions: [
+                    { role: 'AI Robotics Engineer', x: 400, y: 30 },
+                    { role: 'AI Mechanical Designer', x: 200, y: 150 },
+                    { role: 'AI Control Systems', x: 600, y: 150 },
+                    { role: 'AI QA', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Robotics Engineer', to: 'AI Mechanical Designer', content: '机械设计需求' },
+                    { from: 'AI Mechanical Designer', to: 'AI Control Systems', content: '机械图纸' },
+                    { from: 'AI Control Systems', to: 'AI QA', content: '控制系统测试' },
+                    { from: 'AI QA', to: 'AI Robotics Engineer', content: '测试报告' }
+                ]
             }
         ];
 
@@ -8946,7 +9063,18 @@
             'AI Computer Vision': { icon: '👁️', color: '#22c55e', role: 'AI计算机视觉工程师' },
             'AI NLP Engineer': { icon: '💬', color: '#a855f7', role: 'AI自然语言处理工程师' },
             'AI Speech Engineer': { icon: '🎤', color: '#f43f5e', role: 'AI语音工程师' },
-            'AI Multimodal Engineer': { icon: '🎭', color: '#14b8a6', role: 'AI多模态工程师' }
+            'AI Multimodal Engineer': { icon: '🎭', color: '#14b8a6', role: 'AI多模态工程师' },
+            // Cycle 313 新增角色 - 支撑角色
+            'AI IoT Engineer': { icon: '🌐', color: '#0d9488', role: 'AI物联网工程师' },
+            'AI Network Engineer': { icon: '🌍', color: '#0891b2', role: 'AI网络工程师' },
+            'AI Sensor Engineer': { icon: '📡', color: '#f97316', role: 'AI传感器工程师' },
+            'AI Smart Contract Dev': { icon: '📜', color: '#f59e0b', role: 'AI智能合约开发工程师' },
+            'AI Security Auditor': { icon: '🔒', color: '#dc2626', role: 'AI安全审计员' },
+            'AI Frontend Developer': { icon: '🎨', color: '#ec4899', role: 'AI前端开发工程师' },
+            'AI Research Scientist': { icon: '🔬', color: '#8b5cf6', role: 'AI研究科学家' },
+            'AI Physics Expert': { icon: '⚛️', color: '#06b6d4', role: 'AI物理专家' },
+            'AI Mechanical Designer': { icon: '🔧', color: '#64748b', role: 'AI机械设计师' },
+            'AI Control Systems': { icon: '🎛️', color: '#14b8a6', role: 'AI控制系统工程师' }
         };
 
         // 拖拽相关变量
