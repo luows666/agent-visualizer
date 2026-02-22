@@ -4287,6 +4287,132 @@
                     { from: 'AI Researcher', to: 'ML Engineer', content: '算法原型' },
                     { from: 'ML Engineer', to: 'Product Manager', content: '模型性能报告' }
                 ]
+            },
+            // Cycle 282 新增模板
+            {
+                id: 'ui-ux-design',
+                name: 'UI/UX 设计流程',
+                icon: '🎨',
+                desc: '从需求分析到交互设计的完整设计流程',
+                agents: ['Product Manager', 'UI/UX Designer', 'Frontend Developer', 'QA', 'Marketing'],
+                positions: [
+                    { role: 'Product Manager', x: 400, y: 30 },
+                    { role: 'UI/UX Designer', x: 400, y: 130 },
+                    { role: 'Frontend Developer', x: 200, y: 250 },
+                    { role: 'QA', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Product Manager', to: 'UI/UX Designer', content: '产品需求说明' },
+                    { from: 'UI/UX Designer', to: 'Frontend Developer', content: 'UI 设计稿交付' },
+                    { from: 'Frontend Developer', to: 'QA', content: '前端实现确认' },
+                    { from: 'QA', to: 'Product Manager', content: '设计验收通过' }
+                ]
+            },
+            {
+                id: 'motion-design',
+                name: '动效设计流程',
+                icon: '🎬',
+                desc: '从动效概念到交互动效的完整设计流程',
+                agents: ['Product Manager', 'Motion Designer', 'Frontend Developer', 'UI/UX Designer'],
+                positions: [
+                    { role: 'Product Manager', x: 400, y: 30 },
+                    { role: 'Motion Designer', x: 400, y: 130 },
+                    { role: 'Frontend Developer', x: 200, y: 250 },
+                    { role: 'UI/UX Designer', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Product Manager', to: 'Motion Designer', content: '动效需求说明' },
+                    { from: 'Motion Designer', to: 'UI/UX Designer', content: '动效与UI整合' },
+                    { from: 'Motion Designer', to: 'Frontend Developer', content: '动效规格文档' },
+                    { from: 'Frontend Developer', to: 'Product Manager', content: '动效实现完成' }
+                ]
+            },
+            {
+                id: '3d-modeling',
+                name: '3D 建模流程',
+                icon: '🎲',
+                desc: '从概念设计到3D资产导出的完整流程',
+                agents: ['Art Director', '3D Artist', 'Game Developer', 'Technical Architect'],
+                positions: [
+                    { role: 'Art Director', x: 400, y: 30 },
+                    { role: '3D Artist', x: 400, y: 130 },
+                    { role: 'Game Developer', x: 200, y: 250 },
+                    { role: 'Technical Architect', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Art Director', to: '3D Artist', content: '3D资产需求说明' },
+                    { from: '3D Artist', to: 'Game Developer', content: '3D模型交付' },
+                    { from: '3D Artist', to: 'Technical Architect', content: '性能要求说明' },
+                    { from: 'Game Developer', to: 'Art Director', content: '模型集成完成' }
+                ]
+            },
+            {
+                id: 'tech-architecture',
+                name: '技术架构评审',
+                icon: '🏗️',
+                desc: '从技术选型到架构评审的完整流程',
+                agents: ['CTO', 'Technical Architect', 'Backend Developer', 'DevOps', 'Security'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'Technical Architect', x: 400, y: 130 },
+                    { role: 'Backend Developer', x: 200, y: 250 },
+                    { role: 'DevOps', x: 600, y: 250 },
+                    { role: 'Security', x: 400, y: 330 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Technical Architect', content: '发起架构评审' },
+                    { from: 'Technical Architect', to: 'Backend Developer', content: '技术方案说明' },
+                    { from: 'Technical Architect', to: 'DevOps', content: '部署方案说明' },
+                    { from: 'Technical Architect', to: 'Security', content: '安全要求说明' },
+                    { from: 'Backend Developer', to: 'CTO', content: '技术方案反馈' },
+                    { from: 'DevOps', to: 'CTO', content: '部署方案确认' },
+                    { from: 'Security', to: 'CTO', content: '安全评估报告' }
+                ]
+            },
+            {
+                id: 'platform-engineering',
+                name: '平台工程',
+                icon: '🌍',
+                desc: '从平台需求到服务上线的完整流程',
+                agents: ['CTO', 'Platform Engineer', 'Backend Developer', 'DevOps', 'Site Reliability Engineer'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'Platform Engineer', x: 400, y: 130 },
+                    { role: 'Backend Developer', x: 200, y: 250 },
+                    { role: 'DevOps', x: 600, y: 250 },
+                    { role: 'Site Reliability Engineer', x: 400, y: 330 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Platform Engineer', content: '平台需求说明' },
+                    { from: 'Platform Engineer', to: 'Backend Developer', content: '后端服务需求' },
+                    { from: 'Platform Engineer', to: 'DevOps', content: '基础设施需求' },
+                    { from: 'Backend Developer', to: 'Platform Engineer', content: '服务开发完成' },
+                    { from: 'DevOps', to: 'Platform Engineer', content: '环境部署完成' },
+                    { from: 'Platform Engineer', to: 'Site Reliability Engineer', content: 'SRE交接' },
+                    { from: 'Site Reliability Engineer', to: 'CTO', content: '平台验收报告' }
+                ]
+            },
+            {
+                id: 'sre-operations',
+                name: 'SRE 运维流程',
+                icon: '📡',
+                desc: '从监控告警到故障恢复的完整运维流程',
+                agents: ['CTO', 'Site Reliability Engineer', 'DevOps', 'Backend Developer', 'Security'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'Site Reliability Engineer', x: 400, y: 130 },
+                    { role: 'DevOps', x: 200, y: 250 },
+                    { role: 'Backend Developer', x: 600, y: 250 },
+                    { role: 'Security', x: 400, y: 330 }
+                ],
+                messageFlows: [
+                    { from: 'Site Reliability Engineer', to: 'DevOps', content: '监控告警通知' },
+                    { from: 'Site Reliability Engineer', to: 'Backend Developer', content: '故障排查请求' },
+                    { from: 'DevOps', to: 'Site Reliability Engineer', content: '日志分析报告' },
+                    { from: 'Backend Developer', to: 'Site Reliability Engineer', content: '故障修复完成' },
+                    { from: 'Security', to: 'Site Reliability Engineer', content: '安全检查报告' },
+                    { from: 'Site Reliability Engineer', to: 'CTO', content: '故障恢复报告' }
+                ]
             }
         ];
 
@@ -4388,7 +4514,14 @@
             'Cloud Architect': { icon: '☁️', color: '#0ea5e9', role: '云架构师' },
             // Cycle 281 新增角色
             'Blockchain Dev': { icon: '⛓️', color: '#14b8a6', role: '区块链开发' },
-            'Game Developer': { icon: '🎮', color: '#84cc16', role: '游戏开发者' }
+            'Game Developer': { icon: '🎮', color: '#84cc16', role: '游戏开发者' },
+            // Cycle 282 新增角色
+            'UI/UX Designer': { icon: '🎨', color: '#f43f5e', role: 'UI/UX设计师' },
+            'Motion Designer': { icon: '🎬', color: '#a855f7', role: '动效设计师' },
+            '3D Artist': { icon: '🎲', color: '#06b6d4', role: '3D艺术家' },
+            'Technical Architect': { icon: '🏗️', color: '#eab308', role: '技术架构师' },
+            'Platform Engineer': { icon: '🌍', color: '#10b981', role: '平台工程师' },
+            'Site Reliability Engineer': { icon: '📡', color: '#3b82f6', role: 'SRE工程师' }
         };
 
         // 拖拽相关变量
