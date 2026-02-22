@@ -1348,6 +1348,13 @@
                 </svg>
                 保存模板
             </button>
+            <button class="btn btn-secondary" onclick="openVersionHistoryModal()" title="版本历史">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                版本历史
+            </button>
             <button class="btn btn-secondary" id="batchSelectBtn" onclick="toggleBatchMode()" title="批量选择模式">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
@@ -1701,6 +1708,35 @@
         </div>
     </div>
 
+    <!-- 版本历史 Modal -->
+    <div class="modal-overlay" id="versionHistoryModal">
+        <div class="modal" style="max-width: 500px;">
+            <div class="modal-header">
+                <h2>📜 版本历史</h2>
+                <button class="modal-close" onclick="closeVersionHistoryModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div style="margin-bottom: 16px;">
+                    <button class="btn btn-primary" onclick="saveVersion()" style="width: 100%;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                            <polyline points="17 21 17 13 7 13 7 21"/>
+                            <polyline points="7 3 7 8 15 8"/>
+                        </svg>
+                        保存当前版本
+                    </button>
+                </div>
+                <div id="versionList" style="max-height: 300px; overflow-y: auto;">
+                    <p style="color: var(--text-secondary); text-align: center; padding: 20px;">暂无版本记录</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeVersionHistoryModal()">关闭</button>
+                <button class="btn btn-danger" onclick="clearAllVersions()" title="清空所有版本">清空历史</button>
+            </div>
+        </div>
+    </div>
+
     <!-- 连接消息 Modal -->
     <div class="message-modal" id="messageModal">
         <div class="modal">
@@ -1969,8 +2005,150 @@
                     { from: 'CTO', to: 'QA', content: '修复完成，提交测试' },
                     { from: 'QA', to: 'Sales', content: 'Bug 已修复，客户通知' }
                 ]
+            },
+            {
+                id: 'user-research',
+                name: '用户调研',
+                icon: '📊',
+                desc: '从需求收集到用户画像的调研流程',
+                agents: ['CEO', 'Researcher', 'Designer', 'Marketing'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 50 },
+                    { role: 'Researcher', x: 200, y: 180 },
+                    { role: 'Designer', x: 400, y: 180 },
+                    { role: 'Marketing', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Researcher', content: '确定调研目标和问题' },
+                    { from: 'Researcher', to: 'Marketing', content: '执行用户访谈' },
+                    { from: 'Marketing', to: 'Designer', content: '用户反馈整理' },
+                    { from: 'Researcher', to: 'CEO', content: '用户调研报告' }
+                ]
+            },
+            {
+                id: 'data-analysis',
+                name: '数据分析',
+                icon: '📈',
+                desc: '从数据收集到洞察报告的分析流程',
+                agents: ['CEO', 'Researcher', 'CTO', 'Sales'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 50 },
+                    { role: 'Researcher', x: 200, y: 180 },
+                    { role: 'CTO', x: 400, y: 180 },
+                    { role: 'Sales', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'CTO', content: '需要数据埋点方案' },
+                    { from: 'CTO', to: 'Researcher', content: '数据采集完成' },
+                    { from: 'Researcher', to: 'Sales', content: '数据分析报告' },
+                    { from: 'Researcher', to: 'CEO', content: '业务洞察和建议' }
+                ]
+            },
+            {
+                id: 'product-iteration',
+                name: '产品迭代',
+                icon: '🔄',
+                desc: '从需求评审到版本发布的迭代流程',
+                agents: ['CEO', 'Product Manager', 'Designer', 'Developer', 'QA'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Product Manager', x: 400, y: 120 },
+                    { role: 'Designer', x: 200, y: 220 },
+                    { role: 'Developer', x: 400, y: 220 },
+                    { role: 'QA', x: 600, y: 220 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Product Manager', content: '确定本迭代需求' },
+                    { from: 'Product Manager', to: 'Designer', content: 'UI 设计需求' },
+                    { from: 'Product Manager', to: 'Developer', content: '开发需求评审' },
+                    { from: 'Designer', to: 'Developer', content: '设计稿交付' },
+                    { from: 'Developer', to: 'QA', content: '提交测试' },
+                    { from: 'QA', to: 'CEO', content: '版本发布报告' }
+                ]
+            },
+            {
+                id: 'fundraising',
+                name: '融资路演',
+                icon: '🎯',
+                desc: '从准备材料到获得投资的流程',
+                agents: ['CEO', 'CFO', 'Researcher', 'Sales'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 50 },
+                    { role: 'CFO', x: 200, y: 180 },
+                    { role: 'Researcher', x: 400, y: 180 },
+                    { role: 'Sales', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'CFO', content: '准备财务数据' },
+                    { from: 'CFO', to: 'Researcher', content: '市场规模分析' },
+                    { from: 'Researcher', to: 'Sales', content: '竞品分析报告' },
+                    { from: 'CEO', to: 'Sales', content: '路演准备完成' }
+                ]
+            },
+            {
+                id: 'crisis-management',
+                name: '危机处理',
+                icon: '🚨',
+                desc: '从问题发现到解决危机的流程',
+                agents: ['CEO', 'CTO', 'Sales', 'Marketing'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 50 },
+                    { role: 'CTO', x: 200, y: 180 },
+                    { role: 'Sales', x: 400, y: 180 },
+                    { role: 'Marketing', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'CTO', content: '技术问题排查' },
+                    { from: 'CTO', to: 'CEO', content: '问题原因分析' },
+                    { from: 'CEO', to: 'Sales', content: '客户沟通策略' },
+                    { from: 'CEO', to: 'Marketing', content: '公关应对方案' }
+                ]
+            },
+            {
+                id: 'recruitment',
+                name: '招聘流程',
+                icon: '👥',
+                desc: '从岗位需求到候选人入职的招聘流程',
+                agents: ['CEO', 'CTO', 'Sales', 'HR'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 50 },
+                    { role: 'CTO', x: 200, y: 180 },
+                    { role: 'Sales', x: 400, y: 180 },
+                    { role: 'HR', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'CTO', content: '技术岗位招聘需求' },
+                    { from: 'CTO', to: 'HR', content: '技术面试评估' },
+                    { from: 'CEO', to: 'Sales', content: '销售岗位招聘需求' },
+                    { from: 'Sales', to: 'HR', content: '销售面试评估' },
+                    { from: 'HR', to: 'CEO', content: '招聘结果汇总' }
+                ]
+            },
+            {
+                id: 'api-design',
+                name: 'API 设计',
+                icon: '🔌',
+                desc: '从需求分析到 API 文档的设计流程',
+                agents: ['CTO', 'Developer', 'Researcher', 'QA'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 50 },
+                    { role: 'Developer', x: 200, y: 180 },
+                    { role: 'Researcher', x: 400, y: 180 },
+                    { role: 'QA', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Researcher', content: 'API 需求分析' },
+                    { from: 'Researcher', to: 'Developer', content: 'API 设计方案' },
+                    { from: 'Developer', to: 'QA', content: 'API 单元测试' },
+                    { from: 'Developer', to: 'CTO', content: 'API 文档完成' }
+                ]
             }
         ];
+
+        // 添加 Product Manager 角色
+        agentRoles['Product Manager'] = { icon: '📋', color: '#f97316', role: '产品经理' };
+        agentRoles['CFO'] = { icon: '💹', color: '#14b8a6', role: '财务总监' };
+        agentRoles['HR'] = { icon: '👤', color: '#a855f7', role: '人力资源' };
 
         // Agent 角色配置
         const agentRoles = {
@@ -3388,6 +3566,117 @@
             showNotification('模板保存成功', 'success');
             renderMyTemplates();
         }
+
+        // 版本历史功能
+        function getVersions() {
+            return JSON.parse(localStorage.getItem('workflowVersions') || '[]');
+        }
+
+        function saveVersions(versions) {
+            localStorage.setItem('workflowVersions', JSON.stringify(versions));
+        }
+
+        function saveVersion() {
+            const data = getCurrentWorkflowData();
+            if (data.agents.length === 0) {
+                showNotification('当前没有 Agent，无法保存版本', 'error');
+                return;
+            }
+
+            const versions = getVersions();
+            const version = {
+                id: 'v_' + Date.now(),
+                name: '版本 ' + (versions.length + 1),
+                data: data,
+                createdAt: new Date().toISOString(),
+                agentCount: data.agents.length,
+                messageCount: data.messages.length
+            };
+            versions.unshift(version); // 添加到最前面
+
+            // 最多保存 20 个版本
+            if (versions.length > 20) {
+                versions.pop();
+            }
+
+            saveVersions(versions);
+            renderVersionList();
+            showNotification('版本保存成功', 'success');
+        }
+
+        function renderVersionList() {
+            const container = document.getElementById('versionList');
+            const versions = getVersions();
+
+            if (versions.length === 0) {
+                container.innerHTML = '<p style="color: var(--text-secondary); text-align: center; padding: 20px;">暂无版本记录</p>';
+                return;
+            }
+
+            container.innerHTML = versions.map((v, index) => `
+                <div class="version-item" style="background: var(--bg-tertiary); padding: 12px; border-radius: 8px; margin-bottom: 8px; cursor: pointer; transition: all 0.2s;" onclick="restoreVersion('${v.id}')">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                        <span style="font-weight: 500;">${v.name}</span>
+                        <span style="font-size: 12px; color: var(--text-secondary);">${formatDate(v.createdAt)}</span>
+                    </div>
+                    <div style="font-size: 12px; color: var(--text-secondary);">
+                        ${v.agentCount} 个 Agent · ${v.messageCount} 条消息
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function formatDate(isoString) {
+            const date = new Date(isoString);
+            return date.toLocaleString('zh-CN', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+        }
+
+        function restoreVersion(versionId) {
+            const versions = getVersions();
+            const version = versions.find(v => v.id === versionId);
+            if (!version) {
+                showNotification('版本不存在', 'error');
+                return;
+            }
+
+            if (confirm(`确定要恢复 "${version.name}" 吗？当前工作流将被覆盖。`)) {
+                agents = version.data.agents.map(a => ({ ...a, status: 'waiting' }));
+                messages = version.data.messages || [];
+                window.connections = version.data.connections || [];
+
+                renderAgents();
+                renderConnections();
+                renderAgentList();
+                closeVersionHistoryModal();
+                showNotification('版本恢复成功', 'success');
+            }
+        }
+
+        function clearAllVersions() {
+            if (confirm('确定要清空所有版本历史吗？此操作不可恢复。')) {
+                saveVersions([]);
+                renderVersionList();
+                showNotification('版本历史已清空', 'success');
+            }
+        }
+
+        function openVersionHistoryModal() {
+            document.getElementById('versionHistoryModal').classList.add('show');
+            renderVersionList();
+        }
+
+        function closeVersionHistoryModal() {
+            document.getElementById('versionHistoryModal').classList.remove('show');
+        }
+
+        // 自动保存版本（当 Agent 数量变化时）
+        let lastAgentCount = 0;
+        setInterval(() => {
+            if (agents.length > 0 && agents.length !== lastAgentCount) {
+                lastAgentCount = agents.length;
+                // 只在有实质变化时提示用户保存
+            }
+        }, 5000);
 
         // 生成分享链接
         function generateShareLink() {
