@@ -1616,6 +1616,199 @@
         .code-string { color: #86efac; }
         .code-comment { color: #6b7280; }
         .code-function { color: #60a5fa; }
+
+        /* 任务队列样式 */
+        .task-queue-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .task-queue-add {
+            display: flex;
+            gap: 10px;
+        }
+
+        .task-queue-add .form-input {
+            flex: 1;
+            padding: 10px 14px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+
+        .task-queue-add .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .task-queue-list {
+            min-height: 200px;
+            max-height: 300px;
+            overflow-y: auto;
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            padding: 12px;
+        }
+
+        .task-queue-empty {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        .task-queue-empty svg {
+            margin-bottom: 12px;
+            opacity: 0.5;
+        }
+
+        .task-queue-empty p {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .task-queue-empty span {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: var(--bg-primary);
+            border-radius: 8px;
+            margin-bottom: 8px;
+            transition: all 0.2s;
+        }
+
+        .task-item:hover {
+            background: var(--bg-secondary);
+        }
+
+        .task-item.completed {
+            opacity: 0.6;
+        }
+
+        .task-item.completed .task-content {
+            text-decoration: line-through;
+        }
+
+        .task-checkbox {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid var(--border-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .task-checkbox:hover {
+            border-color: var(--accent);
+        }
+
+        .task-checkbox.checked {
+            background: var(--success);
+            border-color: var(--success);
+        }
+
+        .task-checkbox.checked::after {
+            content: '✓';
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .task-content {
+            flex: 1;
+            font-size: 14px;
+        }
+
+        .task-status {
+            font-size: 11px;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .task-status.pending {
+            background: rgba(107, 114, 128, 0.2);
+            color: var(--text-secondary);
+        }
+
+        .task-status.running {
+            background: rgba(234, 179, 8, 0.2);
+            color: var(--warning);
+        }
+
+        .task-status.completed {
+            background: rgba(34, 197, 94, 0.2);
+            color: var(--success);
+        }
+
+        .task-actions {
+            display: flex;
+            gap: 4px;
+        }
+
+        .task-action-btn {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            border: none;
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .task-action-btn:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .task-action-btn.delete:hover {
+            background: var(--error);
+        }
+
+        .task-queue-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .task-stat {
+            text-align: center;
+        }
+
+        .task-stat-value {
+            display: block;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .task-stat-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
     </style>
 </head>
 <body>
@@ -1730,6 +1923,17 @@
                     <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
                 </svg>
                 网站测试
+            </button>
+            <button class="btn btn-secondary" onclick="openTaskQueue()" title="任务队列管理">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="8" y1="6" x2="21" y2="6"/>
+                    <line x1="8" y1="12" x2="21" y2="12"/>
+                    <line x1="8" y1="18" x2="21" y2="18"/>
+                    <line x1="3" y1="6" x2="3.01" y2="6"/>
+                    <line x1="3" y1="12" x2="3.01" y2="12"/>
+                    <line x1="3" y1="18" x2="3.01" y2="18"/>
+                </svg>
+                任务队列
             </button>
         </div>
     </header>
@@ -2344,6 +2548,65 @@
                     </svg>
                     开始测试
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 任务队列 Modal -->
+    <div class="modal-overlay" id="taskQueueModal">
+        <div class="modal" style="width: 600px; max-width: 90vw;">
+            <div class="modal-header">
+                <h2>📋 任务队列管理</h2>
+                <button class="modal-close" onclick="closeTaskQueue()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="task-queue-panel">
+                    <!-- 添加任务 -->
+                    <div class="task-queue-add">
+                        <input type="text" id="newTaskInput" class="form-input" placeholder="输入新任务..." onkeypress="handleTaskKeyPress(event)">
+                        <button class="btn btn-primary" onclick="addNewTask()">添加任务</button>
+                    </div>
+
+                    <!-- 任务列表 -->
+                    <div class="task-queue-list" id="taskQueueList">
+                        <div class="task-queue-empty" id="taskQueueEmpty">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <line x1="8" y1="6" x2="21" y2="6"/>
+                                <line x1="8" y1="12" x2="21" y2="12"/>
+                                <line x1="8" y1="18" x2="21" y2="18"/>
+                                <line x1="3" y1="6" x2="3.01" y2="6"/>
+                                <line x1="3" y1="12" x2="3.01" y2="12"/>
+                                <line x1="3" y1="18" x2="3.01" y2="18"/>
+                            </svg>
+                            <p>暂无任务</p>
+                            <span>添加一个任务开始管理</span>
+                        </div>
+                    </div>
+
+                    <!-- 队列统计 -->
+                    <div class="task-queue-stats" id="taskQueueStats">
+                        <div class="task-stat">
+                            <span class="task-stat-value" id="totalTasks">0</span>
+                            <span class="task-stat-label">总任务</span>
+                        </div>
+                        <div class="task-stat">
+                            <span class="task-stat-value" id="pendingTasks">0</span>
+                            <span class="task-stat-label">待处理</span>
+                        </div>
+                        <div class="task-stat">
+                            <span class="task-stat-value" id="runningTasks">0</span>
+                            <span class="task-stat-label">进行中</span>
+                        </div>
+                        <div class="task-stat">
+                            <span class="task-stat-value" id="completedTasks">0</span>
+                            <span class="task-stat-label">已完成</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="clearCompletedTasks()">清除已完成</button>
+                <button class="btn btn-secondary" onclick="closeTaskQueue()">关闭</button>
             </div>
         </div>
     </div>
@@ -7239,6 +7502,121 @@
                     { from: 'QA', to: 'AI Team Lead', content: '质量报告' },
                     { from: 'AI Team Lead', to: 'CTO', content: '项目交付' }
                 ]
+            },
+            // Cycle 305 新增模板
+            {
+                id: 'ai-workflow-automation',
+                name: 'AI工作流自动化',
+                icon: '🔀',
+                desc: '从工作流设计到自动化实施的完整流程',
+                agents: ['AI Workflow Engineer', 'AI Automation Engineer', 'Developer', 'QA'],
+                positions: [
+                    { role: 'AI Workflow Engineer', x: 400, y: 30 },
+                    { role: 'AI Automation Engineer', x: 200, y: 150 },
+                    { role: 'Developer', x: 600, y: 150 },
+                    { role: 'QA', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Workflow Engineer', to: 'AI Automation Engineer', content: '设计工作流自动化方案' },
+                    { from: 'AI Automation Engineer', to: 'Developer', content: '实现自动化脚本' },
+                    { from: 'Developer', to: 'QA', content: '提交自动化测试' },
+                    { from: 'QA', to: 'AI Workflow Engineer', content: '自动化测试报告' }
+                ]
+            },
+            {
+                id: 'ai-prompt-engineering',
+                name: 'AI提示词工程',
+                icon: '💭',
+                desc: '从提示词设计到效果优化的完整流程',
+                agents: ['AI Prompt Engineer', 'AI Model Evaluator', 'Researcher', 'CTO'],
+                positions: [
+                    { role: 'AI Prompt Engineer', x: 400, y: 30 },
+                    { role: 'AI Model Evaluator', x: 200, y: 150 },
+                    { role: 'Researcher', x: 600, y: 150 },
+                    { role: 'CTO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Prompt Engineer', to: 'AI Model Evaluator', content: '设计提示词测试方案' },
+                    { from: 'AI Model Evaluator', to: 'Researcher', content: '提示词效果评估报告' },
+                    { from: 'Researcher', to: 'CTO', content: '优化建议' },
+                    { from: 'CTO', to: 'AI Prompt Engineer', content: '确认优化方向' }
+                ]
+            },
+            {
+                id: 'ai-search-system',
+                name: 'AI搜索系统',
+                icon: '🔍',
+                desc: '从搜索系统设计到向量检索的完整流程',
+                agents: ['AI Search Engineer', 'AI Vector Engineer', 'ML Engineer', 'QA'],
+                positions: [
+                    { role: 'AI Search Engineer', x: 400, y: 30 },
+                    { role: 'AI Vector Engineer', x: 200, y: 150 },
+                    { role: 'ML Engineer', x: 600, y: 150 },
+                    { role: 'QA', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Search Engineer', to: 'AI Vector Engineer', content: '设计向量检索方案' },
+                    { from: 'AI Vector Engineer', to: 'ML Engineer', content: '向量模型训练' },
+                    { from: 'ML Engineer', to: 'QA', content: '搜索效果测试' },
+                    { from: 'QA', to: 'AI Search Engineer', content: '测试报告' }
+                ]
+            },
+            {
+                id: 'ai-copilot-development',
+                name: 'AI副驾驶开发',
+                icon: '💻',
+                desc: '从AI副驾驶设计到功能实现的完整流程',
+                agents: ['AI Copilot Developer', 'AI UX Researcher', 'Developer', 'QA'],
+                positions: [
+                    { role: 'AI Copilot Developer', x: 400, y: 30 },
+                    { role: 'AI UX Researcher', x: 200, y: 150 },
+                    { role: 'Developer', x: 600, y: 150 },
+                    { role: 'QA', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Copilot Developer', to: 'AI UX Researcher', content: '设计用户体验' },
+                    { from: 'AI UX Researcher', to: 'Developer', content: '用户体验方案' },
+                    { from: 'Developer', to: 'QA', content: '功能测试' },
+                    { from: 'QA', to: 'AI Copilot Developer', content: '测试报告' }
+                ]
+            },
+            {
+                id: 'ai-edge-deployment',
+                name: 'AI边缘部署',
+                icon: '📱',
+                desc: '从边缘AI模型部署到端上运行的完整流程',
+                agents: ['AI Edge Deployment', 'ML Engineer', 'QA', 'Operations'],
+                positions: [
+                    { role: 'AI Edge Deployment', x: 400, y: 30 },
+                    { role: 'ML Engineer', x: 200, y: 150 },
+                    { role: 'QA', x: 600, y: 150 },
+                    { role: 'Operations', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Edge Deployment', to: 'ML Engineer', content: '模型优化需求' },
+                    { from: 'ML Engineer', to: 'QA', content: '边缘模型测试' },
+                    { from: 'QA', to: 'Operations', content: '部署就绪报告' },
+                    { from: 'Operations', to: 'AI Edge Deployment', content: '边缘部署完成' }
+                ]
+            },
+            {
+                id: 'ai-model-monitoring',
+                name: 'AI模型监控',
+                icon: '📊',
+                desc: '从模型监控到性能优化的完整流程',
+                agents: ['AI Model Monitor', 'AI Bias Auditor', 'ML Engineer', 'CTO'],
+                positions: [
+                    { role: 'AI Model Monitor', x: 400, y: 30 },
+                    { role: 'AI Bias Auditor', x: 200, y: 150 },
+                    { role: 'ML Engineer', x: 600, y: 150 },
+                    { role: 'CTO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Model Monitor', to: 'AI Bias Auditor', content: '模型性能报告' },
+                    { from: 'AI Bias Auditor', to: 'ML Engineer', content: '偏见检测报告' },
+                    { from: 'ML Engineer', to: 'CTO', content: '优化方案' },
+                    { from: 'CTO', to: 'AI Model Monitor', content: '监控策略调整' }
+                ]
             }
         ];
 
@@ -7532,7 +7910,21 @@
             'AI Business Analyst': { icon: '📈', color: '#f59e0b', role: 'AI业务分析师' },
             'AI Team Lead': { icon: '👨‍💼', color: '#7c3aed', role: 'AI团队负责人' },
             'AI Project Coordinator': { icon: '📋', color: '#64748b', role: 'AI项目协调员' },
-            'AI Vendor Manager': { icon: '🤝', color: '#22c55e', role: 'AI供应商经理' }
+            'AI Vendor Manager': { icon: '🤝', color: '#22c55e', role: 'AI供应商经理' },
+            // Cycle 305 新增角色
+            'AI Workflow Engineer': { icon: '🔀', color: '#0ea5e9', role: 'AI工作流工程师' },
+            'AI API Designer': { icon: '🚪', color: '#f97316', role: 'AI接口设计师' },
+            'AI Data Annotator': { icon: '🏷️', color: '#8b5cf6', role: 'AI数据标注师' },
+            'AI Model Evaluator': { icon: '📐', color: '#22c55e', role: 'AI模型评测师' },
+            'AI Prompt Engineer': { icon: '💭', color: '#ec4899', role: 'AI提示词工程师' },
+            'AI Search Engineer': { icon: '🔍', color: '#06b6d4', role: 'AI搜索工程师' },
+            'AI Vector Engineer': { icon: '🧮', color: '#a855f7', role: 'AI向量工程师' },
+            'AI Agent Orchestrator': { icon: '🎼', color: '#f59e0b', role: 'AI Agent编排师' },
+            'AI Copilot Developer': { icon: '💻', color: '#14b8a6', role: 'AI副驾驶开发者' },
+            'AI Edge Deployment': { icon: '📱', color: '#7c3aed', role: 'AI边缘部署工程师' },
+            'AI Model Monitor': { icon: '📊', color: '#dc2626', role: 'AI模型监控师' },
+            'AI Bias Auditor': { icon: '⚖️', color: '#0891b2', role: 'AI偏见审计员' },
+            'AI Legal Tech': { icon: '⚖️', color: '#22c55e', role: 'AI法律技术师' }
         };
 
         // 拖拽相关变量
@@ -10545,6 +10937,119 @@
                 document.querySelector('.testing-progress').classList.remove('show');
                 document.querySelector('.testing-progress-fill').style.width = '0%';
             }, 300);
+        }
+
+        // 任务队列管理
+        let taskQueue = JSON.parse(localStorage.getItem('agentVisualizer_tasks') || '[]');
+
+        function openTaskQueue() {
+            document.getElementById('taskQueueModal').classList.add('show');
+            renderTaskQueue();
+        }
+
+        function closeTaskQueue() {
+            document.getElementById('taskQueueModal').classList.remove('show');
+        }
+
+        function handleTaskKeyPress(event) {
+            if (event.key === 'Enter') {
+                addNewTask();
+            }
+        }
+
+        function addNewTask() {
+            const input = document.getElementById('newTaskInput');
+            const content = input.value.trim();
+            if (!content) return;
+
+            const task = {
+                id: 'task_' + Date.now(),
+                content: content,
+                status: 'pending',
+                createdAt: new Date().toISOString()
+            };
+
+            taskQueue.push(task);
+            saveTaskQueue();
+            input.value = '';
+            renderTaskQueue();
+        }
+
+        function toggleTaskStatus(taskId) {
+            const task = taskQueue.find(t => t.id === taskId);
+            if (!task) return;
+
+            if (task.status === 'pending') {
+                task.status = 'running';
+            } else if (task.status === 'running') {
+                task.status = 'completed';
+            } else {
+                task.status = 'pending';
+            }
+
+            saveTaskQueue();
+            renderTaskQueue();
+        }
+
+        function deleteTask(taskId) {
+            taskQueue = taskQueue.filter(t => t.id !== taskId);
+            saveTaskQueue();
+            renderTaskQueue();
+        }
+
+        function clearCompletedTasks() {
+            taskQueue = taskQueue.filter(t => t.status !== 'completed');
+            saveTaskQueue();
+            renderTaskQueue();
+        }
+
+        function saveTaskQueue() {
+            localStorage.setItem('agentVisualizer_tasks', JSON.stringify(taskQueue));
+        }
+
+        function renderTaskQueue() {
+            const list = document.getElementById('taskQueueList');
+            const empty = document.getElementById('taskQueueEmpty');
+
+            if (taskQueue.length === 0) {
+                list.innerHTML = '';
+                list.appendChild(empty);
+                empty.style.display = 'flex';
+                updateTaskStats();
+                return;
+            }
+
+            empty.style.display = 'none';
+            list.innerHTML = taskQueue.map(task => `
+                <div class="task-item ${task.status === 'completed' ? 'completed' : ''}">
+                    <div class="task-checkbox ${task.status === 'completed' ? 'checked' : ''}" onclick="toggleTaskStatus('${task.id}')"></div>
+                    <div class="task-content">${escapeHtml(task.content)}</div>
+                    <span class="task-status ${task.status}">${task.status === 'pending' ? '待处理' : task.status === 'running' ? '进行中' : '已完成'}</span>
+                    <div class="task-actions">
+                        <button class="task-action-btn delete" onclick="deleteTask('${task.id}')" title="删除">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="3 6 5 6 21 6"/>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+
+            updateTaskStats();
+        }
+
+        function updateTaskStats() {
+            document.getElementById('totalTasks').textContent = taskQueue.length;
+            document.getElementById('pendingTasks').textContent = taskQueue.filter(t => t.status === 'pending').length;
+            document.getElementById('runningTasks').textContent = taskQueue.filter(t => t.status === 'running').length;
+            document.getElementById('completedTasks').textContent = taskQueue.filter(t => t.status === 'completed').length;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
         }
 
         function addTestLog(type, message) {
