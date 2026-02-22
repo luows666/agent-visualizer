@@ -5044,6 +5044,135 @@
                     { from: 'QA', to: 'Technical Support', content: '测试通过' },
                     { from: 'Technical Support', to: 'Customer Success Manager', content: '问题解决反馈' }
                 ]
+            },
+            // Cycle 289 新增模板
+            {
+                id: 'data-architecture',
+                name: '数据架构设计',
+                icon: '🗄️',
+                desc: '从业务需求到数据架构方案的完整设计流程',
+                agents: ['Data Architect', 'Data Engineer', 'CTO', 'Product Manager', 'Security'],
+                positions: [
+                    { role: 'Data Architect', x: 350, y: 50 },
+                    { role: 'Data Engineer', x: 200, y: 180 },
+                    { role: 'CTO', x: 500, y: 180 },
+                    { role: 'Product Manager', x: 200, y: 310 },
+                    { role: 'Security', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'Product Manager', to: 'Data Architect', content: '数据需求分析' },
+                    { from: 'Data Architect', to: 'Data Engineer', content: '数据架构设计方案' },
+                    { from: 'Data Engineer', to: 'Data Architect', content: '技术实现评估' },
+                    { from: 'Data Architect', to: 'CTO', content: '架构评审请求' },
+                    { from: 'CTO', to: 'Security', content: '数据安全审查' },
+                    { from: 'Security', to: 'CTO', content: '安全审批' }
+                ]
+            },
+            {
+                id: 'solutions-consulting',
+                name: '解决方案咨询',
+                icon: '💼',
+                desc: '从客户需求到解决方案设计的完整咨询流程',
+                agents: ['Solutions Consultant', 'Sales', 'Technical Architect', 'Product Manager', 'CEO'],
+                positions: [
+                    { role: 'Solutions Consultant', x: 350, y: 50 },
+                    { role: 'Sales', x: 200, y: 180 },
+                    { role: 'Technical Architect', x: 500, y: 180 },
+                    { role: 'Product Manager', x: 350, y: 310 },
+                    { role: 'CEO', x: 350, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'Sales', to: 'Solutions Consultant', content: '客户需求汇总' },
+                    { from: 'Solutions Consultant', to: 'Technical Architect', content: '技术方案请求' },
+                    { from: 'Technical Architect', to: 'Solutions Consultant', content: '技术方案建议' },
+                    { from: 'Solutions Consultant', to: 'Product Manager', content: '产品方案整合' },
+                    { from: 'Solutions Consultant', to: 'CEO', content: '解决方案汇报' }
+                ]
+            },
+            {
+                id: 'performance-optimization',
+                name: '性能优化流程',
+                icon: '⚡',
+                desc: '从性能分析到优化实施的完整流程',
+                agents: ['Performance Analyst', 'Backend Developer', 'DevOps', 'QA', 'CTO'],
+                positions: [
+                    { role: 'Performance Analyst', x: 350, y: 50 },
+                    { role: 'Backend Developer', x: 200, y: 180 },
+                    { role: 'DevOps', x: 500, y: 180 },
+                    { role: 'QA', x: 350, y: 310 },
+                    { role: 'CTO', x: 350, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'Performance Analyst', to: 'Backend Developer', content: '性能瓶颈分析报告' },
+                    { from: 'Backend Developer', to: 'Performance Analyst', content: '优化方案反馈' },
+                    { from: 'Backend Developer', to: 'DevOps', content: '部署性能测试环境' },
+                    { from: 'DevOps', to: 'Performance Analyst', content: '性能测试结果' },
+                    { from: 'QA', to: 'CTO', content: '性能验收报告' }
+                ]
+            },
+            {
+                id: 'brand-design',
+                name: '品牌设计流程',
+                icon: '💎',
+                desc: '从品牌定位到视觉设计的完整品牌设计流程',
+                agents: ['Brand Designer', 'Marketing', 'CEO', 'Product Manager', 'Designer'],
+                positions: [
+                    { role: 'Brand Designer', x: 350, y: 50 },
+                    { role: 'Marketing', x: 200, y: 180 },
+                    { role: 'CEO', x: 500, y: 180 },
+                    { role: 'Product Manager', x: 200, y: 310 },
+                    { role: 'Designer', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Brand Designer', content: '品牌定位和目标' },
+                    { from: 'Marketing', to: 'Brand Designer', content: '市场需求分析' },
+                    { from: 'Brand Designer', to: 'CEO', content: '品牌设计方案' },
+                    { from: 'Brand Designer', to: 'Product Manager', content: '产品品牌规范' },
+                    { from: 'Brand Designer', to: 'Designer', content: '品牌视觉规范' }
+                ]
+            },
+            {
+                id: 'content-creation',
+                name: '内容创作流程',
+                icon: '🎭',
+                desc: '从内容策划到内容创作的完整流程',
+                agents: ['Content Creator', 'Marketing', 'SEO Specialist', 'Designer', 'Social Media Manager'],
+                positions: [
+                    { role: 'Content Creator', x: 350, y: 50 },
+                    { role: 'Marketing', x: 200, y: 180 },
+                    { role: 'SEO Specialist', x: 500, y: 180 },
+                    { role: 'Designer', x: 200, y: 310 },
+                    { role: 'Social Media Manager', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'Marketing', to: 'Content Creator', content: '内容需求：产品故事' },
+                    { from: 'Content Creator', to: 'SEO Specialist', content: 'SEO 优化需求' },
+                    { from: 'SEO Specialist', to: 'Content Creator', content: '关键词建议' },
+                    { from: 'Content Creator', to: 'Designer', content: '配图需求' },
+                    { from: 'Content Creator', to: 'Social Media Manager', content: '内容分发计划' }
+                ]
+            },
+            {
+                id: 'growth-experiment',
+                name: '增长实验流程',
+                icon: '📈',
+                desc: '从增长假设到实验验证的完整流程',
+                agents: ['Growth Manager', 'Data Analyst', 'Product Manager', 'Marketing', 'CEO'],
+                positions: [
+                    { role: 'Growth Manager', x: 350, y: 50 },
+                    { role: 'Data Analyst', x: 200, y: 180 },
+                    { role: 'Product Manager', x: 500, y: 180 },
+                    { role: 'Marketing', x: 350, y: 310 },
+                    { role: 'CEO', x: 350, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'Growth Manager', to: 'Data Analyst', content: '增长数据分析请求' },
+                    { from: 'Data Analyst', to: 'Growth Manager', content: '增长机会分析' },
+                    { from: 'Growth Manager', to: 'Product Manager', content: '实验假设提案' },
+                    { from: 'Product Manager', to: 'Marketing', content: '实验上线协调' },
+                    { from: 'Marketing', to: 'Growth Manager', content: '实验结果反馈' },
+                    { from: 'Growth Manager', to: 'CEO', content: '增长实验总结' }
+                ]
             }
         ];
 
@@ -5194,7 +5323,16 @@
             'SEO Analyst': { icon: '🔎', color: '#22c55e', role: 'SEO 分析师' },
             'UX Writer': { icon: '📝', color: '#8b5cf6', role: '内容运营' },
             'Customer Success Manager': { icon: '🤝', color: '#14b8a6', role: '客户成功经理' },
-            'Technical Support': { icon: '🎧', color: '#0ea5e9', role: '技术支持工程师' }
+            'Technical Support': { icon: '🎧', color: '#0ea5e9', role: '技术支持工程师' },
+            // Cycle 289 新增角色
+            'Data Architect': { icon: '🗄️', color: '#0891b2', role: '数据架构师' },
+            'Solutions Consultant': { icon: '💼', color: '#7c3aed', role: '解决方案顾问' },
+            'Performance Analyst': { icon: '⚡', color: '#f97316', role: '性能分析师' },
+            'Brand Designer': { icon: '💎', color: '#ec4899', role: '品牌设计师' },
+            'Content Creator': { icon: '🎭', color: '#a855f7', role: '内容创作者' },
+            'Growth Manager': { icon: '📈', color: '#22c55e', role: '增长经理' },
+            'Finance Manager': { icon: '💳', color: '#14b8a6', role: '财务经理' },
+            'Product Lead': { icon: '🎯', color: '#f59e0b', role: '产品负责人' }
         };
 
         // 拖拽相关变量
