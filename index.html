@@ -3758,6 +3758,140 @@
                     { from: 'Data Analyst', to: 'VP Operations', content: '运营数据洞察' },
                     { from: 'VP Operations', to: 'Product Operations', content: '产品运营协调' }
                 ]
+            },
+            // Cycle 278 新增模板
+            {
+                id: 'ai-strategy',
+                name: 'AI 战略规划',
+                icon: '🤖',
+                desc: '从AI技术研究到产品落地的战略流程',
+                agents: ['CEO', 'Chief AI Officer', 'CTO', 'VP Research', 'ML Engineer'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Chief AI Officer', x: 400, y: 130 },
+                    { role: 'CTO', x: 200, y: 230 },
+                    { role: 'VP Research', x: 400, y: 230 },
+                    { role: 'ML Engineer', x: 600, y: 230 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Chief AI Officer', content: '确定AI战略方向' },
+                    { from: 'Chief AI Officer', to: 'VP Research', content: 'AI技术调研' },
+                    { from: 'VP Research', to: 'Chief AI Officer', content: '技术可行性报告' },
+                    { from: 'Chief AI Officer', to: 'CTO', content: '技术实施计划' },
+                    { from: 'CTO', to: 'ML Engineer', content: 'AI模型开发' },
+                    { from: 'ML Engineer', to: 'Chief AI Officer', content: '模型训练完成' }
+                ]
+            },
+            {
+                id: 'social-media-campaign',
+                name: '社交媒体营销',
+                icon: '📱',
+                desc: '从内容策划到社交媒体推广的营销流程',
+                agents: ['Chief Marketing Officer', 'Social Media Manager', 'Content Strategist', 'Designer', 'SEO Specialist'],
+                positions: [
+                    { role: 'Chief Marketing Officer', x: 400, y: 30 },
+                    { role: 'Social Media Manager', x: 400, y: 130 },
+                    { role: 'Content Strategist', x: 200, y: 230 },
+                    { role: 'Designer', x: 400, y: 230 },
+                    { role: 'SEO Specialist', x: 600, y: 230 }
+                ],
+                messageFlows: [
+                    { from: 'Chief Marketing Officer', to: 'Social Media Manager', content: '社交媒体营销目标' },
+                    { from: 'Social Media Manager', to: 'Content Strategist', content: '内容策略需求' },
+                    { from: 'Content Strategist', to: 'Designer', content: '内容设计需求' },
+                    { from: 'Designer', to: 'Social Media Manager', content: '素材完成' },
+                    { from: 'Social Media Manager', to: 'SEO Specialist', content: '社交SEO优化' },
+                    { from: 'SEO Specialist', to: 'Chief Marketing Officer', content: '推广效果报告' }
+                ]
+            },
+            {
+                id: 'product-design-launch',
+                name: '产品设计发布',
+                icon: '🎨',
+                desc: '从设计概念到产品发布的完整设计流程',
+                agents: ['Head of Design', 'Product Designer', 'UX Researcher', 'Developer', 'Marketing'],
+                positions: [
+                    { role: 'Head of Design', x: 400, y: 30 },
+                    { role: 'Product Designer', x: 400, y: 130 },
+                    { role: 'UX Researcher', x: 200, y: 230 },
+                    { role: 'Developer', x: 400, y: 230 },
+                    { role: 'Marketing', x: 600, y: 230 }
+                ],
+                messageFlows: [
+                    { from: 'Head of Design', to: 'Product Designer', content: '设计方向和要求' },
+                    { from: 'Product Designer', to: 'UX Researcher', content: '用户研究需求' },
+                    { from: 'UX Researcher', to: 'Product Designer', content: '用户体验报告' },
+                    { from: 'Product Designer', to: 'Developer', content: '设计稿交付' },
+                    { from: 'Developer', to: 'Marketing', content: '产品开发完成' },
+                    { from: 'Marketing', to: 'Head of Design', content: '市场反馈' }
+                ]
+            },
+            {
+                id: 'engineering-excellence',
+                name: '工程卓越计划',
+                icon: '🛠️',
+                desc: '从技术改进到工程效率提升的优化流程',
+                agents: ['VP Engineering', 'Architect', 'DevOps', 'Security', 'CTO'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'VP Engineering', x: 400, y: 130 },
+                    { role: 'Architect', x: 200, y: 230 },
+                    { role: 'DevOps', x: 400, y: 230 },
+                    { role: 'Security', x: 600, y: 230 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'VP Engineering', content: '工程效率目标' },
+                    { from: 'VP Engineering', to: 'Architect', content: '架构优化需求' },
+                    { from: 'VP Engineering', to: 'DevOps', content: 'CI/CD优化' },
+                    { from: 'VP Engineering', to: 'Security', content: '安全改进' },
+                    { from: 'Architect', to: 'VP Engineering', content: '架构改进方案' },
+                    { from: 'DevOps', to: 'VP Engineering', content: '部署效率提升' },
+                    { from: 'Security', to: 'VP Engineering', content: '安全改进报告' }
+                ]
+            },
+            {
+                id: 'research-innovation',
+                name: '研究创新项目',
+                icon: '🔬',
+                desc: '从研究设想到技术创新的研发流程',
+                agents: ['VP Research', 'Researcher', 'Data Engineer', 'ML Engineer', 'Product Manager'],
+                positions: [
+                    { role: 'VP Research', x: 400, y: 30 },
+                    { role: 'Researcher', x: 400, y: 130 },
+                    { role: 'Data Engineer', x: 200, y: 230 },
+                    { role: 'ML Engineer', x: 400, y: 230 },
+                    { role: 'Product Manager', x: 600, y: 230 }
+                ],
+                messageFlows: [
+                    { from: 'VP Research', to: 'Researcher', content: '研究方向确定' },
+                    { from: 'Researcher', to: 'Data Engineer', content: '数据需求' },
+                    { from: 'Data Engineer', to: 'Researcher', content: '数据准备完成' },
+                    { from: 'Researcher', to: 'ML Engineer', content: '算法研究' },
+                    { from: 'ML Engineer', to: 'Product Manager', content: '技术原型' },
+                    { from: 'Product Manager', to: 'VP Research', content: '产品化建议' }
+                ]
+            },
+            {
+                id: 'brand-campaign',
+                name: '品牌营销战役',
+                icon: '🎯',
+                desc: '从品牌定位到全渠道传播的营销流程',
+                agents: ['Chief Marketing Officer', 'Brand Strategist', 'Content Strategist', 'Designer', 'Sales'],
+                positions: [
+                    { role: 'Chief Marketing Officer', x: 400, y: 30 },
+                    { role: 'Brand Strategist', x: 400, y: 130 },
+                    { role: 'Content Strategist', x: 200, y: 230 },
+                    { role: 'Designer', x: 400, y: 230 },
+                    { role: 'Sales', x: 600, y: 230 }
+                ],
+                messageFlows: [
+                    { from: 'Chief Marketing Officer', to: 'Brand Strategist', content: '品牌战略目标' },
+                    { from: 'Brand Strategist', to: 'Content Strategist', content: '品牌故事' },
+                    { from: 'Content Strategist', to: 'Designer', content: '品牌内容设计' },
+                    { from: 'Designer', to: 'Brand Strategist', content: '设计稿完成' },
+                    { from: 'Brand Strategist', to: 'Sales', content: '品牌推广配合' },
+                    { from: 'Sales', to: 'Chief Marketing Officer', content: '市场效果反馈' }
+                ]
             }
         ];
 
@@ -3835,7 +3969,14 @@
             'VP Product': { icon: '📦', color: '#f97316', role: '产品副总裁' },
             'Head of Sales': { icon: '💵', color: '#22c55e', role: '销售总监' },
             'Chief Technology Officer': { icon: '🔧', color: '#6366f1', role: '首席技术官' },
-            'VP Operations': { icon: '⚡', color: '#ec4899', role: '运营副总裁' }
+            'VP Operations': { icon: '⚡', color: '#ec4899', role: '运营副总裁' },
+            // Cycle 278 新增角色
+            'Chief AI Officer': { icon: '🤖', color: '#0891b2', role: '首席AI官' },
+            'VP Engineering': { icon: '🛠️', color: '#7c3aed', role: '工程副总裁' },
+            'Head of Design': { icon: '🎨', color: '#db2777', role: '设计总监' },
+            'Chief Marketing Officer': { icon: '🎯', color: '#dc2626', role: '首席营销官' },
+            'VP Research': { icon: '🔬', color: '#0ea5e9', role: '研究副总裁' },
+            'Social Media Manager': { icon: '📱', color: '#22c55e', role: '社交媒体经理' }
         };
 
         // 拖拽相关变量
