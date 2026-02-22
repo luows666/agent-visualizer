@@ -1348,6 +1348,15 @@
                 </svg>
                 API 密钥
             </button>
+            <button class="btn btn-accent" onclick="openCollaborationModal()" id="collaborationBtn" title="实时协作">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                协作
+            </button>
             <button class="btn btn-accent" onclick="openTemplateModal()">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
@@ -1760,6 +1769,75 @@
         </div>
     </div>
 
+    <!-- 实时协作 Modal -->
+    <div class="modal-overlay" id="collaborationModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>🤝 实时协作</h2>
+                <button class="modal-close" onclick="closeCollaborationModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="collaborationSetup">
+                    <div style="margin-bottom: 24px;">
+                        <h3 style="margin-bottom: 12px; color: var(--text-primary);">开始新协作</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 13px;">创建一个协作房间，其他用户可以加入并实时同步工作流</p>
+                        <button class="btn btn-primary" onclick="startCollaboration()" style="width: 100%;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <line x1="23" y1="11" x2="17" y2="11"/>
+                            </svg>
+                            创建协作房间
+                        </button>
+                    </div>
+                    <div style="border-top: 1px solid var(--border-color); padding-top: 24px;">
+                        <h3 style="margin-bottom: 12px; color: var(--text-primary);">加入已有协作</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 13px;">输入房间 ID 加入其他人的协作会话</p>
+                        <div style="display: flex; gap: 8px;">
+                            <input type="text" id="joinSessionId" class="form-input" placeholder="输入房间 ID" style="flex: 1;">
+                            <button class="btn btn-secondary" onclick="joinCollaboration()">加入</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="collaborationActive" style="display: none;">
+                    <div style="text-align: center; padding: 20px;">
+                        <div style="font-size: 48px; margin-bottom: 16px;">🎉</div>
+                        <h3 style="margin-bottom: 8px; color: var(--text-primary);">协作已开启</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 16px;">房间 ID：<strong id="currentSessionId" style="color: var(--primary);"></strong></p>
+                        <button class="btn btn-secondary" onclick="copySessionId()" style="margin-bottom: 16px;">复制房间 ID</button>
+                    </div>
+                    <div style="border-top: 1px solid var(--border-color); padding-top: 16px;">
+                        <h4 style="margin-bottom: 12px; color: var(--text-primary);">已连接的成员 (<span id="peerCount">0</span>)</h4>
+                        <div id="peerList" style="max-height: 150px; overflow-y: auto;">
+                            <p style="color: var(--text-secondary); text-align: center; padding: 10px;">等待其他用户加入...</p>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <button class="btn btn-danger" onclick="leaveCollaboration()" style="width: 100%;">离开协作</button>
+                    </div>
+                </div>
+                <div id="collaborationJoined" style="display: none;">
+                    <div style="text-align: center; padding: 20px;">
+                        <div style="font-size: 48px; margin-bottom: 16px;">👋</div>
+                        <h3 style="margin-bottom: 8px; color: var(--text-primary);">已加入协作</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 16px;">正在与其他人实时同步工作流</p>
+                    </div>
+                    <div style="border-top: 1px solid var(--border-color); padding-top: 16px;">
+                        <h4 style="margin-bottom: 12px; color: var(--text-primary);">房间成员 (<span id="joinedPeerCount">0</span>)</h4>
+                        <div id="joinedPeerList" style="max-height: 150px; overflow-y: auto;">
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <button class="btn btn-danger" onclick="leaveCollaboration()" style="width: 100%;">离开协作</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeCollaborationModal()">关闭</button>
+            </div>
+        </div>
+    </div>
+
     <!-- 连接消息 Modal -->
     <div class="message-modal" id="messageModal">
         <div class="modal">
@@ -1784,6 +1862,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+        <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
         <script>
         // Three.js 3D 场景变量
         let scene, camera, renderer, controls;
@@ -2621,6 +2700,11 @@
             renderFlow();
             updateTimeline();
 
+            // 广播给协作者
+            if (collaborationStatus !== 'disconnected') {
+                notifyCollaborators('add-message', { message: newMessage });
+            }
+
             closeMessageModal();
             showNotification('消息连接已创建', 'success');
         }
@@ -3116,6 +3200,11 @@
             renderAgents();
             renderFlow();
             selectAgent(newId);
+
+            // 广播给协作者
+            if (collaborationStatus !== 'disconnected') {
+                notifyCollaborators('add-agent', { agent: newAgent });
+            }
         }
 
         // 时间线控制
@@ -3690,6 +3779,397 @@
 
         function closeVersionHistoryModal() {
             document.getElementById('versionHistoryModal').classList.remove('show');
+        }
+
+        // ========== 实时协作功能 ==========
+        let peer = null;
+        let connections = [];
+        let isHost = false;
+        let currentSessionId = null;
+        let collaborationStatus = 'disconnected'; // disconnected, hosting, joined
+
+        // 协作状态指示器
+        let collaborationIndicator = null;
+
+        function createCollaborationIndicator() {
+            if (collaborationIndicator) return;
+            const indicator = document.createElement('div');
+            indicator.id = 'collabIndicator';
+            indicator.style.cssText = `
+                position: fixed;
+                top: 70px;
+                right: 20px;
+                background: linear-gradient(135deg, #22c55e, #16a34a);
+                color: white;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 13px;
+                font-weight: 500;
+                display: none;
+                align-items: center;
+                gap: 8px;
+                z-index: 1000;
+                box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+                animation: pulse 2s infinite;
+            `;
+            indicator.innerHTML = `
+                <span style="width: 8px; height: 8px; background: white; border-radius: 50%;"></span>
+                <span id="collabStatusText">协作中</span>
+            `;
+            document.body.appendChild(indicator);
+            collaborationIndicator = indicator;
+        }
+
+        function updateCollaborationIndicator(status, peerCount = 0) {
+            if (!collaborationIndicator) createCollaborationIndicator();
+            const indicator = collaborationIndicator;
+            const statusText = document.getElementById('collabStatusText');
+
+            if (status === 'connected') {
+                indicator.style.display = 'flex';
+                indicator.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+                statusText.textContent = peerCount > 0 ? `协作中 (${peerCount + 1}人)` : '协作中';
+            } else if (status === 'hosting') {
+                indicator.style.display = 'flex';
+                indicator.style.background = 'linear-gradient(135deg, #8b5cf6, #7c3aed)';
+                statusText.textContent = peerCount > 0 ? `房间已创建 (${peerCount + 1}人)` : '等待加入';
+            } else {
+                indicator.style.display = 'none';
+            }
+        }
+
+        function openCollaborationModal() {
+            document.getElementById('collaborationModal').classList.add('show');
+            updateCollaborationView();
+        }
+
+        function closeCollaborationModal() {
+            document.getElementById('collaborationModal').classList.remove('show');
+        }
+
+        function updateCollaborationView() {
+            const setup = document.getElementById('collaborationSetup');
+            const active = document.getElementById('collaborationActive');
+            const joined = document.getElementById('collaborationJoined');
+
+            if (collaborationStatus === 'disconnected') {
+                setup.style.display = 'block';
+                active.style.display = 'none';
+                joined.style.display = 'none';
+            } else if (collaborationStatus === 'hosting') {
+                setup.style.display = 'none';
+                active.style.display = 'block';
+                joined.style.display = 'none';
+                document.getElementById('currentSessionId').textContent = currentSessionId;
+                updatePeerList();
+            } else if (collaborationStatus === 'joined') {
+                setup.style.display = 'none';
+                active.style.display = 'none';
+                joined.style.display = 'block';
+                document.getElementById('currentSessionId').textContent = currentSessionId;
+                updateJoinedPeerList();
+            }
+        }
+
+        function generateSessionId() {
+            return 'av-' + Math.random().toString(36).substr(2, 6) + '-' + Date.now().toString(36);
+        }
+
+        async function startCollaboration() {
+            try {
+                const sessionId = generateSessionId();
+                currentSessionId = sessionId;
+                isHost = true;
+
+                // 创建 PeerJS 实例
+                peer = new Peer(sessionId, {
+                    debug: 0
+                });
+
+                peer.on('open', (id) => {
+                    console.log('Created collaboration room:', id);
+                    collaborationStatus = 'hosting';
+                    updateCollaborationView();
+                    updateCollaborationIndicator('hosting', 0);
+                    showNotification('协作房间已创建！分享房间 ID 给其他人', 'success');
+                });
+
+                peer.on('connection', (conn) => {
+                    handleNewConnection(conn);
+                });
+
+                peer.on('error', (err) => {
+                    console.error('Peer error:', err);
+                    showNotification('创建协作失败: ' + err.message, 'error');
+                });
+
+            } catch (err) {
+                console.error('Error starting collaboration:', err);
+                showNotification('创建协作失败: ' + err.message, 'error');
+            }
+        }
+
+        async function joinCollaboration() {
+            const sessionId = document.getElementById('joinSessionId').value.trim();
+            if (!sessionId) {
+                showNotification('请输入房间 ID', 'error');
+                return;
+            }
+
+            try {
+                currentSessionId = sessionId;
+                isHost = false;
+
+                peer = new Peer({
+                    debug: 0
+                });
+
+                peer.on('open', () => {
+                    console.log('Joining collaboration room:', sessionId);
+                    const conn = peer.connect(sessionId, {
+                        reliable: true
+                    });
+
+                    conn.on('open', () => {
+                        console.log('Connected to host');
+                        connections.push(conn);
+                        collaborationStatus = 'joined';
+                        updateCollaborationView();
+                        updateCollaborationIndicator('connected', 0);
+
+                        // 请求同步当前工作流
+                        conn.send({
+                            type: 'sync-request'
+                        });
+
+                        showNotification('已加入协作房间！', 'success');
+                    });
+
+                    conn.on('data', (data) => {
+                        handleCollaborationData(data, conn);
+                    });
+
+                    conn.on('close', () => {
+                        showNotification('与房间的连接已断开', 'warning');
+                        leaveCollaboration();
+                    });
+                });
+
+                peer.on('error', (err) => {
+                    console.error('Peer error:', err);
+                    if (err.type === 'peer-unavailable') {
+                        showNotification('房间不存在或已关闭', 'error');
+                    } else {
+                        showNotification('加入协作失败: ' + err.message, 'error');
+                    }
+                });
+
+            } catch (err) {
+                console.error('Error joining collaboration:', err);
+                showNotification('加入协作失败: ' + err.message, 'error');
+            }
+        }
+
+        function handleNewConnection(conn) {
+            connections.push(conn);
+
+            conn.on('open', () => {
+                console.log('New peer connected:', conn.peer);
+                updatePeerList();
+                updateCollaborationIndicator('hosting', connections.length);
+
+                // 作为 host，发送当前工作流给新连接的 peer
+                const workflowData = getCurrentWorkflowData();
+                conn.send({
+                    type: 'sync',
+                    data: workflowData
+                });
+            });
+
+            conn.on('data', (data) => {
+                handleCollaborationData(data, conn);
+            });
+
+            conn.on('close', () => {
+                connections = connections.filter(c => c !== conn);
+                updatePeerList();
+                updateCollaborationIndicator('hosting', connections.length);
+            });
+        }
+
+        function handleCollaborationData(data, conn) {
+            switch (data.type) {
+                case 'sync':
+                    // 收到完整工作流数据，同步本地
+                    console.log('Received workflow sync');
+                    syncWorkflowFromRemote(data.data);
+                    break;
+                case 'sync-request':
+                    // host 收到同步请求，发送当前工作流
+                    if (isHost) {
+                        const workflowData = getCurrentWorkflowData();
+                        conn.send({
+                            type: 'sync',
+                            data: workflowData
+                        });
+                    }
+                    break;
+                case 'update':
+                    // 收到增量更新
+                    console.log('Received incremental update');
+                    applyRemoteUpdate(data.data);
+                    break;
+                case 'cursor':
+                    // 收到光标位置更新（可选）
+                    break;
+            }
+        }
+
+        function getCurrentWorkflowData() {
+            return {
+                agents: JSON.parse(JSON.stringify(agents)),
+                messages: JSON.parse(JSON.stringify(messages)),
+                connections: JSON.parse(JSON.stringify(connections || [])),
+                groups: JSON.parse(JSON.stringify(window.agentGroups || [])),
+                timestamp: Date.now()
+            };
+        }
+
+        function syncWorkflowFromRemote(data) {
+            // 暂时禁用自动保存，避免冲突
+            const prevAutoSave = autoSaveEnabled;
+            autoSaveEnabled = false;
+
+            try {
+                if (data.agents) {
+                    agents = data.agents;
+                    renderAgents();
+                }
+                if (data.messages) {
+                    messages = data.messages;
+                    renderConnections();
+                }
+                if (data.connections) {
+                    window.connections = data.connections;
+                }
+                if (data.groups) {
+                    window.agentGroups = data.groups;
+                    renderGroupButtons();
+                }
+                showNotification('工作流已同步', 'success');
+            } finally {
+                autoSaveEnabled = prevAutoSave;
+            }
+        }
+
+        function applyRemoteUpdate(data) {
+            // 增量更新处理
+            if (data.action === 'add-agent') {
+                agents.push(data.agent);
+                renderAgents();
+            } else if (data.action === 'update-agent') {
+                const idx = agents.findIndex(a => a.id === data.agent.id);
+                if (idx !== -1) {
+                    agents[idx] = data.agent;
+                    renderAgents();
+                }
+            } else if (data.action === 'delete-agent') {
+                agents = agents.filter(a => a.id !== data.agentId);
+                messages = messages.filter(m => m.from !== data.agentId && m.to !== data.agentId);
+                renderAgents();
+                renderConnections();
+            } else if (data.action === 'add-message') {
+                messages.push(data.message);
+                renderConnections();
+            }
+        }
+
+        function broadcastUpdate(data) {
+            const message = {
+                type: 'update',
+                data: data
+            };
+            connections.forEach(conn => {
+                if (conn.open) {
+                    conn.send(message);
+                }
+            });
+        }
+
+        function updatePeerList() {
+            const list = document.getElementById('peerList');
+            const count = document.getElementById('peerCount');
+
+            count.textContent = connections.length;
+
+            if (connections.length === 0) {
+                list.innerHTML = '<p style="color: var(--text-secondary); text-align: center; padding: 10px;">等待其他用户加入...</p>';
+            } else {
+                list.innerHTML = connections.map((conn, idx) => `
+                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px; background: var(--bg-tertiary); border-radius: 8px; margin-bottom: 8px;">
+                        <span>👤 用户 ${idx + 1}</span>
+                        <span style="color: var(--success);">● 已连接</span>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function updateJoinedPeerList() {
+            const list = document.getElementById('joinedPeerList');
+            const count = document.getElementById('joinedPeerCount');
+
+            count.textContent = connections.length + 1; // +1 for host
+
+            list.innerHTML = `
+                <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px; background: var(--bg-tertiary); border-radius: 8px; margin-bottom: 8px;">
+                    <span>👤 房主</span>
+                    <span style="color: var(--success);">● 在线</span>
+                </div>
+            `;
+        }
+
+        function copySessionId() {
+            if (currentSessionId) {
+                navigator.clipboard.writeText(currentSessionId).then(() => {
+                    showNotification('房间 ID 已复制到剪贴板', 'success');
+                }).catch(() => {
+                    showNotification('复制失败，请手动复制', 'error');
+                });
+            }
+        }
+
+        function leaveCollaboration() {
+            // 关闭所有连接
+            connections.forEach(conn => conn.close());
+            connections = [];
+
+            // 关闭 peer
+            if (peer) {
+                peer.destroy();
+                peer = null;
+            }
+
+            collaborationStatus = 'disconnected';
+            currentSessionId = null;
+            isHost = false;
+
+            updateCollaborationIndicator('disconnected');
+            updateCollaborationView();
+            showNotification('已离开协作', 'info');
+        }
+
+        // 拦截工作流修改操作，自动同步
+        const originalAddAgent = window.addAgent;
+        const originalUpdateAgent = window.updateAgent;
+        const originalDeleteAgent = window.deleteAgent;
+        const originalAddMessage = window.addMessage;
+
+        // 在修改数据后自动广播
+        function notifyCollaborators(action, data) {
+            if (collaborationStatus === 'disconnected') return;
+            if (isHost) {
+                broadcastUpdate({ action, ...data });
+            }
         }
 
         // 自动保存工作流（每10秒或关键操作时）
@@ -4365,6 +4845,14 @@
             renderAgents();
             renderFlow();
             closeDetails();
+
+            // 广播删除给协作者
+            if (collaborationStatus !== 'disconnected') {
+                const deletedIds = Array.from(selectedAgents);
+                deletedIds.forEach(agentId => {
+                    notifyCollaborators('delete-agent', { agentId });
+                });
+            }
 
             showNotification(`已删除 ${selectedAgents.size || '选中的'} 个 Agent`, 'success');
         }
