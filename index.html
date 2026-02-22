@@ -9303,6 +9303,138 @@
                     { from: 'AI Safety', to: 'AI Urban Planner', content: '安全报告' },
                     { from: 'AI Environment', to: 'AI Urban Planner', content: '环境报告' }
                 ]
+            },
+            // Cycle 320 新增模板 - AI 金融交易系统
+            {
+                id: 'ai-financial-trading',
+                name: 'AI金融交易系统',
+                icon: '📈',
+                desc: '从交易策略到风险管理的完整流程',
+                agents: ['AI Trading', 'AI Risk Analysis', 'AI Portfolio Manager', 'AI Fraud Detection', 'AI Compliance Officer'],
+                positions: [
+                    { role: 'AI Trading', x: 400, y: 30 },
+                    { role: 'AI Risk Analysis', x: 200, y: 150 },
+                    { role: 'AI Portfolio Manager', x: 600, y: 150 },
+                    { role: 'AI Fraud Detection', x: 200, y: 270 },
+                    { role: 'AI Compliance Officer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Trading', to: 'AI Risk Analysis', content: '交易策略需求' },
+                    { from: 'AI Risk Analysis', to: 'AI Portfolio Manager', content: '风险评估报告' },
+                    { from: 'AI Portfolio Manager', to: 'AI Fraud Detection', content: '投资组合' },
+                    { from: 'AI Fraud Detection', to: 'AI Compliance Officer', content: '风控报告' },
+                    { from: 'AI Compliance Officer', to: 'AI Trading', content: '合规确认' }
+                ]
+            },
+            // Cycle 320 新增模板 - AI 医疗保险系统
+            {
+                id: 'ai-health-insurance',
+                name: 'AI医疗保险系统',
+                icon: '🏥',
+                desc: '从保险理赔到健康管理的AI流程',
+                agents: ['AI Insurance', 'AI Medical Imaging', 'AI Health Coach', 'AI Fraud Detection', 'AI Analytics'],
+                positions: [
+                    { role: 'AI Insurance', x: 400, y: 30 },
+                    { role: 'AI Medical Imaging', x: 200, y: 150 },
+                    { role: 'AI Health Coach', x: 600, y: 150 },
+                    { role: 'AI Fraud Detection', x: 200, y: 270 },
+                    { role: 'AI Analytics', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Insurance', to: 'AI Medical Imaging', content: '理赔需求' },
+                    { from: 'AI Medical Imaging', to: 'AI Health Coach', content: '医疗影像分析' },
+                    { from: 'AI Health Coach', to: 'AI Analytics', content: '健康管理建议' },
+                    { from: 'AI Analytics', to: 'AI Fraud Detection', content: '数据分析' },
+                    { from: 'AI Fraud Detection', to: 'AI Insurance', content: '风控报告' }
+                ]
+            },
+            // Cycle 320 新增模板 - AI 在线教育平台
+            {
+                id: 'ai-online-education',
+                name: 'AI在线教育平台',
+                icon: '📚',
+                desc: '从课程设计到个性化学习的完整流程',
+                agents: ['AI Tutoring', 'AI Curriculum', 'AI Proctoring', 'AI Grading', 'AI Learning Path'],
+                positions: [
+                    { role: 'AI Tutoring', x: 400, y: 30 },
+                    { role: 'AI Curriculum', x: 200, y: 150 },
+                    { role: 'AI Proctoring', x: 600, y: 150 },
+                    { role: 'AI Grading', x: 200, y: 270 },
+                    { role: 'AI Learning Path', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Tutoring', to: 'AI Curriculum', content: '课程需求' },
+                    { from: 'AI Curriculum', to: 'AI Proctoring', content: '课程设计' },
+                    { from: 'AI Proctoring', to: 'AI Grading', content: '监考系统' },
+                    { from: 'AI Grading', to: 'AI Learning Path', content: '评分结果' },
+                    { from: 'AI Learning Path', to: 'AI Tutoring', content: '学习路径' }
+                ]
+            },
+            // Cycle 320 新增模板 - AI 智能投资顾问
+            {
+                id: 'ai-wealth-management',
+                name: 'AI智能投资顾问',
+                icon: '💰',
+                desc: '从投资规划到资产管理的AI流程',
+                agents: ['AI Wealth Advisor', 'AI Credit Scoring', 'AI Portfolio Manager', 'AI Banking', 'AI Risk Analysis'],
+                positions: [
+                    { role: 'AI Wealth Advisor', x: 400, y: 30 },
+                    { role: 'AI Credit Scoring', x: 200, y: 150 },
+                    { role: 'AI Portfolio Manager', x: 600, y: 150 },
+                    { role: 'AI Banking', x: 200, y: 270 },
+                    { role: 'AI Risk Analysis', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Wealth Advisor', to: 'AI Credit Scoring', content: '客户需求' },
+                    { from: 'AI Credit Scoring', to: 'AI Portfolio Manager', content: '信用评估' },
+                    { from: 'AI Portfolio Manager', to: 'AI Banking', content: '投资方案' },
+                    { from: 'AI Banking', to: 'AI Risk Analysis', content: '银行业务' },
+                    { from: 'AI Risk Analysis', to: 'AI Wealth Advisor', content: '风险报告' }
+                ]
+            },
+            // Cycle 320 新增模板 - AI 远程医疗系统
+            {
+                id: 'ai-telemedicine',
+                name: 'AI远程医疗系统',
+                icon: '📞',
+                desc: '从远程诊断到健康管理的完整流程',
+                agents: ['AI Telemedicine', 'AI Medical Imaging', 'AI Patient Monitor', 'AI Health Coach', 'AI Diagnostics'],
+                positions: [
+                    { role: 'AI Telemedicine', x: 400, y: 30 },
+                    { role: 'AI Medical Imaging', x: 200, y: 150 },
+                    { role: 'AI Patient Monitor', x: 600, y: 150 },
+                    { role: 'AI Health Coach', x: 200, y: 270 },
+                    { role: 'AI Diagnostics', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Telemedicine', to: 'AI Medical Imaging', content: '远程诊断需求' },
+                    { from: 'AI Medical Imaging', to: 'AI Diagnostics', content: '影像分析' },
+                    { from: 'AI Diagnostics', to: 'AI Patient Monitor', content: '诊断结果' },
+                    { from: 'AI Patient Monitor', to: 'AI Health Coach', content: '患者数据' },
+                    { from: 'AI Health Coach', to: 'AI Telemedicine', content: '健康管理方案' }
+                ]
+            },
+            // Cycle 320 新增模板 - AI 语言学习平台
+            {
+                id: 'ai-language-learning',
+                name: 'AI语言学习平台',
+                icon: '🌐',
+                desc: '从语言教学到智能辅导的完整流程',
+                agents: ['AI Language Tutor', 'AI Tutoring', 'AI Curriculum', 'AI Grading', 'AI Learning Path'],
+                positions: [
+                    { role: 'AI Language Tutor', x: 400, y: 30 },
+                    { role: 'AI Tutoring', x: 200, y: 150 },
+                    { role: 'AI Curriculum', x: 600, y: 150 },
+                    { role: 'AI Grading', x: 200, y: 270 },
+                    { role: 'AI Learning Path', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Language Tutor', to: 'AI Tutoring', content: '教学需求' },
+                    { from: 'AI Tutoring', to: 'AI Curriculum', content: '课程需求' },
+                    { from: 'AI Curriculum', to: 'AI Grading', content: '课程内容' },
+                    { from: 'AI Grading', to: 'AI Learning Path', content: '评估结果' },
+                    { from: 'AI Learning Path', to: 'AI Language Tutor', content: '学习计划' }
+                ]
             }
         ];
 
@@ -9907,7 +10039,18 @@
             'AI Traffic': { icon: '🚦', color: '#10b981', role: 'AI交通工程师' },
             'AI Energy': { icon: '⚡', color: '#f59e0b', role: 'AI能源工程师' },
             'AI Safety': { icon: '🛡️', color: '#dc2626', role: 'AI安全工程师' },
-            'AI Environment': { icon: '🌿', color: '#22c55e', role: 'AI环境工程师' }
+            'AI Environment': { icon: '🌿', color: '#22c55e', role: 'AI环境工程师' },
+            // Cycle 320 补充角色 - 模板所需
+            'AI Analytics': { icon: '📊', color: '#8b5cf6', role: 'AI数据分析师' },
+            'AI Fraud Detection': { icon: '🔍', color: '#f97316', role: 'AI欺诈检测工程师' },
+            'AI Diagnostics': { icon: '🏥', color: '#06b6d4', role: 'AI诊断工程师' },
+            'AI Patient Monitor': { icon: '👨‍⚕️', color: '#ec4899', role: 'AI患者监护工程师' },
+            'AI Banking': { icon: '🏦', color: '#14b8a6', role: 'AI银行工程师' },
+            'AI Credit Scoring': { icon: '💳', color: '#a855f7', role: 'AI信用评分工程师' },
+            'AI NPC Designer': { icon: '🎮', color: '#f59e0b', role: 'AI游戏NPC设计师' },
+            'AI Game AI': { icon: '🎲', color: '#22c55e', role: 'AI游戏AI工程师' },
+            'AI Trading Bot': { icon: '🤖', color: '#0ea5e9', role: 'AI交易机器人' },
+            'AI Fraud Detector': { icon: '🔎', color: '#dc2626', role: 'AI欺诈检测器' }
         };
 
         // 拖拽相关变量
