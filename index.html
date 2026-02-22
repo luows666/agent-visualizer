@@ -6877,6 +6877,133 @@
                     { from: 'Product Manager', to: 'QA', content: '提交测试' },
                     { from: 'QA', to: 'AI Localization Engineer', content: '测试反馈' }
                 ]
+            },
+            // Cycle 302 新增模板
+            {
+                id: 'ai-ethics-audit',
+                name: 'AI伦理审计项目',
+                icon: '⚖️',
+                desc: '从AI伦理审查到合规上线的完整流程',
+                agents: ['AI Ethics Auditor', 'AI Compliance Officer', 'AI Risk Manager', 'Legal Counsel', 'CEO'],
+                positions: [
+                    { role: 'AI Ethics Auditor', x: 400, y: 30 },
+                    { role: 'AI Compliance Officer', x: 200, y: 150 },
+                    { role: 'AI Risk Manager', x: 600, y: 150 },
+                    { role: 'Legal Counsel', x: 200, y: 270 },
+                    { role: 'CEO', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Ethics Auditor', to: 'AI Compliance Officer', content: '伦理审查报告' },
+                    { from: 'AI Compliance Officer', to: 'AI Risk Manager', content: '合规风险评估' },
+                    { from: 'AI Risk Manager', to: 'Legal Counsel', content: '法律风险分析' },
+                    { from: 'Legal Counsel', to: 'AI Ethics Auditor', content: '法律意见反馈' },
+                    { from: 'AI Ethics Auditor', to: 'CEO', content: '伦理审计通过' }
+                ]
+            },
+            {
+                id: 'ai-data-science',
+                name: 'AI数据科学项目',
+                icon: '🔬',
+                desc: '从数据分析到AI模型训练的完整流程',
+                agents: ['AI Data Scientist', 'AI Dataset Curator', 'AI Algorithm Engineer', 'AI Model Trainer', 'QA'],
+                positions: [
+                    { role: 'AI Data Scientist', x: 400, y: 30 },
+                    { role: 'AI Dataset Curator', x: 200, y: 150 },
+                    { role: 'AI Algorithm Engineer', x: 600, y: 150 },
+                    { role: 'AI Model Trainer', x: 200, y: 270 },
+                    { role: 'QA', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Data Scientist', to: 'AI Dataset Curator', content: '数据集需求' },
+                    { from: 'AI Dataset Curator', to: 'AI Data Scientist', content: '数据集准备完成' },
+                    { from: 'AI Data Scientist', to: 'AI Algorithm Engineer', content: '算法设计需求' },
+                    { from: 'AI Algorithm Engineer', to: 'AI Model Trainer', content: '模型训练任务' },
+                    { from: 'AI Model Trainer', to: 'QA', content: '模型训练完成' }
+                ]
+            },
+            {
+                id: 'ai-model-training',
+                name: 'AI模型训练项目',
+                icon: '🎓',
+                desc: '从模型训练需求到训练完成上线的完整流程',
+                agents: ['AI Model Trainer', 'AI Dataset Curator', 'AI Performance Engineer', 'AI Testing Engineer', 'DevOps'],
+                positions: [
+                    { role: 'AI Model Trainer', x: 400, y: 30 },
+                    { role: 'AI Dataset Curator', x: 200, y: 150 },
+                    { role: 'AI Performance Engineer', x: 600, y: 150 },
+                    { role: 'AI Testing Engineer', x: 200, y: 270 },
+                    { role: 'DevOps', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Model Trainer', to: 'AI Dataset Curator', content: '训练数据请求' },
+                    { from: 'AI Dataset Curator', to: 'AI Model Trainer', content: '训练数据就绪' },
+                    { from: 'AI Model Trainer', to: 'AI Performance Engineer', content: '性能优化需求' },
+                    { from: 'AI Performance Engineer', to: 'AI Testing Engineer', content: '性能测试完成' },
+                    { from: 'AI Testing Engineer', to: 'DevOps', content: '测试通过，准备部署' }
+                ]
+            },
+            {
+                id: 'ai-security',
+                name: 'AI安全分析项目',
+                icon: '🔒',
+                desc: '从AI安全分析到安全上线的完整流程',
+                agents: ['AI Security Analyst', 'Security Engineer', 'AI Risk Manager', 'DevOps', 'CTO'],
+                positions: [
+                    { role: 'AI Security Analyst', x: 400, y: 30 },
+                    { role: 'Security Engineer', x: 200, y: 150 },
+                    { role: 'AI Risk Manager', x: 600, y: 150 },
+                    { role: 'DevOps', x: 200, y: 270 },
+                    { role: 'CTO', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Security Analyst', to: 'Security Engineer', content: '安全分析报告' },
+                    { from: 'Security Engineer', to: 'AI Risk Manager', content: '安全风险评估' },
+                    { from: 'AI Risk Manager', to: 'DevOps', content: '风险缓解计划' },
+                    { from: 'DevOps', to: 'AI Security Analyst', content: '安全措施实施完成' },
+                    { from: 'AI Security Analyst', to: 'CTO', content: '安全审查通过' }
+                ]
+            },
+            {
+                id: 'ai-documentation',
+                name: 'AI文档编写项目',
+                icon: '📖',
+                desc: '从技术文档编写到文档发布的完整流程',
+                agents: ['AI Documentation Engineer', 'Technical Writer', 'AI Algorithm Engineer', 'Product Manager', 'CEO'],
+                positions: [
+                    { role: 'AI Documentation Engineer', x: 400, y: 30 },
+                    { role: 'Technical Writer', x: 200, y: 150 },
+                    { role: 'AI Algorithm Engineer', x: 600, y: 150 },
+                    { role: 'Product Manager', x: 200, y: 270 },
+                    { role: 'CEO', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Documentation Engineer', to: 'AI Algorithm Engineer', content: '技术需求文档' },
+                    { from: 'AI Algorithm Engineer', to: 'AI Documentation Engineer', content: '技术细节确认' },
+                    { from: 'AI Documentation Engineer', to: 'Technical Writer', content: '文档内容审核' },
+                    { from: 'Technical Writer', to: 'Product Manager', content: '文档审阅完成' },
+                    { from: 'Product Manager', to: 'CEO', content: '文档发布审批' }
+                ]
+            },
+            {
+                id: 'ai-performance',
+                name: 'AI性能优化项目',
+                icon: '⚡',
+                desc: '从性能分析到优化上线的完整流程',
+                agents: ['AI Performance Engineer', 'AI Testing Engineer', 'AI Optimization Engineer', 'DevOps', 'CTO'],
+                positions: [
+                    { role: 'AI Performance Engineer', x: 400, y: 30 },
+                    { role: 'AI Testing Engineer', x: 200, y: 150 },
+                    { role: 'AI Optimization Engineer', x: 600, y: 150 },
+                    { role: 'DevOps', x: 200, y: 270 },
+                    { role: 'CTO', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Performance Engineer', to: 'AI Testing Engineer', content: '性能测试需求' },
+                    { from: 'AI Testing Engineer', to: 'AI Performance Engineer', content: '性能测试结果' },
+                    { from: 'AI Performance Engineer', to: 'AI Optimization Engineer', content: '优化方案' },
+                    { from: 'AI Optimization Engineer', to: 'DevOps', content: '优化实施' },
+                    { from: 'DevOps', to: 'CTO', content: '性能优化完成' }
+                ]
             }
         ];
 
@@ -7130,7 +7257,19 @@
             'Sentiment Analyst': { icon: '💡', color: '#f59e0b', role: '情感分析师' },
             'Knowledge Graph Engineer': { icon: '🗺️', color: '#14b8a6', role: '知识图谱工程师' },
             'AI Localization Engineer': { icon: '📍', color: '#8b5cf6', role: 'AI本地化工程师' },
-            'Conversational AI Architect': { icon: '🏛️', color: '#06b6d4', role: '对话AI架构师' }
+            'Conversational AI Architect': { icon: '🏛️', color: '#06b6d4', role: '对话AI架构师' },
+            // Cycle 302 新增角色
+            'AI Ethics Auditor': { icon: '⚖️', color: '#059669', role: 'AI伦理审计员' },
+            'AI Compliance Officer': { icon: '📋', color: '#0891b2', role: 'AI合规官' },
+            'AI Risk Manager': { icon: '⚠️', color: '#dc2626', role: 'AI风险管理师' },
+            'AI Data Scientist': { icon: '🔬', color: '#8b5cf6', role: 'AI数据科学家' },
+            'AI Algorithm Engineer': { icon: '🧮', color: '#ec4899', role: 'AI算法工程师' },
+            'AI Model Trainer': { icon: '🎓', color: '#f59e0b', role: 'AI模型训练师' },
+            'AI Dataset Curator': { icon: '📚', color: '#22c55e', role: 'AI数据集管理师' },
+            'AI Testing Engineer': { icon: '🧪', color: '#06b6d4', role: 'AI测试工程师' },
+            'AI Security Analyst': { icon: '🔒', color: '#7c3aed', role: 'AI安全分析师' },
+            'AI Performance Engineer': { icon: '⚡', color: '#14b8a6', role: 'AI性能工程师' },
+            'AI Documentation Engineer': { icon: '📖', color: '#f97316', role: 'AI文档工程师' }
         };
 
         // 拖拽相关变量
