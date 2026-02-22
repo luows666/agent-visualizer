@@ -3503,6 +3503,122 @@
                     { from: 'Investment Analyst', to: 'Investor Relations', content: '行业分析报告' },
                     { from: 'Investor Relations', to: 'Legal Counsel', content: '合规信息披露需求' }
                 ]
+            },
+            // Cycle 276 新增模板
+            {
+                id: 'brand-strategy-mgmt',
+                name: '品牌战略管理',
+                icon: '💎',
+                desc: '从品牌定位到全渠道传播的战略流程',
+                agents: ['Chief Marketing Officer', 'Brand Strategist', 'Creative Director', 'Content Strategist', 'CEO'],
+                positions: [
+                    { role: 'Chief Marketing Officer', x: 400, y: 30 },
+                    { role: 'Brand Strategist', x: 200, y: 150 },
+                    { role: 'Creative Director', x: 600, y: 150 },
+                    { role: 'Content Strategist', x: 200, y: 270 },
+                    { role: 'CEO', x: 400, y: 390 }
+                ],
+                messageFlows: [
+                    { from: 'Chief Marketing Officer', to: 'Brand Strategist', content: '制定品牌战略定位' },
+                    { from: 'Brand Strategist', to: 'Chief Marketing Officer', content: '品牌战略方案' },
+                    { from: 'Chief Marketing Officer', to: 'Creative Director', content: '品牌视觉设计需求' },
+                    { from: 'Creative Director', to: 'Chief Marketing Officer', content: '品牌视觉方案' },
+                    { from: 'Chief Marketing Officer', to: 'Content Strategist', content: '品牌传播内容规划' },
+                    { from: 'Content Strategist', to: 'Chief Marketing Officer', content: '内容策略方案' },
+                    { from: 'Chief Marketing Officer', to: 'CEO', content: '品牌战略方案汇报' }
+                ]
+            },
+            {
+                id: 'tech-architecture-review',
+                name: '技术架构评审',
+                icon: '🏗️',
+                desc: '从技术选型到架构评审的完整流程',
+                agents: ['CTO', 'Architect', 'VP Engineering', 'DevOps', 'Security'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'Architect', x: 200, y: 150 },
+                    { role: 'VP Engineering', x: 600, y: 150 },
+                    { role: 'DevOps', x: 200, y: 270 },
+                    { role: 'Security', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Architect', content: '需要进行新系统架构设计' },
+                    { from: 'Architect', to: 'CTO', content: '架构设计方案' },
+                    { from: 'CTO', to: 'VP Engineering', content: '技术评审会议安排' },
+                    { from: 'VP Engineering', to: 'CTO', content: '工程技术可行性评估' },
+                    { from: 'CTO', to: 'DevOps', content: '运维架构需求' },
+                    { from: 'DevOps', to: 'CTO', content: '基础设施方案' },
+                    { from: 'CTO', to: 'Security', content: '安全架构评审' }
+                ]
+            },
+            {
+                id: 'growth-hacking-exp',
+                name: '增长黑客实验',
+                icon: '🚀',
+                desc: '从假设验证到增长策略迭代的流程',
+                agents: ['Growth Hacker', 'Data Analyst', 'Product Manager', 'Developer', 'Marketing'],
+                positions: [
+                    { role: 'Growth Hacker', x: 400, y: 30 },
+                    { role: 'Data Analyst', x: 200, y: 150 },
+                    { role: 'Product Manager', x: 600, y: 150 },
+                    { role: 'Developer', x: 200, y: 270 },
+                    { role: 'Marketing', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Growth Hacker', to: 'Data Analyst', content: '分析用户行为数据' },
+                    { from: 'Data Analyst', to: 'Growth Hacker', content: '数据洞察报告' },
+                    { from: 'Growth Hacker', to: 'Product Manager', content: '提出增长假设' },
+                    { from: 'Product Manager', to: 'Growth Hacker', content: '产品可行性评估' },
+                    { from: 'Growth Hacker', to: 'Developer', content: '开发增长实验功能' },
+                    { from: 'Developer', to: 'Growth Hacker', content: '实验功能开发完成' },
+                    { from: 'Growth Hacker', to: 'Marketing', content: '增长实验推广' }
+                ]
+            },
+            {
+                id: 'data-driven-decision',
+                name: '数据驱动决策',
+                icon: '📊',
+                desc: '从数据收集到商业洞察的决策流程',
+                agents: ['CEO', 'BI Analyst', 'Data Analyst', 'Business Analyst', 'CFO'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'BI Analyst', x: 200, y: 150 },
+                    { role: 'Data Analyst', x: 600, y: 150 },
+                    { role: 'Business Analyst', x: 200, y: 270 },
+                    { role: 'CFO', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'BI Analyst', content: '需要业务数据报告' },
+                    { from: 'BI Analyst', to: 'CEO', content: 'BI 分析报告' },
+                    { from: 'CEO', to: 'Data Analyst', content: '用户数据分析需求' },
+                    { from: 'Data Analyst', to: 'CEO', content: '用户行为分析' },
+                    { from: 'CEO', to: 'Business Analyst', content: '业务流程分析需求' },
+                    { from: 'Business Analyst', to: 'CEO', content: '业务优化建议' },
+                    { from: 'CEO', to: 'CFO', content: '财务数据决策支持' }
+                ]
+            },
+            {
+                id: 'crisis-pr-mgmt',
+                name: '危机公关管理',
+                icon: '🚨',
+                desc: '从危机识别到公关应对的应急流程',
+                agents: ['CEO', 'PR Manager', 'Legal Counsel', 'Customer Support', 'Social Media Manager'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'PR Manager', x: 200, y: 150 },
+                    { role: 'Legal Counsel', x: 600, y: 150 },
+                    { role: 'Customer Support', x: 200, y: 270 },
+                    { role: 'Social Media Manager', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'PR Manager', content: '启动危机公关响应' },
+                    { from: 'PR Manager', to: 'CEO', content: '危机公关方案' },
+                    { from: 'CEO', to: 'Legal Counsel', content: '法律风险评估' },
+                    { from: 'Legal Counsel', to: 'CEO', content: '法律建议' },
+                    { from: 'CEO', to: 'Customer Support', content: '客户投诉处理' },
+                    { from: 'Customer Support', to: 'CEO', content: '客户反馈汇总' },
+                    { from: 'CEO', to: 'Social Media Manager', content: '社交媒体舆情监控' }
+                ]
             }
         ];
 
@@ -3566,7 +3682,14 @@
             'VP Sales': { icon: '📈', color: '#10b981', role: '销售副总裁' },
             'Product Operations': { icon: '⚡', color: '#6366f1', role: '产品运营经理' },
             'Creative Director': { icon: '✨', color: '#f43f5e', role: '创意总监' },
-            'Investor Relations': { icon: '🏦', color: '#14b8a6', role: '投资者关系总监' }
+            'Investor Relations': { icon: '🏦', color: '#14b8a6', role: '投资者关系总监' },
+            // Cycle 276 新增角色
+            'Chief Marketing Officer': { icon: '🎯', color: '#f59e0b', role: '首席营销官' },
+            'Chief Operating Officer': { icon: '⚙️', color: '#64748b', role: '首席运营官' },
+            'Chief Design Officer': { icon: '🎨', color: '#ec4899', role: '首席设计官' },
+            'Chief People Officer': { icon: '👥', color: '#8b5cf6', role: '首席人力官' },
+            'VP Research': { icon: '🔬', color: '#06b6d4', role: '研究副总裁' },
+            'Social Media Manager': { icon: '📱', color: '#3b82f6', role: '社交媒体经理' }
         };
 
         // 拖拽相关变量
