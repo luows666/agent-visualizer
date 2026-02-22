@@ -8815,6 +8815,123 @@
                     { from: 'AI Feature Selection', to: 'AI Business Analyst', content: '聚类结果' },
                     { from: 'AI Business Analyst', to: 'AI Clustering Expert', content: '业务洞察' }
                 ]
+            },
+            // Cycle 315 新增模板 - AI 运维流程
+            {
+                id: 'ai-operations-workflow',
+                name: 'AI运维管理',
+                icon: '🔧',
+                desc: '从系统监控到故障恢复的完整运维流程',
+                agents: ['AI Operations Engineer', 'AI System Monitor', 'AI Disaster Recovery', 'AI Alert Manager'],
+                positions: [
+                    { role: 'AI Operations Engineer', x: 400, y: 30 },
+                    { role: 'AI System Monitor', x: 200, y: 150 },
+                    { role: 'AI Disaster Recovery', x: 600, y: 150 },
+                    { role: 'AI Alert Manager', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Operations Engineer', to: 'AI System Monitor', content: '监控需求' },
+                    { from: 'AI System Monitor', to: 'AI Disaster Recovery', content: '异常告警' },
+                    { from: 'AI Disaster Recovery', to: 'AI Alert Manager', content: '故障报告' },
+                    { from: 'AI Alert Manager', to: 'AI Operations Engineer', content: '恢复确认' }
+                ]
+            },
+            {
+                id: 'ai-backup-recovery',
+                name: 'AI备份恢复',
+                icon: '💾',
+                desc: '从数据备份到系统恢复的完整流程',
+                agents: ['AI Backup Engineer', 'AI Disaster Recovery', 'AI System Monitor', 'AI Capacity Planner'],
+                positions: [
+                    { role: 'AI Backup Engineer', x: 400, y: 30 },
+                    { role: 'AI Disaster Recovery', x: 200, y: 150 },
+                    { role: 'AI System Monitor', x: 600, y: 150 },
+                    { role: 'AI Capacity Planner', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Backup Engineer', to: 'AI Disaster Recovery', content: '备份策略' },
+                    { from: 'AI Disaster Recovery', to: 'AI System Monitor', content: '恢复测试' },
+                    { from: 'AI System Monitor', to: 'AI Capacity Planner', content: '容量评估' },
+                    { from: 'AI Capacity Planner', to: 'AI Backup Engineer', content: '容量需求' }
+                ]
+            },
+            // Cycle 315 新增模板 - AI 测试流程
+            {
+                id: 'ai-test-automation',
+                name: 'AI自动化测试',
+                icon: '🤖',
+                desc: '从测试设计到自动化执行的完整测试流程',
+                agents: ['AI Test Architect', 'AI Automation QA', 'AI Test Analyst', 'AI Developer'],
+                positions: [
+                    { role: 'AI Test Architect', x: 400, y: 30 },
+                    { role: 'AI Automation QA', x: 200, y: 150 },
+                    { role: 'AI Test Analyst', x: 600, y: 150 },
+                    { role: 'AI Developer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Test Architect', to: 'AI Automation QA', content: '测试架构' },
+                    { from: 'AI Automation QA', to: 'AI Test Analyst', content: '自动化脚本' },
+                    { from: 'AI Test Analyst', to: 'AI Developer', content: '测试报告' },
+                    { from: 'AI Developer', to: 'AI Test Architect', content: '缺陷修复' }
+                ]
+            },
+            {
+                id: 'ai-performance-test',
+                name: 'AI性能测试',
+                icon: '⚡',
+                desc: '从性能基准到优化方案的完整性能测试流程',
+                agents: ['AI Performance QA', 'AI ML Engineer', 'AI Test Architect', 'AI System Monitor'],
+                positions: [
+                    { role: 'AI Performance QA', x: 400, y: 30 },
+                    { role: 'AI ML Engineer', x: 200, y: 150 },
+                    { role: 'AI Test Architect', x: 600, y: 150 },
+                    { role: 'AI System Monitor', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Performance QA', to: 'AI ML Engineer', content: '性能基准' },
+                    { from: 'AI ML Engineer', to: 'AI Test Architect', content: '优化方案' },
+                    { from: 'AI Test Architect', to: 'AI System Monitor', content: '测试结果' },
+                    { from: 'AI System Monitor', to: 'AI Performance QA', content: '性能监控' }
+                ]
+            },
+            // Cycle 315 新增模板 - AI 商业智能流程
+            {
+                id: 'ai-business-intelligence',
+                name: 'AI商业智能',
+                icon: '💼',
+                desc: '从数据仓库到商业洞察的完整BI流程',
+                agents: ['AI Business Intelligence', 'AI Data Warehouse', 'AI ETL Developer', 'AI Report Designer'],
+                positions: [
+                    { role: 'AI Business Intelligence', x: 400, y: 30 },
+                    { role: 'AI Data Warehouse', x: 200, y: 150 },
+                    { role: 'AI ETL Developer', x: 600, y: 150 },
+                    { role: 'AI Report Designer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Business Intelligence', to: 'AI Data Warehouse', content: '数据需求' },
+                    { from: 'AI Data Warehouse', to: 'AI ETL Developer', content: '数据模型' },
+                    { from: 'AI ETL Developer', to: 'AI Report Designer', content: '数据处理' },
+                    { from: 'AI Report Designer', to: 'AI Business Intelligence', content: '报表产出' }
+                ]
+            },
+            {
+                id: 'ai-dashboard-development',
+                name: 'AI仪表盘开发',
+                icon: '📊',
+                desc: '从需求分析到可视化仪表盘的完整开发流程',
+                agents: ['AI Dashboard Developer', 'AI Report Designer', 'AI Data Visualizer', 'AI KPI Analyst'],
+                positions: [
+                    { role: 'AI Dashboard Developer', x: 400, y: 30 },
+                    { role: 'AI Report Designer', x: 200, y: 150 },
+                    { role: 'AI Data Visualizer', x: 600, y: 150 },
+                    { role: 'AI KPI Analyst', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Dashboard Developer', to: 'AI Report Designer', content: '界面需求' },
+                    { from: 'AI Report Designer', to: 'AI Data Visualizer', content: '可视化设计' },
+                    { from: 'AI Data Visualizer', to: 'AI KPI Analyst', content: '数据指标' },
+                    { from: 'AI KPI Analyst', to: 'AI Dashboard Developer', content: 'KPI定义' }
+                ]
             }
         ];
 
@@ -9295,7 +9412,28 @@
             'AI Anomaly Detector': { icon: '⚠️', color: '#f59e0b', role: 'AI异常检测工程师' },
             'AI Clustering Expert': { icon: '🎯', color: '#14b8a6', role: 'AI聚类专家' },
             'AI Regression Expert': { icon: '📉', color: '#8b5cf6', role: 'AI回归分析专家' },
-            'AI Feature Selection': { icon: '✨', color: '#22c55e', role: 'AI特征选择工程师' }
+            'AI Feature Selection': { icon: '✨', color: '#22c55e', role: 'AI特征选择工程师' },
+            // Cycle 315 新增角色 - AI 运营与维护
+            'AI Operations Engineer': { icon: '🔧', color: '#0d9488', role: 'AI运维工程师' },
+            'AI System Monitor': { icon: '📊', color: '#0891b2', role: 'AI系统监控工程师' },
+            'AI Backup Engineer': { icon: '💾', color: '#7c3aed', role: 'AI备份恢复工程师' },
+            'AI Disaster Recovery': { icon: '🚨', color: '#dc2626', role: 'AI灾备工程师' },
+            'AI Patch Manager': { icon: '🩹', color: '#f59e0b', role: 'AI补丁管理工程师' },
+            'AI Capacity Planner': { icon: '📈', color: '#22c55e', role: 'AI容量规划工程师' },
+            // Cycle 315 新增角色 - AI 质量与测试
+            'AI Test Architect': { icon: '🏗️', color: '#ec4899', role: 'AI测试架构师' },
+            'AI Test Manager': { icon: '📋', color: '#8b5cf6', role: 'AI测试经理' },
+            'AI Test Analyst': { icon: '🔍', color: '#06b6d4', role: 'AI测试分析师' },
+            'AI Automation QA': { icon: '🤖', color: '#14b8a6', role: 'AI自动化测试工程师' },
+            'AI Performance QA': { icon: '⚡', color: '#f97316', role: 'AI性能测试工程师' },
+            'AI Security QA': { icon: '🔒', color: '#dc2626', role: 'AI安全测试工程师' },
+            // Cycle 315 新增角色 - AI 业务智能
+            'AI Business Intelligence': { icon: '💼', color: '#0ea5e9', role: 'AI商业智能工程师' },
+            'AI Data Warehouse': { icon: '🏚️', color: '#a855f7', role: 'AI数据仓库工程师' },
+            'AI ETL Developer': { icon: '🔄', color: '#22c55e', role: 'AI ETL开发工程师' },
+            'AI Report Designer': { icon: '📝', color: '#f43f5e', role: 'AI报表设计师' },
+            'AI Dashboard Developer': { icon: '📊', color: '#14b8a6', role: 'AI仪表盘开发工程师' },
+            'AI KPI Analyst': { icon: '🎯', color: '#f59e0b', role: 'AI KPI分析师' }
         };
 
         // 拖拽相关变量
