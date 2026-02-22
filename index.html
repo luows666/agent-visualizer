@@ -10068,6 +10068,138 @@
                     { from: 'AI Flavor Engineer', to: 'AI Food Scientist', content: '风味方案' },
                     { from: 'AI Food Process Engineer', to: 'AI Food Scientist', content: '工艺方案' }
                 ]
+            },
+            // Cycle 326 新增模板 - AI 纺织服装系统
+            {
+                id: 'ai-textile-fashion',
+                name: 'AI纺织服装系统',
+                icon: '🧵',
+                description: '从服装设计到生产的完整流程',
+                agents: ['AI Textile Engineer', 'AI Fashion Designer', 'AI Pattern Maker', 'AI Textile Quality Engineer', 'AI Sustainable Fashion Engineer'],
+                positions: [
+                    { role: 'AI Textile Engineer', x: 400, y: 30 },
+                    { role: 'AI Fashion Designer', x: 200, y: 150 },
+                    { role: 'AI Pattern Maker', x: 600, y: 150 },
+                    { role: 'AI Textile Quality Engineer', x: 200, y: 270 },
+                    { role: 'AI Sustainable Fashion Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Textile Engineer', to: 'AI Fashion Designer', content: '面料需求' },
+                    { from: 'AI Fashion Designer', to: 'AI Pattern Maker', content: '设计方案' },
+                    { role: 'AI Pattern Maker', to: 'AI Textile Quality Engineer', content: '版型数据' },
+                    { from: 'AI Textile Quality Engineer', to: 'AI Sustainable Fashion Engineer', content: '质量报告' },
+                    { from: 'AI Sustainable Fashion Engineer', to: 'AI Textile Engineer', content: '可持续方案' }
+                ]
+            },
+            // Cycle 326 新增模板 - AI 珠宝设计系统
+            {
+                id: 'ai-jewelry-design',
+                name: 'AI珠宝设计系统',
+                icon: '💎',
+                description: '从珠宝设计到制作的完整流程',
+                agents: ['AI Jewelry Designer', 'AI Gemologist', 'AI CAD Jewelry Engineer', 'AI Jewelry Manufacturing Engineer', 'AI Precious Metals Engineer'],
+                positions: [
+                    { role: 'AI Jewelry Designer', x: 400, y: 30 },
+                    { role: 'AI Gemologist', x: 200, y: 150 },
+                    { role: 'AI CAD Jewelry Engineer', x: 600, y: 150 },
+                    { role: 'AI Jewelry Manufacturing Engineer', x: 200, y: 270 },
+                    { role: 'AI Precious Metals Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Jewelry Designer', to: 'AI Gemologist', content: '宝石需求' },
+                    { from: 'AI Gemologist', to: 'AI CAD Jewelry Engineer', content: '宝石评估' },
+                    { from: 'AI CAD Jewelry Engineer', to: 'AI Jewelry Manufacturing Engineer', content: '3D设计' },
+                    { from: 'AI Jewelry Manufacturing Engineer', to: 'AI Precious Metals Engineer', content: '金属需求' },
+                    { from: 'AI Precious Metals Engineer', to: 'AI Jewelry Designer', content: '材料方案' }
+                ]
+            },
+            // Cycle 326 新增模板 - AI 智能客服系统
+            {
+                id: 'ai-customer-service',
+                name: 'AI智能客服系统',
+                icon: '🎧',
+                description: '从客户咨询到问题解决的完整流程',
+                agents: ['AI Customer Support', 'AI Technical Support', 'AI Product Manager', 'AI QA', 'AI Operations'],
+                positions: [
+                    { role: 'AI Customer Support', x: 400, y: 30 },
+                    { role: 'AI Technical Support', x: 200, y: 150 },
+                    { role: 'AI Product Manager', x: 600, y: 150 },
+                    { role: 'AI QA', x: 200, y: 270 },
+                    { role: 'AI Operations', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Customer Support', to: 'AI Technical Support', content: '技术问题转接' },
+                    { from: 'AI Technical Support', to: 'AI Product Manager', content: '产品问题反馈' },
+                    { from: 'AI Product Manager', to: 'AI QA', content: '问题确认' },
+                    { from: 'AI QA', to: 'AI Operations', content: '问题分类' },
+                    { from: 'AI Operations', to: 'AI Customer Support', content: '解决方案' }
+                ]
+            },
+            // Cycle 326 新增模板 - AI 电商运营系统
+            {
+                id: 'ai-ecommerce',
+                name: 'AI电商运营系统',
+                icon: '🛒',
+                description: '从商品上架到营销推广的完整流程',
+                agents: ['AI Ecommerce', 'AI Retail Analytics', 'AI Recommendation', 'AI Pricing', 'AI Marketing'],
+                positions: [
+                    { role: 'AI Ecommerce', x: 400, y: 30 },
+                    { role: 'AI Retail Analytics', x: 200, y: 150 },
+                    { role: 'AI Recommendation', x: 600, y: 150 },
+                    { role: 'AI Pricing', x: 200, y: 270 },
+                    { role: 'AI Marketing', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Ecommerce', to: 'AI Retail Analytics', content: '销售数据分析' },
+                    { from: 'AI Retail Analytics', to: 'AI Recommendation', content: '用户行为分析' },
+                    { from: 'AI Recommendation', to: 'AI Pricing', content: '定价建议' },
+                    { from: 'AI Pricing', to: 'AI Marketing', content: '营销策略' },
+                    { from: 'AI Marketing', to: 'AI Ecommerce', content: '推广执行' }
+                ]
+            },
+            // Cycle 326 新增模板 - AI 智能招聘系统
+            {
+                id: 'ai-recruitment',
+                name: 'AI智能招聘系统',
+                icon: '👔',
+                description: '从岗位需求到人才入职的完整流程',
+                agents: ['AI Recruiter', 'AI Talent Assessment', 'AI HR', 'AI Technical Recruiter', 'AI Operations'],
+                positions: [
+                    { role: 'AI Recruiter', x: 400, y: 30 },
+                    { role: 'AI Talent Assessment', x: 200, y: 150 },
+                    { role: 'AI HR', x: 600, y: 150 },
+                    { role: 'AI Technical Recruiter', x: 200, y: 270 },
+                    { role: 'AI Operations', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Recruiter', to: 'AI Talent Assessment', content: '候选人筛选' },
+                    { from: 'AI Talent Assessment', to: 'AI Technical Recruiter', content: '技术评估' },
+                    { from: 'AI Technical Recruiter', to: 'AI HR', content: '评估报告' },
+                    { from: 'AI HR', to: 'AI Operations', content: '入职流程' },
+                    { from: 'AI Operations', to: 'AI Recruiter', content: '招聘完成' }
+                ]
+            },
+            // Cycle 326 新增模板 - AI 智能物流系统
+            {
+                id: 'ai-logistics',
+                name: 'AI智能物流系统',
+                icon: '🚚',
+                description: '从订单处理到配送完成的完整流程',
+                agents: ['AI Supply Chain', 'AI Route Optimizer', 'AI Warehouse Robot', 'AI Logistics', 'AI Operations'],
+                positions: [
+                    { role: 'AI Supply Chain', x: 400, y: 30 },
+                    { role: 'AI Route Optimizer', x: 200, y: 150 },
+                    { role: 'AI Warehouse Robot', x: 600, y: 150 },
+                    { role: 'AI Logistics', x: 200, y: 270 },
+                    { role: 'AI Operations', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Supply Chain', to: 'AI Warehouse Robot', content: '订单处理' },
+                    { from: 'AI Warehouse Robot', to: 'AI Route Optimizer', content: '库存分配' },
+                    { from: 'AI Route Optimizer', to: 'AI Logistics', content: '配送路线' },
+                    { from: 'AI Logistics', to: 'AI Operations', content: '配送状态' },
+                    { from: 'AI Operations', to: 'AI Supply Chain', content: '完成反馈' }
+                ]
             }
         ];
 
