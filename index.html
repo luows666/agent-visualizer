@@ -11368,6 +11368,138 @@
                     { from: 'AI Paramedic', to: 'AI Judge', content: '应急法律' },
                     { from: 'AI Judge', to: 'AI Diplomat', content: '国际协调' }
                 ]
+            },
+            // Cycle 337 新增模板 - AI智能职业发展系统
+            {
+                id: 'ai-career-development',
+                name: 'AI智能职业发展系统',
+                icon: '🎯',
+                description: '从职业规划到职场晋升的完整职业发展流程',
+                agents: ['AI Career Planner', 'AI Resume Writer', 'AI Interview Coach', 'AI Salary Negotiator', 'AI Work-Life Coach'],
+                positions: [
+                    { role: 'AI Career Planner', x: 200, y: 50 },
+                    { role: 'AI Resume Writer', x: 400, y: 50 },
+                    { role: 'AI Interview Coach', x: 600, y: 50 },
+                    { role: 'AI Salary Negotiator', x: 300, y: 200 },
+                    { role: 'AI Work-Life Coach', x: 500, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Career Planner', to: 'AI Resume Writer', content: '职业规划指导' },
+                    { from: 'AI Resume Writer', to: 'AI Interview Coach', content: '简历优化建议' },
+                    { from: 'AI Interview Coach', to: 'AI Salary Negotiator', content: '面试技巧培训' },
+                    { from: 'AI Salary Negotiator', to: 'AI Work-Life Coach', content: '薪资谈判建议' }
+                ]
+            },
+            // Cycle 337 新增模板 - AI智能创意营销系统
+            {
+                id: 'ai-creative-marketing',
+                name: 'AI智能创意营销系统',
+                icon: '💎',
+                description: '从创意策划到品牌传播的完整创意营销流程',
+                agents: ['AI Creative Director', 'AI Brand Strategist', 'AI Content Strategist', 'AI Social Media Strategist', 'AI Influencer Manager', 'AI PR Specialist'],
+                positions: [
+                    { role: 'AI Creative Director', x: 200, y: 50 },
+                    { role: 'AI Brand Strategist', x: 400, y: 50 },
+                    { role: 'AI Content Strategist', x: 600, y: 50 },
+                    { role: 'AI Social Media Strategist', x: 200, y: 200 },
+                    { role: 'AI Influencer Manager', x: 400, y: 200 },
+                    { role: 'AI PR Specialist', x: 600, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Creative Director', to: 'AI Brand Strategist', content: '创意方向指导' },
+                    { from: 'AI Brand Strategist', to: 'AI Content Strategist', content: '品牌战略规划' },
+                    { from: 'AI Content Strategist', to: 'AI Social Media Strategist', content: '内容策略方案' },
+                    { from: 'AI Social Media Strategist', to: 'AI Influencer Manager', content: '社媒推广计划' },
+                    { from: 'AI Influencer Manager', to: 'AI PR Specialist', content: '网红合作方案' }
+                ]
+            },
+            // Cycle 337 新增模板 - AI智能生活服务系统
+            {
+                id: 'ai-lifestyle-services',
+                name: 'AI智能生活服务系统',
+                icon: '🏠',
+                description: '从生活规划到服务执行的完整生活服务流程',
+                agents: ['AI Personal Stylist', 'AI Home Designer', 'AI Travel Concierge', 'AI Event Planner', 'AI Personal Assistant', 'AI Life Manager'],
+                positions: [
+                    { role: 'AI Personal Stylist', x: 200, y: 50 },
+                    { role: 'AI Home Designer', x: 400, y: 50 },
+                    { role: 'AI Travel Concierge', x: 600, y: 50 },
+                    { role: 'AI Event Planner', x: 200, y: 200 },
+                    { role: 'AI Personal Assistant', x: 400, y: 200 },
+                    { role: 'AI Life Manager', x: 600, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Personal Stylist', to: 'AI Home Designer', content: '个人形象设计' },
+                    { from: 'AI Home Designer', to: 'AI Travel Concierge', content: '家居旅行规划' },
+                    { from: 'AI Travel Concierge', to: 'AI Event Planner', content: '旅行活动安排' },
+                    { from: 'AI Event Planner', to: 'AI Personal Assistant', content: '活动策划方案' },
+                    { from: 'AI Personal Assistant', to: 'AI Life Manager', content: '助理服务整合' }
+                ]
+            },
+            // Cycle 337 新增模板 - AI智能健康管理系统
+            {
+                id: 'ai-healthcare-wellness',
+                name: 'AI智能健康管理系统',
+                icon: '🧘',
+                description: '从健康评估到方案执行的完整健康管理流程',
+                agents: ['AI Wellness Coach', 'AI Sleep Specialist', 'AI Mental Wellness', 'AI Pain Management', 'AI Rehabilitation Coach'],
+                positions: [
+                    { role: 'AI Wellness Coach', x: 200, y: 50 },
+                    { role: 'AI Sleep Specialist', x: 400, y: 50 },
+                    { role: 'AI Mental Wellness', x: 600, y: 50 },
+                    { role: 'AI Pain Management', x: 300, y: 200 },
+                    { role: 'AI Rehabilitation Coach', x: 500, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Wellness Coach', to: 'AI Sleep Specialist', content: '健康评估报告' },
+                    { from: 'AI Sleep Specialist', to: 'AI Mental Wellness', content: '睡眠分析数据' },
+                    { from: 'AI Mental Wellness', to: 'AI Pain Management', content: '心理 wellness 方案' },
+                    { from: 'AI Pain Management', to: 'AI Rehabilitation Coach', content: '疼痛管理计划' }
+                ]
+            },
+            // Cycle 337 新增模板 - AI智能专业咨询系统
+            {
+                id: 'ai-professional-consulting',
+                name: 'AI智能专业咨询系统',
+                icon: '💼',
+                description: '从咨询到执行的完整专业服务流程',
+                agents: ['AI Tax Consultant', 'AI Estate Planner', 'AI Business Consultant', 'AI Investment Strategist', 'AI Risk Advisor', 'AI Compliance Analyst'],
+                positions: [
+                    { role: 'AI Tax Consultant', x: 200, y: 50 },
+                    { role: 'AI Estate Planner', x: 400, y: 50 },
+                    { role: 'AI Business Consultant', x: 600, y: 50 },
+                    { role: 'AI Investment Strategist', x: 200, y: 200 },
+                    { role: 'AI Risk Advisor', x: 400, y: 200 },
+                    { role: 'AI Compliance Analyst', x: 600, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Tax Consultant', to: 'AI Estate Planner', content: '税务规划建议' },
+                    { from: 'AI Estate Planner', to: 'AI Business Consultant', content: '遗产规划方案' },
+                    { from: 'AI Business Consultant', to: 'AI Investment Strategist', content: '商业咨询报告' },
+                    { from: 'AI Investment Strategist', to: 'AI Risk Advisor', content: '投资策略方案' },
+                    { from: 'AI Risk Advisor', to: 'AI Compliance Analyst', content: '风险评估报告' }
+                ]
+            },
+            // Cycle 337 新增模板 - AI智能前沿科技系统
+            {
+                id: 'ai-cutting-edge-tech',
+                name: 'AI智能前沿科技系统',
+                icon: '🚀',
+                description: '从技术研究到产品开发的完整前沿科技流程',
+                agents: ['AI Metaverse Architect', 'AI Web3 Developer', 'AI AR VR Engineer', 'AI Quantum Programmer', 'AI Space Tech Engineer'],
+                positions: [
+                    { role: 'AI Metaverse Architect', x: 200, y: 50 },
+                    { role: 'AI Web3 Developer', x: 400, y: 50 },
+                    { role: 'AI AR VR Engineer', x: 600, y: 50 },
+                    { role: 'AI Quantum Programmer', x: 300, y: 200 },
+                    { role: 'AI Space Tech Engineer', x: 500, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Metaverse Architect', to: 'AI Web3 Developer', content: '元宇宙架构设计' },
+                    { from: 'AI Web3 Developer', to: 'AI AR VR Engineer', content: 'Web3 技术方案' },
+                    { from: 'AI AR VR Engineer', to: 'AI Quantum Programmer', content: 'AR/VR 开发需求' },
+                    { from: 'AI Quantum Programmer', to: 'AI Space Tech Engineer', content: '量子计算研究' }
+                ]
             }
         ];
 
@@ -12440,7 +12572,47 @@
             'AI Police Officer': { icon: '👮', color: '#3b82f6', role: 'AI警察' },
             'AI Paramedic': { icon: '🚑', color: '#22c55e', role: 'AI急救员' },
             'AI Judge': { icon: '⚖️', color: '#a855f7', role: 'AI法官' },
-            'AI Diplomat': { icon: '🌍', color: '#0ea5e9', role: 'AI外交官' }
+            'AI Diplomat': { icon: '🌍', color: '#0ea5e9', role: 'AI外交官' },
+            // Cycle 337 新增角色 - AI 智能新兴职业
+            'AI Career Planner': { icon: '🎯', color: '#f43f5e', role: 'AI职业规划师' },
+            'AI Resume Writer': { icon: '📄', color: '#a855f7', role: 'AI简历撰写师' },
+            'AI Interview Coach': { icon: '🎤', color: '#22c55e', role: 'AI面试教练' },
+            'AI Salary Negotiator': { icon: '💼', color: '#f59e0b', role: 'AI薪资谈判师' },
+            'AI Work-Life Coach': { icon: '⚖️', color: '#14b8a6', role: 'AI工作生活平衡师' },
+            // Cycle 337 新增角色 - AI 智能创意产业
+            'AI Creative Director': { icon: '🎬', color: '#ec4899', role: 'AI创意总监' },
+            'AI Brand Strategist': { icon: '💎', color: '#8b5cf6', role: 'AI品牌战略师' },
+            'AI Content Strategist': { icon: '📝', color: '#06b6d4', role: 'AI内容策略师' },
+            'AI Social Media Strategist': { icon: '📱', color: '#f97316', role: 'AI社交媒体策略师' },
+            'AI Influencer Manager': { icon: '🌟', color: '#eab308', role: 'AI网红经纪人' },
+            'AI PR Specialist': { icon: '📣', color: '#22c55e', role: 'AI公关专员' },
+            'AI Event Producer': { icon: '🎪', color: '#a855f7', role: 'AI活动制作人' },
+            // Cycle 337 新增角色 - AI 智能生活服务
+            'AI Personal Stylist': { icon: '👔', color: '#f43f5e', role: 'AI个人造型师' },
+            'AI Home Designer': { icon: '🏠', color: '#f59e0b', role: 'AI家居设计师' },
+            'AI Travel Concierge': { icon: '✈️', color: '#0ea5e9', role: 'AI旅行礼宾' },
+            'AI Event Planner': { icon: '🎉', color: '#ec4899', role: 'AI活动策划师' },
+            'AI Personal Assistant': { icon: '📋', color: '#8b5cf6', role: 'AI私人助理' },
+            'AI Life Manager': { icon: '🌟', color: '#14b8a6', role: 'AI生活管家' },
+            // Cycle 337 新增角色 - AI 智能健康服务
+            'AI Wellness Coach': { icon: '🧘', color: '#22c55e', role: 'AI wellness教练' },
+            'AI Sleep Specialist': { icon: '😴', color: '#6366f1', role: 'AI睡眠专家' },
+            'AI Mental Wellness': { icon: '🧠', color: '#a855f7', role: 'AI心理 wellness顾问' },
+            'AI Pain Management': { icon: '💊', color: '#ef4444', role: 'AI疼痛管理师' },
+            'AI Rehabilitation Coach': { icon: '🏥', color: '#06b6d4', role: 'AI康复教练' },
+            // Cycle 337 新增角色 - AI 智能专业服务
+            'AI Tax Consultant': { icon: '💵', color: '#f59e0b', role: 'AI税务顾问' },
+            'AI Estate Planner': { icon: '🏛️', color: '#7c3aed', role: 'AI遗产规划师' },
+            'AI Business Consultant': { icon: '📈', color: '#10b981', role: 'AI商业顾问' },
+            'AI Investment Strategist': { icon: '💰', color: '#eab308', role: 'AI投资策略师' },
+            'AI Risk Advisor': { icon: '⚠️', color: '#dc2626', role: 'AI风险顾问' },
+            'AI Compliance Analyst': { icon: '✅', color: '#64748b', role: 'AI合规分析师' },
+            // Cycle 337 新增角色 - AI 智能前沿科技
+            'AI Metaverse Architect': { icon: '🌌', color: '#8b5cf6', role: 'AI元宇宙架构师' },
+            'AI Web3 Developer': { icon: '⛓️', color: '#f97316', role: 'AI区块链开发者' },
+            'AI AR VR Engineer': { icon: '🥽', color: '#ec4899', role: 'AI AR/VR工程师' },
+            'AI Quantum Programmer': { icon: '⚛️', color: '#06b6d4', role: 'AI量子程序员' },
+            'AI Space Tech Engineer': { icon: '🚀', color: '#3b82f6', role: 'AI太空技术工程师' }
         };
 
         // 拖拽相关变量
