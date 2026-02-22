@@ -6760,6 +6760,123 @@
                     { from: 'Autonomous Systems Engineer', to: 'Safety Engineer', content: '安全验证需求' },
                     { from: 'Safety Engineer', to: 'QA', content: '安全测试报告' }
                 ]
+            },
+            // Cycle 301 新增模板
+            {
+                id: 'chatbot-development',
+                name: '对话机器人开发',
+                icon: '💬',
+                desc: '从对话机器人设计到上线的完整流程',
+                agents: ['Chatbot Developer', 'Conversational AI Architect', 'NLP Engineer', 'QA'],
+                positions: [
+                    { role: 'Chatbot Developer', x: 400, y: 50 },
+                    { role: 'Conversational AI Architect', x: 200, y: 180 },
+                    { role: 'NLP Engineer', x: 400, y: 180 },
+                    { role: 'QA', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'Chatbot Developer', to: 'Conversational AI Architect', content: '对话架构设计' },
+                    { from: 'Conversational AI Architect', to: 'NLP Engineer', content: 'NLP模型需求' },
+                    { from: 'NLP Engineer', to: 'Chatbot Developer', content: '对话模型开发完成' },
+                    { from: 'Chatbot Developer', to: 'QA', content: '提交测试' },
+                    { from: 'QA', to: 'Chatbot Developer', content: '测试反馈' }
+                ]
+            },
+            {
+                id: 'voice-ai-development',
+                name: '语音AI开发',
+                icon: '🎤',
+                desc: '从语音AI需求到产品上线的完整流程',
+                agents: ['Voice AI Engineer', 'Speech Recognition Engineer', 'Multimodal AI Engineer', 'QA'],
+                positions: [
+                    { role: 'Voice AI Engineer', x: 400, y: 50 },
+                    { role: 'Speech Recognition Engineer', x: 200, y: 180 },
+                    { role: 'Multimodal AI Engineer', x: 400, y: 180 },
+                    { role: 'QA', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'Voice AI Engineer', to: 'Speech Recognition Engineer', content: '语音识别需求' },
+                    { from: 'Speech Recognition Engineer', to: 'Multimodal AI Engineer', content: '语音模型开发' },
+                    { from: 'Multimodal AI Engineer', to: 'Voice AI Engineer', content: '多模态集成完成' },
+                    { from: 'Voice AI Engineer', to: 'QA', content: '提交测试' }
+                ]
+            },
+            {
+                id: 'ai-content-moderation',
+                name: 'AI内容审核系统',
+                icon: '🛡️',
+                desc: '从内容审核需求到系统上线的完整流程',
+                agents: ['AI Content Moderator', 'AI Engineer', 'Security', 'Legal Counsel'],
+                positions: [
+                    { role: 'AI Content Moderator', x: 400, y: 50 },
+                    { role: 'AI Engineer', x: 200, y: 180 },
+                    { role: 'Security', x: 400, y: 180 },
+                    { role: 'Legal Counsel', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Content Moderator', to: 'AI Engineer', content: '审核系统需求' },
+                    { from: 'AI Engineer', to: 'Security', content: '安全评估' },
+                    { from: 'Security', to: 'Legal Counsel', content: '合规审查' },
+                    { from: 'Legal Counsel', to: 'AI Content Moderator', content: '审核规则确认' }
+                ]
+            },
+            {
+                id: 'sentiment-analysis',
+                name: '情感分析系统',
+                icon: '💡',
+                desc: '从情感分析需求到系统上线的完整流程',
+                agents: ['Sentiment Analyst', 'NLP Engineer', 'Data Analyst', 'AI Product Manager'],
+                positions: [
+                    { role: 'Sentiment Analyst', x: 400, y: 50 },
+                    { role: 'NLP Engineer', x: 200, y: 180 },
+                    { role: 'Data Analyst', x: 400, y: 180 },
+                    { role: 'AI Product Manager', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'Sentiment Analyst', to: 'NLP Engineer', content: '分析模型需求' },
+                    { from: 'NLP Engineer', to: 'Data Analyst', content: '数据准备' },
+                    { from: 'Data Analyst', to: 'Sentiment Analyst', content: '数据分析完成' },
+                    { from: 'Sentiment Analyst', to: 'AI Product Manager', content: '分析报告' }
+                ]
+            },
+            {
+                id: 'knowledge-graph',
+                name: '知识图谱构建',
+                icon: '🗺️',
+                desc: '从知识图谱设计到上线的完整流程',
+                agents: ['Knowledge Graph Engineer', 'Data Engineer', 'AI Researcher', 'QA'],
+                positions: [
+                    { role: 'Knowledge Graph Engineer', x: 400, y: 50 },
+                    { role: 'Data Engineer', x: 200, y: 180 },
+                    { role: 'AI Researcher', x: 400, y: 180 },
+                    { role: 'QA', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'Knowledge Graph Engineer', to: 'Data Engineer', content: '数据源分析' },
+                    { from: 'Data Engineer', to: 'AI Researcher', content: '知识抽取' },
+                    { from: 'AI Researcher', to: 'Knowledge Graph Engineer', content: '图谱构建完成' },
+                    { from: 'Knowledge Graph Engineer', to: 'QA', content: '提交测试' }
+                ]
+            },
+            {
+                id: 'ai-localization',
+                name: 'AI本地化项目',
+                icon: '🌐',
+                desc: '从产品本地化需求到上线的完整流程',
+                agents: ['AI Localization Engineer', 'AI Interpreter', 'Product Manager', 'QA'],
+                positions: [
+                    { role: 'AI Localization Engineer', x: 400, y: 50 },
+                    { role: 'AI Interpreter', x: 200, y: 180 },
+                    { role: 'Product Manager', x: 400, y: 180 },
+                    { role: 'QA', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Localization Engineer', to: 'AI Interpreter', content: '翻译需求' },
+                    { from: 'AI Interpreter', to: 'AI Localization Engineer', content: '翻译完成' },
+                    { from: 'AI Localization Engineer', to: 'Product Manager', content: '本地化完成' },
+                    { from: 'Product Manager', to: 'QA', content: '提交测试' },
+                    { from: 'QA', to: 'AI Localization Engineer', content: '测试反馈' }
+                ]
             }
         ];
 
@@ -7002,7 +7119,18 @@
             'Data Platform Engineer': { icon: '📊', color: '#22c55e', role: '数据平台工程师' },
             'AI Solutions Architect': { icon: '🏗️', color: '#8b5cf6', role: 'AI解决方案架构师' },
             'Autonomous Systems Engineer': { icon: '🤖', color: '#14b8a6', role: '自动驾驶系统工程师' },
-            'Neural Interface Engineer': { icon: '🧬', color: '#f43f5e', role: '神经接口工程师' }
+            'Neural Interface Engineer': { icon: '🧬', color: '#f43f5e', role: '神经接口工程师' },
+            // Cycle 301 新增角色
+            'Multimodal AI Engineer': { icon: '🎭', color: '#0ea5e9', role: '多模态AI工程师' },
+            'AI Interpreter': { icon: '🌐', color: '#22c55e', role: 'AI翻译官' },
+            'Voice AI Engineer': { icon: '🎤', color: '#f97316', role: '语音AI工程师' },
+            'Chatbot Developer': { icon: '💬', color: '#a855f7', role: '对话机器人开发者' },
+            'Virtual Assistant Developer': { icon: '👩‍💼', color: '#ec4899', role: '虚拟助手开发者' },
+            'AI Content Moderator': { icon: '🛡️', color: '#dc2626', role: 'AI内容审核员' },
+            'Sentiment Analyst': { icon: '💡', color: '#f59e0b', role: '情感分析师' },
+            'Knowledge Graph Engineer': { icon: '🗺️', color: '#14b8a6', role: '知识图谱工程师' },
+            'AI Localization Engineer': { icon: '📍', color: '#8b5cf6', role: 'AI本地化工程师' },
+            'Conversational AI Architect': { icon: '🏛️', color: '#06b6d4', role: '对话AI架构师' }
         };
 
         // 拖拽相关变量
