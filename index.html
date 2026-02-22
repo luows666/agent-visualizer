@@ -7004,6 +7004,121 @@
                     { from: 'AI Optimization Engineer', to: 'DevOps', content: '优化实施' },
                     { from: 'DevOps', to: 'CTO', content: '性能优化完成' }
                 ]
+            },
+            // Cycle 303 新增模板
+            {
+                id: 'ai-optimization',
+                name: 'AI性能优化项目',
+                icon: '🚀',
+                desc: '从AI性能分析到优化实施的完整流程',
+                agents: ['AI Optimization Engineer', 'AI Benchmark Engineer', 'AI Infrastructure Engineer', 'CTO'],
+                positions: [
+                    { role: 'AI Optimization Engineer', x: 400, y: 30 },
+                    { role: 'AI Benchmark Engineer', x: 200, y: 150 },
+                    { role: 'AI Infrastructure Engineer', x: 600, y: 150 },
+                    { role: 'CTO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Optimization Engineer', to: 'AI Benchmark Engineer', content: '开始性能基准测试' },
+                    { from: 'AI Benchmark Engineer', to: 'AI Optimization Engineer', content: '性能测试报告' },
+                    { from: 'AI Optimization Engineer', to: 'AI Infrastructure Engineer', content: '优化方案实施' },
+                    { from: 'AI Infrastructure Engineer', to: 'CTO', content: '优化完成报告' }
+                ]
+            },
+            {
+                id: 'ai-cost-analysis',
+                name: 'AI成本分析项目',
+                icon: '💵',
+                desc: '从AI成本分析到优化的完整流程',
+                agents: ['AI Cost Analyst', 'CFO', 'AI Infrastructure Engineer', 'CTO'],
+                positions: [
+                    { role: 'AI Cost Analyst', x: 400, y: 30 },
+                    { role: 'CFO', x: 200, y: 150 },
+                    { role: 'AI Infrastructure Engineer', x: 600, y: 150 },
+                    { role: 'CTO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Cost Analyst', to: 'AI Infrastructure Engineer', content: '收集资源使用数据' },
+                    { from: 'AI Infrastructure Engineer', to: 'AI Cost Analyst', content: '资源使用报告' },
+                    { from: 'AI Cost Analyst', to: 'CFO', content: '成本分析报告' },
+                    { from: 'CFO', to: 'CTO', content: '预算审批' }
+                ]
+            },
+            {
+                id: 'ai-pipeline-automation',
+                name: 'AI流程自动化',
+                icon: '⚙️',
+                desc: '从AI流程设计到自动化实施的完整流程',
+                agents: ['AI Pipeline Engineer', 'AI Automation Engineer', 'DevOps', 'CTO'],
+                positions: [
+                    { role: 'AI Pipeline Engineer', x: 400, y: 30 },
+                    { role: 'AI Automation Engineer', x: 200, y: 150 },
+                    { role: 'DevOps', x: 600, y: 150 },
+                    { role: 'CTO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Pipeline Engineer', to: 'AI Automation Engineer', content: '设计自动化流程' },
+                    { from: 'AI Automation Engineer', to: 'AI Pipeline Engineer', content: '流程实现方案' },
+                    { from: 'AI Pipeline Engineer', to: 'DevOps', content: '部署自动化流程' },
+                    { from: 'DevOps', to: 'CTO', content: '自动化实施完成' }
+                ]
+            },
+            {
+                id: 'ai-data-management',
+                name: 'AI数据管理项目',
+                icon: '💾',
+                desc: '从AI数据收集到管理的完整流程',
+                agents: ['AI Data Engineer', 'Data Scientist', 'AI Training Specialist', 'CTO'],
+                positions: [
+                    { role: 'AI Data Engineer', x: 400, y: 30 },
+                    { role: 'Data Scientist', x: 200, y: 150 },
+                    { role: 'AI Training Specialist', x: 600, y: 150 },
+                    { role: 'CTO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Data Engineer', to: 'Data Scientist', content: '数据准备完成' },
+                    { from: 'Data Scientist', to: 'AI Training Specialist', content: '数据质量评估' },
+                    { from: 'AI Training Specialist', to: 'AI Data Engineer', content: '训练数据需求' },
+                    { from: 'AI Data Engineer', to: 'CTO', content: '数据管理报告' }
+                ]
+            },
+            {
+                id: 'ai-innovation-lab',
+                name: 'AI创新实验室',
+                icon: '💡',
+                desc: '从AI创新研究到产品原型的完整流程',
+                agents: ['AI Innovation Lab', 'AI Research Lead', 'AI Product Manager', 'CEO'],
+                positions: [
+                    { role: 'AI Innovation Lab', x: 400, y: 30 },
+                    { role: 'AI Research Lead', x: 200, y: 150 },
+                    { role: 'AI Product Manager', x: 600, y: 150 },
+                    { role: 'CEO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Innovation Lab', to: 'AI Research Lead', content: '创新研究方向' },
+                    { from: 'AI Research Lead', to: 'AI Product Manager', content: '研究成果报告' },
+                    { from: 'AI Product Manager', to: 'AI Innovation Lab', content: '产品化建议' },
+                    { from: 'AI Research Lead', to: 'CEO', content: '创新项目汇报' }
+                ]
+            },
+            {
+                id: 'ai-quality-control',
+                name: 'AI质量控制项目',
+                icon: '✅',
+                desc: '从AI质量检测到质量保证的完整流程',
+                agents: ['AI Quality Control', 'AI Testing Engineer', 'QA', 'CTO'],
+                positions: [
+                    { role: 'AI Quality Control', x: 400, y: 30 },
+                    { role: 'AI Testing Engineer', x: 200, y: 150 },
+                    { role: 'QA', x: 600, y: 150 },
+                    { role: 'CTO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Quality Control', to: 'AI Testing Engineer', content: '制定质量标准' },
+                    { from: 'AI Testing Engineer', to: 'AI Quality Control', content: '测试结果' },
+                    { from: 'AI Quality Control', to: 'QA', content: '质量评估报告' },
+                    { from: 'QA', to: 'CTO', content: '质量认证' }
+                ]
             }
         ];
 
@@ -7269,7 +7384,21 @@
             'AI Testing Engineer': { icon: '🧪', color: '#06b6d4', role: 'AI测试工程师' },
             'AI Security Analyst': { icon: '🔒', color: '#7c3aed', role: 'AI安全分析师' },
             'AI Performance Engineer': { icon: '⚡', color: '#14b8a6', role: 'AI性能工程师' },
-            'AI Documentation Engineer': { icon: '📖', color: '#f97316', role: 'AI文档工程师' }
+            'AI Documentation Engineer': { icon: '📖', color: '#f97316', role: 'AI文档工程师' },
+            // Cycle 303 新增角色
+            'AI Optimization Engineer': { icon: '🚀', color: '#22c55e', role: 'AI优化工程师' },
+            'AI Benchmark Engineer': { icon: '📊', color: '#8b5cf6', role: 'AI基准测试工程师' },
+            'AI Cost Analyst': { icon: '💵', color: '#f59e0b', role: 'AI成本分析师' },
+            'AI Infrastructure Engineer': { icon: '🏗️', color: '#06b6d4', role: 'AI基础架构工程师' },
+            'AI Pipeline Engineer': { icon: '🔧', color: '#ec4899', role: 'AI流程工程师' },
+            'AI Data Engineer': { icon: '💾', color: '#14b8a6', role: 'AI数据工程师' },
+            'AI Automation Engineer': { icon: '⚙️', color: '#a855f7', role: 'AI自动化工程师' },
+            'AI Research Lead': { icon: '🔬', color: '#0ea5e9', role: 'AI研究负责人' },
+            'AI Product Manager': { icon: '📦', color: '#f97316', role: 'AI产品经理' },
+            'AI Operations Manager': { icon: '📈', color: '#22c55e', role: 'AI运营经理' },
+            'AI Training Specialist': { icon: '🎓', color: '#8b5cf6', role: 'AI培训专家' },
+            'AI Quality Control': { icon: '✅', color: '#10b981', role: 'AI质量控制' },
+            'AI Innovation Lab': { icon: '💡', color: '#f43f5e', role: 'AI创新实验室' }
         };
 
         // 拖拽相关变量
