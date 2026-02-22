@@ -8153,6 +8153,121 @@
                     { from: 'AI Circuit Breaker', to: 'AI Log Analyzer', content: '故障诊断' },
                     { from: 'AI Log Analyzer', to: 'AI Alert Manager', content: '日志报告' }
                 ]
+            },
+            // Cycle 310 新增模板
+            {
+                id: 'ai-event-driven-architecture',
+                name: 'AI事件驱动架构',
+                icon: '🎯',
+                desc: '从事件处理到消息发布的完整流程',
+                agents: ['AI Event Processor', 'AI State Machine', 'AI Message Broker', 'AI Event Bus'],
+                positions: [
+                    { role: 'AI Event Processor', x: 400, y: 30 },
+                    { role: 'AI State Machine', x: 200, y: 150 },
+                    { role: 'AI Message Broker', x: 600, y: 150 },
+                    { role: 'AI Event Bus', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Event Processor', to: 'AI State Machine', content: '事件处理' },
+                    { from: 'AI State Machine', to: 'AI Message Broker', content: '状态更新' },
+                    { from: 'AI Message Broker', to: 'AI Event Bus', content: '消息分发' },
+                    { from: 'AI Event Bus', to: 'AI Event Processor', content: '事件确认' }
+                ]
+            },
+            {
+                id: 'ai-task-scheduling',
+                name: 'AI任务调度',
+                icon: '📅',
+                desc: '从任务创建到队列管理的完整流程',
+                agents: ['AI Task Scheduler', 'AI Queue Manager', 'AI Workflow Engine', 'AI Event Processor'],
+                positions: [
+                    { role: 'AI Task Scheduler', x: 400, y: 30 },
+                    { role: 'AI Queue Manager', x: 200, y: 150 },
+                    { role: 'AI Workflow Engine', x: 600, y: 150 },
+                    { role: 'AI Event Processor', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Task Scheduler', to: 'AI Queue Manager', content: '任务入队' },
+                    { from: 'AI Queue Manager', to: 'AI Workflow Engine', content: '队列状态' },
+                    { from: 'AI Workflow Engine', to: 'AI Event Processor', content: '执行结果' },
+                    { from: 'AI Event Processor', to: 'AI Task Scheduler', content: '任务完成' }
+                ]
+            },
+            {
+                id: 'ai-api-gateway-design',
+                name: 'AI API网关设计',
+                icon: '🚪',
+                desc: '从API设计到服务网格的完整流程',
+                agents: ['AI API Gateway', 'AI Service Mesh', 'AI Load Balancer', 'AI Security Analyst'],
+                positions: [
+                    { role: 'AI API Gateway', x: 400, y: 30 },
+                    { role: 'AI Service Mesh', x: 200, y: 150 },
+                    { role: 'AI Load Balancer', x: 600, y: 150 },
+                    { role: 'AI Security Analyst', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI API Gateway', to: 'AI Service Mesh', content: '流量路由' },
+                    { from: 'AI Service Mesh', to: 'AI Load Balancer', content: '服务治理' },
+                    { from: 'AI Load Balancer', to: 'AI Security Analyst', content: '负载报告' },
+                    { from: 'AI Security Analyst', to: 'AI API Gateway', content: '安全策略' }
+                ]
+            },
+            {
+                id: 'ai-cloud-native-deployment',
+                name: 'AI云原生部署',
+                icon: '☁️',
+                desc: '从容器编排到无服务器架构的完整流程',
+                agents: ['AI Container Orch', 'AI Kubernetes Admin', 'AI Cloud Native', 'AI Serverless Architect'],
+                positions: [
+                    { role: 'AI Container Orch', x: 400, y: 30 },
+                    { role: 'AI Kubernetes Admin', x: 200, y: 150 },
+                    { role: 'AI Cloud Native', x: 600, y: 150 },
+                    { role: 'AI Serverless Architect', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Container Orch', to: 'AI Kubernetes Admin', content: '容器部署' },
+                    { from: 'AI Kubernetes Admin', to: 'AI Cloud Native', content: 'K8s配置' },
+                    { from: 'AI Cloud Native', to: 'AI Serverless Architect', content: '云原生方案' },
+                    { from: 'AI Serverless Architect', to: 'AI Container Orch', content: '架构优化' }
+                ]
+            },
+            {
+                id: 'ai-edge-computing',
+                name: 'AI边缘计算',
+                icon: '📡',
+                desc: '从边缘设备管理到云边协同的完整流程',
+                agents: ['AI Edge Computing', 'AI Cloud Native', 'AI Load Balancer', 'AI Event Processor'],
+                positions: [
+                    { role: 'AI Edge Computing', x: 400, y: 30 },
+                    { role: 'AI Cloud Native', x: 200, y: 150 },
+                    { role: 'AI Load Balancer', x: 600, y: 150 },
+                    { role: 'AI Event Processor', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Edge Computing', to: 'AI Cloud Native', content: '边缘数据' },
+                    { from: 'AI Cloud Native', to: 'AI Load Balancer', content: '云端处理' },
+                    { from: 'AI Load Balancer', to: 'AI Event Processor', content: '流量调度' },
+                    { from: 'AI Event Processor', to: 'AI Edge Computing', content: '处理结果' }
+                ]
+            },
+            {
+                id: 'ai-pubsub-messaging',
+                name: 'AI发布订阅消息',
+                icon: '📢',
+                desc: '从消息发布到订阅管理的完整流程',
+                agents: ['AI PubSub Engine', 'AI Message Broker', 'AI Event Bus', 'AI Queue Manager'],
+                positions: [
+                    { role: 'AI PubSub Engine', x: 400, y: 30 },
+                    { role: 'AI Message Broker', x: 200, y: 150 },
+                    { role: 'AI Event Bus', x: 600, y: 150 },
+                    { role: 'AI Queue Manager', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI PubSub Engine', to: 'AI Message Broker', content: '消息发布' },
+                    { from: 'AI Message Broker', to: 'AI Event Bus', content: '消息路由' },
+                    { from: 'AI Event Bus', to: 'AI Queue Manager', content: '事件广播' },
+                    { from: 'AI Queue Manager', to: 'AI PubSub Engine', content: '订阅确认' }
+                ]
             }
         ];
 
@@ -8521,7 +8636,24 @@
             'AI Config Manager': { icon: '⚙️', color: '#a855f7', role: 'AI配置管理器' },
             'AI Secret Manager': { icon: '🔐', color: '#64748b', role: 'AI密钥管理器' },
             'AI Log Analyzer': { icon: '📝', color: '#0891b2', role: 'AI日志分析器' },
-            'AI Trace Manager': { icon: '🔍', color: '#7c3aed', role: 'AI链路追踪器' }
+            'AI Trace Manager': { icon: '🔍', color: '#7c3aed', role: 'AI链路追踪器' },
+            // Cycle 310 新增角色
+            'AI Event Processor': { icon: '🎯', color: '#f43f5e', role: 'AI事件处理器' },
+            'AI State Machine': { icon: '🔄', color: '#0d9488', role: 'AI状态机' },
+            'AI Workflow Engine': { icon: '⚙️', color: '#6366f1', role: 'AI工作流引擎' },
+            'AI Task Scheduler': { icon: '📅', color: '#14b8a6', role: 'AI任务调度器' },
+            'AI Queue Manager': { icon: '📬', color: '#f59e0b', role: 'AI队列管理器' },
+            'AI Message Broker': { icon: '📨', color: '#8b5cf6', role: 'AI消息代理' },
+            'AI Event Bus': { icon: '🚌', color: '#22c55e', role: 'AI事件总线' },
+            'AI PubSub Engine': { icon: '📢', color: '#ec4899', role: 'AI发布订阅引擎' },
+            'AI Webhook Manager': { icon: '🪝', color: '#06b6d4', role: 'AIWebhook管理器' },
+            'AI API Gateway': { icon: '🚪', color: '#a855f7', role: 'AI API网关' },
+            'AI Service Mesh': { icon: '🕸️', color: '#84cc16', role: 'AI服务网格' },
+            'AI Container Orch': { icon: '📦', color: '#0ea5e9', role: 'AI容器编排' },
+            'AI Kubernetes Admin': { icon: '☸️', color: '#3b82f6', role: 'AI Kubernetes管理员' },
+            'AI Cloud Native': { icon: '☁️', color: '#06b6d4', role: 'AI云原生工程师' },
+            'AI Serverless Architect': { icon: 'λ', color: '#f97316', role: 'AI无服务器架构师' },
+            'AI Edge Computing': { icon: '📡', color: '#dc2626', role: 'AI边缘计算工程师' }
         };
 
         // 拖拽相关变量
