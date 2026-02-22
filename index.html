@@ -196,6 +196,45 @@
         .status-completed { background: var(--waiting); }
         .status-failed { background: var(--error); }
 
+        /* 批量选择样式 */
+        .agent-checkbox {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            border: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: var(--bg-tertiary);
+            color: var(--accent);
+        }
+
+        .agent-checkbox.checked {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+        }
+
+        .agent-item.selected {
+            background: rgba(139, 92, 246, 0.2);
+            border-color: var(--accent);
+        }
+
+        .btn-accent {
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            color: white;
+            border: none;
+        }
+
+        .btn-accent:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
         /* 中间可视化区域 */
         .visualization {
             flex: 1;
@@ -1142,6 +1181,27 @@
                 </svg>
                 预设模板
             </button>
+            <button class="btn btn-secondary" onclick="cloneWorkflow()" title="克隆当前工作流">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                </svg>
+                克隆
+            </button>
+            <button class="btn btn-secondary" id="batchSelectBtn" onclick="toggleBatchMode()" title="批量选择模式">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                多选
+            </button>
+            <button class="btn btn-danger" id="batchDeleteBtn" onclick="batchDeleteSelected()" style="display:none;" title="删除选中的 Agent">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="3 6 5 6 21 6"/>
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                </svg>
+                批量删除
+            </button>
         </div>
     </header>
 
@@ -1821,7 +1881,8 @@
         function renderAgents() {
             const list = document.getElementById('agentList');
             list.innerHTML = agents.map(agent => `
-                <div class="agent-item ${selectedAgent === agent.id ? 'active' : ''}" onclick="selectAgent(${agent.id})">
+                <div class="agent-item ${selectedAgent === agent.id ? 'active' : ''} ${selectedAgents.has(agent.id) ? 'selected' : ''}" onclick="${batchMode ? `toggleAgentSelection(${agent.id})` : `selectAgent(${agent.id})`}">
+                    ${batchMode ? `<div class="agent-checkbox ${selectedAgents.has(agent.id) ? 'checked' : ''}">${selectedAgents.has(agent.id) ? '✓' : ''}</div>` : ''}
                     <div class="agent-avatar" style="background: ${agentRoles[agent.role]?.color || '#6b7280'}20; color: ${agentRoles[agent.role]?.color || '#6b7280'}">
                         ${agentRoles[agent.role]?.icon || '🤖'}
                     </div>
@@ -1871,14 +1932,17 @@
             // 绘制节点
             nodesGroup.innerHTML = agents.map(agent => {
                 const role = agentRoles[agent.role] || { color: '#6b7280', icon: '🤖' };
+                const isSelected = selectedAgents.has(agent.id);
+                const strokeWidth = isSelected ? 4 : 2;
                 return `
-                    <g class="agent-node" onclick="selectAgent(${agent.id})" onmousedown="startConnection(event, ${agent.id})" style="cursor: pointer">
+                    <g class="agent-node ${isSelected ? 'selected' : ''}" onclick="${batchMode ? `toggleAgentSelection(${agent.id})` : `selectAgent(${agent.id})`}" onmousedown="startConnection(event, ${agent.id})" style="cursor: pointer">
                         <circle
                             cx="${agent.x}" cy="${agent.y}" r="35"
                             fill="${role.color}20"
-                            stroke="${role.color}"
-                            stroke-width="2"
+                            stroke="${isSelected ? '#fff' : role.color}"
+                            stroke-width="${strokeWidth}"
                         />
+                        ${batchMode ? `<circle cx="${agent.x - 25}" cy="${agent.y - 25}" r="10" fill="${isSelected ? '#8b5cf6' : '#334155'}" stroke="#fff" stroke-width="2"/><text x="${agent.x - 25}" y="${agent.y - 21}" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">${isSelected ? '✓' : ''}</text>` : ''}
                         <text x="${agent.x}" y="${agent.y - 5}" text-anchor="middle" fill="${role.color}" font-size="20">
                             ${role.icon}
                         </text>
@@ -3153,6 +3217,161 @@
             `;
             document.body.appendChild(notification);
             setTimeout(() => notification.remove(), 3000);
+        }
+
+        // 批量选择相关变量
+        let batchMode = false;
+        let selectedAgents = new Set();
+
+        // 克隆工作流
+        function cloneWorkflow() {
+            if (agents.length === 0) {
+                showNotification('没有可克隆的工作流', 'warning');
+                return;
+            }
+
+            // 深拷贝 agents 和 messages
+            const clonedAgents = agents.map(agent => ({
+                ...agent,
+                id: Date.now() + Math.random(),
+                name: agent.name + ' (克隆)',
+                status: 'waiting',
+                messages: []
+            }));
+
+            const clonedMessages = messages.map(msg => ({
+                ...msg,
+                id: Date.now() + Math.random(),
+                fromId: clonedAgents.find(a => a.name === agents.find(oa => oa.id === msg.fromId)?.name + ' (克隆)')?.id || msg.fromId,
+                toId: clonedAgents.find(a => a.name === agents.find(oa => oa.id === msg.toId)?.name + ' (克隆)')?.id || msg.toId
+            }));
+
+            // 重新映射消息中的 fromId 和 toId
+            const idMap = {};
+            agents.forEach((agent, idx) => {
+                idMap[agent.id] = clonedAgents[idx].id;
+            });
+
+            const remappedMessages = messages.map(msg => ({
+                ...msg,
+                id: Date.now() + Math.random(),
+                fromId: idMap[msg.fromId] || msg.fromId,
+                toId: idMap[msg.toId] || msg.toId
+            }));
+
+            // 添加克隆的 agents 和 messages
+            agents = [...agents, ...clonedAgents];
+            messages = [...messages, ...remappedMessages];
+
+            renderAgents();
+            renderFlow();
+            showNotification(`克隆完成！已复制 ${clonedAgents.length} 个 Agent`, 'success');
+        }
+
+        // 切换批量选择模式
+        function toggleBatchMode() {
+            batchMode = !batchMode;
+            selectedAgents.clear();
+
+            const btn = document.getElementById('batchSelectBtn');
+            const deleteBtn = document.getElementById('batchDeleteBtn');
+
+            if (batchMode) {
+                btn.classList.remove('btn-secondary');
+                btn.classList.add('btn-primary');
+                btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> 退出多选`;
+                showNotification('已进入多选模式，点击 Agent 进行选择', 'info');
+            } else {
+                btn.classList.remove('btn-primary');
+                btn.classList.add('btn-secondary');
+                btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> 多选`;
+                deleteBtn.style.display = 'none';
+            }
+
+            renderAgents();
+            renderFlow();
+        }
+
+        // 切换 Agent 选择状态
+        function toggleAgentSelection(agentId) {
+            if (!batchMode) {
+                selectAgent(agentId);
+                return;
+            }
+
+            if (selectedAgents.has(agentId)) {
+                selectedAgents.delete(agentId);
+            } else {
+                selectedAgents.add(agentId);
+            }
+
+            // 更新删除按钮显示
+            const deleteBtn = document.getElementById('batchDeleteBtn');
+            deleteBtn.style.display = selectedAgents.size > 0 ? 'inline-flex' : 'none';
+
+            renderAgents();
+            renderFlow();
+        }
+
+        // 批量删除选中的 Agent
+        function batchDeleteSelected() {
+            if (selectedAgents.size === 0) {
+                showNotification('请先选择要删除的 Agent', 'warning');
+                return;
+            }
+
+            // 删除选中的 agents
+            agents = agents.filter(a => !selectedAgents.has(a.id));
+
+            // 删除相关的消息
+            messages = messages.filter(m => !selectedAgents.has(m.fromId) && !selectedAgents.has(m.toId));
+
+            // 清除选择状态
+            selectedAgents.clear();
+            batchMode = false;
+
+            // 重置按钮状态
+            const btn = document.getElementById('batchSelectBtn');
+            const deleteBtn = document.getElementById('batchDeleteBtn');
+            btn.classList.remove('btn-primary');
+            btn.classList.add('btn-secondary');
+            btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> 多选`;
+            deleteBtn.style.display = 'none';
+
+            // 清除选中状态
+            selectedAgent = null;
+
+            renderAgents();
+            renderFlow();
+            closeDetails();
+
+            showNotification(`已删除 ${selectedAgents.size || '选中的'} 个 Agent`, 'success');
+        }
+
+        // 批量移动选中的 Agent
+        function batchMoveSelected(dx, dy) {
+            if (selectedAgents.size === 0) {
+                showNotification('请先选择要移动的 Agent', 'warning');
+                return;
+            }
+
+            agents.forEach(agent => {
+                if (selectedAgents.has(agent.id)) {
+                    agent.x += dx;
+                    agent.y += dy;
+                }
+            });
+
+            renderFlow();
+            showNotification(`已移动 ${selectedAgents.size} 个 Agent`, 'success');
+        }
+
+        // 批量选择模式下渲染 Agent 节点
+        function renderBatchSelectedNodes() {
+            if (!batchMode) return;
+
+            // 重新渲染以显示选择框
+            renderFlow();
         }
 
         // 更新 Key 状态指示器
