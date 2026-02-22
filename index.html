@@ -417,6 +417,108 @@
             color: var(--accent);
         }
 
+        /* 拖拽角色卡牌 */
+        .role-cards {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .role-cards-title {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .role-card {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: grab;
+            transition: all 0.2s;
+            margin-bottom: 8px;
+            background: var(--bg-tertiary);
+            border: 1px solid transparent;
+        }
+
+        .role-card:hover {
+            border-color: var(--accent);
+            transform: translateX(4px);
+        }
+
+        .role-card.dragging {
+            opacity: 0.5;
+            cursor: grabbing;
+        }
+
+        .role-card-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .role-card-info {
+            flex: 1;
+        }
+
+        .role-card-name {
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .role-card-role {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        /* 拖拽放置区域 */
+        .visualization.drag-over {
+            background: rgba(139, 92, 246, 0.1);
+        }
+
+        .visualization.drag-over::after {
+            content: '拖放到这里创建 Agent';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            color: var(--accent);
+            padding: 20px 40px;
+            border: 2px dashed var(--accent);
+            border-radius: 12px;
+            background: var(--bg-secondary);
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .drop-indicator {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 3px dashed var(--accent);
+            border-radius: 12px;
+            background: rgba(139, 92, 246, 0.2);
+            pointer-events: none;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            color: var(--accent);
+            font-size: 24px;
+        }
+
+        .drop-indicator.show {
+            display: flex;
+        }
+
         /* 动画 */
         @keyframes pulse {
             0%, 100% { opacity: 1; }
@@ -673,10 +775,17 @@
                 </svg>
                 添加 Agent
             </button>
+
+            <!-- 拖拽角色卡牌 -->
+            <div class="role-cards">
+                <div class="role-cards-title">👇 拖拽角色创建 Agent</div>
+                <div id="roleCards"></div>
+            </div>
         </aside>
 
         <!-- 中间可视化区域 -->
         <main class="visualization" id="visualization">
+            <div class="drop-indicator" id="dropIndicator">+</div>
             <canvas id="threeCanvas" style="display:none; width:100%; height:100%;"></canvas>
             <svg id="flowCanvas" width="100%" height="100%">
                 <defs>
@@ -872,6 +981,124 @@
             'Sales': { icon: '💰', color: '#84cc16', role: '销售总监' }
         };
 
+        // 拖拽相关变量
+        let draggedRole = null;
+        let dragOverX = 0;
+        let dragOverY = 0;
+
+        // 渲染角色卡牌（用于拖拽）
+        function renderRoleCards() {
+            const container = document.getElementById('roleCards');
+            const roles = Object.entries(agentRoles);
+
+            container.innerHTML = roles.map(([key, value]) => `
+                <div class="role-card" draggable="true" data-role="${key}">
+                    <div class="role-card-icon" style="background: ${value.color}20; color: ${value.color}">
+                        ${value.icon}
+                    </div>
+                    <div class="role-card-info">
+                        <div class="role-card-name">${key}</div>
+                        <div class="role-card-role">${value.role}</div>
+                    </div>
+                </div>
+            `).join('');
+
+            // 添加拖拽事件监听
+            document.querySelectorAll('.role-card').forEach(card => {
+                card.addEventListener('dragstart', handleDragStart);
+                card.addEventListener('dragend', handleDragEnd);
+            });
+        }
+
+        // 拖拽开始
+        function handleDragStart(e) {
+            draggedRole = e.target.dataset.role;
+            e.target.classList.add('dragging');
+            e.dataTransfer.effectAllowed = 'copy';
+            e.dataTransfer.setData('text/plain', draggedRole);
+
+            // 显示放置区域
+            const visualization = document.getElementById('visualization');
+            visualization.classList.add('drag-over');
+        }
+
+        // 拖拽结束
+        function handleDragEnd(e) {
+            e.target.classList.remove('dragging');
+            draggedRole = null;
+
+            // 隐藏放置区域
+            const visualization = document.getElementById('visualization');
+            visualization.classList.remove('drag-over');
+            document.getElementById('dropIndicator').classList.remove('show');
+        }
+
+        // 可视化区域拖拽事件
+        const visualization = document.getElementById('visualization');
+
+        visualization.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'copy';
+
+            // 更新放置指示器位置
+            const rect = visualization.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const indicator = document.getElementById('dropIndicator');
+            indicator.style.left = (x - 40) + 'px';
+            indicator.style.top = (y - 40) + 'px';
+            indicator.classList.add('show');
+
+            visualization.classList.add('drag-over');
+        });
+
+        visualization.addEventListener('dragleave', function(e) {
+            if (!visualization.contains(e.relatedTarget)) {
+                visualization.classList.remove('drag-over');
+                document.getElementById('dropIndicator').classList.remove('show');
+            }
+        });
+
+        visualization.addEventListener('drop', function(e) {
+            e.preventDefault();
+            visualization.classList.remove('drag-over');
+            document.getElementById('dropIndicator').classList.remove('show');
+
+            const role = e.dataTransfer.getData('text/plain') || draggedRole;
+            if (!role || !agentRoles[role]) return;
+
+            // 计算放置位置
+            const rect = visualization.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // 创建新 Agent
+            const newId = Math.max(...agents.map(a => a.id), 0) + 1;
+            const roleInfo = agentRoles[role];
+            const newAgent = {
+                id: newId,
+                name: role,
+                role: role,
+                status: 'waiting',
+                x: x,
+                y: y
+            };
+            agents.push(newAgent);
+
+            // 如果在 3D 模式，更新 3D 场景
+            if (is3DMode && scene) {
+                updateAgentMeshes();
+                updateMessageParticles();
+            }
+
+            renderAgents();
+            renderFlow();
+            selectAgent(newId);
+
+            showNotification(`已创建 ${roleInfo.role}: ${role}`, 'success');
+        });
+
         // 初始化示例数据
         function initDemo() {
             agents = [
@@ -892,6 +1119,7 @@
             ];
 
             renderAgents();
+            renderRoleCards();
             renderFlow();
             updateTimeline();
         }
