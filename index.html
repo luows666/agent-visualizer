@@ -8038,6 +8038,121 @@
                     { from: 'AI Workflow Optimizer', to: 'AI Agent Orchestrator', content: '优化方案' },
                     { from: 'AI Agent Orchestrator', to: 'AI Agentic Workflow', content: '执行结果' }
                 ]
+            },
+            // Cycle 309 新增模板
+            {
+                id: 'ai-inference-optimization',
+                name: 'AI推理优化',
+                icon: '⚡',
+                desc: '从推理性能分析到优化的完整流程',
+                agents: ['AI Inference Optimizer', 'AI Batch Processor', 'AI Streaming Engineer', 'AI Load Balancer'],
+                positions: [
+                    { role: 'AI Inference Optimizer', x: 400, y: 30 },
+                    { role: 'AI Batch Processor', x: 200, y: 150 },
+                    { role: 'AI Streaming Engineer', x: 600, y: 150 },
+                    { role: 'AI Load Balancer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Inference Optimizer', to: 'AI Batch Processor', content: '优化策略' },
+                    { from: 'AI Batch Processor', to: 'AI Streaming Engineer', content: '批处理方案' },
+                    { from: 'AI Streaming Engineer', to: 'AI Load Balancer', content: '流式处理' },
+                    { from: 'AI Load Balancer', to: 'AI Inference Optimizer', content: '负载报告' }
+                ]
+            },
+            {
+                id: 'ai-reliability-engineering',
+                name: 'AI可靠性工程',
+                icon: '🛡️',
+                desc: '从系统可靠性到故障恢复的完整流程',
+                agents: ['AI Circuit Breaker', 'AI Rate Limiter', 'AI AutoScaler', 'AI Alert Manager'],
+                positions: [
+                    { role: 'AI Circuit Breaker', x: 400, y: 30 },
+                    { role: 'AI Rate Limiter', x: 200, y: 150 },
+                    { role: 'AI AutoScaler', x: 600, y: 150 },
+                    { role: 'AI Alert Manager', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Circuit Breaker', to: 'AI Rate Limiter', content: '熔断状态' },
+                    { from: 'AI Rate Limiter', to: 'AI AutoScaler', content: '限流策略' },
+                    { from: 'AI AutoScaler', to: 'AI Alert Manager', content: '扩容决策' },
+                    { from: 'AI Alert Manager', to: 'AI Circuit Breaker', content: '告警信息' }
+                ]
+            },
+            {
+                id: 'ai-observability',
+                name: 'AI可观测性',
+                icon: '📊',
+                desc: '从指标收集到日志分析的完整流程',
+                agents: ['AI Metrics Collector', 'AI Log Analyzer', 'AI Trace Manager', 'AI Alert Manager'],
+                positions: [
+                    { role: 'AI Metrics Collector', x: 400, y: 30 },
+                    { role: 'AI Log Analyzer', x: 200, y: 150 },
+                    { role: 'AI Trace Manager', x: 600, y: 150 },
+                    { role: 'AI Alert Manager', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Metrics Collector', to: 'AI Log Analyzer', content: '指标数据' },
+                    { from: 'AI Log Analyzer', to: 'AI Trace Manager', content: '日志分析' },
+                    { from: 'AI Trace Manager', to: 'AI Alert Manager', content: '链路追踪' },
+                    { from: 'AI Alert Manager', to: 'AI Metrics Collector', content: '告警规则' }
+                ]
+            },
+            {
+                id: 'ai-config-secret-management',
+                name: 'AI配置与密钥管理',
+                icon: '🔐',
+                desc: '从配置管理到密钥安全的完整流程',
+                agents: ['AI Config Manager', 'AI Secret Manager', 'AI Circuit Breaker', 'CTO'],
+                positions: [
+                    { role: 'AI Config Manager', x: 400, y: 30 },
+                    { role: 'AI Secret Manager', x: 200, y: 150 },
+                    { role: 'AI Circuit Breaker', x: 600, y: 150 },
+                    { role: 'CTO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Config Manager', to: 'AI Secret Manager', content: '配置需求' },
+                    { from: 'AI Secret Manager', to: 'AI Circuit Breaker', content: '密钥策略' },
+                    { from: 'AI Circuit Breaker', to: 'CTO', content: '安全报告' },
+                    { from: 'CTO', to: 'AI Config Manager', content: '配置审批' }
+                ]
+            },
+            {
+                id: 'ai-microservices-orchestration',
+                name: 'AI微服务编排',
+                icon: '🎼',
+                desc: '从服务发现到流量调度的完整流程',
+                agents: ['AI Load Balancer', 'AI AutoScaler', 'AI Circuit Breaker', 'AI Workflow Optimizer'],
+                positions: [
+                    { role: 'AI Load Balancer', x: 400, y: 30 },
+                    { role: 'AI AutoScaler', x: 200, y: 150 },
+                    { role: 'AI Circuit Breaker', x: 600, y: 150 },
+                    { role: 'AI Workflow Optimizer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Load Balancer', to: 'AI AutoScaler', content: '负载信息' },
+                    { from: 'AI AutoScaler', to: 'AI Circuit Breaker', content: '扩容状态' },
+                    { from: 'AI Circuit Breaker', to: 'AI Workflow Optimizer', content: '熔断恢复' },
+                    { from: 'AI Workflow Optimizer', to: 'AI Load Balancer', content: '优化策略' }
+                ]
+            },
+            {
+                id: 'ai-sre-operations',
+                name: 'AISRE运维',
+                icon: '🔧',
+                desc: '从监控告警到故障恢复的完整流程',
+                agents: ['AI Alert Manager', 'AI Metrics Collector', 'AI Circuit Breaker', 'AI Log Analyzer'],
+                positions: [
+                    { role: 'AI Alert Manager', x: 400, y: 30 },
+                    { role: 'AI Metrics Collector', x: 200, y: 150 },
+                    { role: 'AI Circuit Breaker', x: 600, y: 150 },
+                    { role: 'AI Log Analyzer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Alert Manager', to: 'AI Metrics Collector', content: '告警触发' },
+                    { from: 'AI Metrics Collector', to: 'AI Circuit Breaker', content: '指标分析' },
+                    { from: 'AI Circuit Breaker', to: 'AI Log Analyzer', content: '故障诊断' },
+                    { from: 'AI Log Analyzer', to: 'AI Alert Manager', content: '日志报告' }
+                ]
             }
         ];
 
@@ -8392,7 +8507,21 @@
             'AI Prompt Versioning': { icon: '📚', color: '#f97316', role: 'AI提示词版本管理' },
             'AI Token Counter': { icon: '🧮', color: '#64748b', role: 'AI令牌计数师' },
             'AI Chain of Thought': { icon: '🔗', color: '#0ea5e9', role: 'AI思维链工程师' },
-            'AI Agentic Workflow': { icon: '🤖', color: '#22c55e', role: 'AI智能体工作流工程师' }
+            'AI Agentic Workflow': { icon: '🤖', color: '#22c55e', role: 'AI智能体工作流工程师' },
+            // Cycle 309 新增角色
+            'AI Inference Optimizer': { icon: '⚡', color: '#f59e0b', role: 'AI推理优化师' },
+            'AI Batch Processor': { icon: '📦', color: '#0ea5e9', role: 'AI批处理工程师' },
+            'AI Streaming Engineer': { icon: '🌊', color: '#06b6d4', role: 'AI流式处理工程师' },
+            'AI Load Balancer': { icon: '⚖️', color: '#8b5cf6', role: 'AI负载均衡器' },
+            'AI Rate Limiter': { icon: '🚦', color: '#ec4899', role: 'AI速率限制器' },
+            'AI Circuit Breaker': { icon: '🔌', color: '#dc2626', role: 'AI熔断器' },
+            'AI Metrics Collector': { icon: '📊', color: '#14b8a6', role: 'AI指标收集器' },
+            'AI Alert Manager': { icon: '🔔', color: '#f97316', role: 'AI告警管理器' },
+            'AI AutoScaler': { icon: '📈', color: '#22c55e', role: 'AI自动扩缩容' },
+            'AI Config Manager': { icon: '⚙️', color: '#a855f7', role: 'AI配置管理器' },
+            'AI Secret Manager': { icon: '🔐', color: '#64748b', role: 'AI密钥管理器' },
+            'AI Log Analyzer': { icon: '📝', color: '#0891b2', role: 'AI日志分析器' },
+            'AI Trace Manager': { icon: '🔍', color: '#7c3aed', role: 'AI链路追踪器' }
         };
 
         // 拖拽相关变量
