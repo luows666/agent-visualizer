@@ -3284,6 +3284,113 @@
                     { from: 'Investment Analyst', to: 'PR Manager', content: '信息披露需求' },
                     { from: 'PR Manager', to: 'Investment Analyst', content: '媒体关系报告' }
                 ]
+            },
+            // Cycle 274 新增模板
+            {
+                id: 'solutions-architecture',
+                name: '解决方案架构',
+                icon: '🏗️',
+                desc: '从客户需求到技术方案设计的流程',
+                agents: ['Solutions Architect', 'Architect', 'Developer', 'Sales', 'CFO'],
+                positions: [
+                    { role: 'Solutions Architect', x: 400, y: 30 },
+                    { role: 'Architect', x: 200, y: 150 },
+                    { role: 'Developer', x: 600, y: 150 },
+                    { role: 'Sales', x: 200, y: 270 },
+                    { role: 'CFO', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Sales', to: 'Solutions Architect', content: '客户需求反馈' },
+                    { from: 'Solutions Architect', to: 'Architect', content: '技术架构评审' },
+                    { from: 'Architect', to: 'Solutions Architect', content: '架构建议' },
+                    { from: 'Solutions Architect', to: 'Developer', content: '实施方案设计' },
+                    { from: 'Solutions Architect', to: 'CFO', content: '项目成本估算' }
+                ]
+            },
+            {
+                id: 'engineering-leadership',
+                name: '工程领导力',
+                icon: '👨‍💼',
+                desc: '从技术决策到团队管理的工程领导流程',
+                agents: ['VP Engineering', 'CTO', 'Architect', 'DevOps', 'HR'],
+                positions: [
+                    { role: 'VP Engineering', x: 400, y: 30 },
+                    { role: 'CTO', x: 200, y: 150 },
+                    { role: 'Architect', x: 600, y: 150 },
+                    { role: 'DevOps', x: 200, y: 270 },
+                    { role: 'HR', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'VP Engineering', to: 'CTO', content: '技术战略方向' },
+                    { from: 'VP Engineering', to: 'Architect', content: '架构标准制定' },
+                    { from: 'CTO', to: 'VP Engineering', content: '技术路线图' },
+                    { from: 'VP Engineering', to: 'DevOps', content: '工程效率提升' },
+                    { from: 'VP Engineering', to: 'HR', content: '人才招聘计划' }
+                ]
+            },
+            {
+                id: 'product-roadmap',
+                name: '产品路线图',
+                icon: '📦',
+                desc: '从产品愿景到版本规划的流程',
+                agents: ['Head of Product', 'Product Manager', 'Designer', 'CTO', 'Marketing'],
+                positions: [
+                    { role: 'Head of Product', x: 400, y: 30 },
+                    { role: 'Product Manager', x: 200, y: 150 },
+                    { role: 'Designer', x: 600, y: 150 },
+                    { role: 'CTO', x: 200, y: 270 },
+                    { role: 'Marketing', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Head of Product', to: 'Product Manager', content: '产品战略目标' },
+                    { from: 'Product Manager', to: 'Head of Product', content: '产品路线图草案' },
+                    { from: 'Product Manager', to: 'Designer', content: '设计需求' },
+                    { from: 'Product Manager', to: 'CTO', content: '技术可行性评估' },
+                    { from: 'Head of Product', to: 'Marketing', content: '产品发布计划' }
+                ]
+            },
+            {
+                id: 'partnership-management',
+                name: '合作伙伴管理',
+                icon: '🤝',
+                desc: '从合作洽谈到达成协议的流程',
+                agents: ['Partnership Manager', 'Business Development', 'Legal Counsel', 'CFO', 'CEO'],
+                positions: [
+                    { role: 'Partnership Manager', x: 400, y: 30 },
+                    { role: 'Business Development', x: 200, y: 150 },
+                    { role: 'Legal Counsel', x: 600, y: 150 },
+                    { role: 'CFO', x: 200, y: 270 },
+                    { role: 'CEO', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Partnership Manager', to: 'Business Development', content: '潜在合作伙伴' },
+                    { from: 'Business Development', to: 'Partnership Manager', content: '合作意向' },
+                    { from: 'Partnership Manager', to: 'Legal Counsel', content: '合同条款' },
+                    { from: 'Legal Counsel', to: 'Partnership Manager', content: '法律审核' },
+                    { from: 'Partnership Manager', to: 'CFO', content: '合作收益评估' },
+                    { from: 'CFO', to: 'CEO', content: '合作决策建议' }
+                ]
+            },
+            {
+                id: 'corporate-communications',
+                name: '企业传讯',
+                icon: '📞',
+                desc: '从内部沟通到外部发布的传讯流程',
+                agents: ['Corporate Communications', 'PR Manager', 'HR', 'CEO', 'Brand Strategist'],
+                positions: [
+                    { role: 'Corporate Communications', x: 400, y: 30 },
+                    { role: 'PR Manager', x: 200, y: 150 },
+                    { role: 'HR', x: 600, y: 150 },
+                    { role: 'CEO', x: 200, y: 270 },
+                    { role: 'Brand Strategist', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Corporate Communications', to: 'CEO', content: '传讯策略' },
+                    { from: 'CEO', to: 'Corporate Communications', content: '策略确认' },
+                    { from: 'Corporate Communications', to: 'HR', content: '内部沟通需求' },
+                    { from: 'Corporate Communications', to: 'PR Manager', content: '媒体沟通计划' },
+                    { from: 'Corporate Communications', to: 'Brand Strategist', content: '品牌传播需求' }
+                ]
             }
         ];
 
@@ -3335,7 +3442,13 @@
             'Business Development': { icon: '🤝', color: '#7c3aed', role: '商务拓展经理' },
             'PR Manager': { icon: '📣', color: '#f59e0b', role: '公关经理' },
             'Strategic Planner': { icon: '🎯', color: '#0d9488', role: '战略规划师' },
-            'Channel Manager': { icon: '📡', color: '#06b6d4', role: '渠道管理经理' }
+            'Channel Manager': { icon: '📡', color: '#06b6d4', role: '渠道管理经理' },
+            // Cycle 274 新增角色
+            'Solutions Architect': { icon: '🏗️', color: '#0891b2', role: '解决方案架构师' },
+            'VP Engineering': { icon: '👨‍💼', color: '#7c3aed', role: '工程副总裁' },
+            'Head of Product': { icon: '📦', color: '#f97316', role: '产品负责人' },
+            'Partnership Manager': { icon: '🤝', color: '#22c55e', role: '合作伙伴经理' },
+            'Corporate Communications': { icon: '📞', color: '#ec4899', role: '企业传讯经理' }
         };
 
         // 拖拽相关变量
