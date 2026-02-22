@@ -9930,6 +9930,144 @@
                     { from: 'AI Stylist', to: 'AI Inventory Fashion', content: '造型需求' },
                     { from: 'AI Inventory Fashion', to: 'AI Fashion Designer', content: '库存报告' }
                 ]
+            },
+            // Cycle 325 新增模板 - AI 海洋工程系统
+            {
+                id: 'ai-marine-engineering',
+                name: 'AI海洋工程系统',
+                icon: '🌊',
+                description: '从海洋工程设计到海底设施部署的完整流程',
+                agents: ['AI Marine Engineer', 'AI Oceanographer', 'AI Subsea Engineer', 'AI Coastal Engineer', 'AI Navigation Engineer'],
+                agentPositions: [
+                    { role: 'AI Marine Engineer', x: 400, y: 30 },
+                    { role: 'AI Oceanographer', x: 200, y: 150 },
+                    { role: 'AI Subsea Engineer', x: 600, y: 150 },
+                    { role: 'AI Coastal Engineer', x: 200, y: 270 },
+                    { role: 'AI Navigation Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Marine Engineer', to: 'AI Oceanographer', content: '海洋数据需求' },
+                    { from: 'AI Marine Engineer', to: 'AI Subsea Engineer', content: '设计要求' },
+                    { from: 'AI Oceanographer', to: 'AI Coastal Engineer', content: '海洋环境数据' },
+                    { from: 'AI Subsea Engineer', to: 'AI Marine Engineer', content: '海底方案' },
+                    { from: 'AI Coastal Engineer', to: 'AI Navigation Engineer', content: '海岸方案' },
+                    { from: 'AI Navigation Engineer', to: 'AI Marine Engineer', content: '航海建议' }
+                ]
+            },
+            // Cycle 325 新增模板 - AI 航空航天系统
+            {
+                id: 'ai-aerospace',
+                name: 'AI航空航天系统',
+                icon: '🚀',
+                description: '从航天器设计到发射运营的完整流程',
+                agents: ['AI Aerospace Engineer', 'AI Satellite Engineer', 'AI Propulsion Engineer', 'AI Flight Engineer', 'AI Avionics Engineer'],
+                agentPositions: [
+                    { role: 'AI Aerospace Engineer', x: 400, y: 30 },
+                    { role: 'AI Satellite Engineer', x: 200, y: 150 },
+                    { role: 'AI Propulsion Engineer', x: 600, y: 150 },
+                    { role: 'AI Flight Engineer', x: 200, y: 270 },
+                    { role: 'AI Avionics Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Aerospace Engineer', to: 'AI Satellite Engineer', content: '卫星需求' },
+                    { from: 'AI Aerospace Engineer', to: 'AI Propulsion Engineer', content: '推进要求' },
+                    { from: 'AI Satellite Engineer', to: 'AI Avionics Engineer', content: '卫星电子' },
+                    { from: 'AI Propulsion Engineer', to: 'AI Flight Engineer', content: '飞行推进' },
+                    { from: 'AI Flight Engineer', to: 'AI Aerospace Engineer', content: '飞行测试' },
+                    { from: 'AI Avionics Engineer', to: 'AI Aerospace Engineer', content: '电子系统' }
+                ]
+            },
+            // Cycle 325 新增模板 - AI 材料科学系统
+            {
+                id: 'ai-materials-science',
+                name: 'AI材料科学系统',
+                icon: '🔬',
+                description: '从材料研发到性能测试的完整流程',
+                agents: ['AI Materials Scientist', 'AI Nanomaterials Engineer', 'AI Polymer Engineer', 'AI Metallurgist', 'AI Ceramic Engineer'],
+                agentPositions: [
+                    { role: 'AI Materials Scientist', x: 400, y: 30 },
+                    { role: 'AI Nanomaterials Engineer', x: 200, y: 150 },
+                    { role: 'AI Polymer Engineer', x: 600, y: 150 },
+                    { role: 'AI Metallurgist', x: 200, y: 270 },
+                    { role: 'AI Ceramic Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Materials Scientist', to: 'AI Nanomaterials Engineer', content: '纳米材料需求' },
+                    { from: 'AI Materials Scientist', to: 'AI Polymer Engineer', content: '高分子需求' },
+                    { from: 'AI Nanomaterials Engineer', to: 'AI Metallurgist', content: '纳米材料数据' },
+                    { from: 'AI Polymer Engineer', to: 'AI Ceramic Engineer', content: '高分子数据' },
+                    { from: 'AI Metallurgist', to: 'AI Materials Scientist', content: '冶金方案' },
+                    { from: 'AI Ceramic Engineer', to: 'AI Materials Scientist', content: '陶瓷方案' }
+                ]
+            },
+            // Cycle 325 新增模板 - AI 生物医学工程系统
+            {
+                id: 'ai-biomedical',
+                name: 'AI生物医学工程系统',
+                icon: '🏥',
+                description: '从医疗设备研发到临床应用的完整流程',
+                agents: ['AI Biomedical Engineer', 'AI Medical Device Engineer', 'AI Bioinformatics', 'AI Genetic Engineer', 'AI Pharmaceutical Engineer'],
+                agentPositions: [
+                    { role: 'AI Biomedical Engineer', x: 400, y: 30 },
+                    { role: 'AI Medical Device Engineer', x: 200, y: 150 },
+                    { role: 'AI Bioinformatics', x: 600, y: 150 },
+                    { role: 'AI Genetic Engineer', x: 200, y: 270 },
+                    { role: 'AI Pharmaceutical Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Biomedical Engineer', to: 'AI Medical Device Engineer', content: '设备需求' },
+                    { from: 'AI Biomedical Engineer', to: 'AI Bioinformatics', content: '数据需求' },
+                    { from: 'AI Medical Device Engineer', to: 'AI Genetic Engineer', content: '基因设备' },
+                    { from: 'AI Bioinformatics', to: 'AI Pharmaceutical Engineer', content: '生物数据' },
+                    { from: 'AI Genetic Engineer', to: 'AI Biomedical Engineer', content: '基因方案' },
+                    { from: 'AI Pharmaceutical Engineer', to: 'AI Biomedical Engineer', content: '制药方案' }
+                ]
+            },
+            // Cycle 325 新增模板 - AI 环境科学系统
+            {
+                id: 'ai-environmental-science',
+                name: 'AI环境科学系统',
+                icon: '🌿',
+                description: '从环境监测到治理方案的完整流程',
+                agents: ['AI Environmental Scientist', 'AI Climate Modeler', 'AI Environmental Engineer', 'AI Water Quality Engineer', 'AI Air Quality Engineer'],
+                agentPositions: [
+                    { role: 'AI Environmental Scientist', x: 400, y: 30 },
+                    { role: 'AI Climate Modeler', x: 200, y: 150 },
+                    { role: 'AI Environmental Engineer', x: 600, y: 150 },
+                    { role: 'AI Water Quality Engineer', x: 200, y: 270 },
+                    { role: 'AI Air Quality Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Scientist', to: 'AI Climate Modeler', content: '气候数据需求' },
+                    { from: 'AI Environmental Scientist', to: 'AI Environmental Engineer', content: '环境治理需求' },
+                    { from: 'AI Climate Modeler', to: 'AI Water Quality Engineer', content: '气候对水质影响' },
+                    { from: 'AI Climate Modeler', to: 'AI Air Quality Engineer', content: '气候对空气影响' },
+                    { from: 'AI Water Quality Engineer', to: 'AI Environmental Scientist', content: '水质报告' },
+                    { from: 'AI Air Quality Engineer', to: 'AI Environmental Scientist', content: '空气质量报告' }
+                ]
+            },
+            // Cycle 325 新增模板 - AI 食品科学系统
+            {
+                id: 'ai-food-science',
+                name: 'AI食品科学系统',
+                icon: '🍳',
+                description: '从食品研发到安全检测的完整流程',
+                agents: ['AI Food Scientist', 'AI Food Safety Engineer', 'AI Nutrition Engineer', 'AI Food Process Engineer', 'AI Flavor Engineer'],
+                agentPositions: [
+                    { role: 'AI Food Scientist', x: 400, y: 30 },
+                    { role: 'AI Food Safety Engineer', x: 200, y: 150 },
+                    { role: 'AI Nutrition Engineer', x: 600, y: 150 },
+                    { role: 'AI Food Process Engineer', x: 200, y: 270 },
+                    { role: 'AI Flavor Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Food Scientist', to: 'AI Food Safety Engineer', content: '安全需求' },
+                    { from: 'AI Food Scientist', to: 'AI Flavor Engineer', content: '风味需求' },
+                    { from: 'AI Food Safety Engineer', to: 'AI Food Process Engineer', content: '安全标准' },
+                    { from: 'AI Nutrition Engineer', to: 'AI Food Process Engineer', content: '营养配方' },
+                    { from: 'AI Flavor Engineer', to: 'AI Food Scientist', content: '风味方案' },
+                    { from: 'AI Food Process Engineer', to: 'AI Food Scientist', content: '工艺方案' }
+                ]
             }
         ];
 
@@ -10674,7 +10812,55 @@
             'AI Stock Analyst': { icon: '📈', color: '#22c55e', role: 'AI股票分析师' },
             'AI Crypto Trader': { icon: '💰', color: '#f59e0b', role: 'AI加密货币交易师' },
             'AI Portfolio Manager': { icon: '💼', color: '#8b5cf6', role: 'AI投资组合经理' },
-            'AI Financial Advisor': { icon: '💡', color: '#ec4899', role: 'AI金融顾问' }
+            'AI Financial Advisor': { icon: '💡', color: '#ec4899', role: 'AI金融顾问' },
+            // Cycle 325 新增角色 - AI 海洋工程
+            'AI Marine Engineer': { icon: '🌊', color: '#0ea5e9', role: 'AI海洋工程师' },
+            'AI Oceanographer': { icon: '🔬', color: '#06b6d4', role: 'AI海洋学家' },
+            'AI Subsea Engineer': { icon: '⚓', color: '#3b82f6', role: 'AI海底工程师' },
+            'AI Coastal Engineer': { icon: '🏖️', color: '#14b8a6', role: 'AI海岸工程师' },
+            'AI Navigation Engineer': { icon: '🧭', color: '#f59e0b', role: 'AI航海工程师' },
+            // Cycle 325 新增角色 - AI 航空航天
+            'AI Aerospace Engineer': { icon: '🚀', color: '#f97316', role: 'AI航空航天工程师' },
+            'AI Satellite Engineer': { icon: '🛰️', color: '#6366f1', role: 'AI卫星工程师' },
+            'AI Propulsion Engineer': { icon: '🔥', color: '#dc2626', role: 'AI推进工程师' },
+            'AI Flight Engineer': { icon: '✈️', color: '#0ea5e9', role: 'AI飞行工程师' },
+            'AI Avionics Engineer': { icon: '📡', color: '#8b5cf6', role: 'AI航空电子工程师' },
+            // Cycle 325 新增角色 - AI 材料科学
+            'AI Materials Scientist': { icon: '🔬', color: '#22c55e', role: 'AI材料科学家' },
+            'AI Nanomaterials Engineer': { icon: '⚛️', color: '#a855f7', role: 'AI纳米材料工程师' },
+            'AI Polymer Engineer': { icon: '🧪', color: '#ec4899', role: 'AI高分子材料工程师' },
+            'AI Metallurgist': { icon: '⚙️', color: '#64748b', role: 'AI冶金工程师' },
+            'AI Ceramic Engineer': { icon: '🏺', color: '#f59e0b', role: 'AI陶瓷工程师' },
+            // Cycle 325 新增角色 - AI 生物医学工程
+            'AI Biomedical Engineer': { icon: '🏥', color: '#06b6d4', role: 'AI生物医学工程师' },
+            'AI Medical Device Engineer': { icon: '💉', color: '#ec4899', role: 'AI医疗设备工程师' },
+            'AI Bioinformatics': { icon: '🧬', color: '#8b5cf6', role: 'AI生物信息学家' },
+            'AI Genetic Engineer': { icon: '🧪', color: '#22c55e', role: 'AI基因工程师' },
+            'AI Pharmaceutical Engineer': { icon: '💊', color: '#f43f5e', role: 'AI制药工程师' },
+            // Cycle 325 新增角色 - AI 环境科学
+            'AI Environmental Scientist': { icon: '🌿', color: '#10b981', role: 'AI环境科学家' },
+            'AI Climate Modeler': { icon: '🌍', color: '#3b82f6', role: 'AI气候模型工程师' },
+            'AI Environmental Engineer': { icon: '♻️', color: '#22c55e', role: 'AI环境工程师' },
+            'AI Water Quality Engineer': { icon: '💧', color: '#0ea5e9', role: 'AI水质工程师' },
+            'AI Air Quality Engineer': { icon: '💨', color: '#a855f7', role: 'AI空气质量工程师' },
+            // Cycle 325 新增角色 - AI 食品科学
+            'AI Food Scientist': { icon: '🍳', color: '#f59e0b', role: 'AI食品科学家' },
+            'AI Food Safety Engineer': { icon: '✅', color: '#22c55e', role: 'AI食品安全工程师' },
+            'AI Nutrition Engineer': { icon: '🥗', color: '#10b981', role: 'AI营养工程师' },
+            'AI Food Process Engineer': { icon: '🏭', color: '#64748b', role: 'AI食品加工工程师' },
+            'AI Flavor Engineer': { icon: '🧪', color: '#ec4899', role: 'AI风味工程师' },
+            // Cycle 325 新增角色 - AI 纺织服装
+            'AI Textile Engineer': { icon: '🧵', color: '#f97316', role: 'AI纺织工程师' },
+            'AI Fashion Designer': { icon: '👗', color: '#ec4899', role: 'AI服装设计师' },
+            'AI Pattern Maker': { icon: '📐', color: '#8b5cf6', role: 'AI版型师' },
+            'AI Textile Quality Engineer': { icon: '🔍', color: '#06b6d4', role: 'AI纺织质检工程师' },
+            'AI Sustainable Fashion Engineer': { icon: '🌱', color: '#10b981', role: 'AI可持续时尚工程师' },
+            // Cycle 325 新增角色 - AI 珠宝设计
+            'AI Jewelry Designer': { icon: '💎', color: '#8b5cf6', role: 'AI珠宝设计师' },
+            'AI Gemologist': { icon: '💍', color: '#a855f7', role: 'AI宝石学家' },
+            'AI CAD Jewelry Engineer': { icon: '🎨', color: '#f43f5e', role: 'AI珠宝CAD工程师' },
+            'AI Jewelry Manufacturing Engineer': { icon: '⚙️', color: '#64748b', role: 'AI珠宝制造工程师' },
+            'AI Precious Metals Engineer': { icon: '🥇', color: '#f59e0b', role: 'AI贵金属工程师' }
         };
 
         // 拖拽相关变量
