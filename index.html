@@ -5173,6 +5173,133 @@
                     { from: 'Marketing', to: 'Growth Manager', content: '实验结果反馈' },
                     { from: 'Growth Manager', to: 'CEO', content: '增长实验总结' }
                 ]
+            },
+            // Cycle 290 新增模板
+            {
+                id: 'security-analysis',
+                name: '安全分析流程',
+                icon: '🔒',
+                desc: '从安全漏洞发现到修复验证的完整流程',
+                agents: ['Security Analyst', 'Security', 'Developer', 'DevOps', 'CTO'],
+                positions: [
+                    { role: 'Security Analyst', x: 350, y: 50 },
+                    { role: 'Security', x: 200, y: 180 },
+                    { role: 'Developer', x: 500, y: 180 },
+                    { role: 'DevOps', x: 200, y: 310 },
+                    { role: 'CTO', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'Security Analyst', to: 'Security', content: '安全漏洞扫描报告' },
+                    { from: 'Security', to: 'Developer', content: '漏洞修复优先级' },
+                    { from: 'Developer', to: 'Security Analyst', content: '漏洞修复完成' },
+                    { from: 'Security Analyst', to: 'DevOps', content: '安全测试环境部署' },
+                    { from: 'DevOps', to: 'CTO', content: '安全验收报告' }
+                ]
+            },
+            {
+                id: 'cloud-infrastructure',
+                name: '云基础设施搭建',
+                icon: '☁️',
+                desc: '从架构设计到云服务部署的完整流程',
+                agents: ['Cloud Engineer', 'Cloud Architect', 'DevOps', 'Security', 'CTO'],
+                positions: [
+                    { role: 'Cloud Engineer', x: 350, y: 50 },
+                    { role: 'Cloud Architect', x: 200, y: 180 },
+                    { role: 'DevOps', x: 500, y: 180 },
+                    { role: 'Security', x: 350, y: 310 },
+                    { role: 'CTO', x: 350, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Cloud Architect', content: '云架构需求定义' },
+                    { from: 'Cloud Architect', to: 'Cloud Engineer', content: '架构设计方案' },
+                    { from: 'Cloud Engineer', to: 'DevOps', content: '基础设施部署' },
+                    { from: 'DevOps', to: 'Security', content: '安全配置审查' },
+                    { from: 'Security', to: 'CTO', content: '云环境验收通过' }
+                ]
+            },
+            {
+                id: 'api-integration',
+                name: 'API 集成开发',
+                icon: '🔗',
+                desc: '从接口设计到系统集成的完整流程',
+                agents: ['API Gateway', 'API Developer', 'Backend Developer', 'QA', 'CTO'],
+                positions: [
+                    { role: 'API Gateway', x: 350, y: 50 },
+                    { role: 'API Developer', x: 200, y: 180 },
+                    { role: 'Backend Developer', x: 500, y: 180 },
+                    { role: 'QA', x: 350, y: 310 },
+                    { role: 'CTO', x: 350, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'API Gateway', to: 'API Developer', content: 'API 集成需求' },
+                    { from: 'API Developer', to: 'Backend Developer', content: '后端接口对接' },
+                    { from: 'Backend Developer', to: 'API Developer', content: '接口联调完成' },
+                    { from: 'API Developer', to: 'QA', content: 'API 测试用例' },
+                    { from: 'QA', to: 'CTO', content: '集成测试报告' }
+                ]
+            },
+            {
+                id: 'system-administration',
+                name: '系统运维管理',
+                icon: '🖥️',
+                desc: '从系统监控到故障恢复的完整运维流程',
+                agents: ['System Administrator', 'DevOps', 'Security', 'Network Engineer', 'CTO'],
+                positions: [
+                    { role: 'System Administrator', x: 350, y: 50 },
+                    { role: 'DevOps', x: 200, y: 180 },
+                    { role: 'Security', x: 500, y: 180 },
+                    { role: 'Network Engineer', x: 200, y: 310 },
+                    { role: 'CTO', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'System Administrator', to: 'DevOps', content: '系统监控告警' },
+                    { from: 'DevOps', to: 'System Administrator', content: '故障定位分析' },
+                    { from: 'DevOps', to: 'Network Engineer', content: '网络问题排查' },
+                    { from: 'Network Engineer', to: 'Security', content: '安全事件确认' },
+                    { from: 'System Administrator', to: 'CTO', content: '故障处理报告' }
+                ]
+            },
+            {
+                id: 'network-design',
+                name: '网络架构设计',
+                icon: '🌐',
+                desc: '从需求分析到网络架构部署的完整流程',
+                agents: ['Network Engineer', 'Cloud Engineer', 'Security', 'System Administrator', 'CTO'],
+                positions: [
+                    { role: 'Network Engineer', x: 350, y: 50 },
+                    { role: 'Cloud Engineer', x: 200, y: 180 },
+                    { role: 'Security', x: 500, y: 180 },
+                    { role: 'System Administrator', x: 350, y: 310 },
+                    { role: 'CTO', x: 350, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Network Engineer', content: '网络架构需求' },
+                    { from: 'Network Engineer', to: 'Cloud Engineer', content: '网络架构方案' },
+                    { from: 'Cloud Engineer', to: 'Network Engineer', content: '云网络配置确认' },
+                    { from: 'Network Engineer', to: 'Security', content: '网络安全审查' },
+                    { from: 'Security', to: 'CTO', content: '网络安全验收' }
+                ]
+            },
+            {
+                id: 'embedded-development',
+                name: '嵌入式开发',
+                icon: '📟',
+                desc: '从硬件需求到嵌入式系统部署的完整流程',
+                agents: ['Embedded Engineer', 'Hardware Engineer', 'QA', 'Security', 'CTO'],
+                positions: [
+                    { role: 'Embedded Engineer', x: 350, y: 50 },
+                    { role: 'Hardware Engineer', x: 200, y: 180 },
+                    { role: 'QA', x: 500, y: 180 },
+                    { role: 'Security', x: 350, y: 310 },
+                    { role: 'CTO', x: 350, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Embedded Engineer', content: '嵌入式系统需求' },
+                    { from: 'Embedded Engineer', to: 'Hardware Engineer', content: '硬件接口定义' },
+                    { from: 'Hardware Engineer', to: 'Embedded Engineer', content: '硬件设计完成' },
+                    { from: 'Embedded Engineer', to: 'QA', content: '嵌入式测试请求' },
+                    { from: 'QA', to: 'CTO', content: '系统验收报告' }
+                ]
             }
         ];
 
@@ -5332,7 +5459,16 @@
             'Content Creator': { icon: '🎭', color: '#a855f7', role: '内容创作者' },
             'Growth Manager': { icon: '📈', color: '#22c55e', role: '增长经理' },
             'Finance Manager': { icon: '💳', color: '#14b8a6', role: '财务经理' },
-            'Product Lead': { icon: '🎯', color: '#f59e0b', role: '产品负责人' }
+            'Product Lead': { icon: '🎯', color: '#f59e0b', role: '产品负责人' },
+            // Cycle 290 新增角色
+            'Security Analyst': { icon: '🔒', color: '#dc2626', role: '安全分析师' },
+            'Cloud Engineer': { icon: '☁️', color: '#0ea5e9', role: '云工程师' },
+            'API Gateway': { icon: '🚪', color: '#8b5cf6', role: 'API网关工程师' },
+            'Integration Specialist': { icon: '🔗', color: '#22c55e', role: '集成专家' },
+            'System Administrator': { icon: '🖥️', color: '#64748b', role: '系统管理员' },
+            'Network Engineer': { icon: '🌐', color: '#06b6d4', role: '网络工程师' },
+            'Embedded Engineer': { icon: '📟', color: '#f97316', role: '嵌入式工程师' },
+            'Audio Engineer': { icon: '🎵', color: '#ec4899', role: '音频工程师' }
         };
 
         // 拖拽相关变量
