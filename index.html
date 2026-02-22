@@ -4671,6 +4671,126 @@
                     { from: 'Developer', to: 'Innovation Lead', content: '技术可行性评估' },
                     { from: 'Innovation Lead', to: 'CEO', content: '创新项目汇报' }
                 ]
+            },
+            // Cycle 286 新增模板
+            {
+                id: 'enterprise-architecture',
+                name: '企业架构设计',
+                icon: '🏛️',
+                desc: '从业务需求到企业架构方案的完整设计流程',
+                agents: ['Enterprise Architect', 'CTO', 'Architect', 'Product Manager', 'CEO'],
+                positions: [
+                    { role: 'Enterprise Architect', x: 400, y: 30 },
+                    { role: 'CTO', x: 200, y: 130 },
+                    { role: 'Architect', x: 400, y: 130 },
+                    { role: 'Product Manager', x: 600, y: 130 },
+                    { role: 'CEO', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Enterprise Architect', to: 'CTO', content: '技术趋势分析' },
+                    { from: 'CTO', to: 'Architect', content: '技术选型确认' },
+                    { from: 'Architect', to: 'Product Manager', content: '系统设计方案' },
+                    { from: 'Product Manager', to: 'Enterprise Architect', content: '业务需求确认' },
+                    { from: 'Enterprise Architect', to: 'CEO', content: '架构方案汇报' }
+                ]
+            },
+            {
+                id: 'ml-research',
+                name: '机器学习研究',
+                icon: '🧪',
+                desc: '从算法研究到模型训练的完整研发流程',
+                agents: ['Machine Learning Researcher', 'ML Engineer', 'Data Scientist', 'CTO'],
+                positions: [
+                    { role: 'Machine Learning Researcher', x: 400, y: 30 },
+                    { role: 'ML Engineer', x: 200, y: 130 },
+                    { role: 'Data Scientist', x: 600, y: 130 },
+                    { role: 'CTO', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Machine Learning Researcher', to: 'Data Scientist', content: '数据集需求确认' },
+                    { from: 'Data Scientist', to: 'ML Engineer', content: '训练数据准备完成' },
+                    { from: 'ML Engineer', to: 'Machine Learning Researcher', content: '模型训练进展' },
+                    { from: 'Machine Learning Researcher', to: 'CTO', content: '研究成果汇报' }
+                ]
+            },
+            {
+                id: 'startup-pitch',
+                name: '创业路演',
+                icon: '🚀',
+                desc: '从创业想法到融资路演的完整流程',
+                agents: ['Startup Founder', 'Investor', 'Product Strategist', 'Marketing'],
+                positions: [
+                    { role: 'Startup Founder', x: 400, y: 30 },
+                    { role: 'Product Strategist', x: 200, y: 130 },
+                    { role: 'Marketing', x: 600, y: 130 },
+                    { role: 'Investor', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Startup Founder', to: 'Product Strategist', content: '产品定位确认' },
+                    { from: 'Product Strategist', to: 'Marketing', content: '市场策略制定' },
+                    { from: 'Marketing', to: 'Startup Founder', content: '市场分析报告' },
+                    { from: 'Startup Founder', to: 'Investor', content: '融资路演' }
+                ]
+            },
+            {
+                id: 'product-strategy',
+                name: '产品策略规划',
+                icon: '🎯',
+                desc: '从市场分析到产品路线图的完整规划流程',
+                agents: ['Product Strategist', 'Product Manager', 'Researcher', 'CEO', 'UX Designer'],
+                positions: [
+                    { role: 'Product Strategist', x: 400, y: 30 },
+                    { role: 'Researcher', x: 200, y: 130 },
+                    { role: 'Product Manager', x: 600, y: 130 },
+                    { role: 'UX Designer', x: 200, y: 250 },
+                    { role: 'CEO', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Product Strategist', to: 'Researcher', content: '市场需求调研' },
+                    { from: 'Researcher', to: 'Product Manager', content: '调研结果分析' },
+                    { from: 'Product Manager', to: 'UX Designer', content: '产品需求确认' },
+                    { from: 'UX Designer', to: 'Product Strategist', content: '用户体验设计' },
+                    { from: 'Product Strategist', to: 'CEO', content: '产品策略汇报' }
+                ]
+            },
+            {
+                id: 'ux-design-process',
+                name: 'UX 设计流程',
+                icon: '💡',
+                desc: '从用户研究到交互设计的完整设计流程',
+                agents: ['UX Designer', 'UX Researcher', 'Product Designer', 'Developer'],
+                positions: [
+                    { role: 'UX Designer', x: 400, y: 30 },
+                    { role: 'UX Researcher', x: 200, y: 130 },
+                    { role: 'Product Designer', x: 600, y: 130 },
+                    { role: 'Developer', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'UX Designer', to: 'UX Researcher', content: '用户研究计划' },
+                    { from: 'UX Researcher', to: 'UX Designer', content: '用户洞察报告' },
+                    { from: 'UX Designer', to: 'Product Designer', content: '交互设计方案' },
+                    { from: 'Product Designer', to: 'Developer', content: '设计稿交接' }
+                ]
+            },
+            {
+                id: 'data-science-project',
+                name: '数据科学项目',
+                icon: '📊',
+                desc: '从数据收集到模型训练的完整数据科学流程',
+                agents: ['Data Scientist', 'Data Analyst', 'ML Engineer', 'Business Analyst'],
+                positions: [
+                    { role: 'Data Scientist', x: 400, y: 30 },
+                    { role: 'Data Analyst', x: 200, y: 130 },
+                    { role: 'ML Engineer', x: 600, y: 130 },
+                    { role: 'Business Analyst', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Data Scientist', to: 'Data Analyst', content: '数据需求确认' },
+                    { from: 'Data Analyst', to: 'Data Scientist', content: '数据准备完成' },
+                    { from: 'Data Scientist', to: 'ML Engineer', content: '模型训练需求' },
+                    { from: 'ML Engineer', to: 'Business Analyst', content: '模型效果评估' },
+                    { from: 'Business Analyst', to: 'Data Scientist', content: '业务洞察报告' }
+                ]
             }
         ];
 
@@ -4794,7 +4914,15 @@
             'DevSecOps': { icon: '🔒', color: '#dc2626', role: '安全运维工程师' },
             'Customer Insights': { icon: '💡', color: '#f59e0b', role: '客户洞察分析师' },
             'Partnership Director': { icon: '🤝', color: '#22c55e', role: '合作伙伴总监' },
-            'Innovation Lead': { icon: '💎', color: '#06b6d4', role: '创新负责人' }
+            'Innovation Lead': { icon: '💎', color: '#06b6d4', role: '创新负责人' },
+            // Cycle 286 新增角色
+            'Enterprise Architect': { icon: '🏛️', color: '#1e40af', role: '企业架构师' },
+            'Machine Learning Researcher': { icon: '🧪', color: '#7c3aed', role: '机器学习研究员' },
+            'Startup Founder': { icon: '🚀', color: '#f59e0b', role: '创业创始人' },
+            'Investor': { icon: '💰', color: '#10b981', role: '投资人' },
+            'Product Strategist': { icon: '🎯', color: '#ec4899', role: '产品策略师' },
+            'UX Designer': { icon: '💡', color: '#06b6d4', role: '用户体验设计师' },
+            'Data Scientist': { icon: '📊', color: '#8b5cf6', role: '数据科学家' }
         };
 
         // 拖拽相关变量
