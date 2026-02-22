@@ -5300,6 +5300,124 @@
                     { from: 'Embedded Engineer', to: 'QA', content: '嵌入式测试请求' },
                     { from: 'QA', to: 'CTO', content: '系统验收报告' }
                 ]
+            },
+            // Cycle 291 新增模板
+            {
+                id: 'robotics-development',
+                name: '机器人开发',
+                icon: '🤖',
+                desc: '从机器人需求到原型开发的完整流程',
+                agents: ['Robotics Engineer', 'Hardware Engineer', 'QA', 'CTO'],
+                positions: [
+                    { role: 'Robotics Engineer', x: 400, y: 50 },
+                    { role: 'Hardware Engineer', x: 200, y: 180 },
+                    { role: 'QA', x: 400, y: 180 },
+                    { role: 'CTO', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Robotics Engineer', content: '机器人系统需求定义' },
+                    { from: 'Robotics Engineer', to: 'Hardware Engineer', content: '硬件接口需求文档' },
+                    { from: 'Hardware Engineer', to: 'Robotics Engineer', content: '机械设计完成' },
+                    { from: 'Robotics Engineer', to: 'QA', content: '机器人原型测试' },
+                    { from: 'QA', to: 'CTO', content: '机器人系统验收报告' }
+                ]
+            },
+            {
+                id: 'quantum-research',
+                name: '量子计算研究',
+                icon: '⚛️',
+                desc: '从量子算法研究到实验验证的完整流程',
+                agents: ['Quantum Researcher', 'ML Engineer', 'Researcher', 'CTO'],
+                positions: [
+                    { role: 'Quantum Researcher', x: 400, y: 50 },
+                    { role: 'ML Engineer', x: 200, y: 180 },
+                    { role: 'Researcher', x: 400, y: 180 },
+                    { role: 'CTO', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'Quantum Researcher', to: 'ML Engineer', content: '量子机器学习算法研究' },
+                    { from: 'ML Engineer', to: 'Quantum Researcher', content: '算法实现方案' },
+                    { from: 'Quantum Researcher', to: 'Researcher', content: '量子实验验证计划' },
+                    { from: 'Researcher', to: 'CTO', content: '量子计算研究报告' }
+                ]
+            },
+            {
+                id: 'vr-ar-development',
+                name: 'VR/AR 开发',
+                icon: '🥽',
+                desc: '从虚拟现实需求到沉浸式体验开发的完整流程',
+                agents: ['VR Developer', 'Designer', 'QA', 'CTO'],
+                positions: [
+                    { role: 'VR Developer', x: 400, y: 50 },
+                    { role: 'Designer', x: 200, y: 180 },
+                    { role: 'QA', x: 400, y: 180 },
+                    { role: 'CTO', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'VR Developer', content: 'VR/AR项目需求' },
+                    { from: 'VR Developer', to: 'Designer', content: '3D交互设计需求' },
+                    { from: 'Designer', to: 'VR Developer', content: '设计稿交付' },
+                    { from: 'VR Developer', to: 'QA', content: '沉浸式体验测试' },
+                    { from: 'QA', to: 'CTO', content: 'VR/AR项目验收' }
+                ]
+            },
+            {
+                id: 'bioinformatics-research',
+                name: '生物信息学研究',
+                icon: '🧬',
+                desc: '从基因数据分析到生物发现的完整研究流程',
+                agents: ['Bioinformatics Scientist', 'Data Scientist', 'Researcher', 'CTO'],
+                positions: [
+                    { role: 'Bioinformatics Scientist', x: 400, y: 50 },
+                    { role: 'Data Scientist', x: 200, y: 180 },
+                    { role: 'Researcher', x: 400, y: 180 },
+                    { role: 'CTO', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'Bioinformatics Scientist', to: 'Data Scientist', content: '基因数据处理需求' },
+                    { from: 'Data Scientist', to: 'Bioinformatics Scientist', content: '数据分析结果' },
+                    { from: 'Bioinformatics Scientist', to: 'Researcher', content: '生物信息学洞察' },
+                    { from: 'Researcher', to: 'CTO', content: '生物研究项目报告' }
+                ]
+            },
+            {
+                id: 'crypto-development',
+                name: '区块链开发',
+                icon: '💰',
+                desc: '从智能合约到去中心化应用开发的完整流程',
+                agents: ['Crypto Developer', 'Security', 'Developer', 'CTO'],
+                positions: [
+                    { role: 'Crypto Developer', x: 400, y: 50 },
+                    { role: 'Security', x: 200, y: 180 },
+                    { role: 'Developer', x: 400, y: 180 },
+                    { role: 'CTO', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Crypto Developer', content: '区块链项目需求' },
+                    { from: 'Crypto Developer', to: 'Security', content: '智能合约安全审计' },
+                    { from: 'Security', to: 'Crypto Developer', content: '安全审查报告' },
+                    { from: 'Crypto Developer', to: 'Developer', content: 'DApp开发任务' },
+                    { from: 'Developer', to: 'CTO', content: '区块链项目完成' }
+                ]
+            },
+            {
+                id: 'iot-development',
+                name: '物联网开发',
+                icon: '📡',
+                desc: '从IoT设备连接到云端数据分析的完整流程',
+                agents: ['IoT Engineer', 'Cloud Engineer', 'Data Engineer', 'CTO'],
+                positions: [
+                    { role: 'IoT Engineer', x: 400, y: 50 },
+                    { role: 'Cloud Engineer', x: 200, y: 180 },
+                    { role: 'Data Engineer', x: 400, y: 180 },
+                    { role: 'CTO', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'IoT Engineer', to: 'Cloud Engineer', content: 'IoT云端架构需求' },
+                    { from: 'Cloud Engineer', to: 'IoT Engineer', content: '云服务配置完成' },
+                    { from: 'IoT Engineer', to: 'Data Engineer', content: '设备数据接入' },
+                    { from: 'Data Engineer', to: 'CTO', content: 'IoT数据分析报告' }
+                ]
             }
         ];
 
@@ -5468,7 +5586,17 @@
             'System Administrator': { icon: '🖥️', color: '#64748b', role: '系统管理员' },
             'Network Engineer': { icon: '🌐', color: '#06b6d4', role: '网络工程师' },
             'Embedded Engineer': { icon: '📟', color: '#f97316', role: '嵌入式工程师' },
-            'Audio Engineer': { icon: '🎵', color: '#ec4899', role: '音频工程师' }
+            'Audio Engineer': { icon: '🎵', color: '#ec4899', role: '音频工程师' },
+            'Hardware Engineer': { icon: '🔧', color: '#64748b', role: '硬件工程师' },
+            // Cycle 291 新增角色
+            'Robotics Engineer': { icon: '🤖', color: '#06b6d4', role: '机器人工程师' },
+            'Quantum Researcher': { icon: '⚛️', color: '#8b5cf6', role: '量子计算研究员' },
+            'VR Developer': { icon: '🥽', color: '#f43f5e', role: 'VR/AR开发者' },
+            'Bioinformatics Scientist': { icon: '🧬', color: '#22c55e', role: '生物信息学家' },
+            'Crypto Developer': { icon: '💰', color: '#f59e0b', role: '区块链开发者' },
+            'IoT Engineer': { icon: '📡', color: '#14b8a6', role: '物联网工程师' },
+            'Computer Vision Engineer': { icon: '👁️', color: '#ec4899', role: '计算机视觉工程师' },
+            'NLP Engineer': { icon: '💬', color: '#a855f7', role: '自然语言处理工程师' }
         };
 
         // 拖拽相关变量
