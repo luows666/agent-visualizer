@@ -7770,6 +7770,274 @@
                     { from: 'AI Feature Engineer', to: 'ML Engineer', content: '特征数据' },
                     { from: 'ML Engineer', to: 'AI Dataset Architect', content: '数据质量反馈' }
                 ]
+            },
+            // Cycle 307 新增模板
+            {
+                id: 'ai-rag-optimization',
+                name: 'AI RAG 优化',
+                icon: '🔍',
+                desc: '从RAG系统设计到优化的完整流程',
+                agents: ['AI RAG Architect', 'AI Embedding Specialist', 'AI Chunking Expert', 'ML Engineer'],
+                positions: [
+                    { role: 'AI RAG Architect', x: 400, y: 30 },
+                    { role: 'AI Embedding Specialist', x: 200, y: 150 },
+                    { role: 'AI Chunking Expert', x: 600, y: 150 },
+                    { role: 'ML Engineer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI RAG Architect', to: 'AI Embedding Specialist', content: '向量嵌入需求' },
+                    { from: 'AI Embedding Specialist', to: 'AI Chunking Expert', content: '嵌入模型选择' },
+                    { from: 'AI Chunking Expert', to: 'ML Engineer', content: '分块策略' },
+                    { from: 'ML Engineer', to: 'AI RAG Architect', content: 'RAG优化报告' }
+                ]
+            },
+            {
+                id: 'ai-hallucination-detection',
+                name: 'AI 幻觉检测',
+                icon: '🔍',
+                desc: '从幻觉检测到风险控制的完整流程',
+                agents: ['AI Hallucination Detector', 'AI Safety Reviewer', 'AI Testing Lead', 'Product Manager'],
+                positions: [
+                    { role: 'AI Hallucination Detector', x: 400, y: 30 },
+                    { role: 'AI Safety Reviewer', x: 200, y: 150 },
+                    { role: 'AI Testing Lead', x: 600, y: 150 },
+                    { role: 'Product Manager', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Hallucination Detector', to: 'AI Safety Reviewer', content: '幻觉检测报告' },
+                    { from: 'AI Safety Reviewer', to: 'AI Testing Lead', content: '安全风险评估' },
+                    { from: 'AI Testing Lead', to: 'Product Manager', content: '测试结果' },
+                    { from: 'Product Manager', to: 'AI Hallucination Detector', content: '验收标准' }
+                ]
+            },
+            {
+                id: 'ai-multimodal-development',
+                name: 'AI 多模态开发',
+                icon: '🎭',
+                desc: '从多模态需求到产品上线的完整流程',
+                agents: ['AI Multimodal Engineer', 'AI Context Engineer', 'Developer', 'QA'],
+                positions: [
+                    { role: 'AI Multimodal Engineer', x: 400, y: 30 },
+                    { role: 'AI Context Engineer', x: 200, y: 150 },
+                    { role: 'Developer', x: 600, y: 150 },
+                    { role: 'QA', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Multimodal Engineer', to: 'AI Context Engineer', content: '多模态架构设计' },
+                    { from: 'AI Context Engineer', to: 'Developer', content: '技术方案' },
+                    { from: 'Developer', to: 'QA', content: '开发完成' },
+                    { from: 'QA', to: 'AI Multimodal Engineer', content: '测试报告' }
+                ]
+            },
+            {
+                id: 'ai-token-optimization',
+                name: 'AI 令牌优化',
+                icon: '🎯',
+                desc: '从令牌消耗分析到成本优化的完整流程',
+                agents: ['AI Token Optimizer', 'AI Token Budget Manager', 'AI Cost Optimizer', 'CFO'],
+                positions: [
+                    { role: 'AI Token Optimizer', x: 400, y: 30 },
+                    { role: 'AI Token Budget Manager', x: 200, y: 150 },
+                    { role: 'AI Cost Optimizer', x: 600, y: 150 },
+                    { role: 'CFO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Token Optimizer', to: 'AI Token Budget Manager', content: '令牌消耗分析' },
+                    { from: 'AI Token Budget Manager', to: 'AI Cost Optimizer', content: '预算规划' },
+                    { from: 'AI Cost Optimizer', to: 'CFO', content: '成本报告' },
+                    { from: 'CFO', to: 'AI Token Optimizer', content: '预算审批' }
+                ]
+            },
+            {
+                id: 'ai-latency-optimization',
+                name: 'AI 延迟优化',
+                icon: '⚡',
+                desc: '从延迟分析到性能优化的完整流程',
+                agents: ['AI Latency Optimizer', 'AI Cache Engineer', 'AI Fallback Engineer', 'CTO'],
+                positions: [
+                    { role: 'AI Latency Optimizer', x: 400, y: 30 },
+                    { role: 'AI Cache Engineer', x: 200, y: 150 },
+                    { role: 'AI Fallback Engineer', x: 600, y: 150 },
+                    { role: 'CTO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Latency Optimizer', to: 'AI Cache Engineer', content: '缓存策略需求' },
+                    { from: 'AI Cache Engineer', to: 'AI Fallback Engineer', content: '缓存方案' },
+                    { from: 'AI Fallback Engineer', to: 'CTO', content: '降级方案' },
+                    { from: 'CTO', to: 'AI Latency Optimizer', content: '优化审批' }
+                ]
+            },
+            {
+                id: 'ai-prompt-library',
+                name: 'AI 提示词库',
+                icon: '📚',
+                desc: '从提示词管理到优化的完整流程',
+                agents: ['AI Prompt Librarian', 'AI Prompt Engineer', 'AI Evaluation Lead', 'Product Manager'],
+                positions: [
+                    { role: 'AI Prompt Librarian', x: 400, y: 30 },
+                    { role: 'AI Prompt Engineer', x: 200, y: 150 },
+                    { role: 'AI Evaluation Lead', x: 600, y: 150 },
+                    { role: 'Product Manager', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Prompt Librarian', to: 'AI Prompt Engineer', content: '提示词需求' },
+                    { from: 'AI Prompt Engineer', to: 'AI Evaluation Lead', content: '提示词设计' },
+                    { from: 'AI Evaluation Lead', to: 'Product Manager', content: '评测报告' },
+                    { from: 'Product Manager', to: 'AI Prompt Librarian', content: '验收通过' }
+                ]
+            },
+            {
+                id: 'ai-dataset-quality',
+                name: 'AI 数据集质量',
+                icon: '✅',
+                desc: '从数据质量检测到优化的完整流程',
+                agents: ['AI Dataset QA', 'AI Dataset Architect', 'AI Data Annotator', 'ML Engineer'],
+                positions: [
+                    { role: 'AI Dataset QA', x: 400, y: 30 },
+                    { role: 'AI Dataset Architect', x: 200, y: 150 },
+                    { role: 'AI Data Annotator', x: 600, y: 150 },
+                    { role: 'ML Engineer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Dataset QA', to: 'AI Dataset Architect', content: '质量报告' },
+                    { from: 'AI Dataset Architect', to: 'AI Data Annotator', content: '标注需求' },
+                    { from: 'AI Data Annotator', to: 'ML Engineer', content: '标注数据' },
+                    { from: 'ML Engineer', to: 'AI Dataset QA', content: '数据反馈' }
+                ]
+            },
+            {
+                id: 'ai-agent-training',
+                name: 'AI Agent 训练',
+                icon: '🎓',
+                desc: '从Agent训练到部署的完整流程',
+                agents: ['AI Agent Trainer', 'AI Model Benchmarker', 'AI Deployment Lead', 'CTO'],
+                positions: [
+                    { role: 'AI Agent Trainer', x: 400, y: 30 },
+                    { role: 'AI Model Benchmarker', x: 200, y: 150 },
+                    { role: 'AI Deployment Lead', x: 600, y: 150 },
+                    { role: 'CTO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Agent Trainer', to: 'AI Model Benchmarker', content: '训练数据' },
+                    { from: 'AI Model Benchmarker', to: 'AI Deployment Lead', content: '基准测试' },
+                    { from: 'AI Deployment Lead', to: 'CTO', content: '部署方案' },
+                    { from: 'CTO', to: 'AI Agent Trainer', content: '训练目标' }
+                ]
+            },
+            // Cycle 308 新增模板
+            {
+                id: 'ai-model-routing',
+                name: 'AI模型路由',
+                icon: '🛣️',
+                desc: '从模型选择到智能路由的完整流程',
+                agents: ['AI Model Router', 'AI Model Selector', 'AI Output Validator', 'AI Context Manager'],
+                positions: [
+                    { role: 'AI Model Router', x: 400, y: 30 },
+                    { role: 'AI Model Selector', x: 200, y: 150 },
+                    { role: 'AI Context Manager', x: 600, y: 150 },
+                    { role: 'AI Output Validator', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Model Router', to: 'AI Model Selector', content: '请求路由' },
+                    { from: 'AI Model Selector', to: 'AI Context Manager', content: '模型选择' },
+                    { from: 'AI Context Manager', to: 'AI Output Validator', content: '上下文传递' },
+                    { from: 'AI Output Validator', to: 'AI Model Router', content: '验证结果' }
+                ]
+            },
+            {
+                id: 'ai-guardrail-system',
+                name: 'AI安全护栏',
+                icon: '🛡️',
+                desc: '从安全审查到护栏部署的完整流程',
+                agents: ['AI Guardrail Engineer', 'AI Safety Reviewer', 'AI Output Validator', 'CTO'],
+                positions: [
+                    { role: 'AI Guardrail Engineer', x: 400, y: 30 },
+                    { role: 'AI Safety Reviewer', x: 200, y: 150 },
+                    { role: 'AI Output Validator', x: 600, y: 150 },
+                    { role: 'CTO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Guardrail Engineer', to: 'AI Safety Reviewer', content: '安全规则' },
+                    { from: 'AI Safety Reviewer', to: 'AI Output Validator', content: '安全审查' },
+                    { from: 'AI Output Validator', to: 'CTO', content: '验证报告' },
+                    { from: 'CTO', to: 'AI Guardrail Engineer', content: '护栏配置' }
+                ]
+            },
+            {
+                id: 'ai-tool-integration',
+                name: 'AI工具集成',
+                icon: '🔗',
+                desc: '从工具选择到API集成的完整流程',
+                agents: ['AI Tool Integrator', 'AI Function Calling', 'AI Workflow Engineer', 'Developer'],
+                positions: [
+                    { role: 'AI Tool Integrator', x: 400, y: 30 },
+                    { role: 'AI Function Calling', x: 200, y: 150 },
+                    { role: 'AI Workflow Engineer', x: 600, y: 150 },
+                    { role: 'Developer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Tool Integrator', to: 'AI Function Calling', content: '工具需求' },
+                    { from: 'AI Function Calling', to: 'AI Workflow Engineer', content: '函数定义' },
+                    { from: 'AI Workflow Engineer', to: 'Developer', content: '工作流设计' },
+                    { from: 'Developer', to: 'AI Tool Integrator', content: '集成完成' }
+                ]
+            },
+            {
+                id: 'ai-memory-system',
+                name: 'AI记忆系统',
+                icon: '💡',
+                desc: '从记忆设计到系统部署的完整流程',
+                agents: ['AI Memory Engineer', 'AI Context Manager', 'AI Semantic Cache', 'ML Engineer'],
+                positions: [
+                    { role: 'AI Memory Engineer', x: 400, y: 30 },
+                    { role: 'AI Context Manager', x: 200, y: 150 },
+                    { role: 'AI Semantic Cache', x: 600, y: 150 },
+                    { role: 'ML Engineer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Memory Engineer', to: 'AI Context Manager', content: '记忆架构' },
+                    { from: 'AI Context Manager', to: 'AI Semantic Cache', content: '上下文管理' },
+                    { from: 'AI Semantic Cache', to: 'ML Engineer', content: '缓存策略' },
+                    { from: 'ML Engineer', to: 'AI Memory Engineer', content: '系统集成' }
+                ]
+            },
+            {
+                id: 'ai-prompt-engineering',
+                name: 'AI提示词工程',
+                icon: '📝',
+                desc: '从提示词设计到版本管理的完整流程',
+                agents: ['AI Prompt Engineer', 'AI Prompt Librarian', 'AI Evaluation Lead', 'AI Prompt Versioning'],
+                positions: [
+                    { role: 'AI Prompt Engineer', x: 400, y: 30 },
+                    { role: 'AI Prompt Librarian', x: 200, y: 150 },
+                    { role: 'AI Evaluation Lead', x: 600, y: 150 },
+                    { role: 'AI Prompt Versioning', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Prompt Engineer', to: 'AI Prompt Librarian', content: '提示词库' },
+                    { from: 'AI Prompt Librarian', to: 'AI Evaluation Lead', content: '版本记录' },
+                    { from: 'AI Evaluation Lead', to: 'AI Prompt Versioning', content: '评估结果' },
+                    { from: 'AI Prompt Versioning', to: 'AI Prompt Engineer', content: '版本更新' }
+                ]
+            },
+            {
+                id: 'ai-agentic-workflow',
+                name: 'AI智能体工作流',
+                icon: '🤖',
+                desc: '从智能体设计到自主执行的完整流程',
+                agents: ['AI Agentic Workflow', 'AI Chain of Thought', 'AI Workflow Optimizer', 'AI Agent Orchestrator'],
+                positions: [
+                    { role: 'AI Agentic Workflow', x: 400, y: 30 },
+                    { role: 'AI Chain of Thought', x: 200, y: 150 },
+                    { role: 'AI Workflow Optimizer', x: 600, y: 150 },
+                    { role: 'AI Agent Orchestrator', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Agentic Workflow', to: 'AI Chain of Thought', content: '工作流设计' },
+                    { from: 'AI Chain of Thought', to: 'AI Workflow Optimizer', content: '思维链' },
+                    { from: 'AI Workflow Optimizer', to: 'AI Agent Orchestrator', content: '优化方案' },
+                    { from: 'AI Agent Orchestrator', to: 'AI Agentic Workflow', content: '执行结果' }
+                ]
             }
         ];
 
@@ -8092,7 +8360,39 @@
             'AI Deployment Lead': { icon: '🚀', color: '#22c55e', role: 'AI部署负责人' },
             'AI Performance Tuner': { icon: '🎛️', color: '#06b6d4', role: 'AI性能调优师' },
             'AI Cost Optimizer': { icon: '💰', color: '#f59e0b', role: 'AI成本优化师' },
-            'AI Governance Lead': { icon: '⚖️', color: '#64748b', role: 'AI治理负责人' }
+            'AI Governance Lead': { icon: '⚖️', color: '#64748b', role: 'AI治理负责人' },
+            // Cycle 307 新增角色
+            'AI Feedback Analyst': { icon: '💬', color: '#0ea5e9', role: 'AI反馈分析师' },
+            'AI Hallucination Detector': { icon: '🔍', color: '#22c55e', role: 'AI幻觉检测师' },
+            'AI Token Optimizer': { icon: '🎯', color: '#a855f7', role: 'AI令牌优化师' },
+            'AI Multimodal Engineer': { icon: '🎭', color: '#f97316', role: 'AI多模态工程师' },
+            'AI Embedding Specialist': { icon: '📊', color: '#06b6d4', role: 'AI嵌入向量专家' },
+            'AI Chunking Expert': { icon: '✂️', color: '#ec4899', role: 'AI文档分块专家' },
+            'AI RAG Architect': { icon: '🏛️', color: '#8b5cf6', role: 'AI RAG架构师' },
+            'AI Agent Trainer': { icon: '🎓', color: '#14b8a6', role: 'AI Agent训练师' },
+            'AI Safety Reviewer': { icon: '🛡️', color: '#dc2626', role: 'AI安全审查员' },
+            'AI Prompt Librarian': { icon: '📚', color: '#f59e0b', role: 'AI提示词库管理员' },
+            'AI Evaluation Lead': { icon: '📐', color: '#22c55e', role: 'AI评测负责人' },
+            'AI Dataset QA': { icon: '✅', color: '#06b6d4', role: 'AI数据集质量工程师' },
+            'AI Model Benchmarker': { icon: '🏁', color: '#ec4899', role: 'AI模型基准测试员' },
+            'AI Token Budget Manager': { icon: '💵', color: '#f97316', role: 'AI令牌预算管理员' },
+            'AI Cache Engineer': { icon: '💾', color: '#14b8a6', role: 'AI缓存工程师' },
+            'AI Latency Optimizer': { icon: '⚡', color: '#8b5cf6', role: 'AI延迟优化师' },
+            'AI Fallback Engineer': { icon: '🔄', color: '#a855f7', role: 'AI降级策略工程师' },
+            // Cycle 308 新增角色
+            'AI Model Router': { icon: '🛣️', color: '#0ea5e9', role: 'AI模型路由师' },
+            'AI Context Manager': { icon: '🧠', color: '#8b5cf6', role: 'AI上下文管理器' },
+            'AI Memory Engineer': { icon: '💡', color: '#f59e0b', role: 'AI记忆工程师' },
+            'AI Tool Integrator': { icon: '🔗', color: '#22c55e', role: 'AI工具集成工程师' },
+            'AI Workflow Optimizer': { icon: '⚙️', color: '#ec4899', role: 'AI工作流优化师' },
+            'AI Guardrail Engineer': { icon: '🛡️', color: '#dc2626', role: 'AI安全护栏工程师' },
+            'AI Output Parser': { icon: '📤', color: '#06b6d4', role: 'AI输出解析工程师' },
+            'AI Semantic Cache': { icon: '💾', color: '#14b8a6', role: 'AI语义缓存工程师' },
+            'AI Function Calling': { icon: '📞', color: '#a855f7', role: 'AI函数调用工程师' },
+            'AI Prompt Versioning': { icon: '📚', color: '#f97316', role: 'AI提示词版本管理' },
+            'AI Token Counter': { icon: '🧮', color: '#64748b', role: 'AI令牌计数师' },
+            'AI Chain of Thought': { icon: '🔗', color: '#0ea5e9', role: 'AI思维链工程师' },
+            'AI Agentic Workflow': { icon: '🤖', color: '#22c55e', role: 'AI智能体工作流工程师' }
         };
 
         // 拖拽相关变量
