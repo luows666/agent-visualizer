@@ -7119,6 +7119,126 @@
                     { from: 'AI Quality Control', to: 'QA', content: '质量评估报告' },
                     { from: 'QA', to: 'CTO', content: '质量认证' }
                 ]
+            },
+            // Cycle 304 新增模板
+            {
+                id: 'ai-strategy-consulting',
+                name: 'AI战略咨询项目',
+                icon: '🎯',
+                desc: '从AI战略规划到实施的完整咨询流程',
+                agents: ['AI Strategy Consultant', 'CEO', 'CTO', 'AI Product Owner'],
+                positions: [
+                    { role: 'AI Strategy Consultant', x: 400, y: 30 },
+                    { role: 'CEO', x: 200, y: 150 },
+                    { role: 'CTO', x: 600, y: 150 },
+                    { role: 'AI Product Owner', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Strategy Consultant', to: 'CEO', content: 'AI战略规划报告' },
+                    { from: 'CEO', to: 'CTO', content: '技术可行性评估' },
+                    { from: 'CTO', to: 'AI Product Owner', content: '产品化方案' },
+                    { from: 'AI Product Owner', to: 'AI Strategy Consultant', content: '实施计划' }
+                ]
+            },
+            {
+                id: 'ai-product-development',
+                name: 'AI产品开发项目',
+                icon: '📦',
+                desc: '从AI产品需求到上线的完整开发流程',
+                agents: ['AI Product Owner', 'AI Engineer', 'AI Testing Engineer', 'QA', 'Marketing'],
+                positions: [
+                    { role: 'AI Product Owner', x: 400, y: 30 },
+                    { role: 'AI Engineer', x: 200, y: 150 },
+                    { role: 'AI Testing Engineer', x: 600, y: 150 },
+                    { role: 'QA', x: 200, y: 270 },
+                    { role: 'Marketing', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Product Owner', to: 'AI Engineer', content: '产品需求文档' },
+                    { from: 'AI Engineer', to: 'AI Testing Engineer', content: '开发完成，提交测试' },
+                    { from: 'AI Testing Engineer', to: 'QA', content: '测试报告' },
+                    { from: 'QA', to: 'Marketing', content: '产品上线准备' }
+                ]
+            },
+            {
+                id: 'ai-security-audit',
+                name: 'AI安全审计项目',
+                icon: '🔒',
+                desc: '从AI安全评估到风险控制的完整审计流程',
+                agents: ['AI Security Architect', 'Security', 'AI Engineer', 'CTO'],
+                positions: [
+                    { role: 'AI Security Architect', x: 400, y: 30 },
+                    { role: 'Security', x: 200, y: 150 },
+                    { role: 'AI Engineer', x: 600, y: 150 },
+                    { role: 'CTO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Security Architect', to: 'Security', content: '安全评估需求' },
+                    { from: 'Security', to: 'AI Engineer', content: '安全漏洞报告' },
+                    { from: 'AI Engineer', to: 'AI Security Architect', content: '修复方案' },
+                    { from: 'AI Security Architect', to: 'CTO', content: '安全审计报告' }
+                ]
+            },
+            {
+                id: 'ai-marketing-campaign',
+                name: 'AI营销活动项目',
+                icon: '📢',
+                desc: '从AI营销策略到活动执行的完整流程',
+                agents: ['AI Marketing Strategist', 'Marketing', 'Designer', 'Sales', 'CEO'],
+                positions: [
+                    { role: 'AI Marketing Strategist', x: 400, y: 30 },
+                    { role: 'Marketing', x: 200, y: 150 },
+                    { role: 'Designer', x: 600, y: 150 },
+                    { role: 'Sales', x: 200, y: 270 },
+                    { role: 'CEO', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Marketing Strategist', to: 'Marketing', content: '营销策略方案' },
+                    { from: 'Marketing', to: 'Designer', content: '营销素材需求' },
+                    { from: 'Designer', to: 'Marketing', content: '素材完成' },
+                    { from: 'Marketing', to: 'Sales', content: '活动执行' },
+                    { from: 'Sales', to: 'CEO', content: '营销效果汇报' }
+                ]
+            },
+            {
+                id: 'ai-data-analysis',
+                name: 'AI数据分析项目',
+                icon: '📊',
+                desc: '从数据收集到商业洞察的完整分析流程',
+                agents: ['AI Data Strategist', 'Data Analyst', 'AI Business Analyst', 'CEO'],
+                positions: [
+                    { role: 'AI Data Strategist', x: 400, y: 30 },
+                    { role: 'Data Analyst', x: 200, y: 150 },
+                    { role: 'AI Business Analyst', x: 600, y: 150 },
+                    { role: 'CEO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Data Strategist', to: 'Data Analyst', content: '数据收集需求' },
+                    { from: 'Data Analyst', to: 'AI Business Analyst', content: '数据报告' },
+                    { from: 'AI Business Analyst', to: 'AI Data Strategist', content: '业务洞察' },
+                    { from: 'AI Data Strategist', to: 'CEO', content: '战略建议' }
+                ]
+            },
+            {
+                id: 'ai-team-management',
+                name: 'AI团队管理项目',
+                icon: '👨‍💼',
+                desc: '从团队组建到项目交付的完整管理流程',
+                agents: ['AI Team Lead', 'AI Project Coordinator', 'AI Engineer', 'QA', 'CTO'],
+                positions: [
+                    { role: 'AI Team Lead', x: 400, y: 30 },
+                    { role: 'AI Project Coordinator', x: 200, y: 150 },
+                    { role: 'AI Engineer', x: 600, y: 150 },
+                    { role: 'QA', x: 200, y: 270 },
+                    { role: 'CTO', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Team Lead', to: 'AI Project Coordinator', content: '项目计划' },
+                    { from: 'AI Project Coordinator', to: 'AI Engineer', content: '任务分配' },
+                    { from: 'AI Engineer', to: 'QA', content: '提交测试' },
+                    { from: 'QA', to: 'AI Team Lead', content: '质量报告' },
+                    { from: 'AI Team Lead', to: 'CTO', content: '项目交付' }
+                ]
             }
         ];
 
@@ -7398,7 +7518,21 @@
             'AI Operations Manager': { icon: '📈', color: '#22c55e', role: 'AI运营经理' },
             'AI Training Specialist': { icon: '🎓', color: '#8b5cf6', role: 'AI培训专家' },
             'AI Quality Control': { icon: '✅', color: '#10b981', role: 'AI质量控制' },
-            'AI Innovation Lab': { icon: '💡', color: '#f43f5e', role: 'AI创新实验室' }
+            'AI Innovation Lab': { icon: '💡', color: '#f43f5e', role: 'AI创新实验室' },
+            // Cycle 304 新增角色
+            'AI Strategy Consultant': { icon: '🎯', color: '#0ea5e9', role: 'AI战略顾问' },
+            'AI Product Owner': { icon: '📦', color: '#f97316', role: 'AI产品负责人' },
+            'AI Technical Writer': { icon: '📝', color: '#8b5cf6', role: 'AI技术文档工程师' },
+            'AI DevOps Engineer': { icon: '🔧', color: '#22c55e', role: 'AIDevOps工程师' },
+            'AI Security Architect': { icon: '🏛️', color: '#dc2626', role: 'AI安全架构师' },
+            'AI Solution Designer': { icon: '💡', color: '#a855f7', role: 'AI解决方案设计师' },
+            'AI Data Strategist': { icon: '📊', color: '#14b8a6', role: 'AI数据策略师' },
+            'AI Marketing Strategist': { icon: '📢', color: '#ec4899', role: 'AI营销策略师' },
+            'AI UX Researcher': { icon: '🔬', color: '#06b6d4', role: 'AI用户体验研究员' },
+            'AI Business Analyst': { icon: '📈', color: '#f59e0b', role: 'AI业务分析师' },
+            'AI Team Lead': { icon: '👨‍💼', color: '#7c3aed', role: 'AI团队负责人' },
+            'AI Project Coordinator': { icon: '📋', color: '#64748b', role: 'AI项目协调员' },
+            'AI Vendor Manager': { icon: '🤝', color: '#22c55e', role: 'AI供应商经理' }
         };
 
         // 拖拽相关变量
