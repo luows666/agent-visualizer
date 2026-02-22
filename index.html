@@ -10332,6 +10332,116 @@
                     { from: 'AI Auditor', to: 'AI Risk Manager', content: '审计报告' },
                     { from: 'AI Risk Manager', to: 'CFO', content: '风险评估' }
                 ]
+            },
+            // Cycle 328 新增模板 - AI 智能客服系统
+            {
+                id: 'ai-customer-service',
+                name: 'AI智能客服系统',
+                icon: '🎧',
+                description: '从客户咨询到问题解决的完整客服流程',
+                agents: ['AI Customer Service', 'AI Chat Support', 'AI Voice Agent', 'AI Complaint Handler', 'AI Service Quality'],
+                positions: [
+                    { role: 'AI Customer Service', x: 400, y: 30 },
+                    { role: 'AI Chat Support', x: 200, y: 150 },
+                    { role: 'AI Voice Agent', x: 600, y: 150 },
+                    { role: 'AI Complaint Handler', x: 200, y: 270 },
+                    { role: 'AI Service Quality', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Customer Service', to: 'AI Chat Support', content: '转接在线客服' },
+                    { from: 'AI Chat Support', to: 'AI Voice Agent', content: '转接语音客服' },
+                    { from: 'AI Voice Agent', to: 'AI Complaint Handler', content: '升级投诉处理' },
+                    { from: 'AI Complaint Handler', to: 'AI Service Quality', content: '处理结果反馈' },
+                    { from: 'AI Service Quality', to: 'AI Customer Service', content: '服务质量评估' }
+                ]
+            },
+            // Cycle 328 新增模板 - AI 电子商务系统
+            {
+                id: 'ai-ecommerce',
+                name: 'AI电子商务系统',
+                icon: '🛒',
+                description: '从商品上架到营销推广的完整电商流程',
+                agents: ['AI Store Manager', 'AI Product Lister', 'AI Marketing Campaign', 'AI Customer Review', 'AI Sales Forecast'],
+                positions: [
+                    { role: 'AI Store Manager', x: 400, y: 30 },
+                    { role: 'AI Product Lister', x: 200, y: 150 },
+                    { role: 'AI Marketing Campaign', x: 600, y: 150 },
+                    { role: 'AI Customer Review', x: 200, y: 270 },
+                    { role: 'AI Sales Forecast', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Store Manager', to: 'AI Product Lister', content: '商品上架需求' },
+                    { from: 'AI Product Lister', to: 'AI Marketing Campaign', content: '商品已上架' },
+                    { from: 'AI Marketing Campaign', to: 'AI Customer Review', content: '营销活动分析' },
+                    { from: 'AI Customer Review', to: 'AI Sales Forecast', content: '评价数据分析' },
+                    { from: 'AI Sales Forecast', to: 'AI Store Manager', content: '销售预测报告' }
+                ]
+            },
+            // Cycle 328 新增模板 - AI 智能物流系统
+            {
+                id: 'ai-logistics',
+                name: 'AI智能物流系统',
+                icon: '🚚',
+                description: '从订单处理到配送完成的完整物流流程',
+                agents: ['AI Logistics Planner', 'AI Route Optimizer', 'AI Delivery Tracker', 'AI Warehouse Manager', 'AI Fleet Dispatcher'],
+                positions: [
+                    { role: 'AI Logistics Planner', x: 400, y: 30 },
+                    { role: 'AI Route Optimizer', x: 200, y: 150 },
+                    { role: 'AI Delivery Tracker', x: 600, y: 150 },
+                    { role: 'AI Warehouse Manager', x: 200, y: 270 },
+                    { role: 'AI Fleet Dispatcher', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Logistics Planner', to: 'AI Route Optimizer', content: '物流规划需求' },
+                    { from: 'AI Route Optimizer', to: 'AI Warehouse Manager', content: '路线规划完成' },
+                    { from: 'AI Warehouse Manager', to: 'AI Fleet Dispatcher', content: '备货完成' },
+                    { from: 'AI Fleet Dispatcher', to: 'AI Delivery Tracker', content: '车辆调度完成' },
+                    { from: 'AI Delivery Tracker', to: 'AI Logistics Planner', content: '配送状态更新' }
+                ]
+            },
+            // Cycle 328 新增模板 - AI 智能制造系统
+            {
+                id: 'ai-manufacturing',
+                name: 'AI智能制造系统',
+                icon: '🏭',
+                description: '从生产计划到质量控制的完整制造流程',
+                agents: ['AI Production Manager', 'AI Quality Control', 'AI Equipment Monitor', 'AI Supply Optimizer', 'AI Maintenance Predictor'],
+                positions: [
+                    { role: 'AI Production Manager', x: 400, y: 30 },
+                    { role: 'AI Quality Control', x: 200, y: 150 },
+                    { role: 'AI Equipment Monitor', x: 600, y: 150 },
+                    { role: 'AI Supply Optimizer', x: 200, y: 270 },
+                    { role: 'AI Maintenance Predictor', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Production Manager', to: 'AI Quality Control', content: '生产计划下达' },
+                    { from: 'AI Quality Control', to: 'AI Equipment Monitor', content: '质量要求传达' },
+                    { from: 'AI Equipment Monitor', to: 'AI Maintenance Predictor', content: '设备状态监控' },
+                    { from: 'AI Maintenance Predictor', to: 'AI Supply Optimizer', content: '维护需求反馈' },
+                    { from: 'AI Supply Optimizer', to: 'AI Production Manager', content: '供应链状态' }
+                ]
+            },
+            // Cycle 328 新增模板 - AI 智能能源系统
+            {
+                id: 'ai-energy',
+                name: 'AI智能能源系统',
+                icon: '⚡',
+                description: '从能源分配到碳中和的完整能源管理流程',
+                agents: ['AI Energy Analyst', 'AI Grid Manager', 'AI Carbon Tracker', 'AI Power Optimizer', 'AI Sustainability'],
+                positions: [
+                    { role: 'AI Energy Analyst', x: 400, y: 30 },
+                    { role: 'AI Grid Manager', x: 200, y: 150 },
+                    { role: 'AI Carbon Tracker', x: 600, y: 150 },
+                    { role: 'AI Power Optimizer', x: 200, y: 270 },
+                    { role: 'AI Sustainability', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Energy Analyst', to: 'AI Grid Manager', content: '能源分析需求' },
+                    { from: 'AI Grid Manager', to: 'AI Power Optimizer', content: '电网调度指令' },
+                    { from: 'AI Power Optimizer', to: 'AI Carbon Tracker', content: '优化方案执行' },
+                    { from: 'AI Carbon Tracker', to: 'AI Sustainability', content: '碳排放数据' },
+                    { from: 'AI Sustainability', to: 'AI Energy Analyst', content: '可持续性报告' }
+                ]
             }
         ];
 
@@ -11154,7 +11264,43 @@
             'AI Nurse': { icon: '👩‍⚕️', color: '#ec4899', role: 'AI护士' },
             'AI Medical Imager': { icon: '🏥', color: '#3b82f6', role: 'AI医学影像师' },
             'AI Drug Designer': { icon: '💊', color: '#8b5cf6', role: 'AI药物设计师' },
-            'AI Health Coach': { icon: '💪', color: '#22c55e', role: 'AI健康教练' }
+            'AI Health Coach': { icon: '💪', color: '#22c55e', role: 'AI健康教练' },
+            // Cycle 328 新增角色 - AI 智能客服
+            'AI Customer Service': { icon: '🎧', color: '#06b6d4', role: 'AI智能客服' },
+            'AI Chat Support': { icon: '💬', color: '#8b5cf6', role: 'AI聊天客服' },
+            'AI Voice Agent': { icon: '📞', color: '#f97316', role: 'AI语音客服' },
+            'AI Complaint Handler': { icon: '📝', color: '#ef4444', role: 'AI投诉处理' },
+            'AI Service Quality': { icon: '⭐', color: '#eab308', role: 'AI服务质量监督' },
+            // Cycle 328 新增角色 - AI 电子商务
+            'AI Store Manager': { icon: '🏪', color: '#22c55e', role: 'AI店铺运营' },
+            'AI Product Lister': { icon: '📦', color: '#f43f5e', role: 'AI商品上架' },
+            'AI Marketing Campaign': { icon: '📢', color: '#a855f7', role: 'AI营销策划' },
+            'AI Customer Review': { icon: '⭐', color: '#f59e0b', role: 'AI评价分析' },
+            'AI Sales Forecast': { icon: '📈', color: '#14b8a6', role: 'AI销售预测' },
+            // Cycle 328 新增角色 - AI 智能物流
+            'AI Logistics Planner': { icon: '🚚', color: '#0ea5e9', role: 'AI物流规划' },
+            'AI Route Optimizer': { icon: '🛤️', color: '#22c55e', role: 'AI路线优化' },
+            'AI Delivery Tracker': { icon: '📍', color: '#f97316', role: 'AI配送追踪' },
+            'AI Warehouse Manager': { icon: '🏭', color: '#64748b', role: 'AI仓储管理' },
+            'AI Fleet Dispatcher': { icon: '🚛', color: '#ec4899', role: 'AI车队调度' },
+            // Cycle 328 新增角色 - AI 智能制造
+            'AI Production Manager': { icon: '🏭', color: '#3b82f6', role: 'AI生产管理' },
+            'AI Quality Control': { icon: '✅', color: '#22c55e', role: 'AI质量控制' },
+            'AI Equipment Monitor': { icon: '🔧', color: '#f59e0b', role: 'AI设备监控' },
+            'AI Supply Optimizer': { icon: '⚙️', color: '#8b5cf6', role: 'AI供应链优化' },
+            'AI Maintenance Predictor': { icon: '🔮', color: '#ec4899', role: 'AI预测性维护' },
+            // Cycle 328 新增角色 - AI 智能能源
+            'AI Energy Analyst': { icon: '⚡', color: '#eab308', role: 'AI能源分析师' },
+            'AI Grid Manager': { icon: '🔌', color: '#22c55e', role: 'AI电网管理' },
+            'AI Carbon Tracker': { icon: '🌍', color: '#10b981', role: 'AI碳追踪' },
+            'AI Power Optimizer': { icon: '💡', color: '#f97316', role: 'AI电力优化' },
+            'AI Sustainability': { icon: '🌱', color: '#22c55e', role: 'AI可持续能源' },
+            // Cycle 328 新增角色 - AI 智能建筑
+            'AI Architect': { icon: '🏛️', color: '#8b5cf6', role: 'AI建筑师' },
+            'AI Interior Designer': { icon: '🛋️', color: '#ec4899', role: 'AI室内设计师' },
+            'AI Construction Manager': { icon: '👷', color: '#f59e0b', role: 'AI工程管理' },
+            'AI Building Monitor': { icon: '🏢', color: '#06b6d4', role: 'AI楼宇监控' },
+            'AI Real Estate Analyst': { icon: '🏠', color: '#14b8a6', role: 'AI房产分析' }
         };
 
         // 拖拽相关变量
