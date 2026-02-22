@@ -3013,6 +3013,153 @@
                     { from: 'Designer', to: 'Marketing', content: '素材完成' },
                     { from: 'Marketing', to: 'SEO Specialist', content: '优化效果报告' }
                 ]
+            },
+            // 新增模板
+            {
+                id: 'talent-recruitment',
+                name: '人才招聘',
+                icon: '🎯',
+                desc: '从岗位需求到候选人入职的招聘流程',
+                agents: ['HR', 'Technical Recruiter', 'CTO', 'CEO'],
+                positions: [
+                    { role: 'HR', x: 400, y: 30 },
+                    { role: 'Technical Recruiter', x: 200, y: 150 },
+                    { role: 'CTO', x: 600, y: 150 },
+                    { role: 'CEO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'HR', to: 'Technical Recruiter', content: '发布招聘需求' },
+                    { from: 'Technical Recruiter', to: 'CTO', content: '筛选简历' },
+                    { from: 'CTO', to: 'Technical Recruiter', content: '技术面试反馈' },
+                    { from: 'Technical Recruiter', to: 'HR', content: '候选人评估报告' },
+                    { from: 'HR', to: 'CEO', content: '录用决策' },
+                    { from: 'HR', to: 'Technical Recruiter', content: 'offer发放' }
+                ]
+            },
+            {
+                id: 'brand-strategy',
+                name: '品牌建设',
+                icon: '💎',
+                desc: '从品牌定位到全渠道传播的品牌策略流程',
+                agents: ['Brand Strategist', 'Designer', 'Marketing', 'Content Strategist'],
+                positions: [
+                    { role: 'Brand Strategist', x: 400, y: 30 },
+                    { role: 'Designer', x: 200, y: 150 },
+                    { role: 'Marketing', x: 600, y: 150 },
+                    { role: 'Content Strategist', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Brand Strategist', to: 'Designer', content: '品牌视觉设计需求' },
+                    { from: 'Designer', to: 'Brand Strategist', content: '品牌视觉方案' },
+                    { from: 'Brand Strategist', to: 'Content Strategist', content: '品牌内容策略' },
+                    { from: 'Content Strategist', to: 'Marketing', content: '内容分发计划' },
+                    { from: 'Marketing', to: 'Brand Strategist', content: '品牌传播效果' }
+                ]
+            },
+            {
+                id: 'product-launch',
+                name: '产品营销',
+                icon: '📣',
+                desc: '从产品发布到市场推广的营销流程',
+                agents: ['Product Marketing', 'Designer', 'Content Strategist', 'Sales', 'CEO'],
+                positions: [
+                    { role: 'Product Marketing', x: 400, y: 30 },
+                    { role: 'Designer', x: 200, y: 150 },
+                    { role: 'Content Strategist', x: 600, y: 150 },
+                    { role: 'Sales', x: 300, y: 270 },
+                    { role: 'CEO', x: 500, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Product Marketing', to: 'Designer', content: '产品宣传素材需求' },
+                    { from: 'Designer', to: 'Product Marketing', content: '宣传素材完成' },
+                    { from: 'Product Marketing', to: 'Content Strategist', content: '产品文案需求' },
+                    { from: 'Content Strategist', to: 'Product Marketing', content: '文案完成' },
+                    { from: 'Product Marketing', to: 'Sales', content: '销售话术培训' },
+                    { from: 'Sales', to: 'CEO', content: '销售业绩报告' }
+                ]
+            },
+            {
+                id: 'investor-pitch',
+                name: '融资路演',
+                icon: '💼',
+                desc: '从准备材料到获得投资的融资流程',
+                agents: ['CEO', 'CFO', 'Investment Analyst', 'Product Manager'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'CFO', x: 200, y: 150 },
+                    { role: 'Investment Analyst', x: 600, y: 150 },
+                    { role: 'Product Manager', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'CFO', content: '准备财务数据' },
+                    { from: 'CFO', to: 'Investment Analyst', content: '财务模型分析' },
+                    { from: 'Investment Analyst', to: 'CEO', content: '融资材料建议' },
+                    { from: 'CEO', to: 'Product Manager', content: '产品亮点整理' },
+                    { from: 'Product Manager', to: 'CEO', content: '产品演示材料' },
+                    { from: 'CEO', to: 'Investment Analyst', content: '路演准备完成' }
+                ]
+            },
+            {
+                id: 'customer-success',
+                name: '客户成功',
+                icon: '🤝',
+                desc: '从客户 onboarding 到持续价值交付的流程',
+                agents: ['Customer Success', 'Customer Support', 'Product Manager', 'Sales'],
+                positions: [
+                    { role: 'Customer Success', x: 400, y: 30 },
+                    { role: 'Customer Support', x: 200, y: 150 },
+                    { role: 'Product Manager', x: 600, y: 150 },
+                    { role: 'Sales', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Customer Success', to: 'Customer Support', content: '客户 onboarding 计划' },
+                    { from: 'Customer Support', to: 'Customer Success', content: '客户问题汇总' },
+                    { from: 'Customer Success', to: 'Product Manager', content: '客户需求反馈' },
+                    { from: 'Product Manager', to: 'Customer Success', content: '产品优化计划' },
+                    { from: 'Customer Success', to: 'Sales', content: '客户续费评估' },
+                    { from: 'Sales', to: 'Customer Success', content: '续费结果反馈' }
+                ]
+            },
+            {
+                id: 'data-driven-decision',
+                name: '数据驱动决策',
+                icon: '📊',
+                desc: '从数据收集到商业洞察的决策流程',
+                agents: ['BI Analyst', 'Data Engineer', 'Business Analyst', 'CEO'],
+                positions: [
+                    { role: 'BI Analyst', x: 400, y: 30 },
+                    { role: 'Data Engineer', x: 200, y: 150 },
+                    { role: 'Business Analyst', x: 600, y: 150 },
+                    { role: 'CEO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'BI Analyst', to: 'Data Engineer', content: '数据需求清单' },
+                    { from: 'Data Engineer', to: 'BI Analyst', content: '数据管道就绪' },
+                    { from: 'BI Analyst', to: 'Business Analyst', content: '数据分析需求' },
+                    { from: 'Business Analyst', to: 'BI Analyst', content: '分析结果' },
+                    { from: 'BI Analyst', to: 'CEO', content: '商业洞察报告' }
+                ]
+            },
+            {
+                id: 'growth-experiment',
+                name: '增长实验',
+                icon: '🧪',
+                desc: '从假设验证到增长策略迭代的流程',
+                agents: ['Growth Hacker', 'Data Analyst', 'Product Designer', 'Marketing'],
+                positions: [
+                    { role: 'Growth Hacker', x: 400, y: 30 },
+                    { role: 'Data Analyst', x: 200, y: 150 },
+                    { role: 'Product Designer', x: 600, y: 150 },
+                    { role: 'Marketing', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Growth Hacker', to: 'Data Analyst', content: '分析用户行为数据' },
+                    { from: 'Data Analyst', to: 'Growth Hacker', content: '增长机会分析' },
+                    { from: 'Growth Hacker', to: 'Product Designer', content: '实验方案设计' },
+                    { from: 'Product Designer', to: 'Growth Hacker', content: '实验原型' },
+                    { from: 'Growth Hacker', to: 'Marketing', content: '实验推广计划' },
+                    { from: 'Marketing', to: 'Growth Hacker', content: '实验结果反馈' }
+                ]
             }
         ];
 
@@ -3052,7 +3199,13 @@
             'BI Analyst': { icon: '📊', color: '#06b6d4', role: '商业智能分析师' },
             'Content Strategist': { icon: '✍️', color: '#a855f7', role: '内容策略师' },
             'SEO Specialist': { icon: '🔎', color: '#84cc16', role: 'SEO 专家' },
-            'Community Manager': { icon: '🌐', color: '#14b8a6', role: '社区经理' }
+            'Community Manager': { icon: '🌐', color: '#14b8a6', role: '社区经理' },
+            // 新增角色
+            'Technical Recruiter': { icon: '🎯', color: '#ec4899', role: '技术招聘专员' },
+            'Brand Strategist': { icon: '💎', color: '#f59e0b', role: '品牌策略师' },
+            'Product Marketing': { icon: '📣', color: '#8b5cf6', role: '产品营销经理' },
+            'Investment Analyst': { icon: '💼', color: '#0ea5e9', role: '投资分析师' },
+            'Customer Success': { icon: '🤝', color: '#22c55e', role: '客户成功经理' }
         };
 
         // 拖拽相关变量
