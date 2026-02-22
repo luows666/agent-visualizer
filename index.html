@@ -10706,6 +10706,138 @@
                     { from: 'AI Injury Prevention', to: 'AI Game Strategy', content: '健康状况' },
                     { from: 'AI Game Strategy', to: 'AI Fitness Coach', content: '战术要求' }
                 ]
+            },
+            // Cycle 331 新增模板 - AI 智能安防系统
+            {
+                id: 'ai-security',
+                name: 'AI智能安防系统',
+                icon: '🛡️',
+                description: '从监控预警到应急响应的完整安防流程',
+                agents: ['AI Security Guard', 'AI Surveillance', 'AI Access Control', 'AI Fire Alert', 'AI Intrusion Detection'],
+                positions: [
+                    { role: 'AI Security Guard', x: 400, y: 30 },
+                    { role: 'AI Surveillance', x: 200, y: 150 },
+                    { role: 'AI Access Control', x: 600, y: 150 },
+                    { role: 'AI Fire Alert', x: 200, y: 270 },
+                    { role: 'AI Intrusion Detection', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Security Guard', to: 'AI Surveillance', content: '安保需求' },
+                    { from: 'AI Surveillance', to: 'AI Access Control', content: '监控画面' },
+                    { from: 'AI Access Control', to: 'AI Fire Alert', content: '门禁记录' },
+                    { from: 'AI Fire Alert', to: 'AI Intrusion Detection', content: '火警信息' },
+                    { from: 'AI Intrusion Detection', to: 'AI Security Guard', content: '入侵警报' }
+                ]
+            },
+            // Cycle 331 新增模板 - AI 智能旅游系统
+            {
+                id: 'ai-travel',
+                name: 'AI智能旅游系统',
+                icon: '✈️',
+                description: '从旅行规划到旅游服务的完整旅游流程',
+                agents: ['AI Travel Planner', 'AI Tour Guide', 'AI Hotel Booking', 'AI Flight Scheduler', 'AI Tourist Translator'],
+                positions: [
+                    { role: 'AI Travel Planner', x: 400, y: 30 },
+                    { role: 'AI Tour Guide', x: 200, y: 150 },
+                    { role: 'AI Hotel Booking', x: 600, y: 150 },
+                    { role: 'AI Flight Scheduler', x: 200, y: 270 },
+                    { role: 'AI Tourist Translator', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Travel Planner', to: 'AI Tour Guide', content: '旅行计划' },
+                    { from: 'AI Tour Guide', to: 'AI Hotel Booking', content: '导游需求' },
+                    { from: 'AI Hotel Booking', to: 'AI Flight Scheduler', content: '酒店预订' },
+                    { from: 'AI Flight Scheduler', to: 'AI Tourist Translator', content: '航班安排' },
+                    { from: 'AI Tourist Translator', to: 'AI Travel Planner', content: '翻译需求' }
+                ]
+            },
+            // Cycle 331 新增模板 - AI 智能宠物系统
+            {
+                id: 'ai-pet',
+                name: 'AI智能宠物系统',
+                icon: '🐕',
+                description: '从宠物医疗到护理服务的完整宠物服务流程',
+                agents: ['AI Vet Assistant', 'AI Pet Trainer', 'AI Pet Nutritionist', 'AI Pet Groomer', 'AI Pet Behaviorist'],
+                positions: [
+                    { role: 'AI Vet Assistant', x: 400, y: 30 },
+                    { role: 'AI Pet Trainer', x: 200, y: 150 },
+                    { role: 'AI Pet Nutritionist', x: 600, y: 150 },
+                    { role: 'AI Pet Groomer', x: 200, y: 270 },
+                    { role: 'AI Pet Behaviorist', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Vet Assistant', to: 'AI Pet Trainer', content: '医疗记录' },
+                    { from: 'AI Pet Trainer', to: 'AI Pet Nutritionist', content: '训练需求' },
+                    { from: 'AI Pet Nutritionist', to: 'AI Pet Groomer', content: '营养方案' },
+                    { from: 'AI Pet Groomer', to: 'AI Pet Behaviorist', content: '美容需求' },
+                    { from: 'AI Pet Behaviorist', to: 'AI Vet Assistant', content: '行为分析' }
+                ]
+            },
+            // Cycle 331 新增模板 - AI 智能家政系统
+            {
+                id: 'ai-housekeeping',
+                name: 'AI智能家政系统',
+                icon: '🧹',
+                description: '从家务料理到居家护理的完整家政服务流程',
+                agents: ['AI Housekeeper', 'AI Meal Planner', 'AI Childcare', 'AI Elder Care', 'AI Home Organizer'],
+                positions: [
+                    { role: 'AI Housekeeper', x: 400, y: 30 },
+                    { role: 'AI Meal Planner', x: 200, y: 150 },
+                    { role: 'AI Childcare', x: 600, y: 150 },
+                    { role: 'AI Elder Care', x: 200, y: 270 },
+                    { role: 'AI Home Organizer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Housekeeper', to: 'AI Meal Planner', content: '家政需求' },
+                    { from: 'AI Meal Planner', to: 'AI Childcare', content: '膳食计划' },
+                    { from: 'AI Childcare', to: 'AI Elder Care', content: '育儿需求' },
+                    { from: 'AI Elder Care', to: 'AI Home Organizer', content: '养老护理' },
+                    { from: 'AI Home Organizer', to: 'AI Housekeeper', content: '整理需求' }
+                ]
+            },
+            // Cycle 331 新增模板 - AI 智能维修系统
+            {
+                id: 'ai-maintenance',
+                name: 'AI智能维修系统',
+                icon: '🔧',
+                description: '从设备检测到维修完成的完整维修服务流程',
+                agents: ['AI Maintenance Tech', 'AI Equipment Inspector', 'AI Repair Planner', 'AI Parts Manager', 'AI Quality Inspector'],
+                positions: [
+                    { role: 'AI Maintenance Tech', x: 400, y: 30 },
+                    { role: 'AI Equipment Inspector', x: 200, y: 150 },
+                    { role: 'AI Repair Planner', x: 600, y: 150 },
+                    { role: 'AI Parts Manager', x: 200, y: 270 },
+                    { role: 'AI Quality Inspector', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Maintenance Tech', to: 'AI Equipment Inspector', content: '维修请求' },
+                    { from: 'AI Equipment Inspector', to: 'AI Repair Planner', content: '检测报告' },
+                    { from: 'AI Repair Planner', to: 'AI Parts Manager', content: '维修计划' },
+                    { from: 'AI Parts Manager', to: 'AI Quality Inspector', content: '配件需求' },
+                    { from: 'AI Quality Inspector', to: 'AI Maintenance Tech', content: '质检报告' }
+                ]
+            },
+            // Cycle 331 新增模板 - AI 智能矿业系统
+            {
+                id: 'ai-mining',
+                name: 'AI智能矿业系统',
+                icon: '⛏️',
+                description: '从资源勘探到安全开采的完整矿业生产流程',
+                agents: ['AI Mining Engineer', 'AI Safety Monitor', 'AI Resource Analyzer', 'AI Equipment Operator', 'AI Environmental Guard'],
+                positions: [
+                    { role: 'AI Mining Engineer', x: 400, y: 30 },
+                    { role: 'AI Safety Monitor', x: 200, y: 150 },
+                    { role: 'AI Resource Analyzer', x: 600, y: 150 },
+                    { role: 'AI Equipment Operator', x: 200, y: 270 },
+                    { role: 'AI Environmental Guard', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Mining Engineer', to: 'AI Safety Monitor', content: '开采计划' },
+                    { from: 'AI Safety Monitor', to: 'AI Resource Analyzer', content: '安全报告' },
+                    { from: 'AI Resource Analyzer', to: 'AI Equipment Operator', content: '资源分析' },
+                    { from: 'AI Equipment Operator', to: 'AI Environmental Guard', content: '操作记录' },
+                    { from: 'AI Environmental Guard', to: 'AI Mining Engineer', content: '环保监测' }
+                ]
             }
         ];
 
@@ -11624,7 +11756,43 @@
             'AI Restaurant Manager': { icon: '🍽️', color: '#14b8a6', role: 'AI餐厅经理' },
             'AI Menu Designer': { icon: '📋', color: '#22c55e', role: 'AI菜单设计师' },
             'AI Food Safety': { icon: '✅', color: '#06b6d4', role: 'AI食品安全师' },
-            'AI Nutritionist': { icon: '🥗', color: '#84cc16', role: 'AI营养师' }
+            'AI Nutritionist': { icon: '🥗', color: '#84cc16', role: 'AI营养师' },
+            // Cycle 331 新增角色 - AI 智能安防
+            'AI Security Guard': { icon: '🛡️', color: '#dc2626', role: 'AI安防守卫' },
+            'AI Surveillance': { icon: '📹', color: '#7c3aed', role: 'AI监控系统' },
+            'AI Access Control': { icon: '🔐', color: '#0891b2', role: 'AI门禁管理' },
+            'AI Fire Alert': { icon: '🔥', color: '#f97316', role: 'AI火灾预警' },
+            'AI Intrusion Detection': { icon: '⚠️', color: '#ef4444', role: 'AI入侵检测' },
+            // Cycle 331 新增角色 - AI 智能旅游
+            'AI Travel Planner': { icon: '✈️', color: '#0ea5e9', role: 'AI旅行规划师' },
+            'AI Tour Guide': { icon: '🎤', color: '#22c55e', role: 'AI导游' },
+            'AI Hotel Booking': { icon: '🏨', color: '#f59e0b', role: 'AI酒店预订' },
+            'AI Flight Scheduler': { icon: '🛫', color: '#8b5cf6', role: 'AI航班调度' },
+            'AI Tourist Translator': { icon: '🌐', color: '#06b6d4', role: 'AI旅游翻译' },
+            // Cycle 331 新增角色 - AI 智能宠物
+            'AI Vet Assistant': { icon: '🐕', color: '#14b8a6', role: 'AI宠物医生助手' },
+            'AI Pet Trainer': { icon: '🎾', color: '#f97316', role: 'AI宠物训练师' },
+            'AI Pet Nutritionist': { icon: '🦴', color: '#84cc16', role: 'AI宠物营养师' },
+            'AI Pet Groomer': { icon: '✂️', color: '#ec4899', role: 'AI宠物美容师' },
+            'AI Pet Behaviorist': { icon: '🧠', color: '#a855f7', role: 'AI宠物行为学家' },
+            // Cycle 331 新增角色 - AI 智能家政
+            'AI Housekeeper': { icon: '🧹', color: '#22c55e', role: 'AI家政服务员' },
+            'AI Meal Planner': { icon: '🍳', color: '#f59e0b', role: 'AI膳食规划师' },
+            'AI Childcare': { icon: '👶', color: '#ec4899', role: 'AI育儿保姆' },
+            'AI Elder Care': { icon: '👴', color: '#06b6d4', role: 'AI养老护理' },
+            'AI Home Organizer': { icon: '📦', color: '#8b5cf6', role: 'AI家居整理师' },
+            // Cycle 331 新增角色 - AI 智能维修
+            'AI Maintenance Tech': { icon: '🔧', color: '#64748b', role: 'AI维修技师' },
+            'AI Equipment Inspector': { icon: '🔍', color: '#f97316', role: 'AI设备检测师' },
+            'AI Repair Planner': { icon: '📋', color: '#0ea5e9', role: 'AI维修计划师' },
+            'AI Parts Manager': { icon: '⚙️', color: '#22c55e', role: 'AI配件管理员' },
+            'AI Quality Inspector': { icon: '✅', color: '#14b8a6', role: 'AI质检员' },
+            // Cycle 331 新增角色 - AI 智能矿业
+            'AI Mining Engineer': { icon: '⛏️', color: '#78716c', role: 'AI矿业工程师' },
+            'AI Safety Monitor': { icon: '⚠️', color: '#dc2626', role: 'AI安全监控师' },
+            'AI Resource Analyzer': { icon: '📊', color: '#f59e0b', role: 'AI资源分析师' },
+            'AI Equipment Operator': { icon: '🚜', color: '#22c55e', role: 'AI设备操作员' },
+            'AI Environmental Guard': { icon: '🌿', color: '#10b981', role: 'AI环保监察员' }
         };
 
         // 拖拽相关变量
