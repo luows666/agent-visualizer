@@ -2244,6 +2244,143 @@
                     { from: 'Developer', to: 'QA', content: 'API 单元测试' },
                     { from: 'Developer', to: 'CTO', content: 'API 文档完成' }
                 ]
+            },
+            {
+                id: 'user-onboarding',
+                name: '用户 onboarding',
+                icon: '🎓',
+                desc: '从新用户注册到完成首次使用的引导流程',
+                agents: ['Sales', 'Marketing', 'Developer', 'CEO'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 50 },
+                    { role: 'Sales', x: 200, y: 180 },
+                    { role: 'Marketing', x: 400, y: 180 },
+                    { role: 'Developer', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Sales', content: '确定用户引导策略' },
+                    { from: 'Sales', to: 'Marketing', content: '用户提供反馈' },
+                    { from: 'Marketing', to: 'Developer', content: '产品优化建议' },
+                    { from: 'Developer', to: 'CEO', content: '新功能上线报告' }
+                ]
+            },
+            {
+                id: 'competitor-analysis',
+                name: '竞品分析',
+                icon: '🥊',
+                desc: '从竞争对手调研到差异化策略的制定流程',
+                agents: ['CEO', 'Researcher', 'Marketing', 'Sales'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 50 },
+                    { role: 'Researcher', x: 200, y: 180 },
+                    { role: 'Marketing', x: 400, y: 180 },
+                    { role: 'Sales', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Researcher', content: '调研竞品功能和定价' },
+                    { from: 'Researcher', to: 'Marketing', content: '竞品分析报告' },
+                    { from: 'Marketing', to: 'Sales', content: '差异化竞争策略' },
+                    { from: 'Sales', to: 'CEO', content: '市场策略建议' }
+                ]
+            },
+            {
+                id: 'performance-review',
+                name: '绩效评估',
+                icon: '📊',
+                desc: '设定到绩效从目标反馈的完整评估流程',
+                agents: ['CEO', 'CTO', 'Sales', 'HR'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 50 },
+                    { role: 'CTO', x: 200, y: 180 },
+                    { role: 'Sales', x: 400, y: 180 },
+                    { role: 'HR', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'HR', content: '制定评估标准' },
+                    { from: 'HR', to: 'CTO', content: '技术团队绩效评估' },
+                    { from: 'HR', to: 'Sales', content: '销售团队绩效评估' },
+                    { from: 'HR', to: 'CEO', content: '绩效评估报告' }
+                ]
+            },
+            {
+                id: 'incident-response',
+                name: '故障响应',
+                icon: '🚑',
+                desc: '从问题发现到服务恢复的应急流程',
+                agents: ['CTO', 'Developer', 'QA', 'Sales'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 50 },
+                    { role: 'Developer', x: 200, y: 180 },
+                    { role: 'QA', x: 400, y: 180 },
+                    { role: 'Sales', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Developer', content: '立即排查问题' },
+                    { from: 'Developer', to: 'QA', content: '修复方案测试' },
+                    { from: 'QA', to: 'CTO', content: '修复验证通过' },
+                    { from: 'CTO', to: 'Sales', content: '服务恢复通知' }
+                ]
+            },
+            {
+                id: 'feature-request',
+                name: '需求评审',
+                icon: '📝',
+                desc: '从需求收集到开发排期的评审流程',
+                agents: ['CEO', 'Product Manager', 'Designer', 'Developer', 'QA'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Product Manager', x: 200, y: 120 },
+                    { role: 'Designer', x: 400, y: 120 },
+                    { role: 'Developer', x: 200, y: 220 },
+                    { role: 'QA', x: 400, y: 220 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Product Manager', content: '确定新需求方向' },
+                    { from: 'Product Manager', to: 'Designer', content: '需求原型设计' },
+                    { from: 'Product Manager', to: 'Developer', content: '技术评估' },
+                    { from: 'Designer', to: 'Developer', content: '设计稿交付' },
+                    { from: 'Developer', to: 'QA', content: '测试用例评审' }
+                ]
+            },
+            {
+                id: 'cloud-migration',
+                name: '云迁移',
+                icon: '☁️',
+                desc: '从本地服务迁移到云端的完整流程',
+                agents: ['CTO', 'Developer', 'QA', 'Researcher'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 50 },
+                    { role: 'Developer', x: 200, y: 180 },
+                    { role: 'QA', x: 400, y: 180 },
+                    { role: 'Researcher', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Researcher', content: '制定迁移方案' },
+                    { from: 'Researcher', to: 'Developer', content: '技术方案确认' },
+                    { from: 'Developer', to: 'QA', content: '迁移测试' },
+                    { from: 'QA', to: 'CTO', content: '迁移验证报告' }
+                ]
+            },
+            {
+                id: 'brand-launch',
+                name: '品牌发布',
+                icon: '🏷️',
+                desc: '从品牌策划到全面发布的营销流程',
+                agents: ['CEO', 'Marketing', 'Designer', 'Sales', 'Researcher'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Marketing', x: 400, y: 120 },
+                    { role: 'Researcher', x: 200, y: 220 },
+                    { role: 'Designer', x: 400, y: 220 },
+                    { role: 'Sales', x: 600, y: 220 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Marketing', content: '确定品牌定位' },
+                    { from: 'Marketing', to: 'Researcher', content: '市场调研' },
+                    { from: 'Researcher', to: 'Designer', content: '品牌设计需求' },
+                    { from: 'Designer', to: 'Marketing', content: '品牌视觉完成' },
+                    { from: 'Marketing', to: 'Sales', content: '品牌发布计划' }
+                ]
             }
         ];
 
@@ -2531,8 +2668,31 @@
                 const role = agentRoles[agent.role] || { color: '#6b7280', icon: '🤖' };
                 const isSelected = selectedAgents.has(agent.id);
                 const strokeWidth = isSelected ? 4 : 2;
+
+                // 检查是否有其他用户正在编辑此 Agent
+                let beingEditedByOther = false;
+                let editingPeerCount = 0;
+                Object.values(peerSelections).forEach(selectedAgentId => {
+                    if (selectedAgentId === agent.id) {
+                        beingEditedByOther = true;
+                        editingPeerCount++;
+                    }
+                });
+
                 return `
                     <g class="agent-node ${isSelected ? 'selected' : ''}" onclick="${batchMode ? `toggleAgentSelection(${agent.id})` : `selectAgent(${agent.id})`}" onmousedown="startConnection(event, ${agent.id})" style="cursor: pointer">
+                        ${beingEditedByOther ? `
+                        <circle
+                            cx="${agent.x}" cy="${agent.y}" r="40"
+                            fill="none"
+                            stroke="#f97316"
+                            stroke-width="3"
+                            stroke-dasharray="5,3"
+                            opacity="0.8"
+                        >
+                            <animateTransform attributeName="transform" type="rotate" from="0 ${agent.x} ${agent.y}" to="360 ${agent.x} ${agent.y}" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        ` : ''}
                         <circle
                             cx="${agent.x}" cy="${agent.y}" r="35"
                             fill="${role.color}20"
@@ -2552,6 +2712,12 @@
                             stroke="#1e293b"
                             stroke-width="2"
                         />
+                        ${beingEditedByOther ? `
+                        <circle cx="${agent.x - 25}" cy="${agent.y + 25}" r="12" fill="#f97316" stroke="#fff" stroke-width="2">
+                            <title>其他用户正在编辑此 Agent</title>
+                        </circle>
+                        <text x="${agent.x - 25}" y="${agent.y + 29}" text-anchor="middle" fill="#fff" font-size="12">✏️</text>
+                        ` : ''}
                         <!-- 连接点 -->
                         <circle cx="${agent.x + 35}" cy="${agent.y}" r="6" fill="var(--accent)" opacity="0" class="connect-point">
                             <title>拖拽创建连接</title>
@@ -2723,6 +2889,38 @@
             selectedAgent = id;
             renderAgents();
             renderDetails();
+
+            // 在协作模式下广播选中的 Agent
+            if (collaborationStatus !== 'disconnected') {
+                broadcastSelection(id);
+            }
+        }
+
+        // 广播选中的 Agent
+        function broadcastSelection(agentId) {
+            const message = {
+                type: 'selection',
+                data: {
+                    agentId: agentId,
+                    peerId: peer?.id || 'unknown'
+                }
+            };
+            // Host 发送给所有连接者
+            if (isHost) {
+                connections.forEach(conn => {
+                    if (conn.open) {
+                        conn.send(message);
+                    }
+                });
+            }
+            // 连接者发送给 host
+            else if (peer) {
+                connections.forEach(conn => {
+                    if (conn.open) {
+                        conn.send(message);
+                    }
+                });
+            }
         }
 
         // 渲染详情面板
@@ -3787,6 +3985,7 @@
         let isHost = false;
         let currentSessionId = null;
         let collaborationStatus = 'disconnected'; // disconnected, hosting, joined
+        let peerSelections = {}; // Track which agent each peer is editing
 
         // 协作状态指示器
         let collaborationIndicator = null;
@@ -3992,8 +4191,15 @@
 
             conn.on('close', () => {
                 connections = connections.filter(c => c !== conn);
+                // 清除该 peer 的选中状态
+                Object.keys(peerSelections).forEach(peerId => {
+                    if (connections.findIndex(c => c.peer === peerId) === -1) {
+                        delete peerSelections[peerId];
+                    }
+                });
                 updatePeerList();
                 updateCollaborationIndicator('hosting', connections.length);
+                renderFlow();
             });
         }
 
@@ -4019,10 +4225,37 @@
                     console.log('Received incremental update');
                     applyRemoteUpdate(data.data);
                     break;
+                case 'selection':
+                    // 收到其他用户选中的 Agent
+                    console.log('Received peer selection:', data.data);
+                    handlePeerSelection(data.data, conn);
+                    break;
                 case 'cursor':
                     // 收到光标位置更新（可选）
                     break;
             }
+        }
+
+        // 处理其他用户的选中状态
+        function handlePeerSelection(data, conn) {
+            // 记录该 peer 选中的 agent
+            const peerId = data.peerId;
+            peerSelections[peerId] = data.agentId;
+
+            // 如果是 host，将这个选择广播给其他所有连接者
+            if (isHost) {
+                connections.forEach(c => {
+                    if (c !== conn && c.open) {
+                        c.send({
+                            type: 'selection',
+                            data: data
+                        });
+                    }
+                });
+            }
+
+            // 重新渲染流程图以显示选中状态
+            renderFlow();
         }
 
         function getCurrentWorkflowData() {
@@ -4152,9 +4385,11 @@
             collaborationStatus = 'disconnected';
             currentSessionId = null;
             isHost = false;
+            peerSelections = {}; // 清除所有 peer 的选中状态
 
             updateCollaborationIndicator('disconnected');
             updateCollaborationView();
+            renderFlow();
             showNotification('已离开协作', 'info');
         }
 
