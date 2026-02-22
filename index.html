@@ -146,6 +146,15 @@
             background: var(--bg-tertiary);
         }
 
+        /* Agent 节点连接点 */
+        .agent-node .connect-point {
+            transition: opacity 0.2s;
+        }
+
+        .agent-node:hover .connect-point {
+            opacity: 1 !important;
+        }
+
         .agent-item.active {
             background: var(--bg-tertiary);
             border-color: var(--accent);
@@ -517,6 +526,95 @@
 
         .drop-indicator.show {
             display: flex;
+        }
+
+        /* 拖拽连接线 */
+        .connection-line {
+            stroke: var(--accent);
+            stroke-width: 2;
+            stroke-dasharray: 5, 5;
+            fill: none;
+            pointer-events: none;
+        }
+
+        .connection-preview {
+            stroke: var(--accent);
+            stroke-width: 3;
+            stroke-dasharray: 8, 4;
+            fill: none;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        /* 连接提示 */
+        .connect-hint {
+            position: absolute;
+            background: var(--bg-secondary);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            pointer-events: none;
+            z-index: 50;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 连接消息 Modal */
+        .message-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .message-modal.show {
+            display: flex;
+        }
+
+        .message-modal .modal {
+            width: 450px;
+        }
+
+        .message-modal textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 14px;
+            resize: vertical;
+            margin-bottom: 16px;
+        }
+
+        .message-modal textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .connection-preview-area {
+            background: var(--bg-tertiary);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-size: 13px;
+        }
+
+        .connection-preview-from {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .connection-preview-to {
+            color: var(--success);
+            font-weight: 500;
         }
 
         /* 动画 */
@@ -951,6 +1049,28 @@
         </div>
     </div>
 
+    <!-- 连接消息 Modal -->
+    <div class="message-modal" id="messageModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>📝 创建消息连接</h2>
+                <button class="modal-close" onclick="closeMessageModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="connection-preview-area">
+                    <span class="connection-preview-from" id="connFromName"></span>
+                    <span> → </span>
+                    <span class="connection-preview-to" id="connToName"></span>
+                </div>
+                <textarea id="messageContent" placeholder="输入消息内容..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeMessageModal()">取消</button>
+                <button class="btn btn-primary" onclick="createConnection()">创建连接</button>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
         <script>
@@ -985,6 +1105,11 @@
         let draggedRole = null;
         let dragOverX = 0;
         let dragOverY = 0;
+
+        // 连接相关变量
+        let isConnecting = false;
+        let connectFromAgent = null;
+        let connectionLine = null;
 
         // 渲染角色卡牌（用于拖拽）
         function renderRoleCards() {
@@ -1179,7 +1304,7 @@
             nodesGroup.innerHTML = agents.map(agent => {
                 const role = agentRoles[agent.role] || { color: '#6b7280', icon: '🤖' };
                 return `
-                    <g class="agent-node" onclick="selectAgent(${agent.id})" style="cursor: pointer">
+                    <g class="agent-node" onclick="selectAgent(${agent.id})" onmousedown="startConnection(event, ${agent.id})" style="cursor: pointer">
                         <circle
                             cx="${agent.x}" cy="${agent.y}" r="35"
                             fill="${role.color}20"
@@ -1198,6 +1323,10 @@
                             stroke="#1e293b"
                             stroke-width="2"
                         />
+                        <!-- 连接点 -->
+                        <circle cx="${agent.x + 35}" cy="${agent.y}" r="6" fill="var(--accent)" opacity="0" class="connect-point">
+                            <title>拖拽创建连接</title>
+                        </circle>
                     </g>
                 `;
             }).join('');
@@ -1212,6 +1341,148 @@
             };
             return colors[status] || '#6b7280';
         }
+
+        // ======== 拖拽连接功能 ========
+
+        // 开始连接
+        function startConnection(event, agentId) {
+            // 如果是点击节点上的特定区域（如状态球），不启动连接
+            if (event.target.classList.contains('connect-point') || event.target.tagName === 'circle') {
+                event.preventDefault();
+                isConnecting = true;
+                connectFromAgent = agentId;
+
+                // 创建连接线
+                const connectionsGroup = document.getElementById('connections');
+                const svg = document.getElementById('flowCanvas');
+                const rect = svg.getBoundingClientRect();
+
+                const agent = agents.find(a => a.id === agentId);
+                connectionLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                connectionLine.setAttribute('x1', agent.x);
+                connectionLine.setAttribute('y1', agent.y);
+                connectionLine.setAttribute('x2', agent.x);
+                connectionLine.setAttribute('y2', agent.y);
+                connectionLine.setAttribute('class', 'connection-preview');
+                connectionsGroup.appendChild(connectionLine);
+
+                // 添加全局鼠标事件
+                document.addEventListener('mousemove', updateConnectionLine);
+                document.addEventListener('mouseup', endConnection);
+
+                // 阻止事件传播
+                event.stopPropagation();
+            }
+        }
+
+        // 更新连接线
+        function updateConnectionLine(event) {
+            if (!isConnecting || !connectionLine) return;
+
+            const svg = document.getElementById('flowCanvas');
+            const rect = svg.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            connectionLine.setAttribute('x2', x);
+            connectionLine.setAttribute('y2', y);
+        }
+
+        // 结束连接
+        function endConnection(event) {
+            if (!isConnecting) return;
+
+            // 移除事件监听
+            document.removeEventListener('mousemove', updateConnectionLine);
+            document.removeEventListener('mouseup', endConnection);
+
+            // 检查是否释放目标是一个 Agent
+            const svg = document.getElementById('flowCanvas');
+            const rect = svg.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            // 查找目标 Agent
+            const targetAgent = agents.find(agent => {
+                const dx = agent.x - x;
+                const dy = agent.y - y;
+                return Math.sqrt(dx * dx + dy * dy) < 40;
+            });
+
+            if (targetAgent && targetAgent.id !== connectFromAgent) {
+                // 打开消息输入框
+                openMessageModal(connectFromAgent, targetAgent.id);
+            }
+
+            // 移除连接线
+            if (connectionLine) {
+                connectionLine.remove();
+                connectionLine = null;
+            }
+
+            isConnecting = false;
+            connectFromAgent = null;
+        }
+
+        // 打开消息输入框
+        function openMessageModal(fromId, toId) {
+            const fromAgent = agents.find(a => a.id === fromId);
+            const toAgent = agents.find(a => a.id === toId);
+
+            document.getElementById('connFromName').textContent = fromAgent.name;
+            document.getElementById('connToName').textContent = toAgent.name;
+            document.getElementById('messageContent').value = '';
+            document.getElementById('messageModal').classList.add('show');
+
+            // 存储连接信息
+            document.getElementById('messageModal').dataset.fromId = fromId;
+            document.getElementById('messageModal').dataset.toId = toId;
+
+            document.getElementById('messageContent').focus();
+        }
+
+        // 关闭消息输入框
+        function closeMessageModal() {
+            document.getElementById('messageModal').classList.remove('show');
+        }
+
+        // 创建连接
+        function createConnection() {
+            const modal = document.getElementById('messageModal');
+            const fromId = parseInt(modal.dataset.fromId);
+            const toId = parseInt(modal.dataset.toId);
+            const content = document.getElementById('messageContent').value.trim();
+
+            if (!content) {
+                alert('请输入消息内容');
+                return;
+            }
+
+            // 创建新消息
+            const newMessage = {
+                from: fromId,
+                to: toId,
+                content: content,
+                time: new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })
+            };
+            messages.push(newMessage);
+
+            // 更新显示
+            renderFlow();
+            updateTimeline();
+
+            closeMessageModal();
+            showNotification('消息连接已创建', 'success');
+        }
+
+        // 点击模态框外部关闭
+        document.getElementById('messageModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeMessageModal();
+            }
+        });
+
+        // ======== 结束拖拽连接功能 ========
 
         // 选择 Agent
         function selectAgent(id) {
