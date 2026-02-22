@@ -11234,6 +11234,140 @@
                     { from: 'AI Performance Manager', to: 'AI Employee Relations', content: '绩效数据' },
                     { from: 'AI Employee Relations', to: 'AI Recruiter', content: '员工反馈' }
                 ]
+            },
+            // Cycle 335 新增模板 - AI智能基础科学系统
+            {
+                id: 'ai-basic-science',
+                name: 'AI智能基础科学系统',
+                icon: '🔬',
+                description: '从理论研究到科学发现的完整基础科学研究流程',
+                agents: ['AI Physicist', 'AI Chemist', 'AI Biologist', 'AI Mathematician', 'AI Geologist', 'AI Astronomer'],
+                positions: [
+                    { role: 'AI Physicist', x: 200, y: 50 },
+                    { role: 'AI Chemist', x: 400, y: 50 },
+                    { role: 'AI Biologist', x: 600, y: 50 },
+                    { role: 'AI Mathematician', x: 200, y: 200 },
+                    { role: 'AI Geologist', x: 400, y: 200 },
+                    { role: 'AI Astronomer', x: 600, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Physicist', to: 'AI Mathematician', content: '物理理论数学建模' },
+                    { from: 'AI Chemist', to: 'AI Biologist', content: '化学与生物交叉研究' },
+                    { from: 'AI Biologist', to: 'AI Geologist', content: '生物地质学研究' },
+                    { from: 'AI Geologist', to: 'AI Astronomer', content: '地质天文综合分析' },
+                    { from: 'AI Mathematician', to: 'AI Astronomer', content: '天文数据数学分析' }
+                ]
+            },
+            // Cycle 335 新增模板 - AI智能社会科学系统
+            {
+                id: 'ai-social-science',
+                name: 'AI智能社会科学系统',
+                icon: '👥',
+                description: '从社会调研到政策建议的完整社会科学研究流程',
+                agents: ['AI Sociologist', 'AI Psychologist', 'AI Economist', 'AI Political Scientist', 'AI Historian', 'AI Linguist'],
+                positions: [
+                    { role: 'AI Sociologist', x: 200, y: 50 },
+                    { role: 'AI Psychologist', x: 400, y: 50 },
+                    { role: 'AI Economist', x: 600, y: 50 },
+                    { role: 'AI Political Scientist', x: 200, y: 200 },
+                    { role: 'AI Historian', x: 400, y: 200 },
+                    { role: 'AI Linguist', x: 600, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sociologist', to: 'AI Psychologist', content: '社会心理研究' },
+                    { from: 'AI Psychologist', to: 'AI Economist', content: '心理经济分析' },
+                    { from: 'AI Economist', to: 'AI Political Scientist', content: '经济政治研究' },
+                    { from: 'AI Political Scientist', to: 'AI Historian', content: '政治历史研究' },
+                    { from: 'AI Historian', to: 'AI Linguist', content: '历史语言学研究' }
+                ]
+            },
+            // Cycle 335 新增模板 - AI智能专业工程系统
+            {
+                id: 'ai-engineering',
+                name: 'AI智能专业工程系统',
+                icon: '🏗️',
+                description: '从工程设计到实施的完整工程实施流程',
+                agents: ['AI Chemical Engineer', 'AI Mechanical Engineer', 'AI Electrical Engineer', 'AI Civil Engineer', 'AI Aerospace Engineer', 'AI Nuclear Engineer'],
+                positions: [
+                    { role: 'AI Chemical Engineer', x: 200, y: 50 },
+                    { role: 'AI Mechanical Engineer', x: 400, y: 50 },
+                    { role: 'AI Electrical Engineer', x: 600, y: 50 },
+                    { role: 'AI Civil Engineer', x: 200, y: 200 },
+                    { role: 'AI Aerospace Engineer', x: 400, y: 200 },
+                    { role: 'AI Nuclear Engineer', x: 600, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Chemical Engineer', to: 'AI Mechanical Engineer', content: '化工机械设计' },
+                    { from: 'AI Mechanical Engineer', to: 'AI Electrical Engineer', content: '机械电气设计' },
+                    { from: 'AI Electrical Engineer', to: 'AI Civil Engineer', content: '电气土木设计' },
+                    { from: 'AI Civil Engineer', to: 'AI Aerospace Engineer', content: '土木航空设计' },
+                    { from: 'AI Aerospace Engineer', to: 'AI Nuclear Engineer', content: '航空核能设计' }
+                ]
+            },
+            // Cycle 335 新增模板 - AI智能艺术人文系统
+            {
+                id: 'ai-arts-humanities',
+                name: 'AI智能艺术人文系统',
+                icon: '🎭',
+                description: '从艺术创作到人文研究的完整艺术人文流程',
+                agents: ['AI Philosopher', 'AI Writer', 'AI Poet', 'AI Artist', 'AI Music Composer', 'AI Choreographer'],
+                positions: [
+                    { role: 'AI Philosopher', x: 200, y: 50 },
+                    { role: 'AI Writer', x: 400, y: 50 },
+                    { role: 'AI Poet', x: 600, y: 50 },
+                    { role: 'AI Artist', x: 200, y: 200 },
+                    { role: 'AI Music Composer', x: 400, y: 200 },
+                    { role: 'AI Choreographer', x: 600, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Philosopher', to: 'AI Writer', content: '哲学写作指导' },
+                    { from: 'AI Writer', to: 'AI Poet', content: '文学诗歌创作' },
+                    { from: 'AI Poet', to: 'AI Artist', content: '诗歌艺术创作' },
+                    { from: 'AI Artist', to: 'AI Music Composer', content: '艺术音乐创作' },
+                    { from: 'AI Music Composer', to: 'AI Choreographer', content: '音乐舞蹈编排' }
+                ]
+            },
+            // Cycle 335 新增模板 - AI智能公共服务系统
+            {
+                id: 'ai-public-service',
+                name: 'AI智能公共服务系统',
+                icon: '🏛️',
+                description: '从服务民众到社会治理的完整公共服务流程',
+                agents: ['AI Firefighter', 'AI Police Officer', 'AI Paramedic', 'AI Judge', 'AI Diplomat'],
+                positions: [
+                    { role: 'AI Firefighter', x: 200, y: 50 },
+                    { role: 'AI Police Officer', x: 400, y: 50 },
+                    { role: 'AI Paramedic', x: 600, y: 50 },
+                    { role: 'AI Judge', x: 300, y: 200 },
+                    { role: 'AI Diplomat', x: 500, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Firefighter', to: 'AI Police Officer', content: '火灾警情联动' },
+                    { from: 'AI Police Officer', to: 'AI Paramedic', content: '警情医疗联动' },
+                    { from: 'AI Paramedic', to: 'AI Judge', content: '医疗法律咨询' },
+                    { from: 'AI Judge', to: 'AI Diplomat', content: '法律外交协调' }
+                ]
+            },
+            // Cycle 335 新增模板 - AI智能应急响应系统
+            {
+                id: 'ai-emergency',
+                name: 'AI智能应急响应系统',
+                icon: '🚨',
+                description: '从预警到应急响应的完整危机管理流程',
+                agents: ['AI Firefighter', 'AI Police Officer', 'AI Paramedic', 'AI Judge', 'AI Diplomat'],
+                positions: [
+                    { role: 'AI Firefighter', x: 200, y: 50 },
+                    { role: 'AI Police Officer', x: 400, y: 50 },
+                    { role: 'AI Paramedic', x: 600, y: 50 },
+                    { role: 'AI Judge', x: 300, y: 200 },
+                    { role: 'AI Diplomat', x: 500, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Firefighter', to: 'AI Police Officer', content: '应急联动' },
+                    { from: 'AI Police Officer', to: 'AI Paramedic', content: '医疗救援' },
+                    { from: 'AI Paramedic', to: 'AI Judge', content: '应急法律' },
+                    { from: 'AI Judge', to: 'AI Diplomat', content: '国际协调' }
+                ]
             }
         ];
 
@@ -12273,41 +12407,40 @@
             'AI Museum Curator': { icon: '🎨', color: '#ec4899', role: 'AI博物馆策展人' },
             'AI Event Planner': { icon: '🎪', color: '#f97316', role: 'AI活动策划师' },
             'AI Tour Guide': { icon: '🎤', color: '#06b6d4', role: 'AI导游' },
-            // Cycle 334 新增角色 - AI 智能新闻媒体
-            'AI News Reporter': { icon: '📰', color: '#ef4444', role: 'AI新闻记者' },
-            'AI Editor': { icon: '✏️', color: '#3b82f6', role: 'AI编辑' },
-            'AI Photojournalist': { icon: '📷', color: '#8b5cf6', role: 'AI摄影记者' },
-            'AI Broadcast Anchor': { icon: '🎙️', color: '#06b6d4', role: 'AI主播' },
-            'AI Media Analyst': { icon: '📊', color: '#f59e0b', role: 'AI媒体分析师' },
-            // Cycle 334 新增角色 - AI 智能影视制作
-            'AI Screenwriter': { icon: '✍️', color: '#ec4899', role: 'AI编剧' },
-            'AI Director': { icon: '🎬', color: '#dc2626', role: 'AI导演' },
-            'AI Cinematographer': { icon: '🎥', color: '#f97316', role: 'AI摄影指导' },
-            'AI Visual Effects': { icon: '✨', color: '#8b5cf6', role: 'AI特效师' },
-            'AI Film Editor': { icon: '🎞️', color: '#06b6d4', role: 'AI剪辑师' },
-            // Cycle 334 新增角色 - AI 智能音乐制作
-            'AI Composer': { icon: '🎵', color: '#3b82f6', role: 'AI作曲家' },
-            'AI Lyricist': { icon: '📝', color: '#ec4899', role: 'AI作词人' },
-            'AI Arranger': { icon: '🎹', color: '#f59e0b', role: 'AI编曲师' },
-            'AI Sound Engineer': { icon: '🔊', color: '#06b6d4', role: 'AI音响工程师' },
-            'AI Mastering Engineer': { icon: '🎚️', color: '#8b5cf6', role: 'AI母带工程师' },
-            // Cycle 334 新增角色 - AI 智能游戏开发
-            'AI Game Designer': { icon: '🎮', color: '#22c55e', role: 'AI游戏设计师' },
-            'AI Game Writer': { icon: '📖', color: '#ec4899', role: 'AI游戏文案' },
-            'AI Game Artist': { icon: '🖼️', color: '#f59e0b', role: 'AI游戏美术' },
-            'AI Game Programmer': { icon: '💻', color: '#3b82f6', role: 'AI游戏程序员' },
-            'AI Game QA': { icon: '🧪', color: '#06b6d4', role: 'AI游戏测试' },
-            // Cycle 334 新增角色 - AI 智能法律服务
-            'AI Legal Consultant': { icon: '⚖️', color: '#8b5cf6', role: 'AI法律顾问' },
-            'AI Contract Drafter': { icon: '📜', color: '#3b82f6', role: 'AI合同起草师' },
-            'AI Litigation Attorney': { icon: '⚔️', color: '#dc2626', role: 'AI诉讼律师' },
-            'AI Paralegal': { icon: '📋', color: '#f59e0b', role: 'AI律师助理' },
-            'AI Legal Analyst': { icon: '🔍', color: '#06b6d4', role: 'AI法律分析师' },
-            // Cycle 334 新增角色 - AI 智能人力资源
-            'AI HR Analyst': { icon: '📈', color: '#3b82f6', role: 'AI人力资源分析师' },
-            'AI Training Coordinator': { icon: '🎓', color: '#ec4899', role: 'AI培训协调员' },
-            'AI Performance Manager': { icon: '📊', color: '#f59e0b', role: 'AI绩效经理' },
-            'AI Employee Relations': { icon: '🤝', color: '#22c55e', role: 'AI员工关系专员' }
+            // Cycle 335 新增角色 - AI 智能基础科学
+            'AI Physicist': { icon: '⚛️', color: '#0ea5e9', role: 'AI物理学家' },
+            'AI Chemist': { icon: '🧪', color: '#22c55e', role: 'AI化学家' },
+            'AI Biologist': { icon: '🧬', color: '#ec4899', role: 'AI生物学家' },
+            'AI Mathematician': { icon: '🔢', color: '#8b5cf6', role: 'AI数学家' },
+            'AI Geologist': { icon: '🌍', color: '#f59e0b', role: 'AI地质学家' },
+            'AI Astronomer': { icon: '🔭', color: '#06b6d4', role: 'AI天文学家' },
+            // Cycle 335 新增角色 - AI 智能社会科学
+            'AI Sociologist': { icon: '👥', color: '#a855f7', role: 'AI社会学家' },
+            'AI Psychologist': { icon: '🧠', color: '#ef4444', role: 'AI心理学家' },
+            'AI Economist': { icon: '💹', color: '#14b8a6', role: 'AI经济学家' },
+            'AI Political Scientist': { icon: '🏛️', color: '#3b82f6', role: 'AI政治学家' },
+            'AI Historian': { icon: '📜', color: '#f97316', role: 'AI历史学家' },
+            'AI Linguist': { icon: '🌐', color: '#84cc16', role: 'AI语言学家' },
+            // Cycle 335 新增角色 - AI 智能专业工程
+            'AI Chemical Engineer': { icon: '⚗️', color: '#22c55e', role: 'AI化学工程师' },
+            'AI Mechanical Engineer': { icon: '🔧', color: '#64748b', role: 'AI机械工程师' },
+            'AI Electrical Engineer': { icon: '⚡', color: '#eab308', role: 'AI电气工程师' },
+            'AI Civil Engineer': { icon: '🏗️', color: '#f59e0b', role: 'AI土木工程师' },
+            'AI Aerospace Engineer': { icon: '🚀', color: '#3b82f6', role: 'AI航空航天工程师' },
+            'AI Nuclear Engineer': { icon: '☢️', color: '#10b981', role: 'AI核工程师' },
+            // Cycle 335 新增角色 - AI 智能艺术与人文
+            'AI Philosopher': { icon: '🎭', color: '#a855f7', role: 'AI哲学家' },
+            'AI Writer': { icon: '✍️', color: '#ec4899', role: 'AI作家' },
+            'AI Poet': { icon: '📝', color: '#f59e0b', role: 'AI诗人' },
+            'AI Artist': { icon: '🎨', color: '#ef4444', role: 'AI艺术家' },
+            'AI Music Composer': { icon: '🎵', color: '#8b5cf6', role: 'AI音乐家' },
+            'AI Choreographer': { icon: '💃', color: '#ec4899', role: 'AI舞蹈编导' },
+            // Cycle 335 新增角色 - AI 智能公共服务
+            'AI Firefighter': { icon: '🔥', color: '#ef4444', role: 'AI消防员' },
+            'AI Police Officer': { icon: '👮', color: '#3b82f6', role: 'AI警察' },
+            'AI Paramedic': { icon: '🚑', color: '#22c55e', role: 'AI急救员' },
+            'AI Judge': { icon: '⚖️', color: '#a855f7', role: 'AI法官' },
+            'AI Diplomat': { icon: '🌍', color: '#0ea5e9', role: 'AI外交官' }
         };
 
         // 拖拽相关变量
