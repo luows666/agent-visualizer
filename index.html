@@ -107,6 +107,26 @@
             background: #dc2626;
         }
 
+        /* 自动保存指示器 */
+        .auto-save-indicator {
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            transition: all 0.3s;
+        }
+
+        .auto-save-indicator.saved {
+            background: rgba(34, 197, 94, 0.2);
+            color: var(--success);
+        }
+
+        .auto-save-indicator.saving {
+            background: rgba(234, 179, 8, 0.2);
+            color: var(--warning);
+        }
+
         /* 主布局 */
         .main-container {
             display: flex;
@@ -1286,7 +1306,10 @@
 <body>
     <!-- 顶部控制栏 -->
     <header class="control-bar">
-        <h1>🤖 Agent Visualizer</h1>
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <h1>🤖 Agent Visualizer</h1>
+            <span id="autoSaveIndicator" class="auto-save-indicator">已自动保存</span>
+        </div>
         <div class="controls">
             <button class="btn btn-secondary" onclick="exportPNG()">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -3669,12 +3692,76 @@
             document.getElementById('versionHistoryModal').classList.remove('show');
         }
 
+        // 自动保存工作流（每10秒或关键操作时）
+        let autoSaveEnabled = true;
+        let lastSavedData = '';
+
+        function getWorkflowHash() {
+            const data = getCurrentWorkflowData();
+            return JSON.stringify(data);
+        }
+
+        function autoSaveWorkflow() {
+            if (!autoSaveEnabled) return;
+            const currentData = getWorkflowHash();
+            if (currentData === lastSavedData) return; // 没有变化，不保存
+
+            const workflowData = {
+                agents: window.agents || [],
+                messages: window.messages || [],
+                connections: window.connections || [],
+                savedAt: new Date().toISOString()
+            };
+
+            localStorage.setItem('agentVisualizer_autosave', JSON.stringify(workflowData));
+            lastSavedData = currentData;
+
+            // 更新保存状态指示器
+            updateAutoSaveIndicator(true);
+        }
+
+        function updateAutoSaveIndicator(saved) {
+            const indicator = document.getElementById('autoSaveIndicator');
+            if (indicator) {
+                indicator.textContent = saved ? '已自动保存' : '保存中...';
+                indicator.className = saved ? 'auto-save-indicator saved' : 'auto-save-indicator saving';
+                setTimeout(() => {
+                    indicator.textContent = '已自动保存';
+                    indicator.className = 'auto-save-indicator saved';
+                }, 2000);
+            }
+        }
+
+        function loadAutoSavedWorkflow() {
+            const saved = localStorage.getItem('agentVisualizer_autosave');
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    if (data.agents && data.agents.length > 0) {
+                        // 有自动保存的数据，询问用户是否恢复
+                        return data;
+                    }
+                } catch (e) {
+                    console.error('Failed to load auto-save:', e);
+                }
+            }
+            return null;
+        }
+
+        // 每10秒自动保存
+        setInterval(autoSaveWorkflow, 10000);
+
+        // 关键操作后立即保存
+        function triggerAutoSave() {
+            autoSaveWorkflow();
+        }
+
         // 自动保存版本（当 Agent 数量变化时）
         let lastAgentCount = 0;
         setInterval(() => {
             if (agents.length > 0 && agents.length !== lastAgentCount) {
                 lastAgentCount = agents.length;
-                // 只在有实质变化时提示用户保存
+                autoSaveWorkflow(); // 立即保存
             }
         }, 5000);
 
@@ -4530,6 +4617,33 @@
 
         // 初始化 API Keys
         loadApiKeys();
+
+        // 检查并恢复自动保存的工作流
+        function checkAutoSave() {
+            const saved = localStorage.getItem('agentVisualizer_autosave');
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    if (data.agents && data.agents.length > 0) {
+                        // 有自动保存的数据，询问用户是否恢复
+                        const savedTime = data.savedAt ? new Date(data.savedAt).toLocaleString() : '未知时间';
+                        if (confirm('发现未保存的工作流，是否要恢复？\n保存时间：' + savedTime + '\n包含 ' + data.agents.length + ' 个 Agent')) {
+                            window.agents = data.agents;
+                            window.messages = data.messages || [];
+                            window.connections = data.connections || [];
+                            renderAgents();
+                            renderFlow();
+                            showNotification('已恢复自动保存的工作流', 'success');
+                        }
+                    }
+                } catch (e) {
+                    console.error('Failed to load auto-save:', e);
+                }
+            }
+        }
+
+        // 页面加载后检查自动保存（延迟一下确保其他初始化完成）
+        setTimeout(checkAutoSave, 500);
 
         // 点击模态框外部关闭
         document.getElementById('apiKeysModal').addEventListener('click', function(e) {
