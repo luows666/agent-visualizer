@@ -8932,6 +8932,133 @@
                     { from: 'AI Data Visualizer', to: 'AI KPI Analyst', content: '数据指标' },
                     { from: 'AI KPI Analyst', to: 'AI Dashboard Developer', content: 'KPI定义' }
                 ]
+            },
+            // Cycle 316 新增模板
+            {
+                id: 'ai-agent-framework',
+                name: 'AI Agent开发流程',
+                icon: '🧩',
+                desc: '从Agent框架设计到智能体开发的完整流程',
+                agents: ['AI Agent Framework', 'AI MCP Specialist', 'AI Tool Calling', 'AI Persona Designer', 'AI Behavior Engineer'],
+                positions: [
+                    { role: 'AI Agent Framework', x: 400, y: 30 },
+                    { role: 'AI MCP Specialist', x: 200, y: 150 },
+                    { role: 'AI Tool Calling', x: 600, y: 150 },
+                    { role: 'AI Persona Designer', x: 200, y: 270 },
+                    { role: 'AI Behavior Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Agent Framework', to: 'AI MCP Specialist', content: '设计MCP架构' },
+                    { from: 'AI Agent Framework', to: 'AI Tool Calling', content: '设计工具调用机制' },
+                    { from: 'AI MCP Specialist', to: 'AI Tool Calling', content: 'MCP协议集成' },
+                    { from: 'AI Agent Framework', to: 'AI Persona Designer', content: '设计Agent人格' },
+                    { from: 'AI Persona Designer', to: 'AI Behavior Engineer', content: '定义行为模式' }
+                ]
+            },
+            {
+                id: 'ai-creative-design',
+                name: 'AI创意设计流程',
+                icon: '🎨',
+                desc: '从创意概念到AI生成设计的完整流程',
+                agents: ['AI Creative Director', 'AI Art Generator', 'AI Music Composer', 'AI Video Editor', 'AI UI Designer'],
+                positions: [
+                    { role: 'AI Creative Director', x: 400, y: 30 },
+                    { role: 'AI Art Generator', x: 200, y: 150 },
+                    { role: 'AI Music Composer', x: 600, y: 150 },
+                    { role: 'AI Video Editor', x: 200, y: 270 },
+                    { role: 'AI UI Designer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Creative Director', to: 'AI Art Generator', content: '创意绘画需求' },
+                    { from: 'AI Creative Director', to: 'AI Music Composer', content: '配乐需求' },
+                    { from: 'AI Art Generator', to: 'AI Video Editor', content: '生成素材' },
+                    { from: 'AI Music Composer', to: 'AI Video Editor', content: '配乐素材' },
+                    { from: 'AI Video Editor', to: 'AI UI Designer', content: '视频包装需求' }
+                ]
+            },
+            {
+                id: 'ai-gaming-development',
+                name: 'AI游戏开发流程',
+                icon: '🎮',
+                desc: '从游戏设计到AI驱动的游戏开发流程',
+                agents: ['AI Gaming Engineer', 'AI 3D Modeler', 'AI NPC Designer', 'AI Game AI', 'AI QA'],
+                positions: [
+                    { role: 'AI Gaming Engineer', x: 400, y: 30 },
+                    { role: 'AI 3D Modeler', x: 200, y: 150 },
+                    { role: 'AI NPC Designer', x: 600, y: 150 },
+                    { role: 'AI Game AI', x: 400, y: 270 },
+                    { role: 'AI QA', x: 400, y: 390 }
+                ],
+                messageFlows: [
+                    { from: 'AI Gaming Engineer', to: 'AI 3D Modeler', content: '3D资产需求' },
+                    { from: 'AI Gaming Engineer', to: 'AI NPC Designer', content: 'NPC行为设计' },
+                    { from: 'AI 3D Modeler', to: 'AI Game AI', content: '模型资源' },
+                    { from: 'AI NPC Designer', to: 'AI Game AI', content: 'AI行为逻辑' },
+                    { from: 'AI Game AI', to: 'AI QA', content: '游戏测试' }
+                ]
+            },
+            {
+                id: 'ai-education-platform',
+                name: 'AI教育平台开发',
+                icon: '📚',
+                desc: '从教育需求分析到AI教学系统开发的完整流程',
+                agents: ['AI Education Tutor', 'AI Learning Analyst', 'AI Content Creator', 'AI Curriculum Designer', 'AI Student Coach'],
+                positions: [
+                    { role: 'AI Education Tutor', x: 400, y: 30 },
+                    { role: 'AI Learning Analyst', x: 200, y: 150 },
+                    { role: 'AI Content Creator', x: 600, y: 150 },
+                    { role: 'AI Curriculum Designer', x: 200, y: 270 },
+                    { role: 'AI Student Coach', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Education Tutor', to: 'AI Learning Analyst', content: '学习数据分析' },
+                    { from: 'AI Education Tutor', to: 'AI Content Creator', content: '教学内容需求' },
+                    { from: 'AI Learning Analyst', to: 'AI Curriculum Designer', content: '课程优化建议' },
+                    { from: 'AI Content Creator', to: 'AI Student Coach', content: '教学资料' },
+                    { from: 'AI Curriculum Designer', to: 'AI Student Coach', content: '课程设计' }
+                ]
+            },
+            {
+                id: 'ai-fintech-solution',
+                name: 'AI金融解决方案',
+                icon: '💰',
+                desc: '从金融需求分析到AI风控系统开发的完整流程',
+                agents: ['AI Financial Advisor', 'AI Risk Analyst', 'AI Fraud Detector', 'AI Trading Bot', 'AI Compliance Officer'],
+                positions: [
+                    { role: 'AI Financial Advisor', x: 400, y: 30 },
+                    { role: 'AI Risk Analyst', x: 200, y: 150 },
+                    { role: 'AI Fraud Detector', x: 600, y: 150 },
+                    { role: 'AI Trading Bot', x: 200, y: 270 },
+                    { role: 'AI Compliance Officer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Financial Advisor', to: 'AI Risk Analyst', content: '风险评估需求' },
+                    { from: 'AI Financial Advisor', to: 'AI Fraud Detector', content: '反欺诈需求' },
+                    { from: 'AI Risk Analyst', to: 'AI Trading Bot', content: '风控策略' },
+                    { from: 'AI Fraud Detector', to: 'AI Compliance Officer', content: '合规报告' },
+                    { from: 'AI Trading Bot', to: 'AI Compliance Officer', content: '交易合规' }
+                ]
+            },
+            {
+                id: 'ai-automation-workflow',
+                name: 'AI自动化工作流',
+                icon: '⚡',
+                desc: '从流程分析到AI自动化实现的完整流程',
+                agents: ['AI Workflow Auto', 'AI Process Analyzer', 'AI RPA Developer', 'AI Integration Specialist', 'AI Monitor'],
+                positions: [
+                    { role: 'AI Workflow Auto', x: 400, y: 30 },
+                    { role: 'AI Process Analyzer', x: 200, y: 150 },
+                    { role: 'AI RPA Developer', x: 600, y: 150 },
+                    { role: 'AI Integration Specialist', x: 200, y: 270 },
+                    { role: 'AI Monitor', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Workflow Auto', to: 'AI Process Analyzer', content: '流程分析需求' },
+                    { from: 'AI Process Analyzer', to: 'AI RPA Developer', content: '自动化方案' },
+                    { from: 'AI RPA Developer', to: 'AI Integration Specialist', content: '系统集成需求' },
+                    { from: 'AI Integration Specialist', to: 'AI Monitor', content: '监控配置' },
+                    { from: 'AI Monitor', to: 'AI Workflow Auto', content: '运行反馈' }
+                ]
             }
         ];
 
@@ -9433,7 +9560,38 @@
             'AI ETL Developer': { icon: '🔄', color: '#22c55e', role: 'AI ETL开发工程师' },
             'AI Report Designer': { icon: '📝', color: '#f43f5e', role: 'AI报表设计师' },
             'AI Dashboard Developer': { icon: '📊', color: '#14b8a6', role: 'AI仪表盘开发工程师' },
-            'AI KPI Analyst': { icon: '🎯', color: '#f59e0b', role: 'AI KPI分析师' }
+            'AI KPI Analyst': { icon: '🎯', color: '#f59e0b', role: 'AI KPI分析师' },
+            // Cycle 316 新增角色 - AI 新兴技术
+            'AI Agent Framework': { icon: '🧩', color: '#0ea5e9', role: 'AI Agent框架工程师' },
+            'AI MCP Specialist': { icon: '🔗', color: '#22c55e', role: 'AI MCP专家' },
+            'AI Tool Calling': { icon: '🛠️', color: '#f97316', role: 'AI工具调用工程师' },
+            'AI Function Builder': { icon: '🏗️', color: '#8b5cf6', role: 'AI函数构建工程师' },
+            'AI Workflow Auto': { icon: '⚡', color: '#ec4899', role: 'AI工作流自动化工程师' },
+            'AI Persona Designer': { icon: '🎭', color: '#a855f7', role: 'AI人格设计师' },
+            'AI Behavior Engineer': { icon: '🎯', color: '#14b8a6', role: 'AI行为工程师' },
+            // Cycle 316 新增角色 - AI 创意设计
+            'AI Creative Director': { icon: '✨', color: '#f43f5e', role: 'AI创意总监' },
+            'AI Art Generator': { icon: '🎨', color: '#06b6d4', role: 'AI绘画生成师' },
+            'AI Music Composer': { icon: '🎵', color: '#8b5cf6', role: 'AI音乐作曲师' },
+            'AI Video Editor': { icon: '🎬', color: '#22c55e', role: 'AI视频剪辑师' },
+            'AI 3D Modeler': { icon: '🎲', color: '#f97316', role: 'AI 3D建模师' },
+            'AI UI Designer': { icon: '🖥️', color: '#ec4899', role: 'AI UI设计师' },
+            'AI Brand Designer': { icon: '💎', color: '#f59e0b', role: 'AI品牌设计师' },
+            // Cycle 316 新增角色 - AI 行业应用扩展
+            'AI Gaming Engineer': { icon: '🎮', color: '#14b8a6', role: 'AI游戏工程师' },
+            'AI Education Tutor': { icon: '📚', color: '#0ea5e9', role: 'AI教育导师' },
+            'AI Healthcare Diagnostician': { icon: '🏥', color: '#22c55e', role: 'AI医疗诊断师' },
+            'AI Legal Assistant': { icon: '⚖️', color: '#8b5cf6', role: 'AI法务助理' },
+            'AI Financial Advisor': { icon: '💰', color: '#f59e0b', role: 'AI金融顾问' },
+            'AI HR Recruiter': { icon: '👔', color: '#ec4899', role: 'AI HR招聘专员' },
+            'AI Customer Service': { icon: '🎧', color: '#06b6d4', role: 'AI客服工程师' },
+            // Cycle 316 新增角色 - AI 未来前沿
+            'AI Brain Computer': { icon: '🧠', color: '#6366f1', role: 'AI脑机接口工程师' },
+            'AI Space Tech': { icon: '🚀', color: '#0ea5e9', role: 'AI太空技术工程师' },
+            'AI Climate Modeler': { icon: '🌍', color: '#22c55e', role: 'AI气候模型工程师' },
+            'AI Synthetic Biology': { icon: '🧬', color: '#ec4899', role: 'AI合成生物工程师' },
+            'AI Nanotech Engineer': { icon: '🔬', color: '#a855f7', role: 'AI纳米技术工程师' },
+            'AI Quantum Software': { icon: '⚛️', color: '#14b8a6', role: 'AI量子软件工程师' }
         };
 
         // 拖拽相关变量
