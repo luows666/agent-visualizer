@@ -4791,6 +4791,126 @@
                     { from: 'ML Engineer', to: 'Business Analyst', content: '模型效果评估' },
                     { from: 'Business Analyst', to: 'Data Scientist', content: '业务洞察报告' }
                 ]
+            },
+            // Cycle 287 新增模板
+            {
+                id: 'supply-chain',
+                name: '供应链管理',
+                icon: '📦',
+                desc: '从采购到交付的完整供应链管理流程',
+                agents: ['Supply Chain Manager', 'Operations', 'Finance Analyst', 'CEO'],
+                positions: [
+                    { role: 'Supply Chain Manager', x: 400, y: 30 },
+                    { role: 'Operations', x: 200, y: 130 },
+                    { role: 'Finance Analyst', x: 600, y: 130 },
+                    { role: 'CEO', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Supply Chain Manager', to: 'Operations', content: '采购计划确认' },
+                    { from: 'Operations', to: 'Supply Chain Manager', content: '库存状态报告' },
+                    { from: 'Supply Chain Manager', to: 'Finance Analyst', content: '预算需求申请' },
+                    { from: 'Finance Analyst', to: 'CEO', content: '供应链成本分析' },
+                    { from: 'CEO', to: 'Supply Chain Manager', content: '供应链策略审批' }
+                ]
+            },
+            {
+                id: 'quality-management',
+                name: '质量管理体系',
+                icon: '🎯',
+                desc: '从质量标准制定到质量改进的完整流程',
+                agents: ['Quality Assurance Director', 'QA', 'Operations', 'CEO'],
+                positions: [
+                    { role: 'Quality Assurance Director', x: 400, y: 30 },
+                    { role: 'QA', x: 200, y: 130 },
+                    { role: 'Operations', x: 600, y: 130 },
+                    { role: 'CEO', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Quality Assurance Director', to: 'QA', content: '质量标准制定' },
+                    { from: 'QA', to: 'Operations', content: '质量检查执行' },
+                    { from: 'Operations', to: 'Quality Assurance Director', content: '质量报告反馈' },
+                    { from: 'Quality Assurance Director', to: 'CEO', content: '质量改进建议' }
+                ]
+            },
+            {
+                id: 'employee-training',
+                name: '员工培训流程',
+                icon: '📚',
+                desc: '从培训需求分析到培训效果评估的完整流程',
+                agents: ['Training Manager', 'HR', 'Operations', 'CEO'],
+                positions: [
+                    { role: 'Training Manager', x: 400, y: 30 },
+                    { role: 'HR', x: 200, y: 130 },
+                    { role: 'Operations', x: 600, y: 130 },
+                    { role: 'CEO', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Training Manager', to: 'HR', content: '培训需求调研' },
+                    { from: 'HR', to: 'Training Manager', content: '人员培训计划' },
+                    { from: 'Training Manager', to: 'Operations', content: '培训课程安排' },
+                    { from: 'Operations', to: 'Training Manager', content: '培训反馈收集' },
+                    { from: 'Training Manager', to: 'CEO', content: '培训效果评估' }
+                ]
+            },
+            {
+                id: 'compliance-audit',
+                name: '合规审计流程',
+                icon: '📋',
+                desc: '从合规检查到风险评估的完整审计流程',
+                agents: ['Compliance Officer', 'Legal Counsel', 'Risk Control', 'CEO'],
+                positions: [
+                    { role: 'Compliance Officer', x: 400, y: 30 },
+                    { role: 'Legal Counsel', x: 200, y: 130 },
+                    { role: 'Risk Control', x: 600, y: 130 },
+                    { role: 'CEO', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Compliance Officer', to: 'Legal Counsel', content: '合规要求确认' },
+                    { from: 'Legal Counsel', to: 'Compliance Officer', content: '法律合规建议' },
+                    { from: 'Compliance Officer', to: 'Risk Control', content: '风险评估请求' },
+                    { from: 'Risk Control', to: 'Compliance Officer', content: '风险评估报告' },
+                    { from: 'Compliance Officer', to: 'CEO', content: '合规审计总结' }
+                ]
+            },
+            {
+                id: 'product-analytics',
+                name: '产品数据分析',
+                icon: '📈',
+                desc: '从数据收集到产品决策的数据分析流程',
+                agents: ['Product Analytics', 'Data Analyst', 'Product Manager', 'CEO'],
+                positions: [
+                    { role: 'Product Analytics', x: 400, y: 30 },
+                    { role: 'Data Analyst', x: 200, y: 130 },
+                    { role: 'Product Manager', x: 600, y: 130 },
+                    { role: 'CEO', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Product Analytics', to: 'Data Analyst', content: '数据需求确认' },
+                    { from: 'Data Analyst', to: 'Product Analytics', content: '数据分析完成' },
+                    { from: 'Product Analytics', to: 'Product Manager', content: '产品洞察报告' },
+                    { from: 'Product Manager', to: 'Product Analytics', content: '数据需求调整' },
+                    { from: 'Product Analytics', to: 'CEO', content: '产品决策建议' }
+                ]
+            },
+            {
+                id: 'user-research',
+                name: '用户研究流程',
+                icon: '🔍',
+                desc: '从用户调研到洞察提炼的完整用户研究流程',
+                agents: ['User Researcher', 'UX Designer', 'Product Manager', 'CEO'],
+                positions: [
+                    { role: 'User Researcher', x: 400, y: 30 },
+                    { role: 'UX Designer', x: 200, y: 130 },
+                    { role: 'Product Manager', x: 600, y: 130 },
+                    { role: 'CEO', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'User Researcher', to: 'UX Designer', content: '用户研究计划' },
+                    { from: 'UX Designer', to: 'User Researcher', content: '设计需求确认' },
+                    { from: 'User Researcher', to: 'Product Manager', content: '用户洞察报告' },
+                    { from: 'Product Manager', to: 'User Researcher', content: '产品需求调整' },
+                    { from: 'User Researcher', to: 'CEO', content: '用户研究报告' }
+                ]
             }
         ];
 
@@ -4922,7 +5042,16 @@
             'Investor': { icon: '💰', color: '#10b981', role: '投资人' },
             'Product Strategist': { icon: '🎯', color: '#ec4899', role: '产品策略师' },
             'UX Designer': { icon: '💡', color: '#06b6d4', role: '用户体验设计师' },
-            'Data Scientist': { icon: '📊', color: '#8b5cf6', role: '数据科学家' }
+            'Data Scientist': { icon: '📊', color: '#8b5cf6', role: '数据科学家' },
+            // Cycle 287 新增角色
+            'Finance Analyst': { icon: '💰', color: '#f59e0b', role: '财务分析师' },
+            'Supply Chain Manager': { icon: '📦', color: '#10b981', role: '供应链经理' },
+            'Quality Assurance Director': { icon: '🎯', color: '#06b6d4', role: '质量总监' },
+            'Training Manager': { icon: '📚', color: '#a855f7', role: '培训经理' },
+            'Compliance Officer': { icon: '📋', color: '#64748b', role: '合规官' },
+            'BI Manager': { icon: '📊', color: '#3b82f6', role: 'BI经理' },
+            'Product Analytics': { icon: '📈', color: '#ec4899', role: '产品分析师' },
+            'User Researcher': { icon: '🔍', color: '#14b8a6', role: '用户研究员' }
         };
 
         // 拖拽相关变量
