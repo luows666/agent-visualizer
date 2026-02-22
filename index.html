@@ -8621,6 +8621,200 @@
                     { from: 'AI Control Systems', to: 'AI QA', content: '控制系统测试' },
                     { from: 'AI QA', to: 'AI Robotics Engineer', content: '测试报告' }
                 ]
+            },
+            // Cycle 314 新增模板 - AI 行业应用
+            {
+                id: 'ai-healthcare-system',
+                name: 'AI医疗健康系统',
+                icon: '🏥',
+                desc: '从医疗需求分析到AI辅助诊断的完整流程',
+                agents: ['AI Healthcare Engineer', 'AI ML Engineer', 'AI Data Scientist', 'AI Compliance Auditor', 'QA'],
+                positions: [
+                    { role: 'AI Healthcare Engineer', x: 400, y: 30 },
+                    { role: 'AI ML Engineer', x: 200, y: 150 },
+                    { role: 'AI Data Scientist', x: 600, y: 150 },
+                    { role: 'AI Compliance Auditor', x: 400, y: 270 },
+                    { role: 'QA', x: 400, y: 390 }
+                ],
+                messageFlows: [
+                    { from: 'AI Healthcare Engineer', to: 'AI ML Engineer', content: '医疗AI需求' },
+                    { from: 'AI ML Engineer', to: 'AI Data Scientist', content: '模型训练需求' },
+                    { from: 'AI Data Scientist', to: 'AI Compliance Auditor', content: '数据分析报告' },
+                    { from: 'AI Compliance Auditor', to: 'QA', content: '合规审查' },
+                    { from: 'QA', to: 'AI Healthcare Engineer', content: '测试报告' }
+                ]
+            },
+            {
+                id: 'ai-fintech-platform',
+                name: 'AI金融科技平台',
+                icon: '💳',
+                desc: '从金融数据分析到风险评估的完整流程',
+                agents: ['AI FinTech Engineer', 'AI Risk Manager', 'AI Data Scientist', 'AI Compliance Auditor'],
+                positions: [
+                    { role: 'AI FinTech Engineer', x: 400, y: 30 },
+                    { role: 'AI Risk Manager', x: 200, y: 150 },
+                    { role: 'AI Data Scientist', x: 600, y: 150 },
+                    { role: 'AI Compliance Auditor', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI FinTech Engineer', to: 'AI Risk Manager', content: '风控需求' },
+                    { from: 'AI Risk Manager', to: 'AI Data Scientist', content: '风险分析' },
+                    { from: 'AI Data Scientist', to: 'AI Compliance Auditor', content: '风控模型' },
+                    { from: 'AI Compliance Auditor', to: 'AI FinTech Engineer', content: '合规报告' }
+                ]
+            },
+            {
+                id: 'ai-edtech-platform',
+                name: 'AI教育科技平台',
+                icon: '📚',
+                desc: '从教育需求分析到个性化学习的完整流程',
+                agents: ['AI EdTech Engineer', 'AI ML Engineer', 'AI UX Researcher', 'AI Content Creator'],
+                positions: [
+                    { role: 'AI EdTech Engineer', x: 400, y: 30 },
+                    { role: 'AI ML Engineer', x: 200, y: 150 },
+                    { role: 'AI UX Researcher', x: 600, y: 150 },
+                    { role: 'AI Content Creator', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI EdTech Engineer', to: 'AI ML Engineer', content: '学习推荐需求' },
+                    { from: 'AI ML Engineer', to: 'AI UX Researcher', content: '模型设计方案' },
+                    { from: 'AI UX Researcher', to: 'AI Content Creator', content: '用户体验优化' },
+                    { from: 'AI Content Creator', to: 'AI EdTech Engineer', content: '内容准备' }
+                ]
+            },
+            {
+                id: 'ai-legal-tech',
+                name: 'AI法律科技',
+                icon: '⚖️',
+                desc: '从法律文档分析到智能合约的完整流程',
+                agents: ['AI Legal Engineer', 'AI Legal Tech', 'AI NLP Engineer', 'AI Security Auditor'],
+                positions: [
+                    { role: 'AI Legal Engineer', x: 400, y: 30 },
+                    { role: 'AI Legal Tech', x: 200, y: 150 },
+                    { role: 'AI NLP Engineer', x: 600, y: 150 },
+                    { role: 'AI Security Auditor', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Legal Engineer', to: 'AI Legal Tech', content: '法律需求' },
+                    { from: 'AI Legal Tech', to: 'AI NLP Engineer', content: '文档分析' },
+                    { from: 'AI NLP Engineer', to: 'AI Security Auditor', content: '合同审查' },
+                    { from: 'AI Security Auditor', to: 'AI Legal Engineer', content: '安全评估' }
+                ]
+            },
+            {
+                id: 'ai-retail-system',
+                name: 'AI零售系统',
+                icon: '🛒',
+                desc: '从零售数据分析到智能推荐的完整流程',
+                agents: ['AI Retail Engineer', 'AI ML Engineer', 'AI Data Scientist', 'AI Marketing Strategist'],
+                positions: [
+                    { role: 'AI Retail Engineer', x: 400, y: 30 },
+                    { role: 'AI ML Engineer', x: 200, y: 150 },
+                    { role: 'AI Data Scientist', x: 600, y: 150 },
+                    { role: 'AI Marketing Strategist', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Retail Engineer', to: 'AI ML Engineer', content: '推荐系统需求' },
+                    { from: 'AI ML Engineer', to: 'AI Data Scientist', content: '模型训练' },
+                    { from: 'AI Data Scientist', to: 'AI Marketing Strategist', content: '用户分析' },
+                    { from: 'AI Marketing Strategist', to: 'AI Retail Engineer', content: '营销策略' }
+                ]
+            },
+            {
+                id: 'ai-manufacturing-iot',
+                name: 'AI制造业物联网',
+                icon: '🏭',
+                desc: '从工业数据分析到智能制造的完整流程',
+                agents: ['AI Manufacturing Engineer', 'AI IoT Engineer', 'AI Predictive Analyst', 'AI Control Systems'],
+                positions: [
+                    { role: 'AI Manufacturing Engineer', x: 400, y: 30 },
+                    { role: 'AI IoT Engineer', x: 200, y: 150 },
+                    { role: 'AI Predictive Analyst', x: 600, y: 150 },
+                    { role: 'AI Control Systems', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Manufacturing Engineer', to: 'AI IoT Engineer', content: 'IoT需求' },
+                    { from: 'AI IoT Engineer', to: 'AI Predictive Analyst', content: '设备数据' },
+                    { from: 'AI Predictive Analyst', to: 'AI Control Systems', content: '预测分析' },
+                    { from: 'AI Control Systems', to: 'AI Manufacturing Engineer', content: '控制指令' }
+                ]
+            },
+            // Cycle 314 新增模板 - AI 数据科学流程
+            {
+                id: 'ai-statistical-analysis',
+                name: 'AI统计分析',
+                icon: '📊',
+                desc: '从数据收集到统计建模的完整分析流程',
+                agents: ['AI Statistician', 'AI Data Scientist', 'AI Data Visualizer', 'AI Regression Expert'],
+                positions: [
+                    { role: 'AI Statistician', x: 400, y: 30 },
+                    { role: 'AI Data Scientist', x: 200, y: 150 },
+                    { role: 'AI Data Visualizer', x: 600, y: 150 },
+                    { role: 'AI Regression Expert', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Statistician', to: 'AI Data Scientist', content: '统计需求' },
+                    { from: 'AI Data Scientist', to: 'AI Data Visualizer', content: '数据分析' },
+                    { from: 'AI Data Visualizer', to: 'AI Regression Expert', content: '可视化需求' },
+                    { from: 'AI Regression Expert', to: 'AI Statistician', content: '回归分析报告' }
+                ]
+            },
+            {
+                id: 'ai-time-series-forecast',
+                name: 'AI时间序列预测',
+                icon: '⏰',
+                desc: '从时序数据分析到未来预测的完整流程',
+                agents: ['AI Time Series Expert', 'AI Predictive Analyst', 'AI ML Engineer', 'AI Data Visualizer'],
+                positions: [
+                    { role: 'AI Time Series Expert', x: 400, y: 30 },
+                    { role: 'AI Predictive Analyst', x: 200, y: 150 },
+                    { role: 'AI ML Engineer', x: 600, y: 150 },
+                    { role: 'AI Data Visualizer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Time Series Expert', to: 'AI Predictive Analyst', content: '时序数据' },
+                    { from: 'AI Predictive Analyst', to: 'AI ML Engineer', content: '预测模型' },
+                    { from: 'AI ML Engineer', to: 'AI Data Visualizer', content: '预测结果' },
+                    { from: 'AI Data Visualizer', to: 'AI Time Series Expert', content: '可视化报告' }
+                ]
+            },
+            {
+                id: 'ai-anomaly-detection',
+                name: 'AI异常检测',
+                icon: '⚠️',
+                desc: '从异常模式识别到风险预警的完整流程',
+                agents: ['AI Anomaly Detector', 'AI ML Engineer', 'AI Alert Manager', 'AI Security Analyst'],
+                positions: [
+                    { role: 'AI Anomaly Detector', x: 400, y: 30 },
+                    { role: 'AI ML Engineer', x: 200, y: 150 },
+                    { role: 'AI Alert Manager', x: 600, y: 150 },
+                    { role: 'AI Security Analyst', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Anomaly Detector', to: 'AI ML Engineer', content: '检测需求' },
+                    { from: 'AI ML Engineer', to: 'AI Alert Manager', content: '异常模式' },
+                    { from: 'AI Alert Manager', to: 'AI Security Analyst', content: '告警触发' },
+                    { from: 'AI Security Analyst', to: 'AI Anomaly Detector', content: '风险评估' }
+                ]
+            },
+            {
+                id: 'ai-clustering-analysis',
+                name: 'AI聚类分析',
+                icon: '🎯',
+                desc: '从数据分组到用户细分的完整分析流程',
+                agents: ['AI Clustering Expert', 'AI Data Scientist', 'AI Feature Selection', 'AI Business Analyst'],
+                positions: [
+                    { role: 'AI Clustering Expert', x: 400, y: 30 },
+                    { role: 'AI Data Scientist', x: 200, y: 150 },
+                    { role: 'AI Feature Selection', x: 600, y: 150 },
+                    { role: 'AI Business Analyst', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Clustering Expert', to: 'AI Data Scientist', content: '聚类需求' },
+                    { from: 'AI Data Scientist', to: 'AI Feature Selection', content: '特征工程' },
+                    { from: 'AI Feature Selection', to: 'AI Business Analyst', content: '聚类结果' },
+                    { from: 'AI Business Analyst', to: 'AI Clustering Expert', content: '业务洞察' }
+                ]
             }
         ];
 
@@ -9074,7 +9268,34 @@
             'AI Research Scientist': { icon: '🔬', color: '#8b5cf6', role: 'AI研究科学家' },
             'AI Physics Expert': { icon: '⚛️', color: '#06b6d4', role: 'AI物理专家' },
             'AI Mechanical Designer': { icon: '🔧', color: '#64748b', role: 'AI机械设计师' },
-            'AI Control Systems': { icon: '🎛️', color: '#14b8a6', role: 'AI控制系统工程师' }
+            'AI Control Systems': { icon: '🎛️', color: '#14b8a6', role: 'AI控制系统工程师' },
+            // Cycle 314 新增角色 - AI 行业应用
+            'AI Healthcare Engineer': { icon: '🏥', color: '#0ea5e9', role: 'AI医疗健康工程师' },
+            'AI FinTech Engineer': { icon: '💳', color: '#22c55e', role: 'AI金融科技工程师' },
+            'AI EdTech Engineer': { icon: '📚', color: '#f97316', role: 'AI教育科技工程师' },
+            'AI Legal Engineer': { icon: '⚖️', color: '#8b5cf6', role: 'AI法律科技工程师' },
+            'AI Retail Engineer': { icon: '🛒', color: '#ec4899', role: 'AI零售工程师' },
+            'AI Manufacturing Engineer': { icon: '🏭', color: '#64748b', role: 'AI制造业工程师' },
+            'AI Real Estate Tech': { icon: '🏠', color: '#14b8a6', role: 'AI房产科技工程师' },
+            'AI Logistics Engineer': { icon: '🚚', color: '#f59e0b', role: 'AI物流工程师' },
+            'AI Agriculture Engineer': { icon: '🌾', color: '#22c55e', role: 'AI农业工程师' },
+            'AI Energy Engineer': { icon: '⚡', color: '#06b6d4', role: 'AI能源工程师' },
+            // Cycle 314 新增角色 - AI 开发工具
+            'AI SDK Developer': { icon: '🛠️', color: '#0891b2', role: 'AI SDK开发工程师' },
+            'AI API Developer': { icon: '🔌', color: '#7c3aed', role: 'AI API开发工程师' },
+            'AI CLI Developer': { icon: '⌨️', color: '#a855f7', role: 'AI命令行工具开发工程师' },
+            'AI Plugin Developer': { icon: '🔧', color: '#f97316', role: 'AI插件开发工程师' },
+            'AI IDE Extension Dev': { icon: '💻', color: '#22c55e', role: 'AI IDE扩展开发工程师' },
+            'AI SDK Architect': { icon: '🏗️', color: '#0ea5e9', role: 'AI SDK架构师' },
+            // Cycle 314 新增角色 - AI 数据科学
+            'AI Statistician': { icon: '📊', color: '#ec4899', role: 'AI统计学家' },
+            'AI Data Visualizer': { icon: '📈', color: '#06b6d4', role: 'AI数据可视化工程师' },
+            'AI Predictive Analyst': { icon: '🔮', color: '#a855f7', role: 'AI预测分析师' },
+            'AI Time Series Expert': { icon: '⏰', color: '#f43f5e', role: 'AI时间序列专家' },
+            'AI Anomaly Detector': { icon: '⚠️', color: '#f59e0b', role: 'AI异常检测工程师' },
+            'AI Clustering Expert': { icon: '🎯', color: '#14b8a6', role: 'AI聚类专家' },
+            'AI Regression Expert': { icon: '📉', color: '#8b5cf6', role: 'AI回归分析专家' },
+            'AI Feature Selection': { icon: '✨', color: '#22c55e', role: 'AI特征选择工程师' }
         };
 
         // 拖拽相关变量
