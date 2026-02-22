@@ -758,6 +758,32 @@
             color: var(--text-secondary);
         }
 
+        .import-drop-zone {
+            border: 2px dashed var(--border-color);
+            border-radius: 12px;
+            padding: 40px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: var(--bg-tertiary);
+        }
+
+        .import-drop-zone:hover,
+        .import-drop-zone.drag-over {
+            border-color: var(--accent);
+            background: rgba(139, 92, 246, 0.1);
+        }
+
+        .import-drop-zone svg {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .import-drop-zone p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
         .btn-accent {
             background: linear-gradient(135deg, #8b5cf6, #ec4899);
             color: white;
@@ -994,6 +1020,76 @@
         .model-badge-anthropic { background: #d9770620; color: #d97706; }
         .model-badge-google { background: #4285f420; color: #4285f4; }
         .model-badge-ollama { background: #8b5cf620; color: #8b5cf6; }
+
+        .task-execution-panel {
+            margin-top: 16px;
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .task-title {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .task-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .task-input-area textarea {
+            width: 100%;
+            min-height: 80px;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 13px;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        .task-input-area textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .task-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .task-actions .btn {
+            flex: 1;
+            padding: 8px 16px;
+        }
+
+        .task-result {
+            margin-top: 16px;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 12px;
+            border-left: 3px solid var(--success);
+        }
+
+        .task-result-header {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .task-result-content {
+            font-size: 13px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            max-height: 200px;
+            overflow-y: auto;
+        }
     </style>
 </head>
 <body>
@@ -1015,6 +1111,14 @@
                     <polyline points="14 2 14 8 20 8"/>
                 </svg>
                 导出 JSON
+            </button>
+            <button class="btn btn-secondary" onclick="openImportModal()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="17 8 12 3 7 8"/>
+                    <line x1="12" y1="3" x2="12" y2="15"/>
+                </svg>
+                导入 JSON
             </button>
             <button class="btn btn-primary" onclick="toggle3DView()" id="viewToggle">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1250,6 +1354,38 @@
         </div>
     </div>
 
+    <!-- 导入 JSON Modal -->
+    <div class="modal-overlay" id="importModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>📥 导入工作流</h2>
+                <button class="modal-close" onclick="closeImportModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <p style="color: var(--text-secondary); font-size: 13px; margin-bottom: 16px;">
+                    选择一个 JSON 文件导入工作流配置
+                </p>
+                <div class="import-drop-zone" id="importDropZone">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="17 8 12 3 7 8"/>
+                        <line x1="12" y1="3" x2="12" y2="15"/>
+                    </svg>
+                    <p>拖拽 JSON 文件到此处，或点击选择文件</p>
+                    <input type="file" id="importFileInput" accept=".json" style="display: none;">
+                </div>
+                <div id="importPreview" style="display: none; marginpx;">
+                    -top: 16<h4 style="margin-bottom: 8px;">预览信息：</h4>
+                    <div id="importPreviewContent" style="background: var(--bg-tertiary); padding: 12px; border-radius: 8px; font-size: 13px;"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeImportModal()">取消</button>
+                <button class="btn btn-primary" id="confirmImportBtn" onclick="importJSON()" disabled>导入</button>
+            </div>
+        </div>
+    </div>
+
     <!-- 连接消息 Modal -->
     <div class="message-modal" id="messageModal">
         <div class="modal">
@@ -1403,6 +1539,120 @@
                     { from: 'CTO', to: 'Developer', content: '分配开发任务' },
                     { from: 'Developer', to: 'QA', content: '提交代码测试' },
                     { from: 'QA', to: 'CEO', content: 'Sprint 交付完成' }
+                ]
+            },
+            {
+                id: 'pricing-strategy',
+                name: '定价策略',
+                icon: '💵',
+                desc: '产品定价到收益分析的完整流程',
+                agents: ['CEO', 'Sales', 'Researcher', 'CFO'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 50 },
+                    { role: 'Sales', x: 200, y: 180 },
+                    { role: 'Researcher', x: 400, y: 180 },
+                    { role: 'CFO', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Researcher', content: '调研市场竞争和用户付费意愿' },
+                    { from: 'Researcher', to: 'Sales', content: '市场调研报告：竞品定价分析' },
+                    { from: 'Sales', to: 'CFO', content: '提供销售预期和定价建议' },
+                    { from: 'CFO', to: 'CEO', content: '成本和收益分析报告' }
+                ]
+            },
+            {
+                id: 'security-audit',
+                name: '安全审计',
+                icon: '🔒',
+                desc: '代码安全审查和风险评估流程',
+                agents: ['CTO', 'Developer', 'QA', 'Researcher'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 50 },
+                    { role: 'Developer', x: 200, y: 180 },
+                    { role: 'QA', x: 400, y: 180 },
+                    { role: 'Researcher', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Developer', content: '需要进行安全代码审查' },
+                    { from: 'Developer', to: 'QA', content: '代码安全审查报告' },
+                    { from: 'QA', to: 'Researcher', content: '安全漏洞分析' },
+                    { from: 'Researcher', to: 'CTO', content: '安全风险评估报告' }
+                ]
+            },
+            {
+                id: 'product-design',
+                name: '产品设计',
+                icon: '🎯',
+                desc: '从需求分析到原型设计的流程',
+                agents: ['CEO', 'Researcher', 'Designer', 'CTO'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 50 },
+                    { role: 'Researcher', x: 200, y: 180 },
+                    { role: 'Designer', x: 400, y: 180 },
+                    { role: 'CTO', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Researcher', content: '确定产品需求方向' },
+                    { from: 'Researcher', to: 'Designer', content: '用户需求分析报告' },
+                    { from: 'Designer', to: 'CTO', content: '产品原型和技术方案' },
+                    { from: 'CTO', to: 'CEO', content: '技术可行性评估' }
+                ]
+            },
+            {
+                id: 'content-marketing',
+                name: '内容营销',
+                icon: '📝',
+                desc: '内容策划到发布的完整流程',
+                agents: ['Marketing', 'Researcher', 'Designer', 'Sales'],
+                positions: [
+                    { role: 'Marketing', x: 400, y: 50 },
+                    { role: 'Researcher', x: 200, y: 180 },
+                    { role: 'Designer', x: 400, y: 180 },
+                    { role: 'Sales', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'Marketing', to: 'Researcher', content: '调研目标用户兴趣' },
+                    { from: 'Researcher', to: 'Designer', content: '内容策略建议' },
+                    { from: 'Designer', to: 'Marketing', content: '内容素材设计完成' },
+                    { from: 'Marketing', to: 'Sales', content: '内容发布计划' }
+                ]
+            },
+            {
+                id: 'hr-onboarding',
+                name: '员工入职',
+                icon: '👋',
+                desc: '新员工入职到转正的全流程',
+                agents: ['CEO', 'CTO', 'Developer', 'Sales'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 50 },
+                    { role: 'CTO', x: 200, y: 180 },
+                    { role: 'Developer', x: 400, y: 180 },
+                    { role: 'Sales', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'CTO', content: '技术岗位新员工入职安排' },
+                    { from: 'CTO', to: 'Developer', content: '导师分配和技术培训' },
+                    { from: 'Developer', to: 'Sales', content: '技术培训完成报告' },
+                    { from: 'Sales', to: 'CEO', content: '入职评估总结' }
+                ]
+            },
+            {
+                id: 'bug-fix',
+                name: 'Bug 修复',
+                icon: '🐛',
+                desc: '从 bug 发现到修复上线的流程',
+                agents: ['QA', 'Developer', 'CTO', 'Sales'],
+                positions: [
+                    { role: 'QA', x: 200, y: 100 },
+                    { role: 'Developer', x: 400, y: 100 },
+                    { role: 'CTO', x: 600, y: 100 },
+                    { role: 'Sales', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'QA', to: 'Developer', content: 'Bug 报告：生产环境崩溃' },
+                    { from: 'Developer', to: 'CTO', content: 'Bug 修复方案' },
+                    { from: 'CTO', to: 'QA', content: '修复完成，提交测试' },
+                    { from: 'QA', to: 'Sales', content: 'Bug 已修复，客户通知' }
                 ]
             }
         ];
@@ -1951,6 +2201,25 @@
                         <button onclick="sendChatMessage(${agent.id})" id="sendBtn">发送</button>
                     </div>
                 </div>
+                <div class="task-execution-panel">
+                    <div class="task-title">
+                        <span>⚡ 任务执行</span>
+                    </div>
+                    <div class="task-desc">
+                        给 Agent 分配具体任务，让它执行并返回结果
+                    </div>
+                    <div class="task-input-area">
+                        <textarea id="taskInput" placeholder="描述要执行的任务，例如：'帮我分析这个项目的架构'"></textarea>
+                    </div>
+                    <div class="task-actions">
+                        <button class="btn btn-primary" onclick="executeAgentTask(${agent.id})" id="executeTaskBtn">执行任务</button>
+                        <button class="btn btn-secondary" onclick="clearAgentTask(${agent.id})">清空</button>
+                    </div>
+                    <div class="task-result" id="taskResult" style="display: none;">
+                        <div class="task-result-header">执行结果：</div>
+                        <div class="task-result-content" id="taskResultContent"></div>
+                    </div>
+                </div>
             `;
         }
 
@@ -2020,6 +2289,110 @@
                     chatMessages.scrollTop = chatMessages.scrollHeight;
                 }
             }, 100);
+        }
+
+        // ======== Agent 任务执行功能 ========
+        async function executeAgentTask(agentId) {
+            const taskInput = document.getElementById('taskInput');
+            const executeBtn = document.getElementById('executeTaskBtn');
+            const taskResult = document.getElementById('taskResult');
+            const taskResultContent = document.getElementById('taskResultContent');
+
+            const task = taskInput.value.trim();
+            if (!task) {
+                showNotification('请输入任务描述', 'error');
+                return;
+            }
+
+            const agent = agents.find(a => a.id === agentId);
+            if (!agent) return;
+
+            const model = agent.model || 'gpt-4o-mini';
+            const provider = getProviderFromModel(model);
+
+            // 检查 API Key
+            if (!apiKeys[provider] || apiKeys[provider].length === 0) {
+                showNotification('请先配置 ' + provider.toUpperCase() + ' API Key', 'error');
+                openApiKeysModal();
+                return;
+            }
+
+            // 更新 Agent 状态
+            agent.status = 'running';
+            renderAgents();
+
+            // 显示加载状态
+            executeBtn.disabled = true;
+            executeBtn.textContent = '执行中...';
+            taskResult.style.display = 'none';
+
+            try {
+                // 构建任务上下文
+                const roleInfo = agentRoles[agent.role] || { role: agent.role };
+                const taskContext = [
+                    {
+                        role: 'system',
+                        content: `你是一个专业的 ${roleInfo.role} (${agent.name})。你的职责是：${getAgentSystemPrompt(agent.role)}`
+                    },
+                    {
+                        role: 'user',
+                        content: `请执行以下任务：\n\n${task}\n\n请提供详细的执行步骤和结果。`
+                    }
+                ];
+
+                const response = await callAIApi(provider, model, taskContext, agent);
+
+                // 显示结果
+                taskResultContent.textContent = response;
+                taskResult.style.display = 'block';
+
+                // 保存到消息历史
+                messages.push({
+                    id: messages.length + 1,
+                    from: agentId,
+                    to: agentId,
+                    content: `[任务执行] ${task}\n\n[结果] ${response}`,
+                    timestamp: messages.length,
+                    time: new Date().toLocaleTimeString()
+                });
+
+                // 更新 Agent 状态为完成
+                agent.status = 'completed';
+                renderAgents();
+                renderFlow();
+
+                showNotification('任务执行完成', 'success');
+
+            } catch (error) {
+                showNotification('任务执行失败: ' + error.message, 'error');
+                agent.status = 'failed';
+                renderAgents();
+            }
+
+            // 恢复按钮状态
+            executeBtn.disabled = false;
+            executeBtn.textContent = '执行任务';
+        }
+
+        function clearAgentTask(agentId) {
+            const taskInput = document.getElementById('taskInput');
+            const taskResult = document.getElementById('taskResult');
+            taskInput.value = '';
+            taskResult.style.display = 'none';
+        }
+
+        function getAgentSystemPrompt(role) {
+            const prompts = {
+                'CEO': '制定公司战略、做出重大决策、评估业务机会、管理团队',
+                'CTO': '技术架构设计、技术选型、系统性能优化、技术团队管理',
+                'Researcher': '市场调研、竞品分析、行业趋势判断、用户需求验证',
+                'Designer': '用户界面设计、用户体验优化、品牌视觉设计',
+                'Developer': '代码编写、功能实现、技术难题解决、系统开发',
+                'QA': '测试计划制定、质量保证、bug 发现与追踪、测试用例编写',
+                'Marketing': '市场推广、品牌建设、内容营销、用户获取',
+                'Sales': '客户开发、销售谈判、业绩目标达成、客户关系维护'
+            };
+            return prompts[role] || '完成分配的任务';
         }
 
         async function callAIApi(provider, model, conversation, agent) {
@@ -2563,6 +2936,134 @@
         // 关闭模板 Modal
         function closeTemplateModal() {
             document.getElementById('templateModal').classList.remove('show');
+        }
+
+        // ======== 导入功能 ========
+        let importedData = null;
+
+        function openImportModal() {
+            document.getElementById('importModal').classList.add('show');
+            importedData = null;
+            document.getElementById('importPreview').style.display = 'none';
+            document.getElementById('confirmImportBtn').disabled = true;
+            setupImportDropZone();
+        }
+
+        function closeImportModal() {
+            document.getElementById('importModal').classList.remove('show');
+            importedData = null;
+        }
+
+        function setupImportDropZone() {
+            const dropZone = document.getElementById('importDropZone');
+            const fileInput = document.getElementById('importFileInput');
+
+            // 点击选择文件
+            dropZone.onclick = () => fileInput.click();
+
+            // 文件选择
+            fileInput.onchange = (e) => {
+                if (e.target.files.length > 0) {
+                    handleImportFile(e.target.files[0]);
+                }
+            };
+
+            // 拖拽事件
+            dropZone.ondragover = (e) => {
+                e.preventDefault();
+                dropZone.classList.add('drag-over');
+            };
+
+            dropZone.ondragleave = () => {
+                dropZone.classList.remove('drag-over');
+            };
+
+            dropZone.ondrop = (e) => {
+                e.preventDefault();
+                dropZone.classList.remove('drag-over');
+                if (e.dataTransfer.files.length > 0) {
+                    handleImportFile(e.dataTransfer.files[0]);
+                }
+            };
+        }
+
+        function handleImportFile(file) {
+            if (!file.name.endsWith('.json')) {
+                showNotification('请选择 JSON 文件', 'error');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    importedData = JSON.parse(e.target.result);
+
+                    // 验证数据格式
+                    if (!importedData.agents || !Array.isArray(importedData.agents)) {
+                        throw new Error('无效的工作流文件');
+                    }
+
+                    // 显示预览信息
+                    const preview = document.getElementById('importPreview');
+                    const content = document.getElementById('importPreviewContent');
+                    const agentCount = importedData.agents.length;
+                    const messageCount = importedData.messages ? importedData.messages.length : 0;
+
+                    content.innerHTML = `
+                        <p><strong>Agents:</strong> ${agentCount} 个</p>
+                        <p><strong>Messages:</strong> ${messageCount} 条</p>
+                        <p><strong>导出时间:</strong> ${importedData.exportedAt || '未知'}</p>
+                    `;
+                    preview.style.display = 'block';
+                    document.getElementById('confirmImportBtn').disabled = false;
+
+                } catch (err) {
+                    showNotification('文件解析失败: ' + err.message, 'error');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function importJSON() {
+            if (!importedData) return;
+
+            // 清除现有数据
+            agents = [];
+            messages = [];
+
+            // 导入 Agents
+            importedData.agents.forEach(agent => {
+                agents.push({
+                    id: agent.id,
+                    name: agent.name,
+                    role: agent.role,
+                    status: agent.status || 'waiting',
+                    x: agent.x || 100,
+                    y: agent.y || 100
+                });
+            });
+
+            // 导入 Messages
+            if (importedData.messages) {
+                importedData.messages.forEach(msg => {
+                    messages.push({
+                        id: msg.id,
+                        from: msg.from,
+                        to: msg.to,
+                        content: msg.content,
+                        timestamp: msg.timestamp || 0
+                    });
+                });
+            }
+
+            // 渲染界面
+            renderAgents();
+            renderFlow();
+
+            // 关闭模态框
+            closeImportModal();
+
+            showNotification(`已导入工作流: ${agents.length} 个 Agents`, 'success');
         }
 
         // 渲染模板列表
