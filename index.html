@@ -2737,6 +2737,134 @@
                     { from: 'Developer', to: 'Marketing', content: '实验功能开发完成' },
                     { from: 'Marketing', to: 'CEO', content: '实验结果和增长建议' }
                 ]
+            },
+            // 新增模板
+            {
+                id: 'seo-optimization',
+                name: 'SEO 优化',
+                icon: '🔎',
+                desc: '从关键词研究到搜索排名提升的 SEO 流程',
+                agents: ['SEO Specialist', 'Content Strategist', 'Developer', 'Marketing', 'Data Analyst'],
+                positions: [
+                    { role: 'SEO Specialist', x: 400, y: 30 },
+                    { role: 'Content Strategist', x: 200, y: 150 },
+                    { role: 'Developer', x: 600, y: 150 },
+                    { role: 'Marketing', x: 200, y: 270 },
+                    { role: 'Data Analyst', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'SEO Specialist', to: 'Content Strategist', content: '关键词研究和竞争分析' },
+                    { from: 'Content Strategist', to: 'Developer', content: '内容优化建议' },
+                    { from: 'Developer', to: 'SEO Specialist', content: '技术 SEO 优化完成' },
+                    { from: 'SEO Specialist', to: 'Data Analyst', content: '排名数据监控' },
+                    { from: 'Data Analyst', to: 'Marketing', content: 'SEO 效果报告' }
+                ]
+            },
+            {
+                id: 'community-management',
+                name: '社区运营',
+                icon: '🌐',
+                desc: '从用户社区建立到活跃度提升的运营流程',
+                agents: ['Community Manager', 'Content Strategist', 'Customer Support', 'Marketing', 'CEO'],
+                positions: [
+                    { role: 'Community Manager', x: 400, y: 30 },
+                    { role: 'Content Strategist', x: 200, y: 150 },
+                    { role: 'Customer Support', x: 600, y: 150 },
+                    { role: 'Marketing', x: 200, y: 270 },
+                    { role: 'CEO', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Community Manager', to: 'Content Strategist', content: '社区内容规划' },
+                    { from: 'Content Strategist', to: 'Community Manager', content: '内容素材提供' },
+                    { from: 'Customer Support', to: 'Community Manager', content: '用户反馈汇总' },
+                    { from: 'Community Manager', to: 'Marketing', content: '社区活动方案' },
+                    { from: 'Marketing', to: 'CEO', content: '社区增长报告' }
+                ]
+            },
+            {
+                id: 'content-strategy',
+                name: '内容策略',
+                icon: '✍️',
+                desc: '从内容规划到多渠道分发的内容营销流程',
+                agents: ['Content Strategist', 'SEO Specialist', 'Designer', 'Marketing', 'Data Analyst'],
+                positions: [
+                    { role: 'Content Strategist', x: 400, y: 30 },
+                    { role: 'SEO Specialist', x: 200, y: 150 },
+                    { role: 'Designer', x: 600, y: 150 },
+                    { role: 'Marketing', x: 200, y: 270 },
+                    { role: 'Data Analyst', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Content Strategist', to: 'SEO Specialist', content: '内容关键词规划' },
+                    { from: 'SEO Specialist', to: 'Content Strategist', content: 'SEO 优化建议' },
+                    { from: 'Content Strategist', to: 'Designer', content: '内容视觉设计需求' },
+                    { from: 'Designer', to: 'Marketing', content: '设计稿完成' },
+                    { from: 'Marketing', to: 'Data Analyst', content: '内容效果数据' }
+                ]
+            },
+            {
+                id: 'bi-analysis',
+                name: '商业智能分析',
+                icon: '📊',
+                desc: '从数据整合到商业洞察的 BI 分析流程',
+                agents: ['BI Analyst', 'Data Engineer', 'Data Analyst', 'Business Analyst', 'CEO'],
+                positions: [
+                    { role: 'BI Analyst', x: 400, y: 30 },
+                    { role: 'Data Engineer', x: 200, y: 150 },
+                    { role: 'Data Analyst', x: 600, y: 150 },
+                    { role: 'Business Analyst', x: 200, y: 270 },
+                    { role: 'CEO', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'BI Analyst', to: 'Data Engineer', content: '数据源整合需求' },
+                    { from: 'Data Engineer', to: 'BI Analyst', content: '数据仓库构建完成' },
+                    { from: 'BI Analyst', to: 'Data Analyst', content: '数据分析任务' },
+                    { from: 'Data Analyst', to: 'Business Analyst', content: '数据分析报告' },
+                    { from: 'Business Analyst', to: 'CEO', content: '商业洞察和建议' }
+                ]
+            },
+            {
+                id: 'user-retention',
+                name: '用户留存',
+                icon: '💎',
+                desc: '从用户行为分析到留存率提升的运营流程',
+                agents: ['Growth Hacker', 'Data Analyst', 'Product Manager', 'Designer', 'Customer Support'],
+                positions: [
+                    { role: 'Growth Hacker', x: 400, y: 30 },
+                    { role: 'Data Analyst', x: 200, y: 150 },
+                    { role: 'Product Manager', x: 600, y: 150 },
+                    { role: 'Designer', x: 200, y: 270 },
+                    { role: 'Customer Support', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Growth Hacker', to: 'Data Analyst', content: '分析用户流失原因' },
+                    { from: 'Data Analyst', to: 'Growth Hacker', content: '留存数据分析报告' },
+                    { from: 'Growth Hacker', to: 'Product Manager', content: '留存优化方案' },
+                    { from: 'Product Manager', to: 'Designer', content: '产品功能优化设计' },
+                    { from: 'Product Manager', to: 'Customer Support', content: '用户沟通策略' }
+                ]
+            },
+            {
+                id: 'product-globalization',
+                name: '产品全球化',
+                icon: '🌍',
+                desc: '从市场调研到全球发布的国际化流程',
+                agents: ['CEO', 'Researcher', 'Content Strategist', 'Marketing', 'Operations'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Researcher', x: 200, y: 150 },
+                    { role: 'Content Strategist', x: 600, y: 150 },
+                    { role: 'Marketing', x: 200, y: 270 },
+                    { role: 'Operations', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Researcher', content: '目标海外市场调研' },
+                    { from: 'Researcher', to: 'CEO', content: '市场分析报告' },
+                    { from: 'CEO', to: 'Content Strategist', content: '本地化内容策略' },
+                    { from: 'Content Strategist', to: 'Marketing', content: '本地化内容完成' },
+                    { from: 'Marketing', to: 'Operations', content: '海外运营准备' },
+                    { from: 'Operations', to: 'CEO', content: '全球发布准备就绪' }
+                ]
             }
         ];
 
@@ -2770,7 +2898,13 @@
             'Data Engineer': { icon: '🔮', color: '#8b5cf6', role: '数据工程师' },
             'ML Engineer': { icon: '🤖', color: '#ec4899', role: '机器学习工程师' },
             'Product Designer': { icon: '🎯', color: '#f59e0b', role: '产品设计师' },
-            'Business Analyst': { icon: '📈', color: '#22c55e', role: '业务分析师' }
+            'Business Analyst': { icon: '📈', color: '#22c55e', role: '业务分析师' },
+            // 新增角色
+            'Growth Hacker': { icon: '🚀', color: '#f97316', role: '增长黑客' },
+            'BI Analyst': { icon: '📊', color: '#06b6d4', role: '商业智能分析师' },
+            'Content Strategist': { icon: '✍️', color: '#a855f7', role: '内容策略师' },
+            'SEO Specialist': { icon: '🔎', color: '#84cc16', role: 'SEO 专家' },
+            'Community Manager': { icon: '🌐', color: '#14b8a6', role: '社区经理' }
         };
 
         // 拖拽相关变量
