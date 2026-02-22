@@ -9435,6 +9435,138 @@
                     { from: 'AI Grading', to: 'AI Learning Path', content: '评估结果' },
                     { from: 'AI Learning Path', to: 'AI Language Tutor', content: '学习计划' }
                 ]
+            },
+            // Cycle 321 新增模板 - AI 电商零售系统
+            {
+                id: 'ai-ecommerce',
+                name: 'AI电商零售系统',
+                icon: '🛒',
+                desc: '从商品推荐到智能零售的完整流程',
+                agents: ['AI Ecommerce', 'AI Recommendation', 'AI Pricing', 'AI Inventory', 'AI Retail Analytics'],
+                positions: [
+                    { role: 'AI Ecommerce', x: 400, y: 30 },
+                    { role: 'AI Recommendation', x: 200, y: 150 },
+                    { role: 'AI Pricing', x: 600, y: 150 },
+                    { role: 'AI Inventory', x: 200, y: 270 },
+                    { role: 'AI Retail Analytics', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Ecommerce', to: 'AI Recommendation', content: '用户行为数据' },
+                    { from: 'AI Recommendation', to: 'AI Pricing', content: '推荐策略' },
+                    { from: 'AI Pricing', to: 'AI Inventory', content: '定价方案' },
+                    { from: 'AI Inventory', to: 'AI Retail Analytics', content: '库存情况' },
+                    { from: 'AI Retail Analytics', to: 'AI Ecommerce', content: '销售分析报告' }
+                ]
+            },
+            // Cycle 321 新增模板 - AI 智能农业系统
+            {
+                id: 'ai-agriculture',
+                name: 'AI智能农业系统',
+                icon: '🌾',
+                desc: '从作物监测到智慧农业的完整流程',
+                agents: ['AI Agriculture', 'AI Crop Monitoring', 'AI Weather Predictor', 'AI Irrigation', 'AI Pest Detection'],
+                positions: [
+                    { role: 'AI Agriculture', x: 400, y: 30 },
+                    { role: 'AI Crop Monitoring', x: 200, y: 150 },
+                    { role: 'AI Weather Predictor', x: 600, y: 150 },
+                    { role: 'AI Irrigation', x: 200, y: 270 },
+                    { role: 'AI Pest Detection', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Agriculture', to: 'AI Crop Monitoring', content: '监测需求' },
+                    { from: 'AI Crop Monitoring', to: 'AI Weather Predictor', content: '作物生长数据' },
+                    { from: 'AI Weather Predictor', to: 'AI Irrigation', content: '天气预报' },
+                    { from: 'AI Irrigation', to: 'AI Pest Detection', content: '灌溉方案' },
+                    { from: 'AI Pest Detection', to: 'AI Agriculture', content: '病虫害预警' }
+                ]
+            },
+            // Cycle 321 新增模板 - AI 法律服务系统
+            {
+                id: 'ai-legal',
+                name: 'AI法律服务系统',
+                icon: '⚖️',
+                desc: '从法律研究到合同审查的完整流程',
+                agents: ['AI Legal Research', 'AI Contract Review', 'AI Compliance', 'AI Patent Analyst', 'AI Dispute Resolver'],
+                positions: [
+                    { role: 'AI Legal Research', x: 400, y: 30 },
+                    { role: 'AI Contract Review', x: 200, y: 150 },
+                    { role: 'AI Compliance', x: 600, y: 150 },
+                    { role: 'AI Patent Analyst', x: 200, y: 270 },
+                    { role: 'AI Dispute Resolver', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Legal Research', to: 'AI Contract Review', content: '法律条文' },
+                    { from: 'AI Contract Review', to: 'AI Compliance', content: '合同审查报告' },
+                    { from: 'AI Compliance', to: 'AI Patent Analyst', content: '合规要求' },
+                    { from: 'AI Patent Analyst', to: 'AI Dispute Resolver', content: '专利分析' },
+                    { from: 'AI Dispute Resolver', to: 'AI Legal Research', content: '纠纷解决方案' }
+                ]
+            },
+            // Cycle 321 新增模板 - AI 人力资源系统
+            {
+                id: 'ai-hr',
+                name: 'AI人力资源系统',
+                icon: '👔',
+                desc: '从招聘到员工发展的完整流程',
+                agents: ['AI Recruiter', 'AI Talent Assessment', 'AI Performance Review', 'AI Training Coach', 'AI Employee Engagement'],
+                positions: [
+                    { role: 'AI Recruiter', x: 400, y: 30 },
+                    { role: 'AI Talent Assessment', x: 200, y: 150 },
+                    { role: 'AI Performance Review', x: 600, y: 150 },
+                    { role: 'AI Training Coach', x: 200, y: 270 },
+                    { role: 'AI Employee Engagement', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Recruiter', to: 'AI Talent Assessment', content: '候选人信息' },
+                    { from: 'AI Talent Assessment', to: 'AI Performance Review', content: '人才评估报告' },
+                    { from: 'AI Performance Review', to: 'AI Training Coach', content: '绩效数据' },
+                    { from: 'AI Training Coach', to: 'AI Employee Engagement', content: '培训计划' },
+                    { from: 'AI Employee Engagement', to: 'AI Recruiter', content: '员工满意度' }
+                ]
+            },
+            // Cycle 321 新增模板 - AI 供应链系统
+            {
+                id: 'ai-supply-chain',
+                name: 'AI供应链系统',
+                icon: '🔗',
+                desc: '从需求预测到物流优化的完整流程',
+                agents: ['AI Supply Chain', 'AI Demand Forecasting', 'AI Route Optimizer', 'AI Warehouse Robot', 'AI Quality Control'],
+                positions: [
+                    { role: 'AI Supply Chain', x: 400, y: 30 },
+                    { role: 'AI Demand Forecasting', x: 200, y: 150 },
+                    { role: 'AI Route Optimizer', x: 600, y: 150 },
+                    { role: 'AI Warehouse Robot', x: 200, y: 270 },
+                    { role: 'AI Quality Control', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Supply Chain', to: 'AI Demand Forecasting', content: '供应链需求' },
+                    { from: 'AI Demand Forecasting', to: 'AI Route Optimizer', content: '需求预测' },
+                    { from: 'AI Route Optimizer', to: 'AI Warehouse Robot', content: '物流路线' },
+                    { from: 'AI Warehouse Robot', to: 'AI Quality Control', content: '库存数据' },
+                    { from: 'AI Quality Control', to: 'AI Supply Chain', content: '质检报告' }
+                ]
+            },
+            // Cycle 321 新增模板 - AI 媒体娱乐系统
+            {
+                id: 'ai-media',
+                name: 'AI媒体娱乐系统',
+                icon: '🎬',
+                desc: '从内容创作到流媒体分发的完整流程',
+                agents: ['AI Content Creator', 'AI Video Editor', 'AI Music Composer', 'AI Game Designer', 'AI Streaming'],
+                positions: [
+                    { role: 'AI Content Creator', x: 400, y: 30 },
+                    { role: 'AI Video Editor', x: 200, y: 150 },
+                    { role: 'AI Music Composer', x: 600, y: 150 },
+                    { role: 'AI Game Designer', x: 200, y: 270 },
+                    { role: 'AI Streaming', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Content Creator', to: 'AI Video Editor', content: '内容创意' },
+                    { from: 'AI Video Editor', to: 'AI Music Composer', content: '视频素材' },
+                    { from: 'AI Music Composer', to: 'AI Game Designer', content: '配乐需求' },
+                    { from: 'AI Game Designer', to: 'AI Streaming', content: '游戏内容' },
+                    { from: 'AI Streaming', to: 'AI Content Creator', content: '分发数据' }
+                ]
             }
         ];
 
@@ -10050,7 +10182,45 @@
             'AI NPC Designer': { icon: '🎮', color: '#f59e0b', role: 'AI游戏NPC设计师' },
             'AI Game AI': { icon: '🎲', color: '#22c55e', role: 'AI游戏AI工程师' },
             'AI Trading Bot': { icon: '🤖', color: '#0ea5e9', role: 'AI交易机器人' },
-            'AI Fraud Detector': { icon: '🔎', color: '#dc2626', role: 'AI欺诈检测器' }
+            'AI Fraud Detector': { icon: '🔎', color: '#dc2626', role: 'AI欺诈检测器' },
+            // Cycle 321 新增角色 - AI 电商零售
+            'AI Ecommerce': { icon: '🛒', color: '#f97316', role: 'AI电商工程师' },
+            'AI Retail Analytics': { icon: '📊', color: '#22c55e', role: 'AI零售分析师' },
+            'AI Recommendation': { icon: '🎯', color: '#8b5cf6', role: 'AI推荐系统工程师' },
+            'AI Pricing': { icon: '💰', color: '#14b8a6', role: 'AI定价工程师' },
+            'AI Inventory': { icon: '📦', color: '#06b6d4', role: 'AI库存管理师' },
+            'AI Customer Segmentation': { icon: '👥', color: '#ec4899', role: 'AI用户细分师' },
+            // Cycle 321 新增角色 - AI 媒体娱乐
+            'AI Content Creator': { icon: '🎬', color: '#a855f7', role: 'AI内容创作者' },
+            'AI Video Editor': { icon: '🎥', color: '#f43f5e', role: 'AI视频剪辑师' },
+            'AI Music Composer': { icon: '🎵', color: '#22c55e', role: 'AI音乐作曲师' },
+            'AI Game Designer': { icon: '🎮', color: '#8b5cf6', role: 'AI游戏设计师' },
+            'AI Streaming': { icon: '📺', color: '#06b6d4', role: 'AI流媒体工程师' },
+            'AI Ad Optimizer': { icon: '📢', color: '#f59e0b', role: 'AI广告优化师' },
+            // Cycle 321 新增角色 - AI 农业技术
+            'AI Agriculture': { icon: '🌾', color: '#22c55e', role: 'AI农业工程师' },
+            'AI Crop Monitoring': { icon: '🌱', color: '#10b981', role: 'AI作物监测师' },
+            'AI Weather Predictor': { icon: '🌤️', color: '#0ea5e9', role: 'AI天气预报师' },
+            'AI Irrigation': { icon: '💧', color: '#06b6d4', role: 'AI灌溉工程师' },
+            'AI Pest Detection': { icon: '🐛', color: '#f97316', role: 'AI病虫害检测师' },
+            // Cycle 321 新增角色 - AI 法律科技
+            'AI Legal Research': { icon: '⚖️', color: '#64748b', role: 'AI法律研究员' },
+            'AI Contract Review': { icon: '📜', color: '#8b5cf6', role: 'AI合同审查师' },
+            'AI Compliance': { icon: '✅', color: '#22c55e', role: 'AI合规工程师' },
+            'AI Patent Analyst': { icon: '💡', color: '#f59e0b', role: 'AI专利分析师' },
+            'AI Dispute Resolver': { icon: '⚖️', color: '#ec4899', role: 'AI纠纷调解师' },
+            // Cycle 321 新增角色 - AI 人力资源
+            'AI Recruiter': { icon: '👔', color: '#a855f7', role: 'AI招聘专员' },
+            'AI Talent Assessment': { icon: '📊', color: '#8b5cf6', role: 'AI人才评估师' },
+            'AI Performance Review': { icon: '📈', color: '#22c55e', role: 'AI绩效评审师' },
+            'AI Training Coach': { icon: '🎓', color: '#f97316', role: 'AI培训教练' },
+            'AI Employee Engagement': { icon: '💼', color: '#06b6d4', role: 'AI员工关怀师' },
+            // Cycle 321 新增角色 - AI 供应链
+            'AI Supply Chain': { icon: '🔗', color: '#0ea5e9', role: 'AI供应链工程师' },
+            'AI Demand Forecasting': { icon: '📈', color: '#f59e0b', role: 'AI需求预测师' },
+            'AI Route Optimizer': { icon: '🛤️', color: '#22c55e', role: 'AI路线优化师' },
+            'AI Warehouse Robot': { icon: '🤖', color: '#8b5cf6', role: 'AI仓储机器人' },
+            'AI Quality Control': { icon: '🔍', color: '#dc2626', role: 'AI质检工程师' }
         };
 
         // 拖拽相关变量
