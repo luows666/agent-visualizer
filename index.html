@@ -2606,6 +2606,137 @@
                     { from: 'Legal Counsel', to: 'Operations', content: '合规检查清单' },
                     { from: 'Operations', to: 'Legal Counsel', content: '合规报告提交' }
                 ]
+            },
+            // 新增模板
+            {
+                id: 'ai-ml-development',
+                name: 'AI/ML 开发',
+                icon: '🤖',
+                desc: '从模型训练到部署的机器学习开发流程',
+                agents: ['Data Engineer', 'ML Engineer', 'Developer', 'QA', 'DevOps'],
+                positions: [
+                    { role: 'Data Engineer', x: 400, y: 30 },
+                    { role: 'ML Engineer', x: 200, y: 150 },
+                    { role: 'Developer', x: 600, y: 150 },
+                    { role: 'QA', x: 200, y: 270 },
+                    { role: 'DevOps', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Data Engineer', to: 'ML Engineer', content: '数据准备完成，可以开始训练' },
+                    { from: 'ML Engineer', to: 'Developer', content: '模型训练完成，API 接口文档' },
+                    { from: 'Developer', to: 'QA', content: 'ML 服务部署完成' },
+                    { from: 'QA', to: 'DevOps', content: '模型性能测试报告' },
+                    { from: 'DevOps', to: 'Data Engineer', content: '生产环境监控配置完成' }
+                ]
+            },
+            {
+                id: 'architecture-review',
+                name: '架构设计评审',
+                icon: '🏗️',
+                desc: '从需求分析到架构评审的完整流程',
+                agents: ['Architect', 'CTO', 'Developer', 'DevOps', 'Security'],
+                positions: [
+                    { role: 'Architect', x: 400, y: 30 },
+                    { role: 'CTO', x: 200, y: 150 },
+                    { role: 'Developer', x: 600, y: 150 },
+                    { role: 'DevOps', x: 200, y: 270 },
+                    { role: 'Security', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Architect', to: 'CTO', content: '架构设计方案' },
+                    { from: 'CTO', to: 'Developer', content: '技术可行性评估' },
+                    { from: 'Developer', to: 'DevOps', content: '部署方案需求' },
+                    { from: 'Developer', to: 'Security', content: '安全合规需求' },
+                    { from: 'Security', to: 'Architect', content: '安全审查反馈' },
+                    { from: 'DevOps', to: 'Architect', content: '运维可行性评估' }
+                ]
+            },
+            {
+                id: 'mvp-development',
+                name: 'MVP 开发',
+                icon: '🚀',
+                desc: '创业公司最小可行产品快速迭代流程',
+                agents: ['CEO', 'Product Designer', 'Developer', 'Marketing', 'Sales'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Product Designer', x: 200, y: 150 },
+                    { role: 'Developer', x: 600, y: 150 },
+                    { role: 'Marketing', x: 200, y: 270 },
+                    { role: 'Sales', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Product Designer', content: 'MVP 产品需求定义' },
+                    { from: 'Product Designer', to: 'Developer', content: '产品原型和设计稿' },
+                    { from: 'Developer', to: 'CEO', content: 'MVP 开发完成' },
+                    { from: 'CEO', to: 'Marketing', content: '启动市场推广' },
+                    { from: 'Marketing', to: 'Sales', content: '获取首批用户反馈' },
+                    { from: 'Sales', to: 'CEO', content: '用户反馈和产品迭代建议' }
+                ]
+            },
+            {
+                id: 'mobile-app-development',
+                name: '移动应用开发',
+                icon: '📱',
+                desc: '从设计到发布的移动应用开发流程',
+                agents: ['Product Manager', 'Product Designer', 'Developer', 'QA', 'Marketing'],
+                positions: [
+                    { role: 'Product Manager', x: 400, y: 30 },
+                    { role: 'Product Designer', x: 200, y: 150 },
+                    { role: 'Developer', x: 600, y: 150 },
+                    { role: 'QA', x: 200, y: 270 },
+                    { role: 'Marketing', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Product Manager', to: 'Product Designer', content: '产品需求文档' },
+                    { from: 'Product Designer', to: 'Developer', content: 'UI/UX 设计稿和交互' },
+                    { from: 'Developer', to: 'QA', content: '应用构建完成，提交测试' },
+                    { from: 'QA', to: 'Developer', content: '测试报告：发现 5 个 bug' },
+                    { from: 'Developer', to: 'Product Manager', content: '修复完成，准备发布' },
+                    { from: 'Product Manager', to: 'Marketing', content: '应用上线推广计划' }
+                ]
+            },
+            {
+                id: 'data-pipeline',
+                name: '数据管道搭建',
+                icon: '🔮',
+                desc: '从数据采集到可视化的完整数据流程',
+                agents: ['Data Engineer', 'Data Analyst', 'Architect', 'Developer', 'Business Analyst'],
+                positions: [
+                    { role: 'Data Engineer', x: 400, y: 30 },
+                    { role: 'Data Analyst', x: 200, y: 150 },
+                    { role: 'Architect', x: 600, y: 150 },
+                    { role: 'Developer', x: 200, y: 270 },
+                    { role: 'Business Analyst', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Data Engineer', to: 'Architect', content: '数据管道架构设计' },
+                    { from: 'Architect', to: 'Developer', content: '技术架构确认' },
+                    { from: 'Developer', to: 'Data Engineer', content: '数据管道开发完成' },
+                    { from: 'Data Engineer', to: 'Data Analyst', content: '数据清洗完成' },
+                    { from: 'Data Analyst', to: 'Business Analyst', content: '数据分析报告' }
+                ]
+            },
+            {
+                id: 'growth-hacking',
+                name: '用户增长黑客',
+                icon: '📈',
+                desc: '从创意到执行的用户增长实验流程',
+                agents: ['Marketing', 'Data Analyst', 'Developer', 'Product Designer', 'CEO'],
+                positions: [
+                    { role: 'Marketing', x: 400, y: 30 },
+                    { role: 'Data Analyst', x: 200, y: 150 },
+                    { role: 'Developer', x: 600, y: 150 },
+                    { role: 'Product Designer', x: 200, y: 270 },
+                    { role: 'CEO', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Marketing', to: 'Data Analyst', content: '分析用户行为数据，寻找增长点' },
+                    { from: 'Data Analyst', to: 'Marketing', content: '增长机会分析报告' },
+                    { from: 'Marketing', to: 'Product Designer', content: '设计增长实验方案' },
+                    { from: 'Product Designer', to: 'Developer', content: '实验落地页设计' },
+                    { from: 'Developer', to: 'Marketing', content: '实验功能开发完成' },
+                    { from: 'Marketing', to: 'CEO', content: '实验结果和增长建议' }
+                ]
             }
         ];
 
@@ -2633,7 +2764,13 @@
             'Legal Counsel': { icon: '⚖️', color: '#7c3aed', role: '法务顾问' },
             'QA Lead': { icon: '🎯', color: '#0d9488', role: 'QA负责人' },
             'Technical Writer': { icon: '📝', color: '#6366f1', role: '技术文档工程师' },
-            'UX Researcher': { icon: '🔬', color: '#db2777', role: '用户体验研究员' }
+            'UX Researcher': { icon: '🔬', color: '#db2777', role: '用户体验研究员' },
+            // 新增角色
+            'Architect': { icon: '🏗️', color: '#0d9488', role: '系统架构师' },
+            'Data Engineer': { icon: '🔮', color: '#8b5cf6', role: '数据工程师' },
+            'ML Engineer': { icon: '🤖', color: '#ec4899', role: '机器学习工程师' },
+            'Product Designer': { icon: '🎯', color: '#f59e0b', role: '产品设计师' },
+            'Business Analyst': { icon: '📈', color: '#22c55e', role: '业务分析师' }
         };
 
         // 拖拽相关变量
