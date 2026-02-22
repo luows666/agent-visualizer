@@ -5927,6 +5927,260 @@
                     { from: 'Backend Developer', to: 'AI Quality Assurance', content: '优化完成，请求验证' },
                     { from: 'AI Quality Assurance', to: 'Product Manager', content: '性能优化验证报告' }
                 ]
+            },
+            // Cycle 296 新增模板
+            {
+                id: 'agent-framework-dev',
+                name: 'Agent框架开发',
+                icon: '🔧',
+                desc: '从Agent框架设计到实现上线的完整流程',
+                agents: ['Agent Framework Developer', 'Backend Developer', 'QA', 'DevOps', 'Product Manager'],
+                positions: [
+                    { role: 'Agent Framework Developer', x: 400, y: 30 },
+                    { role: 'Backend Developer', x: 200, y: 150 },
+                    { role: 'QA', x: 600, y: 150 },
+                    { role: 'DevOps', x: 200, y: 270 },
+                    { role: 'Product Manager', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Agent Framework Developer', to: 'Backend Developer', content: '需要后端架构支持' },
+                    { from: 'Backend Developer', to: 'Agent Framework Developer', content: '后端架构就绪' },
+                    { from: 'Agent Framework Developer', to: 'QA', content: '框架开发完成，请求测试' },
+                    { from: 'QA', to: 'DevOps', content: '测试通过，请求部署' },
+                    { from: 'DevOps', to: 'Product Manager', content: '部署完成，产品验收' }
+                ]
+            },
+            {
+                id: 'model-fine-tuning',
+                name: '模型微调流程',
+                icon: '🎛️',
+                desc: '从数据准备到模型微调上线的完整流程',
+                agents: ['Fine-tuning Engineer', 'Data Pipeline Engineer', 'ML Engineer', 'AI Quality Assurance', 'Product Manager'],
+                positions: [
+                    { role: 'Fine-tuning Engineer', x: 400, y: 30 },
+                    { role: 'Data Pipeline Engineer', x: 200, y: 150 },
+                    { role: 'ML Engineer', x: 600, y: 150 },
+                    { role: 'AI Quality Assurance', x: 200, y: 270 },
+                    { role: 'Product Manager', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Fine-tuning Engineer', to: 'Data Pipeline Engineer', content: '需要训练数据准备' },
+                    { from: 'Data Pipeline Engineer', to: 'ML Engineer', content: '训练数据已就绪' },
+                    { from: 'ML Engineer', to: 'Fine-tuning Engineer', content: '模型微调完成' },
+                    { from: 'Fine-tuning Engineer', to: 'AI Quality Assurance', content: '需要质量验证' },
+                    { from: 'AI Quality Assurance', to: 'Product Manager', content: '微调模型验证通过' }
+                ]
+            },
+            {
+                id: 'ai-system-integration',
+                name: 'AI系统集成',
+                icon: '🔗',
+                desc: '从多AI系统集成到统一平台的完整流程',
+                agents: ['AI System Integrator', 'Backend Developer', 'Frontend Developer', 'AI UX Researcher', 'QA'],
+                positions: [
+                    { role: 'AI System Integrator', x: 400, y: 30 },
+                    { role: 'Backend Developer', x: 200, y: 150 },
+                    { role: 'Frontend Developer', x: 600, y: 150 },
+                    { role: 'AI UX Researcher', x: 200, y: 270 },
+                    { role: 'QA', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI System Integrator', to: 'Backend Developer', content: '需要后端集成支持' },
+                    { from: 'Backend Developer', to: 'Frontend Developer', content: '后端API就绪' },
+                    { from: 'Frontend Developer', to: 'AI System Integrator', content: '前端集成完成' },
+                    { from: 'AI System Integrator', to: 'AI UX Researcher', content: '需要用户体验测试' },
+                    { from: 'AI UX Researcher', to: 'QA', content: '用户体验测试通过' }
+                ]
+            },
+            {
+                id: 'conversational-ai-design',
+                name: '对话AI设计',
+                icon: '💬',
+                desc: '从对话设计到AI对话系统上线的完整流程',
+                agents: ['Conversational Designer', 'AI UX Researcher', 'Prompt Engineer', 'Backend Developer', 'Product Manager'],
+                positions: [
+                    { role: 'Conversational Designer', x: 400, y: 30 },
+                    { role: 'AI UX Researcher', x: 200, y: 150 },
+                    { role: 'Prompt Engineer', x: 600, y: 150 },
+                    { role: 'Backend Developer', x: 200, y: 270 },
+                    { role: 'Product Manager', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Conversational Designer', to: 'AI UX Researcher', content: '需要用户对话调研' },
+                    { from: 'AI UX Researcher', to: 'Conversational Designer', content: '用户需求调研报告' },
+                    { from: 'Conversational Designer', to: 'Prompt Engineer', content: '需要对话提示词设计' },
+                    { from: 'Prompt Engineer', to: 'Backend Developer', content: '提示词设计完成' },
+                    { from: 'Backend Developer', to: 'Product Manager', content: '对话系统开发完成' }
+                ]
+            },
+            {
+                id: 'edge-ai-deployment',
+                name: '边缘AI部署',
+                icon: '📱',
+                desc: '从边缘设备AI模型部署到端上运行的完整流程',
+                agents: ['Edge AI Engineer', 'Model Deployment Engineer', 'Embedded Engineer', 'QA', 'Product Manager'],
+                positions: [
+                    { role: 'Edge AI Engineer', x: 400, y: 30 },
+                    { role: 'Model Deployment Engineer', x: 200, y: 150 },
+                    { role: 'Embedded Engineer', x: 600, y: 150 },
+                    { role: 'QA', x: 200, y: 270 },
+                    { role: 'Product Manager', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Edge AI Engineer', to: 'Model Deployment Engineer', content: '需要模型优化支持' },
+                    { from: 'Model Deployment Engineer', to: 'Embedded Engineer', content: '模型优化完成' },
+                    { from: 'Embedded Engineer', to: 'Edge AI Engineer', content: '边缘部署就绪' },
+                    { from: 'Edge AI Engineer', to: 'QA', content: '边缘设备测试请求' },
+                    { from: 'QA', to: 'Product Manager', content: '边缘部署验证通过' }
+                ]
+            },
+            {
+                id: 'ai-governance',
+                name: 'AI治理流程',
+                icon: '⚖️',
+                desc: '从AI系统治理到合规上线的完整流程',
+                agents: ['AI Governance Specialist', 'AI Ethicist', 'Legal Counsel', 'Security Engineer', 'Product Manager'],
+                positions: [
+                    { role: 'AI Governance Specialist', x: 400, y: 30 },
+                    { role: 'AI Ethicist', x: 200, y: 150 },
+                    { role: 'Legal Counsel', x: 600, y: 150 },
+                    { role: 'Security Engineer', x: 200, y: 270 },
+                    { role: 'Product Manager', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Governance Specialist', to: 'AI Ethicist', content: '需要AI伦理评估' },
+                    { from: 'AI Ethicist', to: 'Legal Counsel', content: '伦理评估报告' },
+                    { from: 'Legal Counsel', to: 'AI Governance Specialist', content: '法律合规审查' },
+                    { from: 'AI Governance Specialist', to: 'Security Engineer', content: '需要安全评估' },
+                    { from: 'Security Engineer', to: 'Product Manager', content: '安全评估通过' }
+                ]
+            },
+            // Cycle 299 新增模板
+            {
+                id: 'deep-learning-project',
+                name: '深度学习项目',
+                icon: '🧠',
+                desc: '从深度学习研究到模型上线的完整流程',
+                agents: ['AI Researcher', 'Deep Learning Engineer', 'MLOps Engineer', 'Model Deployment Engineer', 'QA'],
+                positions: [
+                    { role: 'AI Researcher', x: 400, y: 30 },
+                    { role: 'Deep Learning Engineer', x: 200, y: 150 },
+                    { role: 'MLOps Engineer', x: 600, y: 150 },
+                    { role: 'Model Deployment Engineer', x: 200, y: 270 },
+                    { role: 'QA', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Researcher', to: 'Deep Learning Engineer', content: '深度学习算法研究完成' },
+                    { from: 'Deep Learning Engineer', to: 'MLOps Engineer', content: '模型训练完成，需要部署流水线' },
+                    { from: 'MLOps Engineer', to: 'Model Deployment Engineer', content: 'MLOps流水线搭建完成' },
+                    { from: 'Model Deployment Engineer', to: 'QA', content: '模型服务已部署，提交测试' },
+                    { from: 'QA', to: 'AI Researcher', content: '测试通过，项目交付' }
+                ]
+            },
+            {
+                id: 'speech-recognition',
+                name: '语音识别开发',
+                icon: '🎤',
+                desc: '从语音识别需求到产品上线的完整流程',
+                agents: ['Product Manager', 'Speech Recognition Engineer', 'AI UX Researcher', 'Model Deployment Engineer', 'QA'],
+                positions: [
+                    { role: 'Product Manager', x: 400, y: 30 },
+                    { role: 'Speech Recognition Engineer', x: 200, y: 150 },
+                    { role: 'AI UX Researcher', x: 600, y: 150 },
+                    { role: 'Model Deployment Engineer', x: 200, y: 270 },
+                    { role: 'QA', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Product Manager', to: 'Speech Recognition Engineer', content: '语音识别需求评审' },
+                    { from: 'Speech Recognition Engineer', to: 'AI UX Researcher', content: '需要用户语音交互测试' },
+                    { from: 'AI UX Researcher', to: 'Product Manager', content: '用户体验反馈报告' },
+                    { from: 'Speech Recognition Engineer', to: 'Model Deployment Engineer', content: '模型优化完成' },
+                    { from: 'Model Deployment Engineer', to: 'QA', content: '语音服务部署完成' }
+                ]
+            },
+            {
+                id: 'ai-safety-audit',
+                name: 'AI安全审计',
+                icon: '🛡️',
+                desc: '从AI系统安全评估到风险控制的完整流程',
+                agents: ['AI Safety Engineer', 'Security Analyst', 'AI Ethics Researcher', 'Legal Counsel', 'CTO'],
+                positions: [
+                    { role: 'AI Safety Engineer', x: 400, y: 30 },
+                    { role: 'Security Analyst', x: 200, y: 150 },
+                    { role: 'AI Ethics Researcher', x: 600, y: 150 },
+                    { role: 'Legal Counsel', x: 200, y: 270 },
+                    { role: 'CTO', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Safety Engineer', to: 'Security Analyst', content: '需要进行AI安全漏洞扫描' },
+                    { from: 'Security Analyst', to: 'AI Ethics Researcher', content: '安全漏洞报告' },
+                    { from: 'AI Ethics Researcher', to: 'Legal Counsel', content: '伦理风险评估' },
+                    { from: 'Legal Counsel', to: 'CTO', content: '合规建议报告' },
+                    { from: 'CTO', to: 'AI Safety Engineer', content: '安全修复任务分配' }
+                ]
+            },
+            {
+                id: 'model-serving',
+                name: '模型服务化部署',
+                icon: '🚀',
+                desc: '从模型训练到API服务上线的完整流程',
+                agents: ['ML Engineer', 'Model Serving Engineer', 'DevOps', 'Security Engineer', 'API Developer'],
+                positions: [
+                    { role: 'ML Engineer', x: 400, y: 30 },
+                    { role: 'Model Serving Engineer', x: 200, y: 150 },
+                    { role: 'DevOps', x: 600, y: 150 },
+                    { role: 'Security Engineer', x: 200, y: 270 },
+                    { role: 'API Developer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'ML Engineer', to: 'Model Serving Engineer', content: '训练好的模型文件' },
+                    { from: 'Model Serving Engineer', to: 'DevOps', content: '模型服务容器化完成' },
+                    { from: 'DevOps', to: 'Security Engineer', content: '容器安全扫描' },
+                    { from: 'Security Engineer', to: 'API Developer', content: '安全审核通过' },
+                    { from: 'API Developer', to: 'ML Engineer', content: 'API服务上线完成' }
+                ]
+            },
+            {
+                id: 'data-platform',
+                name: '数据平台建设',
+                icon: '📊',
+                desc: '从数据需求到数据平台上线的完整流程',
+                agents: ['Data Architect', 'Data Platform Engineer', 'Data Engineer', 'DevOps', 'Security Engineer'],
+                positions: [
+                    { role: 'Data Architect', x: 400, y: 30 },
+                    { role: 'Data Platform Engineer', x: 200, y: 150 },
+                    { role: 'Data Engineer', x: 600, y: 150 },
+                    { role: 'DevOps', x: 200, y: 270 },
+                    { role: 'Security Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Data Architect', to: 'Data Platform Engineer', content: '数据架构设计方案' },
+                    { from: 'Data Platform Engineer', to: 'Data Engineer', content: '数据管道开发需求' },
+                    { from: 'Data Engineer', to: 'DevOps', content: '数据处理任务配置' },
+                    { from: 'DevOps', to: 'Security Engineer', content: '数据平台安全审计' },
+                    { from: 'Security Engineer', to: 'Data Architect', content: '安全合规确认' }
+                ]
+            },
+            {
+                id: 'autonomous-systems',
+                name: '自动驾驶系统开发',
+                icon: '🤖',
+                desc: '从自动驾驶需求到系统上线的完整流程',
+                agents: ['Autonomous Systems Engineer', 'Computer Vision Engineer', 'Deep Learning Engineer', 'QA', 'Safety Engineer'],
+                positions: [
+                    { role: 'Autonomous Systems Engineer', x: 400, y: 30 },
+                    { role: 'Computer Vision Engineer', x: 200, y: 150 },
+                    { role: 'Deep Learning Engineer', x: 600, y: 150 },
+                    { role: 'QA', x: 200, y: 270 },
+                    { role: 'Safety Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Autonomous Systems Engineer', to: 'Computer Vision Engineer', content: '感知系统需求' },
+                    { from: 'Computer Vision Engineer', to: 'Deep Learning Engineer', content: '视觉模型需求' },
+                    { from: 'Deep Learning Engineer', to: 'Autonomous Systems Engineer', content: '模型交付' },
+                    { from: 'Autonomous Systems Engineer', to: 'Safety Engineer', content: '安全验证需求' },
+                    { from: 'Safety Engineer', to: 'QA', content: '安全测试报告' }
+                ]
             }
         ];
 
@@ -6146,7 +6400,30 @@
             'AI Training Coordinator': { icon: '📋', color: '#a855f7', role: 'AI训练协调员' },
             'AI Quality Assurance': { icon: '🔍', color: '#14b8a6', role: 'AI质量保证工程师' },
             'AI Performance Analyst': { icon: '📊', color: '#f97316', role: 'AI性能分析师' },
-            'Neural Network Architect': { icon: '🧠', color: '#6366f1', role: '神经网络架构师' }
+            'Neural Network Architect': { icon: '🧠', color: '#6366f1', role: '神经网络架构师' },
+            // Cycle 296 新增角色
+            'Semantic Engineer': { icon: '🔍', color: '#0891b2', role: '语义工程师' },
+            'Agent Framework Developer': { icon: '🔧', color: '#7c3aed', role: 'Agent框架开发者' },
+            'AI System Integrator': { icon: '🔗', color: '#22c55e', role: 'AI系统集成工程师' },
+            'Fine-tuning Engineer': { icon: '🎛️', color: '#f59e0b', role: '模型微调工程师' },
+            'Data Pipeline Engineer': { icon: '📊', color: '#ec4899', role: '数据管道工程师' },
+            'AI UX Researcher': { icon: '💡', color: '#06b6d4', role: 'AI用户体验研究员' },
+            'Conversational Designer': { icon: '💬', color: '#a855f7', role: '对话设计师' },
+            'AI Product Strategist': { icon: '🎯', color: '#14b8a6', role: 'AI产品策略师' },
+            'Model Deployment Engineer': { icon: '🚀', color: '#f97316', role: '模型部署工程师' },
+            'AI Governance Specialist': { icon: '⚖️', color: '#64748b', role: 'AI治理专家' },
+            'Edge AI Engineer': { icon: '📱', color: '#0ea5e9', role: '边缘AI工程师' },
+            // Cycle 299 新增角色
+            'Deep Learning Engineer': { icon: '🧠', color: '#6366f1', role: '深度学习工程师' },
+            'Computer Graphics Engineer': { icon: '🎮', color: '#ec4899', role: '计算机图形工程师' },
+            'Speech Recognition Engineer': { icon: '🎤', color: '#06b6d4', role: '语音识别工程师' },
+            'NLP Research Scientist': { icon: '💬', color: '#a855f7', role: 'NLP研究科学家' },
+            'AI Safety Engineer': { icon: '🛡️', color: '#dc2626', role: 'AI安全工程师' },
+            'Model Serving Engineer': { icon: '🚀', color: '#f97316', role: '模型服务工程师' },
+            'Data Platform Engineer': { icon: '📊', color: '#22c55e', role: '数据平台工程师' },
+            'AI Solutions Architect': { icon: '🏗️', color: '#8b5cf6', role: 'AI解决方案架构师' },
+            'Autonomous Systems Engineer': { icon: '🤖', color: '#14b8a6', role: '自动驾驶系统工程师' },
+            'Neural Interface Engineer': { icon: '🧬', color: '#f43f5e', role: '神经接口工程师' }
         };
 
         // 拖拽相关变量
