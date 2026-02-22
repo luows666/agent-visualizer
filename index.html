@@ -8387,6 +8387,123 @@
                     { from: 'AI Inference Optimizer', to: 'AI Cache Engineer', content: '缓存策略' },
                     { from: 'AI Cache Engineer', to: 'AI Performance Tester', content: '优化结果' }
                 ]
+            },
+            // Cycle 312 新增模板 - AI 开发工程流程
+            {
+                id: 'ai-code-review',
+                name: 'AI代码审查流程',
+                icon: '👀',
+                desc: '从代码提交到审查反馈的完整流程',
+                agents: ['AI Developer', 'AI Code Reviewer', 'AI Static Analyzer', 'AI Linter'],
+                positions: [
+                    { role: 'AI Developer', x: 400, y: 30 },
+                    { role: 'AI Code Reviewer', x: 200, y: 150 },
+                    { role: 'AI Static Analyzer', x: 600, y: 150 },
+                    { role: 'AI Linter', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Developer', to: 'AI Code Reviewer', content: '提交代码' },
+                    { from: 'AI Code Reviewer', to: 'AI Static Analyzer', content: '代码审查请求' },
+                    { from: 'AI Static Analyzer', to: 'AI Linter', content: '静态分析报告' },
+                    { from: 'AI Linter', to: 'AI Developer', content: '审查结果反馈' }
+                ]
+            },
+            {
+                id: 'ai-release-pipeline',
+                name: 'AI发布流水线',
+                icon: '🚀',
+                desc: '从构建到发布的完整流水线',
+                agents: ['AI Build Engineer', 'AI Release Engineer', 'AI Environment Manager', 'AI Dependency Manager'],
+                positions: [
+                    { role: 'AI Build Engineer', x: 400, y: 30 },
+                    { role: 'AI Release Engineer', x: 200, y: 150 },
+                    { role: 'AI Environment Manager', x: 600, y: 150 },
+                    { role: 'AI Dependency Manager', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Build Engineer', to: 'AI Release Engineer', content: '构建完成' },
+                    { from: 'AI Release Engineer', to: 'AI Environment Manager', content: '环境配置请求' },
+                    { from: 'AI Environment Manager', to: 'AI Dependency Manager', content: '依赖检查' },
+                    { from: 'AI Dependency Manager', to: 'AI Build Engineer', content: '发布就绪' }
+                ]
+            },
+            // Cycle 312 新增模板 - AI 可观测性流程
+            {
+                id: 'ai-observability',
+                name: 'AI可观测性流程',
+                icon: '👁️',
+                desc: '从监控到告警的完整可观测性流程',
+                agents: ['AI Metrics Engineer', 'AI Logging Expert', 'AI Alerting Specialist', 'AI Dashboards Builder'],
+                positions: [
+                    { role: 'AI Metrics Engineer', x: 400, y: 30 },
+                    { role: 'AI Logging Expert', x: 200, y: 150 },
+                    { role: 'AI Alerting Specialist', x: 600, y: 150 },
+                    { role: 'AI Dashboards Builder', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Metrics Engineer', to: 'AI Logging Expert', content: '指标数据' },
+                    { from: 'AI Logging Expert', to: 'AI Alerting Specialist', content: '日志分析' },
+                    { from: 'AI Alerting Specialist', to: 'AI Dashboards Builder', content: '告警配置' },
+                    { from: 'AI Dashboards Builder', to: 'AI Metrics Engineer', content: '仪表盘更新' }
+                ]
+            },
+            {
+                id: 'ai-incident-response',
+                name: 'AI事件响应流程',
+                icon: '🚨',
+                desc: '从告警到故障恢复的完整流程',
+                agents: ['AI Alerting Specialist', 'AI Incident Responder', 'AI Postmortem Writer', 'AI Trace Manager'],
+                positions: [
+                    { role: 'AI Alerting Specialist', x: 400, y: 30 },
+                    { role: 'AI Incident Responder', x: 200, y: 150 },
+                    { role: 'AI Postmortem Writer', x: 600, y: 150 },
+                    { role: 'AI Trace Manager', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Alerting Specialist', to: 'AI Incident Responder', content: '触发告警' },
+                    { from: 'AI Incident Responder', to: 'AI Trace Manager', content: '故障定位' },
+                    { from: 'AI Trace Manager', to: 'AI Postmortem Writer', content: '链路追踪结果' },
+                    { from: 'AI Postmortem Writer', to: 'AI Alerting Specialist', content: '复盘报告' }
+                ]
+            },
+            // Cycle 312 新增模板 - AI 成本优化流程
+            {
+                id: 'ai-cost-optimization',
+                name: 'AI成本优化流程',
+                icon: '💰',
+                desc: '从成本分析到优化的完整流程',
+                agents: ['AI Cost Tracker', 'AI Resource Optimizer', 'AI Budget Manager', 'AI Usage Monitor'],
+                positions: [
+                    { role: 'AI Cost Tracker', x: 400, y: 30 },
+                    { role: 'AI Resource Optimizer', x: 200, y: 150 },
+                    { role: 'AI Budget Manager', x: 600, y: 150 },
+                    { role: 'AI Usage Monitor', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Cost Tracker', to: 'AI Resource Optimizer', content: '成本报告' },
+                    { from: 'AI Resource Optimizer', to: 'AI Budget Manager', content: '优化方案' },
+                    { from: 'AI Budget Manager', to: 'AI Usage Monitor', content: '预算调整' },
+                    { from: 'AI Usage Monitor', to: 'AI Cost Tracker', content: '使用量数据' }
+                ]
+            },
+            {
+                id: 'ai-roi-analysis',
+                name: 'AI投资回报分析',
+                icon: '📊',
+                desc: '从投入分析到ROI评估的完整流程',
+                agents: ['AI ROI Analyzer', 'AI Cost Tracker', 'AI Metrics Engineer', 'AI Budget Manager'],
+                positions: [
+                    { role: 'AI ROI Analyzer', x: 400, y: 30 },
+                    { role: 'AI Cost Tracker', x: 200, y: 150 },
+                    { role: 'AI Metrics Engineer', x: 600, y: 150 },
+                    { role: 'AI Budget Manager', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI ROI Analyzer', to: 'AI Cost Tracker', content: '成本数据请求' },
+                    { from: 'AI Cost Tracker', to: 'AI Metrics Engineer', content: '成本明细' },
+                    { from: 'AI Metrics Engineer', to: 'AI Budget Manager', content: '收益指标' },
+                    { from: 'AI Budget Manager', to: 'AI ROI Analyzer', content: 'ROI报告' }
+                ]
             }
         ];
 
@@ -8790,7 +8907,46 @@
             'AI Knowledge Engineer': { icon: '🗂️', color: '#06b6d4', role: 'AI知识工程师' },
             'AI Data Quality': { icon: '✅', color: '#22c55e', role: 'AI数据质量师' },
             'AI ETL Developer': { icon: '🔄', color: '#f97316', role: 'AI ETL开发工程师' },
-            'AI Data Pipeline': { icon: '📊', color: '#a855f7', role: 'AI数据管道工程师' }
+            'AI Data Pipeline': { icon: '📊', color: '#a855f7', role: 'AI数据管道工程师' },
+            // Cycle 312 新增角色 - AI 工程与自动化
+            'AI Pipeline Architect': { icon: '🏗️', color: '#0891b2', role: 'AI流水线架构师' },
+            'AI Build Engineer': { icon: '🔨', color: '#14b8a6', role: 'AI构建工程师' },
+            'AI Release Engineer': { icon: '🚀', color: '#22c55e', role: 'AI发布工程师' },
+            'AI Environment Manager': { icon: '🌍', color: '#8b5cf6', role: 'AI环境管理器' },
+            'AI Dependency Manager': { icon: '📦', color: '#ec4899', role: 'AI依赖管理器' },
+            'AI Code Reviewer': { icon: '👀', color: '#f59e0b', role: 'AI代码审查员' },
+            'AI Static Analyzer': { icon: '🔍', color: '#06b6d4', role: 'AI静态分析器' },
+            'AI Linter': { icon: '✨', color: '#a855f7', role: 'AI代码规范检查器' },
+            'AI Formatter': { icon: '📝', color: '#22c55e', role: 'AI代码格式化器' },
+            'AI Type Checker': { icon: '✅', color: '#14b8a6', role: 'AI类型检查器' },
+            // Cycle 312 新增角色 - AI 监控与可观测性
+            'AI Metrics Engineer': { icon: '📊', color: '#f97316', role: 'AI指标工程师' },
+            'AI Logging Expert': { icon: '📝', color: '#8b5cf6', role: 'AI日志专家' },
+            'AI Tracing Engineer': { icon: '🔍', color: '#ec4899', role: 'AI链路追踪工程师' },
+            'AI Alerting Specialist': { icon: '🔔', color: '#dc2626', role: 'AI告警专家' },
+            'AI Dashboards Builder': { icon: '📈', color: '#06b6d4', role: 'AI仪表盘构建师' },
+            'AI Incident Responder': { icon: '🚨', color: '#ef4444', role: 'AI事件响应器' },
+            'AI Postmortem Writer': { icon: '📋', color: '#64748b', role: 'AI故障复盘工程师' },
+            // Cycle 312 新增角色 - AI 成本与优化
+            'AI Cost Tracker': { icon: '💰', color: '#f59e0b', role: 'AI成本追踪器' },
+            'AI Resource Optimizer': { icon: '⚡', color: '#22c55e', role: 'AI资源优化器' },
+            'AI Budget Manager': { icon: '💵', color: '#14b8a6', role: 'AI预算管理器' },
+            'AI ROI Analyzer': { icon: '📊', color: '#8b5cf6', role: 'AI投资回报分析师' },
+            'AI Usage Monitor': { icon: '👁️', color: '#06b6d4', role: 'AI使用量监控器' },
+            'AI Quota Manager': { icon: '🚦', color: '#ec4899', role: 'AI配额管理器' },
+            // Cycle 313 新增角色 - AI 前沿技术
+            'AI Edge Computing': { icon: '📡', color: '#0ea5e9', role: 'AI边缘计算工程师' },
+            'AI Autonomous Systems': { icon: '🚗', color: '#f97316', role: 'AI自动驾驶系统工程师' },
+            'AI Blockchain Dev': { icon: '⛓️', color: '#f59e0b', role: 'AI区块链开发工程师' },
+            'AI BioTech Engineer': { icon: '🧬', color: '#10b981', role: 'AI生物科技工程师' },
+            'AI Quantum Researcher': { icon: '⚛️', color: '#8b5cf6', role: 'AI量子计算研究员' },
+            'AI Robotics Engineer': { icon: '🤖', color: '#64748b', role: 'AI机器人工程师' },
+            'AI VR Developer': { icon: '🥽', color: '#ec4899', role: 'AI虚拟现实开发工程师' },
+            'AI AR Developer': { icon: '👓', color: '#06b6d4', role: 'AI增强现实开发工程师' },
+            'AI Computer Vision': { icon: '👁️', color: '#22c55e', role: 'AI计算机视觉工程师' },
+            'AI NLP Engineer': { icon: '💬', color: '#a855f7', role: 'AI自然语言处理工程师' },
+            'AI Speech Engineer': { icon: '🎤', color: '#f43f5e', role: 'AI语音工程师' },
+            'AI Multimodal Engineer': { icon: '🎭', color: '#14b8a6', role: 'AI多模态工程师' }
         };
 
         // 拖拽相关变量
