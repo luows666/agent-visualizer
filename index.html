@@ -3892,6 +3892,145 @@
                     { from: 'Brand Strategist', to: 'Sales', content: '品牌推广配合' },
                     { from: 'Sales', to: 'Chief Marketing Officer', content: '市场效果反馈' }
                 ]
+            },
+            // Cycle 279 新增模板
+            {
+                id: 'data-science-project',
+                name: '数据科学项目',
+                icon: '🔮',
+                desc: '从数据收集到AI模型部署的数据科学流程',
+                agents: ['CEO', 'Data Scientist', 'Data Engineer', 'ML Engineer', 'Tech Lead'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Data Scientist', x: 200, y: 150 },
+                    { role: 'Data Engineer', x: 600, y: 150 },
+                    { role: 'ML Engineer', x: 200, y: 270 },
+                    { role: 'Tech Lead', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Data Scientist', content: '确定数据分析目标' },
+                    { from: 'Data Scientist', to: 'CEO', content: '数据分析方案' },
+                    { from: 'Data Scientist', to: 'Data Engineer', content: '数据准备需求' },
+                    { from: 'Data Engineer', to: 'Data Scientist', content: '数据准备完成' },
+                    { from: 'Data Scientist', to: 'ML Engineer', content: '模型开发需求' },
+                    { from: 'ML Engineer', to: 'Data Scientist', content: '模型训练报告' },
+                    { from: 'ML Engineer', to: 'Tech Lead', content: '模型部署需求' }
+                ]
+            },
+            {
+                id: 'infrastructure-build',
+                name: '基础架构建设',
+                icon: '🏗️',
+                desc: '从架构设计到系统部署的基础设施建设流程',
+                agents: ['CTO', 'Architect', 'Infrastructure Engineer', 'DevOps', 'Tech Lead'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'Architect', x: 200, y: 150 },
+                    { role: 'Infrastructure Engineer', x: 600, y: 150 },
+                    { role: 'DevOps', x: 200, y: 270 },
+                    { role: 'Tech Lead', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Architect', content: '确定架构设计方案' },
+                    { from: 'Architect', to: 'CTO', content: '架构设计方案' },
+                    { from: 'Architect', to: 'Infrastructure Engineer', content: '基础设施需求' },
+                    { from: 'Infrastructure Engineer', to: 'Architect', content: '基础设施方案' },
+                    { from: 'Architect', to: 'DevOps', content: '部署流程需求' },
+                    { from: 'DevOps', to: 'Architect', content: '部署方案' },
+                    { from: 'Architect', to: 'Tech Lead', content: '技术交接' }
+                ]
+            },
+            {
+                id: 'performance-optimization',
+                name: '性能优化',
+                icon: '⚡',
+                desc: '从性能分析到系统优化的流程',
+                agents: ['CTO', 'Performance Engineer', 'Tech Lead', 'DevOps', 'QA'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'Performance Engineer', x: 200, y: 150 },
+                    { role: 'Tech Lead', x: 600, y: 150 },
+                    { role: 'DevOps', x: 200, y: 270 },
+                    { role: 'QA', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Performance Engineer', content: '性能优化目标' },
+                    { from: 'Performance Engineer', to: 'CTO', content: '性能分析报告' },
+                    { from: 'Performance Engineer', to: 'Tech Lead', content: '优化技术需求' },
+                    { from: 'Tech Lead', to: 'Performance Engineer', content: '优化实施方案' },
+                    { from: 'Tech Lead', to: 'DevOps', content: '部署优化需求' },
+                    { from: 'DevOps', to: 'Tech Lead', content: '部署完成' },
+                    { from: 'Tech Lead', to: 'QA', content: '性能测试需求' }
+                ]
+            },
+            {
+                id: 'product-owner-workflow',
+                name: '产品负责人流程',
+                icon: '📦',
+                desc: '从需求定义到产品交付的产品管理流程',
+                agents: ['CEO', 'Product Owner', 'Product Designer', 'Tech Lead', 'QA'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Product Owner', x: 200, y: 150 },
+                    { role: 'Product Designer', x: 600, y: 150 },
+                    { role: 'Tech Lead', x: 200, y: 270 },
+                    { role: 'QA', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Product Owner', content: '确定产品需求' },
+                    { from: 'Product Owner', to: 'CEO', content: '产品需求文档' },
+                    { from: 'Product Owner', to: 'Product Designer', content: '产品设计需求' },
+                    { from: 'Product Designer', to: 'Product Owner', content: '设计方案' },
+                    { from: 'Product Owner', to: 'Tech Lead', content: '技术需求评审' },
+                    { from: 'Tech Lead', to: 'Product Owner', content: '技术方案' },
+                    { from: 'Tech Lead', to: 'QA', content: '产品测试需求' }
+                ]
+            },
+            {
+                id: 'ai-research-project',
+                name: 'AI研究项目',
+                icon: '🧠',
+                desc: '从研究设想到AI产品开发的研发流程',
+                agents: ['CEO', 'AI Researcher', 'ML Engineer', 'Data Scientist', 'Product Owner'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'AI Researcher', x: 200, y: 150 },
+                    { role: 'ML Engineer', x: 600, y: 150 },
+                    { role: 'Data Scientist', x: 200, y: 270 },
+                    { role: 'Product Owner', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'AI Researcher', content: '确定AI研究方向' },
+                    { from: 'AI Researcher', to: 'CEO', content: '研究方向报告' },
+                    { from: 'AI Researcher', to: 'ML Engineer', content: '模型开发需求' },
+                    { from: 'ML Engineer', to: 'AI Researcher', content: '模型开发进度' },
+                    { from: 'AI Researcher', to: 'Data Scientist', content: '数据分析需求' },
+                    { from: 'Data Scientist', to: 'AI Researcher', content: '数据分析报告' },
+                    { from: 'AI Researcher', to: 'Product Owner', content: '产品化建议' }
+                ]
+            },
+            {
+                id: 'tech-lead-team',
+                name: '技术负责人团队',
+                icon: '👨‍💻',
+                desc: '从技术决策到团队管理的领导流程',
+                agents: ['CTO', 'Tech Lead', 'Architect', 'DevOps', 'Security'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'Tech Lead', x: 200, y: 150 },
+                    { role: 'Architect', x: 600, y: 150 },
+                    { role: 'DevOps', x: 200, y: 270 },
+                    { role: 'Security', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Tech Lead', content: '技术任务分配' },
+                    { from: 'Tech Lead', to: 'CTO', content: '技术进度报告' },
+                    { from: 'Tech Lead', to: 'Architect', content: '架构咨询需求' },
+                    { from: 'Architect', to: 'Tech Lead', content: '架构建议' },
+                    { from: 'Tech Lead', to: 'DevOps', content: '部署需求' },
+                    { from: 'DevOps', to: 'Tech Lead', content: '部署状态' },
+                    { from: 'Tech Lead', to: 'Security', content: '安全审查需求' }
+                ]
             }
         ];
 
@@ -3976,7 +4115,14 @@
             'Head of Design': { icon: '🎨', color: '#db2777', role: '设计总监' },
             'Chief Marketing Officer': { icon: '🎯', color: '#dc2626', role: '首席营销官' },
             'VP Research': { icon: '🔬', color: '#0ea5e9', role: '研究副总裁' },
-            'Social Media Manager': { icon: '📱', color: '#22c55e', role: '社交媒体经理' }
+            'Social Media Manager': { icon: '📱', color: '#22c55e', role: '社交媒体经理' },
+            // Cycle 279 新增角色
+            'AI Researcher': { icon: '🧠', color: '#8b5cf6', role: 'AI研究员' },
+            'Product Owner': { icon: '📦', color: '#f97316', role: '产品负责人' },
+            'Tech Lead': { icon: '👨‍💻', color: '#14b8a6', role: '技术负责人' },
+            'Data Scientist': { icon: '🔮', color: '#06b6d4', role: '数据科学家' },
+            'Infrastructure Engineer': { icon: '🏗️', color: '#64748b', role: '基础架构工程师' },
+            'Performance Engineer': { icon: '⚡', color: '#f59e0b', role: '性能工程师' }
         };
 
         // 拖拽相关变量
