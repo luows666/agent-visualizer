@@ -10838,6 +10838,138 @@
                     { from: 'AI Equipment Operator', to: 'AI Environmental Guard', content: '操作记录' },
                     { from: 'AI Environmental Guard', to: 'AI Mining Engineer', content: '环保监测' }
                 ]
+            },
+            // Cycle 332 新增模板 - AI 智慧农业系统
+            {
+                id: 'ai-smart-agriculture',
+                name: 'AI智慧农业系统',
+                icon: '🌾',
+                description: '从种植到收获的完整智慧农业流程',
+                agents: ['AI Crop Scientist', 'AI Irrigation Tech', 'AI Pest Control', 'AI Harvest Planner', 'AI Soil Analyst'],
+                positions: [
+                    { role: 'AI Crop Scientist', x: 400, y: 30 },
+                    { role: 'AI Irrigation Tech', x: 200, y: 150 },
+                    { role: 'AI Pest Control', x: 600, y: 150 },
+                    { role: 'AI Harvest Planner', x: 200, y: 270 },
+                    { role: 'AI Soil Analyst', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Crop Scientist', to: 'AI Irrigation Tech', content: '种植方案' },
+                    { from: 'AI Irrigation Tech', to: 'AI Pest Control', content: '灌溉数据' },
+                    { from: 'AI Pest Control', to: 'AI Harvest Planner', content: '病虫害报告' },
+                    { from: 'AI Harvest Planner', to: 'AI Soil Analyst', content: '收获计划' },
+                    { from: 'AI Soil Analyst', to: 'AI Crop Scientist', content: '土壤分析' }
+                ]
+            },
+            // Cycle 332 新增模板 - AI 智慧水产系统
+            {
+                id: 'ai-aquaculture',
+                name: 'AI智慧水产系统',
+                icon: '🐟',
+                description: '从养殖到出塘的完整水产养殖流程',
+                agents: ['AI Aquaculture', 'AI Fish Health', 'AI Water Quality', 'AI Feed Planner', 'AI Breeding Expert'],
+                positions: [
+                    { role: 'AI Aquaculture', x: 400, y: 30 },
+                    { role: 'AI Fish Health', x: 200, y: 150 },
+                    { role: 'AI Water Quality', x: 600, y: 150 },
+                    { role: 'AI Feed Planner', x: 200, y: 270 },
+                    { role: 'AI Breeding Expert', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Aquaculture', to: 'AI Fish Health', content: '养殖需求' },
+                    { from: 'AI Fish Health', to: 'AI Water Quality', content: '健康报告' },
+                    { from: 'AI Water Quality', to: 'AI Feed Planner', content: '水质数据' },
+                    { from: 'AI Feed Planner', to: 'AI Breeding Expert', content: '饲料计划' },
+                    { from: 'AI Breeding Expert', to: 'AI Aquaculture', content: '繁殖方案' }
+                ]
+            },
+            // Cycle 332 新增模板 - AI 智慧园林系统
+            {
+                id: 'ai-landscaping',
+                name: 'AI智慧园林系统',
+                icon: '🌳',
+                description: '从设计到养护的完整园林绿化流程',
+                agents: ['AI Landscaper', 'AI Plant Expert', 'AI Garden Maintenance', 'AI Tree Doctor', 'AI Landscape Planner'],
+                positions: [
+                    { role: 'AI Landscaper', x: 400, y: 30 },
+                    { role: 'AI Plant Expert', x: 200, y: 150 },
+                    { role: 'AI Garden Maintenance', x: 600, y: 150 },
+                    { role: 'AI Tree Doctor', x: 200, y: 270 },
+                    { role: 'AI Landscape Planner', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Landscaper', to: 'AI Plant Expert', content: '设计需求' },
+                    { from: 'AI Plant Expert', to: 'AI Garden Maintenance', content: '植物方案' },
+                    { from: 'AI Garden Maintenance', to: 'AI Tree Doctor', content: '养护记录' },
+                    { from: 'AI Tree Doctor', to: 'AI Landscape Planner', content: '树木状况' },
+                    { from: 'AI Landscape Planner', to: 'AI Landscaper', content: '规划方案' }
+                ]
+            },
+            // Cycle 332 新增模板 - AI 智慧气象系统
+            {
+                id: 'ai-weather',
+                name: 'AI智慧气象系统',
+                icon: '🌤️',
+                description: '从预报到预警的完整气象服务流程',
+                agents: ['AI Weather Forecaster', 'AI Climate Analyst', 'AI Storm Tracker', 'AI Air Quality', 'AI Disaster Warning'],
+                positions: [
+                    { role: 'AI Weather Forecaster', x: 400, y: 30 },
+                    { role: 'AI Climate Analyst', x: 200, y: 150 },
+                    { role: 'AI Storm Tracker', x: 600, y: 150 },
+                    { role: 'AI Air Quality', x: 200, y: 270 },
+                    { role: 'AI Disaster Warning', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Weather Forecaster', to: 'AI Climate Analyst', content: '预报数据' },
+                    { from: 'AI Climate Analyst', to: 'AI Storm Tracker', content: '气候分析' },
+                    { from: 'AI Storm Tracker', to: 'AI Air Quality', content: '风暴路径' },
+                    { from: 'AI Air Quality', to: 'AI Disaster Warning', content: '空气质量' },
+                    { from: 'AI Disaster Warning', to: 'AI Weather Forecaster', content: '预警信息' }
+                ]
+            },
+            // Cycle 332 新增模板 - AI 智慧建筑设计系统
+            {
+                id: 'ai-building-design',
+                name: 'AI智慧建筑设计系统',
+                icon: '🏛️',
+                description: '从概念设计到施工图的完整建筑设计流程',
+                agents: ['AI Architect', 'AI Structural Engineer', 'AI Interior Designer', 'AI MEP Engineer', 'AI Building Energy'],
+                positions: [
+                    { role: 'AI Architect', x: 400, y: 30 },
+                    { role: 'AI Structural Engineer', x: 200, y: 150 },
+                    { role: 'AI Interior Designer', x: 600, y: 150 },
+                    { role: 'AI MEP Engineer', x: 200, y: 270 },
+                    { role: 'AI Building Energy', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Architect', to: 'AI Structural Engineer', content: '设计方案' },
+                    { from: 'AI Structural Engineer', to: 'AI Interior Designer', content: '结构图纸' },
+                    { from: 'AI Interior Designer', to: 'AI MEP Engineer', content: '室内方案' },
+                    { from: 'AI MEP Engineer', to: 'AI Building Energy', content: '机电设计' },
+                    { from: 'AI Building Energy', to: 'AI Architect', content: '节能方案' }
+                ]
+            },
+            // Cycle 332 新增模板 - AI 智慧城市规划系统
+            {
+                id: 'ai-urban-planning',
+                name: 'AI智慧城市规划系统',
+                icon: '🏙️',
+                description: '从规划到实施的完整城市规划流程',
+                agents: ['AI Urban Planner', 'AI Traffic Planner', 'AI Green Space', 'AI Infrastructure', 'AI Smart City'],
+                positions: [
+                    { role: 'AI Urban Planner', x: 400, y: 30 },
+                    { role: 'AI Traffic Planner', x: 200, y: 150 },
+                    { role: 'AI Green Space', x: 600, y: 150 },
+                    { role: 'AI Infrastructure', x: 200, y: 270 },
+                    { role: 'AI Smart City', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Urban Planner', to: 'AI Traffic Planner', content: '规划需求' },
+                    { from: 'AI Traffic Planner', to: 'AI Green Space', content: '交通方案' },
+                    { from: 'AI Green Space', to: 'AI Infrastructure', content: '绿地规划' },
+                    { from: 'AI Infrastructure', to: 'AI Smart City', content: '基础设施' },
+                    { from: 'AI Smart City', to: 'AI Urban Planner', content: '智慧城市方案' }
+                ]
             }
         ];
 
@@ -11792,7 +11924,55 @@
             'AI Safety Monitor': { icon: '⚠️', color: '#dc2626', role: 'AI安全监控师' },
             'AI Resource Analyzer': { icon: '📊', color: '#f59e0b', role: 'AI资源分析师' },
             'AI Equipment Operator': { icon: '🚜', color: '#22c55e', role: 'AI设备操作员' },
-            'AI Environmental Guard': { icon: '🌿', color: '#10b981', role: 'AI环保监察员' }
+            'AI Environmental Guard': { icon: '🌿', color: '#10b981', role: 'AI环保监察员' },
+            // Cycle 332 新增角色 - AI 智能农业种植
+            'AI Crop Scientist': { icon: '🌾', color: '#84cc16', role: 'AI作物科学家' },
+            'AI Irrigation Tech': { icon: '💧', color: '#0ea5e9', role: 'AI灌溉技术员' },
+            'AI Pest Control': { icon: '🐛', color: '#ef4444', role: 'AI病虫害防治' },
+            'AI Harvest Planner': { icon: '🌽', color: '#f59e0b', role: 'AI收获规划师' },
+            'AI Soil Analyst': { icon: '🪨', color: '#78716c', role: 'AI土壤分析师' },
+            // Cycle 332 新增角色 - AI 智能水产养殖
+            'AI Aquaculture': { icon: '🐟', color: '#06b6d4', role: 'AI水产养殖师' },
+            'AI Fish Health': { icon: '🏥', color: '#14b8a6', role: 'AI鱼病防治师' },
+            'AI Water Quality': { icon: '💦', color: '#0ea5e9', role: 'AI水质监测师' },
+            'AI Feed Planner': { icon: '🐠', color: '#f97316', role: 'AI饲料规划师' },
+            'AI Breeding Expert': { icon: '🥚', color: '#22c55e', role: 'AI繁殖专家' },
+            // Cycle 332 新增角色 - AI 智能园林绿化
+            'AI Landscaper': { icon: '🌳', color: '#22c55e', role: 'AI园林设计师' },
+            'AI Plant Expert': { icon: '🌿', color: '#10b981', role: 'AI植物专家' },
+            'AI Garden Maintenance': { icon: '✂️', color: '#84cc16', role: 'AI园林养护师' },
+            'AI Tree Doctor': { icon: '🌲', color: '#78716c', role: 'AI树木医生' },
+            'AI Landscape Planner': { icon: '🗺️', color: '#14b8a6', role: 'AI景观规划师' },
+            // Cycle 332 新增角色 - AI 智能气象服务
+            'AI Weather Forecaster': { icon: '🌤️', color: '#0ea5e9', role: 'AI天气预报师' },
+            'AI Climate Analyst': { icon: '🌍', color: '#06b6d4', role: 'AI气候分析师' },
+            'AI Storm Tracker': { icon: '⛈️', color: '#64748b', role: 'AI风暴追踪师' },
+            'AI Air Quality': { icon: '💨', color: '#94a3b8', role: 'AI空气质量师' },
+            'AI Disaster Warning': { icon: '🚨', color: '#dc2626', role: 'AI灾害预警师' },
+            // Cycle 332 新增角色 - AI 智能建筑设计
+            'AI Architect': { icon: '🏛️', color: '#8b5cf6', role: 'AI建筑师' },
+            'AI Structural Engineer': { icon: '📐', color: '#64748b', role: 'AI结构工程师' },
+            'AI Interior Designer': { icon: '🛋️', color: '#ec4899', role: 'AI室内设计师' },
+            'AI MEP Engineer': { icon: '🔧', color: '#f59e0b', role: 'AI机电工程师' },
+            'AI Building Energy': { icon: '⚡', color: '#eab308', role: 'AI建筑节能师' },
+            // Cycle 332 新增角色 - AI 智能城市规划
+            'AI Urban Planner': { icon: '🏙️', color: '#6366f1', role: 'AI城市规划师' },
+            'AI Traffic Planner': { icon: '🚦', color: '#f97316', role: 'AI交通规划师' },
+            'AI Green Space': { icon: '🌳', color: '#22c55e', role: 'AI绿地规划师' },
+            'AI Infrastructure': { icon: '🏗️', color: '#78716c', role: 'AI基础设施规划师' },
+            'AI Smart City': { icon: '🌐', color: '#06b6d4', role: 'AI智慧城市设计师' },
+            // Cycle 332 新增角色 - AI 智能水利工程
+            'AI Water Engineer': { icon: '🌊', color: '#0ea5e9', role: 'AI水利工程师' },
+            'AI Dam Designer': { icon: '🧱', color: '#64748b', role: 'AI大坝设计师' },
+            'AI Flood Control': { icon: '🌊', color: '#06b6d4', role: 'AI防洪工程师' },
+            'AI Water Treatment': { icon: '💧', color: '#14b8a6', role: 'AI水处理工程师' },
+            'AI Irrigation System': { icon: '🚿', color: '#22c55e', role: 'AI灌溉系统工程师' },
+            // Cycle 332 新增角色 - AI 智能交通运输
+            'AI Transport Planner': { icon: '🚚', color: '#f97316', role: 'AI运输规划师' },
+            'AI Route Designer': { icon: '🛤️', color: '#6366f1', role: 'AI线路设计师' },
+            'AI Fleet Manager': { icon: '🚛', color: '#eab308', role: 'AI车队管理师' },
+            'AI Traffic Control': { icon: '🚦', color: '#dc2626', role: 'AI交通调度师' },
+            'AI Logistics Optimizer': { icon: '📦', color: '#8b5cf6', role: 'AI物流优化师' }
         };
 
         // 拖拽相关变量
