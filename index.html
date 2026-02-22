@@ -5551,6 +5551,130 @@
                     { from: 'Solutions Engineer', to: 'Technical Account Manager', content: '客户培训准备' },
                     { from: 'Technical Account Manager', to: 'Sales', content: '客户验收确认' }
                 ]
+            },
+            // Cycle 293 新增模板
+            {
+                id: 'prompt-engineering',
+                name: '提示词工程',
+                icon: '💭',
+                desc: '从需求分析到提示词优化的完整流程',
+                agents: ['Prompt Engineer', 'AI Product Manager', 'Developer', 'Researcher'],
+                positions: [
+                    { role: 'AI Product Manager', x: 400, y: 30 },
+                    { role: 'Prompt Engineer', x: 200, y: 150 },
+                    { role: 'Developer', x: 600, y: 150 },
+                    { role: 'Researcher', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Product Manager', to: 'Prompt Engineer', content: '确定 AI 产品需求和目标' },
+                    { from: 'Prompt Engineer', to: 'Developer', content: '提示词设计完成，需要测试环境' },
+                    { from: 'Developer', to: 'Prompt Engineer', content: '测试环境就绪' },
+                    { from: 'Prompt Engineer', to: 'Researcher', content: '提示词优化建议' },
+                    { from: 'Researcher', to: 'AI Product Manager', content: '提示词效果评估报告' }
+                ]
+            },
+            {
+                id: 'devrel-program',
+                name: '开发者关系',
+                icon: '👨‍💻',
+                desc: '从社区建设到开发者支持的完整流程',
+                agents: ['Developer Relations', 'Technical Writer', 'Marketing', 'Product Manager'],
+                positions: [
+                    { role: 'Developer Relations', x: 400, y: 30 },
+                    { role: 'Technical Writer', x: 200, y: 150 },
+                    { role: 'Marketing', x: 600, y: 150 },
+                    { role: 'Product Manager', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Developer Relations', to: 'Technical Writer', content: '需要技术文档支持' },
+                    { from: 'Technical Writer', to: 'Developer Relations', content: '文档已完成' },
+                    { from: 'Developer Relations', to: 'Marketing', content: '开发者社区活动策划' },
+                    { from: 'Developer Relations', to: 'Product Manager', content: '开发者反馈汇总' },
+                    { from: 'Marketing', to: 'Product Manager', content: '活动效果报告' }
+                ]
+            },
+            {
+                id: 'security-research',
+                name: '安全研究',
+                icon: '🔬',
+                desc: '从漏洞发现到安全加固的完整流程',
+                agents: ['Security Researcher', 'Cloud Security Engineer', 'Developer', 'CTO'],
+                positions: [
+                    { role: 'Security Researcher', x: 400, y: 30 },
+                    { role: 'Cloud Security Engineer', x: 200, y: 150 },
+                    { role: 'Developer', x: 600, y: 150 },
+                    { role: 'CTO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Security Researcher', to: 'Cloud Security Engineer', content: '发现潜在安全漏洞' },
+                    { from: 'Cloud Security Engineer', to: 'Developer', content: '安全加固方案' },
+                    { from: 'Developer', to: 'Security Researcher', content: '修复完成' },
+                    { from: 'Security Researcher', to: 'CTO', content: '安全评估报告' }
+                ]
+            },
+            {
+                id: 'platform-development',
+                name: '平台开发',
+                icon: '🖥️',
+                desc: '从平台需求到功能上线的完整流程',
+                agents: ['Platform Product Manager', 'Technical Architect', 'Developer', 'QA', 'DevOps'],
+                positions: [
+                    { role: 'Platform Product Manager', x: 400, y: 30 },
+                    { role: 'Technical Architect', x: 200, y: 150 },
+                    { role: 'Developer', x: 600, y: 150 },
+                    { role: 'QA', x: 200, y: 270 },
+                    { role: 'DevOps', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Platform Product Manager', to: 'Technical Architect', content: '平台架构需求' },
+                    { from: 'Technical Architect', to: 'Developer', content: '技术方案确认' },
+                    { from: 'Developer', to: 'QA', content: '功能开发完成' },
+                    { from: 'QA', to: 'DevOps', content: '测试通过，部署申请' },
+                    { from: 'DevOps', to: 'Platform Product Manager', content: '平台上线报告' }
+                ]
+            },
+            {
+                id: 'innovation-project',
+                name: '创新项目',
+                icon: '💡',
+                desc: '从创新想法到产品原型的完整流程',
+                agents: ['Innovation Manager', 'Product Designer', 'Developer', 'Researcher', 'CEO'],
+                positions: [
+                    { role: 'Innovation Manager', x: 400, y: 30 },
+                    { role: 'Product Designer', x: 200, y: 150 },
+                    { role: 'Developer', x: 600, y: 150 },
+                    { role: 'Researcher', x: 200, y: 270 },
+                    { role: 'CEO', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Innovation Manager', to: 'Researcher', content: '调研技术创新趋势' },
+                    { from: 'Researcher', to: 'Innovation Manager', content: '技术趋势分析报告' },
+                    { from: 'Innovation Manager', to: 'Product Designer', content: '创新产品概念设计' },
+                    { from: 'Product Designer', to: 'Developer', content: '产品原型和设计稿' },
+                    { from: 'Developer', to: 'CEO', content: 'MVP 开发完成' }
+                ]
+            },
+            {
+                id: 'product-operations',
+                name: '产品运营',
+                icon: '📊',
+                desc: '从产品优化到用户增长的完整流程',
+                agents: ['Product Operations', 'Data Analyst', 'Marketing', 'Developer', 'Product Manager'],
+                positions: [
+                    { role: 'Product Operations', x: 400, y: 30 },
+                    { role: 'Data Analyst', x: 200, y: 150 },
+                    { role: 'Marketing', x: 600, y: 150 },
+                    { role: 'Developer', x: 200, y: 270 },
+                    { role: 'Product Manager', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Product Operations', to: 'Data Analyst', content: '需要产品数据分析' },
+                    { from: 'Data Analyst', to: 'Product Operations', content: '产品表现分析报告' },
+                    { from: 'Product Operations', to: 'Marketing', content: '运营活动策划需求' },
+                    { from: 'Product Operations', to: 'Developer', content: '产品优化需求' },
+                    { from: 'Marketing', to: 'Product Manager', content: '活动效果报告' },
+                    { from: 'Developer', to: 'Product Manager', content: '产品优化完成' }
+                ]
             }
         ];
 
@@ -5739,7 +5863,17 @@
             'Solutions Engineer': { icon: '💼', color: '#7c3aed', role: '解决方案工程师' },
             'Technical Account Manager': { icon: '👤', color: '#22c55e', role: '技术客户经理' },
             'Security Operations Engineer': { icon: '🔒', color: '#dc2626', role: '安全运维工程师' },
-            'Database Architect': { icon: '🗄️', color: '#64748b', role: '数据库架构师' }
+            'Database Architect': { icon: '🗄️', color: '#64748b', role: '数据库架构师' },
+            // Cycle 293 新增角色
+            'Prompt Engineer': { icon: '💭', color: '#f43f5e', role: '提示词工程师' },
+            'AI Product Manager': { icon: '🤖', color: '#8b5cf6', role: 'AI产品经理' },
+            'Developer Relations': { icon: '👨‍💻', color: '#06b6d4', role: '开发者关系' },
+            'Security Researcher': { icon: '🔬', color: '#dc2626', role: '安全研究员' },
+            'Cloud Security Engineer': { icon: '☁️', color: '#0ea5e9', role: '云安全工程师' },
+            'Platform Product Manager': { icon: '🖥️', color: '#14b8a6', role: '平台产品经理' },
+            'Technical Illustrator': { icon: '🎨', color: '#a855f7', role: '技术插画师' },
+            'Innovation Manager': { icon: '💡', color: '#f59e0b', role: '创新经理' },
+            'Product Operations': { icon: '📊', color: '#22c55e', role: '产品运营经理' }
         };
 
         // 拖拽相关变量
