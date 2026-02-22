@@ -9837,6 +9837,75 @@
                     { from: 'AI Sports Scientist', to: 'AI Fitness Coach', content: '科学建议' },
                     { from: 'AI Recovery Expert', to: 'AI Fitness Coach', content: '恢复计划' }
                 ]
+            },
+            // Cycle 323 新增模板 - AI 影视制作系统
+            {
+                id: 'ai-film-production',
+                name: 'AI影视制作系统',
+                icon: '🎬',
+                description: '从剧本创作到后期制作的完整影视流程',
+                agents: ['AI Film Director', 'AI Screenwriter', 'AI Video Producer', 'AI Post Editor', 'AI VFX Artist'],
+                agentPositions: [
+                    { role: 'AI Film Director', x: 400, y: 30 },
+                    { role: 'AI Screenwriter', x: 200, y: 150 },
+                    { role: 'AI Video Producer', x: 600, y: 150 },
+                    { role: 'AI Post Editor', x: 200, y: 270 },
+                    { role: 'AI VFX Artist', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Film Director', to: 'AI Screenwriter', content: '创作要求' },
+                    { from: 'AI Film Director', to: 'AI Video Producer', content: '制作计划' },
+                    { from: 'AI Screenwriter', to: 'AI Video Producer', content: '剧本完成' },
+                    { from: 'AI Video Producer', to: 'AI Post Editor', content: '拍摄素材' },
+                    { from: 'AI Post Editor', to: 'AI VFX Artist', content: '特效需求' },
+                    { from: 'AI VFX Artist', to: 'AI Film Director', content: '成片交付' }
+                ]
+            },
+            // Cycle 323 新增模板 - AI 音乐制作系统
+            {
+                id: 'ai-music-production',
+                name: 'AI音乐制作系统',
+                icon: '🎵',
+                description: '从作曲编曲到母带处理的完整音乐制作流程',
+                agents: ['AI Music Producer', 'AI Sound Designer', 'AI Audio Engineer', 'AI Lyricist', 'AI Mastering'],
+                agentPositions: [
+                    { role: 'AI Music Producer', x: 400, y: 30 },
+                    { role: 'AI Sound Designer', x: 200, y: 150 },
+                    { role: 'AI Audio Engineer', x: 600, y: 150 },
+                    { role: 'AI Lyricist', x: 200, y: 270 },
+                    { role: 'AI Mastering', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Music Producer', to: 'AI Sound Designer', content: '风格要求' },
+                    { from: 'AI Music Producer', to: 'AI Lyricist', content: '主题方向' },
+                    { from: 'AI Sound Designer', to: 'AI Audio Engineer', content: '音效素材' },
+                    { from: 'AI Lyricist', to: 'AI Audio Engineer', content: '歌词完成' },
+                    { from: 'AI Audio Engineer', to: 'AI Mastering', content: '混音完成' },
+                    { from: 'AI Mastering', to: 'AI Music Producer', content: '母带完成' }
+                ]
+            },
+            // Cycle 323 新增模板 - AI 珠宝时尚系统
+            {
+                id: 'ai-jewelry-fashion',
+                name: 'AI珠宝时尚系统',
+                icon: '💎',
+                description: '从设计到生产的完整时尚珠宝流程',
+                agents: ['AI Fashion Designer', 'AI Jewelry Designer', 'AI Trend Analyst', 'AI Stylist', 'AI Inventory Fashion'],
+                agentPositions: [
+                    { role: 'AI Fashion Designer', x: 400, y: 30 },
+                    { role: 'AI Jewelry Designer', x: 200, y: 150 },
+                    { role: 'AI Trend Analyst', x: 600, y: 150 },
+                    { role: 'AI Stylist', x: 200, y: 270 },
+                    { role: 'AI Inventory Fashion', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fashion Designer', to: 'AI Trend Analyst', content: '趋势需求' },
+                    { from: 'AI Fashion Designer', to: 'AI Stylist', content: '设计要求' },
+                    { from: 'AI Jewelry Designer', to: 'AI Trend Analyst', content: '珠宝趋势' },
+                    { from: 'AI Trend Analyst', to: 'AI Fashion Designer', content: '趋势报告' },
+                    { from: 'AI Stylist', to: 'AI Inventory Fashion', content: '造型需求' },
+                    { from: 'AI Inventory Fashion', to: 'AI Fashion Designer', content: '库存报告' }
+                ]
             }
         ];
 
