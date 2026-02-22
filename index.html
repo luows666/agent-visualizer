@@ -5418,6 +5418,139 @@
                     { from: 'IoT Engineer', to: 'Data Engineer', content: '设备数据接入' },
                     { from: 'Data Engineer', to: 'CTO', content: 'IoT数据分析报告' }
                 ]
+            },
+            // Cycle 292 新增模板
+            {
+                id: 'ar-development',
+                name: 'AR 开发',
+                icon: '🥽',
+                desc: '从增强现实需求到沉浸式体验开发的完整流程',
+                agents: ['AR Developer', 'UI/UX Designer', 'Computer Vision Engineer', 'Developer', 'QA'],
+                positions: [
+                    { role: 'AR Developer', x: 350, y: 50 },
+                    { role: 'UI/UX Designer', x: 200, y: 180 },
+                    { role: 'Computer Vision Engineer', x: 500, y: 180 },
+                    { role: 'Developer', x: 350, y: 310 },
+                    { role: 'QA', x: 350, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'AR Developer', to: 'UI/UX Designer', content: 'AR 交互设计需求' },
+                    { from: 'UI/UX Designer', to: 'Computer Vision Engineer', content: '视觉识别算法需求' },
+                    { from: 'Computer Vision Engineer', to: 'AR Developer', content: '视觉算法完成' },
+                    { from: 'AR Developer', to: 'Developer', content: 'AR 应用开发' },
+                    { from: 'Developer', to: 'QA', content: 'AR 功能测试' },
+                    { from: 'QA', to: 'AR Developer', content: 'AR 体验评估报告' }
+                ]
+            },
+            {
+                id: 'edge-computing',
+                name: '边缘计算部署',
+                icon: '⚡',
+                desc: '从边缘设备需求到分布式计算架构的完整流程',
+                agents: ['Edge Computing Engineer', 'IoT Engineer', 'Cloud Engineer', 'Security', 'CTO'],
+                positions: [
+                    { role: 'Edge Computing Engineer', x: 350, y: 50 },
+                    { role: 'IoT Engineer', x: 200, y: 180 },
+                    { role: 'Cloud Engineer', x: 500, y: 180 },
+                    { role: 'Security', x: 350, y: 310 },
+                    { role: 'CTO', x: 350, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Edge Computing Engineer', content: '边缘计算架构需求' },
+                    { from: 'Edge Computing Engineer', to: 'IoT Engineer', content: '边缘设备接入需求' },
+                    { from: 'IoT Engineer', to: 'Edge Computing Engineer', content: '设备配置完成' },
+                    { from: 'Edge Computing Engineer', to: 'Cloud Engineer', content: '云边协同方案' },
+                    { from: 'Cloud Engineer', to: 'Security', content: '安全配置审查' },
+                    { from: 'Security', to: 'CTO', content: '边缘计算安全评估' }
+                ]
+            },
+            {
+                id: 'data-mining',
+                name: '数据挖掘分析',
+                icon: '⛏️',
+                desc: '从数据收集到商业洞察的完整数据挖掘流程',
+                agents: ['Data Mining Specialist', 'Data Scientist', 'Data Analyst', 'Business Analyst', 'CEO'],
+                positions: [
+                    { role: 'Data Mining Specialist', x: 350, y: 50 },
+                    { role: 'Data Scientist', x: 200, y: 180 },
+                    { role: 'Data Analyst', x: 500, y: 180 },
+                    { role: 'Business Analyst', x: 350, y: 310 },
+                    { role: 'CEO', x: 350, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Data Mining Specialist', content: '数据挖掘项目目标' },
+                    { from: 'Data Mining Specialist', to: 'Data Scientist', content: '数据预处理需求' },
+                    { from: 'Data Scientist', to: 'Data Mining Specialist', content: '模型训练结果' },
+                    { from: 'Data Mining Specialist', to: 'Data Analyst', content: '数据分析需求' },
+                    { from: 'Data Analyst', to: 'Business Analyst', content: '数据洞察报告' },
+                    { from: 'Business Analyst', to: 'CEO', content: '商业决策建议' }
+                ]
+            },
+            {
+                id: 'tech-product-development',
+                name: '技术产品开发',
+                icon: '📦',
+                desc: '从技术需求到产品上线的完整开发流程',
+                agents: ['Technical Product Owner', 'Technical Architect', 'Developer', 'QA', 'CTO'],
+                positions: [
+                    { role: 'Technical Product Owner', x: 350, y: 50 },
+                    { role: 'Technical Architect', x: 200, y: 180 },
+                    { role: 'Developer', x: 500, y: 180 },
+                    { role: 'QA', x: 350, y: 310 },
+                    { role: 'CTO', x: 350, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Technical Product Owner', content: '技术产品需求定义' },
+                    { from: 'Technical Product Owner', to: 'Technical Architect', content: '技术方案评审' },
+                    { from: 'Technical Architect', to: 'Developer', content: '开发任务分配' },
+                    { from: 'Developer', to: 'Technical Product Owner', content: '开发进度汇报' },
+                    { from: 'Developer', to: 'QA', content: '提交测试' },
+                    { from: 'QA', to: 'CTO', content: '产品验收报告' }
+                ]
+            },
+            {
+                id: 'qa-automation',
+                name: '自动化测试',
+                icon: '🤖',
+                desc: '从测试用例设计到自动化测试执行的完整流程',
+                agents: ['QA Automation Engineer', 'Developer', 'QA', 'DevOps', 'CTO'],
+                positions: [
+                    { role: 'QA Automation Engineer', x: 350, y: 50 },
+                    { role: 'Developer', x: 200, y: 180 },
+                    { role: 'QA', x: 500, y: 180 },
+                    { role: 'DevOps', x: 350, y: 310 },
+                    { role: 'CTO', x: 350, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'QA Automation Engineer', content: '自动化测试需求' },
+                    { from: 'QA Automation Engineer', to: 'Developer', content: '测试代码集成需求' },
+                    { from: 'Developer', to: 'QA Automation Engineer', content: '代码集成完成' },
+                    { from: 'QA Automation Engineer', to: 'QA', content: '测试用例设计' },
+                    { from: 'QA', to: 'DevOps', content: '测试环境配置' },
+                    { from: 'DevOps', to: 'CTO', content: '自动化测试报告' }
+                ]
+            },
+            {
+                id: 'solutions-engineering',
+                name: '解决方案交付',
+                icon: '💼',
+                desc: '从客户需求到解决方案交付的完整流程',
+                agents: ['Solutions Engineer', 'Technical Architect', 'Developer', 'Technical Account Manager', 'Sales'],
+                positions: [
+                    { role: 'Solutions Engineer', x: 350, y: 50 },
+                    { role: 'Technical Architect', x: 200, y: 180 },
+                    { role: 'Developer', x: 500, y: 180 },
+                    { role: 'Technical Account Manager', x: 350, y: 310 },
+                    { role: 'Sales', x: 350, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'Sales', to: 'Solutions Engineer', content: '客户需求调研' },
+                    { from: 'Solutions Engineer', to: 'Technical Architect', content: '技术方案设计' },
+                    { from: 'Technical Architect', to: 'Developer', content: '开发任务分配' },
+                    { from: 'Developer', to: 'Solutions Engineer', content: '功能实现完成' },
+                    { from: 'Solutions Engineer', to: 'Technical Account Manager', content: '客户培训准备' },
+                    { from: 'Technical Account Manager', to: 'Sales', content: '客户验收确认' }
+                ]
             }
         ];
 
@@ -5596,7 +5729,17 @@
             'Crypto Developer': { icon: '💰', color: '#f59e0b', role: '区块链开发者' },
             'IoT Engineer': { icon: '📡', color: '#14b8a6', role: '物联网工程师' },
             'Computer Vision Engineer': { icon: '👁️', color: '#ec4899', role: '计算机视觉工程师' },
-            'NLP Engineer': { icon: '💬', color: '#a855f7', role: '自然语言处理工程师' }
+            'NLP Engineer': { icon: '💬', color: '#a855f7', role: '自然语言处理工程师' },
+            // Cycle 292 新增角色
+            'AR Developer': { icon: '🥽', color: '#0ea5e9', role: '增强现实开发者' },
+            'Edge Computing Engineer': { icon: '⚡', color: '#f97316', role: '边缘计算工程师' },
+            'Data Mining Specialist': { icon: '⛏️', color: '#8b5cf6', role: '数据挖掘专家' },
+            'Technical Product Owner': { icon: '📦', color: '#14b8a6', role: '技术产品负责人' },
+            'QA Automation Engineer': { icon: '🤖', color: '#06b6d4', role: '自动化测试工程师' },
+            'Solutions Engineer': { icon: '💼', color: '#7c3aed', role: '解决方案工程师' },
+            'Technical Account Manager': { icon: '👤', color: '#22c55e', role: '技术客户经理' },
+            'Security Operations Engineer': { icon: '🔒', color: '#dc2626', role: '安全运维工程师' },
+            'Database Architect': { icon: '🗄️', color: '#64748b', role: '数据库架构师' }
         };
 
         // 拖拽相关变量
