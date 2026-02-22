@@ -4160,6 +4160,133 @@
                     { from: 'Backend Developer', to: 'QA', content: '服务测试' },
                     { from: 'QA', to: 'CTO', content: '迁移验证报告' }
                 ]
+            },
+            // Cycle 281 新增模板
+            {
+                id: 'devops-pipeline',
+                name: 'DevOps 流水线',
+                icon: '🚀',
+                desc: '从代码提交到自动化部署的完整流程',
+                agents: ['CTO', 'DevOps', 'Backend Developer', 'Frontend Developer', 'QA'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'DevOps', x: 400, y: 130 },
+                    { role: 'Backend Developer', x: 200, y: 250 },
+                    { role: 'Frontend Developer', x: 400, y: 250 },
+                    { role: 'QA', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'DevOps', content: '设计 CI/CD 流水线' },
+                    { from: 'DevOps', to: 'Backend Developer', content: '后端构建配置' },
+                    { from: 'DevOps', to: 'Frontend Developer', content: '前端构建配置' },
+                    { from: 'Backend Developer', to: 'QA', content: '后端测试报告' },
+                    { from: 'Frontend Developer', to: 'QA', content: '前端测试报告' },
+                    { from: 'QA', to: 'CTO', content: '流水线验证报告' }
+                ]
+            },
+            {
+                id: 'security-audit',
+                name: '安全审计流程',
+                icon: '🔐',
+                desc: '从安全扫描到风险评估的完整流程',
+                agents: ['CTO', 'Security', 'Backend Developer', 'DevOps', 'QA'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'Security', x: 400, y: 130 },
+                    { role: 'Backend Developer', x: 200, y: 250 },
+                    { role: 'DevOps', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Security', content: '发起安全审计' },
+                    { from: 'Security', to: 'Backend Developer', content: '代码安全扫描' },
+                    { from: 'Backend Developer', to: 'Security', content: '安全问题修复' },
+                    { from: 'Security', to: 'DevOps', content: '基础设施安全检查' },
+                    { from: 'DevOps', to: 'Security', content: '安全配置确认' },
+                    { from: 'Security', to: 'CTO', content: '安全审计报告' }
+                ]
+            },
+            {
+                id: 'blockchain-dev',
+                name: '区块链开发',
+                icon: '⛓️',
+                desc: '从智能合约到去中心化应用的开发流程',
+                agents: ['CTO', 'Blockchain Dev', 'Backend Developer', 'Security', 'Product Manager'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'Blockchain Dev', x: 200, y: 150 },
+                    { role: 'Backend Developer', x: 600, y: 150 },
+                    { role: 'Security', x: 200, y: 270 },
+                    { role: 'Product Manager', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Blockchain Dev', content: '确定区块链技术方案' },
+                    { from: 'Blockchain Dev', to: 'Backend Developer', content: '后端集成需求' },
+                    { from: 'Blockchain Dev', to: 'Security', content: '智能合约审计' },
+                    { from: 'Security', to: 'Blockchain Dev', content: '安全审计报告' },
+                    { from: 'Blockchain Dev', to: 'Product Manager', content: '开发进度汇报' }
+                ]
+            },
+            {
+                id: 'game-development',
+                name: '游戏开发',
+                icon: '🎮',
+                desc: '从游戏设计到发行的完整开发流程',
+                agents: ['Product Manager', 'Game Developer', 'Frontend Developer', 'Backend Developer', 'QA'],
+                positions: [
+                    { role: 'Product Manager', x: 400, y: 30 },
+                    { role: 'Game Developer', x: 200, y: 150 },
+                    { role: 'Frontend Developer', x: 600, y: 150 },
+                    { role: 'Backend Developer', x: 200, y: 270 },
+                    { role: 'QA', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Product Manager', to: 'Game Developer', content: '游戏需求文档' },
+                    { from: 'Game Developer', to: 'Frontend Developer', content: '游戏前端需求' },
+                    { from: 'Game Developer', to: 'Backend Developer', content: '游戏后端需求' },
+                    { from: 'Frontend Developer', to: 'QA', content: '前端测试报告' },
+                    { from: 'Backend Developer', to: 'QA', content: '后端测试报告' },
+                    { from: 'QA', to: 'Product Manager', content: '测试通过报告' }
+                ]
+            },
+            {
+                id: 'data-science',
+                name: '数据科学项目',
+                icon: '📊',
+                desc: '从数据收集到模型训练的完整流程',
+                agents: ['CTO', 'Data Scientist', 'Data Analyst', 'Backend Developer', 'Product Manager'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'Data Scientist', x: 400, y: 130 },
+                    { role: 'Data Analyst', x: 200, y: 250 },
+                    { role: 'Backend Developer', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'Data Scientist', content: '确定数据科学目标' },
+                    { from: 'Data Scientist', to: 'Data Analyst', content: '数据分析需求' },
+                    { from: 'Data Analyst', to: 'Data Scientist', content: '数据分析报告' },
+                    { from: 'Data Scientist', to: 'Backend Developer', content: '模型部署需求' },
+                    { from: 'Backend Developer', to: 'Product Manager', content: '功能集成完成' }
+                ]
+            },
+            {
+                id: 'ai-research',
+                name: 'AI 研究项目',
+                icon: '🧠',
+                desc: '从算法研究到AI产品落地的流程',
+                agents: ['CTO', 'AI Researcher', 'Data Scientist', 'ML Engineer', 'Product Manager'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'AI Researcher', x: 400, y: 130 },
+                    { role: 'Data Scientist', x: 200, y: 250 },
+                    { role: 'ML Engineer', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'AI Researcher', content: '确定AI研究方向' },
+                    { from: 'AI Researcher', to: 'Data Scientist', content: '研究数据需求' },
+                    { from: 'Data Scientist', to: 'AI Researcher', content: '数据准备完成' },
+                    { from: 'AI Researcher', to: 'ML Engineer', content: '算法原型' },
+                    { from: 'ML Engineer', to: 'Product Manager', content: '模型性能报告' }
+                ]
             }
         ];
 
@@ -4258,7 +4385,10 @@
             'Frontend Developer': { icon: '🎭', color: '#8b5cf6', role: '前端工程师' },
             'Backend Developer': { icon: '⚙️', color: '#14b8a6', role: '后端工程师' },
             'Database Admin': { icon: '🗄️', color: '#f97316', role: '数据库管理员' },
-            'Cloud Architect': { icon: '☁️', color: '#0ea5e9', role: '云架构师' }
+            'Cloud Architect': { icon: '☁️', color: '#0ea5e9', role: '云架构师' },
+            // Cycle 281 新增角色
+            'Blockchain Dev': { icon: '⛓️', color: '#14b8a6', role: '区块链开发' },
+            'Game Developer': { icon: '🎮', color: '#84cc16', role: '游戏开发者' }
         };
 
         // 拖拽相关变量
