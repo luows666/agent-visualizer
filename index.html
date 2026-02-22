@@ -9059,6 +9059,138 @@
                     { from: 'AI Integration Specialist', to: 'AI Monitor', content: '监控配置' },
                     { from: 'AI Monitor', to: 'AI Workflow Auto', content: '运行反馈' }
                 ]
+            },
+            // Cycle 318 新增模板 - AI 智能硬件开发
+            {
+                id: 'ai-smart-hardware',
+                name: 'AI智能硬件开发',
+                icon: '📟',
+                desc: '从硬件设计到AI模型部署的完整流程',
+                agents: ['AI Chip Designer', 'AI Firmware Engineer', 'AI PCB Designer', 'AI Hardware Test', 'AI Edge Deployment'],
+                positions: [
+                    { role: 'AI Chip Designer', x: 400, y: 30 },
+                    { role: 'AI Firmware Engineer', x: 200, y: 150 },
+                    { role: 'AI PCB Designer', x: 600, y: 150 },
+                    { role: 'AI Hardware Test', x: 200, y: 270 },
+                    { role: 'AI Edge Deployment', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Chip Designer', to: 'AI Firmware Engineer', content: '芯片规格定义' },
+                    { from: 'AI Firmware Engineer', to: 'AI PCB Designer', content: '硬件设计需求' },
+                    { from: 'AI PCB Designer', to: 'AI Hardware Test', content: 'PCB设计完成' },
+                    { from: 'AI Hardware Test', to: 'AI Edge Deployment', content: '硬件测试通过' },
+                    { from: 'AI Edge Deployment', to: 'AI Chip Designer', content: '部署反馈' }
+                ]
+            },
+            // Cycle 318 新增模板 - AI 音视频处理
+            {
+                id: 'ai-media-processing',
+                name: 'AI音视频处理',
+                icon: '🎵',
+                desc: '从音视频采集到AI处理的完整流程',
+                agents: ['AI Audio Engineer', 'AI Video Analyst', 'AI Media Encoder', 'AI Streaming Specialist', 'AI CDN Engineer'],
+                positions: [
+                    { role: 'AI Audio Engineer', x: 200, y: 80 },
+                    { role: 'AI Video Analyst', x: 600, y: 80 },
+                    { role: 'AI Media Encoder', x: 200, y: 220 },
+                    { role: 'AI Streaming Specialist', x: 600, y: 220 },
+                    { role: 'AI CDN Engineer', x: 400, y: 340 }
+                ],
+                messageFlows: [
+                    { from: 'AI Audio Engineer', to: 'AI Media Encoder', content: '音频处理需求' },
+                    { from: 'AI Video Analyst', to: 'AI Media Encoder', content: '视频分析结果' },
+                    { from: 'AI Media Encoder', to: 'AI Streaming Specialist', content: '编码完成' },
+                    { from: 'AI Streaming Specialist', to: 'AI CDN Engineer', content: '流媒体配置' },
+                    { from: 'AI CDN Engineer', to: 'AI Audio Engineer', content: '分发状态' }
+                ]
+            },
+            // Cycle 318 新增模板 - AI 内容创作
+            {
+                id: 'ai-content-creation',
+                name: 'AI内容创作',
+                icon: '✍️',
+                desc: '从内容策划到发布的AI驱动流程',
+                agents: ['AI Copywriter', 'AI Content Strategist', 'AI Social Media', 'AI SEO Expert', 'AI Analytics'],
+                positions: [
+                    { role: 'AI Content Strategist', x: 400, y: 30 },
+                    { role: 'AI Copywriter', x: 200, y: 150 },
+                    { role: 'AI Social Media', x: 600, y: 150 },
+                    { role: 'AI SEO Expert', x: 200, y: 270 },
+                    { role: 'AI Analytics', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Content Strategist', to: 'AI Copywriter', content: '内容策划需求' },
+                    { from: 'AI Copywriter', to: 'AI SEO Expert', content: '文案完成' },
+                    { from: 'AI SEO Expert', to: 'AI Social Media', content: 'SEO优化内容' },
+                    { from: 'AI Social Media', to: 'AI Analytics', content: '发布计划' },
+                    { from: 'AI Analytics', to: 'AI Content Strategist', content: '效果分析' }
+                ]
+            },
+            // Cycle 318 新增模板 - AI 智能工厂
+            {
+                id: 'ai-smart-factory',
+                name: 'AI智能工厂',
+                icon: '🏭',
+                desc: '从工厂数字化到AI驱动的智能制造',
+                agents: ['AI Smart Factory', 'AI Process Mining', 'AI Digital Twin', 'AI Industrial IoT', 'AI Predictive Maintenance'],
+                positions: [
+                    { role: 'AI Smart Factory', x: 400, y: 30 },
+                    { role: 'AI Process Mining', x: 200, y: 150 },
+                    { role: 'AI Digital Twin', x: 600, y: 150 },
+                    { role: 'AI Industrial IoT', x: 200, y: 270 },
+                    { role: 'AI Predictive Maintenance', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Smart Factory', to: 'AI Process Mining', content: '流程优化需求' },
+                    { from: 'AI Process Mining', to: 'AI Digital Twin', content: '流程分析报告' },
+                    { from: 'AI Digital Twin', to: 'AI Industrial IoT', content: '数字孪生模型' },
+                    { from: 'AI Industrial IoT', to: 'AI Predictive Maintenance', content: 'IoT数据' },
+                    { from: 'AI Predictive Maintenance', to: 'AI Smart Factory', content: '维护预测' }
+                ]
+            },
+            // Cycle 318 新增模板 - AI 营销自动化
+            {
+                id: 'ai-marketing-automation',
+                name: 'AI营销自动化',
+                icon: '📢',
+                desc: '从用户分析到精准营销的AI驱动流程',
+                agents: ['AI Marketing Strategist', 'AI Influencer', 'AI Analytics', 'AI Content Strategist', 'AI Customer Service'],
+                positions: [
+                    { role: 'AI Marketing Strategist', x: 400, y: 30 },
+                    { role: 'AI Analytics', x: 200, y: 150 },
+                    { role: 'AI Influencer', x: 600, y: 150 },
+                    { role: 'AI Content Strategist', x: 200, y: 270 },
+                    { role: 'AI Customer Service', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Marketing Strategist', to: 'AI Analytics', content: '用户分析需求' },
+                    { from: 'AI Analytics', to: 'AI Influencer', content: '用户画像' },
+                    { from: 'AI Influencer', to: 'AI Content Strategist', content: 'KOL合作方案' },
+                    { from: 'AI Content Strategist', to: 'AI Customer Service', content: '内容策略' },
+                    { from: 'AI Customer Service', to: 'AI Marketing Strategist', content: '反馈汇总' }
+                ]
+            },
+            // Cycle 318 新增模板 - AI 金融服务
+            {
+                id: 'ai-financial-service',
+                name: 'AI金融服务',
+                icon: '💰',
+                desc: '从风险评估到智能投顾的完整流程',
+                agents: ['AI Financial Advisor', 'AI Risk Manager', 'AI Trading Bot', 'AI Compliance Officer', 'AI Fraud Detector'],
+                positions: [
+                    { role: 'AI Financial Advisor', x: 400, y: 30 },
+                    { role: 'AI Risk Manager', x: 200, y: 150 },
+                    { role: 'AI Trading Bot', x: 600, y: 150 },
+                    { role: 'AI Fraud Detector', x: 200, y: 270 },
+                    { role: 'AI Compliance Officer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Financial Advisor', to: 'AI Risk Manager', content: '投资需求' },
+                    { from: 'AI Risk Manager', to: 'AI Trading Bot', content: '风险评估' },
+                    { from: 'AI Trading Bot', to: 'AI Fraud Detector', content: '交易策略' },
+                    { from: 'AI Fraud Detector', to: 'AI Compliance Officer', content: '风控报告' },
+                    { from: 'AI Compliance Officer', to: 'AI Financial Advisor', content: '合规确认' }
+                ]
             }
         ];
 
@@ -9591,7 +9723,31 @@
             'AI Climate Modeler': { icon: '🌍', color: '#22c55e', role: 'AI气候模型工程师' },
             'AI Synthetic Biology': { icon: '🧬', color: '#ec4899', role: 'AI合成生物工程师' },
             'AI Nanotech Engineer': { icon: '🔬', color: '#a855f7', role: 'AI纳米技术工程师' },
-            'AI Quantum Software': { icon: '⚛️', color: '#14b8a6', role: 'AI量子软件工程师' }
+            'AI Quantum Software': { icon: '⚛️', color: '#14b8a6', role: 'AI量子软件工程师' },
+            // Cycle 318 新增角色 - AI 智能硬件与物联网
+            'AI Smart Hardware': { icon: '📟', color: '#0ea5e9', role: 'AI智能硬件工程师' },
+            'AI Chip Designer': { icon: '🔲', color: '#22c55e', role: 'AI芯片设计师' },
+            'AI Firmware Engineer': { icon: '💾', color: '#f97316', role: 'AI固件工程师' },
+            'AI PCB Designer': { icon: '📐', color: '#8b5cf6', role: 'AI PCB设计师' },
+            'AI Hardware Test': { icon: '🧪', color: '#ec4899', role: 'AI硬件测试工程师' },
+            // Cycle 318 新增角色 - AI 音视频处理
+            'AI Audio Engineer': { icon: '🎵', color: '#06b6d4', role: 'AI音频工程师' },
+            'AI Video Analyst': { icon: '🎬', color: '#a855f7', role: 'AI视频分析师' },
+            'AI Media Encoder': { icon: '📹', color: '#14b8a6', role: 'AI媒体编码工程师' },
+            'AI Streaming Specialist': { icon: '📺', color: '#f59e0b', role: 'AI流媒体专家' },
+            'AI CDN Engineer': { icon: '🌐', color: '#22c55e', role: 'AI CDN工程师' },
+            // Cycle 318 新增角色 - AI 内容创作
+            'AI Copywriter': { icon: '✍️', color: '#f97316', role: 'AI文案写手' },
+            'AI Content Strategist': { icon: '📝', color: '#8b5cf6', role: 'AI内容策略师' },
+            'AI Social Media': { icon: '📱', color: '#ec4899', role: 'AI社交媒体运营' },
+            'AI Influencer': { icon: '🌟', color: '#f59e0b', role: 'AI网红运营' },
+            'AI SEO Expert': { icon: '🔍', color: '#22c55e', role: 'AI SEO专家' },
+            // Cycle 318 新增角色 - AI 产业数字化
+            'AI Smart Factory': { icon: '🏭', color: '#64748b', role: 'AI智能工厂工程师' },
+            'AI Process Mining': { icon: '⛏️', color: '#06b6d4', role: 'AI流程挖掘工程师' },
+            'AI Digital Twin': { icon: '👥', color: '#8b5cf6', role: 'AI数字孪生工程师' },
+            'AI Industrial IoT': { icon: '🏗️', color: '#f97316', role: 'AI工业物联网工程师' },
+            'AI Predictive Maintenance': { icon: '🔧', color: '#14b8a6', role: 'AI预测性维护工程师' }
         };
 
         // 拖拽相关变量
