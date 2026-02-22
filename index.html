@@ -9699,6 +9699,144 @@
                     { from: 'AI Quality Inspector', to: 'AI Print Engineer', content: '质检报告' },
                     { from: 'AI Material Optimizer', to: 'AI Production Planner', content: '材料方案' }
                 ]
+            },
+            // Cycle 322 新增模板 - AI 智能制造系统
+            {
+                id: 'ai-smart-manufacturing',
+                name: 'AI智能制造系统',
+                icon: '🏭',
+                description: '从智能工厂到预测性维护的完整制造流程',
+                agents: ['AI Smart Manufacturing', 'AI Production Planner', 'AI Quality Inspector', 'AI Equipment Maintenance', 'AI Process Optimizer'],
+                agentPositions: [
+                    { role: 'AI Smart Manufacturing', x: 400, y: 30 },
+                    { role: 'AI Production Planner', x: 200, y: 150 },
+                    { role: 'AI Quality Inspector', x: 600, y: 150 },
+                    { role: 'AI Equipment Maintenance', x: 200, y: 270 },
+                    { role: 'AI Process Optimizer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Smart Manufacturing', to: 'AI Production Planner', content: '生产计划' },
+                    { from: 'AI Smart Manufacturing', to: 'AI Quality Inspector', content: '质量标准' },
+                    { from: 'AI Production Planner', to: 'AI Process Optimizer', content: '工艺需求' },
+                    { from: 'AI Quality Inspector', to: 'AI Smart Manufacturing', content: '质量报告' },
+                    { from: 'AI Equipment Maintenance', to: 'AI Smart Manufacturing', content: '设备状态' },
+                    { from: 'AI Process Optimizer', to: 'AI Production Planner', content: '优化方案' }
+                ]
+            },
+            // Cycle 322 新增模板 - AI 能源管理系统
+            {
+                id: 'ai-energy-management',
+                name: 'AI能源管理系统',
+                icon: '⚡',
+                description: '从能源分配到碳中和的完整能源管理流程',
+                agents: ['AI Energy Manager', 'AI Power Grid', 'AI Renewable Energy', 'AI Power Consumption', 'AI Carbon Neutrality'],
+                agentPositions: [
+                    { role: 'AI Energy Manager', x: 400, y: 30 },
+                    { role: 'AI Power Grid', x: 200, y: 150 },
+                    { role: 'AI Renewable Energy', x: 600, y: 150 },
+                    { role: 'AI Power Consumption', x: 200, y: 270 },
+                    { role: 'AI Carbon Neutrality', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Energy Manager', to: 'AI Power Grid', content: '电网调度' },
+                    { from: 'AI Energy Manager', to: 'AI Renewable Energy', content: '新能源计划' },
+                    { from: 'AI Power Grid', to: 'AI Power Consumption', content: '用电数据' },
+                    { from: 'AI Renewable Energy', to: 'AI Energy Manager', content: '新能源产出' },
+                    { from: 'AI Power Consumption', to: 'AI Carbon Neutrality', content: '碳排放数据' },
+                    { from: 'AI Carbon Neutrality', to: 'AI Energy Manager', content: '碳中和报告' }
+                ]
+            },
+            // Cycle 322 新增模板 - AI 金融投资系统
+            {
+                id: 'ai-financial-investment',
+                name: 'AI金融投资系统',
+                icon: '💰',
+                description: '从投资分析到资产管理的完整金融流程',
+                agents: ['AI Investment Banker', 'AI Stock Analyst', 'AI Crypto Trader', 'AI Portfolio Manager', 'AI Financial Advisor'],
+                agentPositions: [
+                    { role: 'AI Investment Banker', x: 400, y: 30 },
+                    { role: 'AI Stock Analyst', x: 200, y: 150 },
+                    { role: 'AI Crypto Trader', x: 600, y: 150 },
+                    { role: 'AI Portfolio Manager', x: 200, y: 270 },
+                    { role: 'AI Financial Advisor', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Investment Banker', to: 'AI Stock Analyst', content: '股票分析需求' },
+                    { from: 'AI Investment Banker', to: 'AI Crypto Trader', content: '加密货币策略' },
+                    { from: 'AI Stock Analyst', to: 'AI Portfolio Manager', content: '股票建议' },
+                    { from: 'AI Crypto Trader', to: 'AI Portfolio Manager', content: '币圈建议' },
+                    { from: 'AI Portfolio Manager', to: 'AI Financial Advisor', content: '投资组合' },
+                    { from: 'AI Financial Advisor', to: 'AI Investment Banker', content: '客户建议' }
+                ]
+            },
+            // Cycle 322 新增模板 - AI 心理咨询系统
+            {
+                id: 'ai-mental-health',
+                name: 'AI心理咨询系统',
+                icon: '🧠',
+                description: '从心理评估到健康咨询的完整心理服务流程',
+                agents: ['AI Counselor', 'AI Therapist', 'AI Mental Coach', 'AI Stress Analyst', 'AI Wellness Advisor'],
+                agentPositions: [
+                    { role: 'AI Counselor', x: 400, y: 30 },
+                    { role: 'AI Therapist', x: 200, y: 150 },
+                    { role: 'AI Mental Coach', x: 600, y: 150 },
+                    { role: 'AI Stress Analyst', x: 200, y: 270 },
+                    { role: 'AI Wellness Advisor', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Counselor', to: 'AI Stress Analyst', content: '压力评估' },
+                    { from: 'AI Counselor', to: 'AI Therapist', content: '心理评估' },
+                    { from: 'AI Therapist', to: 'AI Mental Coach', content: '治疗方案' },
+                    { from: 'AI Stress Analyst', to: 'AI Wellness Advisor', content: '压力数据' },
+                    { from: 'AI Mental Coach', to: 'AI Counselor', content: '进展报告' },
+                    { from: 'AI Wellness Advisor', to: 'AI Counselor', content: '健康建议' }
+                ]
+            },
+            // Cycle 322 新增模板 - AI 建筑设计系统
+            {
+                id: 'ai-architecture-design',
+                name: 'AI建筑设计系统',
+                icon: '🏛️',
+                description: '从概念设计到空间规划的完整建筑设计流程',
+                agents: ['AI Architect Designer', 'AI Interior Designer', 'AI Landscape Designer', 'AI BIM Manager', 'AI Space Planner'],
+                agentPositions: [
+                    { role: 'AI Architect Designer', x: 400, y: 30 },
+                    { role: 'AI Interior Designer', x: 200, y: 150 },
+                    { role: 'AI Landscape Designer', x: 600, y: 150 },
+                    { role: 'AI BIM Manager', x: 200, y: 270 },
+                    { role: 'AI Space Planner', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Architect Designer', to: 'AI Interior Designer', content: '设计需求' },
+                    { from: 'AI Architect Designer', to: 'AI Landscape Designer', content: '景观需求' },
+                    { from: 'AI Interior Designer', to: 'AI Space Planner', content: '室内方案' },
+                    { from: 'AI Landscape Designer', to: 'AI BIM Manager', content: '景观数据' },
+                    { from: 'AI BIM Manager', to: 'AI Architect Designer', content: 'BIM模型' },
+                    { from: 'AI Space Planner', to: 'AI Architect Designer', content: '空间规划' }
+                ]
+            },
+            // Cycle 322 新增模板 - AI 运动健身系统
+            {
+                id: 'ai-fitness-wellness',
+                name: 'AI运动健身系统',
+                icon: '💪',
+                description: '从训练计划到营养指导的完整健身流程',
+                agents: ['AI Fitness Coach', 'AI Nutritionist', 'AI Workout Planner', 'AI Sports Scientist', 'AI Recovery Expert'],
+                agentPositions: [
+                    { role: 'AI Fitness Coach', x: 400, y: 30 },
+                    { role: 'AI Nutritionist', x: 200, y: 150 },
+                    { role: 'AI Workout Planner', x: 600, y: 150 },
+                    { role: 'AI Sports Scientist', x: 200, y: 270 },
+                    { role: 'AI Recovery Expert', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fitness Coach', to: 'AI Workout Planner', content: '训练需求' },
+                    { from: 'AI Fitness Coach', to: 'AI Nutritionist', content: '营养需求' },
+                    { from: 'AI Workout Planner', to: 'AI Sports Scientist', content: '训练数据' },
+                    { from: 'AI Nutritionist', to: 'AI Recovery Expert', content: '营养方案' },
+                    { from: 'AI Sports Scientist', to: 'AI Fitness Coach', content: '科学建议' },
+                    { from: 'AI Recovery Expert', to: 'AI Fitness Coach', content: '恢复计划' }
+                ]
             }
         ];
 
@@ -10394,7 +10532,56 @@
             'AI Packaging Designer': { icon: '📦', color: '#f97316', role: 'AI包装设计师' },
             'AI Quality Inspector': { icon: '🔍', color: '#22c55e', role: 'AI质检员' },
             'AI Production Planner': { icon: '📋', color: '#3b82f6', role: 'AI生产计划师' },
-            'AI Material Optimizer': { icon: '♻️', color: '#10b981', role: 'AI材料优化师' }
+            'AI Material Optimizer': { icon: '♻️', color: '#10b981', role: 'AI材料优化师' },
+            // Cycle 323 新增角色 - AI 影视娱乐
+            'AI Film Director': { icon: '🎬', color: '#dc2626', role: 'AI电影导演' },
+            'AI Screenwriter': { icon: '✍️', color: '#f59e0b', role: 'AI编剧师' },
+            'AI Video Producer': { icon: '📹', color: '#3b82f6', role: 'AI视频制作人' },
+            'AI Post Editor': { icon: '🎞️', color: '#8b5cf6', role: 'AI后期剪辑师' },
+            'AI VFX Artist': { icon: '✨', color: '#ec4899', role: 'AI特效艺术家' },
+            'AI Casting Director': { icon: '🎭', color: '#f97316', role: 'AI选角导演' },
+            // Cycle 323 新增角色 - AI 音乐制作
+            'AI Music Producer': { icon: '🎵', color: '#06b6d4', role: 'AI音乐制作人' },
+            'AI Sound Designer': { icon: '🎧', color: '#22c55e', role: 'AI音效设计师' },
+            'AI Audio Engineer': { icon: '🔊', color: '#a855f7', role: 'AI音频工程师' },
+            'AI Lyricist': { icon: '📝', color: '#f43f5e', role: 'AI作词人' },
+            'AI Mastering': { icon: '🎚️', color: '#64748b', role: 'AI母带工程师' },
+            // Cycle 323 新增角色 - AI 心理咨询
+            'AI Counselor': { icon: '🧠', color: '#8b5cf6', role: 'AI心理咨询师' },
+            'AI Therapist': { icon: '💬', color: '#06b6d4', role: 'AI治疗师' },
+            'AI Mental Coach': { icon: '🌟', color: '#f59e0b', role: 'AI心理教练' },
+            'AI Stress Analyst': { icon: '📊', color: '#22c55e', role: 'AI压力分析师' },
+            'AI Wellness Advisor': { icon: '🧘', color: '#10b981', role: 'AI健康顾问' },
+            // Cycle 323 新增角色 - AI 建筑设计
+            'AI Architect Designer': { icon: '🏛️', color: '#6366f1', role: 'AI建筑设计师' },
+            'AI Interior Designer': { icon: '🛋️', color: '#ec4899', role: 'AI室内设计师' },
+            'AI Landscape Designer': { icon: '🌳', color: '#22c55e', role: 'AI景观设计师' },
+            'AI BIM Manager': { icon: '📐', color: '#3b82f6', role: 'AIBIM经理' },
+            'AI Space Planner': { icon: '📏', color: '#f97316', role: 'AI空间规划师' },
+            // Cycle 323 新增角色 - AI 运动健身
+            'AI Fitness Coach': { icon: '💪', color: '#ef4444', role: 'AI健身教练' },
+            'AI Nutritionist': { icon: '🥗', color: '#22c55e', role: 'AI营养师' },
+            'AI Workout Planner': { icon: '🏋️', color: '#f59e0b', role: 'AI训练计划师' },
+            'AI Sports Scientist': { icon: '🔬', color: '#3b82f6', role: 'AI运动科学家' },
+            'AI Recovery Expert': { icon: '🧘', color: '#8b5cf6', role: 'AI恢复专家' },
+            // Cycle 322 新增角色 - AI 智能制造
+            'AI Smart Manufacturing': { icon: '🏭', color: '#dc2626', role: 'AI智能制造工程师' },
+            'AI Production Planner': { icon: '📋', color: '#f59e0b', role: 'AI生产计划师' },
+            'AI Quality Inspector': { icon: '🔍', color: '#22c55e', role: 'AI质检员' },
+            'AI Equipment Maintenance': { icon: '🔧', color: '#3b82f6', role: 'AI设备维护工程师' },
+            'AI Process Optimizer': { icon: '⚙️', color: '#8b5cf6', role: 'AI流程优化师' },
+            // Cycle 322 新增角色 - AI 能源管理
+            'AI Energy Manager': { icon: '⚡', color: '#eab308', role: 'AI能源经理' },
+            'AI Power Grid': { icon: '🔌', color: '#f97316', role: 'AI电网工程师' },
+            'AI Renewable Energy': { icon: '🌞', color: '#22c55e', role: 'AI可再生能源工程师' },
+            'AI Power Consumption': { icon: '📊', color: '#06b6d4', role: 'AI能耗分析师' },
+            'AI Carbon Neutrality': { icon: '🌍', color: '#10b981', role: 'AI碳中和工程师' },
+            // Cycle 322 新增角色 - AI 金融投资
+            'AI Investment Banker': { icon: '🏦', color: '#6366f1', role: 'AI投资银行家' },
+            'AI Stock Analyst': { icon: '📈', color: '#22c55e', role: 'AI股票分析师' },
+            'AI Crypto Trader': { icon: '💰', color: '#f59e0b', role: 'AI加密货币交易师' },
+            'AI Portfolio Manager': { icon: '💼', color: '#8b5cf6', role: 'AI投资组合经理' },
+            'AI Financial Advisor': { icon: '💡', color: '#ec4899', role: 'AI金融顾问' }
         };
 
         // 拖拽相关变量
