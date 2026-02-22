@@ -5675,6 +5675,131 @@
                     { from: 'Marketing', to: 'Product Manager', content: '活动效果报告' },
                     { from: 'Developer', to: 'Product Manager', content: '产品优化完成' }
                 ]
+            },
+            // Cycle 294 新增模板
+            {
+                id: 'ai-architecture',
+                name: 'AI架构设计',
+                icon: '🏛️',
+                desc: '从AI系统需求到架构设计的完整流程',
+                agents: ['AI Architect', 'ML Engineer', 'Data Engineer', 'CTO', 'DevOps'],
+                positions: [
+                    { role: 'AI Architect', x: 400, y: 30 },
+                    { role: 'ML Engineer', x: 200, y: 150 },
+                    { role: 'Data Engineer', x: 600, y: 150 },
+                    { role: 'CTO', x: 200, y: 270 },
+                    { role: 'DevOps', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Architect', to: 'Data Engineer', content: '确定数据 pipeline 需求' },
+                    { from: 'Data Engineer', to: 'ML Engineer', content: '数据就绪，可以开始训练' },
+                    { from: 'ML Engineer', to: 'AI Architect', content: '模型训练完成' },
+                    { from: 'AI Architect', to: 'CTO', content: 'AI 架构设计方案' },
+                    { from: 'CTO', to: 'DevOps', content: '部署方案确认' }
+                ]
+            },
+            {
+                id: 'vector-db-implementation',
+                name: '向量数据库部署',
+                icon: '🗂️',
+                desc: '从向量数据管理到检索系统上线的完整流程',
+                agents: ['Vector Database Engineer', 'Backend Developer', 'ML Engineer', 'DevOps'],
+                positions: [
+                    { role: 'Vector Database Engineer', x: 400, y: 30 },
+                    { role: 'Backend Developer', x: 200, y: 150 },
+                    { role: 'ML Engineer', x: 600, y: 150 },
+                    { role: 'DevOps', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Vector Database Engineer', to: 'Backend Developer', content: '需要向量检索 API' },
+                    { from: 'Backend Developer', to: 'Vector Database Engineer', content: 'API 开发完成' },
+                    { from: 'ML Engineer', to: 'Vector Database Engineer', content: '向量数据导入完成' },
+                    { from: 'Vector Database Engineer', to: 'DevOps', content: '向量数据库部署申请' }
+                ]
+            },
+            {
+                id: 'mlops-pipeline',
+                name: 'MLOps 流水线',
+                icon: '🔄',
+                desc: '从模型训练到生产部署的自动化流程',
+                agents: ['MLOps Engineer', 'ML Engineer', 'Data Scientist', 'DevOps', 'QA'],
+                positions: [
+                    { role: 'MLOps Engineer', x: 400, y: 30 },
+                    { role: 'Data Scientist', x: 200, y: 150 },
+                    { role: 'ML Engineer', x: 600, y: 150 },
+                    { role: 'QA', x: 200, y: 270 },
+                    { role: 'DevOps', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'MLOps Engineer', to: 'Data Scientist', content: '需要准备训练数据' },
+                    { from: 'Data Scientist', to: 'ML Engineer', content: '数据准备就绪' },
+                    { from: 'ML Engineer', to: 'MLOps Engineer', content: '模型训练完成' },
+                    { from: 'MLOps Engineer', to: 'QA', content: '模型验证申请' },
+                    { from: 'QA', to: 'DevOps', content: '模型验证通过' }
+                ]
+            },
+            {
+                id: 'prompt-optimization',
+                name: '提示词优化',
+                icon: '✨',
+                desc: '从提示词测试到效果优化的完整流程',
+                agents: ['Prompt Optimizer', 'AI Product Manager', 'AI Trainer', 'Evaluation Engineer'],
+                positions: [
+                    { role: 'Prompt Optimizer', x: 400, y: 30 },
+                    { role: 'AI Product Manager', x: 200, y: 150 },
+                    { role: 'AI Trainer', x: 600, y: 150 },
+                    { role: 'Evaluation Engineer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Prompt Optimizer', to: 'AI Product Manager', content: '确定提示词优化目标' },
+                    { from: 'AI Product Manager', to: 'AI Trainer', content: '提供训练数据需求' },
+                    { from: 'AI Trainer', to: 'Prompt Optimizer', content: '优化数据准备完成' },
+                    { from: 'Prompt Optimizer', to: 'Evaluation Engineer', content: '需要提示词效果评测' },
+                    { from: 'Evaluation Engineer', to: 'AI Product Manager', content: '提示词效果评估报告' }
+                ]
+            },
+            {
+                id: 'ai-training-data',
+                name: 'AI训练数据',
+                icon: '🎓',
+                desc: '从数据采集到训练数据准备的完整流程',
+                agents: ['AI Trainer', 'Data Labeler', 'Data Scientist', 'Prompt Engineer', 'QA'],
+                positions: [
+                    { role: 'AI Trainer', x: 400, y: 30 },
+                    { role: 'Data Labeler', x: 200, y: 150 },
+                    { role: 'Data Scientist', x: 600, y: 150 },
+                    { role: 'Prompt Engineer', x: 200, y: 270 },
+                    { role: 'QA', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Trainer', to: 'Data Labeler', content: '需要标注数据' },
+                    { from: 'Data Labeler', to: 'Data Scientist', content: '数据标注完成' },
+                    { from: 'Data Scientist', to: 'AI Trainer', content: '训练数据准备就绪' },
+                    { from: 'AI Trainer', to: 'Prompt Engineer', content: '需要提示词支持' },
+                    { from: 'Prompt Engineer', to: 'QA', content: '提示词验证申请' },
+                    { from: 'QA', to: 'AI Trainer', content: '训练数据质量确认' }
+                ]
+            },
+            {
+                id: 'ai-ethics-review',
+                name: 'AI伦理审查',
+                icon: '⚖️',
+                desc: '从AI系统伦理评估到上线的完整流程',
+                agents: ['AI Ethicist', 'AI Product Manager', 'Security Researcher', 'Legal Counsel', 'CEO'],
+                positions: [
+                    { role: 'AI Ethicist', x: 400, y: 30 },
+                    { role: 'AI Product Manager', x: 200, y: 150 },
+                    { role: 'Security Researcher', x: 600, y: 150 },
+                    { role: 'Legal Counsel', x: 200, y: 270 },
+                    { role: 'CEO', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Ethicist', to: 'AI Product Manager', content: '需要产品伦理风险评估' },
+                    { from: 'AI Product Manager', to: 'Security Researcher', content: '安全风险评估需求' },
+                    { from: 'Security Researcher', to: 'AI Ethicist', content: '安全风险报告' },
+                    { from: 'AI Ethicist', to: 'Legal Counsel', content: '合规审查需求' },
+                    { from: 'Legal Counsel', to: 'CEO', content: '伦理合规审查报告' }
+                ]
             }
         ];
 
@@ -5873,7 +5998,17 @@
             'Platform Product Manager': { icon: '🖥️', color: '#14b8a6', role: '平台产品经理' },
             'Technical Illustrator': { icon: '🎨', color: '#a855f7', role: '技术插画师' },
             'Innovation Manager': { icon: '💡', color: '#f59e0b', role: '创新经理' },
-            'Product Operations': { icon: '📊', color: '#22c55e', role: '产品运营经理' }
+            'Product Operations': { icon: '📊', color: '#22c55e', role: '产品运营经理' },
+            // Cycle 294 新增角色
+            'AI Architect': { icon: '🏛️', color: '#6366f1', role: 'AI架构师' },
+            'Vector Database Engineer': { icon: '🗂️', color: '#ec4899', role: '向量数据库工程师' },
+            'MLOps Engineer': { icon: '🔄', color: '#14b8a6', role: 'MLOps工程师' },
+            'Prompt Optimizer': { icon: '✨', color: '#f59e0b', role: '提示词优化师' },
+            'AI Trainer': { icon: '🎓', color: '#8b5cf6', role: 'AI训练师' },
+            'Data Labeler': { icon: '🏷️', color: '#06b6d4', role: '数据标注员' },
+            'AI Ethicist': { icon: '⚖️', color: '#a855f7', role: 'AI伦理学家' },
+            'Evaluation Engineer': { icon: '📐', color: '#22c55e', role: '评测工程师' },
+            'AI Product Designer': { icon: '🎯', color: '#f97316', role: 'AI产品设计师' }
         };
 
         // 拖拽相关变量
