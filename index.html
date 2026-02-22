@@ -637,6 +637,11 @@
             animation: flow 1s linear infinite;
         }
 
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
         /* API Key Modal */
         .modal-overlay {
             position: fixed;
@@ -694,6 +699,73 @@
             padding: 20px;
             max-height: 60vh;
             overflow-y: auto;
+        }
+
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .template-card {
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            padding: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .template-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .template-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .template-icon {
+            font-size: 24px;
+        }
+
+        .template-name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .template-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .template-agents {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 10px;
+        }
+
+        .template-agent-tag {
+            background: var(--bg-secondary);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .btn-accent {
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            color: white;
+            border: none;
+        }
+
+        .btn-accent:hover {
+            opacity: 0.9;
         }
 
         .api-provider {
@@ -958,6 +1030,14 @@
                 </svg>
                 API 密钥
             </button>
+            <button class="btn btn-accent" onclick="openTemplateModal()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="3" y1="9" x2="21" y2="9"/>
+                    <line x1="9" y1="21" x2="9" y2="9"/>
+                </svg>
+                预设模板
+            </button>
         </div>
     </header>
 
@@ -1149,6 +1229,27 @@
         </div>
     </div>
 
+    <!-- 预设模板 Modal -->
+    <div class="modal-overlay" id="templateModal">
+        <div class="modal" style="max-width: 700px;">
+            <div class="modal-header">
+                <h2>📋 预设工作流程模板</h2>
+                <button class="modal-close" onclick="closeTemplateModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <p style="color: var(--text-secondary); font-size: 13px; margin-bottom: 16px;">
+                    选择一个预设模板快速创建 AI Agent 工作流
+                </p>
+                <div class="template-grid" id="templateGrid">
+                    <!-- 模板卡片由 JS 渲染 -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeTemplateModal()">关闭</button>
+            </div>
+        </div>
+    </div>
+
     <!-- 连接消息 Modal -->
     <div class="message-modal" id="messageModal">
         <div class="modal">
@@ -1188,6 +1289,123 @@
         let isPlaying = false;
         let currentTime = 0;
         let animationId = null;
+
+        // 预设工作流程模板
+        const workflowTemplates = [
+            {
+                id: 'product-launch',
+                name: '产品发布',
+                icon: '🚀',
+                desc: '从需求分析到产品上线的完整流程',
+                agents: ['CEO', 'CTO', 'Developer', 'QA', 'Marketing'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 50 },
+                    { role: 'CTO', x: 200, y: 180 },
+                    { role: 'Developer', x: 400, y: 180 },
+                    { role: 'QA', x: 600, y: 180 },
+                    { role: 'Marketing', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'CTO', content: '我们需要一个新产品的技术方案' },
+                    { from: 'CTO', to: 'Developer', content: '开始开发工作' },
+                    { from: 'Developer', to: 'QA', content: '提交代码测试' },
+                    { from: 'QA', to: 'Marketing', content: '产品测试通过，准备发布' }
+                ]
+            },
+            {
+                id: 'code-review',
+                name: '代码审查',
+                icon: '🔍',
+                desc: '开发者提交代码，CTO 审查的协作流程',
+                agents: ['Developer', 'CTO', 'QA'],
+                positions: [
+                    { role: 'Developer', x: 200, y: 150 },
+                    { role: 'CTO', x: 500, y: 150 },
+                    { role: 'QA', x: 350, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'Developer', to: 'CTO', content: '提交代码审查' },
+                    { from: 'CTO', to: 'Developer', content: '代码审查反馈：需要优化' },
+                    { from: 'Developer', to: 'QA', content: '修改完成，提交测试' }
+                ]
+            },
+            {
+                id: 'marketing-campaign',
+                name: '营销活动',
+                icon: '📢',
+                desc: '从创意策划到执行落地的营销流程',
+                agents: ['Marketing', 'Designer', 'Sales', 'CEO'],
+                positions: [
+                    { role: 'Marketing', x: 350, y: 50 },
+                    { role: 'Designer', x: 200, y: 180 },
+                    { role: 'Sales', x: 500, y: 180 },
+                    { role: 'CEO', x: 350, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'Marketing', to: 'Designer', content: '需要制作活动宣传素材' },
+                    { from: 'Designer', to: 'Marketing', content: '素材已完成' },
+                    { from: 'Marketing', to: 'Sales', content: '活动素材已准备好' },
+                    { from: 'Sales', to: 'CEO', content: '营销活动效果汇报' }
+                ]
+            },
+            {
+                id: 'research-project',
+                name: '研究项目',
+                icon: '🔬',
+                desc: '从市场调研到产品方案的研发流程',
+                agents: ['CEO', 'Researcher', 'CTO', 'Designer'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 50 },
+                    { role: 'Researcher', x: 200, y: 180 },
+                    { role: 'CTO', x: 400, y: 180 },
+                    { role: 'Designer', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Researcher', content: '调研市场需求' },
+                    { from: 'Researcher', to: 'CTO', content: '调研报告：技术可行性分析' },
+                    { from: 'CTO', to: 'Designer', content: '技术方案确定，需要 UI 设计' },
+                    { from: 'Researcher', to: 'CEO', content: '最终产品方案' }
+                ]
+            },
+            {
+                id: 'customer-support',
+                name: '客户支持',
+                icon: '💬',
+                desc: '客户反馈到问题解决的服务流程',
+                agents: ['Sales', 'Developer', 'QA', 'CEO'],
+                positions: [
+                    { role: 'Sales', x: 200, y: 100 },
+                    { role: 'Developer', x: 400, y: 100 },
+                    { role: 'QA', x: 600, y: 100 },
+                    { role: 'CEO', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Sales', to: 'Developer', content: '客户反馈：产品 bug' },
+                    { from: 'Developer', to: 'QA', content: '修复完成，提交测试' },
+                    { from: 'QA', to: 'Sales', content: '测试通过，可以回复客户' },
+                    { from: 'Sales', to: 'CEO', content: '客户满意度报告' }
+                ]
+            },
+            {
+                id: 'sprint-planning',
+                name: '敏捷开发',
+                icon: '⚡',
+                desc: 'Sprint 计划会议到迭代交付的流程',
+                agents: ['CEO', 'CTO', 'Developer', 'QA'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 50 },
+                    { role: 'CTO', x: 200, y: 180 },
+                    { role: 'Developer', x: 400, y: 180 },
+                    { role: 'QA', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'CTO', content: '确定本 Sprint 目标' },
+                    { from: 'CTO', to: 'Developer', content: '分配开发任务' },
+                    { from: 'Developer', to: 'QA', content: '提交代码测试' },
+                    { from: 'QA', to: 'CEO', content: 'Sprint 交付完成' }
+                ]
+            }
+        ];
 
         // Agent 角色配置
         const agentRoles = {
@@ -2334,6 +2552,106 @@
         // 关闭 API Keys Modal
         function closeApiKeysModal() {
             document.getElementById('apiKeysModal').classList.remove('show');
+        }
+
+        // 打开模板 Modal
+        function openTemplateModal() {
+            renderTemplates();
+            document.getElementById('templateModal').classList.add('show');
+        }
+
+        // 关闭模板 Modal
+        function closeTemplateModal() {
+            document.getElementById('templateModal').classList.remove('show');
+        }
+
+        // 渲染模板列表
+        function renderTemplates() {
+            const grid = document.getElementById('templateGrid');
+            grid.innerHTML = workflowTemplates.map(template => `
+                <div class="template-card" onclick="loadTemplate('${template.id}')">
+                    <div class="template-card-header">
+                        <span class="template-icon">${template.icon}</span>
+                        <span class="template-name">${template.name}</span>
+                    </div>
+                    <div class="template-desc">${template.desc}</div>
+                    <div class="template-agents">
+                        ${template.agents.map(a => `<span class="template-agent-tag">${agentRoles[a]?.icon || ''} ${a}</span>`).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 加载模板
+        function loadTemplate(templateId) {
+            const template = workflowTemplates.find(t => t.id === templateId);
+            if (!template) return;
+
+            // 清除现有数据
+            agents = [];
+            messages = [];
+
+            // 创建 Agents
+            const agentMap = {};
+            template.positions.forEach((pos, index) => {
+                const newId = index + 1;
+                const role = agentRoles[pos.role] || agentRoles['Developer'];
+                const newAgent = {
+                    id: newId,
+                    name: pos.role,
+                    role: pos.role,
+                    status: 'waiting',
+                    x: pos.x,
+                    y: pos.y
+                };
+                agents.push(newAgent);
+                agentMap[pos.role] = newId;
+            });
+
+            // 创建消息流
+            template.messageFlows.forEach((flow, index) => {
+                const fromId = agentMap[flow.from];
+                const toId = agentMap[flow.to];
+                if (fromId && toId) {
+                    messages.push({
+                        id: index + 1,
+                        from: fromId,
+                        to: toId,
+                        content: flow.content,
+                        timestamp: index
+                    });
+                }
+            });
+
+            // 渲染界面
+            renderAgents();
+            renderFlow();
+
+            // 关闭模态框
+            closeTemplateModal();
+
+            // 显示通知
+            showNotification(`已加载模板: ${template.name}`, 'success');
+        }
+
+        // 显示通知
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 80px;
+                right: 20px;
+                background: ${type === 'success' ? '#22c55e' : type === 'error' ? '#ef4444' : '#3b82f6'};
+                color: white;
+                padding: 12px 20px;
+                border-radius: 8px;
+                z-index: 10000;
+                animation: slideIn 0.3s ease;
+            `;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.remove(), 3000);
         }
 
         // 更新 Key 状态指示器
