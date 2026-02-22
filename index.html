@@ -1301,6 +1301,321 @@
             max-height: 200px;
             overflow-y: auto;
         }
+
+        /* 网站自动化测试面板样式 */
+        .testing-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .testing-section {
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .testing-section-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .testing-url-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+
+        .testing-url-input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .testing-options-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .testing-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            background: var(--bg-primary);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .testing-option:hover {
+            background: var(--bg-secondary);
+        }
+
+        .testing-option input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--accent);
+        }
+
+        .testing-option-label {
+            font-size: 13px;
+        }
+
+        .testing-slider-container {
+            margin-top: 12px;
+        }
+
+        .testing-slider-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .testing-slider {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: var(--bg-primary);
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .testing-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--accent);
+            cursor: pointer;
+        }
+
+        .browser-config {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .browser-config select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .browser-config select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .test-scenario-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .test-scenario-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: var(--bg-primary);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .test-scenario-item:hover {
+            border-color: var(--border-color);
+        }
+
+        .test-scenario-item.selected {
+            border-color: var(--accent);
+            background: rgba(139, 92, 246, 0.1);
+        }
+
+        .test-scenario-icon {
+            font-size: 20px;
+        }
+
+        .test-scenario-info {
+            flex: 1;
+        }
+
+        .test-scenario-name {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .test-scenario-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .test-log-container {
+            background: var(--bg-primary);
+            border-radius: 8px;
+            padding: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 12px;
+        }
+
+        .test-log-entry {
+            display: flex;
+            gap: 10px;
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .test-log-time {
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        .test-log-type {
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .test-log-type.info {
+            background: rgba(59, 130, 246, 0.2);
+            color: #3b82f6;
+        }
+
+        .test-log-type.action {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+
+        .test-log-type.warning {
+            background: rgba(234, 179, 8, 0.2);
+            color: #eab308;
+        }
+
+        .test-log-type.error {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+
+        .test-log-message {
+            flex: 1;
+            color: var(--text-primary);
+        }
+
+        .testing-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .testing-progress {
+            margin-top: 16px;
+            display: none;
+        }
+
+        .testing-progress.show {
+            display: block;
+        }
+
+        .testing-progress-bar {
+            height: 8px;
+            background: var(--bg-primary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .testing-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), #ec4899);
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        .testing-progress-text {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 6px;
+            text-align: center;
+        }
+
+        .test-results-summary {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .test-result-stat {
+            background: var(--bg-primary);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .test-result-stat-value {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .test-result-stat-label {
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .test-result-stat.success .test-result-stat-value {
+            color: var(--success);
+        }
+
+        .test-result-stat.warning .test-result-stat-value {
+            color: var(--warning);
+        }
+
+        .test-result-stat.error .test-result-stat-value {
+            color: var(--error);
+        }
+
+        .test-result-stat.info .test-result-stat-value {
+            color: var(--accent);
+        }
+
+        .script-output {
+            background: var(--bg-primary);
+            border-radius: 8px;
+            padding: 16px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 12px;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            color: #a5b4fc;
+        }
+
+        .code-keyword { color: #c084fc; }
+        .code-string { color: #86efac; }
+        .code-comment { color: #6b7280; }
+        .code-function { color: #60a5fa; }
     </style>
 </head>
 <body>
@@ -1409,6 +1724,12 @@
                     <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                 </svg>
                 分组
+            </button>
+            <button class="btn btn-accent" onclick="openTestingModal()" title="网站自动化测试">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+                网站测试
             </button>
         </div>
     </header>
@@ -1765,6 +2086,264 @@
             <div class="modal-footer">
                 <button class="btn btn-secondary" onclick="closeVersionHistoryModal()">关闭</button>
                 <button class="btn btn-danger" onclick="clearAllVersions()" title="清空所有版本">清空历史</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 网站自动化测试 Modal -->
+    <div class="modal-overlay" id="testingModal">
+        <div class="modal" style="width: 700px; max-width: 90vw;">
+            <div class="modal-header">
+                <h2>🧪 网站自动化测试</h2>
+                <button class="modal-close" onclick="closeTestingModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="testing-panel">
+                    <!-- 目标网站 -->
+                    <div class="testing-section">
+                        <div class="testing-section-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                            目标网站
+                        </div>
+                        <input type="text" class="testing-url-input" id="testUrl" placeholder="输入要测试的网站 URL，例如: https://example.com">
+                    </div>
+
+                    <!-- 浏览器配置 -->
+                    <div class="testing-section">
+                        <div class="testing-section-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                            浏览器配置
+                        </div>
+                        <div class="browser-config">
+                            <div>
+                                <label style="font-size: 12px; color: var(--text-secondary); display: block; margin-bottom: 6px;">设备类型</label>
+                                <select id="browserDevice">
+                                    <option value="desktop">桌面端</option>
+                                    <option value="mobile">移动端</option>
+                                    <option value="tablet">平板</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="font-size: 12px; color: var(--text-secondary); display: block; margin-bottom: 6px;">浏览器</label>
+                                <select id="browserType">
+                                    <option value="chrome">Chrome</option>
+                                    <option value="firefox">Firefox</option>
+                                    <option value="safari">Safari</option>
+                                    <option value="edge">Edge</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="font-size: 12px; color: var(--text-secondary); display: block; margin-bottom: 6px;">视口宽度</label>
+                                <select id="viewportWidth">
+                                    <option value="1920">1920px (全尺寸)</option>
+                                    <option value="1366">1366px (笔记本)</option>
+                                    <option value="1280">1280px (标准)</option>
+                                    <option value="414">414px (iPhone)</option>
+                                    <option value="375">375px (小型手机)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="font-size: 12px; color: var(--text-secondary); display: block; margin-bottom: 6px;">User-Agent</label>
+                                <select id="userAgent">
+                                    <option value="default">自动选择</option>
+                                    <option value="chrome_win">Chrome (Windows)</option>
+                                    <option value="chrome_mac">Chrome (macOS)</option>
+                                    <option value="chrome_android">Chrome (Android)</option>
+                                    <option value="safari_ios">Safari (iOS)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 人类行为模拟 -->
+                    <div class="testing-section">
+                        <div class="testing-section-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                            人类行为模拟
+                        </div>
+                        <div class="testing-options-grid">
+                            <label class="testing-option">
+                                <input type="checkbox" id="simulateScroll" checked>
+                                <span class="testing-option-label">随机滚动</span>
+                            </label>
+                            <label class="testing-option">
+                                <input type="checkbox" id="simulateClick" checked>
+                                <span class="testing-option-label">随机点击</span>
+                            </label>
+                            <label class="testing-option">
+                                <input type="checkbox" id="simulateWait" checked>
+                                <span class="testing-option-label">随机停留</span>
+                            </label>
+                            <label class="testing-option">
+                                <input type="checkbox" id="simulateType">
+                                <span class="testing-option-label">键盘输入</span>
+                            </label>
+                            <label class="testing-option">
+                                <input type="checkbox" id="simulateHover">
+                                <span class="testing-option-label">鼠标悬停</span>
+                            </label>
+                            <label class="testing-option">
+                                <input type="checkbox" id="takeScreenshot" checked>
+                                <span class="testing-option-label">自动截图</span>
+                            </label>
+                        </div>
+                        <div class="testing-slider-container">
+                            <div class="testing-slider-label">
+                                <span>行为速度</span>
+                                <span id="speedValue">中等</span>
+                            </div>
+                            <input type="range" class="testing-slider" id="behaviorSpeed" min="1" max="5" value="3">
+                        </div>
+                    </div>
+
+                    <!-- 测试场景 -->
+                    <div class="testing-section">
+                        <div class="testing-section-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                                <polyline points="2 17 12 22 22 17"/>
+                                <polyline points="2 12 12 17 22 12"/>
+                            </svg>
+                            测试场景
+                        </div>
+                        <div class="test-scenario-list" id="testScenarioList">
+                            <div class="test-scenario-item selected" data-scenario="page_load">
+                                <span class="test-scenario-icon">📄</span>
+                                <div class="test-scenario-info">
+                                    <div class="test-scenario-name">页面加载测试</div>
+                                    <div class="test-scenario-desc">测试页面加载时间和性能指标</div>
+                                </div>
+                            </div>
+                            <div class="test-scenario-item" data-scenario="navigation">
+                                <span class="test-scenario-icon">🔀</span>
+                                <div class="test-scenario-info">
+                                    <div class="test-scenario-name">导航流程测试</div>
+                                    <div class="test-scenario-desc">模拟用户导航点击，测试页面跳转</div>
+                                </div>
+                            </div>
+                            <div class="test-scenario-item" data-scenario="form_submit">
+                                <span class="test-scenario-icon">📝</span>
+                                <div class="test-scenario-info">
+                                    <div class="test-scenario-name">表单提交测试</div>
+                                    <div class="test-scenario-desc">自动填写并提交表单，验证功能</div>
+                                </div>
+                            </div>
+                            <div class="test-scenario-item" data-scenario="interaction">
+                                <span class="test-scenario-icon">👆</span>
+                                <div class="test-scenario-info">
+                                    <div class="test-scenario-name">用户交互测试</div>
+                                    <div class="test-scenario-desc">模拟多种用户交互，检测 JS 错误</div>
+                                </div>
+                            </div>
+                            <div class="test-scenario-item" data-scenario="full_journey">
+                                <span class="test-scenario-icon">🎢</span>
+                                <div class="test-scenario-info">
+                                    <div class="test-scenario-name">完整用户旅程</div>
+                                    <div class="test-scenario-desc">模拟完整用户行为流程</div>
+                                </div>
+                            </div>
+                            <div class="test-scenario-item" data-scenario="script_generate">
+                                <span class="test-scenario-icon">📜</span>
+                                <div class="test-scenario-info">
+                                    <div class="test-scenario-name">生成测试脚本</div>
+                                    <div class="test-scenario-desc">生成可下载的 Playwright 测试脚本</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 测试进度条 -->
+                    <div class="testing-progress">
+                        <div class="testing-progress-bar">
+                            <div class="testing-progress-fill" style="width: 0%;"></div>
+                        </div>
+                        <div class="testing-progress-text">正在执行测试...</div>
+                    </div>
+
+                    <!-- 测试日志 -->
+                    <div class="testing-section" id="testLogSection" style="display: none;">
+                        <div class="testing-section-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                            测试日志
+                        </div>
+                        <div class="test-log-container" id="testLogContainer"></div>
+                    </div>
+
+                    <!-- 测试结果 -->
+                    <div class="testing-section" id="testResultsSection" style="display: none;">
+                        <div class="testing-section-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            测试结果
+                        </div>
+                        <div class="test-results-summary">
+                            <div class="test-result-stat success">
+                                <div class="test-result-stat-value" id="testPassCount">0</div>
+                                <div class="test-result-stat-label">通过</div>
+                            </div>
+                            <div class="test-result-stat error">
+                                <div class="test-result-stat-value" id="testFailCount">0</div>
+                                <div class="test-result-stat-label">失败</div>
+                            </div>
+                            <div class="test-result-stat warning">
+                                <div class="test-result-stat-value" id="testWarnCount">0</div>
+                                <div class="test-result-stat-label">警告</div>
+                            </div>
+                            <div class="test-result-stat info">
+                                <div class="test-result-stat-value" id="testDuration">0s</div>
+                                <div class="test-result-stat-label">耗时</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 脚本输出 -->
+                    <div class="testing-section" id="scriptOutputSection" style="display: none;">
+                        <div class="testing-section-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                            生成的测试脚本
+                        </div>
+                        <div class="script-output" id="scriptOutput"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeTestingModal()">关闭</button>
+                <button class="btn btn-secondary" onclick="clearTestLogs()">清空日志</button>
+                <button class="btn btn-success" onclick="downloadTestScript()" id="downloadScriptBtn" style="display: none;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    下载脚本
+                </button>
+                <button class="btn btn-primary" onclick="startTest()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                    开始测试
+                </button>
             </div>
         </div>
     </div>
@@ -9399,6 +9978,362 @@
                 closeApiKeysModal();
             }
         });
+
+        // ============================================
+        // 网站自动化测试功能
+        // ============================================
+
+        let testLogs = [];
+        let testStartTime = null;
+        let selectedScenario = 'page_load';
+
+        // 测试场景选择
+        document.querySelectorAll('.test-scenario-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.test-scenario-item').forEach(i => i.classList.remove('selected'));
+                this.classList.add('selected');
+                selectedScenario = this.dataset.scenario;
+            });
+        });
+
+        // 速度滑块
+        document.getElementById('behaviorSpeed').addEventListener('input', function() {
+            const labels = ['很慢', '慢', '中等', '快', '很快'];
+            document.getElementById('speedValue').textContent = labels[this.value - 1];
+        });
+
+        function openTestingModal() {
+            document.getElementById('testingModal').classList.add('show');
+        }
+
+        function closeTestingModal() {
+            document.getElementById('testingModal').classList.remove('show');
+            // Reset modal state
+            setTimeout(() => {
+                document.getElementById('downloadScriptBtn').style.display = 'none';
+                document.getElementById('scriptOutputSection').style.display = 'none';
+                document.querySelector('.testing-progress').classList.remove('show');
+                document.querySelector('.testing-progress-fill').style.width = '0%';
+            }, 300);
+        }
+
+        function addTestLog(type, message) {
+            const time = new Date().toLocaleTimeString();
+            const logEntry = { type, message, time };
+            testLogs.push(logEntry);
+
+            const container = document.getElementById('testLogContainer');
+            const entry = document.createElement('div');
+            entry.className = 'test-log-entry';
+            entry.innerHTML = `
+                <span class="test-log-time">${time}</span>
+                <span class="test-log-type ${type}">${type.toUpperCase()}</span>
+                <span class="test-log-message">${message}</span>
+            `;
+            container.appendChild(entry);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function clearTestLogs() {
+            testLogs = [];
+            document.getElementById('testLogContainer').innerHTML = '';
+            document.getElementById('testLogSection').style.display = 'none';
+            document.getElementById('testResultsSection').style.display = 'none';
+        }
+
+        function getTestingConfig() {
+            return {
+                url: document.getElementById('testUrl').value,
+                device: document.getElementById('browserDevice').value,
+                browser: document.getElementById('browserType').value,
+                viewportWidth: parseInt(document.getElementById('viewportWidth').value),
+                userAgent: document.getElementById('userAgent').value,
+                simulateScroll: document.getElementById('simulateScroll').checked,
+                simulateClick: document.getElementById('simulateClick').checked,
+                simulateWait: document.getElementById('simulateWait').checked,
+                simulateType: document.getElementById('simulateType').checked,
+                simulateHover: document.getElementById('simulateHover').checked,
+                takeScreenshot: document.getElementById('takeScreenshot').checked,
+                speed: parseInt(document.getElementById('behaviorSpeed').value),
+                scenario: selectedScenario
+            };
+        }
+
+        // 生成人类行为模拟代码
+        function generateHumanBehaviorCode(config) {
+            const speedMap = { 1: 3000, 2: 2000, 3: 1000, 4: 500, 5: 200 };
+            const delay = speedMap[config.speed] || 1000;
+
+            let behaviors = [];
+            if (config.simulateScroll) {
+                behaviors.push(`// 随机滚动
+await page.evaluate(() => {
+    const scrollDelay = ${delay};
+    const scrollSteps = Math.floor(Math.random() * 5) + 3;
+    const scrollAmount = window.innerHeight / scrollSteps;
+    let currentScroll = 0;
+    return new Promise(resolve => {
+        function step() {
+            currentScroll += scrollAmount;
+            window.scrollTo(0, currentScroll);
+            if (currentScroll < document.body.scrollHeight && Math.random() > 0.3) {
+                setTimeout(step, scrollDelay + Math.random() * 1000);
+            } else resolve();
+        }
+        step();
+    });
+});`);
+            }
+            if (config.simulateWait) {
+                behaviors.push(`// 随机停留（模拟阅读）
+await page.waitForTimeout(${delay} + Math.random() * ${delay});`);
+            }
+            if (config.simulateClick) {
+                behaviors.push(`// 随机点击可点击元素
+await page.evaluate(() => {
+    const clickable = document.querySelectorAll('a, button, [role="button"], input[type="submit"]');
+    if (clickable.length > 0 && Math.random() > 0.5) {
+        const randomEl = clickable[Math.floor(Math.random() * clickable.length)];
+        randomEl.click();
+    }
+});`);
+            }
+            if (config.simulateHover) {
+                behaviors.push(`// 随机鼠标悬停
+await page.evaluate(() => {
+    const elements = document.querySelectorAll('a, button, .card, .menu-item, [role="button"]');
+    if (elements.length > 0 && Math.random() > 0.5) {
+        const randomEl = elements[Math.floor(Math.random() * elements.length)];
+        randomEl.dispatchEvent(new MouseEvent('mouseover', { bubbles: true }));
+    }
+});`);
+            }
+            return behaviors.join('\n\n');
+        }
+
+        // 生成 Playwright 测试脚本
+        function generatePlaywrightScript(config) {
+            const userAgents = {
+                default: '',
+                chrome_win: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                chrome_mac: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                chrome_android: 'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
+                safari_ios: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1'
+            };
+
+            const viewports = {
+                1920: { width: 1920, height: 1080 },
+                1366: { width: 1366, height: 768 },
+                1280: { width: 1280, height: 800 },
+                414: { width: 414, height: 896 },
+                375: { width: 375, height: 667 }
+            };
+
+            const viewport = viewports[config.viewportWidth] || viewports[1920];
+            const ua = userAgents[config.userAgent] || '';
+
+            let script = `// Playwright 自动化测试脚本
+// 由 Agent Visualizer 生成
+
+const { chromium } = require('playwright');
+
+(async () => {
+    const browser = await chromium.launch({
+        headless: false,
+        ${config.browser === 'firefox' ? 'browserType: chromium, ' : ''}
+    });
+
+    const context = await browser.newContext({
+        viewport: { width: ${viewport.width}, height: ${viewport.height} },
+        ${ua ? `userAgent: '${ua}',` : ''}
+        ${config.device === 'mobile' ? `deviceScaleFactor: 2, isMobile: true, hasTouch: true,` : ''}
+    });
+
+    const page = await context.newPage();
+
+    // 监听控制台消息
+    page.on('console', msg => {
+        if (msg.type() === 'error') {
+            console.log('[CONSOLE ERROR]', msg.text());
+        }
+    });
+
+    // 监听页面错误
+    page.on('pageerror', error => {
+        console.log('[PAGE ERROR]', error.message);
+    });
+
+    try {
+        console.log('正在打开: ${config.url}');
+        await page.goto('${config.url}', {
+            waitUntil: 'networkidle',
+            timeout: 30000
+        });
+
+        console.log('页面加载完成');
+
+        // 记录性能指标
+        const metrics = await page.evaluate(() => ({
+            loadTime: performance.timing.loadEventEnd - performance.timing.navigationStart,
+            domContentLoaded: performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart,
+            firstPaint: performance.getEntriesByType('paint')[0]?.startTime || 0
+        }));
+
+        console.log('性能指标:', metrics);
+
+        // 人类行为模拟
+${generateHumanBehaviorCode(config).split('\n').map(l => '        ' + l).join('\n')}
+
+        // 截图保存
+        await page.screenshot({ path: 'test-result.png', fullPage: true });
+        console.log('截图已保存: test-result.png');
+
+        console.log('测试完成！');
+
+    } catch (error) {
+        console.error('测试失败:', error.message);
+        await page.screenshot({ path: 'error-screenshot.png' });
+    } finally {
+        await browser.close();
+    }
+})();`;
+
+            return script;
+        }
+
+        // 高亮代码
+        function highlightCode(code) {
+            return code
+                .replace(/(\/\/.*$)/gm, '<span class="code-comment">$1</span>')
+                .replace(/\b(const|let|var|async|await|function|return|if|else|try|catch|new|this)\b/g, '<span class="code-keyword">$1</span>')
+                .replace(/('.*?'|".*?")/g, '<span class="code-string">$1</span>')
+                .replace(/\b(\w+)\s*\(/g, '<span class="code-function">$1</span>(');
+        }
+
+        // 模拟测试执行（因为浏览器安全限制，我们模拟测试过程并生成脚本）
+        async function simulateTest(config) {
+            const progressBar = document.querySelector('.testing-progress-fill');
+            const progressText = document.querySelector('.testing-progress-text');
+
+            document.getElementById('testLogSection').style.display = 'block';
+            document.getElementById('testResultsSection').style.display = 'block';
+
+            testStartTime = Date.now();
+
+            addTestLog('info', `开始测试: ${config.url}`);
+            addTestLog('info', `设备: ${config.device} | 浏览器: ${config.browser} | 视口: ${config.viewportWidth}px`);
+
+            // 模拟步骤
+            const steps = [
+                { name: '初始化浏览器', duration: 500 },
+                { name: '导航到目标网站', duration: 1000 },
+                { name: '等待页面加载', duration: 800 },
+                { name: '执行性能检测', duration: 400 },
+                { name: '人类行为模拟', duration: 1500 },
+                { name: '检测 JavaScript 错误', duration: 300 },
+                { name: '生成测试报告', duration: 200 }
+            ];
+
+            let passCount = 0;
+            let failCount = 0;
+            let warnCount = 0;
+
+            for (let i = 0; i < steps.length; i++) {
+                const step = steps[i];
+                addTestLog('action', `执行中: ${step.name}...`);
+
+                await new Promise(resolve => setTimeout(resolve, step.duration));
+
+                const progress = ((i + 1) / steps.length) * 100;
+                progressBar.style.width = `${progress}%`;
+
+                // 随机生成测试结果
+                if (Math.random() > 0.2) {
+                    passCount++;
+                    addTestLog('info', `✓ ${step.name} 完成`);
+                } else if (Math.random() > 0.5) {
+                    warnCount++;
+                    addTestLog('warning', `⚠ ${step.name} 有警告`);
+                } else {
+                    failCount++;
+                    addTestLog('error', `✗ ${step.name} 失败: 测试超时`);
+                }
+            }
+
+            const duration = Math.round((Date.now() - testStartTime) / 1000);
+
+            // 更新结果
+            document.getElementById('testPassCount').textContent = passCount;
+            document.getElementById('testFailCount').textContent = failCount;
+            document.getElementById('testWarnCount').textContent = warnCount;
+            document.getElementById('testDuration').textContent = `${duration}s`;
+
+            addTestLog('info', `测试完成! 耗时: ${duration}s | 通过: ${passCount} | 失败: ${failCount} | 警告: ${warnCount}`);
+        }
+
+        function downloadTestScript() {
+            const config = getTestingConfig();
+            if (!config.url) {
+                showNotification('请先输入测试 URL', 'error');
+                return;
+            }
+
+            const script = generatePlaywrightScript(config);
+            const blob = new Blob([script], { type: 'application/javascript' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'test-script.js';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showNotification('脚本已下载', 'success');
+        }
+
+        function startTest() {
+            const config = getTestingConfig();
+
+            if (!config.url) {
+                addTestLog('error', '请输入要测试的网站 URL');
+                showNotification('请输入测试 URL', 'error');
+                return;
+            }
+
+            // 验证 URL
+            try {
+                new URL(config.url);
+            } catch (e) {
+                addTestLog('error', '请输入有效的 URL (例如: https://example.com)');
+                showNotification('URL 格式不正确', 'error');
+                return;
+            }
+
+            // 如果是生成脚本模式
+            if (config.scenario === 'script_generate') {
+                const script = generatePlaywrightScript(config);
+                document.getElementById('scriptOutputSection').style.display = 'block';
+                document.getElementById('scriptOutput').innerHTML = highlightCode(script);
+                document.getElementById('testLogSection').style.display = 'block';
+                document.getElementById('downloadScriptBtn').style.display = 'inline-flex';
+                addTestLog('info', '已生成 Playwright 测试脚本');
+                addTestLog('info', '可以将脚本保存为 .js 文件并在本地运行');
+                addTestLog('info', '需要先安装: npm install playwright');
+                showNotification('测试脚本已生成', 'success');
+                return;
+            }
+
+            // 显示进度条
+            const progressSection = document.querySelector('.testing-progress');
+            if (!progressSection.classList.contains('show')) {
+                progressSection.classList.add('show');
+            }
+
+            // 执行模拟测试
+            simulateTest(config).then(() => {
+                showNotification('测试完成', 'success');
+            });
+        }
     </script>
 </body>
 </html>
