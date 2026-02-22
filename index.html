@@ -12130,6 +12130,132 @@
                     { from: 'AI Fitness Trainer', to: 'AI Sleep Analyst', content: '健身计划' },
                     { from: 'AI Sleep Analyst', to: 'AI Mental Wellness Advisor', content: '睡眠报告' }
                 ]
+            },
+            // Cycle 343 新增模板 - AI智能媒体直播系统
+            {
+                id: 'ai-media-broadcast',
+                name: 'AI智能媒体直播系统',
+                icon: '📹',
+                desc: '从直播策划到互动管理的完整媒体直播流程',
+                agents: ['AI Live Stream Host', 'AI Content Moderator', 'AI Analytics Reporter', 'AI互动策划师', 'AI弹幕分析师'],
+                positions: [
+                    { role: 'AI Live Stream Host', x: 400, y: 50 },
+                    { role: 'AI Content Moderator', x: 200, y: 180 },
+                    { role: 'AI Analytics Reporter', x: 400, y: 180 },
+                    { role: 'AI互动策划师', x: 600, y: 180 },
+                    { role: 'AI弹幕分析师', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Live Stream Host', to: 'AI Content Moderator', content: '内容审核需求' },
+                    { from: 'AI Content Moderator', to: 'AI Analytics Reporter', content: '审核报告' },
+                    { from: 'AI Analytics Reporter', to: 'AI互动策划师', content: '数据反馈' },
+                    { from: 'AI互动策划师', to: 'AI弹幕分析师', content: '互动策略' }
+                ]
+            },
+            // Cycle 343 新增模板 - AI智能环保治理系统
+            {
+                id: 'ai-environment',
+                name: 'AI智能环保治理系统',
+                icon: '🌿',
+                desc: '从环境监测到绿色发展的完整环保治理流程',
+                agents: ['AI Environmental Monitor', 'AI Waste Classifier', 'AI Carbon Calculator', 'AI Pollution Tracker', 'AI Green Advisor'],
+                positions: [
+                    { role: 'AI Environmental Monitor', x: 400, y: 50 },
+                    { role: 'AI Waste Classifier', x: 200, y: 180 },
+                    { role: 'AI Carbon Calculator', x: 400, y: 180 },
+                    { role: 'AI Pollution Tracker', x: 600, y: 180 },
+                    { role: 'AI Green Advisor', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Monitor', to: 'AI Waste Classifier', content: '环境数据' },
+                    { from: 'AI Waste Classifier', to: 'AI Carbon Calculator', content: '分类报告' },
+                    { from: 'AI Carbon Calculator', to: 'AI Pollution Tracker', content: '碳排放数据' },
+                    { from: 'AI Pollution Tracker', to: 'AI Green Advisor', content: '污染追踪' }
+                ]
+            },
+            // Cycle 343 新增模板 - AI智能航空航天系统
+            {
+                id: 'ai-aerospace',
+                name: 'AI智能航空航天系统',
+                icon: '🚀',
+                desc: '从航班规划到太空任务的完整航空航天流程',
+                agents: ['AI Flight Planner', 'AI Air Traffic Controller', 'AI Aviation Safety', 'AI Space Mission', 'AI Satellite Operator'],
+                positions: [
+                    { role: 'AI Flight Planner', x: 400, y: 50 },
+                    { role: 'AI Air Traffic Controller', x: 200, y: 180 },
+                    { role: 'AI Aviation Safety', x: 400, y: 180 },
+                    { role: 'AI Space Mission', x: 600, y: 180 },
+                    { role: 'AI Satellite Operator', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Flight Planner', to: 'AI Air Traffic Controller', content: '航班计划' },
+                    { from: 'AI Air Traffic Controller', to: 'AI Aviation Safety', content: '空管指令' },
+                    { from: 'AI Aviation Safety', to: 'AI Space Mission', content: '安全确认' },
+                    { from: 'AI Space Mission', to: 'AI Satellite Operator', content: '任务需求' }
+                ]
+            },
+            // Cycle 343 新增模板 - AI智能海洋经济系统
+            {
+                id: 'ai-marine',
+                name: 'AI智能海洋经济系统',
+                icon: '🌊',
+                desc: '从海洋经济到海岸管理的完整海洋产业流程',
+                agents: ['AI Marine Economist', 'AI Fishery Manager', 'AI Port Operator', 'AI Shipping Planner', 'AI Coastal Engineer'],
+                positions: [
+                    { role: 'AI Marine Economist', x: 400, y: 50 },
+                    { role: 'AI Fishery Manager', x: 200, y: 180 },
+                    { role: 'AI Port Operator', x: 400, y: 180 },
+                    { role: 'AI Shipping Planner', x: 600, y: 180 },
+                    { role: 'AI Coastal Engineer', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Marine Economist', to: 'AI Fishery Manager', content: '经济分析' },
+                    { from: 'AI Fishery Manager', to: 'AI Port Operator', content: '渔业数据' },
+                    { from: 'AI Port Operator', to: 'AI Shipping Planner', content: '港口运营' },
+                    { from: 'AI Shipping Planner', to: 'AI Coastal Engineer', content: '航运计划' }
+                ]
+            },
+            // Cycle 343 新增模板 - AI智能能源管理系统
+            {
+                id: 'ai-energy',
+                name: 'AI智能能源管理系统',
+                icon: '⚡',
+                desc: '从电网管理到能源交易的完整能源管理流程',
+                agents: ['AI Power Grid Manager', 'AI Energy Trader', 'AI Solar Engineer', 'AI Wind Engineer', 'AI Nuclear Safety'],
+                positions: [
+                    { role: 'AI Power Grid Manager', x: 400, y: 50 },
+                    { role: 'AI Energy Trader', x: 200, y: 180 },
+                    { role: 'AI Solar Engineer', x: 400, y: 180 },
+                    { role: 'AI Wind Engineer', x: 600, y: 180 },
+                    { role: 'AI Nuclear Safety', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Power Grid Manager', to: 'AI Energy Trader', content: '电网数据' },
+                    { from: 'AI Energy Trader', to: 'AI Solar Engineer', content: '交易需求' },
+                    { from: 'AI Solar Engineer', to: 'AI Wind Engineer', content: '太阳能数据' },
+                    { from: 'AI Wind Engineer', to: 'AI Nuclear Safety', content: '风能数据' }
+                ]
+            },
+            // Cycle 343 新增模板 - AI智能公共服务系统
+            {
+                id: 'ai-public-service',
+                name: 'AI智能公共服务系统',
+                icon: '🏙️',
+                desc: '从城市规划到应急响应的完整公共服务流程',
+                agents: ['AI City Planner', 'AI Public Transport', 'AI Emergency Response', 'AI Social Worker', 'AI Community Police'],
+                positions: [
+                    { role: 'AI City Planner', x: 400, y: 50 },
+                    { role: 'AI Public Transport', x: 200, y: 180 },
+                    { role: 'AI Emergency Response', x: 400, y: 180 },
+                    { role: 'AI Social Worker', x: 600, y: 180 },
+                    { role: 'AI Community Police', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI City Planner', to: 'AI Public Transport', content: '规划方案' },
+                    { from: 'AI Public Transport', to: 'AI Emergency Response', content: '交通数据' },
+                    { from: 'AI Emergency Response', to: 'AI Social Worker', content: '应急需求' },
+                    { from: 'AI Social Worker', to: 'AI Community Police', content: '社工报告' }
+                ]
             }
         ];
 
@@ -13447,7 +13573,49 @@
             'AI Contract Reviewer': { icon: '📜', color: '#d97706', role: 'AI合同审查师' },
             'AI Compliance Officer': { icon: '✅', color: '#22c55e', role: 'AI合规官' },
             'AI Dispute Mediator': { icon: '🤝', color: '#8b5cf6', role: 'AI纠纷调解师' },
-            'AI Intellectual Property': { icon: '💡', color: '#0ea5e9', role: 'AI知识产权师' }
+            'AI Intellectual Property': { icon: '💡', color: '#0ea5e9', role: 'AI知识产权师' },
+            // Cycle 343 新增角色 - AI 智能媒体直播
+            'AI Live Stream Host': { icon: '📹', color: '#ef4444', role: 'AI直播主播' },
+            'AI Content Moderator': { icon: '🛡️', color: '#22c55e', role: 'AI内容审核员' },
+            'AI Analytics Reporter': { icon: '📊', color: '#3b82f6', role: 'AI数据播报员' },
+            'AI互动策划师': { icon: '💬', color: '#8b5cf6', role: 'AI互动策划师' },
+            'AI弹幕分析师': { icon: '💭', color: '#f97316', role: 'AI弹幕分析师' },
+            // Cycle 343 新增角色 - AI 智能环保治理
+            'AI Environmental Monitor': { icon: '🌿', color: '#10b981', role: 'AI环境监测师' },
+            'AI Waste Classifier': { icon: '♻️', color: '#22c55e', role: 'AI垃圾分类师' },
+            'AI Carbon Calculator': { icon: '🌍', color: '#06b6d4', role: 'AI碳排放计算师' },
+            'AI Pollution Tracker': { icon: '☢️', color: '#dc2626', role: 'AI污染追踪师' },
+            'AI Green Advisor': { icon: '🌱', color: '#84cc16', role: 'AI绿色顾问' },
+            // Cycle 343 新增角色 - AI 智能航空航天
+            'AI Flight Planner': { icon: '✈️', color: '#0ea5e9', role: 'AI航班规划师' },
+            'AI Air Traffic Controller': { icon: '🛩️', color: '#3b82f6', role: 'AI空管员' },
+            'AI Aviation Safety': { icon: '🔒', color: '#dc2626', role: 'AI航空安全师' },
+            'AI Space Mission': { icon: '🚀', color: '#8b5cf6', role: 'AI太空任务师' },
+            'AI Satellite Operator': { icon: '🛰️', color: '#64748b', role: 'AI卫星运营商' },
+            // Cycle 343 新增角色 - AI 智能海洋经济
+            'AI Marine Economist': { icon: '🌊', color: '#0ea5e9', role: 'AI海洋经济学家' },
+            'AI Fishery Manager': { icon: '🐟', color: '#22c55e', role: 'AI渔业管理师' },
+            'AI Port Operator': { icon: '⚓', color: '#64748b', role: 'AI港口运营师' },
+            'AI Shipping Planner': { icon: '🚢', color: '#3b82f6', role: 'AI航运规划师' },
+            'AI Coastal Engineer': { icon: '🏖️', color: '#f59e0b', role: 'AI海岸工程师' },
+            // Cycle 343 新增角色 - AI 智能能源管理
+            'AI Power Grid Manager': { icon: '⚡', color: '#fbbf24', role: 'AI电网管理师' },
+            'AI Energy Trader': { icon: '💰', color: '#22c55e', role: 'AI能源交易师' },
+            'AI Solar Engineer': { icon: '☀️', color: '#f97316', role: 'AI太阳能工程师' },
+            'AI Wind Engineer': { icon: '🌬️', color: '#06b6d4', role: 'AI风能工程师' },
+            'AI Nuclear Safety': { icon: '☢️', color: '#dc2626', role: 'AI核安全工程师' },
+            // Cycle 343 新增角色 - AI 智能公共服务
+            'AI City Planner': { icon: '🏙️', color: '#8b5cf6', role: 'AI城市规划师' },
+            'AI Public Transport': { icon: '🚌', color: '#22c55e', role: 'AI公共交通调度师' },
+            'AI Emergency Response': { icon: '🚨', color: '#ef4444', role: 'AI应急响应师' },
+            'AI Social Worker': { icon: '🤝', color: '#3b82f6', role: 'AI社会工作者' },
+            'AI Community Police': { icon: '👮', color: '#64748b', role: 'AI社区民警' },
+            // Cycle 343 新增角色 - AI 智能社区建设
+            'AI Community Manager': { icon: '🏘️', color: '#f97316', role: 'AI社区经理' },
+            'AI Neighborhood Watch': { icon: '👁️', color: '#22c55e', role: 'AI邻里守望师' },
+            'AI Volunteer Coordinator': { icon: '🙋', color: '#8b5cf6', role: 'AI志愿者协调师' },
+            'AI Housing Manager': { icon: '🏠', color: '#f59e0b', role: 'AI房产管理师' },
+            'AI Property Maintenance': { icon: '🔧', color: '#64748b', role: 'AI物业维护师' }
         };
 
         // 拖拽相关变量
