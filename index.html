@@ -4544,6 +4544,133 @@
                     { from: 'Frontend Developer', to: 'UX Writer', content: '文案实施确认' },
                     { from: 'UX Writer', to: 'CEO', content: '文案交付总结' }
                 ]
+            },
+            // Cycle 285 新增模板
+            {
+                id: 'scrum-sprint',
+                name: 'Scrum敏捷迭代',
+                icon: '🏃',
+                desc: '从Sprint计划到迭代交付的完整Scrum流程',
+                agents: ['Scrum Master', 'Product Owner', 'Developer', 'QA', 'Tech Lead'],
+                positions: [
+                    { role: 'Scrum Master', x: 400, y: 30 },
+                    { role: 'Product Owner', x: 200, y: 130 },
+                    { role: 'Developer', x: 600, y: 130 },
+                    { role: 'QA', x: 200, y: 250 },
+                    { role: 'Tech Lead', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Product Owner', to: 'Scrum Master', content: 'Sprint待办列表' },
+                    { from: 'Scrum Master', to: 'Developer', content: 'Sprint任务分配' },
+                    { from: 'Developer', to: 'QA', content: '开发完成提交测试' },
+                    { from: 'QA', to: 'Scrum Master', content: '测试报告' },
+                    { from: 'Scrum Master', to: 'Product Owner', content: 'Sprint回顾总结' }
+                ]
+            },
+            {
+                id: 'api-development',
+                name: 'API开发流程',
+                icon: '🔌',
+                desc: '从API设计到发布的完整开发流程',
+                agents: ['API Developer', 'Backend Developer', 'QA', 'Tech Lead', 'Technical Writer'],
+                positions: [
+                    { role: 'API Developer', x: 400, y: 30 },
+                    { role: 'Backend Developer', x: 200, y: 130 },
+                    { role: 'QA', x: 600, y: 130 },
+                    { role: 'Tech Lead', x: 200, y: 250 },
+                    { role: 'Technical Writer', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'API Developer', to: 'Backend Developer', content: 'API接口规范' },
+                    { from: 'Backend Developer', to: 'API Developer', content: 'API实现进度' },
+                    { from: 'API Developer', to: 'QA', content: 'API测试用例' },
+                    { from: 'QA', to: 'Tech Lead', content: 'API测试报告' },
+                    { from: 'Tech Lead', to: 'Technical Writer', content: 'API文档审核' }
+                ]
+            },
+            {
+                id: 'devsecops-pipeline',
+                name: '安全DevSecOps',
+                icon: '🔒',
+                desc: '从安全扫描到安全发布的完整流程',
+                agents: ['DevSecOps', 'Developer', 'Security', 'Release Manager', 'CTO'],
+                positions: [
+                    { role: 'DevSecOps', x: 400, y: 30 },
+                    { role: 'Developer', x: 200, y: 130 },
+                    { role: 'Security', x: 600, y: 130 },
+                    { role: 'Release Manager', x: 200, y: 250 },
+                    { role: 'CTO', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Developer', to: 'DevSecOps', content: '代码提交' },
+                    { from: 'DevSecOps', to: 'Security', content: '安全扫描报告' },
+                    { from: 'Security', to: 'DevSecOps', content: '安全漏洞列表' },
+                    { from: 'DevSecOps', to: 'Release Manager', content: '安全合规确认' },
+                    { from: 'Release Manager', to: 'CTO', content: '发布审批请求' }
+                ]
+            },
+            {
+                id: 'customer-insights-analysis',
+                name: '客户洞察分析',
+                icon: '💡',
+                desc: '从客户反馈到产品洞察的完整分析流程',
+                agents: ['Customer Insights', 'Product Manager', 'Data Analyst', 'Customer Support', 'CEO'],
+                positions: [
+                    { role: 'Customer Insights', x: 400, y: 30 },
+                    { role: 'Customer Support', x: 200, y: 130 },
+                    { role: 'Data Analyst', x: 600, y: 130 },
+                    { role: 'Product Manager', x: 200, y: 250 },
+                    { role: 'CEO', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Customer Support', to: 'Customer Insights', content: '客户反馈汇总' },
+                    { from: 'Data Analyst', to: 'Customer Insights', content: '客户数据分析' },
+                    { from: 'Customer Insights', to: 'Product Manager', content: '客户洞察报告' },
+                    { from: 'Product Manager', to: 'Customer Insights', content: '产品改进建议' },
+                    { from: 'Customer Insights', to: 'CEO', content: '战略洞察汇报' }
+                ]
+            },
+            {
+                id: 'strategic-partnership',
+                name: '战略合作流程',
+                icon: '🤝',
+                desc: '从合作伙伴筛选到战略达成的完整流程',
+                agents: ['Partnership Director', 'Business Development', 'Legal Counsel', 'CFO', 'CEO'],
+                positions: [
+                    { role: 'Partnership Director', x: 400, y: 30 },
+                    { role: 'Business Development', x: 200, y: 130 },
+                    { role: 'Legal Counsel', x: 600, y: 130 },
+                    { role: 'CFO', x: 200, y: 250 },
+                    { role: 'CEO', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Business Development', to: 'Partnership Director', content: '潜在合作伙伴列表' },
+                    { from: 'Partnership Director', to: 'Legal Counsel', content: '合作条款审核' },
+                    { from: 'Partnership Director', to: 'CFO', content: '合作财务分析' },
+                    { from: 'Legal Counsel', to: 'CEO', content: '法律风险评估' },
+                    { from: 'CFO', to: 'CEO', content: '投资回报分析' }
+                ]
+            },
+            {
+                id: 'innovation-lab',
+                name: '创新实验室',
+                icon: '💎',
+                desc: '从创新想法到产品原型的完整流程',
+                agents: ['Innovation Lead', 'Researcher', 'Designer', 'Developer', 'CEO'],
+                positions: [
+                    { role: 'Innovation Lead', x: 400, y: 30 },
+                    { role: 'Researcher', x: 200, y: 130 },
+                    { role: 'Designer', x: 600, y: 130 },
+                    { role: 'Developer', x: 200, y: 250 },
+                    { role: 'CEO', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Innovation Lead', to: 'Researcher', content: '研究方向确认' },
+                    { from: 'Researcher', to: 'Designer', content: '研究结果分享' },
+                    { from: 'Designer', to: 'Developer', content: '设计原型' },
+                    { from: 'Developer', to: 'Innovation Lead', content: '技术可行性评估' },
+                    { from: 'Innovation Lead', to: 'CEO', content: '创新项目汇报' }
+                ]
             }
         ];
 
@@ -4659,7 +4786,15 @@
             'Technical Product Manager': { icon: '💼', color: '#f43f5e', role: '技术产品经理' },
             'UX Writer': { icon: '✍️', color: '#06b6d4', role: '用户体验文案' },
             'Conversion Rate Optimizer': { icon: '📈', color: '#22c55e', role: '转化率优化师' },
-            'Knowledge Manager': { icon: '📚', color: '#a855f7', role: '知识管理经理' }
+            'Knowledge Manager': { icon: '📚', color: '#a855f7', role: '知识管理经理' },
+            // Cycle 285 新增角色
+            'Scrum Master': { icon: '🏃', color: '#f43f5e', role: 'Scrum主管' },
+            'Release Manager': { icon: '📦', color: '#14b8a6', role: '发布经理' },
+            'API Developer': { icon: '🔌', color: '#8b5cf6', role: 'API开发者' },
+            'DevSecOps': { icon: '🔒', color: '#dc2626', role: '安全运维工程师' },
+            'Customer Insights': { icon: '💡', color: '#f59e0b', role: '客户洞察分析师' },
+            'Partnership Director': { icon: '🤝', color: '#22c55e', role: '合作伙伴总监' },
+            'Innovation Lead': { icon: '💎', color: '#06b6d4', role: '创新负责人' }
         };
 
         // 拖拽相关变量
