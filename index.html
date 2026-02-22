@@ -9191,6 +9191,118 @@
                     { from: 'AI Fraud Detector', to: 'AI Compliance Officer', content: '风控报告' },
                     { from: 'AI Compliance Officer', to: 'AI Financial Advisor', content: '合规确认' }
                 ]
+            },
+            // Cycle 319 新增模板 - AI 智能仓储物流
+            {
+                id: 'ai-warehouse-logistics',
+                name: 'AI智能仓储物流',
+                icon: '📦',
+                desc: '从仓储管理到物流配送的AI驱动流程',
+                agents: ['AI Warehouse', 'AI Logistics', 'AI Robotics', 'AI Drone Engineer', 'AI Automation Specialist'],
+                positions: [
+                    { role: 'AI Warehouse', x: 400, y: 30 },
+                    { role: 'AI Robotics', x: 200, y: 150 },
+                    { role: 'AI Automation Specialist', x: 600, y: 150 },
+                    { role: 'AI Logistics', x: 200, y: 270 },
+                    { role: 'AI Drone Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Warehouse', to: 'AI Robotics', content: '仓储需求' },
+                    { from: 'AI Robotics', to: 'AI Automation Specialist', content: '机器人调度' },
+                    { from: 'AI Automation Specialist', to: 'AI Logistics', content: '自动化方案' },
+                    { from: 'AI Logistics', to: 'AI Drone Engineer', content: '配送需求' },
+                    { from: 'AI Drone Engineer', to: 'AI Warehouse', content: '配送完成' }
+                ]
+            },
+            // Cycle 319 新增模板 - AI 虚拟现实与元宇宙
+            {
+                id: 'ai-vr-metaverse',
+                name: 'AI虚拟现实与元宇宙',
+                icon: '🥽',
+                desc: '从VR/AR开发到元宇宙构建的完整流程',
+                agents: ['AI VR Developer', 'AI AR Developer', 'AI Metaverse', 'AI 3D Modeling', 'AI Spatial Computing'],
+                positions: [
+                    { role: 'AI Metaverse', x: 400, y: 30 },
+                    { role: 'AI VR Developer', x: 200, y: 150 },
+                    { role: 'AI AR Developer', x: 600, y: 150 },
+                    { role: 'AI 3D Modeling', x: 200, y: 270 },
+                    { role: 'AI Spatial Computing', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Metaverse', to: 'AI VR Developer', content: 'VR开发需求' },
+                    { from: 'AI Metaverse', to: 'AI AR Developer', content: 'AR开发需求' },
+                    { from: 'AI VR Developer', to: 'AI 3D Modeling', content: '3D资产需求' },
+                    { from: 'AI AR Developer', to: 'AI Spatial Computing', content: '空间计算需求' },
+                    { from: 'AI 3D Modeling', to: 'AI Metaverse', content: '3D资产提交' },
+                    { from: 'AI Spatial Computing', to: 'AI Metaverse', content: '空间方案提交' }
+                ]
+            },
+            // Cycle 319 新增模板 - AI 航天遥感
+            {
+                id: 'ai-space-remote-sensing',
+                name: 'AI航天遥感',
+                icon: '🛸',
+                desc: '从卫星设计到遥感分析的完整流程',
+                agents: ['AI Space Systems', 'AI Satellite', 'AI Navigation', 'AI Remote Sensing', 'AI Ocean Tech'],
+                positions: [
+                    { role: 'AI Space Systems', x: 400, y: 30 },
+                    { role: 'AI Satellite', x: 200, y: 150 },
+                    { role: 'AI Navigation', x: 600, y: 150 },
+                    { role: 'AI Remote Sensing', x: 200, y: 270 },
+                    { role: 'AI Ocean Tech', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Space Systems', to: 'AI Satellite', content: '卫星设计需求' },
+                    { from: 'AI Satellite', to: 'AI Navigation', content: '导航需求' },
+                    { from: 'AI Navigation', to: 'AI Remote Sensing', content: '遥感任务' },
+                    { from: 'AI Remote Sensing', to: 'AI Ocean Tech', content: '海洋数据分析' },
+                    { from: 'AI Ocean Tech', to: 'AI Space Systems', content: '分析报告' }
+                ]
+            },
+            // Cycle 319 新增模板 - AI 智能制造
+            {
+                id: 'ai-smart-manufacturing',
+                name: 'AI智能制造',
+                icon: '🏭',
+                desc: '从智能工厂到预测性维护的完整流程',
+                agents: ['AI Smart Factory', 'AI Industrial IoT', 'AI Digital Twin', 'AI Process Mining', 'AI Predictive Maintenance'],
+                positions: [
+                    { role: 'AI Smart Factory', x: 400, y: 30 },
+                    { role: 'AI Industrial IoT', x: 200, y: 150 },
+                    { role: 'AI Digital Twin', x: 600, y: 150 },
+                    { role: 'AI Process Mining', x: 200, y: 270 },
+                    { role: 'AI Predictive Maintenance', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Smart Factory', to: 'AI Industrial IoT', content: 'IoT部署需求' },
+                    { from: 'AI Industrial IoT', to: 'AI Digital Twin', content: '设备数据' },
+                    { from: 'AI Digital Twin', to: 'AI Process Mining', content: '数字孪生模型' },
+                    { from: 'AI Process Mining', to: 'AI Predictive Maintenance', content: '流程分析' },
+                    { from: 'AI Predictive Maintenance', to: 'AI Smart Factory', content: '维护计划' }
+                ]
+            },
+            // Cycle 319 新增模板 - AI 智慧城市
+            {
+                id: 'ai-smart-city',
+                name: 'AI智慧城市',
+                icon: '🌆',
+                desc: '从城市感知到智能决策的完整流程',
+                agents: ['AI Urban Planner', 'AI Traffic', 'AI Energy', 'AI Safety', 'AI Environment'],
+                positions: [
+                    { role: 'AI Urban Planner', x: 400, y: 30 },
+                    { role: 'AI Traffic', x: 200, y: 150 },
+                    { role: 'AI Energy', x: 600, y: 150 },
+                    { role: 'AI Safety', x: 200, y: 270 },
+                    { role: 'AI Environment', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Urban Planner', to: 'AI Traffic', content: '交通规划需求' },
+                    { from: 'AI Urban Planner', to: 'AI Energy', content: '能源规划需求' },
+                    { from: 'AI Traffic', to: 'AI Safety', content: '交通安全分析' },
+                    { from: 'AI Energy', to: 'AI Environment', content: '环境影响评估' },
+                    { from: 'AI Safety', to: 'AI Urban Planner', content: '安全报告' },
+                    { from: 'AI Environment', to: 'AI Urban Planner', content: '环境报告' }
+                ]
             }
         ];
 
@@ -9747,7 +9859,55 @@
             'AI Process Mining': { icon: '⛏️', color: '#06b6d4', role: 'AI流程挖掘工程师' },
             'AI Digital Twin': { icon: '👥', color: '#8b5cf6', role: 'AI数字孪生工程师' },
             'AI Industrial IoT': { icon: '🏗️', color: '#f97316', role: 'AI工业物联网工程师' },
-            'AI Predictive Maintenance': { icon: '🔧', color: '#14b8a6', role: 'AI预测性维护工程师' }
+            'AI Predictive Maintenance': { icon: '🔧', color: '#14b8a6', role: 'AI预测性维护工程师' },
+            // Cycle 319 新增角色 - AI 机器人与自动化
+            'AI Robotics': { icon: '🤖', color: '#3b82f6', role: 'AI机器人工程师' },
+            'AI Drone Engineer': { icon: '🚁', color: '#10b981', role: 'AI无人机工程师' },
+            'AI Automation Specialist': { icon: '⚙️', color: '#f59e0b', role: 'AI自动化专家' },
+            'AI Process Engineer': { icon: '🔄', color: '#8b5cf6', role: 'AI流程工程师' },
+            'AI Warehouse': { icon: '📦', color: '#ec4899', role: 'AI仓储工程师' },
+            'AI Logistics': { icon: '🚚', color: '#06b6d4', role: 'AI物流工程师' },
+            // Cycle 319 新增角色 - AI 虚拟与增强现实
+            'AI VR Developer': { icon: '🥽', color: '#f43f5e', role: 'AI虚拟现实开发者' },
+            'AI AR Developer': { icon: '👓', color: '#a855f7', role: 'AI增强现实开发者' },
+            'AI Metaverse': { icon: '🌌', color: '#14b8a6', role: 'AI元宇宙工程师' },
+            'AI 3D Modeling': { icon: '🎲', color: '#22c55e', role: 'AI 3D建模师' },
+            'AI Spatial Computing': { icon: '🌍', color: '#f97316', role: 'AI空间计算工程师' },
+            // Cycle 319 新增角色 - AI 海洋与空间技术
+            'AI Ocean Tech': { icon: '🌊', color: '#0ea5e9', role: 'AI海洋技术工程师' },
+            'AI Space Systems': { icon: '🛸', color: '#6366f1', role: 'AI航天系统工程师' },
+            'AI Satellite': { icon: '🛰️', color: '#84cc16', role: 'AI卫星工程师' },
+            'AI Navigation': { icon: '🧭', color: '#f59e0b', role: 'AI导航工程师' },
+            'AI Remote Sensing': { icon: '📡', color: '#ec4899', role: 'AI遥感工程师' },
+            // Cycle 320 新增角色 - AI 金融科技
+            'AI Trading': { icon: '📈', color: '#22c55e', role: 'AI交易工程师' },
+            'AI Risk Analysis': { icon: '⚠️', color: '#dc2626', role: 'AI风险分析师' },
+            'AI Portfolio Manager': { icon: '💼', color: '#8b5cf6', role: 'AI投资组合经理' },
+            'AI Fraud Detection': { icon: '🔍', color: '#f97316', role: 'AI欺诈检测工程师' },
+            'AI Insurance': { icon: '🛡️', color: '#06b6d4', role: 'AI保险工程师' },
+            'AI Credit Scoring': { icon: '💳', color: '#a855f7', role: 'AI信用评分工程师' },
+            'AI Wealth Advisor': { icon: '💰', color: '#f59e0b', role: 'AI财富顾问' },
+            'AI Banking': { icon: '🏦', color: '#14b8a6', role: 'AI银行工程师' },
+            // Cycle 320 新增角色 - AI 医疗健康
+            'AI Medical Imaging': { icon: '🏥', color: '#0ea5e9', role: 'AI医学影像工程师' },
+            'AI Drug Discovery': { icon: '💊', color: '#22c55e', role: 'AI药物发现工程师' },
+            'AI Clinical Trial': { icon: '🔬', color: '#8b5cf6', role: 'AI临床试验工程师' },
+            'AI Patient Monitor': { icon: '👨‍⚕️', color: '#ec4899', role: 'AI患者监护工程师' },
+            'AI Health Coach': { icon: '💪', color: '#f97316', role: 'AI健康教练' },
+            'AI Telemedicine': { icon: '📞', color: '#06b6d4', role: 'AI远程医疗工程师' },
+            // Cycle 320 新增角色 - AI 教育科技
+            'AI Tutoring': { icon: '📚', color: '#a855f7', role: 'AI辅导工程师' },
+            'AI Curriculum': { icon: '📖', color: '#14b8a6', role: 'AI课程设计师' },
+            'AI Proctoring': { icon: '👁️', color: '#f59e0b', role: 'AI监考系统工程师' },
+            'AI Grading': { icon: '✅', color: '#22c55e', role: 'AI评分工程师' },
+            'AI Learning Path': { icon: '🛤️', color: '#8b5cf6', role: 'AI学习路径规划师' },
+            'AI Language Tutor': { icon: '🌐', color: '#06b6d4', role: 'AI语言导师' },
+            // Cycle 319 新增角色 - AI 智慧城市
+            'AI Urban Planner': { icon: '🌆', color: '#3b82f6', role: 'AI城市规划师' },
+            'AI Traffic': { icon: '🚦', color: '#10b981', role: 'AI交通工程师' },
+            'AI Energy': { icon: '⚡', color: '#f59e0b', role: 'AI能源工程师' },
+            'AI Safety': { icon: '🛡️', color: '#dc2626', role: 'AI安全工程师' },
+            'AI Environment': { icon: '🌿', color: '#22c55e', role: 'AI环境工程师' }
         };
 
         // 拖拽相关变量
