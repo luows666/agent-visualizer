@@ -2381,13 +2381,112 @@
                     { from: 'Designer', to: 'Marketing', content: '品牌视觉完成' },
                     { from: 'Marketing', to: 'Sales', content: '品牌发布计划' }
                 ]
+            },
+            // 新增模板 - 使用新 Agent 角色
+            {
+                id: 'data-analysis',
+                name: '数据分析',
+                icon: '📊',
+                desc: '从数据收集到洞察报告的分析流程',
+                agents: ['CEO', 'Data Analyst', 'Researcher', 'Product Manager'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Data Analyst', x: 400, y: 130 },
+                    { role: 'Researcher', x: 200, y: 250 },
+                    { role: 'Product Manager', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Data Analyst', content: '需要分析用户行为数据' },
+                    { from: 'Data Analyst', to: 'Researcher', content: '数据清洗和预处理完成' },
+                    { from: 'Researcher', to: 'Product Manager', content: '数据分析报告：用户留存分析' },
+                    { from: 'Product Manager', to: 'CEO', content: '基于数据的产品优化建议' }
+                ]
+            },
+            {
+                id: 'infrastructure',
+                name: '基础设施建设',
+                icon: '🏗️',
+                desc: '从架构设计到部署上线的运维流程',
+                agents: ['CTO', 'DevOps', 'Developer', 'Security', 'QA'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'DevOps', x: 200, y: 130 },
+                    { role: 'Developer', x: 400, y: 130 },
+                    { role: 'Security', x: 600, y: 130 },
+                    { role: 'QA', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'DevOps', content: '设计基础设施架构' },
+                    { from: 'DevOps', to: 'Developer', content: 'CI/CD 流水线就绪' },
+                    { from: 'DevOps', to: 'Security', content: '安全合规检查' },
+                    { from: 'Developer', to: 'QA', content: '部署测试环境' },
+                    { from: 'Security', to: 'CTO', content: '安全审计报告' }
+                ]
+            },
+            {
+                id: 'incident-response',
+                name: '故障响应',
+                icon: '🚨',
+                desc: '从问题发现到服务恢复的应急流程',
+                agents: ['CTO', 'DevOps', 'Developer', 'Customer Support', 'CEO'],
+                positions: [
+                    { role: 'CTO', x: 400, y: 30 },
+                    { role: 'DevOps', x: 200, y: 130 },
+                    { role: 'Developer', x: 400, y: 130 },
+                    { role: 'Customer Support', x: 600, y: 130 },
+                    { role: 'CEO', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'CTO', to: 'DevOps', content: '生产环境出现故障，启动应急预案' },
+                    { from: 'DevOps', to: 'Developer', content: '定位问题：数据库连接池耗尽' },
+                    { from: 'Developer', to: 'DevOps', content: '修复代码已部署' },
+                    { from: 'DevOps', to: 'Customer Support', content: '服务已恢复，可以通知客户' },
+                    { from: 'Customer Support', to: 'CEO', content: '故障处理总结报告' }
+                ]
+            },
+            {
+                id: 'project-management',
+                name: '项目管理',
+                icon: '📌',
+                desc: '从项目启动到交付完成的管理流程',
+                agents: ['CEO', 'Project Manager', 'Developer', 'QA', 'Customer Support'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Project Manager', x: 400, y: 130 },
+                    { role: 'Developer', x: 200, y: 250 },
+                    { role: 'QA', x: 400, y: 250 },
+                    { role: 'Customer Support', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Project Manager', content: '启动新项目：客户管理系统' },
+                    { from: 'Project Manager', to: 'Developer', content: '分配开发任务和里程碑' },
+                    { from: 'Developer', to: 'QA', content: '功能开发完成，提交测试' },
+                    { from: 'QA', to: 'Project Manager', content: '测试报告：发现 3 个 bug' },
+                    { from: 'Project Manager', to: 'Customer Support', content: '项目交付，客户培训计划' }
+                ]
+            },
+            {
+                id: 'customer-success',
+                name: '客户成功',
+                icon: '🤝',
+                desc: '从客户 onboarding 到持续价值交付的流程',
+                agents: ['Sales', 'Customer Support', 'Product Manager', 'Operations', 'CEO'],
+                positions: [
+                    { role: 'Sales', x: 400, y: 30 },
+                    { role: 'Customer Support', x: 200, y: 130 },
+                    { role: 'Product Manager', x: 600, y: 130 },
+                    { role: 'Operations', x: 200, y: 250 },
+                    { role: 'CEO', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Sales', to: 'Customer Support', content: '新客户签约成功' },
+                    { from: 'Customer Support', to: 'Operations', content: '客户 onboarding 完成' },
+                    { from: 'Customer Support', to: 'Product Manager', content: '客户反馈：需要新功能' },
+                    { from: 'Operations', to: 'CEO', content: '客户满意度报告' },
+                    { from: 'Product Manager', to: 'CEO', content: '产品路线图规划' }
+                ]
             }
         ];
-
-        // 添加 Product Manager 角色
-        agentRoles['Product Manager'] = { icon: '📋', color: '#f97316', role: '产品经理' };
-        agentRoles['CFO'] = { icon: '💹', color: '#14b8a6', role: '财务总监' };
-        agentRoles['HR'] = { icon: '👤', color: '#a855f7', role: '人力资源' };
 
         // Agent 角色配置
         const agentRoles = {
@@ -2398,7 +2497,17 @@
             'Developer': { icon: '⚡', color: '#f59e0b', role: '开发者' },
             'QA': { icon: '🧪', color: '#06b6d4', role: '测试工程师' },
             'Marketing': { icon: '📢', color: '#ef4444', role: '市场总监' },
-            'Sales': { icon: '💰', color: '#84cc16', role: '销售总监' }
+            'Sales': { icon: '💰', color: '#84cc16', role: '销售总监' },
+            'Product Manager': { icon: '📋', color: '#f97316', role: '产品经理' },
+            'CFO': { icon: '💹', color: '#14b8a6', role: '财务总监' },
+            'HR': { icon: '👤', color: '#a855f7', role: '人力资源' },
+            // 新增角色
+            'Operations': { icon: '⚙️', color: '#64748b', role: '运营经理' },
+            'Data Analyst': { icon: '📊', color: '#0ea5e9', role: '数据分析师' },
+            'Customer Support': { icon: '🎧', color: '#22c55e', role: '客服代表' },
+            'Project Manager': { icon: '📌', color: '#e11d48', role: '项目经理' },
+            'DevOps': { icon: '🔧', color: '#0891b2', role: '运维工程师' },
+            'Security': { icon: '🛡️', color: '#dc2626', role: '安全工程师' }
         };
 
         // 拖拽相关变量
