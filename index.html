@@ -7617,6 +7617,159 @@
                     { from: 'ML Engineer', to: 'CTO', content: '优化方案' },
                     { from: 'CTO', to: 'AI Model Monitor', content: '监控策略调整' }
                 ]
+            },
+            // Cycle 306 新增模板
+            {
+                id: 'ai-model-selection',
+                name: 'AI模型选型',
+                icon: '🎯',
+                desc: '从业务需求到AI模型选型的完整流程',
+                agents: ['AI Model Selector', 'AI Strategy Consultant', 'CTO', 'CFO'],
+                positions: [
+                    { role: 'AI Model Selector', x: 400, y: 30 },
+                    { role: 'AI Strategy Consultant', x: 200, y: 150 },
+                    { role: 'CTO', x: 600, y: 150 },
+                    { role: 'CFO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Model Selector', to: 'AI Strategy Consultant', content: '业务需求分析' },
+                    { from: 'AI Strategy Consultant', to: 'CTO', content: '技术可行性评估' },
+                    { from: 'CTO', to: 'CFO', content: '成本效益分析' },
+                    { from: 'CFO', to: 'AI Model Selector', content: '预算审批' }
+                ]
+            },
+            {
+                id: 'ai-output-validation',
+                name: 'AI输出验证',
+                icon: '✅',
+                desc: '从AI输出到质量验证的完整流程',
+                agents: ['AI Output Validator', 'AI Testing Lead', 'QA', 'Product Manager'],
+                positions: [
+                    { role: 'AI Output Validator', x: 400, y: 30 },
+                    { role: 'AI Testing Lead', x: 200, y: 150 },
+                    { role: 'QA', x: 600, y: 150 },
+                    { role: 'Product Manager', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Output Validator', to: 'AI Testing Lead', content: '输出质量报告' },
+                    { from: 'AI Testing Lead', to: 'QA', content: '测试用例执行' },
+                    { from: 'QA', to: 'Product Manager', content: '质量评估报告' },
+                    { from: 'Product Manager', to: 'AI Output Validator', content: '验收标准确认' }
+                ]
+            },
+            {
+                id: 'ai-pipeline-architecture',
+                name: 'AI流程架构',
+                icon: '🏗️',
+                desc: '从AI流程设计到架构实现的完整流程',
+                agents: ['AI Pipeline Architect', 'AI Context Engineer', 'CTO', 'Developer'],
+                positions: [
+                    { role: 'AI Pipeline Architect', x: 400, y: 30 },
+                    { role: 'AI Context Engineer', x: 200, y: 150 },
+                    { role: 'CTO', x: 600, y: 150 },
+                    { role: 'Developer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Pipeline Architect', to: 'AI Context Engineer', content: '流程设计方案' },
+                    { from: 'AI Context Engineer', to: 'CTO', content: '技术架构评审' },
+                    { from: 'CTO', to: 'Developer', content: '开发任务分配' },
+                    { from: 'Developer', to: 'AI Pipeline Architect', content: '实现完成报告' }
+                ]
+            },
+            {
+                id: 'ai-training-pipeline',
+                name: 'AI训练流水线',
+                icon: '🔄',
+                desc: '从数据准备到模型训练的完整流程',
+                agents: ['AI Training Pipeline', 'AI Dataset Architect', 'ML Engineer', 'AI Feature Engineer'],
+                positions: [
+                    { role: 'AI Training Pipeline', x: 400, y: 30 },
+                    { role: 'AI Dataset Architect', x: 200, y: 150 },
+                    { role: 'ML Engineer', x: 600, y: 150 },
+                    { role: 'AI Feature Engineer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Training Pipeline', to: 'AI Dataset Architect', content: '数据集需求' },
+                    { from: 'AI Dataset Architect', to: 'AI Feature Engineer', content: '特征工程方案' },
+                    { from: 'AI Feature Engineer', to: 'ML Engineer', content: '特征数据准备' },
+                    { from: 'ML Engineer', to: 'AI Training Pipeline', content: '训练完成报告' }
+                ]
+            },
+            {
+                id: 'ai-inference-optimization',
+                name: 'AI推理优化',
+                icon: '⚡',
+                desc: '从模型推理到性能优化的完整流程',
+                agents: ['AI Inference Engineer', 'AI Performance Tuner', 'CTO', 'AI Cost Optimizer'],
+                positions: [
+                    { role: 'AI Inference Engineer', x: 400, y: 30 },
+                    { role: 'AI Performance Tuner', x: 200, y: 150 },
+                    { role: 'CTO', x: 600, y: 150 },
+                    { role: 'AI Cost Optimizer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Inference Engineer', to: 'AI Performance Tuner', content: '性能分析报告' },
+                    { from: 'AI Performance Tuner', to: 'CTO', content: '优化方案' },
+                    { from: 'CTO', to: 'AI Cost Optimizer', content: '成本评估' },
+                    { from: 'AI Cost Optimizer', to: 'AI Inference Engineer', content: '优化实施' }
+                ]
+            },
+            {
+                id: 'ai-deployment-release',
+                name: 'AI部署发布',
+                icon: '🚀',
+                desc: '从模型部署到发布的完整流程',
+                agents: ['AI Deployment Lead', 'AI Model Versioning', 'DevOps', 'QA'],
+                positions: [
+                    { role: 'AI Deployment Lead', x: 400, y: 30 },
+                    { role: 'AI Model Versioning', x: 200, y: 150 },
+                    { role: 'DevOps', x: 600, y: 150 },
+                    { role: 'QA', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Deployment Lead', to: 'AI Model Versioning', content: '版本管理' },
+                    { from: 'AI Model Versioning', to: 'DevOps', content: '部署配置' },
+                    { from: 'DevOps', to: 'QA', content: '部署完成' },
+                    { from: 'QA', to: 'AI Deployment Lead', content: '发布验收' }
+                ]
+            },
+            {
+                id: 'ai-governance-compliance',
+                name: 'AI治理合规',
+                icon: '⚖️',
+                desc: '从AI治理到合规审核的完整流程',
+                agents: ['AI Governance Lead', 'AI Bias Auditor', 'Legal Counsel', 'CEO'],
+                positions: [
+                    { role: 'AI Governance Lead', x: 400, y: 30 },
+                    { role: 'AI Bias Auditor', x: 200, y: 150 },
+                    { role: 'Legal Counsel', x: 600, y: 150 },
+                    { role: 'CEO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Governance Lead', to: 'AI Bias Auditor', content: '治理策略' },
+                    { from: 'AI Bias Auditor', to: 'Legal Counsel', content: '合规报告' },
+                    { from: 'Legal Counsel', to: 'CEO', content: '法律风险评估' },
+                    { from: 'CEO', to: 'AI Governance Lead', content: '治理决策' }
+                ]
+            },
+            {
+                id: 'ai-data-pipeline',
+                name: 'AI数据管道',
+                icon: '📊',
+                desc: '从数据采集到AI模型输入的完整流程',
+                agents: ['AI Dataset Architect', 'AI Feature Engineer', 'Data Engineer', 'ML Engineer'],
+                positions: [
+                    { role: 'AI Dataset Architect', x: 400, y: 30 },
+                    { role: 'AI Feature Engineer', x: 200, y: 150 },
+                    { role: 'Data Engineer', x: 600, y: 150 },
+                    { role: 'ML Engineer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Dataset Architect', to: 'Data Engineer', content: '数据需求' },
+                    { from: 'Data Engineer', to: 'AI Feature Engineer', content: '原始数据' },
+                    { from: 'AI Feature Engineer', to: 'ML Engineer', content: '特征数据' },
+                    { from: 'ML Engineer', to: 'AI Dataset Architect', content: '数据质量反馈' }
+                ]
             }
         ];
 
@@ -7924,7 +8077,22 @@
             'AI Edge Deployment': { icon: '📱', color: '#7c3aed', role: 'AI边缘部署工程师' },
             'AI Model Monitor': { icon: '📊', color: '#dc2626', role: 'AI模型监控师' },
             'AI Bias Auditor': { icon: '⚖️', color: '#0891b2', role: 'AI偏见审计员' },
-            'AI Legal Tech': { icon: '⚖️', color: '#22c55e', role: 'AI法律技术师' }
+            'AI Legal Tech': { icon: '⚖️', color: '#22c55e', role: 'AI法律技术师' },
+            // Cycle 306 新增角色
+            'AI Model Selector': { icon: '🎯', color: '#0ea5e9', role: 'AI模型选型师' },
+            'AI Output Validator': { icon: '✅', color: '#22c55e', role: 'AI输出验证师' },
+            'AI Context Engineer': { icon: '🔧', color: '#a855f7', role: 'AI上下文工程师' },
+            'AI Pipeline Architect': { icon: '🏗️', color: '#f97316', role: 'AI流程架构师' },
+            'AI Testing Lead': { icon: '🧪', color: '#06b6d4', role: 'AI测试负责人' },
+            'AI Dataset Architect': { icon: '🗂️', color: '#ec4899', role: 'AI数据集架构师' },
+            'AI Inference Engineer': { icon: '⚡', color: '#f59e0b', role: 'AI推理工程师' },
+            'AI Training Pipeline': { icon: '🔄', color: '#8b5cf6', role: 'AI训练流水线工程师' },
+            'AI Feature Engineer': { icon: '✨', color: '#14b8a6', role: 'AI特征工程师' },
+            'AI Model Versioning': { icon: '📦', color: '#f43f5e', role: 'AI模型版本管理' },
+            'AI Deployment Lead': { icon: '🚀', color: '#22c55e', role: 'AI部署负责人' },
+            'AI Performance Tuner': { icon: '🎛️', color: '#06b6d4', role: 'AI性能调优师' },
+            'AI Cost Optimizer': { icon: '💰', color: '#f59e0b', role: 'AI成本优化师' },
+            'AI Governance Lead': { icon: '⚖️', color: '#64748b', role: 'AI治理负责人' }
         };
 
         // 拖拽相关变量
