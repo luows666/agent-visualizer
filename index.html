@@ -10200,6 +10200,138 @@
                     { from: 'AI Logistics', to: 'AI Operations', content: '配送状态' },
                     { from: 'AI Operations', to: 'AI Supply Chain', content: '完成反馈' }
                 ]
+            },
+            // Cycle 327 新增模板 - AI 智能办公系统
+            {
+                id: 'ai-smart-office',
+                name: 'AI智能办公系统',
+                icon: '🏢',
+                description: '从文档处理到会议安排的完整办公流程',
+                agents: ['AI Office Automation', 'AI Document Processor', 'AI Meeting Assistant', 'AI Schedule Manager', 'AI Email Assistant'],
+                positions: [
+                    { role: 'AI Office Automation', x: 400, y: 30 },
+                    { role: 'AI Document Processor', x: 200, y: 150 },
+                    { role: 'AI Meeting Assistant', x: 600, y: 150 },
+                    { role: 'AI Schedule Manager', x: 200, y: 270 },
+                    { role: 'AI Email Assistant', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Office Automation', to: 'AI Document Processor', content: '文档处理任务' },
+                    { from: 'AI Document Processor', to: 'AI Meeting Assistant', content: '会议资料' },
+                    { from: 'AI Meeting Assistant', to: 'AI Schedule Manager', content: '会议安排' },
+                    { from: 'AI Schedule Manager', to: 'AI Email Assistant', content: '日程通知' },
+                    { from: 'AI Email Assistant', to: 'AI Office Automation', content: '处理完成' }
+                ]
+            },
+            // Cycle 327 新增模板 - AI 创意设计系统
+            {
+                id: 'ai-creative-design',
+                name: 'AI创意设计系统',
+                icon: '🎨',
+                description: '从品牌设计到产品界面的完整设计流程',
+                agents: ['AI Brand Identity', 'AI UI Designer', 'AI UX Designer', 'AI Illustration', 'AI Photo Editor'],
+                positions: [
+                    { role: 'AI Brand Identity', x: 400, y: 30 },
+                    { role: 'AI UI Designer', x: 200, y: 150 },
+                    { role: 'AI UX Designer', x: 600, y: 150 },
+                    { role: 'AI Illustration', x: 200, y: 270 },
+                    { role: 'AI Photo Editor', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Brand Identity', to: 'AI UI Designer', content: '品牌设计规范' },
+                    { from: 'AI UI Designer', to: 'AI UX Designer', content: '界面设计方案' },
+                    { from: 'AI UX Designer', to: 'AI Illustration', content: '体验优化建议' },
+                    { from: 'AI Illustration', to: 'AI Photo Editor', content: '素材处理' },
+                    { from: 'AI Photo Editor', to: 'AI Brand Identity', content: '设计完成' }
+                ]
+            },
+            // Cycle 327 新增模板 - AI 音视频制作系统
+            {
+                id: 'ai-media-production',
+                name: 'AI音视频制作系统',
+                icon: '🎬',
+                description: '从视频剪辑到音频后期的完整制作流程',
+                agents: ['AI Video Editor', 'AI Audio Editor', 'AI Music Composer', 'AI Voice Actor', 'AI Sound Designer'],
+                positions: [
+                    { role: 'AI Video Editor', x: 400, y: 30 },
+                    { role: 'AI Audio Editor', x: 200, y: 150 },
+                    { role: 'AI Music Composer', x: 600, y: 150 },
+                    { role: 'AI Voice Actor', x: 200, y: 270 },
+                    { role: 'AI Sound Designer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Video Editor', to: 'AI Audio Editor', content: '视频素材' },
+                    { from: 'AI Audio Editor', to: 'AI Music Composer', content: '音频素材' },
+                    { from: 'AI Music Composer', to: 'AI Voice Actor', content: '配乐需求' },
+                    { from: 'AI Voice Actor', to: 'AI Sound Designer', content: '配音素材' },
+                    { from: 'AI Sound Designer', to: 'AI Video Editor', content: '音效完成' }
+                ]
+            },
+            // Cycle 327 新增模板 - AI 游戏开发系统
+            {
+                id: 'ai-game-development',
+                name: 'AI游戏开发系统',
+                icon: '🎮',
+                description: '从游戏设计到测试上线的完整开发流程',
+                agents: ['AI Game Designer', 'AI Level Designer', 'AI Game Writer', 'AI NPC Designer', 'AI Game QA'],
+                positions: [
+                    { role: 'AI Game Designer', x: 400, y: 30 },
+                    { role: 'AI Level Designer', x: 200, y: 150 },
+                    { role: 'AI Game Writer', x: 600, y: 150 },
+                    { role: 'AI NPC Designer', x: 200, y: 270 },
+                    { role: 'AI Game QA', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Game Designer', to: 'AI Level Designer', content: '游戏设计文档' },
+                    { from: 'AI Level Designer', to: 'AI Game Writer', content: '关卡设计' },
+                    { from: 'AI Game Writer', to: 'AI NPC Designer', content: '剧情设定' },
+                    { from: 'AI NPC Designer', to: 'AI Game QA', content: 'NPC设计' },
+                    { from: 'AI Game QA', to: 'AI Game Designer', content: '测试反馈' }
+                ]
+            },
+            // Cycle 327 新增模板 - AI 健康医疗系统
+            {
+                id: 'ai-healthcare',
+                name: 'AI健康医疗系统',
+                icon: '🏥',
+                description: '从诊断到治疗的完整医疗流程',
+                agents: ['AI Doctor', 'AI Nurse', 'AI Medical Imager', 'AI Drug Designer', 'AI Health Coach'],
+                positions: [
+                    { role: 'AI Doctor', x: 400, y: 30 },
+                    { role: 'AI Nurse', x: 200, y: 150 },
+                    { role: 'AI Medical Imager', x: 600, y: 150 },
+                    { role: 'AI Drug Designer', x: 200, y: 270 },
+                    { role: 'AI Health Coach', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Doctor', to: 'AI Medical Imager', content: '影像检查需求' },
+                    { from: 'AI Medical Imager', to: 'AI Nurse', content: '检查结果' },
+                    { from: 'AI Nurse', to: 'AI Drug Designer', content: '用药方案' },
+                    { from: 'AI Drug Designer', to: 'AI Health Coach', content: '康复计划' },
+                    { from: 'AI Health Coach', to: 'AI Doctor', content: '健康反馈' }
+                ]
+            },
+            // Cycle 327 新增模板 - AI 智能财务系统
+            {
+                id: 'ai-finance',
+                name: 'AI智能财务系统',
+                icon: '💰',
+                description: '从预算编制到财务分析的完整财务流程',
+                agents: ['CFO', 'AI Finance Analyst', 'AI Accountant', 'AI Auditor', 'AI Risk Manager'],
+                positions: [
+                    { role: 'CFO', x: 400, y: 30 },
+                    { role: 'AI Finance Analyst', x: 200, y: 150 },
+                    { role: 'AI Accountant', x: 600, y: 150 },
+                    { role: 'AI Auditor', x: 200, y: 270 },
+                    { role: 'AI Risk Manager', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'CFO', to: 'AI Finance Analyst', content: '财务分析需求' },
+                    { from: 'AI Finance Analyst', to: 'AI Accountant', content: '分析数据' },
+                    { from: 'AI Accountant', to: 'AI Auditor', content: '账务处理' },
+                    { from: 'AI Auditor', to: 'AI Risk Manager', content: '审计报告' },
+                    { from: 'AI Risk Manager', to: 'CFO', content: '风险评估' }
+                ]
             }
         ];
 
@@ -10992,7 +11124,37 @@
             'AI Gemologist': { icon: '💍', color: '#a855f7', role: 'AI宝石学家' },
             'AI CAD Jewelry Engineer': { icon: '🎨', color: '#f43f5e', role: 'AI珠宝CAD工程师' },
             'AI Jewelry Manufacturing Engineer': { icon: '⚙️', color: '#64748b', role: 'AI珠宝制造工程师' },
-            'AI Precious Metals Engineer': { icon: '🥇', color: '#f59e0b', role: 'AI贵金属工程师' }
+            'AI Precious Metals Engineer': { icon: '🥇', color: '#f59e0b', role: 'AI贵金属工程师' },
+            // Cycle 327 新增角色 - AI 智能办公
+            'AI Office Automation': { icon: '🏢', color: '#6366f1', role: 'AI办公自动化工程师' },
+            'AI Document Processor': { icon: '📄', color: '#8b5cf6', role: 'AI文档处理工程师' },
+            'AI Meeting Assistant': { icon: '📹', color: '#ec4899', role: 'AI会议助手' },
+            'AI Schedule Manager': { icon: '📅', color: '#f97316', role: 'AI日程管理师' },
+            'AI Email Assistant': { icon: '📧', color: '#06b6d4', role: 'AI邮件助手' },
+            // Cycle 327 新增角色 - AI 创意设计
+            'AI Brand Identity': { icon: '🎯', color: '#14b8a6', role: 'AI品牌设计师' },
+            'AI UI Designer': { icon: '🖥️', color: '#3b82f6', role: 'AI界面设计师' },
+            'AI UX Designer': { icon: '💡', color: '#10b981', role: 'AI体验设计师' },
+            'AI Illustration': { icon: '🖼️', color: '#f59e0b', role: 'AI插画师' },
+            'AI Photo Editor': { icon: '📷', color: '#ec4899', role: 'AI修图师' },
+            // Cycle 327 新增角色 - AI 音视频
+            'AI Video Editor': { icon: '🎬', color: '#f43f5e', role: 'AI视频剪辑师' },
+            'AI Audio Editor': { icon: '🎵', color: '#a855f7', role: 'AI音频剪辑师' },
+            'AI Music Composer': { icon: '🎹', color: '#0ea5e9', role: 'AI作曲师' },
+            'AI Voice Actor': { icon: '🎤', color: '#22c55e', role: 'AI配音演员' },
+            'AI Sound Designer': { icon: '🔊', color: '#f97316', role: 'AI音效设计师' },
+            // Cycle 327 新增角色 - AI 游戏开发
+            'AI Game Designer': { icon: '🎮', color: '#84cc16', role: 'AI游戏设计师' },
+            'AI Level Designer': { icon: '🗺️', color: '#06b6d4', role: 'AI关卡设计师' },
+            'AI Game Writer': { icon: '📖', color: '#a855f7', role: 'AI游戏文案' },
+            'AI Game QA': { icon: '🎯', color: '#ec4899', role: 'AI游戏测试工程师' },
+            'AI NPC Designer': { icon: '🧙', color: '#f59e0b', role: 'AI游戏NPC设计师' },
+            // Cycle 327 新增角色 - AI 医疗健康
+            'AI Doctor': { icon: '👨‍⚕️', color: '#ef4444', role: 'AI医生' },
+            'AI Nurse': { icon: '👩‍⚕️', color: '#ec4899', role: 'AI护士' },
+            'AI Medical Imager': { icon: '🏥', color: '#3b82f6', role: 'AI医学影像师' },
+            'AI Drug Designer': { icon: '💊', color: '#8b5cf6', role: 'AI药物设计师' },
+            'AI Health Coach': { icon: '💪', color: '#22c55e', role: 'AI健康教练' }
         };
 
         // 拖拽相关变量
