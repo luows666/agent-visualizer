@@ -4911,6 +4911,139 @@
                     { from: 'Product Manager', to: 'User Researcher', content: '产品需求调整' },
                     { from: 'User Researcher', to: 'CEO', content: '用户研究报告' }
                 ]
+            },
+            // Cycle 288 新增模板
+            {
+                id: 'event-planning',
+                name: '活动策划流程',
+                icon: '🎪',
+                desc: '从活动策划到执行落地的完整流程',
+                agents: ['CEO', 'Event Planner', 'Marketing', 'Designer', 'Sales'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Event Planner', x: 400, y: 130 },
+                    { role: 'Marketing', x: 200, y: 250 },
+                    { role: 'Designer', x: 400, y: 250 },
+                    { role: 'Sales', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Event Planner', content: '确定活动目标和预算' },
+                    { from: 'Event Planner', to: 'Marketing', content: '活动策划方案' },
+                    { from: 'Event Planner', to: 'Designer', content: '活动视觉设计需求' },
+                    { from: 'Designer', to: 'Event Planner', content: '活动物料完成' },
+                    { from: 'Event Planner', to: 'Sales', content: '活动执行计划' },
+                    { from: 'Sales', to: 'CEO', content: '活动效果报告' }
+                ]
+            },
+            {
+                id: 'content-creation',
+                name: '内容创作流程',
+                icon: '✍️',
+                desc: '从内容策划到发布的完整内容营销流程',
+                agents: ['Marketing', 'Copywriter', 'Designer', 'SEO Analyst', 'Sales'],
+                positions: [
+                    { role: 'Marketing', x: 400, y: 30 },
+                    { role: 'Copywriter', x: 200, y: 130 },
+                    { role: 'Designer', x: 600, y: 130 },
+                    { role: 'SEO Analyst', x: 200, y: 250 },
+                    { role: 'Sales', x: 600, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'Marketing', to: 'Copywriter', content: '内容需求：产品软文' },
+                    { from: 'Copywriter', to: 'SEO Analyst', content: 'SEO 优化需求' },
+                    { from: 'SEO Analyst', to: 'Copywriter', content: '关键词建议' },
+                    { from: 'Copywriter', to: 'Designer', content: '配图需求' },
+                    { from: 'Designer', to: 'Marketing', content: '内容素材完成' },
+                    { from: 'Marketing', to: 'Sales', content: '内容发布计划' }
+                ]
+            },
+            {
+                id: 'video-production',
+                name: '视频制作流程',
+                icon: '🎬',
+                desc: '从视频策划到发布的完整视频营销流程',
+                agents: ['CEO', 'Video Producer', 'Copywriter', 'Designer', 'Marketing'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Video Producer', x: 400, y: 130 },
+                    { role: 'Copywriter', x: 200, y: 250 },
+                    { role: 'Designer', x: 600, y: 250 },
+                    { role: 'Marketing', x: 400, y: 350 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Video Producer', content: '确定视频目标和主题' },
+                    { from: 'Video Producer', to: 'Copywriter', content: '视频脚本需求' },
+                    { from: 'Copywriter', to: 'Video Producer', content: '视频脚本完成' },
+                    { from: 'Video Producer', to: 'Designer', content: '视频包装设计' },
+                    { from: 'Designer', to: 'Video Producer', content: '视频包装完成' },
+                    { from: 'Video Producer', to: 'Marketing', content: '成片交付' }
+                ]
+            },
+            {
+                id: 'influencer-marketing',
+                name: '网红营销流程',
+                icon: '🌟',
+                desc: '从网红筛选到合作执行的完整营销流程',
+                agents: ['CEO', 'Influencer Manager', 'Marketing', 'Sales', 'Customer Success Manager'],
+                positions: [
+                    { role: 'CEO', x: 400, y: 30 },
+                    { role: 'Influencer Manager', x: 400, y: 130 },
+                    { role: 'Marketing', x: 200, y: 250 },
+                    { role: 'Sales', x: 600, y: 250 },
+                    { role: 'Customer Success Manager', x: 400, y: 350 }
+                ],
+                messageFlows: [
+                    { from: 'CEO', to: 'Influencer Manager', content: '确定网红营销预算和目标' },
+                    { from: 'Influencer Manager', to: 'Marketing', content: '网红筛选报告' },
+                    { from: 'Influencer Manager', to: 'Sales', content: '合作方案报价' },
+                    { from: 'Sales', to: 'Influencer Manager', content: '合作条款确认' },
+                    { from: 'Influencer Manager', to: 'Customer Success Manager', content: '合作执行' },
+                    { from: 'Customer Success Manager', to: 'CEO', content: '营销效果报告' }
+                ]
+            },
+            {
+                id: 'email-campaign',
+                name: '邮件营销流程',
+                icon: '📧',
+                desc: '从邮件策划到效果分析的完整邮件营销流程',
+                agents: ['Marketing', 'Email Marketing', 'Copywriter', 'SEO Analyst', 'Sales'],
+                positions: [
+                    { role: 'Marketing', x: 400, y: 30 },
+                    { role: 'Email Marketing', x: 400, y: 130 },
+                    { role: 'Copywriter', x: 200, y: 250 },
+                    { role: 'SEO Analyst', x: 600, y: 250 },
+                    { role: 'Sales', x: 400, y: 350 }
+                ],
+                messageFlows: [
+                    { from: 'Marketing', to: 'Email Marketing', content: '邮件营销目标确定' },
+                    { from: 'Email Marketing', to: 'Copywriter', content: '邮件内容需求' },
+                    { from: 'Copywriter', to: 'Email Marketing', content: '邮件文案完成' },
+                    { from: 'Email Marketing', to: 'SEO Analyst', content: '邮件 SEO 优化' },
+                    { from: 'SEO Analyst', to: 'Email Marketing', content: '优化建议' },
+                    { from: 'Email Marketing', to: 'Sales', content: '邮件效果分析报告' }
+                ]
+            },
+            {
+                id: 'technical-support',
+                name: '技术支持流程',
+                icon: '🎧',
+                desc: '从客户问题到解决的技术支持流程',
+                agents: ['Customer Support', 'Technical Support', 'Developer', 'QA', 'Customer Success Manager'],
+                positions: [
+                    { role: 'Customer Support', x: 200, y: 100 },
+                    { role: 'Technical Support', x: 400, y: 100 },
+                    { role: 'Developer', x: 600, y: 100 },
+                    { role: 'QA', x: 600, y: 220 },
+                    { role: 'Customer Success Manager', x: 400, y: 320 }
+                ],
+                messageFlows: [
+                    { from: 'Customer Support', to: 'Technical Support', content: '客户问题转接：API 集成问题' },
+                    { from: 'Technical Support', to: 'Developer', content: '技术问题确认' },
+                    { from: 'Developer', to: 'Technical Support', content: '问题解决方案' },
+                    { from: 'Technical Support', to: 'QA', content: '解决方案测试' },
+                    { from: 'QA', to: 'Technical Support', content: '测试通过' },
+                    { from: 'Technical Support', to: 'Customer Success Manager', content: '问题解决反馈' }
+                ]
             }
         ];
 
@@ -5051,7 +5184,17 @@
             'Compliance Officer': { icon: '📋', color: '#64748b', role: '合规官' },
             'BI Manager': { icon: '📊', color: '#3b82f6', role: 'BI经理' },
             'Product Analytics': { icon: '📈', color: '#ec4899', role: '产品分析师' },
-            'User Researcher': { icon: '🔍', color: '#14b8a6', role: '用户研究员' }
+            'User Researcher': { icon: '🔍', color: '#14b8a6', role: '用户研究员' },
+            // Cycle 288 新增角色
+            'Event Planner': { icon: '🎪', color: '#f97316', role: '活动策划师' },
+            'Copywriter': { icon: '✍️', color: '#a855f7', role: '文案策划' },
+            'Video Producer': { icon: '🎬', color: '#ec4899', role: '视频制作人' },
+            'Influencer Manager': { icon: '🌟', color: '#f59e0b', role: '网红运营经理' },
+            'Email Marketing': { icon: '📧', color: '#06b6d4', role: '邮件营销专员' },
+            'SEO Analyst': { icon: '🔎', color: '#22c55e', role: 'SEO 分析师' },
+            'UX Writer': { icon: '📝', color: '#8b5cf6', role: '内容运营' },
+            'Customer Success Manager': { icon: '🤝', color: '#14b8a6', role: '客户成功经理' },
+            'Technical Support': { icon: '🎧', color: '#0ea5e9', role: '技术支持工程师' }
         };
 
         // 拖拽相关变量
