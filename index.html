@@ -11102,6 +11102,138 @@
                     { from: 'AI Event Planner', to: 'AI Tour Guide', content: '活动安排' },
                     { from: 'AI Tour Guide', to: 'AI Religious Scholar', content: '反馈总结' }
                 ]
+            },
+            // Cycle 334 新增模板 - AI 智能新闻媒体系统
+            {
+                id: 'ai-media-news',
+                name: 'AI智能新闻媒体系统',
+                icon: '📰',
+                description: '从新闻采集到发布的完整新闻媒体流程',
+                agents: ['AI News Reporter', 'AI Editor', 'AI Photojournalist', 'AI Broadcast Anchor', 'AI Media Analyst'],
+                positions: [
+                    { role: 'AI News Reporter', x: 400, y: 30 },
+                    { role: 'AI Editor', x: 200, y: 150 },
+                    { role: 'AI Photojournalist', x: 600, y: 150 },
+                    { role: 'AI Broadcast Anchor', x: 200, y: 270 },
+                    { role: 'AI Media Analyst', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI News Reporter', to: 'AI Editor', content: '新闻稿' },
+                    { from: 'AI Editor', to: 'AI Photojournalist', content: '编辑意见' },
+                    { from: 'AI Photojournalist', to: 'AI Broadcast Anchor', content: '素材提供' },
+                    { from: 'AI Broadcast Anchor', to: 'AI Media Analyst', content: '播出反馈' },
+                    { from: 'AI Media Analyst', to: 'AI News Reporter', content: '选题建议' }
+                ]
+            },
+            // Cycle 334 新增模板 - AI 智能影视制作系统
+            {
+                id: 'ai-film-production',
+                name: 'AI智能影视制作系统',
+                icon: '🎥',
+                description: '从剧本创作到后期制作的完整影视流程',
+                agents: ['AI Screenwriter', 'AI Director', 'AI Cinematographer', 'AI Visual Effects', 'AI Film Editor'],
+                positions: [
+                    { role: 'AI Screenwriter', x: 400, y: 30 },
+                    { role: 'AI Director', x: 200, y: 150 },
+                    { role: 'AI Cinematographer', x: 600, y: 150 },
+                    { role: 'AI Visual Effects', x: 200, y: 270 },
+                    { role: 'AI Film Editor', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Screenwriter', to: 'AI Director', content: '剧本' },
+                    { from: 'AI Director', to: 'AI Cinematographer', content: '拍摄计划' },
+                    { from: 'AI Cinematographer', to: 'AI Visual Effects', content: '拍摄素材' },
+                    { from: 'AI Visual Effects', to: 'AI Film Editor', content: '特效素材' },
+                    { from: 'AI Film Editor', to: 'AI Screenwriter', content: '成片反馈' }
+                ]
+            },
+            // Cycle 334 新增模板 - AI 智能音乐制作系统
+            {
+                id: 'ai-music-production',
+                name: 'AI智能音乐制作系统',
+                icon: '🎵',
+                description: '从作曲编曲到混音母带的完整音乐制作流程',
+                agents: ['AI Composer', 'AI Lyricist', 'AI Arranger', 'AI Sound Engineer', 'AI Mastering Engineer'],
+                positions: [
+                    { role: 'AI Composer', x: 400, y: 30 },
+                    { role: 'AI Lyricist', x: 200, y: 150 },
+                    { role: 'AI Arranger', x: 600, y: 150 },
+                    { role: 'AI Sound Engineer', x: 200, y: 270 },
+                    { role: 'AI Mastering Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Composer', to: 'AI Lyricist', content: '曲谱' },
+                    { from: 'AI Lyricist', to: 'AI Arranger', content: '歌词' },
+                    { from: 'AI Arranger', to: 'AI Sound Engineer', content: '编曲' },
+                    { from: 'AI Sound Engineer', to: 'AI Mastering Engineer', content: '混音文件' },
+                    { from: 'AI Mastering Engineer', to: 'AI Composer', content: '母带反馈' }
+                ]
+            },
+            // Cycle 334 新增模板 - AI 智能游戏开发系统
+            {
+                id: 'ai-game-dev',
+                name: 'AI智能游戏开发系统',
+                icon: '🎮',
+                description: '从游戏设计到开发上线的完整游戏开发流程',
+                agents: ['AI Game Designer', 'AI Game Writer', 'AI Game Artist', 'AI Game Programmer', 'AI Game QA'],
+                positions: [
+                    { role: 'AI Game Designer', x: 400, y: 30 },
+                    { role: 'AI Game Writer', x: 200, y: 150 },
+                    { role: 'AI Game Artist', x: 600, y: 150 },
+                    { role: 'AI Game Programmer', x: 200, y: 270 },
+                    { role: 'AI Game QA', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Game Designer', to: 'AI Game Writer', content: '游戏设计文档' },
+                    { from: 'AI Game Writer', to: 'AI Game Artist', content: '世界观设定' },
+                    { from: 'AI Game Artist', to: 'AI Game Programmer', content: '美术资源' },
+                    { from: 'AI Game Programmer', to: 'AI Game QA', content: '测试版本' },
+                    { from: 'AI Game QA', to: 'AI Game Designer', content: '测试报告' }
+                ]
+            },
+            // Cycle 334 新增模板 - AI 智能法律服务系统
+            {
+                id: 'ai-legal-service',
+                name: 'AI智能法律服务系统',
+                icon: '⚖️',
+                description: '从法律咨询到诉讼代理的完整法律服务流程',
+                agents: ['AI Legal Consultant', 'AI Contract Drafter', 'AI Litigation Attorney', 'AI Paralegal', 'AI Legal Analyst'],
+                positions: [
+                    { role: 'AI Legal Consultant', x: 400, y: 30 },
+                    { role: 'AI Contract Drafter', x: 200, y: 150 },
+                    { role: 'AI Litigation Attorney', x: 600, y: 150 },
+                    { role: 'AI Paralegal', x: 200, y: 270 },
+                    { role: 'AI Legal Analyst', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Legal Consultant', to: 'AI Contract Drafter', content: '咨询需求' },
+                    { from: 'AI Contract Drafter', to: 'AI Litigation Attorney', content: '合同草案' },
+                    { from: 'AI Litigation Attorney', to: 'AI Paralegal', content: '诉讼材料' },
+                    { from: 'AI Paralegal', to: 'AI Legal Analyst', content: '案件资料' },
+                    { from: 'AI Legal Analyst', to: 'AI Legal Consultant', content: '分析报告' }
+                ]
+            },
+            // Cycle 334 新增模板 - AI 智能人力资源系统
+            {
+                id: 'ai-hr-system',
+                name: 'AI智能人力资源系统',
+                icon: '👥',
+                description: '从招聘到员工发展的完整人力资源流程',
+                agents: ['AI Recruiter', 'AI HR Analyst', 'AI Training Coordinator', 'AI Performance Manager', 'AI Employee Relations'],
+                positions: [
+                    { role: 'AI Recruiter', x: 400, y: 30 },
+                    { role: 'AI HR Analyst', x: 200, y: 150 },
+                    { role: 'AI Training Coordinator', x: 600, y: 150 },
+                    { role: 'AI Performance Manager', x: 200, y: 270 },
+                    { role: 'AI Employee Relations', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Recruiter', to: 'AI HR Analyst', content: '招聘需求' },
+                    { from: 'AI HR Analyst', to: 'AI Training Coordinator', content: '人力分析' },
+                    { from: 'AI Training Coordinator', to: 'AI Performance Manager', content: '培训计划' },
+                    { from: 'AI Performance Manager', to: 'AI Employee Relations', content: '绩效数据' },
+                    { from: 'AI Employee Relations', to: 'AI Recruiter', content: '员工反馈' }
+                ]
             }
         ];
 
@@ -12140,7 +12272,42 @@
             'AI Cultural Heritage': { icon: '🏛️', color: '#f59e0b', role: 'AI文化遗产保护' },
             'AI Museum Curator': { icon: '🎨', color: '#ec4899', role: 'AI博物馆策展人' },
             'AI Event Planner': { icon: '🎪', color: '#f97316', role: 'AI活动策划师' },
-            'AI Tour Guide': { icon: '🎤', color: '#06b6d4', role: 'AI导游' }
+            'AI Tour Guide': { icon: '🎤', color: '#06b6d4', role: 'AI导游' },
+            // Cycle 334 新增角色 - AI 智能新闻媒体
+            'AI News Reporter': { icon: '📰', color: '#ef4444', role: 'AI新闻记者' },
+            'AI Editor': { icon: '✏️', color: '#3b82f6', role: 'AI编辑' },
+            'AI Photojournalist': { icon: '📷', color: '#8b5cf6', role: 'AI摄影记者' },
+            'AI Broadcast Anchor': { icon: '🎙️', color: '#06b6d4', role: 'AI主播' },
+            'AI Media Analyst': { icon: '📊', color: '#f59e0b', role: 'AI媒体分析师' },
+            // Cycle 334 新增角色 - AI 智能影视制作
+            'AI Screenwriter': { icon: '✍️', color: '#ec4899', role: 'AI编剧' },
+            'AI Director': { icon: '🎬', color: '#dc2626', role: 'AI导演' },
+            'AI Cinematographer': { icon: '🎥', color: '#f97316', role: 'AI摄影指导' },
+            'AI Visual Effects': { icon: '✨', color: '#8b5cf6', role: 'AI特效师' },
+            'AI Film Editor': { icon: '🎞️', color: '#06b6d4', role: 'AI剪辑师' },
+            // Cycle 334 新增角色 - AI 智能音乐制作
+            'AI Composer': { icon: '🎵', color: '#3b82f6', role: 'AI作曲家' },
+            'AI Lyricist': { icon: '📝', color: '#ec4899', role: 'AI作词人' },
+            'AI Arranger': { icon: '🎹', color: '#f59e0b', role: 'AI编曲师' },
+            'AI Sound Engineer': { icon: '🔊', color: '#06b6d4', role: 'AI音响工程师' },
+            'AI Mastering Engineer': { icon: '🎚️', color: '#8b5cf6', role: 'AI母带工程师' },
+            // Cycle 334 新增角色 - AI 智能游戏开发
+            'AI Game Designer': { icon: '🎮', color: '#22c55e', role: 'AI游戏设计师' },
+            'AI Game Writer': { icon: '📖', color: '#ec4899', role: 'AI游戏文案' },
+            'AI Game Artist': { icon: '🖼️', color: '#f59e0b', role: 'AI游戏美术' },
+            'AI Game Programmer': { icon: '💻', color: '#3b82f6', role: 'AI游戏程序员' },
+            'AI Game QA': { icon: '🧪', color: '#06b6d4', role: 'AI游戏测试' },
+            // Cycle 334 新增角色 - AI 智能法律服务
+            'AI Legal Consultant': { icon: '⚖️', color: '#8b5cf6', role: 'AI法律顾问' },
+            'AI Contract Drafter': { icon: '📜', color: '#3b82f6', role: 'AI合同起草师' },
+            'AI Litigation Attorney': { icon: '⚔️', color: '#dc2626', role: 'AI诉讼律师' },
+            'AI Paralegal': { icon: '📋', color: '#f59e0b', role: 'AI律师助理' },
+            'AI Legal Analyst': { icon: '🔍', color: '#06b6d4', role: 'AI法律分析师' },
+            // Cycle 334 新增角色 - AI 智能人力资源
+            'AI HR Analyst': { icon: '📈', color: '#3b82f6', role: 'AI人力资源分析师' },
+            'AI Training Coordinator': { icon: '🎓', color: '#ec4899', role: 'AI培训协调员' },
+            'AI Performance Manager': { icon: '📊', color: '#f59e0b', role: 'AI绩效经理' },
+            'AI Employee Relations': { icon: '🤝', color: '#22c55e', role: 'AI员工关系专员' }
         };
 
         // 拖拽相关变量
