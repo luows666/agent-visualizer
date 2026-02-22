@@ -2485,6 +2485,127 @@
                     { from: 'Operations', to: 'CEO', content: '客户满意度报告' },
                     { from: 'Product Manager', to: 'CEO', content: '产品路线图规划' }
                 ]
+            },
+            {
+                id: 'ab-testing',
+                name: 'A/B 测试',
+                icon: '🧪',
+                desc: '从实验设计到结果分析的测试流程',
+                agents: ['Product Manager', 'Data Analyst', 'Developer', 'Designer'],
+                positions: [
+                    { role: 'Product Manager', x: 400, y: 30 },
+                    { role: 'Data Analyst', x: 200, y: 150 },
+                    { role: 'Developer', x: 400, y: 150 },
+                    { role: 'Designer', x: 600, y: 150 }
+                ],
+                messageFlows: [
+                    { from: 'Product Manager', to: 'Data Analyst', content: '确定实验假设和指标' },
+                    { from: 'Data Analyst', to: 'Designer', content: '设计实验方案' },
+                    { from: 'Designer', to: 'Developer', content: 'UI/UX 设计稿' },
+                    { from: 'Developer', to: 'Data Analyst', content: 'A/B 测试实施完成' },
+                    { from: 'Data Analyst', to: 'Product Manager', content: '实验结果分析报告' }
+                ]
+            },
+            {
+                id: 'data-annotation',
+                name: '数据标注',
+                icon: '🏷️',
+                desc: '从数据收集到标注质量管理的流程',
+                agents: ['Data Analyst', 'Developer', 'QA', 'Operations'],
+                positions: [
+                    { role: 'Data Analyst', x: 400, y: 30 },
+                    { role: 'Developer', x: 200, y: 150 },
+                    { role: 'QA', x: 600, y: 150 },
+                    { role: 'Operations', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Data Analyst', to: 'Developer', content: '标注工具需求' },
+                    { from: 'Developer', to: 'Data Analyst', content: '标注工具开发完成' },
+                    { from: 'Data Analyst', to: 'Operations', content: '标注任务分配' },
+                    { from: 'Operations', to: 'QA', content: '标注数据提交审核' },
+                    { from: 'QA', to: 'Data Analyst', content: '标注质量报告' }
+                ]
+            },
+            {
+                id: 'quality-assurance',
+                name: '质量保证',
+                icon: '✅',
+                desc: '从测试计划到质量度量的完整流程',
+                agents: ['QA Lead', 'QA', 'Developer', 'CTO'],
+                positions: [
+                    { role: 'QA Lead', x: 400, y: 30 },
+                    { role: 'QA', x: 200, y: 150 },
+                    { role: 'Developer', x: 600, y: 150 },
+                    { role: 'CTO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'QA Lead', to: 'QA', content: '制定测试计划' },
+                    { from: 'QA Lead', to: 'Developer', content: '测试环境需求' },
+                    { from: 'Developer', to: 'QA', content: '代码提交测试' },
+                    { from: 'QA', to: 'QA Lead', content: '测试报告' },
+                    { from: 'QA Lead', to: 'CTO', content: '质量度量报告' }
+                ]
+            },
+            {
+                id: 'technical-docs',
+                name: '技术文档',
+                icon: '📚',
+                desc: '从文档规划到发布的写作流程',
+                agents: ['Technical Writer', 'Developer', 'Product Manager', 'QA'],
+                positions: [
+                    { role: 'Technical Writer', x: 400, y: 30 },
+                    { role: 'Developer', x: 200, y: 150 },
+                    { role: 'Product Manager', x: 600, y: 150 },
+                    { role: 'QA', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Technical Writer', to: 'Product Manager', content: '确定文档需求' },
+                    { from: 'Product Manager', to: 'Technical Writer', content: '产品功能说明' },
+                    { from: 'Technical Writer', to: 'Developer', content: 'API 文档需求' },
+                    { from: 'Developer', to: 'Technical Writer', content: '技术细节提供' },
+                    { from: 'Technical Writer', to: 'QA', content: '文档审阅请求' },
+                    { from: 'QA', to: 'Technical Writer', content: '文档审核反馈' }
+                ]
+            },
+            {
+                id: 'ux-research',
+                name: '用户体验研究',
+                icon: '🔍',
+                desc: '从研究计划到洞察报告的 UX 流程',
+                agents: ['UX Researcher', 'Designer', 'Product Manager', 'CEO'],
+                positions: [
+                    { role: 'UX Researcher', x: 400, y: 30 },
+                    { role: 'Designer', x: 200, y: 150 },
+                    { role: 'Product Manager', x: 600, y: 150 },
+                    { role: 'CEO', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'UX Researcher', to: 'Product Manager', content: '确定研究目标' },
+                    { from: 'Product Manager', to: 'UX Researcher', content: '用户问题描述' },
+                    { from: 'UX Researcher', to: 'Designer', content: '用户研究方法建议' },
+                    { from: 'UX Researcher', to: 'CEO', content: '用户体验洞察报告' },
+                    { from: 'Designer', to: 'Product Manager', content: '设计方案建议' }
+                ]
+            },
+            {
+                id: 'legal-review',
+                name: '法务审核',
+                icon: '⚖️',
+                desc: '从合同审核到合规检查的法务流程',
+                agents: ['Legal Counsel', 'CEO', 'Sales', 'Operations'],
+                positions: [
+                    { role: 'Legal Counsel', x: 400, y: 30 },
+                    { role: 'CEO', x: 200, y: 150 },
+                    { role: 'Sales', x: 600, y: 150 },
+                    { role: 'Operations', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Sales', to: 'Legal Counsel', content: '新合同审核请求' },
+                    { from: 'Legal Counsel', to: 'CEO', content: '合同风险评估' },
+                    { from: 'CEO', to: 'Legal Counsel', content: '审批意见' },
+                    { from: 'Legal Counsel', to: 'Operations', content: '合规检查清单' },
+                    { from: 'Operations', to: 'Legal Counsel', content: '合规报告提交' }
+                ]
             }
         ];
 
@@ -2507,7 +2628,12 @@
             'Customer Support': { icon: '🎧', color: '#22c55e', role: '客服代表' },
             'Project Manager': { icon: '📌', color: '#e11d48', role: '项目经理' },
             'DevOps': { icon: '🔧', color: '#0891b2', role: '运维工程师' },
-            'Security': { icon: '🛡️', color: '#dc2626', role: '安全工程师' }
+            'Security': { icon: '🛡️', color: '#dc2626', role: '安全工程师' },
+            // 新增角色
+            'Legal Counsel': { icon: '⚖️', color: '#7c3aed', role: '法务顾问' },
+            'QA Lead': { icon: '🎯', color: '#0d9488', role: 'QA负责人' },
+            'Technical Writer': { icon: '📝', color: '#6366f1', role: '技术文档工程师' },
+            'UX Researcher': { icon: '🔬', color: '#db2777', role: '用户体验研究员' }
         };
 
         // 拖拽相关变量
