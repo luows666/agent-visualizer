@@ -11752,6 +11752,132 @@
                     { from: 'AI Irrigation Specialist', to: 'AI Pest Control', content: '灌溉方案' },
                     { from: 'AI Pest Control', to: 'AI Harvest Planner', content: '病虫害防治方案' }
                 ]
+            },
+            // Cycle 340 新增模板 - AI智能餐饮管理系统
+            {
+                id: 'ai-restaurant',
+                name: 'AI智能餐饮管理系统',
+                icon: '🍽️',
+                description: '从餐厅运营到菜品管理的完整餐饮流程',
+                agents: ['AI Restaurant Manager', 'AI Head Chef', 'AI Menu Designer', 'AI Kitchen Supervisor', 'AI Food Critic'],
+                positions: [
+                    { role: 'AI Restaurant Manager', x: 400, y: 50 },
+                    { role: 'AI Head Chef', x: 200, y: 180 },
+                    { role: 'AI Menu Designer', x: 400, y: 180 },
+                    { role: 'AI Kitchen Supervisor', x: 600, y: 180 },
+                    { role: 'AI Food Critic', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Restaurant Manager', to: 'AI Head Chef', content: '餐厅运营需求' },
+                    { from: 'AI Head Chef', to: 'AI Menu Designer', content: '菜品研发需求' },
+                    { from: 'AI Menu Designer', to: 'AI Kitchen Supervisor', content: '菜单设计方案' },
+                    { from: 'AI Kitchen Supervisor', to: 'AI Food Critic', content: '菜品制作完成' }
+                ]
+            },
+            // Cycle 340 新增模板 - AI智能美容美发系统
+            {
+                id: 'ai-beauty',
+                name: 'AI智能美容美发系统',
+                icon: '💇',
+                description: '从形象设计到美容服务的完整美发美容流程',
+                agents: ['AI Hair Stylist', 'AI Beautician', 'AI Makeup Artist', 'AI Nail Artist', 'AI Image Consultant'],
+                positions: [
+                    { role: 'AI Image Consultant', x: 400, y: 50 },
+                    { role: 'AI Hair Stylist', x: 200, y: 180 },
+                    { role: 'AI Beautician', x: 400, y: 180 },
+                    { role: 'AI Makeup Artist', x: 600, y: 180 },
+                    { role: 'AI Nail Artist', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Image Consultant', to: 'AI Hair Stylist', content: '形象设计方案' },
+                    { from: 'AI Hair Stylist', to: 'AI Beautician', content: '美发完成' },
+                    { from: 'AI Beautician', to: 'AI Makeup Artist', content: '美容服务' },
+                    { from: 'AI Makeup Artist', to: 'AI Nail Artist', content: '化妆完成' }
+                ]
+            },
+            // Cycle 340 新增模板 - AI智能摄影摄像系统
+            {
+                id: 'ai-photography',
+                name: 'AI智能摄影摄像系统',
+                icon: '📷',
+                description: '从拍摄到后期制作的完整摄影摄像流程',
+                agents: ['AI Photographer', 'AI Videographer', 'AI Photo Editor', 'AI Video Editor', 'AI Colorist'],
+                positions: [
+                    { role: 'AI Photographer', x: 200, y: 50 },
+                    { role: 'AI Videographer', x: 400, y: 50 },
+                    { role: 'AI Photo Editor', x: 600, y: 50 },
+                    { role: 'AI Video Editor', x: 300, y: 200 },
+                    { role: 'AI Colorist', x: 500, y: 200 }
+                ],
+                messageFlows: [
+                    { from: 'AI Photographer', to: 'AI Photo Editor', content: '拍摄完成' },
+                    { from: 'AI Videographer', to: 'AI Video Editor', content: '摄像完成' },
+                    { from: 'AI Photo Editor', to: 'AI Colorist', content: '图片后期完成' },
+                    { from: 'AI Video Editor', to: 'AI Colorist', content: '视频后期完成' }
+                ]
+            },
+            // Cycle 340 新增模板 - AI智能教育培训系统
+            {
+                id: 'ai-education',
+                name: 'AI智能教育培训系统',
+                icon: '🎓',
+                description: '从课程设计到教学评估的完整教育培训流程',
+                agents: ['AI Curriculum Designer', 'AI Online Tutor', 'AI Exam Designer', 'AI Learning Coach', 'AI Education Consultant'],
+                positions: [
+                    { role: 'AI Education Consultant', x: 400, y: 50 },
+                    { role: 'AI Curriculum Designer', x: 200, y: 180 },
+                    { role: 'AI Online Tutor', x: 400, y: 180 },
+                    { role: 'AI Exam Designer', x: 600, y: 180 },
+                    { role: 'AI Learning Coach', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Education Consultant', to: 'AI Curriculum Designer', content: '教育需求分析' },
+                    { from: 'AI Curriculum Designer', to: 'AI Online Tutor', content: '课程设计方案' },
+                    { from: 'AI Online Tutor', to: 'AI Exam Designer', content: '教学内容' },
+                    { from: 'AI Exam Designer', to: 'AI Learning Coach', content: '试题设计' }
+                ]
+            },
+            // Cycle 340 新增模板 - AI智能心理咨询系统
+            {
+                id: 'ai-psychology',
+                name: 'AI智能心理咨询系统',
+                icon: '🧠',
+                description: '从心理评估到咨询服务的完整心理咨询流程',
+                agents: ['AI Psychologist', 'AI Therapy Coach', 'AI Mental Health Advisor', 'AI Stress Counselor', 'AI Couples Counselor'],
+                positions: [
+                    { role: 'AI Psychologist', x: 400, y: 50 },
+                    { role: 'AI Therapy Coach', x: 200, y: 180 },
+                    { role: 'AI Mental Health Advisor', x: 400, y: 180 },
+                    { role: 'AI Stress Counselor', x: 600, y: 180 },
+                    { role: 'AI Couples Counselor', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Psychologist', to: 'AI Therapy Coach', content: '心理评估结果' },
+                    { from: 'AI Therapy Coach', to: 'AI Mental Health Advisor', content: '治疗方案' },
+                    { from: 'AI Mental Health Advisor', to: 'AI Stress Counselor', content: '健康建议' },
+                    { from: 'AI Stress Counselor', to: 'AI Couples Counselor', content: '压力咨询' }
+                ]
+            },
+            // Cycle 340 新增模板 - AI智能家居安防系统
+            {
+                id: 'ai-home-security',
+                name: 'AI智能家居安防系统',
+                icon: '🏠',
+                description: '从安防监控到智能家居的完整家居安防流程',
+                agents: ['AI Home Security', 'AI Smart Lock', 'AI Surveillance System', 'AI Fire Alarm', 'AI Smart Home'],
+                positions: [
+                    { role: 'AI Home Security', x: 400, y: 50 },
+                    { role: 'AI Smart Lock', x: 200, y: 180 },
+                    { role: 'AI Surveillance System', x: 400, y: 180 },
+                    { role: 'AI Fire Alarm', x: 600, y: 180 },
+                    { role: 'AI Smart Home', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Home Security', to: 'AI Smart Lock', content: '安防需求' },
+                    { from: 'AI Smart Lock', to: 'AI Surveillance System', content: '门锁状态' },
+                    { from: 'AI Surveillance System', to: 'AI Fire Alarm', content: '监控画面' },
+                    { from: 'AI Fire Alarm', to: 'AI Smart Home', content: '安全状态' }
+                ]
             }
         ];
 
@@ -12949,7 +13075,49 @@
             'AI Athletic Trainer': { icon: '💪', color: '#22c55e', role: 'AI运动训练师' },
             'AI Sports Analyst': { icon: '📊', color: '#3b82f6', role: 'AI体育分析师' },
             'AI Referee': { icon: '⚖️', color: '#ef4444', role: 'AI裁判' },
-            'AI Sports Manager': { icon: '🏆', color: '#f97316', role: 'AI体育经理' }
+            'AI Sports Manager': { icon: '🏆', color: '#f97316', role: 'AI体育经理' },
+            // Cycle 340 新增角色 - AI 智能餐饮管理
+            'AI Restaurant Manager': { icon: '🍽️', color: '#f59e0b', role: 'AI餐厅经理' },
+            'AI Head Chef': { icon: '👨‍🍳', color: '#ef4444', role: 'AI行政总厨' },
+            'AI Menu Designer': { icon: '📋', color: '#22c55e', role: 'AI菜单设计师' },
+            'AI Kitchen Supervisor': { icon: '🔧', color: '#3b82f6', role: 'AI厨房主管' },
+            'AI Food Critic': { icon: '👨‍🍽️', color: '#a855f7', role: 'AI美食评论家' },
+            // Cycle 340 新增角色 - AI 智能美容美发
+            'AI Hair Stylist': { icon: '💇', color: '#ec4899', role: 'AI美发师' },
+            'AI Beautician': { icon: '💄', color: '#f43f5e', role: 'AI美容师' },
+            'AI Makeup Artist': { icon: '✨', color: '#8b5cf6', role: 'AI化妆师' },
+            'AI Nail Artist': { icon: '💅', color: '#14b8a6', role: 'AI美甲师' },
+            'AI Image Consultant': { icon: '🎭', color: '#06b6d4', role: 'AI形象顾问' },
+            // Cycle 340 新增角色 - AI 智能摄影摄像
+            'AI Photographer': { icon: '📷', color: '#0ea5e9', role: 'AI摄影师' },
+            'AI Videographer': { icon: '🎥', color: '#f97316', role: 'AI摄像师' },
+            'AI Photo Editor': { icon: '🎞️', color: '#a855f7', role: 'AI图片编辑师' },
+            'AI Video Editor': { icon: '🎬', color: '#ec4899', role: 'AI视频剪辑师' },
+            'AI Colorist': { icon: '🎨', color: '#eab308', role: 'AI调色师' },
+            // Cycle 340 新增角色 - AI 智能教育培训
+            'AI Curriculum Designer': { icon: '📚', color: '#3b82f6', role: 'AI课程设计师' },
+            'AI Online Tutor': { icon: '🎓', color: '#22c55e', role: 'AI在线导师' },
+            'AI Exam Designer': { icon: '📝', color: '#f59e0b', role: 'AI试题设计师' },
+            'AI Learning Coach': { icon: '🏫', color: '#a855f7', role: 'AI学习教练' },
+            'AI Education Consultant': { icon: '💡', color: '#06b6d4', role: 'AI教育顾问' },
+            // Cycle 340 新增角色 - AI 智能心理咨询
+            'AI Psychologist': { icon: '🧠', color: '#8b5cf6', role: 'AI心理咨询师' },
+            'AI Therapy Coach': { icon: '💭', color: '#ec4899', role: 'AI治疗师' },
+            'AI Mental Health Advisor': { icon: '🌈', color: '#14b8a6', role: 'AI心理健康顾问' },
+            'AI Stress Counselor': { icon: '🧘', color: '#22c55e', role: 'AI压力咨询师' },
+            'AI Couples Counselor': { icon: '💑', color: '#f43f5e', role: 'AI婚姻咨询师' },
+            // Cycle 340 新增角色 - AI 智能家居安防
+            'AI Home Security': { icon: '🏠', color: '#ef4444', role: 'AI家庭安防师' },
+            'AI Smart Lock': { icon: '🔐', color: '#3b82f6', role: 'AI智能门锁' },
+            'AI Surveillance System': { icon: '📹', color: '#22c55e', role: 'AI监控系统' },
+            'AI Fire Alarm': { icon: '🔥', color: '#f59e0b', role: 'AI火灾报警' },
+            'AI Smart Home': { icon: '🏡', color: '#a855f7', role: 'AI智能家居' },
+            // Cycle 340 新增角色 - AI 智能汽车服务
+            'AI Auto Mechanic': { icon: '🔧', color: '#64748b', role: 'AI汽车维修师' },
+            'AI Car Sales': { icon: '🚗', color: '#3b82f6', role: 'AI汽车销售' },
+            'AI Auto Insurance': { icon: '🛡️', color: '#22c55e', role: 'AI车险顾问' },
+            'AI Driving Instructor': { icon: '🚘', color: '#f59e0b', role: 'AI驾驶教练' },
+            'AI Car Detailer': { icon: '✨', color: '#ec4899', role: 'AI汽车美容师' }
         };
 
         // 拖拽相关变量
