@@ -10970,6 +10970,138 @@
                     { from: 'AI Infrastructure', to: 'AI Smart City', content: '基础设施' },
                     { from: 'AI Smart City', to: 'AI Urban Planner', content: '智慧城市方案' }
                 ]
+            },
+            // Cycle 333 新增模板 - AI 智能港口物流系统
+            {
+                id: 'ai-port-logistics',
+                name: 'AI智能港口物流系统',
+                icon: '⚓',
+                description: '从货物装卸到物流配送的完整港口流程',
+                agents: ['AI Port Operator', 'AI Cargo Handler', 'AI Terminal Manager', 'AI Shipping Coordinator', 'AI Warehouse Supervisor'],
+                positions: [
+                    { role: 'AI Port Operator', x: 400, y: 30 },
+                    { role: 'AI Cargo Handler', x: 200, y: 150 },
+                    { role: 'AI Terminal Manager', x: 600, y: 150 },
+                    { role: 'AI Shipping Coordinator', x: 200, y: 270 },
+                    { role: 'AI Warehouse Supervisor', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Port Operator', to: 'AI Cargo Handler', content: '装卸任务' },
+                    { from: 'AI Cargo Handler', to: 'AI Terminal Manager', content: '完成装卸' },
+                    { from: 'AI Terminal Manager', to: 'AI Shipping Coordinator', content: '调度安排' },
+                    { from: 'AI Shipping Coordinator', to: 'AI Warehouse Supervisor', content: '仓储安排' },
+                    { from: 'AI Warehouse Supervisor', to: 'AI Port Operator', content: '完成物流' }
+                ]
+            },
+            // Cycle 333 新增模板 - AI 智能航空航天系统
+            {
+                id: 'ai-aerospace',
+                name: 'AI智能航空航天系统',
+                icon: '✈️',
+                description: '从飞行计划到安全降落的完整航空流程',
+                agents: ['AI Pilot', 'AI Air Traffic Controller', 'AI Flight Planner', 'AI Aircraft Mechanic', 'AI Avionics Engineer'],
+                positions: [
+                    { role: 'AI Flight Planner', x: 400, y: 30 },
+                    { role: 'AI Pilot', x: 200, y: 150 },
+                    { role: 'AI Air Traffic Controller', x: 600, y: 150 },
+                    { role: 'AI Aircraft Mechanic', x: 200, y: 270 },
+                    { role: 'AI Avionics Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Flight Planner', to: 'AI Pilot', content: '飞行计划' },
+                    { from: 'AI Pilot', to: 'AI Air Traffic Controller', content: '起飞申请' },
+                    { from: 'AI Air Traffic Controller', to: 'AI Aircraft Mechanic', content: '起飞许可' },
+                    { from: 'AI Aircraft Mechanic', to: 'AI Avionics Engineer', content: '维护报告' },
+                    { from: 'AI Avionics Engineer', to: 'AI Flight Planner', content: '航电状态' }
+                ]
+            },
+            // Cycle 333 新增模板 - AI 智能保险系统
+            {
+                id: 'ai-insurance',
+                name: 'AI智能保险系统',
+                icon: '💼',
+                description: '从核保到理赔的完整保险业务流程',
+                agents: ['AI Underwriter', 'AI Claims Adjuster', 'AI Actuary', 'AI Insurance Sales', 'AI Risk Assessor'],
+                positions: [
+                    { role: 'AI Insurance Sales', x: 400, y: 30 },
+                    { role: 'AI Underwriter', x: 200, y: 150 },
+                    { role: 'AI Actuary', x: 600, y: 150 },
+                    { role: 'AI Risk Assessor', x: 200, y: 270 },
+                    { role: 'AI Claims Adjuster', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Insurance Sales', to: 'AI Underwriter', content: '保单申请' },
+                    { from: 'AI Underwriter', to: 'AI Actuary', content: '风险评估' },
+                    { from: 'AI Actuary', to: 'AI Risk Assessor', content: '精算报告' },
+                    { from: 'AI Risk Assessor', to: 'AI Claims Adjuster', content: '理赔申请' },
+                    { from: 'AI Claims Adjuster', to: 'AI Insurance Sales', content: '理赔完成' }
+               : '理赔 ]
+            },
+            // Cycle 333 新增模板 - AI 智能餐饮系统
+            {
+                id: 'ai-restaurant',
+                name: 'AI智能餐饮系统',
+                icon: '👨‍🍳',
+                description: '从菜品研发到餐厅运营的完整餐饮流程',
+                agents: ['AI Restaurant Chef', 'AI Menu Designer', 'AI Food Safety Inspector', 'AI Kitchen Manager', 'AI Catering Coordinator'],
+                positions: [
+                    { role: 'AI Kitchen Manager', x: 400, y: 30 },
+                    { role: 'AI Restaurant Chef', x: 200, y: 150 },
+                    { role: 'AI Menu Designer', x: 600, y: 150 },
+                    { role: 'AI Food Safety Inspector', x: 200, y: 270 },
+                    { role: 'AI Catering Coordinator', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Kitchen Manager', to: 'AI Restaurant Chef', content: '菜品需求' },
+                    { from: 'AI Restaurant Chef', to: 'AI Menu Designer', content: '菜品方案' },
+                    { from: 'AI Menu Designer', to: 'AI Food Safety Inspector', content: '菜单审核' },
+                    { from: 'AI Food Safety Inspector', to: 'AI Catering Coordinator', content: '安全认证' },
+                    { from: 'AI Catering Coordinator', to: 'AI Kitchen Manager', content: '运营安排' }
+                ]
+            },
+            // Cycle 333 新增模板 - AI 智能体育系统
+            {
+                id: 'ai-sports',
+                name: 'AI智能体育系统',
+                icon: '🏆',
+                description: '从训练计划到赛事执教的完整体育流程',
+                agents: ['AI Sports Coach', 'AI Athletic Trainer', 'AI Sports Analyst', 'AI Referee', 'AI Sports Manager'],
+                positions: [
+                    { role: 'AI Sports Manager', x: 400, y: 30 },
+                    { role: 'AI Sports Coach', x: 200, y: 150 },
+                    { role: 'AI Athletic Trainer', x: 600, y: 150 },
+                    { role: 'AI Sports Analyst', x: 200, y: 270 },
+                    { role: 'AI Referee', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sports Manager', to: 'AI Sports Coach', content: '训练目标' },
+                    { from: 'AI Sports Coach', to: 'AI Athletic Trainer', content: '训练计划' },
+                    { from: 'AI Athletic Trainer', to: 'AI Sports Analyst', content: '体能报告' },
+                    { from: 'AI Sports Analyst', to: 'AI Referee', content: '数据分析' },
+                    { from: 'AI Referee', to: 'AI Sports Manager', content: '赛事安排' }
+                ]
+            },
+            // Cycle 333 新增模板 - AI 智能宗教文化系统
+            {
+                id: 'ai-cultural',
+                name: 'AI智能宗教文化系统',
+                icon: '🏛️',
+                description: '从文化研究到活动组织的完整文化流程',
+                agents: ['AI Religious Scholar', 'AI Cultural Heritage', 'AI Museum Curator', 'AI Event Planner', 'AI Tour Guide'],
+                positions: [
+                    { role: 'AI Religious Scholar', x: 400, y: 30 },
+                    { role: 'AI Cultural Heritage', x: 200, y: 150 },
+                    { role: 'AI Museum Curator', x: 600, y: 150 },
+                    { role: 'AI Event Planner', x: 200, y: 270 },
+                    { role: 'AI Tour Guide', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Religious Scholar', to: 'AI Cultural Heritage', content: '研究课题' },
+                    { from: 'AI Cultural Heritage', to: 'AI Museum Curator', content: '保护方案' },
+                    { from: 'AI Museum Curator', to: 'AI Event Planner', content: '展览策划' },
+                    { from: 'AI Event Planner', to: 'AI Tour Guide', content: '活动安排' },
+                    { from: 'AI Tour Guide', to: 'AI Religious Scholar', content: '反馈总结' }
+                ]
             }
         ];
 
@@ -11972,7 +12104,43 @@
             'AI Route Designer': { icon: '🛤️', color: '#6366f1', role: 'AI线路设计师' },
             'AI Fleet Manager': { icon: '🚛', color: '#eab308', role: 'AI车队管理师' },
             'AI Traffic Control': { icon: '🚦', color: '#dc2626', role: 'AI交通调度师' },
-            'AI Logistics Optimizer': { icon: '📦', color: '#8b5cf6', role: 'AI物流优化师' }
+            'AI Logistics Optimizer': { icon: '📦', color: '#8b5cf6', role: 'AI物流优化师' },
+            // Cycle 333 新增角色 - AI 智能港口物流
+            'AI Port Operator': { icon: '⚓', color: '#0ea5e9', role: 'AI港口操作员' },
+            'AI Cargo Handler': { icon: '📦', color: '#f59e0b', role: 'AI货运处理员' },
+            'AI Terminal Manager': { icon: '🏭', color: '#64748b', role: 'AI码头经理' },
+            'AI Shipping Coordinator': { icon: '🚢', color: '#06b6d4', role: 'AI航运协调员' },
+            'AI Warehouse Supervisor': { icon: '🏚️', color: '#22c55e', role: 'AI仓储主管' },
+            // Cycle 333 新增角色 - AI 智能航空航天
+            'AI Pilot': { icon: '✈️', color: '#3b82f6', role: 'AI飞行员' },
+            'AI Air Traffic Controller': { icon: '🛩️', color: '#dc2626', role: 'AI空中交通管制员' },
+            'AI Flight Planner': { icon: '🗺️', color: '#8b5cf6', role: 'AI航班规划师' },
+            'AI Aircraft Mechanic': { icon: '🔧', color: '#78716c', role: 'AI飞机维修师' },
+            'AI Avionics Engineer': { icon: '📡', color: '#06b6d4', role: 'AI航电工程师' },
+            // Cycle 333 新增角色 - AI 智能保险
+            'AI Underwriter': { icon: '📝', color: '#14b8a6', role: 'AI核保师' },
+            'AI Claims Adjuster': { icon: '📋', color: '#f59e0b', role: 'AI理赔员' },
+            'AI Actuary': { icon: '📊', color: '#8b5cf6', role: 'AI精算师' },
+            'AI Insurance Sales': { icon: '💼', color: '#22c55e', role: 'AI保险销售' },
+            'AI Risk Assessor': { icon: '⚖️', color: '#dc2626', role: 'AI风险评估师' },
+            // Cycle 333 新增角色 - AI 智能餐饮
+            'AI Restaurant Chef': { icon: '👨‍🍳', color: '#f97316', role: 'AI餐厅厨师' },
+            'AI Menu Designer': { icon: '📋', color: '#ec4899', role: 'AI菜单设计师' },
+            'AI Food Safety Inspector': { icon: '✅', color: '#22c55e', role: 'AI食品安全检查员' },
+            'AI Kitchen Manager': { icon: '🏪', color: '#64748b', role: 'AI厨房经理' },
+            'AI Catering Coordinator': { icon: '🍽️', color: '#f59e0b', role: 'AI餐饮协调员' },
+            // Cycle 333 新增角色 - AI 智能体育
+            'AI Sports Coach': { icon: '🏃', color: '#3b82f6', role: 'AI体育教练' },
+            'AI Athletic Trainer': { icon: '💪', color: '#22c55e', role: 'AI运动训练师' },
+            'AI Sports Analyst': { icon: '📊', color: '#8b5cf6', role: 'AI体育分析师' },
+            'AI Referee': { icon: '⚖️', color: '#dc2626', role: 'AI裁判' },
+            'AI Sports Manager': { icon: '🏆', color: '#f59e0b', role: 'AI体育经理' },
+            // Cycle 333 新增角色 - AI 智能宗教文化
+            'AI Religious Scholar': { icon: '📜', color: '#a855f7', role: 'AI宗教研究者' },
+            'AI Cultural Heritage': { icon: '🏛️', color: '#f59e0b', role: 'AI文化遗产保护' },
+            'AI Museum Curator': { icon: '🎨', color: '#ec4899', role: 'AI博物馆策展人' },
+            'AI Event Planner': { icon: '🎪', color: '#f97316', role: 'AI活动策划师' },
+            'AI Tour Guide': { icon: '🎤', color: '#06b6d4', role: 'AI导游' }
         };
 
         // 拖拽相关变量
