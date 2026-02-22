@@ -3391,6 +3391,118 @@
                     { from: 'Corporate Communications', to: 'PR Manager', content: '媒体沟通计划' },
                     { from: 'Corporate Communications', to: 'Brand Strategist', content: '品牌传播需求' }
                 ]
+            },
+            // Cycle 275 新增模板
+            {
+                id: 'revenue-operations',
+                name: '营收运营',
+                icon: '💰',
+                desc: '从销售目标到营收增长的运营流程',
+                agents: ['Chief Revenue Officer', 'VP Sales', 'Sales', 'CFO', 'Product Operations'],
+                positions: [
+                    { role: 'Chief Revenue Officer', x: 400, y: 30 },
+                    { role: 'VP Sales', x: 200, y: 150 },
+                    { role: 'Sales', x: 600, y: 150 },
+                    { role: 'CFO', x: 200, y: 270 },
+                    { role: 'Product Operations', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Chief Revenue Officer', to: 'VP Sales', content: '销售目标设定' },
+                    { from: 'VP Sales', to: 'Chief Revenue Officer', content: '销售计划汇报' },
+                    { from: 'Chief Revenue Officer', to: 'Sales', content: '销售策略执行' },
+                    { from: 'Sales', to: 'CFO', content: '营收数据报告' },
+                    { from: 'CFO', to: 'Chief Revenue Officer', content: '财务分析反馈' },
+                    { from: 'Chief Revenue Officer', to: 'Product Operations', content: '产品优化需求' }
+                ]
+            },
+            {
+                id: 'sales-leadership',
+                name: '销售领导力',
+                icon: '📈',
+                desc: '从销售团队管理到业绩达成的领导流程',
+                agents: ['VP Sales', 'Sales', 'Customer Success', 'Marketing', 'CFO'],
+                positions: [
+                    { role: 'VP Sales', x: 400, y: 30 },
+                    { role: 'Sales', x: 200, y: 150 },
+                    { role: 'Customer Success', x: 600, y: 150 },
+                    { role: 'Marketing', x: 200, y: 270 },
+                    { role: 'CFO', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'VP Sales', to: 'Sales', content: '销售目标分解' },
+                    { from: 'Sales', to: 'VP Sales', content: '销售进展汇报' },
+                    { from: 'VP Sales', to: 'Customer Success', content: '客户维护需求' },
+                    { from: 'Customer Success', to: 'VP Sales', content: '客户反馈汇总' },
+                    { from: 'VP Sales', to: 'Marketing', content: '市场支持需求' },
+                    { from: 'VP Sales', to: 'CFO', content: '销售业绩报告' }
+                ]
+            },
+            {
+                id: 'product-ops',
+                name: '产品运营',
+                icon: '⚡',
+                desc: '从产品优化到用户增长的运营流程',
+                agents: ['Product Operations', 'Product Manager', 'Data Analyst', 'Growth Hacker', 'Customer Success'],
+                positions: [
+                    { role: 'Product Operations', x: 400, y: 30 },
+                    { role: 'Product Manager', x: 200, y: 150 },
+                    { role: 'Data Analyst', x: 600, y: 150 },
+                    { role: 'Growth Hacker', x: 200, y: 270 },
+                    { role: 'Customer Success', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Product Operations', to: 'Product Manager', content: '产品优化需求' },
+                    { from: 'Product Manager', to: 'Product Operations', content: '产品路线图更新' },
+                    { from: 'Product Operations', to: 'Data Analyst', content: '数据分析需求' },
+                    { from: 'Data Analyst', to: 'Product Operations', content: '用户行为分析报告' },
+                    { from: 'Product Operations', to: 'Growth Hacker', content: '增长实验需求' },
+                    { from: 'Growth Hacker', to: 'Product Operations', content: '增长实验结果' }
+                ]
+            },
+            {
+                id: 'creative-campaign',
+                name: '创意营销',
+                icon: '✨',
+                desc: '从创意策划到品牌传播的营销流程',
+                agents: ['Creative Director', 'Designer', 'Brand Strategist', 'Marketing', 'Content Strategist'],
+                positions: [
+                    { role: 'Creative Director', x: 400, y: 30 },
+                    { role: 'Designer', x: 200, y: 150 },
+                    { role: 'Brand Strategist', x: 600, y: 150 },
+                    { role: 'Marketing', x: 200, y: 270 },
+                    { role: 'Content Strategist', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Creative Director', to: 'Designer', content: '创意设计需求' },
+                    { from: 'Designer', to: 'Creative Director', content: '设计稿提交' },
+                    { from: 'Creative Director', to: 'Brand Strategist', content: '品牌策略咨询' },
+                    { from: 'Brand Strategist', to: 'Creative Director', content: '品牌方向建议' },
+                    { from: 'Creative Director', to: 'Marketing', content: '营销创意方案' },
+                    { from: 'Creative Director', to: 'Content Strategist', content: '内容创意需求' }
+                ]
+            },
+            {
+                id: 'investor-relations-mgmt',
+                name: '投资者关系管理',
+                icon: '🏦',
+                desc: '从融资规划到投资者沟通的管理流程',
+                agents: ['Investor Relations', 'CFO', 'CEO', 'Investment Analyst', 'Legal Counsel'],
+                positions: [
+                    { role: 'Investor Relations', x: 400, y: 30 },
+                    { role: 'CFO', x: 200, y: 150 },
+                    { role: 'CEO', x: 600, y: 150 },
+                    { role: 'Investment Analyst', x: 200, y: 270 },
+                    { role: 'Legal Counsel', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Investor Relations', to: 'CFO', content: '财务数据需求' },
+                    { from: 'CFO', to: 'Investor Relations', content: '财务报告提供' },
+                    { from: 'Investor Relations', to: 'CEO', content: '投资者会议安排' },
+                    { from: 'CEO', to: 'Investor Relations', content: '路演材料确认' },
+                    { from: 'Investor Relations', to: 'Investment Analyst', content: '市场分析需求' },
+                    { from: 'Investment Analyst', to: 'Investor Relations', content: '行业分析报告' },
+                    { from: 'Investor Relations', to: 'Legal Counsel', content: '合规信息披露需求' }
+                ]
             }
         ];
 
@@ -3448,7 +3560,13 @@
             'VP Engineering': { icon: '👨‍💼', color: '#7c3aed', role: '工程副总裁' },
             'Head of Product': { icon: '📦', color: '#f97316', role: '产品负责人' },
             'Partnership Manager': { icon: '🤝', color: '#22c55e', role: '合作伙伴经理' },
-            'Corporate Communications': { icon: '📞', color: '#ec4899', role: '企业传讯经理' }
+            'Corporate Communications': { icon: '📞', color: '#ec4899', role: '企业传讯经理' },
+            // Cycle 275 新增角色
+            'Chief Revenue Officer': { icon: '💰', color: '#eab308', role: '首席营收官' },
+            'VP Sales': { icon: '📈', color: '#10b981', role: '销售副总裁' },
+            'Product Operations': { icon: '⚡', color: '#6366f1', role: '产品运营经理' },
+            'Creative Director': { icon: '✨', color: '#f43f5e', role: '创意总监' },
+            'Investor Relations': { icon: '🏦', color: '#14b8a6', role: '投资者关系总监' }
         };
 
         // 拖拽相关变量
