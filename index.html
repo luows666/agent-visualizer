@@ -5800,6 +5800,133 @@
                     { from: 'AI Ethicist', to: 'Legal Counsel', content: '合规审查需求' },
                     { from: 'Legal Counsel', to: 'CEO', content: '伦理合规审查报告' }
                 ]
+            },
+            // Cycle 295 新增模板
+            {
+                id: 'rag-implementation',
+                name: 'RAG系统实现',
+                icon: '📚',
+                desc: '从知识库构建到RAG系统上线的完整流程',
+                agents: ['RAG Engineer', 'ML Engineer', 'Data Engineer', 'Backend Developer', 'QA'],
+                positions: [
+                    { role: 'RAG Engineer', x: 400, y: 30 },
+                    { role: 'Data Engineer', x: 200, y: 150 },
+                    { role: 'ML Engineer', x: 600, y: 150 },
+                    { role: 'Backend Developer', x: 200, y: 270 },
+                    { role: 'QA', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'RAG Engineer', to: 'Data Engineer', content: '需要构建知识库' },
+                    { from: 'Data Engineer', to: 'ML Engineer', content: '知识库数据就绪' },
+                    { from: 'ML Engineer', to: 'RAG Engineer', content: '向量嵌入完成' },
+                    { from: 'RAG Engineer', to: 'Backend Developer', content: '需要检索API支持' },
+                    { from: 'Backend Developer', to: 'QA', content: 'API开发完成，请求测试' }
+                ]
+            },
+            {
+                id: 'llm-ops-pipeline',
+                name: 'LLM运维流水线',
+                icon: '⚙️',
+                desc: '从模型部署到LLM运维监控的完整流程',
+                agents: ['LLM Ops', 'MLOps Engineer', 'DevOps', 'Security Engineer', 'Product Manager'],
+                positions: [
+                    { role: 'LLM Ops', x: 400, y: 30 },
+                    { role: 'MLOps Engineer', x: 200, y: 150 },
+                    { role: 'DevOps', x: 600, y: 150 },
+                    { role: 'Security Engineer', x: 200, y: 270 },
+                    { role: 'Product Manager', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'LLM Ops', to: 'MLOps Engineer', content: '需要模型部署支持' },
+                    { from: 'MLOps Engineer', to: 'DevOps', content: '模型容器化完成' },
+                    { from: 'DevOps', to: 'LLM Ops', content: '模型已部署到生产' },
+                    { from: 'LLM Ops', to: 'Security Engineer', content: '需要安全审计' },
+                    { from: 'Security Engineer', to: 'Product Manager', content: '安全审计报告' }
+                ]
+            },
+            {
+                id: 'ai-integration-project',
+                name: 'AI集成项目',
+                icon: '🔗',
+                desc: '从AI能力集成到应用上线的完整流程',
+                agents: ['AI Integration Specialist', 'Backend Developer', 'Frontend Developer', 'AI Product Manager', 'QA'],
+                positions: [
+                    { role: 'AI Integration Specialist', x: 400, y: 30 },
+                    { role: 'Backend Developer', x: 200, y: 150 },
+                    { role: 'Frontend Developer', x: 600, y: 150 },
+                    { role: 'AI Product Manager', x: 200, y: 270 },
+                    { role: 'QA', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Integration Specialist', to: 'Backend Developer', content: '需要AI API集成' },
+                    { from: 'Backend Developer', to: 'Frontend Developer', content: '后端API就绪' },
+                    { from: 'Frontend Developer', to: 'AI Integration Specialist', content: '前端集成完成' },
+                    { from: 'AI Integration Specialist', to: 'AI Product Manager', content: '需要产品验收' },
+                    { from: 'AI Product Manager', to: 'QA', content: '验收通过，准备发布' }
+                ]
+            },
+            {
+                id: 'model-validation',
+                name: '模型验证流程',
+                icon: '✅',
+                desc: '从模型测试到验证通过的完整流程',
+                agents: ['Model Validator', 'ML Engineer', 'Data Scientist', 'AI Quality Assurance', 'Product Manager'],
+                positions: [
+                    { role: 'Model Validator', x: 400, y: 30 },
+                    { role: 'ML Engineer', x: 200, y: 150 },
+                    { role: 'Data Scientist', x: 600, y: 150 },
+                    { role: 'AI Quality Assurance', x: 200, y: 270 },
+                    { role: 'Product Manager', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'Model Validator', to: 'Data Scientist', content: '需要测试数据集' },
+                    { from: 'Data Scientist', to: 'ML Engineer', content: '测试数据准备就绪' },
+                    { from: 'ML Engineer', to: 'Model Validator', content: '模型训练完成' },
+                    { from: 'Model Validator', to: 'AI Quality Assurance', content: '需要质量检查' },
+                    { from: 'AI Quality Assurance', to: 'Product Manager', content: '质量验证通过' }
+                ]
+            },
+            {
+                id: 'ai-documentation',
+                name: 'AI文档编写',
+                icon: '📖',
+                desc: '从技术文档编写到发布的完整流程',
+                agents: ['AI Documentation Writer', 'AI Support Engineer', 'Technical Writer', 'Product Manager', 'Marketing'],
+                positions: [
+                    { role: 'AI Documentation Writer', x: 400, y: 30 },
+                    { role: 'AI Support Engineer', x: 200, y: 150 },
+                    { role: 'Technical Writer', x: 600, y: 150 },
+                    { role: 'Product Manager', x: 200, y: 270 },
+                    { role: 'Marketing', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Documentation Writer', to: 'AI Support Engineer', content: '需要常见问题支持' },
+                    { from: 'AI Support Engineer', to: 'Technical Writer', content: '问题素材提供' },
+                    { from: 'Technical Writer', to: 'AI Documentation Writer', content: '文档初稿完成' },
+                    { from: 'AI Documentation Writer', to: 'Product Manager', content: '需要产品审核' },
+                    { from: 'Product Manager', to: 'Marketing', content: '文档审核通过，可以发布' }
+                ]
+            },
+            {
+                id: 'ai-performance-analysis',
+                name: 'AI性能分析',
+                icon: '📊',
+                desc: '从性能监控到优化实施的完整流程',
+                agents: ['AI Performance Analyst', 'LLM Ops', 'Backend Developer', 'AI Quality Assurance', 'Product Manager'],
+                positions: [
+                    { role: 'AI Performance Analyst', x: 400, y: 30 },
+                    { role: 'LLM Ops', x: 200, y: 150 },
+                    { role: 'Backend Developer', x: 600, y: 150 },
+                    { role: 'AI Quality Assurance', x: 200, y: 270 },
+                    { role: 'Product Manager', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Performance Analyst', to: 'LLM Ops', content: '需要性能数据' },
+                    { from: 'LLM Ops', to: 'AI Performance Analyst', content: '性能数据已收集' },
+                    { from: 'AI Performance Analyst', to: 'Backend Developer', content: '发现性能瓶颈，需要优化' },
+                    { from: 'Backend Developer', to: 'AI Quality Assurance', content: '优化完成，请求验证' },
+                    { from: 'AI Quality Assurance', to: 'Product Manager', content: '性能优化验证报告' }
+                ]
             }
         ];
 
@@ -6008,7 +6135,18 @@
             'Data Labeler': { icon: '🏷️', color: '#06b6d4', role: '数据标注员' },
             'AI Ethicist': { icon: '⚖️', color: '#a855f7', role: 'AI伦理学家' },
             'Evaluation Engineer': { icon: '📐', color: '#22c55e', role: '评测工程师' },
-            'AI Product Designer': { icon: '🎯', color: '#f97316', role: 'AI产品设计师' }
+            'AI Product Designer': { icon: '🎯', color: '#f97316', role: 'AI产品设计师' },
+            // Cycle 295 新增角色
+            'RAG Engineer': { icon: '📚', color: '#0ea5e9', role: 'RAG工程师' },
+            'LLM Ops': { icon: '⚙️', color: '#7c3aed', role: 'LLM运维工程师' },
+            'AI Integration Specialist': { icon: '🔗', color: '#22c55e', role: 'AI集成专家' },
+            'Model Validator': { icon: '✅', color: '#f59e0b', role: '模型验证工程师' },
+            'AI Documentation Writer': { icon: '📖', color: '#ec4899', role: 'AI文档工程师' },
+            'AI Support Engineer': { icon: '🎧', color: '#06b6d4', role: 'AI技术支持工程师' },
+            'AI Training Coordinator': { icon: '📋', color: '#a855f7', role: 'AI训练协调员' },
+            'AI Quality Assurance': { icon: '🔍', color: '#14b8a6', role: 'AI质量保证工程师' },
+            'AI Performance Analyst': { icon: '📊', color: '#f97316', role: 'AI性能分析师' },
+            'Neural Network Architect': { icon: '🧠', color: '#6366f1', role: '神经网络架构师' }
         };
 
         // 拖拽相关变量
