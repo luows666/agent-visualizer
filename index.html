@@ -10574,6 +10574,138 @@
                     { from: 'AI Fleet Dispatcher', to: 'AI Warehouse Manager', content: '调度指令' },
                     { from: 'AI Warehouse Manager', to: 'AI Logistics Planner', content: '库存更新' }
                 ]
+            },
+            // Cycle 330 新增模板 - AI 智能政府系统
+            {
+                id: 'ai-government',
+                name: 'AI智能政府系统',
+                icon: '🏛️',
+                description: '从城市规划到公共服务的完整政府流程',
+                agents: ['AI City Planner', 'AI Policy Analyst', 'AI Public Service', 'AI Traffic Manager', 'AI Emergency Response'],
+                positions: [
+                    { role: 'AI City Planner', x: 400, y: 30 },
+                    { role: 'AI Policy Analyst', x: 200, y: 150 },
+                    { role: 'AI Public Service', x: 600, y: 150 },
+                    { role: 'AI Traffic Manager', x: 200, y: 270 },
+                    { role: 'AI Emergency Response', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI City Planner', to: 'AI Policy Analyst', content: '规划方案' },
+                    { from: 'AI Policy Analyst', to: 'AI Public Service', content: '政策解读' },
+                    { from: 'AI Public Service', to: 'AI Traffic Manager', content: '服务需求' },
+                    { from: 'AI Traffic Manager', to: 'AI Emergency Response', content: '交通状况' },
+                    { from: 'AI Emergency Response', to: 'AI City Planner', content: '应急反馈' }
+                ]
+            },
+            // Cycle 330 新增模板 - AI 智能环保系统
+            {
+                id: 'ai-environment',
+                name: 'AI智能环保系统',
+                icon: '🌍',
+                description: '从环境监测到可持续发展的完整环保流程',
+                agents: ['AI Climate Analyst', 'AI Waste Manager', 'AI Water Quality', 'AI Air Quality', 'AI Carbon Tracker'],
+                positions: [
+                    { role: 'AI Climate Analyst', x: 400, y: 30 },
+                    { role: 'AI Waste Manager', x: 200, y: 150 },
+                    { role: 'AI Water Quality', x: 600, y: 150 },
+                    { role: 'AI Air Quality', x: 200, y: 270 },
+                    { role: 'AI Carbon Tracker', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Climate Analyst', to: 'AI Waste Manager', content: '气候数据' },
+                    { from: 'AI Waste Manager', to: 'AI Water Quality', content: '废物处理' },
+                    { from: 'AI Water Quality', to: 'AI Air Quality', content: '水质报告' },
+                    { from: 'AI Air Quality', to: 'AI Carbon Tracker', content: '空气质量' },
+                    { from: 'AI Carbon Tracker', to: 'AI Climate Analyst', content: '碳排放数据' }
+                ]
+            },
+            // Cycle 330 新增模板 - AI 智能科研系统
+            {
+                id: 'ai-research',
+                name: 'AI智能科研系统',
+                icon: '🔬',
+                description: '从实验设计到论文发表的完整科研流程',
+                agents: ['AI Lab Assistant', 'AI Research Analyst', 'AI Data Curator', 'AI Experiment Design', 'AI Paper Writer'],
+                positions: [
+                    { role: 'AI Lab Assistant', x: 400, y: 30 },
+                    { role: 'AI Research Analyst', x: 200, y: 150 },
+                    { role: 'AI Data Curator', x: 600, y: 150 },
+                    { role: 'AI Experiment Design', x: 200, y: 270 },
+                    { role: 'AI Paper Writer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Lab Assistant', to: 'AI Research Analyst', content: '实验数据' },
+                    { from: 'AI Research Analyst', to: 'AI Data Curator', content: '分析结果' },
+                    { from: 'AI Data Curator', to: 'AI Experiment Design', content: '数据需求' },
+                    { from: 'AI Experiment Design', to: 'AI Paper Writer', content: '实验方案' },
+                    { from: 'AI Paper Writer', to: 'AI Lab Assistant', content: '论文反馈' }
+                ]
+            },
+            // Cycle 330 新增模板 - AI 智能娱乐系统
+            {
+                id: 'ai-entertainment',
+                name: 'AI智能娱乐系统',
+                icon: '🎭',
+                description: '从内容创作到平台运营的完整娱乐流程',
+                agents: ['AI Game Designer', 'AI Music Composer', 'AI Film Director', 'AI Content Creator', 'AI Streamer'],
+                positions: [
+                    { role: 'AI Game Designer', x: 400, y: 30 },
+                    { role: 'AI Music Composer', x: 200, y: 150 },
+                    { role: 'AI Film Director', x: 600, y: 150 },
+                    { role: 'AI Content Creator', x: 200, y: 270 },
+                    { role: 'AI Streamer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Game Designer', to: 'AI Music Composer', content: '设计需求' },
+                    { from: 'AI Music Composer', to: 'AI Film Director', content: '配乐方案' },
+                    { from: 'AI Film Director', to: 'AI Content Creator', content: '影片素材' },
+                    { from: 'AI Content Creator', to: 'AI Streamer', content: '内容分发' },
+                    { from: 'AI Streamer', to: 'AI Game Designer', content: '观众反馈' }
+                ]
+            },
+            // Cycle 330 新增模板 - AI 智能餐饮系统
+            {
+                id: 'ai-food',
+                name: 'AI智能餐饮系统',
+                icon: '🍽️',
+                description: '从菜品研发到餐厅运营的完整餐饮流程',
+                agents: ['AI Chef', 'AI Restaurant Manager', 'AI Menu Designer', 'AI Food Safety', 'AI Nutritionist'],
+                positions: [
+                    { role: 'AI Chef', x: 400, y: 30 },
+                    { role: 'AI Restaurant Manager', x: 200, y: 150 },
+                    { role: 'AI Menu Designer', x: 600, y: 150 },
+                    { role: 'AI Food Safety', x: 200, y: 270 },
+                    { role: 'AI Nutritionist', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Chef', to: 'AI Restaurant Manager', content: '菜品研发' },
+                    { from: 'AI Restaurant Manager', to: 'AI Menu Designer', content: '运营需求' },
+                    { from: 'AI Menu Designer', to: 'AI Food Safety', content: '菜单方案' },
+                    { from: 'AI Food Safety', to: 'AI Nutritionist', content: '安全报告' },
+                    { from: 'AI Nutritionist', to: 'AI Chef', content: '营养建议' }
+                ]
+            },
+            // Cycle 330 新增模板 - AI 智能体育系统
+            {
+                id: 'ai-sports',
+                name: 'AI智能体育系统',
+                icon: '⚽',
+                description: '从训练计划到赛事执教的完整体育流程',
+                agents: ['AI Fitness Coach', 'AI Sports Analyst', 'AI Nutritionist', 'AI Injury Prevention', 'AI Game Strategy'],
+                positions: [
+                    { role: 'AI Fitness Coach', x: 400, y: 30 },
+                    { role: 'AI Sports Analyst', x: 200, y: 150 },
+                    { role: 'AI Nutritionist', x: 600, y: 150 },
+                    { role: 'AI Injury Prevention', x: 200, y: 270 },
+                    { role: 'AI Game Strategy', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fitness Coach', to: 'AI Sports Analyst', content: '训练数据' },
+                    { from: 'AI Sports Analyst', to: 'AI Nutritionist', content: '分析报告' },
+                    { from: 'AI Nutritionist', to: 'AI Injury Prevention', content: '营养方案' },
+                    { from: 'AI Injury Prevention', to: 'AI Game Strategy', content: '健康状况' },
+                    { from: 'AI Game Strategy', to: 'AI Fitness Coach', content: '战术要求' }
+                ]
             }
         ];
 
@@ -11462,7 +11594,37 @@
             'AI Inventory Manager': { icon: '📦', color: '#06b6d4', role: 'AI库存经理' },
             'AI Pricing Strategy': { icon: '💲', color: '#22c55e', role: 'AI定价策略师' },
             'AI Customer Insights': { icon: '👥', color: '#ec4899', role: 'AI客户洞察师' },
-            'AI Visual Merchandiser': { icon: '🛍️', color: '#a855f7', role: 'AI视觉陈列师' }
+            'AI Visual Merchandiser': { icon: '🛍️', color: '#a855f7', role: 'AI视觉陈列师' },
+            // Cycle 330 新增角色 - AI 智能政府
+            'AI City Planner': { icon: '🏙️', color: '#0ea5e9', role: 'AI城市规划师' },
+            'AI Policy Analyst': { icon: '📜', color: '#14b8a6', role: 'AI政策分析师' },
+            'AI Public Service': { icon: '🏛️', color: '#8b5cf6', role: 'AI公共服务' },
+            'AI Traffic Manager': { icon: '🚦', color: '#f97316', role: 'AI交通经理' },
+            'AI Emergency Response': { icon: '🚨', color: '#ef4444', role: 'AI应急响应' },
+            // Cycle 330 新增角色 - AI 智能环保
+            'AI Climate Analyst': { icon: '🌍', color: '#22c55e', role: 'AI气候分析师' },
+            'AI Waste Manager': { icon: '♻️', color: '#06b6d4', role: 'AI废物管理师' },
+            'AI Water Quality': { icon: '💧', color: '#0ea5e9', role: 'AI水质监测师' },
+            'AI Air Quality': { icon: '💨', color: '#a855f7', role: 'AI空气质量师' },
+            'AI Carbon Tracker': { icon: '🌱', color: '#84cc16', role: 'AI碳追踪师' },
+            // Cycle 330 新增角色 - AI 智能科研
+            'AI Lab Assistant': { icon: '🔬', color: '#ec4899', role: 'AI实验室助手' },
+            'AI Research Analyst': { icon: '📊', color: '#f59e0b', role: 'AI研究分析师' },
+            'AI Data Curator': { icon: '📚', color: '#14b8a6', role: 'AI数据管理师' },
+            'AI Experiment Design': { icon: '🧪', color: '#8b5cf6', role: 'AI实验设计' },
+            'AI Paper Writer': { icon: '📝', color: '#06b6d4', role: 'AI论文写作' },
+            // Cycle 330 新增角色 - AI 智能娱乐
+            'AI Game Designer': { icon: '🎮', color: '#f43f5e', role: 'AI游戏设计师' },
+            'AI Music Composer': { icon: '🎵', color: '#a855f7', role: 'AI音乐作曲家' },
+            'AI Film Director': { icon: '🎬', color: '#f97316', role: 'AI电影导演' },
+            'AI Content Creator': { icon: '✨', color: '#ec4899', role: 'AI内容创作者' },
+            'AI Streamer': { icon: '📺', color: '#ef4444', role: 'AI主播' },
+            // Cycle 330 新增角色 - AI 智能餐饮
+            'AI Chef': { icon: '👨‍🍳', color: '#f59e0b', role: 'AI厨师' },
+            'AI Restaurant Manager': { icon: '🍽️', color: '#14b8a6', role: 'AI餐厅经理' },
+            'AI Menu Designer': { icon: '📋', color: '#22c55e', role: 'AI菜单设计师' },
+            'AI Food Safety': { icon: '✅', color: '#06b6d4', role: 'AI食品安全师' },
+            'AI Nutritionist': { icon: '🥗', color: '#84cc16', role: 'AI营养师' }
         };
 
         // 拖拽相关变量
