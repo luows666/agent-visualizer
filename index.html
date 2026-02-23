@@ -20913,6 +20913,151 @@
                     { from: 'AI Citizen Service', to: 'AI Urban Manager', content: '公民服务需求' },
                     { from: 'AI Urban Manager', to: 'AI Emergency Planner', content: '城市管理方案' }
                 ]
+            },
+            // Cycle 411 新增模板 - AI智能康复医疗系统
+            {
+                id: 'ai-rehabilitation-medical',
+                name: 'AI智能康复医疗系统',
+                icon: '🏥',
+                desc: '从康复医生到假肢工程师的完整康复医疗流程',
+                agents: ['AI Rehabilitation Doctor', 'AI Physical Therapist', 'AI Occupational Therapist', 'AI Speech Therapist', 'AI Rehabilitation Planner', 'AI Prosthetic Engineer'],
+                positions: [
+                    { role: 'AI Rehabilitation Doctor', x: 400, y: 30 },
+                    { role: 'AI Physical Therapist', x: 150, y: 150 },
+                    { role: 'AI Occupational Therapist', x: 400, y: 150 },
+                    { role: 'AI Speech Therapist', x: 650, y: 150 },
+                    { role: 'AI Rehabilitation Planner', x: 250, y: 270 },
+                    { role: 'AI Prosthetic Engineer', x: 550, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Rehabilitation Doctor', to: 'AI Physical Therapist', content: '康复医嘱' },
+                    { from: 'AI Rehabilitation Doctor', to: 'AI Occupational Therapist', content: '作业治疗方案' },
+                    { from: 'AI Rehabilitation Doctor', to: 'AI Speech Therapist', content: '言语治疗需求' },
+                    { from: 'AI Physical Therapist', to: 'AI Rehabilitation Planner', content: '物理治疗进展' },
+                    { from: 'AI Occupational Therapist', to: 'AI Rehabilitation Planner', content: '作业治疗反馈' },
+                    { from: 'AI Speech Therapist', to: 'AI Rehabilitation Planner', content: '言语治疗评估' },
+                    { from: 'AI Rehabilitation Planner', to: 'AI Prosthetic Engineer', content: '假肢需求确认' }
+                ]
+            },
+            // Cycle 411 新增模板 - AI智能养老社区系统
+            {
+                id: 'ai-elderly-care',
+                name: 'AI智能养老社区系统',
+                icon: '👴',
+                desc: '从养老管理到健康监测的完整养老社区服务流程',
+                agents: ['AI Elderly Care Manager', 'AI Senior Advisor', 'AI Health Monitor', 'AI Companionship', 'AI Mobility Assistant', 'AI Medication Manager'],
+                positions: [
+                    { role: 'AI Elderly Care Manager', x: 400, y: 30 },
+                    { role: 'AI Senior Advisor', x: 200, y: 150 },
+                    { role: 'AI Health Monitor', x: 600, y: 150 },
+                    { role: 'AI Companionship', x: 150, y: 270 },
+                    { role: 'AI Mobility Assistant', x: 400, y: 270 },
+                    { role: 'AI Medication Manager', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Elderly Care Manager', to: 'AI Senior Advisor', content: '老年需求评估' },
+                    { from: 'AI Elderly Care Manager', to: 'AI Health Monitor', content: '健康监测安排' },
+                    { from: 'AI Senior Advisor', to: 'AI Companionship', content: '陪伴服务计划' },
+                    { from: 'AI Senior Advisor', to: 'AI Mobility Assistant', content: '行动辅助需求' },
+                    { from: 'AI Health Monitor', to: 'AI Medication Manager', content: '用药管理需求' },
+                    { from: 'AI Companionship', to: 'AI Elderly Care Manager', content: '陪伴反馈' }
+                ]
+            },
+            // Cycle 411 新增模板 - AI智能环保监测系统
+            {
+                id: 'ai-environmental-monitoring',
+                name: 'AI智能环保监测系统',
+                icon: '🌡️',
+                desc: '从环境监测到废物管理的完整环保流程',
+                agents: ['AI Environmental Monitor', 'AI Pollution Detector', 'AI Wildlife Tracker', 'AI Conservationist', 'AI Carbon Footprint', 'AI Waste Manager'],
+                positions: [
+                    { role: 'AI Environmental Monitor', x: 400, y: 30 },
+                    { role: 'AI Pollution Detector', x: 150, y: 150 },
+                    { role: 'AI Wildlife Tracker', x: 400, y: 150 },
+                    { role: 'AI Conservationist', x: 650, y: 150 },
+                    { role: 'AI Carbon Footprint', x: 250, y: 270 },
+                    { role: 'AI Waste Manager', x: 550, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Monitor', to: 'AI Pollution Detector', content: '环境监测数据' },
+                    { from: 'AI Environmental Monitor', to: 'AI Wildlife Tracker', content: '生态监测需求' },
+                    { from: 'AI Environmental Monitor', to: 'AI Conservationist', content: '保护工作协调' },
+                    { from: 'AI Pollution Detector', to: 'AI Carbon Footprint', content: '污染分析报告' },
+                    { from: 'AI Wildlife Tracker', to: 'AI Conservationist', content: '野生动物保护方案' },
+                    { from: 'AI Carbon Footprint', to: 'AI Waste Manager', content: '减废建议' }
+                ]
+            },
+            // Cycle 411 新增模板 - AI智能能源审计系统
+            {
+                id: 'ai-energy-audit',
+                name: 'AI智能能源审计系统',
+                icon: '⚡',
+                desc: '从能源审计到绿色建筑的完整能源管理流程',
+                agents: ['AI Energy Auditor', 'AI Power Consumption Analyst', 'AI Solar Panel Expert', 'AI Wind Energy Expert', 'AI Energy Storage Expert', 'AI Green Building'],
+                positions: [
+                    { role: 'AI Energy Auditor', x: 400, y: 30 },
+                    { role: 'AI Power Consumption Analyst', x: 150, y: 150 },
+                    { role: 'AI Solar Panel Expert', x: 650, y: 150 },
+                    { role: 'AI Wind Energy Expert', x: 150, y: 270 },
+                    { role: 'AI Energy Storage Expert', x: 400, y: 270 },
+                    { role: 'AI Green Building', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Energy Auditor', to: 'AI Power Consumption Analyst', content: '能源审计需求' },
+                    { from: 'AI Power Consumption Analyst', to: 'AI Solar Panel Expert', content: '太阳能方案建议' },
+                    { from: 'AI Power Consumption Analyst', to: 'AI Wind Energy Expert', content: '风能方案建议' },
+                    { from: 'AI Solar Panel Expert', to: 'AI Energy Storage Expert', content: '储能需求评估' },
+                    { from: 'AI Wind Energy Expert', to: 'AI Energy Storage Expert', content: '储能整合方案' },
+                    { from: 'AI Energy Storage Expert', to: 'AI Green Building', content: '绿色建筑能源方案' }
+                ]
+            },
+            // Cycle 411 新增模板 - AI智能法律服务系统
+            {
+                id: 'ai-legal-service',
+                name: 'AI智能法律服务系统',
+                icon: '⚖️',
+                desc: '从法律咨询到诉讼支持的完整法律服务流程',
+                agents: ['AI Legal Consultant', 'AI Contract Drafter', 'AI Compliance Officer', 'AI IP Attorney', 'AI Litigation Assistant', 'AI Mediation Expert'],
+                positions: [
+                    { role: 'AI Legal Consultant', x: 400, y: 30 },
+                    { role: 'AI Contract Drafter', x: 200, y: 150 },
+                    { role: 'AI Compliance Officer', x: 600, y: 150 },
+                    { role: 'AI IP Attorney', x: 150, y: 270 },
+                    { role: 'AI Litigation Assistant', x: 400, y: 270 },
+                    { role: 'AI Mediation Expert', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Legal Consultant', to: 'AI Contract Drafter', content: '合同起草需求' },
+                    { from: 'AI Legal Consultant', to: 'AI Compliance Officer', content: '合规审查需求' },
+                    { from: 'AI Legal Consultant', to: 'AI IP Attorney', content: '知识产权咨询' },
+                    { from: 'AI Contract Drafter', to: 'AI Litigation Assistant', content: '合同风险评估' },
+                    { from: 'AI Compliance Officer', to: 'AI Mediation Expert', content: '合规调解需求' },
+                    { from: 'AI IP Attorney', to: 'AI Litigation Assistant', content: '知识产权诉讼支持' }
+                ]
+            },
+            // Cycle 411 新增模板 - AI智能教育培训系统
+            {
+                id: 'ai-education-training',
+                name: 'AI智能教育培训系统',
+                icon: '📚',
+                desc: '从课程设计到技能评估的完整教育培训流程',
+                agents: ['AI Curriculum Designer', 'AI Online Tutor', 'AI Exam Designer', 'AI Language Tutor', 'AI Skills Assessor', 'AI Education Analyst'],
+                positions: [
+                    { role: 'AI Curriculum Designer', x: 400, y: 30 },
+                    { role: 'AI Online Tutor', x: 150, y: 150 },
+                    { role: 'AI Exam Designer', x: 650, y: 150 },
+                    { role: 'AI Language Tutor', x: 150, y: 270 },
+                    { role: 'AI Skills Assessor', x: 400, y: 270 },
+                    { role: 'AI Education Analyst', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Curriculum Designer', to: 'AI Online Tutor', content: '课程内容安排' },
+                    { from: 'AI Curriculum Designer', to: 'AI Exam Designer', content: '考试设计需求' },
+                    { from: 'AI Online Tutor', to: 'AI Language Tutor', content: '语言教学协作' },
+                    { from: 'AI Online Tutor', to: 'AI Skills Assessor', content: '技能评估需求' },
+                    { from: 'AI Exam Designer', to: 'AI Education Analyst', content: '考试数据分析' },
+                    { from: 'AI Skills Assessor', to: 'AI Education Analyst', content: '技能评估报告' }
+                ]
             }
         ];
 
@@ -24901,7 +25046,49 @@
             'AI Citizen Service': { icon: '🏛️', color: '#0ea5e9', role: 'AI公民服务师' },
             'AI Urban Manager': { icon: '🏙️', color: '#64748b', role: 'AI城市管理师' },
             'AI Emergency Planner': { icon: '🚨', color: '#dc2626', role: 'AI应急规划师' },
-            'AI Grant Writer': { icon: '💵', color: '#22c55e', role: 'AI补助撰写师' }
+            'AI Grant Writer': { icon: '💵', color: '#22c55e', role: 'AI补助撰写师' },
+            // Cycle 411 新增角色 - AI智能康复医疗
+            'AI Rehabilitation Doctor': { icon: '🏥', color: '#06b6d4', role: 'AI康复医生' },
+            'AI Physical Therapist': { icon: '💆', color: '#22c55e', role: 'AI物理治疗师' },
+            'AI Occupational Therapist': { icon: '🧘', color: '#8b5cf6', role: 'AI作业治疗师' },
+            'AI Speech Therapist': { icon: '🗣️', color: '#f59e0b', role: 'AI言语治疗师' },
+            'AI Rehabilitation Planner': { icon: '📋', color: '#ec4899', role: 'AI康复计划师' },
+            'AI Prosthetic Engineer': { icon: '🦾', color: '#3b82f6', role: 'AI假肢工程师' },
+            // Cycle 411 新增角色 - AI智能养老社区
+            'AI Elderly Care Manager': { icon: '👴', color: '#f97316', role: 'AI养老社区经理' },
+            'AI Senior Advisor': { icon: '👵', color: '#ec4899', role: 'AI老年顾问' },
+            'AI Health Monitor': { icon: '❤️', color: '#ef4444', role: 'AI健康监测师' },
+            'AI Companionship': { icon: '🤝', color: '#8b5cf6', role: 'AI陪伴师' },
+            'AI Mobility Assistant': { icon: '🚶', color: '#22c55e', role: 'AI行动辅助师' },
+            'AI Medication Manager': { icon: '💊', color: '#06b6d4', role: 'AI药物管理师' },
+            // Cycle 411 新增角色 - AI智能环保监测
+            'AI Environmental Monitor': { icon: '🌡️', color: '#10b981', role: 'AI环保监测师' },
+            'AI Pollution Detector': { icon: '☢️', color: '#22c55e', role: 'AI污染检测师' },
+            'AI Wildlife Tracker': { icon: '🦁', color: '#f59e0b', role: 'AI野生动物追踪师' },
+            'AI Conservationist': { icon: '🌳', color: '#84cc16', role: 'AI环保专家' },
+            'AI Carbon Footprint': { icon: '🌍', color: '#3b82f6', role: 'AI碳足迹分析师' },
+            'AI Waste Manager': { icon: '♻️', color: '#a855f7', role: 'AI废物管理师' },
+            // Cycle 411 新增角色 - AI智能能源审计
+            'AI Energy Auditor': { icon: '⚡', color: '#f59e0b', role: 'AI能源审计师' },
+            'AI Power Consumption Analyst': { icon: '📊', color: '#22c55e', role: 'AI电力消耗分析师' },
+            'AI Solar Panel Expert': { icon: '☀️', color: '#eab308', role: 'AI太阳能板专家' },
+            'AI Wind Energy Expert': { icon: '💨', color: '#06b6d4', role: 'AI风能专家' },
+            'AI Energy Storage Expert': { icon: '🔋', color: '#8b5cf6', role: 'AI储能专家' },
+            'AI Green Building': { icon: '🏢', color: '#10b981', role: 'AI绿色建筑专家' },
+            // Cycle 411 新增角色 - AI智能法律服务
+            'AI Legal Consultant': { icon: '⚖️', color: '#6366f1', role: 'AI法律顾问' },
+            'AI Contract Drafter': { icon: '📝', color: '#3b82f6', role: 'AI合同起草师' },
+            'AI Compliance Officer': { icon: '✅', color: '#22c55e', role: 'AI合规官' },
+            'AI IP Attorney': { icon: '💡', color: '#f59e0b', role: 'AI知识产权律师' },
+            'AI Litigation Assistant': { icon: '🏛️', color: '#ec4899', role: 'AI诉讼助理' },
+            'AI Mediation Expert': { icon: '🤝', color: '#8b5cf6', role: 'AI调解专家' },
+            // Cycle 411 新增角色 - AI智能教育培训
+            'AI Curriculum Designer': { icon: '📚', color: '#3b82f6', role: 'AI课程设计师' },
+            'AI Online Tutor': { icon: '👨‍🏫', color: '#22c55e', role: 'AI在线导师' },
+            'AI Exam Designer': { icon: '📝', color: '#f59e0b', role: 'AI考试设计员' },
+            'AI Language Tutor': { icon: '🌐', color: '#06b6d4', role: 'AI语言导师' },
+            'AI Skills Assessor': { icon: '🎯', color: '#ec4899', role: 'AI技能评估师' },
+            'AI Education Analyst': { icon: '📊', color: '#8b5cf6', role: 'AI教育分析师' }
         };
 
         // 拖拽相关变量
