@@ -22247,8 +22247,166 @@
             }
         ];
 
+        // Cycle 420 新增模板
+        const cycle420Templates = [
+            {
+                id: 'ai-banking-service',
+                name: 'AI智能银行服务系统',
+                icon: '🏦',
+                desc: '从账户管理到金融理财的完整银行服务流程',
+                agents: ['AI Banking Director', 'AI Account Manager', 'AI Loan Officer', 'AI Financial Advisor', 'AI Risk Manager', 'AI Compliance Officer'],
+                positions: [
+                    { role: 'AI Banking Director', x: 400, y: 30 },
+                    { role: 'AI Account Manager', x: 150, y: 150 },
+                    { role: 'AI Loan Officer', x: 650, y: 150 },
+                    { role: 'AI Financial Advisor', x: 150, y: 270 },
+                    { role: 'AI Risk Manager', x: 400, y: 350 },
+                    { role: 'AI Compliance Officer', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Banking Director', to: 'AI Account Manager', content: '账户管理需求' },
+                    { from: 'AI Banking Director', to: 'AI Loan Officer', content: '贷款需求' },
+                    { from: 'AI Account Manager', to: 'AI Financial Advisor', content: '理财需求' },
+                    { from: 'AI Loan Officer', to: 'AI Risk Manager', content: '风险评估需求' },
+                    { from: 'AI Financial Advisor', to: 'AI Compliance Officer', content: '合规需求' }
+                ]
+            },
+            {
+                id: 'ai-insurance-service-v2',
+                name: 'AI智能保险服务系统',
+                icon: '🛡️',
+                desc: '从保险咨询到理赔服务的完整保险服务流程',
+                agents: ['AI Insurance Director', 'AI Underwriter', 'AI Claims Adjuster', 'AI Actuary', 'AI Agent Manager', 'AI Customer Service'],
+                positions: [
+                    { role: 'AI Insurance Director', x: 400, y: 30 },
+                    { role: 'AI Underwriter', x: 150, y: 150 },
+                    { role: 'AI Claims Adjuster', x: 650, y: 150 },
+                    { role: 'AI Actuary', x: 150, y: 270 },
+                    { role: 'AI Agent Manager', x: 400, y: 350 },
+                    { role: 'AI Customer Service', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Insurance Director', to: 'AI Underwriter', content: '核保需求' },
+                    { from: 'AI Insurance Director', to: 'AI Claims Adjuster', content: '理赔需求' },
+                    { from: 'AI Underwriter', to: 'AI Actuary', content: '精算需求' },
+                    { from: 'AI Claims Adjuster', to: 'AI Agent Manager', content: '代理管理需求' },
+                    { from: 'AI Actuary', to: 'AI Customer Service', content: '客服需求' }
+                ]
+            },
+            {
+                id: 'ai-education-service-v2',
+                name: 'AI智能教育服务系统',
+                icon: '🎓',
+                desc: '从课程学习到职业规划的完整教育服务流程',
+                agents: ['AI Education Director', 'AI Course Designer', 'AI Tutor', 'AI Exam Proctor', 'AI Career Counselor', 'AI Student Advisor'],
+                positions: [
+                    { role: 'AI Education Director', x: 400, y: 30 },
+                    { role: 'AI Course Designer', x: 150, y: 150 },
+                    { role: 'AI Tutor', x: 650, y: 150 },
+                    { role: 'AI Exam Proctor', x: 150, y: 270 },
+                    { role: 'AI Career Counselor', x: 400, y: 350 },
+                    { role: 'AI Student Advisor', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Education Director', to: 'AI Course Designer', content: '课程设计需求' },
+                    { from: 'AI Education Director', to: 'AI Tutor', content: '辅导需求' },
+                    { from: 'AI Course Designer', to: 'AI Exam Proctor', content: '考试需求' },
+                    { from: 'AI Tutor', to: 'AI Career Counselor', content: '职业规划需求' },
+                    { from: 'AI Exam Proctor', to: 'AI Student Advisor', content: '学业指导需求' }
+                ]
+            },
+            {
+                id: 'ai-entertainment-service',
+                name: 'AI智能娱乐服务系统',
+                icon: '🎭',
+                desc: '从演出策划到观众互动的完整娱乐服务流程',
+                agents: ['AI Entertainment Director', 'AI Event Planner', 'AI Talent Scout', 'AI Stage Manager', 'AI Marketing Coordinator', 'AI Audience Analyst'],
+                positions: [
+                    { role: 'AI Entertainment Director', x: 400, y: 30 },
+                    { role: 'AI Event Planner', x: 150, y: 150 },
+                    { role: 'AI Talent Scout', x: 650, y: 150 },
+                    { role: 'AI Stage Manager', x: 150, y: 270 },
+                    { role: 'AI Marketing Coordinator', x: 400, y: 350 },
+                    { role: 'AI Audience Analyst', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Entertainment Director', to: 'AI Event Planner', content: '活动策划需求' },
+                    { from: 'AI Entertainment Director', to: 'AI Talent Scout', content: '人才需求' },
+                    { from: 'AI Event Planner', to: 'AI Stage Manager', content: '舞台管理需求' },
+                    { from: 'AI Talent Scout', to: 'AI Marketing Coordinator', content: '营销需求' },
+                    { from: 'AI Stage Manager', to: 'AI Audience Analyst', content: '观众分析需求' }
+                ]
+            },
+            {
+                id: 'ai-fitness-service',
+                name: 'AI智能健身服务系统',
+                icon: '💪',
+                desc: '从健身指导到健康管理的完整健身服务流程',
+                agents: ['AI Fitness Director', 'AI Personal Trainer', 'AI Nutritionist', 'AI Workout Planner', 'AI Health Monitor', 'AI Equipment Specialist'],
+                positions: [
+                    { role: 'AI Fitness Director', x: 400, y: 30 },
+                    { role: 'AI Personal Trainer', x: 150, y: 150 },
+                    { role: 'AI Nutritionist', x: 650, y: 150 },
+                    { role: 'AI Workout Planner', x: 150, y: 270 },
+                    { role: 'AI Health Monitor', x: 400, y: 350 },
+                    { role: 'AI Equipment Specialist', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fitness Director', to: 'AI Personal Trainer', content: '私教需求' },
+                    { from: 'AI Fitness Director', to: 'AI Nutritionist', content: '营养需求' },
+                    { from: 'AI Personal Trainer', to: 'AI Workout Planner', content: '训练计划需求' },
+                    { from: 'AI Nutritionist', to: 'AI Health Monitor', content: '健康监测需求' },
+                    { from: 'AI Workout Planner', to: 'AI Equipment Specialist', content: '器材需求' }
+                ]
+            },
+            {
+                id: 'ai-beauty-service',
+                name: 'AI智能美容服务系统',
+                icon: '💄',
+                desc: '从美容咨询到形象设计的完整美容服务流程',
+                agents: ['AI Beauty Director', 'AI Skin Consultant', 'AI Makeup Artist', 'AI Image Designer', 'AI Product Specialist', 'AI Customer Service'],
+                positions: [
+                    { role: 'AI Beauty Director', x: 400, y: 30 },
+                    { role: 'AI Skin Consultant', x: 150, y: 150 },
+                    { role: 'AI Makeup Artist', x: 650, y: 150 },
+                    { role: 'AI Image Designer', x: 150, y: 270 },
+                    { role: 'AI Product Specialist', x: 400, y: 350 },
+                    { role: 'AI Customer Service', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Beauty Director', to: 'AI Skin Consultant', content: '皮肤咨询需求' },
+                    { from: 'AI Beauty Director', to: 'AI Makeup Artist', content: '化妆需求' },
+                    { from: 'AI Skin Consultant', to: 'AI Image Designer', content: '形象设计需求' },
+                    { from: 'AI Makeup Artist', to: 'AI Product Specialist', content: '产品需求' },
+                    { from: 'AI Image Designer', to: 'AI Customer Service', content: '客服需求' }
+                ]
+            },
+            {
+                id: 'ai-pet-service-v2',
+                name: 'AI智能宠物服务系统',
+                icon: '🐾',
+                desc: '从宠物医疗到美容护理的完整宠物服务流程',
+                agents: ['AI Pet Director', 'AI Veterinarian', 'AI Pet Groomer', 'AI Pet Trainer', 'AI Nutrition Advisor', 'AI Pet Daycare Manager'],
+                positions: [
+                    { role: 'AI Pet Director', x: 400, y: 30 },
+                    { role: 'AI Veterinarian', x: 150, y: 150 },
+                    { role: 'AI Pet Groomer', x: 650, y: 150 },
+                    { role: 'AI Pet Trainer', x: 150, y: 270 },
+                    { role: 'AI Nutrition Advisor', x: 400, y: 350 },
+                    { role: 'AI Pet Daycare Manager', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Pet Director', to: 'AI Veterinarian', content: '医疗需求' },
+                    { from: 'AI Pet Director', to: 'AI Pet Groomer', content: '美容需求' },
+                    { from: 'AI Veterinarian', to: 'AI Pet Trainer', content: '训练需求' },
+                    { from: 'AI Pet Groomer', to: 'AI Nutrition Advisor', content: '营养需求' },
+                    { from: 'AI Pet Trainer', to: 'AI Pet Daycare Manager', content: '寄养需求' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -26618,7 +26776,52 @@
             'AI Kitchen Manager': { icon: '👨‍🍳', color: '#22c55e', role: 'AI厨房经理' },
             'AI Supplier Manager': { icon: '📦', color: '#8b5cf6', role: 'AI供应商经理' },
             'AI Quality Inspector': { icon: '🔍', color: '#14b8a6', role: 'AI质量检查员' },
-            'AI Customer Experience': { icon: '😊', color: '#ec4899', role: 'AI客户体验专员' }
+            'AI Customer Experience': { icon: '😊', color: '#ec4899', role: 'AI客户体验专员' },
+            // Cycle 420 新增角色 - AI智能银行服务
+            'AI Banking Director': { icon: '🏦', color: '#1e40af', role: 'AI银行服务总监' },
+            'AI Account Manager': { icon: '👤', color: '#3b82f6', role: 'AI账户经理' },
+            'AI Loan Officer': { icon: '💳', color: '#10b981', role: 'AI贷款专员' },
+            'AI Actuary': { icon: '📊', color: '#f59e0b', role: 'AI精算师' },
+            'AI Agent Manager': { icon: '👔', color: '#8b5cf6', role: 'AI代理人经理' },
+            'AI Compliance Officer': { icon: '✅', color: '#06b6d4', role: 'AI合规官' },
+            // Cycle 420 新增角色 - AI智能保险服务
+            'AI Insurance Director': { icon: '🛡️', color: '#6366f1', role: 'AI保险服务总监' },
+            'AI Underwriter': { icon: '📝', color: '#ec4899', role: 'AI核保师' },
+            'AI Claims Adjuster': { icon: '📋', color: '#f97316', role: 'AI理赔员' },
+            // Cycle 420 新增角色 - AI智能教育服务
+            'AI Education Director': { icon: '🎓', color: '#8b5cf6', role: 'AI教育服务总监' },
+            'AI Course Designer': { icon: '📖', color: '#22c55e', role: 'AI课程设计师' },
+            'AI Tutor': { icon: '👨‍🏫', color: '#f97316', role: 'AI导师' },
+            'AI Exam Proctor': { icon: '👁️', color: '#3b82f6', role: 'AI智能监考' },
+            'AI Career Counselor': { icon: '💼', color: '#06b6d4', role: 'AI职业规划师' },
+            'AI Student Advisor': { icon: '🎓', color: '#a855f7', role: 'AI学业顾问' },
+            // Cycle 420 新增角色 - AI智能娱乐服务
+            'AI Entertainment Director': { icon: '🎭', color: '#ec4899', role: 'AI娱乐总监' },
+            'AI Event Planner': { icon: '🎪', color: '#f59e0b', role: 'AI活动策划师' },
+            'AI Talent Scout': { icon: '🔍', color: '#22c55e', role: 'AI星探' },
+            'AI Stage Manager': { icon: '🎬', color: '#8b5cf6', role: 'AI舞台经理' },
+            'AI Marketing Coordinator': { icon: '📢', color: '#06b6d4', role: 'AI营销协调员' },
+            'AI Audience Analyst': { icon: '📊', color: '#14b8a6', role: 'AI观众分析师' },
+            // Cycle 420 新增角色 - AI智能健身服务
+            'AI Fitness Director': { icon: '💪', color: '#f97316', role: 'AI健身总监' },
+            'AI Personal Trainer': { icon: '🏋️', color: '#22c55e', role: 'AI私人教练' },
+            'AI Nutritionist': { icon: '🥗', color: '#10b981', role: 'AI营养师' },
+            'AI Workout Planner': { icon: '📋', color: '#8b5cf6', role: 'AI训练计划师' },
+            'AI Health Monitor': { icon: '❤️', color: '#ef4444', role: 'AI健康监测师' },
+            'AI Equipment Specialist': { icon: '🏋️', color: '#3b82f6', role: 'AI器材专员' },
+            // Cycle 420 新增角色 - AI智能美容服务
+            'AI Beauty Director': { icon: '💄', color: '#ec4899', role: 'AI美容总监' },
+            'AI Skin Consultant': { icon: '✨', color: '#f59e0b', role: 'AI皮肤顾问' },
+            'AI Makeup Artist': { icon: '💅', color: '#a855f7', role: 'AI化妆师' },
+            'AI Image Designer': { icon: '🎨', color: '#8b5cf6', role: 'AI形象设计师' },
+            'AI Product Specialist': { icon: '💄', color: '#06b6d4', role: 'AI产品专员' },
+            // Cycle 420 新增角色 - AI智能宠物服务
+            'AI Pet Director': { icon: '🐾', color: '#f97316', role: 'AI宠物服务总监' },
+            'AI Veterinarian': { icon: '🐕', color: '#22c55e', role: 'AI宠物医生' },
+            'AI Pet Groomer': { icon: '✂️', color: '#ec4899', role: 'AI宠物美容师' },
+            'AI Pet Trainer': { icon: '🎾', color: '#8b5cf6', role: 'AI宠物训练师' },
+            'AI Nutrition Advisor': { icon: '🦴', color: '#14b8a6', role: 'AI营养顾问' },
+            'AI Pet Daycare Manager': { icon: '🏠', color: '#06b6d4', role: 'AI宠物寄养经理' }
         };
 
         // 拖拽相关变量
