@@ -12382,6 +12382,138 @@
                     { from: 'AI Rehabilitation Coach', to: 'AI Meal Delivery', content: '康复计划' },
                     { from: 'AI Meal Delivery', to: 'AI Safety Monitor', content: '送餐服务' }
                 ]
+            },
+            // Cycle 345 新增模板 - AI智能医疗健康系统
+            {
+                id: 'ai-medical-health',
+                name: 'AI智能医疗健康系统',
+                icon: '🏥',
+                desc: '从健康监测到远程诊疗的完整医疗健康流程',
+                agents: ['AI Health Monitor', 'AI Patient Advocate', 'AI Medical Scheduler', 'AI Health Educator', 'AI Telemedicine Advisor'],
+                positions: [
+                    { role: 'AI Health Monitor', x: 400, y: 50 },
+                    { role: 'AI Patient Advocate', x: 200, y: 180 },
+                    { role: 'AI Medical Scheduler', x: 600, y: 180 },
+                    { role: 'AI Health Educator', x: 300, y: 310 },
+                    { role: 'AI Telemedicine Advisor', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Health Monitor', to: 'AI Patient Advocate', content: '健康监测数据' },
+                    { from: 'AI Patient Advocate', to: 'AI Medical Scheduler', content: '患者需求' },
+                    { from: 'AI Medical Scheduler', to: 'AI Health Educator', content: '医疗排程' },
+                    { from: 'AI Health Educator', to: 'AI Telemedicine Advisor', content: '健康教育' },
+                    { from: 'AI Telemedicine Advisor', to: 'AI Health Monitor', content: '远程诊疗建议' }
+                ]
+            },
+            // Cycle 345 新增模板 - AI智能法律服务系统
+            {
+                id: 'ai-legal-services',
+                name: 'AI智能法律服务系统',
+                icon: '⚖️',
+                desc: '从法律研究到纠纷调解的完整法律服务流程',
+                agents: ['AI Legal Researcher', 'AI Contract Manager', 'AI Litigation Support', 'AI Compliance Trainer', 'AI Dispute Mediator'],
+                positions: [
+                    { role: 'AI Legal Researcher', x: 400, y: 50 },
+                    { role: 'AI Contract Manager', x: 200, y: 180 },
+                    { role: 'AI Litigation Support', x: 600, y: 180 },
+                    { role: 'AI Compliance Trainer', x: 300, y: 310 },
+                    { role: 'AI Dispute Mediator', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Legal Researcher', to: 'AI Contract Manager', content: '法律研究成果' },
+                    { from: 'AI Contract Manager', to: 'AI Litigation Support', content: '合同管理' },
+                    { from: 'AI Litigation Support', to: 'AI Compliance Trainer', content: '诉讼支持' },
+                    { from: 'AI Compliance Trainer', to: 'AI Dispute Mediator', content: '合规培训' },
+                    { from: 'AI Dispute Mediator', to: 'AI Legal Researcher', content: '纠纷调解' }
+                ]
+            },
+            // Cycle 345 新增模板 - AI智能教育培训系统
+            {
+                id: 'ai-education-training',
+                name: 'AI智能教育培训系统',
+                icon: '📚',
+                desc: '从课程开发到培训评估的完整教育培训流程',
+                agents: ['AI Curriculum Developer', 'AI Learning Designer', 'AI Exam Creator', 'AI Tutoring Coordinator', 'AI Training Evaluator'],
+                positions: [
+                    { role: 'AI Curriculum Developer', x: 400, y: 50 },
+                    { role: 'AI Learning Designer', x: 200, y: 180 },
+                    { role: 'AI Exam Creator', x: 600, y: 180 },
+                    { role: 'AI Tutoring Coordinator', x: 300, y: 310 },
+                    { role: 'AI Training Evaluator', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Curriculum Developer', to: 'AI Learning Designer', content: '课程开发' },
+                    { from: 'AI Learning Designer', to: 'AI Exam Creator', content: '学习设计' },
+                    { from: 'AI Exam Creator', to: 'AI Tutoring Coordinator', content: '试题创建' },
+                    { from: 'AI Tutoring Coordinator', to: 'AI Training Evaluator', content: '辅导协调' },
+                    { from: 'AI Training Evaluator', to: 'AI Curriculum Developer', content: '培训评估' }
+                ]
+            },
+            // Cycle 345 新增模板 - AI智能人力资源系统
+            {
+                id: 'ai-hr-system',
+                name: 'AI智能人力资源系统',
+                icon: '👔',
+                desc: '从人才招聘到员工发展的完整人力资源流程',
+                agents: ['AI Talent Scout', 'AI HR Analyst', 'AI Compensation Expert', 'AI Employee Developer', 'AI Workplace Safety'],
+                positions: [
+                    { role: 'AI Talent Scout', x: 400, y: 50 },
+                    { role: 'AI HR Analyst', x: 200, y: 180 },
+                    { role: 'AI Compensation Expert', x: 600, y: 180 },
+                    { role: 'AI Employee Developer', x: 300, y: 310 },
+                    { role: 'AI Workplace Safety', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Talent Scout', to: 'AI HR Analyst', content: '人才招聘' },
+                    { from: 'AI HR Analyst', to: 'AI Compensation Expert', content: '人力资源分析' },
+                    { from: 'AI Compensation Expert', to: 'AI Employee Developer', content: '薪酬方案' },
+                    { from: 'AI Employee Developer', to: 'AI Workplace Safety', content: '员工发展' },
+                    { from: 'AI Workplace Safety', to: 'AI Talent Scout', content: '职场安全' }
+                ]
+            },
+            // Cycle 345 新增模板 - AI智能环保能源系统
+            {
+                id: 'ai-environmental-energy',
+                name: 'AI智能环保能源系统',
+                icon: '🌍',
+                desc: '从碳审计到能源评估的完整环保能源流程',
+                agents: ['AI Carbon Auditor', 'AI Renewable Planner', 'AI Environmental Impact', 'AI Waste Manager', 'AI Energy Auditor'],
+                positions: [
+                    { role: 'AI Carbon Auditor', x: 400, y: 50 },
+                    { role: 'AI Renewable Planner', x: 200, y: 180 },
+                    { role: 'AI Environmental Impact', x: 600, y: 180 },
+                    { role: 'AI Waste Manager', x: 300, y: 310 },
+                    { role: 'AI Energy Auditor', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Carbon Auditor', to: 'AI Renewable Planner', content: '碳审计报告' },
+                    { from: 'AI Renewable Planner', to: 'AI Environmental Impact', content: '可再生能源规划' },
+                    { from: 'AI Environmental Impact', to: 'AI Waste Manager', content: '环境影响评估' },
+                    { from: 'AI Waste Manager', to: 'AI Energy Auditor', content: '废物管理' },
+                    { from: 'AI Energy Auditor', to: 'AI Carbon Auditor', content: '能源审计' }
+                ]
+            },
+            // Cycle 345 新增模板 - AI智能政府公共服务系统
+            {
+                id: 'ai-government-services',
+                name: 'AI智能政府公共服务系统',
+                icon: '🏛️',
+                desc: '从政策顾问到应急规划的完整政府公共服务流程',
+                agents: ['AI Policy Advisor', 'AI Public Relations', 'AI Citizen Service', 'AI Urban Manager', 'AI Emergency Planner'],
+                positions: [
+                    { role: 'AI Policy Advisor', x: 400, y: 50 },
+                    { role: 'AI Public Relations', x: 200, y: 180 },
+                    { role: 'AI Citizen Service', x: 600, y: 180 },
+                    { role: 'AI Urban Manager', x: 300, y: 310 },
+                    { role: 'AI Emergency Planner', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Policy Advisor', to: 'AI Public Relations', content: '政策建议' },
+                    { from: 'AI Public Relations', to: 'AI Citizen Service', content: '公共关系' },
+                    { from: 'AI Citizen Service', to: 'AI Urban Manager', content: '公民服务' },
+                    { from: 'AI Urban Manager', to: 'AI Emergency Planner', content: '城市管理' },
+                    { from: 'AI Emergency Planner', to: 'AI Policy Advisor', content: '应急规划' }
+                ]
             }
         ];
 
@@ -13777,7 +13909,44 @@
             'AI Medical Companion': { icon: '🏥', color: '#22c55e', role: 'AI医疗陪护师' },
             'AI Rehabilitation Coach': { icon: '💪', color: '#f59e0b', role: 'AI康复教练' },
             'AI Meal Delivery': { icon: '🍱', color: '#f97316', role: 'AI送餐服务师' },
-            'AI Safety Monitor': { icon: '👁️', color: '#dc2626', role: 'AI安全看护师' }
+            'AI Safety Monitor': { icon: '👁️', color: '#dc2626', role: 'AI安全看护师' },
+            // Cycle 345 新增角色 - AI 智能医疗健康
+            'AI Health Monitor': { icon: '🏥', color: '#0ea5e9', role: 'AI健康监测师' },
+            'AI Patient Advocate': { icon: '🤝', color: '#22c55e', role: 'AI患者代言人' },
+            'AI Medical Scheduler': { icon: '📅', color: '#f97316', role: 'AI医疗排程师' },
+            'AI Health Educator': { icon: '📚', color: '#8b5cf6', role: 'AI健康教育师' },
+            'AI Telemedicine Advisor': { icon: '📞', color: '#06b6d4', role: 'AI远程医疗顾问' },
+            // Cycle 345 新增角色 - AI 智能法律服务
+            'AI Legal Researcher': { icon: '🔍', color: '#64748b', role: 'AI法律研究员' },
+            'AI Contract Manager': { icon: '📜', color: '#8b5cf6', role: 'AI合同管理器' },
+            'AI Litigation Support': { icon: '⚔️', color: '#dc2626', role: 'AI诉讼支持' },
+            'AI Compliance Trainer': { icon: '✅', color: '#22c55e', role: 'AI合规培训师' },
+            'AI Dispute Mediator': { icon: '🤝', color: '#f59e0b', role: 'AI纠纷调解师' },
+            // Cycle 345 新增角色 - AI 智能教育培训
+            'AI Curriculum Developer': { icon: '📖', color: '#a855f7', role: 'AI课程开发者' },
+            'AI Learning Designer': { icon: '🎨', color: '#ec4899', role: 'AI学习设计师' },
+            'AI Exam Creator': { icon: '📝', color: '#f97316', role: 'AI出题专家' },
+            'AI Tutoring Coordinator': { icon: '🎓', color: '#22c55e', role: 'AI辅导协调员' },
+            'AI Training Evaluator': { icon: '📊', color: '#14b8a6', role: 'AI培训评估师' },
+            // Cycle 345 新增角色 - AI 智能人力资源
+            'AI Talent Scout': { icon: '🔍', color: '#f59e0b', role: 'AI人才猎头' },
+            'AI HR Analyst': { icon: '📈', color: '#8b5cf6', role: 'AI人力资源分析师' },
+            'AI Compensation Expert': { icon: '💰', color: '#22c55e', role: 'AI薪酬专家' },
+            'AI Employee Developer': { icon: '📚', color: '#ec4899', role: 'AI员工发展师' },
+            'AI Workplace Safety': { icon: '🛡️', color: '#dc2626', role: 'AI职场安全师' },
+            // Cycle 345 新增角色 - AI 智能环保能源
+            'AI Carbon Auditor': { icon: '🌍', color: '#10b981', role: 'AI碳审计师' },
+            'AI Renewable Planner': { icon: '🌞', color: '#f59e0b', role: 'AI可再生能源规划师' },
+            'AI Environmental Impact': { icon: '🌿', color: '#22c55e', role: 'AI环境影响评估师' },
+            'AI Waste Manager': { icon: '♻️', color: '#06b6d4', role: 'AI废物管理师' },
+            'AI Energy Auditor': { icon: '⚡', color: '#f97316', role: 'AI能源审计师' },
+            // Cycle 345 新增角色 - AI 智能政府公共服务
+            'AI Policy Advisor': { icon: '📜', color: '#8b5cf6', role: 'AI政策顾问' },
+            'AI Public Relations': { icon: '📣', color: '#ec4899', role: 'AI公共关系师' },
+            'AI Citizen Service': { icon: '🏛️', color: '#14b8a6', role: 'AI公民服务师' },
+            'AI Urban Manager': { icon: '🏙️', color: '#22c55e', role: 'AI城市管理师' },
+            'AI Emergency Planner': { icon: '🚨', color: '#ef4444', role: 'AI应急规划师' },
+            'AI Grant Writer': { icon: '💵', color: '#f59e0b', role: 'AI补助撰写师' }
         };
 
         // 拖拽相关变量
