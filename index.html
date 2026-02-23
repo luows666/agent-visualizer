@@ -21202,6 +21202,150 @@
                     { from: 'AI Inventory Analyst', to: 'AI Logistics Coordinator', content: '配送需求规划' },
                     { from: 'AI Logistics Coordinator', to: 'AI Supply Chain Manager', content: '配送完成报告' }
                 ]
+            },
+            // Cycle 413 新增模板 - AI智能医疗健康系统
+            {
+                id: 'ai-medical-health',
+                name: 'AI智能医疗健康系统',
+                icon: '🏥',
+                desc: '从诊断到治疗全流程的智能医疗系统',
+                agents: ['AI Medical Director', 'AI Diagnostic Assistant', 'AI Patient Coordinator', 'AI Health Analyst', 'AI Treatment Planner', 'AI Medical Records'],
+                positions: [
+                    { role: 'AI Medical Director', x: 400, y: 30 },
+                    { role: 'AI Diagnostic Assistant', x: 150, y: 150 },
+                    { role: 'AI Health Analyst', x: 650, y: 150 },
+                    { role: 'AI Patient Coordinator', x: 150, y: 270 },
+                    { role: 'AI Treatment Planner', x: 650, y: 270 },
+                    { role: 'AI Medical Records', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Medical Director', to: 'AI Diagnostic Assistant', content: '诊断任务下达' },
+                    { from: 'AI Medical Director', to: 'AI Health Analyst', content: '健康分析需求' },
+                    { from: 'AI Diagnostic Assistant', to: 'AI Patient Coordinator', content: '患者诊断结果' },
+                    { from: 'AI Health Analyst', to: 'AI Treatment Planner', content: '健康报告分析' },
+                    { from: 'AI Treatment Planner', to: 'AI Medical Records', content: '治疗方案记录' },
+                    { from: 'AI Patient Coordinator', to: 'AI Medical Director', content: '患者情况汇报' }
+                ]
+            },
+            // Cycle 413 新增模板 - AI智能教育培训系统
+            {
+                id: 'ai-education-training',
+                name: 'AI智能教育培训系统',
+                icon: '🎓',
+                desc: '从课程设计到学习效果评估的完整教育系统',
+                agents: ['AI Education Director', 'AI Curriculum Designer', 'AI Tutor', 'AI Learning Analyst', 'AI Student Counselor', 'AI Certification Manager'],
+                positions: [
+                    { role: 'AI Education Director', x: 400, y: 30 },
+                    { role: 'AI Curriculum Designer', x: 150, y: 150 },
+                    { role: 'AI Tutor', x: 650, y: 150 },
+                    { role: 'AI Learning Analyst', x: 150, y: 270 },
+                    { role: 'AI Student Counselor', x: 650, y: 270 },
+                    { role: 'AI Certification Manager', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Education Director', to: 'AI Curriculum Designer', content: '课程设计需求' },
+                    { from: 'AI Education Director', to: 'AI Tutor', content: '教学任务安排' },
+                    { from: 'AI Curriculum Designer', to: 'AI Learning Analyst', content: '学习内容分析' },
+                    { from: 'AI Tutor', to: 'AI Student Counselor', content: '学生学习反馈' },
+                    { from: 'AI Learning Analyst', to: 'AI Certification Manager', content: '学习效果评估' },
+                    { from: 'AI Student Counselor', to: 'AI Education Director', content: '学生整体情况汇报' }
+                ]
+            },
+            // Cycle 413 新增模板 - AI智能法律服务系统
+            {
+                id: 'ai-legal-services',
+                name: 'AI智能法律服务系统',
+                icon: '⚖️',
+                desc: '从案件分析到诉讼支持的全方位法律服务',
+                agents: ['AI Legal Director', 'AI Case Analyst', 'AI Contract Reviewer', 'AI Legal Consultant', 'AI Compliance Officer', 'AI Litigation Assistant'],
+                positions: [
+                    { role: 'AI Legal Director', x: 400, y: 30 },
+                    { role: 'AI Case Analyst', x: 150, y: 150 },
+                    { role: 'AI Contract Reviewer', x: 650, y: 150 },
+                    { role: 'AI Legal Consultant', x: 150, y: 270 },
+                    { role: 'AI Compliance Officer', x: 650, y: 270 },
+                    { role: 'AI Litigation Assistant', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Legal Director', to: 'AI Case Analyst', content: '案件分析任务' },
+                    { from: 'AI Legal Director', to: 'AI Contract Reviewer', content: '合同审查任务' },
+                    { from: 'AI Case Analyst', to: 'AI Legal Consultant', content: '案例法律意见' },
+                    { from: 'AI Contract Reviewer', to: 'AI Compliance Officer', content: '合规审查结果' },
+                    { from: 'AI Legal Consultant', to: 'AI Litigation Assistant', content: '诉讼支持需求' },
+                    { from: 'AI Compliance Officer', to: 'AI Legal Director', content: '合规报告' }
+                ]
+            },
+            // Cycle 413 新增模板 - AI智能房地产系统
+            {
+                id: 'ai-real-estate',
+                name: 'AI智能房地产系统',
+                icon: '🏠',
+                desc: '从估值到交易全程的智能房产服务系统',
+                agents: ['AI Real Estate Director', 'AI Property Valuer', 'AI Leasing Agent', 'AI Property Manager', 'AI Market Analyst', 'AI Investment Advisor'],
+                positions: [
+                    { role: 'AI Real Estate Director', x: 400, y: 30 },
+                    { role: 'AI Property Valuer', x: 150, y: 150 },
+                    { role: 'AI Market Analyst', x: 650, y: 150 },
+                    { role: 'AI Leasing Agent', x: 150, y: 270 },
+                    { role: 'AI Investment Advisor', x: 650, y: 270 },
+                    { role: 'AI Property Manager', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Real Estate Director', to: 'AI Property Valuer', content: '房产估值任务' },
+                    { from: 'AI Real Estate Director', to: 'AI Market Analyst', content: '市场分析需求' },
+                    { from: 'AI Property Valuer', to: 'AI Leasing Agent', content: '估值结果' },
+                    { from: 'AI Market Analyst', to: 'AI Investment Advisor', content: '投资分析报告' },
+                    { from: 'AI Leasing Agent', to: 'AI Property Manager', content: '租赁业务需求' },
+                    { from: 'AI Investment Advisor', to: 'AI Real Estate Director', content: '投资建议报告' }
+                ]
+            },
+            // Cycle 413 新增模板 - AI智能旅游服务系统
+            {
+                id: 'ai-travel-services',
+                name: 'AI智能旅游服务系统',
+                icon: '✈️',
+                desc: '从行程规划到旅行体验的全程智能旅游服务',
+                agents: ['AI Travel Director', 'AI Trip Planner', 'AI Booking Agent', 'AI Concierge', 'AI Travel Guide', 'AI Experience Curator'],
+                positions: [
+                    { role: 'AI Travel Director', x: 400, y: 30 },
+                    { role: 'AI Trip Planner', x: 150, y: 150 },
+                    { role: 'AI Booking Agent', x: 650, y: 150 },
+                    { role: 'AI Travel Guide', x: 150, y: 270 },
+                    { role: 'AI Concierge', x: 650, y: 270 },
+                    { role: 'AI Experience Curator', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Travel Director', to: 'AI Trip Planner', content: '行程规划需求' },
+                    { from: 'AI Travel Director', to: 'AI Experience Curator', content: '体验设计需求' },
+                    { from: 'AI Trip Planner', to: 'AI Booking Agent', content: '预订需求' },
+                    { from: 'AI Trip Planner', to: 'AI Travel Guide', content: '导游安排' },
+                    { from: 'AI Booking Agent', to: 'AI Concierge', content: '服务预订确认' },
+                    { from: 'AI Travel Guide', to: 'AI Experience Curator', content: '体验反馈' }
+                ]
+            },
+            // Cycle 413 新增模板 - AI智能客户服务系统
+            {
+                id: 'ai-customer-service',
+                name: 'AI智能客户服务系统',
+                icon: '🤝',
+                desc: '从客户支持到成功管理的全周期客户服务',
+                agents: ['AI Customer Success Director', 'AI Support Agent', 'AI Complaint Handler', 'AI NPS Analyst', 'AI Onboarding Specialist', 'AI Relationship Manager'],
+                positions: [
+                    { role: 'AI Customer Success Director', x: 400, y: 30 },
+                    { role: 'AI Support Agent', x: 150, y: 150 },
+                    { role: 'AI Onboarding Specialist', x: 650, y: 150 },
+                    { role: 'AI Complaint Handler', x: 150, y: 270 },
+                    { role: 'AI Relationship Manager', x: 650, y: 270 },
+                    { role: 'AI NPS Analyst', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Customer Success Director', to: 'AI Support Agent', content: '支持任务分配' },
+                    { from: 'AI Customer Success Director', to: 'AI Onboarding Specialist', content: '入职任务安排' },
+                    { from: 'AI Support Agent', to: 'AI Complaint Handler', content: '投诉转接' },
+                    { from: 'AI Support Agent', to: 'AI Relationship Manager', content: '关系维护需求' },
+                    { from: 'AI Onboarding Specialist', to: 'AI NPS Analyst', content: '入职满意度数据' },
+                    { from: 'AI Complaint Handler', to: 'AI Customer Success Director', content: '投诉处理报告' }
+                ]
             }
         ];
 
@@ -25274,7 +25418,49 @@
             'AI Logistics Coordinator': { icon: '🚚', color: '#22c55e', role: 'AI物流协调师' },
             'AI Inventory Analyst': { icon: '📦', color: '#8b5cf6', role: 'AI库存分析师' },
             'AI Warehouse Manager': { icon: '🏭', color: '#64748b', role: 'AI仓储经理' },
-            'AI Demand Planner': { icon: '📊', color: '#3b82f6', role: 'AI需求规划师' }
+            'AI Demand Planner': { icon: '📊', color: '#3b82f6', role: 'AI需求规划师' },
+            // Cycle 413 新增角色 - AI智能医疗健康
+            'AI Medical Director': { icon: '🏥', color: '#14b8a6', role: 'AI医疗总监' },
+            'AI Diagnostic Assistant': { icon: '🩺', color: '#06b6d4', role: 'AI诊断助手' },
+            'AI Patient Coordinator': { icon: '🤝', color: '#ec4899', role: 'AI患者协调员' },
+            'AI Health Analyst': { icon: '📈', color: '#22c55e', role: 'AI健康分析师' },
+            'AI Treatment Planner': { icon: '💊', color: '#f59e0b', role: 'AI治疗规划师' },
+            'AI Medical Records': { icon: '📋', color: '#8b5cf6', role: 'AI病历管理员' },
+            // Cycle 413 新增角色 - AI智能教育培训
+            'AI Education Director': { icon: '🎓', color: '#3b82f6', role: 'AI教育总监' },
+            'AI Curriculum Designer': { icon: '📚', color: '#10b981', role: 'AI课程设计师' },
+            'AI Tutor': { icon: '👨‍🏫', color: '#f43f5e', role: 'AI导师' },
+            'AI Learning Analyst': { icon: '🧠', color: '#8b5cf6', role: 'AI学习分析师' },
+            'AI Student Counselor': { icon: '💬', color: '#ec4899', role: 'AI学业顾问' },
+            'AI Certification Manager': { icon: '🎖️', color: '#f59e0b', role: 'AI证书管理员' },
+            // Cycle 413 新增角色 - AI智能法律服务
+            'AI Legal Director': { icon: '⚖️', color: '#7c3aed', role: 'AI法律总监' },
+            'AI Case Analyst': { icon: '🔎', color: '#06b6d4', role: 'AI案例分析师' },
+            'AI Contract Reviewer': { icon: '📄', color: '#22c55e', role: 'AI合同审查员' },
+            'AI Legal Consultant': { icon: '💼', color: '#f59e0b', role: 'AI法律顾问' },
+            'AI Compliance Officer': { icon: '✅', color: '#3b82f6', role: 'AI合规官' },
+            'AI Litigation Assistant': { icon: '⚔️', color: '#ef4444', role: 'AI诉讼助理' },
+            // Cycle 413 新增角色 - AI智能房地产
+            'AI Real Estate Director': { icon: '🏠', color: '#f97316', role: 'AI房地产总监' },
+            'AI Property Valuer': { icon: '💰', color: '#22c55e', role: 'AI房产估价师' },
+            'AI Leasing Agent': { icon: '🔑', color: '#8b5cf6', role: 'AI租赁经纪人' },
+            'AI Property Manager': { icon: '🏢', color: '#06b6d4', role: 'AI物业管理师' },
+            'AI Market Analyst': { icon: '📊', color: '#ec4899', role: 'AI市场分析师' },
+            'AI Investment Advisor': { icon: '📈', color: '#f59e0b', role: 'AI投资顾问' },
+            // Cycle 413 新增角色 - AI智能旅游服务
+            'AI Travel Director': { icon: '✈️', color: '#0ea5e9', role: 'AI旅游总监' },
+            'AI Trip Planner': { icon: '🗺️', color: '#10b981', role: 'AI行程规划师' },
+            'AI Booking Agent': { icon: '🎫', color: '#f43f5e', role: 'AI订票代理' },
+            'AI Concierge': { icon: '🛎️', color: '#f59e0b', role: 'AI礼宾服务' },
+            'AI Travel Guide': { icon: '🧭', color: '#8b5cf6', role: 'AI导游' },
+            'AI Experience Curator': { icon: '🌟', color: '#ec4899', role: 'AI体验策展人' },
+            // Cycle 413 新增角色 - AI智能客户服务
+            'AI Customer Success Director': { icon: '🤝', color: '#14b8a6', role: 'AI客户成功总监' },
+            'AI Support Agent': { icon: '🎧', color: '#06b6d4', role: 'AI客服代理' },
+            'AI Complaint Handler': { icon: '📢', color: '#ef4444', role: 'AI投诉处理员' },
+            'AI NPS Analyst': { icon: '📊', color: '#22c55e', role: 'AI NPS 分析师' },
+            'AI Onboarding Specialist': { icon: '🚀', color: '#f59e0b', role: 'AI入职专员' },
+            'AI Relationship Manager': { icon: '💎', color: '#8b5cf6', role: 'AI客户关系经理' }
         };
 
         // 拖拽相关变量
