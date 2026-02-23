@@ -16185,6 +16185,138 @@
                     { from: 'AI Dental Technician', to: 'AI Dentist', content: '牙冠制作' },
                     { from: 'AI Dental Receptionist', to: 'AI Dentist', content: '预约信息' }
                 ]
+            },
+            // Cycle 373 新增模板 - AI智能电商直播系统
+            {
+                id: 'ai-ecommerce-live',
+                name: 'AI智能电商直播系统',
+                icon: '🎥',
+                desc: '从直播策划到带货成交的完整电商直播流程',
+                agents: ['AI Live Stream Host', 'AI Content Moderator', 'AI Analytics Reporter', 'AI Interactive Planner', 'AI弹幕 Analyst'],
+                positions: [
+                    { role: 'AI Live Stream Host', x: 400, y: 50 },
+                    { role: 'AI Content Moderator', x: 200, y: 180 },
+                    { role: 'AI Analytics Reporter', x: 600, y: 180 },
+                    { role: 'AI Interactive Planner', x: 200, y: 310 },
+                    { role: 'AI弹幕 Analyst', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Live Stream Host', to: 'AI Content Moderator', content: '内容审核' },
+                    { from: 'AI Content Moderator', to: 'AI Interactive Planner', content: '审核结果' },
+                    { from: 'AI Interactive Planner', to: 'AI Live Stream Host', content: '互动策略' },
+                    { from: 'AI Analytics Reporter', to: 'AI Live Stream Host', content: '数据报告' },
+                    { from: 'AI弹幕 Analyst', to: 'AI Analytics Reporter', content: '弹幕分析' }
+                ]
+            },
+            // Cycle 373 新增模板 - AI智能环保治理系统
+            {
+                id: 'ai-environmental',
+                name: 'AI智能环保治理系统',
+                icon: '🌿',
+                desc: '从环境监测到可持续发展的完整环保治理流程',
+                agents: ['AI Environmental Scientist', 'AI Pollution Monitor', 'AI Carbon Analyst', 'AI Eco Assessor', 'AI Green Planner'],
+                positions: [
+                    { role: 'AI Environmental Scientist', x: 400, y: 50 },
+                    { role: 'AI Pollution Monitor', x: 200, y: 180 },
+                    { role: 'AI Carbon Analyst', x: 600, y: 180 },
+                    { role: 'AI Eco Assessor', x: 200, y: 310 },
+                    { role: 'AI Green Planner', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Scientist', to: 'AI Pollution Monitor', content: '监测任务' },
+                    { from: 'AI Pollution Monitor', to: 'AI Carbon Analyst', content: '污染数据' },
+                    { from: 'AI Carbon Analyst', to: 'AI Eco Assessor', content: '碳排分析' },
+                    { from: 'AI Eco Assessor', to: 'AI Green Planner', content: '评估报告' },
+                    { from: 'AI Green Planner', to: 'AI Environmental Scientist', content: '治理方案' }
+                ]
+            },
+            // Cycle 373 新增模板 - AI智能水资源管理系统
+            {
+                id: 'ai-water-management',
+                name: 'AI智能水资源管理系统',
+                icon: '💧',
+                desc: '从水源保护到用水管理的完整水资源管理流程',
+                agents: ['AI Water Resource Manager', 'AI Water Quality Tester', 'AI Irrigation Engineer', 'AI Flood Forecaster', 'AI Water Conservator'],
+                positions: [
+                    { role: 'AI Water Resource Manager', x: 400, y: 50 },
+                    { role: 'AI Water Quality Tester', x: 200, y: 180 },
+                    { role: 'AI Irrigation Engineer', x: 600, y: 180 },
+                    { role: 'AI Flood Forecaster', x: 200, y: 310 },
+                    { role: 'AI Water Conservator', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Water Resource Manager', to: 'AI Water Quality Tester', content: '检测任务' },
+                    { from: 'AI Water Quality Tester', to: 'AI Irrigation Engineer', content: '水质报告' },
+                    { from: 'AI Irrigation Engineer', to: 'AI Water Conservator', content: '灌溉方案' },
+                    { from: 'AI Flood Forecaster', to: 'AI Water Resource Manager', content: '预警信息' },
+                    { from: 'AI Water Conservator', to: 'AI Water Resource Manager', content: '保护建议' }
+                ]
+            },
+            // Cycle 373 新增模板 - AI智能园林绿化系统
+            {
+                id: 'ai-landscape',
+                name: 'AI智能园林绿化系统',
+                icon: '🌳',
+                desc: '从园林设计到绿化养护的完整园林绿化流程',
+                agents: ['AI Landscape Manager', 'AI Garden Designer', 'AI Tree Care Specialist', 'AI Park Manager', 'AI Greenery Engineer'],
+                positions: [
+                    { role: 'AI Landscape Manager', x: 400, y: 50 },
+                    { role: 'AI Garden Designer', x: 200, y: 180 },
+                    { role: 'AI Tree Care Specialist', x: 600, y: 180 },
+                    { role: 'AI Park Manager', x: 200, y: 310 },
+                    { role: 'AI Greenery Engineer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Landscape Manager', to: 'AI Garden Designer', content: '设计任务' },
+                    { from: 'AI Garden Designer', to: 'AI Tree Care Specialist', content: '植被需求' },
+                    { from: 'AI Tree Care Specialist', to: 'AI Greenery Engineer', content: '养护方案' },
+                    { from: 'AI Greenery Engineer', to: 'AI Park Manager', content: '施工报告' },
+                    { from: 'AI Park Manager', to: 'AI Landscape Manager', content: '运营反馈' }
+                ]
+            },
+            // Cycle 373 新增模板 - AI智能社区服务系统
+            {
+                id: 'ai-community-service',
+                name: 'AI智能社区服务系统',
+                icon: '🏘️',
+                desc: '从社区管理到居民服务的完整社区服务流程',
+                agents: ['AI Community Service Manager', 'AI Resident Service', 'AI Community Events', 'AI Volunteer Coordinator', 'AI Neighborhood Watch'],
+                positions: [
+                    { role: 'AI Community Service Manager', x: 400, y: 50 },
+                    { role: 'AI Resident Service', x: 200, y: 180 },
+                    { role: 'AI Community Events', x: 600, y: 180 },
+                    { role: 'AI Volunteer Coordinator', x: 200, y: 310 },
+                    { role: 'AI Neighborhood Watch', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Community Service Manager', to: 'AI Resident Service', content: '服务任务' },
+                    { from: 'AI Resident Service', to: 'AI Community Events', content: '活动需求' },
+                    { from: 'AI Community Events', to: 'AI Volunteer Coordinator', content: '志愿者招募' },
+                    { from: 'AI Neighborhood Watch', to: 'AI Community Service Manager', content: '安全报告' },
+                    { from: 'AI Volunteer Coordinator', to: 'AI Community Events', content: '志愿者反馈' }
+                ]
+            },
+            // Cycle 373 新增模板 - AI智能保险经纪系统
+            {
+                id: 'ai-insurance-broker',
+                name: 'AI智能保险经纪系统',
+                icon: '🏦',
+                desc: '从保险咨询到理赔代理的完整保险经纪流程',
+                agents: ['AI Insurance Broker', 'AI Policy Designer', 'AI Claims Supervisor', 'AI Customer Claims', 'AI Insurance Analyst'],
+                positions: [
+                    { role: 'AI Insurance Broker', x: 400, y: 50 },
+                    { role: 'AI Policy Designer', x: 200, y: 180 },
+                    { role: 'AI Claims Supervisor', x: 600, y: 180 },
+                    { role: 'AI Customer Claims', x: 200, y: 310 },
+                    { role: 'AI Insurance Analyst', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Insurance Broker', to: 'AI Policy Designer', content: '客户需求' },
+                    { from: 'AI Policy Designer', to: 'AI Insurance Analyst', content: '保单设计' },
+                    { from: 'AI Insurance Analyst', to: 'AI Insurance Broker', content: '风险评估' },
+                    { from: 'AI Customer Claims', to: 'AI Claims Supervisor', content: '理赔申请' },
+                    { from: 'AI Claims Supervisor', to: 'AI Customer Claims', content: '理赔结果' }
+                ]
             }
         ];
 
@@ -18701,7 +18833,43 @@
             'AI Vet Surgeon': { icon: '🔬', color: '#dc2626', role: 'AI宠物外科医生' },
             'AI Pet Nutritionist': { icon: '🦴', color: '#22c55e', role: 'AI宠物营养师' },
             'AI Pet Pharmacist': { icon: '💊', color: '#8b5cf6', role: 'AI宠物药剂师' },
-            'AI Pet Groomer': { icon: '✂️', color: '#ec4899', role: 'AI宠物美容师' }
+            'AI Pet Groomer': { icon: '✂️', color: '#ec4899', role: 'AI宠物美容师' },
+            // Cycle 373 新增角色 - AI 智能电商直播
+            'AI Live Stream Host': { icon: '📹', color: '#ec4899', role: 'AI直播主播' },
+            'AI Content Moderator': { icon: '🛡️', color: '#dc2626', role: 'AI内容审核员' },
+            'AI Analytics Reporter': { icon: '📊', color: '#8b5cf6', role: 'AI数据播报员' },
+            'AI Interactive Planner': { icon: '💬', color: '#22c55e', role: 'AI互动策划师' },
+            'AI弹幕 Analyst': { icon: '💭', color: '#f59e0b', role: 'AI弹幕分析师' },
+            // Cycle 373 新增角色 - AI 智能环保治理
+            'AI Environmental Scientist': { icon: '🌿', color: '#10b981', role: 'AI环境科学家' },
+            'AI Pollution Monitor': { icon: '🌫️', color: '#64748b', role: 'AI污染监测师' },
+            'AI Carbon Analyst': { icon: '🌍', color: '#06b6d4', role: 'AI碳分析师' },
+            'AI Eco Assessor': { icon: '✅', color: '#22c55e', role: 'AI生态评估师' },
+            'AI Green Planner': { icon: '🌱', color: '#10b981', role: 'AI绿色规划师' },
+            // Cycle 373 新增角色 - AI 智能水资源管理
+            'AI Water Resource Manager': { icon: '💧', color: '#0ea5e9', role: 'AI水资源管理师' },
+            'AI Water Quality Tester': { icon: '🔬', color: '#06b6d4', role: 'AI水质检测师' },
+            'AI Irrigation Engineer': { icon: '🚿', color: '#22c55e', role: 'AI灌溉工程师' },
+            'AI Flood Forecaster': { icon: '🌊', color: '#3b82f6', role: 'AI洪水预报师' },
+            'AI Water Conservator': { icon: '🏞️', color: '#10b981', role: 'AI水源保护师' },
+            // Cycle 373 新增角色 - AI 智能园林绿化
+            'AI Landscape Manager': { icon: '🌳', color: '#22c55e', role: 'AI园林管理师' },
+            'AI Garden Designer': { icon: '🏡', color: '#ec4899', role: 'AI园林设计师' },
+            'AI Tree Care Specialist': { icon: '🌲', color: '#10b981', role: 'AI树木养护师' },
+            'AI Park Manager': { icon: '🌴', color: '#06b6d4', role: 'AI公园管理师' },
+            'AI Greenery Engineer': { icon: '🍀', color: '#22c55e', role: 'AI绿化工程师' },
+            // Cycle 373 新增角色 - AI 智能社区服务
+            'AI Community Service Manager': { icon: '🏘️', color: '#8b5cf6', role: 'AI社区服务经理' },
+            'AI Resident Service': { icon: '👤', color: '#06b6d4', role: 'AI居民服务师' },
+            'AI Community Events': { icon: '🎉', color: '#ec4899', role: 'AI社区活动师' },
+            'AI Volunteer Coordinator': { icon: '🙋', color: '#f59e0b', role: 'AI志愿者协调师' },
+            'AI Neighborhood Watch': { icon: '👁️', color: '#64748b', role: 'AI邻里守望师' },
+            // Cycle 373 新增角色 - AI 智能保险经纪
+            'AI Insurance Broker': { icon: '🏦', color: '#8b5cf6', role: 'AI保险经纪人' },
+            'AI Policy Designer': { icon: '📝', color: '#06b6d4', role: 'AI保单设计师' },
+            'AI Claims Supervisor': { icon: '📋', color: '#f97316', role: 'AI理赔主管' },
+            'AI Customer Claims': { icon: '🤝', color: '#22c55e', role: 'AI客户理赔师' },
+            'AI Insurance Analyst': { icon: '📊', color: '#14b8a6', role: 'AI保险分析师' }
         };
 
         // 拖拽相关变量
