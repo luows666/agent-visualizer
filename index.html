@@ -25987,8 +25987,173 @@
             }
         ];
 
+        // Cycle 443 - 新增行业服务系统模板
+        const cycle443Templates = [
+            // AI智能法律服务系统
+            {
+                id: 'ai-legal-service-v2',
+                name: 'AI智能法律服务系统',
+                icon: '⚖️',
+                desc: '智能法律服务管理，包括合同审核、诉讼支持、法律咨询等',
+                agents: ['AI Legal Director', 'AI Contract Auditor', 'AI Litigation Support', 'AI Legal Consultant', 'AI Compliance Officer', 'AI Case Manager'],
+                positions: [
+                    { role: 'AI Legal Director', x: 400, y: 30 },
+                    { role: 'AI Contract Auditor', x: 150, y: 150 },
+                    { role: 'AI Litigation Support', x: 650, y: 150 },
+                    { role: 'AI Legal Consultant', x: 150, y: 300 },
+                    { role: 'AI Compliance Officer', x: 400, y: 350 },
+                    { role: 'AI Case Manager', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Legal Director', to: 'AI Contract Auditor', content: '合同审核' },
+                    { from: 'AI Legal Director', to: 'AI Litigation Support', content: '诉讼支持' },
+                    { from: 'AI Contract Auditor', to: 'AI Legal Consultant', content: '法律咨询' },
+                    { from: 'AI Litigation Support', to: 'AI Case Manager', content: '案件管理' },
+                    { from: 'AI Legal Consultant', to: 'AI Compliance Officer', content: '合规审查' }
+                ]
+            },
+            // AI智能心理咨询服务系统
+            {
+                id: 'ai-psychology-service-v2',
+                name: 'AI智能心理咨询服务系统',
+                icon: '🧠',
+                desc: '智能心理咨询服务管理，包括心理评估、咨询预约、情绪疏导等',
+                agents: ['AI Psychology Director', 'AI Assessment Specialist', 'AI Counselor', 'AI Therapist', 'AI Crisis Response', 'AI Wellness Coach'],
+                positions: [
+                    { role: 'AI Psychology Director', x: 400, y: 30 },
+                    { role: 'AI Assessment Specialist', x: 150, y: 150 },
+                    { role: 'AI Counselor', x: 650, y: 150 },
+                    { role: 'AI Therapist', x: 150, y: 300 },
+                    { role: 'AI Crisis Response', x: 400, y: 350 },
+                    { role: 'AI Wellness Coach', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Psychology Director', to: 'AI Assessment Specialist', content: '心理评估' },
+                    { from: 'AI Psychology Director', to: 'AI Counselor', content: '咨询安排' },
+                    { from: 'AI Assessment Specialist', to: 'AI Therapist', content: '治疗方案' },
+                    { from: 'AI Counselor', to: 'AI Crisis Response', content: '危机干预' },
+                    { from: 'AI Crisis Response', to: 'AI Wellness Coach', content: '健康指导' }
+                ]
+            },
+            // AI智能能源管理服务系统
+            {
+                id: 'ai-energy-service-v2',
+                name: 'AI智能能源管理服务系统',
+                icon: '⚡',
+                desc: '智能能源服务管理，包括能耗监控、能源优化、绿色能源等',
+                agents: ['AI Energy Director', 'AI Energy Monitor', 'AI Optimization Specialist', 'AI Grid Manager', 'AI Renewable Expert', 'AI Carbon Tracker'],
+                positions: [
+                    { role: 'AI Energy Director', x: 400, y: 30 },
+                    { role: 'AI Energy Monitor', x: 150, y: 150 },
+                    { role: 'AI Optimization Specialist', x: 650, y: 150 },
+                    { role: 'AI Grid Manager', x: 150, y: 300 },
+                    { role: 'AI Renewable Expert', x: 400, y: 350 },
+                    { role: 'AI Carbon Tracker', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Energy Director', to: 'AI Energy Monitor', content: '能耗监控' },
+                    { from: 'AI Energy Director', to: 'AI Optimization Specialist', content: '能源优化' },
+                    { from: 'AI Energy Monitor', to: 'AI Grid Manager', content: '电网管理' },
+                    { from: 'AI Optimization Specialist', to: 'AI Renewable Expert', content: '绿色能源' },
+                    { from: 'AI Renewable Expert', to: 'AI Carbon Tracker', content: '碳排放追踪' }
+                ]
+            },
+            // AI智能物流配送服务系统
+            {
+                id: 'ai-logistics-service-v2',
+                name: 'AI智能物流配送服务系统',
+                icon: '🚚',
+                desc: '智能物流服务管理，包括路线规划、仓储管理、配送追踪等',
+                agents: ['AI Logistics Director', 'AI Route Planner', 'AI Warehouse Manager', 'AI Delivery Tracker', 'AI Fleet Coordinator', 'AI Supply Chain Analyst'],
+                positions: [
+                    { role: 'AI Logistics Director', x: 400, y: 30 },
+                    { role: 'AI Route Planner', x: 150, y: 150 },
+                    { role: 'AI Warehouse Manager', x: 650, y: 150 },
+                    { role: 'AI Delivery Tracker', x: 150, y: 300 },
+                    { role: 'AI Fleet Coordinator', x: 400, y: 350 },
+                    { role: 'AI Supply Chain Analyst', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Logistics Director', to: 'AI Route Planner', content: '路线规划' },
+                    { from: 'AI Logistics Director', to: 'AI Warehouse Manager', content: '仓储管理' },
+                    { from: 'AI Route Planner', to: 'AI Fleet Coordinator', content: '车队协调' },
+                    { from: 'AI Warehouse Manager', to: 'AI Delivery Tracker', content: '配送追踪' },
+                    { from: 'AI Delivery Tracker', to: 'AI Supply Chain Analyst', content: '供应链分析' }
+                ]
+            },
+            // AI智能餐饮服务系统
+            {
+                id: 'ai-food-service-v2',
+                name: 'AI智能餐饮服务系统',
+                icon: '🍽️',
+                desc: '智能餐饮服务管理，包括菜单设计、食材采购、订单处理等',
+                agents: ['AI Food Director', 'AI Menu Designer', 'AI Procurement Manager', 'AI Order Handler', 'AI Kitchen Manager', 'AI Quality Controller'],
+                positions: [
+                    { role: 'AI Food Director', x: 400, y: 30 },
+                    { role: 'AI Menu Designer', x: 150, y: 150 },
+                    { role: 'AI Procurement Manager', x: 650, y: 150 },
+                    { role: 'AI Order Handler', x: 150, y: 300 },
+                    { role: 'AI Kitchen Manager', x: 400, y: 350 },
+                    { role: 'AI Quality Controller', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Food Director', to: 'AI Menu Designer', content: '菜单设计' },
+                    { from: 'AI Food Director', to: 'AI Procurement Manager', content: '食材采购' },
+                    { from: 'AI Menu Designer', to: 'AI Kitchen Manager', content: '厨房管理' },
+                    { from: 'AI Procurement Manager', to: 'AI Quality Controller', content: '质量控制' },
+                    { from: 'AI Order Handler', to: 'AI Kitchen Manager', content: '订单处理' }
+                ]
+            },
+            // AI智能旅游服务系统
+            {
+                id: 'ai-travel-service-v2',
+                name: 'AI智能旅游服务系统',
+                icon: '✈️',
+                desc: '智能旅游服务管理，包括行程规划、酒店预订、景点导览等',
+                agents: ['AI Travel Director', 'AI Itinerary Planner', 'AI Hotel Booker', 'AI Tour Guide', 'AI Transport Coordinator', 'AI Travel Consultant'],
+                positions: [
+                    { role: 'AI Travel Director', x: 400, y: 30 },
+                    { role: 'AI Itinerary Planner', x: 150, y: 150 },
+                    { role: 'AI Hotel Booker', x: 650, y: 150 },
+                    { role: 'AI Tour Guide', x: 150, y: 300 },
+                    { role: 'AI Transport Coordinator', x: 400, y: 350 },
+                    { role: 'AI Travel Consultant', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Travel Director', to: 'AI Itinerary Planner', content: '行程规划' },
+                    { from: 'AI Travel Director', to: 'AI Hotel Booker', content: '酒店预订' },
+                    { from: 'AI Itinerary Planner', to: 'AI Tour Guide', content: '景点导览' },
+                    { from: 'AI Hotel Booker', to: 'AI Transport Coordinator', content: '交通协调' },
+                    { from: 'AI Transport Coordinator', to: 'AI Travel Consultant', content: '旅游咨询' }
+                ]
+            },
+            // AI智能健身服务系统
+            {
+                id: 'ai-fitness-service-v2',
+                name: 'AI智能健身服务系统',
+                icon: '💪',
+                desc: '智能健身服务管理，包括训练计划、体态评估、健康追踪等',
+                agents: ['AI Fitness Director', 'AI Training Planner', 'AI Posture Analyst', 'AI Health Tracker', 'AI Nutrition Coach', 'AI Workout Monitor'],
+                positions: [
+                    { role: 'AI Fitness Director', x: 400, y: 30 },
+                    { role: 'AI Training Planner', x: 150, y: 150 },
+                    { role: 'AI Posture Analyst', x: 650, y: 150 },
+                    { role: 'AI Health Tracker', x: 150, y: 300 },
+                    { role: 'AI Nutrition Coach', x: 400, y: 350 },
+                    { role: 'AI Workout Monitor', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fitness Director', to: 'AI Training Planner', content: '训练计划' },
+                    { from: 'AI Fitness Director', to: 'AI Posture Analyst', content: '体态评估' },
+                    { from: 'AI Training Planner', to: 'AI Workout Monitor', content: '运动监控' },
+                    { from: 'AI Posture Analyst', to: 'AI Health Tracker', content: '健康追踪' },
+                    { from: 'AI Health Tracker', to: 'AI Nutrition Coach', content: '营养指导' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates];
 
         // Agent 角色配置
         const agentRoles = {
