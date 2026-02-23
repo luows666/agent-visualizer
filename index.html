@@ -17655,6 +17655,155 @@
                     { from: 'AI Supply Logistics', to: 'AI Rescue Coordinator', content: '物资保障报告' },
                     { from: 'AI Communication Hub', to: 'AI Rescue Coordinator', content: '通信保障报告' }
                 ]
+            },
+            // Cycle 384 新增模板 - AI智能机器人工程系统
+            {
+                id: 'ai-robotics-engineering',
+                name: 'AI智能机器人工程系统',
+                icon: '🤖',
+                desc: '从机器人设计到自动化部署的完整机器人工程流程',
+                agents: ['AI Robotics Engineer', 'AI Robot Designer', 'AI Control Systems', 'AI Automation Engineer', 'AI Motion Planning'],
+                positions: [
+                    { role: 'AI Robotics Engineer', x: 400, y: 50 },
+                    { role: 'AI Robot Designer', x: 200, y: 180 },
+                    { role: 'AI Control Systems', x: 600, y: 180 },
+                    { role: 'AI Automation Engineer', x: 200, y: 310 },
+                    { role: 'AI Motion Planning', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Robotics Engineer', to: 'AI Robot Designer', content: '机器人设计需求' },
+                    { from: 'AI Robotics Engineer', to: 'AI Control Systems', content: '控制系统需求' },
+                    { from: 'AI Robot Designer', to: 'AI Robotics Engineer', content: '设计方案完成' },
+                    { from: 'AI Control Systems', to: 'AI Robotics Engineer', content: '控制系统方案' },
+                    { from: 'AI Robotics Engineer', to: 'AI Automation Engineer', content: '自动化集成需求' },
+                    { from: 'AI Robotics Engineer', to: 'AI Motion Planning', content: '运动规划需求' },
+                    { from: 'AI Automation Engineer', to: 'AI Robotics Engineer', content: '自动化方案完成' },
+                    { from: 'AI Motion Planning', to: 'AI Robotics Engineer', content: '运动规划完成' }
+                ]
+            },
+            // Cycle 384 新增模板 - AI智能半导体系统
+            {
+                id: 'ai-semiconductor',
+                name: 'AI智能半导体系统',
+                icon: '🔲',
+                desc: '从芯片设计到封装测试的完整半导体流程',
+                agents: ['AI Chip Designer', 'AI Process Engineer', 'AI Wafer Engineer', 'AI Test Engineer', 'AI Packaging Engineer'],
+                positions: [
+                    { role: 'AI Chip Designer', x: 400, y: 50 },
+                    { role: 'AI Process Engineer', x: 200, y: 180 },
+                    { role: 'AI Wafer Engineer', x: 600, y: 180 },
+                    { role: 'AI Test Engineer', x: 200, y: 310 },
+                    { role: 'AI Packaging Engineer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Chip Designer', to: 'AI Process Engineer', content: '制程需求' },
+                    { from: 'AI Chip Designer', to: 'AI Wafer Engineer', content: '晶圆需求' },
+                    { from: 'AI Process Engineer', to: 'AI Chip Designer', content: '制程方案' },
+                    { from: 'AI Wafer Engineer', to: 'AI Chip Designer', content: '晶圆方案' },
+                    { from: 'AI Chip Designer', to: 'AI Test Engineer', content: '测试需求' },
+                    { from: 'AI Chip Designer', to: 'AI Packaging Engineer', content: '封装需求' },
+                    { from: 'AI Test Engineer', to: 'AI Chip Designer', content: '测试报告' },
+                    { from: 'AI Packaging Engineer', to: 'AI Chip Designer', content: '封装方案' }
+                ]
+            },
+            // Cycle 384 新增模板 - AI智能生物医药系统
+            {
+                id: 'ai-biomedicine',
+                name: 'AI智能生物医药系统',
+                icon: '💊',
+                desc: '从药物研发到临床试验的完整生物医药流程',
+                agents: ['AI Drug Discovery', 'AI Clinical Trial', 'AI Medical Imaging', 'AI Bioinformatics', 'AI Genomics'],
+                positions: [
+                    { role: 'AI Drug Discovery', x: 400, y: 50 },
+                    { role: 'AI Clinical Trial', x: 200, y: 180 },
+                    { role: 'AI Medical Imaging', x: 600, y: 180 },
+                    { role: 'AI Bioinformatics', x: 200, y: 310 },
+                    { role: 'AI Genomics', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Drug Discovery', to: 'AI Clinical Trial', content: '药物候选' },
+                    { from: 'AI Drug Discovery', to: 'AI Bioinformatics', content: '生物信息分析' },
+                    { from: 'AI Drug Discovery', to: 'AI Genomics', content: '基因组分析' },
+                    { from: 'AI Clinical Trial', to: 'AI Drug Discovery', content: '试验结果' },
+                    { from: 'AI Bioinformatics', to: 'AI Drug Discovery', content: '分析报告' },
+                    { from: 'AI Genomics', to: 'AI Drug Discovery', content: '基因组数据' },
+                    { from: 'AI Medical Imaging', to: 'AI Clinical Trial', content: '影像数据' }
+                ]
+            },
+            // Cycle 384 新增模板 - AI智能金融科技系统
+            {
+                id: 'ai-fintech',
+                name: 'AI智能金融科技系统',
+                icon: '💳',
+                desc: '从支付系统到风险管理的完整金融科技流程',
+                agents: ['AI Fintech Engineer', 'AI Payment Systems', 'AI Risk Modeler', 'AI Algorithmic Trading', 'AI Blockchain Dev'],
+                positions: [
+                    { role: 'AI Fintech Engineer', x: 400, y: 50 },
+                    { role: 'AI Payment Systems', x: 200, y: 180 },
+                    { role: 'AI Risk Modeler', x: 600, y: 180 },
+                    { role: 'AI Algorithmic Trading', x: 200, y: 310 },
+                    { role: 'AI Blockchain Dev', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fintech Engineer', to: 'AI Payment Systems', content: '支付系统需求' },
+                    { from: 'AI Fintech Engineer', to: 'AI Risk Modeler', content: '风险管理需求' },
+                    { from: 'AI Fintech Engineer', to: 'AI Algorithmic Trading', content: '交易算法需求' },
+                    { from: 'AI Fintech Engineer', to: 'AI Blockchain Dev', content: '区块链需求' },
+                    { from: 'AI Payment Systems', to: 'AI Fintech Engineer', content: '支付系统完成' },
+                    { from: 'AI Risk Modeler', to: 'AI Fintech Engineer', content: '风险模型完成' },
+                    { from: 'AI Algorithmic Trading', to: 'AI Fintech Engineer', content: '交易算法完成' },
+                    { from: 'AI Blockchain Dev', to: 'AI Fintech Engineer', content: '区块链完成' }
+                ]
+            },
+            // Cycle 384 新增模板 - AI智能教育科技系统
+            {
+                id: 'ai-edtech',
+                name: 'AI智能教育科技系统',
+                icon: '📚',
+                desc: '从学习分析到自适应学习的完整教育科技流程',
+                agents: ['AI EdTech Engineer', 'AI Learning Analytics', 'AI Adaptive Learning', 'AI Exam Proctor', 'AI Tutoring Bot'],
+                positions: [
+                    { role: 'AI EdTech Engineer', x: 400, y: 50 },
+                    { role: 'AI Learning Analytics', x: 200, y: 180 },
+                    { role: 'AI Adaptive Learning', x: 600, y: 180 },
+                    { role: 'AI Exam Proctor', x: 200, y: 310 },
+                    { role: 'AI Tutoring Bot', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI EdTech Engineer', to: 'AI Learning Analytics', content: '学习分析需求' },
+                    { from: 'AI EdTech Engineer', to: 'AI Adaptive Learning', content: '自适应学习需求' },
+                    { from: 'AI EdTech Engineer', to: 'AI Exam Proctor', content: '监考系统需求' },
+                    { from: 'AI EdTech Engineer', to: 'AI Tutoring Bot', content: '辅导机器人需求' },
+                    { from: 'AI Learning Analytics', to: 'AI EdTech Engineer', content: '学习分析报告' },
+                    { from: 'AI Adaptive Learning', to: 'AI EdTech Engineer', content: '自适应方案' },
+                    { from: 'AI Exam Proctor', to: 'AI EdTech Engineer', content: '监考系统完成' },
+                    { from: 'AI Tutoring Bot', to: 'AI EdTech Engineer', content: '辅导机器人完成' }
+                ]
+            },
+            // Cycle 384 新增模板 - AI智能零售科技系统
+            {
+                id: 'ai-retail-tech',
+                name: 'AI智能零售科技系统',
+                icon: '🛒',
+                desc: '从库存管理到客户洞察的完整零售科技流程',
+                agents: ['AI Retail Tech', 'AI Inventory Prediction', 'AI Recommendation Engine', 'AI Price Optimizer', 'AI Customer Insights'],
+                positions: [
+                    { role: 'AI Retail Tech', x: 400, y: 50 },
+                    { role: 'AI Inventory Prediction', x: 200, y: 180 },
+                    { role: 'AI Recommendation Engine', x: 600, y: 180 },
+                    { role: 'AI Price Optimizer', x: 200, y: 310 },
+                    { role: 'AI Customer Insights', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Retail Tech', to: 'AI Inventory Prediction', content: '库存预测需求' },
+                    { from: 'AI Retail Tech', to: 'AI Recommendation Engine', content: '推荐系统需求' },
+                    { from: 'AI Retail Tech', to: 'AI Price Optimizer', content: '价格优化需求' },
+                    { from: 'AI Retail Tech', to: 'AI Customer Insights', content: '客户洞察需求' },
+                    { from: 'AI Inventory Prediction', to: 'AI Retail Tech', content: '库存预测报告' },
+                    { from: 'AI Recommendation Engine', to: 'AI Retail Tech', content: '推荐系统完成' },
+                    { from: 'AI Price Optimizer', to: 'AI Retail Tech', content: '价格优化方案' },
+                    { from: 'AI Customer Insights', to: 'AI Retail Tech', content: '客户洞察报告' }
+                ]
             }
         ];
 
@@ -20611,7 +20760,49 @@
             'AI Radiation Monitor': { icon: '☢️', color: '#10b981', role: 'AI辐射监测师' },
             'AI Safety Inspector': { icon: '✅', color: '#3b82f6', role: 'AI安全检查员' },
             'AI Reactor Analyst': { icon: '🔬', color: '#8b5cf6', role: 'AI反应堆分析师' },
-            'AI Waste Manager': { icon: '♻️', color: '#06b6d4', role: 'AI核废料管理师' }
+            'AI Waste Manager': { icon: '♻️', color: '#06b6d4', role: 'AI核废料管理师' },
+            // Cycle 384 新增角色 - AI智能机器人工程
+            'AI Robotics Engineer': { icon: '🤖', color: '#3b82f6', role: 'AI机器人工程师' },
+            'AI Robot Designer': { icon: '🎨', color: '#ec4899', role: 'AI机器人设计师' },
+            'AI Control Systems': { icon: '🎛️', color: '#f59e0b', role: 'AI控制系统工程师' },
+            'AI Automation Engineer': { icon: '⚙️', color: '#22c55e', role: 'AI自动化工程师' },
+            'AI Motion Planning': { icon: '🗺️', color: '#8b5cf6', role: 'AI运动规划师' },
+            // Cycle 384 新增角色 - AI智能半导体
+            'AI Chip Designer': { icon: '🔲', color: '#06b6d4', role: 'AI芯片设计师' },
+            'AI Process Engineer': { icon: '⚙️', color: '#f97316', role: 'AI制程工程师' },
+            'AI Wafer Engineer': { icon: '💎', color: '#14b8a6', role: 'AI晶圆工程师' },
+            'AI Test Engineer': { icon: '🧪', color: '#a855f7', role: 'AI测试工程师' },
+            'AI Packaging Engineer': { icon: '📦', color: '#ec4899', role: 'AI封装工程师' },
+            // Cycle 384 新增角色 - AI智能生物医药
+            'AI Drug Discovery': { icon: '💊', color: '#10b981', role: 'AI药物发现工程师' },
+            'AI Clinical Trial': { icon: '🔬', color: '#3b82f6', role: 'AI临床试验分析师' },
+            'AI Medical Imaging': { icon: '🏥', color: '#f43f5e', role: 'AI医学影像师' },
+            'AI Bioinformatics': { icon: '🧬', color: '#8b5cf6', role: 'AI生物信息学家' },
+            'AI Genomics': { icon: '🧬', color: '#06b6d4', role: 'AI基因组学家' },
+            // Cycle 384 新增角色 - AI智能金融科技
+            'AI Fintech Engineer': { icon: '💳', color: '#f59e0b', role: 'AI金融科技工程师' },
+            'AI Payment Systems': { icon: '💰', color: '#22c55e', role: 'AI支付系统工程师' },
+            'AI Risk Modeler': { icon: '⚖️', color: '#dc2626', role: 'AI风险建模师' },
+            'AI Algorithmic Trading': { icon: '📈', color: '#8b5cf6', role: 'AI算法交易师' },
+            'AI Blockchain Dev': { icon: '⛓️', color: '#f97316', role: 'AI区块链开发工程师' },
+            // Cycle 384 新增角色 - AI智能教育科技
+            'AI EdTech Engineer': { icon: '📚', color: '#06b6d4', role: 'AI教育科技工程师' },
+            'AI Learning Analytics': { icon: '📊', color: '#ec4899', role: 'AI学习分析师' },
+            'AI Adaptive Learning': { icon: '🎯', color: '#22c55e', role: 'AI自适应学习工程师' },
+            'AI Exam Proctor': { icon: '👁️', color: '#a855f7', role: 'AI智能监考系统' },
+            'AI Tutoring Bot': { icon: '🎓', color: '#3b82f6', role: 'AI辅导机器人' },
+            // Cycle 384 新增角色 - AI智能零售科技
+            'AI Retail Tech': { icon: '🛒', color: '#f43f5e', role: 'AI零售科技工程师' },
+            'AI Inventory Prediction': { icon: '📦', color: '#14b8a6', role: 'AI库存预测师' },
+            'AI Recommendation Engine': { icon: '🎯', color: '#8b5cf6', role: 'AI推荐引擎工程师' },
+            'AI Price Optimizer': { icon: '💲', color: '#f59e0b', role: 'AI价格优化师' },
+            'AI Customer Insights': { icon: '👥', color: '#ec4899', role: 'AI客户洞察师' },
+            // Cycle 384 新增角色 - AI智能物流科技
+            'AI Logistics Tech': { icon: '🚚', color: '#3b82f6', role: 'AI物流科技工程师' },
+            'AI Route Optimizer': { icon: '🗺️', color: '#22c55e', role: 'AI路线优化师' },
+            'AI Warehouse Automation': { icon: '🏭', color: '#f97316', role: 'AI仓储自动化工程师' },
+            'AI Fleet Management': { icon: '🚛', color: '#8b5cf6', role: 'AI车队管理师' },
+            'AI Delivery Prediction': { icon: '📍', color: '#06b6d4', role: 'AI配送预测师' }
         };
 
         // 拖拽相关变量
