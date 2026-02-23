@@ -13606,6 +13606,150 @@
                     { from: 'AI Interaction Designer', to: 'AI VR Developer', content: '交互方案' },
                     { from: 'AI VR Developer', to: 'AI VR Content Creator', content: '内容需求' }
                 ]
+            },
+            // Cycle 354 新增模板 - AI智能法律服务系统
+            {
+                id: 'ai-legal-service-system',
+                name: 'AI智能法律服务系统',
+                icon: '⚖️',
+                desc: '从法律咨询到诉讼代理的完整法律服务流程',
+                agents: ['AI Litigation Attorney', 'AI Contract Drafter', 'AI Legal Analyst', 'AI Paralegal', 'AI Compliance Officer'],
+                positions: [
+                    { role: 'AI Litigation Attorney', x: 400, y: 50 },
+                    { role: 'AI Contract Drafter', x: 200, y: 180 },
+                    { role: 'AI Legal Analyst', x: 400, y: 180 },
+                    { role: 'AI Paralegal', x: 600, y: 180 },
+                    { role: 'AI Compliance Officer', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Litigation Attorney', to: 'AI Legal Analyst', content: '案件分析需求' },
+                    { from: 'AI Legal Analyst', to: 'AI Litigation Attorney', content: '案件分析报告' },
+                    { from: 'AI Litigation Attorney', to: 'AI Contract Drafter', content: '合同起草需求' },
+                    { from: 'AI Contract Drafter', to: 'AI Litigation Attorney', content: '合同草案' },
+                    { from: 'AI Litigation Attorney', to: 'AI Paralegal', content: '案件材料准备' },
+                    { from: 'AI Paralegal', to: 'AI Litigation Attorney', content: '材料整理完成' },
+                    { from: 'AI Litigation Attorney', to: 'AI Compliance Officer', content: '合规审查需求' }
+                ]
+            },
+            // Cycle 354 新增模板 - AI智能物流运输系统
+            {
+                id: 'ai-logistics-system',
+                name: 'AI智能物流运输系统',
+                icon: '🚚',
+                desc: '从仓储管理到配送优化的完整物流流程',
+                agents: ['AI Logistics Manager', 'AI Warehouse Manager', 'AI Delivery Optimizer', 'AI Fleet Coordinator', 'AI Route Planner'],
+                positions: [
+                    { role: 'AI Logistics Manager', x: 400, y: 50 },
+                    { role: 'AI Warehouse Manager', x: 200, y: 180 },
+                    { role: 'AI Delivery Optimizer', x: 400, y: 180 },
+                    { role: 'AI Fleet Coordinator', x: 600, y: 180 },
+                    { role: 'AI Route Planner', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Logistics Manager', to: 'AI Warehouse Manager', content: '仓储管理需求' },
+                    { from: 'AI Warehouse Manager', to: 'AI Logistics Manager', content: '库存报告' },
+                    { from: 'AI Logistics Manager', to: 'AI Delivery Optimizer', content: '配送优化需求' },
+                    { from: 'AI Delivery Optimizer', to: 'AI Logistics Manager', content: '优化方案' },
+                    { from: 'AI Logistics Manager', to: 'AI Fleet Coordinator', content: '车队调度需求' },
+                    { from: 'AI Fleet Coordinator', to: 'AI Logistics Manager', content: '调度计划' },
+                    { from: 'AI Logistics Manager', to: 'AI Route Planner', content: '路线规划需求' }
+                ]
+            },
+            // Cycle 354 新增模板 - AI智能餐饮服务系统
+            {
+                id: 'ai-restaurant-system',
+                name: 'AI智能餐饮服务系统',
+                icon: '🍽️',
+                desc: '从餐厅运营到菜品管理的完整餐饮流程',
+                agents: ['AI Restaurant Manager', 'AI Head Chef', 'AI Menu Designer', 'AI Kitchen Supervisor', 'AI Food Critic'],
+                positions: [
+                    { role: 'AI Restaurant Manager', x: 400, y: 50 },
+                    { role: 'AI Head Chef', x: 200, y: 180 },
+                    { role: 'AI Menu Designer', x: 400, y: 180 },
+                    { role: 'AI Kitchen Supervisor', x: 600, y: 180 },
+                    { role: 'AI Food Critic', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Restaurant Manager', to: 'AI Head Chef', content: '菜品研发需求' },
+                    { from: 'AI Head Chef', to: 'AI Restaurant Manager', content: '新菜品方案' },
+                    { from: 'AI Restaurant Manager', to: 'AI Menu Designer', content: '菜单设计需求' },
+                    { from: 'AI Menu Designer', to: 'AI Restaurant Manager', content: '菜单设计方案' },
+                    { from: 'AI Restaurant Manager', to: 'AI Kitchen Supervisor', content: '厨房管理需求' },
+                    { from: 'AI Kitchen Supervisor', to: 'AI Restaurant Manager', content: '运营报告' },
+                    { from: 'AI Restaurant Manager', to: 'AI Food Critic', content: '美食评价需求' }
+                ]
+            },
+            // Cycle 354 新增模板 - AI智能美容健身系统
+            {
+                id: 'ai-beauty-fitness-system',
+                name: 'AI智能美容健身系统',
+                icon: '💪',
+                desc: '从美容服务到健身指导的完整美容健身流程',
+                agents: ['AI Hair Stylist', 'AI Beautician', 'AI Makeup Artist', 'AI Fitness Trainer', 'AI Nutrition Planner'],
+                positions: [
+                    { role: 'AI Hair Stylist', x: 400, y: 50 },
+                    { role: 'AI Beautician', x: 200, y: 180 },
+                    { role: 'AI Makeup Artist', x: 400, y: 180 },
+                    { role: 'AI Fitness Trainer', x: 600, y: 180 },
+                    { role: 'AI Nutrition Planner', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Hair Stylist', to: 'AI Beautician', content: '美容需求协调' },
+                    { from: 'AI Beautician', to: 'AI Hair Stylist', content: '美容方案' },
+                    { from: 'AI Hair Stylist', to: 'AI Makeup Artist', content: '化妆需求' },
+                    { from: 'AI Makeup Artist', to: 'AI Hair Stylist', content: '化妆方案' },
+                    { from: 'AI Hair Stylist', to: 'AI Fitness Trainer', content: '健身指导需求' },
+                    { from: 'AI Fitness Trainer', to: 'AI Hair Stylist', content: '健身计划' },
+                    { from: 'AI Fitness Trainer', to: 'AI Nutrition Planner', content: '营养规划需求' }
+                ]
+            },
+            // Cycle 354 新增模板 - AI智能摄影摄像系统
+            {
+                id: 'ai-photography-system',
+                name: 'AI智能摄影摄像系统',
+                icon: '📷',
+                desc: '从拍摄到后期制作的完整摄影摄像流程',
+                agents: ['AI Photographer', 'AI Videographer', 'AI Photo Editor', 'AI Video Editor', 'AI Colorist'],
+                positions: [
+                    { role: 'AI Photographer', x: 400, y: 50 },
+                    { role: 'AI Videographer', x: 200, y: 180 },
+                    { role: 'AI Photo Editor', x: 400, y: 180 },
+                    { role: 'AI Video Editor', x: 600, y: 180 },
+                    { role: 'AI Colorist', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Photographer', to: 'AI Photo Editor', content: '后期处理需求' },
+                    { from: 'AI Photo Editor', to: 'AI Photographer', content: '成片交付' },
+                    { from: 'AI Videographer', to: 'AI Video Editor', content: '视频剪辑需求' },
+                    { from: 'AI Video Editor', to: 'AI Videographer', content: '视频初剪' },
+                    { from: 'AI Video Editor', to: 'AI Colorist', content: '调色需求' },
+                    { from: 'AI Colorist', to: 'AI Video Editor', content: '调色完成' },
+                    { from: 'AI Photographer', to: 'AI Videographer', content: '拍摄协调' }
+                ]
+            },
+            // Cycle 354 新增模板 - AI智能心理咨询系统
+            {
+                id: 'ai-psychology-system',
+                name: 'AI智能心理咨询系统',
+                icon: '🧠',
+                desc: '从心理评估到咨询服务的完整心理咨询流程',
+                agents: ['AI Psychologist', 'AI Therapy Coach', 'AI Mental Health Advisor', 'AI Stress Counselor', 'AI Couples Counselor'],
+                positions: [
+                    { role: 'AI Psychologist', x: 400, y: 50 },
+                    { role: 'AI Therapy Coach', x: 200, y: 180 },
+                    { role: 'AI Mental Health Advisor', x: 400, y: 180 },
+                    { role: 'AI Stress Counselor', x: 600, y: 180 },
+                    { role: 'AI Couples Counselor', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Psychologist', to: 'AI Therapy Coach', content: '治疗方案需求' },
+                    { from: 'AI Therapy Coach', to: 'AI Psychologist', content: '治疗方案' },
+                    { from: 'AI Psychologist', to: 'AI Mental Health Advisor', content: '心理健康评估' },
+                    { from: 'AI Mental Health Advisor', to: 'AI Psychologist', content: '评估报告' },
+                    { from: 'AI Psychologist', to: 'AI Stress Counselor', content: '压力咨询需求' },
+                    { from: 'AI Stress Counselor', to: 'AI Psychologist', content: '咨询记录' },
+                    { from: 'AI Psychologist', to: 'AI Couples Counselor', content: '婚姻咨询需求' }
+                ]
             }
         ];
 
@@ -15344,7 +15488,49 @@
             'AI 3D Modeler': { icon: '🎲', color: '#ec4899', role: 'AI 3D建模师' },
             'AI Spatial Designer': { icon: '🌍', color: '#f59e0b', role: 'AI空间设计师' },
             'AI Interaction Designer': { icon: '🖐️', color: '#3b82f6', role: 'AI交互设计师' },
-            'AI VR Content Creator': { icon: '📺', color: '#22c55e', role: 'AI VR内容创作者' }
+            'AI VR Content Creator': { icon: '📺', color: '#22c55e', role: 'AI VR内容创作者' },
+            // Cycle 354 新增角色 - AI 智能法律服务
+            'AI Litigation Attorney': { icon: '⚖️', color: '#8b5cf6', role: 'AI诉讼律师' },
+            'AI Contract Drafter': { icon: '📜', color: '#ec4899', role: 'AI合同起草师' },
+            'AI Legal Analyst': { icon: '🔍', color: '#f59e0b', role: 'AI法律分析师' },
+            'AI Paralegal': { icon: '📋', color: '#3b82f6', role: 'AI律师助理' },
+            'AI Compliance Officer': { icon: '✅', color: '#22c55e', role: 'AI合规官' },
+            // Cycle 354 新增角色 - AI 智能物流运输
+            'AI Logistics Manager': { icon: '🚚', color: '#8b5cf6', role: 'AI物流经理' },
+            'AI Warehouse Manager': { icon: '🏭', color: '#ec4899', role: 'AI仓储经理' },
+            'AI Delivery Optimizer': { icon: '📦', color: '#f59e0b', role: 'AI配送优化师' },
+            'AI Fleet Coordinator': { icon: '🚛', color: '#3b82f6', role: 'AI车队协调师' },
+            'AI Route Planner': { icon: '🗺️', color: '#22c55e', role: 'AI路线规划师' },
+            // Cycle 354 新增角色 - AI 智能餐饮服务
+            'AI Restaurant Manager': { icon: '🍽️', color: '#8b5cf6', role: 'AI餐厅经理' },
+            'AI Head Chef': { icon: '👨‍🍳', color: '#ec4899', role: 'AI行政总厨' },
+            'AI Menu Designer': { icon: '📋', color: '#f59e0b', role: 'AI菜单设计师' },
+            'AI Kitchen Supervisor': { icon: '🔧', color: '#3b82f6', role: 'AI厨房主管' },
+            'AI Food Critic': { icon: '👨‍🍽️', color: '#22c55e', role: 'AI美食评论家' },
+            // Cycle 354 新增角色 - AI 智能美容健身
+            'AI Hair Stylist': { icon: '💇', color: '#8b5cf6', role: 'AI美发师' },
+            'AI Beautician': { icon: '💄', color: '#ec4899', role: 'AI美容师' },
+            'AI Makeup Artist': { icon: '✨', color: '#f59e0b', role: 'AI化妆师' },
+            'AI Fitness Trainer': { icon: '💪', color: '#3b82f6', role: 'AI健身教练' },
+            'AI Nutrition Planner': { icon: '🥗', color: '#22c55e', role: 'AI营养规划师' },
+            // Cycle 354 新增角色 - AI 智能摄影摄像
+            'AI Photographer': { icon: '📷', color: '#8b5cf6', role: 'AI摄影师' },
+            'AI Videographer': { icon: '🎥', color: '#ec4899', role: 'AI摄像师' },
+            'AI Photo Editor': { icon: '🎞️', color: '#f59e0b', role: 'AI图片编辑师' },
+            'AI Video Editor': { icon: '🎬', color: '#3b82f6', role: 'AI视频剪辑师' },
+            'AI Colorist': { icon: '🎨', color: '#22c55e', role: 'AI调色师' },
+            // Cycle 354 新增角色 - AI 智能教育培训
+            'AI Curriculum Designer': { icon: '📚', color: '#8b5cf6', role: 'AI课程设计师' },
+            'AI Online Tutor': { icon: '🎓', color: '#ec4899', role: 'AI在线导师' },
+            'AI Exam Proctor': { icon: '👁️', color: '#f59e0b', role: 'AI监考系统' },
+            'AI Student Assessment': { icon: '📊', color: '#3b82f6', role: 'AI学生评估师' },
+            'AI Learning Analytics': { icon: '📈', color: '#22c55e', role: 'AI学习分析师' },
+            // Cycle 354 新增角色 - AI 智能心理咨询
+            'AI Psychologist': { icon: '🧠', color: '#8b5cf6', role: 'AI心理咨询师' },
+            'AI Therapy Coach': { icon: '💭', color: '#ec4899', role: 'AI治疗师' },
+            'AI Mental Health Advisor': { icon: '🌈', color: '#f59e0b', role: 'AI心理健康顾问' },
+            'AI Stress Counselor': { icon: '🧘', color: '#3b82f6', role: 'AI压力咨询师' },
+            'AI Couples Counselor': { icon: '💑', color: '#22c55e', role: 'AI婚姻咨询师' }
         };
 
         // 拖拽相关变量
