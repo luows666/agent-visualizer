@@ -20808,6 +20808,111 @@
                     { from: 'AI Pet Trainer', to: 'AI Pet Behaviorist', content: '行为分析' },
                     { from: 'AI Pet Behaviorist', to: 'AI Pet Groomer', content: '护理需求' }
                 ]
+            },
+            // Cycle 410 新增模板 - AI智能康复医疗系统
+            {
+                id: 'ai-rehab-medical',
+                name: 'AI智能康复医疗系统',
+                icon: '🏥',
+                desc: '从康复评估到治疗计划的完整康复医疗流程',
+                agents: ['AI Rehab Therapist', 'AI Physical Therapist', 'AI Occupational Therapist', 'AI Speech Therapist', 'AI Psychologist'],
+                positions: [
+                    { role: 'AI Rehab Therapist', x: 400, y: 30 },
+                    { role: 'AI Physical Therapist', x: 200, y: 150 },
+                    { role: 'AI Occupational Therapist', x: 600, y: 150 },
+                    { role: 'AI Speech Therapist', x: 200, y: 270 },
+                    { role: 'AI Psychologist', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Rehab Therapist', to: 'AI Physical Therapist', content: '康复评估' },
+                    { from: 'AI Physical Therapist', to: 'AI Occupational Therapist', content: '物理治疗方案' },
+                    { from: 'AI Occupational Therapist', to: 'AI Speech Therapist', content: '作业治疗进展' },
+                    { from: 'AI Speech Therapist', to: 'AI Psychologist', content: '言语康复评估' }
+                ]
+            },
+            // Cycle 410 新增模板 - AI智能养老社区系统
+            {
+                id: 'ai-elderly-community',
+                name: 'AI智能养老社区系统',
+                icon: '🏘️',
+                desc: '从养老服务到健康管理的完整养老社区流程',
+                agents: ['AI Community Manager', 'AI Senior Coordinator', 'AI Activity Planner', 'AI Caregiver Supervisor', 'AI Health Monitor'],
+                positions: [
+                    { role: 'AI Community Manager', x: 400, y: 30 },
+                    { role: 'AI Senior Coordinator', x: 200, y: 150 },
+                    { role: 'AI Activity Planner', x: 600, y: 150 },
+                    { role: 'AI Caregiver Supervisor', x: 200, y: 270 },
+                    { role: 'AI Health Monitor', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Community Manager', to: 'AI Senior Coordinator', content: '养老服务计划' },
+                    { from: 'AI Senior Coordinator', to: 'AI Activity Planner', content: '活动安排' },
+                    { from: 'AI Activity Planner', to: 'AI Caregiver Supervisor', content: '护理需求' },
+                    { from: 'AI Caregiver Supervisor', to: 'AI Health Monitor', content: '健康报告' }
+                ]
+            },
+            // Cycle 410 新增模板 - AI智能环保监测系统
+            {
+                id: 'ai-environmental-monitoring',
+                name: 'AI智能环保监测系统',
+                icon: '🌿',
+                desc: '从环境监测到预警响应的完整环保监测流程',
+                agents: ['AI Environmental Monitor', 'AI Air Quality Analyst', 'AI Water Quality Tester', 'AI Noise Monitor', 'AI Pollution Alert'],
+                positions: [
+                    { role: 'AI Environmental Monitor', x: 400, y: 30 },
+                    { role: 'AI Air Quality Analyst', x: 200, y: 150 },
+                    { role: 'AI Water Quality Tester', x: 600, y: 150 },
+                    { role: 'AI Noise Monitor', x: 200, y: 270 },
+                    { role: 'AI Pollution Alert', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Monitor', to: 'AI Air Quality Analyst', content: '空气质量数据' },
+                    { from: 'AI Air Quality Analyst', to: 'AI Water Quality Tester', content: '环境分析报告' },
+                    { from: 'AI Water Quality Tester', to: 'AI Noise Monitor', content: '水质监测数据' },
+                    { from: 'AI Noise Monitor', to: 'AI Pollution Alert', content: '噪音监测结果' }
+                ]
+            },
+            // Cycle 410 新增模板 - AI智能能源审计系统
+            {
+                id: 'ai-energy-audit',
+                name: 'AI智能能源审计系统',
+                icon: '⚡',
+                desc: '从能源审计到节能优化的完整能源管理流程',
+                agents: ['AI Energy Auditor', 'AI Carbon Footprint', 'AI Energy Efficiency Expert', 'AI Renewable Advisor', 'AI Utility Bill Analyst'],
+                positions: [
+                    { role: 'AI Energy Auditor', x: 400, y: 30 },
+                    { role: 'AI Carbon Footprint', x: 200, y: 150 },
+                    { role: 'AI Energy Efficiency Expert', x: 600, y: 150 },
+                    { role: 'AI Renewable Advisor', x: 200, y: 270 },
+                    { role: 'AI Utility Bill Analyst', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Energy Auditor', to: 'AI Carbon Footprint', content: '能源审计报告' },
+                    { from: 'AI Carbon Footprint', to: 'AI Energy Efficiency Expert', content: '碳足迹分析' },
+                    { from: 'AI Energy Efficiency Expert', to: 'AI Renewable Advisor', content: '能效建议' },
+                    { from: 'AI Renewable Advisor', to: 'AI Utility Bill Analyst', content: '节能方案' }
+                ]
+            },
+            // Cycle 410 新增模板 - AI智能政府公共服务系统
+            {
+                id: 'ai-government-service',
+                name: 'AI智能政府公共服务系统',
+                icon: '🏛️',
+                desc: '从政策顾问到应急规划的完整政府公共服务流程',
+                agents: ['AI Policy Advisor', 'AI Public Relations', 'AI Citizen Service', 'AI Urban Manager', 'AI Emergency Planner'],
+                positions: [
+                    { role: 'AI Policy Advisor', x: 400, y: 30 },
+                    { role: 'AI Public Relations', x: 200, y: 150 },
+                    { role: 'AI Citizen Service', x: 600, y: 150 },
+                    { role: 'AI Urban Manager', x: 200, y: 270 },
+                    { role: 'AI Emergency Planner', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Policy Advisor', to: 'AI Public Relations', content: '政策建议' },
+                    { from: 'AI Public Relations', to: 'AI Citizen Service', content: '公关策略' },
+                    { from: 'AI Citizen Service', to: 'AI Urban Manager', content: '公民服务需求' },
+                    { from: 'AI Urban Manager', to: 'AI Emergency Planner', content: '城市管理方案' }
+                ]
             }
         ];
 
@@ -24765,7 +24870,38 @@
             'AI Pet Trainer': { icon: '🎾', color: '#f59e0b', role: 'AI宠物训练师' },
             'AI Pet Groomer': { icon: '✂️', color: '#ec4899', role: 'AI宠物美容师' },
             'AI Pet Nutritionist': { icon: '🦴', color: '#a855f7', role: 'AI宠物营养师' },
-            'AI Pet Behaviorist': { icon: '🧠', color: '#8b5cf6', role: 'AI宠物行为学家' }
+            'AI Pet Behaviorist': { icon: '🧠', color: '#8b5cf6', role: 'AI宠物行为学家' },
+            // Cycle 410 新增角色 - AI智能康复医疗
+            'AI Rehab Therapist': { icon: '🏥', color: '#06b6d4', role: 'AI康复治疗师' },
+            'AI Physical Therapist': { icon: '💪', color: '#22c55e', role: 'AI物理治疗师' },
+            'AI Occupational Therapist': { icon: '🎯', color: '#f97316', role: 'AI作业治疗师' },
+            'AI Speech Therapist': { icon: '🗣️', color: '#a855f7', role: 'AI言语治疗师' },
+            'AI Psychologist': { icon: '🧠', color: '#ec4899', role: 'AI心理咨询师' },
+            // Cycle 410 新增角色 - AI智能养老社区
+            'AI Community Manager': { icon: '🏘️', color: '#14b8a6', role: 'AI社区经理' },
+            'AI Senior Coordinator': { icon: '👴', color: '#f59e0b', role: 'AI老年协调员' },
+            'AI Activity Planner': { icon: '🎪', color: '#8b5cf6', role: 'AI活动策划师' },
+            'AI Caregiver Supervisor': { icon: '🤝', color: '#06b6d4', role: 'AI护理员管理员' },
+            'AI Health Monitor': { icon: '❤️', color: '#ef4444', role: 'AI健康监护师' },
+            // Cycle 410 新增角色 - AI智能环保监测
+            'AI Environmental Monitor': { icon: '🌿', color: '#22c55e', role: 'AI环境监测师' },
+            'AI Air Quality Analyst': { icon: '💨', color: '#0ea5e9', role: 'AI空气质量分析师' },
+            'AI Water Quality Tester': { icon: '💧', color: '#3b82f6', role: 'AI水质检测师' },
+            'AI Noise Monitor': { icon: '🔊', color: '#f97316', role: 'AI噪音监测师' },
+            'AI Pollution Alert': { icon: '🚨', color: '#ef4444', role: 'AI污染预警师' },
+            // Cycle 410 新增角色 - AI智能能源审计
+            'AI Energy Auditor': { icon: '⚡', color: '#eab308', role: 'AI能源审计师' },
+            'AI Carbon Footprint': { icon: '🌍', color: '#22c55e', role: 'AI碳足迹审计师' },
+            'AI Energy Efficiency Expert': { icon: '💡', color: '#f59e0b', role: 'AI能效专家' },
+            'AI Renewable Advisor': { icon: '🌞', color: '#84cc16', role: 'AI可再生能源顾问' },
+            'AI Utility Bill Analyst': { icon: '💰', color: '#14b8a6', role: 'AI水电费分析师' },
+            // Cycle 410 新增角色 - AI智能政府公共服务
+            'AI Policy Advisor': { icon: '📜', color: '#7c3aed', role: 'AI政策顾问' },
+            'AI Public Relations': { icon: '📣', color: '#f43f5e', role: 'AI公共关系师' },
+            'AI Citizen Service': { icon: '🏛️', color: '#0ea5e9', role: 'AI公民服务师' },
+            'AI Urban Manager': { icon: '🏙️', color: '#64748b', role: 'AI城市管理师' },
+            'AI Emergency Planner': { icon: '🚨', color: '#dc2626', role: 'AI应急规划师' },
+            'AI Grant Writer': { icon: '💵', color: '#22c55e', role: 'AI补助撰写师' }
         };
 
         // 拖拽相关变量
