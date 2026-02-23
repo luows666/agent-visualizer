@@ -22405,8 +22405,166 @@
             }
         ];
 
+        // Cycle 421 新增模板
+        const cycle421Templates = [
+            {
+                id: 'ai-museum-service',
+                name: 'AI智能博物馆服务系统',
+                icon: '🏛️',
+                desc: '从展览策划到文化教育的完整博物馆服务流程',
+                agents: ['AI Museum Director', 'AI Exhibition Curator', 'AI Cultural Educator', 'AI Artifact Restorer', 'AI Visitor Service', 'AI Event Coordinator'],
+                positions: [
+                    { role: 'AI Museum Director', x: 400, y: 30 },
+                    { role: 'AI Exhibition Curator', x: 150, y: 150 },
+                    { role: 'AI Cultural Educator', x: 650, y: 150 },
+                    { role: 'AI Artifact Restorer', x: 150, y: 270 },
+                    { role: 'AI Visitor Service', x: 400, y: 350 },
+                    { role: 'AI Event Coordinator', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Museum Director', to: 'AI Exhibition Curator', content: '展览策划需求' },
+                    { from: 'AI Museum Director', to: 'AI Cultural Educator', content: '教育需求' },
+                    { from: 'AI Museum Director', to: 'AI Artifact Restorer', content: '修复需求' },
+                    { from: 'AI Exhibition Curator', to: 'AI Visitor Service', content: '服务需求' },
+                    { from: 'AI Cultural Educator', to: 'AI Event Coordinator', content: '活动需求' }
+                ]
+            },
+            {
+                id: 'ai-library-service',
+                name: 'AI智能图书馆服务系统',
+                icon: '📚',
+                desc: '从图书管理到阅读推广的完整图书馆服务流程',
+                agents: ['AI Library Director', 'AI Catalog Manager', 'AI Reading Consultant', 'AI Digital Librarian', 'AI Event Organizer', 'AI Research Assistant'],
+                positions: [
+                    { role: 'AI Library Director', x: 400, y: 30 },
+                    { role: 'AI Catalog Manager', x: 150, y: 150 },
+                    { role: 'AI Reading Consultant', x: 650, y: 150 },
+                    { role: 'AI Digital Librarian', x: 150, y: 270 },
+                    { role: 'AI Event Organizer', x: 400, y: 350 },
+                    { role: 'AI Research Assistant', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Library Director', to: 'AI Catalog Manager', content: '编目需求' },
+                    { from: 'AI Library Director', to: 'AI Reading Consultant', content: '阅读推广需求' },
+                    { from: 'AI Library Director', to: 'AI Digital Librarian', content: '数字化需求' },
+                    { from: 'AI Catalog Manager', to: 'AI Research Assistant', content: '研究支持需求' },
+                    { from: 'AI Reading Consultant', to: 'AI Event Organizer', content: '活动需求' }
+                ]
+            },
+            {
+                id: 'ai-sports-venue-service',
+                name: 'AI智能体育场馆服务系统',
+                icon: '🏟️',
+                desc: '从场馆管理到赛事组织的完整体育场馆服务流程',
+                agents: ['AI Venue Manager', 'AI Event Planner', 'AI Equipment Manager', 'AI Safety Officer', 'AI Booking Coordinator', 'AI Maintenance Staff'],
+                positions: [
+                    { role: 'AI Venue Manager', x: 400, y: 30 },
+                    { role: 'AI Event Planner', x: 150, y: 150 },
+                    { role: 'AI Equipment Manager', x: 650, y: 150 },
+                    { role: 'AI Safety Officer', x: 150, y: 270 },
+                    { role: 'AI Booking Coordinator', x: 400, y: 350 },
+                    { role: 'AI Maintenance Staff', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Venue Manager', to: 'AI Event Planner', content: '赛事需求' },
+                    { from: 'AI Venue Manager', to: 'AI Equipment Manager', content: '设备需求' },
+                    { from: 'AI Venue Manager', to: 'AI Safety Officer', content: '安全需求' },
+                    { from: 'AI Event Planner', to: 'AI Booking Coordinator', content: '预约需求' },
+                    { from: 'AI Equipment Manager', to: 'AI Maintenance Staff', content: '维护需求' }
+                ]
+            },
+            {
+                id: 'ai-cemetery-service',
+                name: 'AI智能殡葬服务系统',
+                icon: '⚰️',
+                desc: '从殡葬策划到纪念服务的完整殡葬服务流程',
+                agents: ['AI Funeral Director', 'AI Cremation Specialist', 'AI Memorial Planner', 'AI Bereavement Counselor', 'AI Cemetery Manager', 'AI Ceremony Coordinator'],
+                positions: [
+                    { role: 'AI Funeral Director', x: 400, y: 30 },
+                    { role: 'AI Cremation Specialist', x: 150, y: 150 },
+                    { role: 'AI Memorial Planner', x: 650, y: 150 },
+                    { role: 'AI Bereavement Counselor', x: 150, y: 270 },
+                    { role: 'AI Cemetery Manager', x: 400, y: 350 },
+                    { role: 'AI Ceremony Coordinator', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Funeral Director', to: 'AI Cremation Specialist', content: '火化需求' },
+                    { from: 'AI Funeral Director', to: 'AI Memorial Planner', content: '纪念需求' },
+                    { from: 'AI Funeral Director', to: 'AI Bereavement Counselor', content: '心理需求' },
+                    { from: 'AI Memorial Planner', to: 'AI Cemetery Manager', content: '墓地管理需求' },
+                    { from: 'AI Memorial Planner', to: 'AI Ceremony Coordinator', content: '仪式需求' }
+                ]
+            },
+            {
+                id: 'ai-laundry-service',
+                name: 'AI智能洗衣服务系统',
+                icon: '👕',
+                desc: '从衣物取送到清洗护理的完整洗衣服务流程',
+                agents: ['AI Laundry Manager', 'AI Route Planner', 'AI Stain Expert', 'AI Quality Inspector', 'AI Customer Service', 'AI Inventory Manager'],
+                positions: [
+                    { role: 'AI Laundry Manager', x: 400, y: 30 },
+                    { role: 'AI Route Planner', x: 150, y: 150 },
+                    { role: 'AI Stain Expert', x: 650, y: 150 },
+                    { role: 'AI Quality Inspector', x: 150, y: 270 },
+                    { role: 'AI Customer Service', x: 400, y: 350 },
+                    { role: 'AI Inventory Manager', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Laundry Manager', to: 'AI Route Planner', content: '路线规划需求' },
+                    { from: 'AI Laundry Manager', to: 'AI Stain Expert', content: '去渍需求' },
+                    { from: 'AI Laundry Manager', to: 'AI Quality Inspector', content: '质检需求' },
+                    { from: 'AI Stain Expert', to: 'AI Quality Inspector', content: '质量确认' },
+                    { from: 'AI Quality Inspector', to: 'AI Customer Service', content: '客服需求' }
+                ]
+            },
+            {
+                id: 'ai-moving-service',
+                name: 'AI智能搬家服务系统',
+                icon: '📦',
+                desc: '从搬家规划到物品配送的完整搬家服务流程',
+                agents: ['AI Moving Consultant', 'AI Packing Expert', 'AI Furniture Assembler', 'AI Transport Coordinator', 'AI Storage Manager', 'AI Quality Supervisor'],
+                positions: [
+                    { role: 'AI Moving Consultant', x: 400, y: 30 },
+                    { role: 'AI Packing Expert', x: 150, y: 150 },
+                    { role: 'AI Furniture Assembler', x: 650, y: 150 },
+                    { role: 'AI Transport Coordinator', x: 150, y: 270 },
+                    { role: 'AI Storage Manager', x: 400, y: 350 },
+                    { role: 'AI Quality Supervisor', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Moving Consultant', to: 'AI Packing Expert', content: '打包需求' },
+                    { from: 'AI Moving Consultant', to: 'AI Furniture Assembler', content: '装配需求' },
+                    { from: 'AI Moving Consultant', to: 'AI Transport Coordinator', content: '运输需求' },
+                    { from: 'AI Furniture Assembler', to: 'AI Quality Supervisor', content: '质量确认' },
+                    { from: 'AI Transport Coordinator', to: 'AI Storage Manager', content: '存储需求' }
+                ]
+            },
+            {
+                id: 'ai-elderly-care-service',
+                name: 'AI智能养老服务系统',
+                icon: '👴',
+                desc: '从养老护理到健康管理的完整养老服务流程',
+                agents: ['AI Elderly Care Director', 'AI Caregiver Manager', 'AI Health Monitor', 'AI Medical Companion', 'AI Activity Planner', 'AI Nutrition Manager'],
+                positions: [
+                    { role: 'AI Elderly Care Director', x: 400, y: 30 },
+                    { role: 'AI Caregiver Manager', x: 150, y: 150 },
+                    { role: 'AI Health Monitor', x: 650, y: 150 },
+                    { role: 'AI Medical Companion', x: 150, y: 270 },
+                    { role: 'AI Activity Planner', x: 400, y: 350 },
+                    { role: 'AI Nutrition Manager', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Elderly Care Director', to: 'AI Caregiver Manager', content: '护理需求' },
+                    { from: 'AI Elderly Care Director', to: 'AI Health Monitor', content: '健康监测需求' },
+                    { from: 'AI Elderly Care Director', to: 'AI Activity Planner', content: '活动需求' },
+                    { from: 'AI Health Monitor', to: 'AI Medical Companion', content: '医疗陪护需求' },
+                    { from: 'AI Health Monitor', to: 'AI Nutrition Manager', content: '营养需求' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -26821,7 +26979,53 @@
             'AI Pet Groomer': { icon: '✂️', color: '#ec4899', role: 'AI宠物美容师' },
             'AI Pet Trainer': { icon: '🎾', color: '#8b5cf6', role: 'AI宠物训练师' },
             'AI Nutrition Advisor': { icon: '🦴', color: '#14b8a6', role: 'AI营养顾问' },
-            'AI Pet Daycare Manager': { icon: '🏠', color: '#06b6d4', role: 'AI宠物寄养经理' }
+            'AI Pet Daycare Manager': { icon: '🏠', color: '#06b6d4', role: 'AI宠物寄养经理' },
+            // Cycle 421 新增角色 - AI智能博物馆服务
+            'AI Museum Director': { icon: '🏛️', color: '#1e40af', role: 'AI博物馆服务总监' },
+            'AI Exhibition Curator': { icon: '🎨', color: '#3b82f6', role: 'AI展览策展人' },
+            'AI Cultural Educator': { icon: '📚', color: '#10b981', role: 'AI文化教育师' },
+            'AI Artifact Restorer': { icon: '🔧', color: '#f59e0b', role: 'AI文物修复师' },
+            'AI Visitor Service': { icon: '👋', color: '#8b5cf6', role: 'AI游客服务师' },
+            'AI Event Coordinator': { icon: '🎪', color: '#06b6d4', role: 'AI活动协调师' },
+            // Cycle 421 新增角色 - AI智能图书馆服务
+            'AI Library Director': { icon: '📚', color: '#6366f1', role: 'AI图书馆服务总监' },
+            'AI Catalog Manager': { icon: '📖', color: '#ec4899', role: 'AI编目经理' },
+            'AI Reading Consultant': { icon: '📕', color: '#f97316', role: 'AI阅读顾问' },
+            'AI Digital Librarian': { icon: '💻', color: '#22c55e', role: 'AI数字图书馆员' },
+            'AI Event Organizer': { icon: '🎉', color: '#a855f7', role: 'AI活动组织师' },
+            'AI Research Assistant': { icon: '🔬', color: '#06b6d4', role: 'AI研究助理' },
+            // Cycle 421 新增角色 - AI智能体育场馆服务
+            'AI Venue Manager': { icon: '🏟️', color: '#0891b2', role: 'AI场馆经理' },
+            'AI Equipment Manager': { icon: '🏋️', color: '#7c3aed', role: 'AI器材经理' },
+            'AI Safety Officer': { icon: '🛡️', color: '#dc2626', role: 'AI安全员' },
+            'AI Booking Coordinator': { icon: '📅', color: '#14b8a6', role: 'AI预约协调员' },
+            'AI Maintenance Staff': { icon: '🔧', color: '#64748b', role: 'AI维护人员' },
+            // Cycle 421 新增角色 - AI智能殡葬服务
+            'AI Funeral Director': { icon: '⚰️', color: '#374151', role: 'AI殡葬总监' },
+            'AI Cremation Specialist': { icon: '🔥', color: '#f97316', role: 'AI火化专员' },
+            'AI Memorial Planner': { icon: '🕯️', color: '#f59e0b', role: 'AI悼念策划师' },
+            'AI Bereavement Counselor': { icon: '💐', color: '#ec4899', role: 'AI丧亲咨询师' },
+            'AI Cemetery Manager': { icon: '🪦', color: '#64748b', role: 'AI墓地经理' },
+            'AI Ceremony Coordinator': { icon: '🎊', color: '#a855f7', role: 'AI仪式协调师' },
+            // Cycle 421 新增角色 - AI智能洗衣服务
+            'AI Laundry Manager': { icon: '👔', color: '#0ea5e9', role: 'AI洗衣服务总监' },
+            'AI Route Planner': { icon: '🗺️', color: '#22c55e', role: 'AI路线规划师' },
+            'AI Stain Expert': { icon: '✨', color: '#f43f5e', role: 'AI去渍专家' },
+            'AI Laundry Quality': { icon: '✅', color: '#10b981', role: 'AI洗衣质检员' },
+            'AI Laundry Inventory': { icon: '📦', color: '#8b5cf6', role: 'AI洗衣库存管理员' },
+            // Cycle 421 新增角色 - AI智能搬家服务
+            'AI Moving Consultant': { icon: '📋', color: '#f59e0b', role: 'AI搬家顾问' },
+            'AI Packing Expert': { icon: '📦', color: '#22c55e', role: 'AI打包专家' },
+            'AI Furniture Assembler': { icon: '🪑', color: '#8b5cf6', role: 'AI家具装配师' },
+            'AI Transport Coordinator': { icon: '🚚', color: '#06b6d4', role: 'AI运输协调师' },
+            'AI Storage Manager': { icon: '🏚️', color: '#64748b', role: 'AI仓储经理' },
+            // Cycle 421 新增角色 - AI智能养老服务
+            'AI Elderly Care Director': { icon: '👴', color: '#ec4899', role: 'AI养老服务总监' },
+            'AI Caregiver Manager': { icon: '🤝', color: '#22c55e', role: 'AI护理员经理' },
+            'AI Geriatric Doctor': { icon: '👨‍⚕️', color: '#06b6d4', role: 'AI老年病医生' },
+            'AI Retirement Planner': { icon: '📋', color: '#f97316', role: 'AI退休规划师' },
+            'AI Nursing Home Manager': { icon: '🏠', color: '#8b5cf6', role: 'AI养老院经理' },
+            'AI Senior Activity Planner': { icon: '🎪', color: '#a855f7', role: 'AI老年活动策划师' }
         };
 
         // 拖拽相关变量
