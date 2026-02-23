@@ -21058,6 +21058,150 @@
                     { from: 'AI Exam Designer', to: 'AI Education Analyst', content: '考试数据分析' },
                     { from: 'AI Skills Assessor', to: 'AI Education Analyst', content: '技能评估报告' }
                 ]
+            },
+            // Cycle 412 新增模板 - AI智能金融投资系统
+            {
+                id: 'ai-financial-investment',
+                name: 'AI智能金融投资系统',
+                icon: '📈',
+                desc: '从投资策略到资产管理的完整金融投资流程',
+                agents: ['AI Investment Strategist', 'AI Portfolio Manager', 'AI Risk Analyst', 'AI Trading Bot', 'AI Wealth Advisor', 'AI Financial Planner'],
+                positions: [
+                    { role: 'AI Investment Strategist', x: 400, y: 30 },
+                    { role: 'AI Portfolio Manager', x: 150, y: 150 },
+                    { role: 'AI Risk Analyst', x: 650, y: 150 },
+                    { role: 'AI Trading Bot', x: 150, y: 270 },
+                    { role: 'AI Wealth Advisor', x: 400, y: 270 },
+                    { role: 'AI Financial Planner', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Investment Strategist', to: 'AI Portfolio Manager', content: '投资策略制定' },
+                    { from: 'AI Investment Strategist', to: 'AI Risk Analyst', content: '风险评估需求' },
+                    { from: 'AI Portfolio Manager', to: 'AI Trading Bot', content: '交易执行指令' },
+                    { from: 'AI Portfolio Manager', to: 'AI Wealth Advisor', content: '客户财富管理' },
+                    { from: 'AI Risk Analyst', to: 'AI Financial Planner', content: '财务规划建议' },
+                    { from: 'AI Trading Bot', to: 'AI Portfolio Manager', content: '交易报告' }
+                ]
+            },
+            // Cycle 412 新增模板 - AI智能保险理赔系统
+            {
+                id: 'ai-insurance-claims',
+                name: 'AI智能保险理赔系统',
+                icon: '🏦',
+                desc: '从保险咨询到理赔服务的完整保险流程',
+                agents: ['AI Insurance Broker', 'AI Claims Adjuster', 'AI Underwriter', 'AI Policy Advisor', 'AI Fraud Detector', 'AI Insurance Analyst'],
+                positions: [
+                    { role: 'AI Insurance Broker', x: 400, y: 30 },
+                    { role: 'AI Underwriter', x: 150, y: 150 },
+                    { role: 'AI Policy Advisor', x: 650, y: 150 },
+                    { role: 'AI Claims Adjuster', x: 150, y: 270 },
+                    { role: 'AI Fraud Detector', x: 400, y: 270 },
+                    { role: 'AI Insurance Analyst', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Insurance Broker', to: 'AI Underwriter', content: '保险承保评估' },
+                    { from: 'AI Insurance Broker', to: 'AI Policy Advisor', content: '保险方案咨询' },
+                    { from: 'AI Claims Adjuster', to: 'AI Fraud Detector', content: '欺诈风险检测' },
+                    { from: 'AI Claims Adjuster', to: 'AI Insurance Analyst', content: '理赔数据分析' },
+                    { from: 'AI Fraud Detector', to: 'AI Insurance Broker', content: '欺诈警报' },
+                    { from: 'AI Insurance Analyst', to: 'AI Underwriter', content: '理赔统计报告' }
+                ]
+            },
+            // Cycle 412 新增模板 - AI智能人力资源系统
+            {
+                id: 'ai-human-resources',
+                name: 'AI智能人力资源系统',
+                icon: '👔',
+                desc: '从招聘到员工发展的完整人力资源流程',
+                agents: ['AI Talent Scout', 'AI Interview Coordinator', 'AI Compensation Analyst', 'AI Training Designer', 'AI Employee Wellness', 'AI Performance Manager'],
+                positions: [
+                    { role: 'AI Talent Scout', x: 400, y: 30 },
+                    { role: 'AI Interview Coordinator', x: 150, y: 150 },
+                    { role: 'AI Compensation Analyst', x: 650, y: 150 },
+                    { role: 'AI Training Designer', x: 150, y: 270 },
+                    { role: 'AI Employee Wellness', x: 400, y: 270 },
+                    { role: 'AI Performance Manager', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Talent Scout', to: 'AI Interview Coordinator', content: '候选人推荐' },
+                    { from: 'AI Talent Scout', to: 'AI Compensation Analyst', content: '薪酬方案咨询' },
+                    { from: 'AI Interview Coordinator', to: 'AI Performance Manager', content: '面试评估反馈' },
+                    { from: 'AI Training Designer', to: 'AI Employee Wellness', content: '培训需求沟通' },
+                    { from: 'AI Employee Wellness', to: 'AI Performance Manager', content: '员工关怀报告' },
+                    { from: 'AI Performance Manager', to: 'AI Talent Scout', content: '人才需求规划' }
+                ]
+            },
+            // Cycle 412 新增模板 - AI智能数据分析系统
+            {
+                id: 'ai-data-analytics',
+                name: 'AI智能数据分析系统',
+                icon: '📊',
+                desc: '从数据收集到商业洞察的完整数据分析流程',
+                agents: ['AI Data Scientist', 'AI Business Analyst', 'AI Analytics Engineer', 'AI Dashboard Designer', 'AI KPI Specialist', 'AI Data Strategist'],
+                positions: [
+                    { role: 'AI Data Scientist', x: 400, y: 30 },
+                    { role: 'AI Business Analyst', x: 150, y: 150 },
+                    { role: 'AI Analytics Engineer', x: 650, y: 150 },
+                    { role: 'AI Dashboard Designer', x: 150, y: 270 },
+                    { role: 'AI KPI Specialist', x: 400, y: 270 },
+                    { role: 'AI Data Strategist', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Data Scientist', to: 'AI Business Analyst', content: '分析需求沟通' },
+                    { from: 'AI Data Scientist', to: 'AI Analytics Engineer', content: '数据工程需求' },
+                    { from: 'AI Analytics Engineer', to: 'AI Dashboard Designer', content: '数据可视化需求' },
+                    { from: 'AI Dashboard Designer', to: 'AI KPI Specialist', content: 'KPI 展示设计' },
+                    { from: 'AI Business Analyst', to: 'AI Data Strategist', content: '业务洞察报告' },
+                    { from: 'AI KPI Specialist', to: 'AI Data Strategist', content: 'KPI 达成情况' }
+                ]
+            },
+            // Cycle 412 新增模板 - AI智能内容创作系统
+            {
+                id: 'ai-content-creation',
+                name: 'AI智能内容创作系统',
+                icon: '✨',
+                desc: '从内容策划到品牌传播的完整内容创作流程',
+                agents: ['AI Content Creator', 'AI Copywriter', 'AI Social Media Manager', 'AI Brand Manager', 'AI Influencer Manager', 'AI SEO Specialist'],
+                positions: [
+                    { role: 'AI Content Creator', x: 400, y: 30 },
+                    { role: 'AI Copywriter', x: 150, y: 150 },
+                    { role: 'AI Social Media Manager', x: 650, y: 150 },
+                    { role: 'AI Brand Manager', x: 150, y: 270 },
+                    { role: 'AI Influencer Manager', x: 400, y: 270 },
+                    { role: 'AI SEO Specialist', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Content Creator', to: 'AI Copywriter', content: '内容文案需求' },
+                    { from: 'AI Content Creator', to: 'AI Brand Manager', content: '品牌内容方向' },
+                    { from: 'AI Copywriter', to: 'AI Social Media Manager', content: '社交媒体文案' },
+                    { from: 'AI Social Media Manager', to: 'AI Influencer Manager', content: '网红合作需求' },
+                    { from: 'AI Brand Manager', to: 'AI SEO Specialist', content: 'SEO 优化需求' },
+                    { from: 'AI Influencer Manager', to: 'AI Brand Manager', content: '合作效果汇报' }
+                ]
+            },
+            // Cycle 412 新增模板 - AI智能供应链系统
+            {
+                id: 'ai-supply-chain',
+                name: 'AI智能供应链系统',
+                icon: '🔗',
+                desc: '从采购到物流配送的完整供应链流程',
+                agents: ['AI Supply Chain Manager', 'AI Procurement Specialist', 'AI Logistics Coordinator', 'AI Inventory Analyst', 'AI Warehouse Manager', 'AI Demand Planner'],
+                positions: [
+                    { role: 'AI Supply Chain Manager', x: 400, y: 30 },
+                    { role: 'AI Procurement Specialist', x: 150, y: 150 },
+                    { role: 'AI Demand Planner', x: 650, y: 150 },
+                    { role: 'AI Warehouse Manager', x: 150, y: 270 },
+                    { role: 'AI Inventory Analyst', x: 400, y: 270 },
+                    { role: 'AI Logistics Coordinator', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Supply Chain Manager', to: 'AI Procurement Specialist', content: '采购需求下达' },
+                    { from: 'AI Supply Chain Manager', to: 'AI Demand Planner', content: '需求预测需求' },
+                    { from: 'AI Procurement Specialist', to: 'AI Warehouse Manager', content: '到货通知' },
+                    { from: 'AI Demand Planner', to: 'AI Inventory Analyst', content: '库存分析需求' },
+                    { from: 'AI Inventory Analyst', to: 'AI Logistics Coordinator', content: '配送需求规划' },
+                    { from: 'AI Logistics Coordinator', to: 'AI Supply Chain Manager', content: '配送完成报告' }
+                ]
             }
         ];
 
@@ -25088,7 +25232,49 @@
             'AI Exam Designer': { icon: '📝', color: '#f59e0b', role: 'AI考试设计员' },
             'AI Language Tutor': { icon: '🌐', color: '#06b6d4', role: 'AI语言导师' },
             'AI Skills Assessor': { icon: '🎯', color: '#ec4899', role: 'AI技能评估师' },
-            'AI Education Analyst': { icon: '📊', color: '#8b5cf6', role: 'AI教育分析师' }
+            'AI Education Analyst': { icon: '📊', color: '#8b5cf6', role: 'AI教育分析师' },
+            // Cycle 412 新增角色 - AI智能金融投资
+            'AI Investment Strategist': { icon: '📈', color: '#10b981', role: 'AI投资策略师' },
+            'AI Portfolio Manager': { icon: '💼', color: '#6366f1', role: 'AI投资组合经理' },
+            'AI Risk Analyst': { icon: '⚠️', color: '#dc2626', role: 'AI风险分析师' },
+            'AI Trading Bot': { icon: '🤖', color: '#f59e0b', role: 'AI交易机器人' },
+            'AI Wealth Advisor': { icon: '💎', color: '#eab308', role: 'AI财富顾问' },
+            'AI Financial Planner': { icon: '📋', color: '#14b8a6', role: 'AI理财规划师' },
+            // Cycle 412 新增角色 - AI智能保险理赔
+            'AI Insurance Broker': { icon: '🏦', color: '#0ea5e9', role: 'AI保险经纪人' },
+            'AI Claims Adjuster': { icon: '📝', color: '#22c55e', role: 'AI理赔员' },
+            'AI Underwriter': { icon: '✅', color: '#3b82f6', role: 'AI核保师' },
+            'AI Policy Advisor': { icon: '💡', color: '#f97316', role: 'AI保险顾问' },
+            'AI Fraud Detector': { icon: '🔍', color: '#ef4444', role: 'AI反欺诈检测师' },
+            'AI Insurance Analyst': { icon: '📊', color: '#8b5cf6', role: 'AI保险分析师' },
+            // Cycle 412 新增角色 - AI智能人力资源
+            'AI Talent Scout': { icon: '🔍', color: '#ec4899', role: 'AI人才猎头' },
+            'AI Interview Coordinator': { icon: '📅', color: '#06b6d4', role: 'AI面试协调员' },
+            'AI Compensation Analyst': { icon: '💰', color: '#f59e0b', role: 'AI薪酬分析师' },
+            'AI Training Designer': { icon: '📚', color: '#8b5cf6', role: 'AI培训设计师' },
+            'AI Employee Wellness': { icon: '❤️', color: '#ef4444', role: 'AI员工关怀师' },
+            'AI Performance Manager': { icon: '📈', color: '#22c55e', role: 'AI绩效经理' },
+            // Cycle 412 新增角色 - AI智能数据分析
+            'AI Data Scientist': { icon: '🔬', color: '#3b82f6', role: 'AI数据科学家' },
+            'AI Business Analyst': { icon: '📊', color: '#10b981', role: 'AI业务分析师' },
+            'AI Analytics Engineer': { icon: '📈', color: '#f59e0b', role: 'AI分析工程师' },
+            'AI Dashboard Designer': { icon: '📉', color: '#ec4899', role: 'AI仪表盘设计师' },
+            'AI KPI Specialist': { icon: '🎯', color: '#8b5cf6', role: 'AI KPI 专家' },
+            'AI Data Strategist': { icon: '💡', color: '#06b6d4', role: 'AI数据策略师' },
+            // Cycle 412 新增角色 - AI智能内容创作
+            'AI Content Creator': { icon: '✨', color: '#f43f5e', role: 'AI内容创作者' },
+            'AI Copywriter': { icon: '✍️', color: '#8b5cf6', role: 'AI文案写手' },
+            'AI Social Media Manager': { icon: '📱', color: '#3b82f6', role: 'AI社交媒体经理' },
+            'AI Brand Manager': { icon: '💎', color: '#f59e0b', role: 'AI品牌经理' },
+            'AI Influencer Manager': { icon: '🌟', color: '#ec4899', role: 'AI网红经纪人' },
+            'AI SEO Specialist': { icon: '🔎', color: '#22c55e', role: 'AI SEO 专家' },
+            // Cycle 412 新增角色 - AI智能供应链
+            'AI Supply Chain Manager': { icon: '🔗', color: '#06b6d4', role: 'AI供应链经理' },
+            'AI Procurement Specialist': { icon: '🛒', color: '#f97316', role: 'AI采购专员' },
+            'AI Logistics Coordinator': { icon: '🚚', color: '#22c55e', role: 'AI物流协调师' },
+            'AI Inventory Analyst': { icon: '📦', color: '#8b5cf6', role: 'AI库存分析师' },
+            'AI Warehouse Manager': { icon: '🏭', color: '#64748b', role: 'AI仓储经理' },
+            'AI Demand Planner': { icon: '📊', color: '#3b82f6', role: 'AI需求规划师' }
         };
 
         // 拖拽相关变量
