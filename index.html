@@ -16581,6 +16581,138 @@
                     { from: 'AI Venue Manager', to: 'AI Booking Agent', content: '场地确认' },
                     { from: 'AI Booking Agent', to: 'AI Event Producer', content: '预约完成' }
                 ]
+            },
+            // Cycle 376 新增模板 - AI智能远程办公系统
+            {
+                id: 'ai-remote-work',
+                name: 'AI智能远程办公系统',
+                icon: '🏠',
+                desc: '从远程协作到效率管理的完整远程办公流程',
+                agents: ['AI Remote Work Manager', 'AI Team Coordinator', 'AI Productivity Analyst', 'AI Virtual Meeting Host', 'AI Remote HR Manager'],
+                positions: [
+                    { role: 'AI Remote Work Manager', x: 400, y: 50 },
+                    { role: 'AI Team Coordinator', x: 200, y: 180 },
+                    { role: 'AI Productivity Analyst', x: 600, y: 180 },
+                    { role: 'AI Virtual Meeting Host', x: 200, y: 310 },
+                    { role: 'AI Remote HR Manager', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Remote Work Manager', to: 'AI Team Coordinator', content: '远程工作安排' },
+                    { from: 'AI Team Coordinator', to: 'AI Productivity Analyst', content: '团队协作数据' },
+                    { from: 'AI Productivity Analyst', to: 'AI Remote Work Manager', content: '效率分析报告' },
+                    { from: 'AI Virtual Meeting Host', to: 'AI Team Coordinator', content: '会议安排' },
+                    { from: 'AI Remote HR Manager', to: 'AI Remote Work Manager', content: '远程员工管理' }
+                ]
+            },
+            // Cycle 376 新增模板 - AI智能数字营销系统
+            {
+                id: 'ai-digital-marketing',
+                name: 'AI智能数字营销系统',
+                icon: '📱',
+                desc: '从营销策略到数据分析的完整数字营销流程',
+                agents: ['AI Marketing Director', 'AI SEO Specialist', 'AI Social Media Manager', 'AI Content Strategist', 'AI Analytics Expert'],
+                positions: [
+                    { role: 'AI Marketing Director', x: 400, y: 50 },
+                    { role: 'AI SEO Specialist', x: 200, y: 180 },
+                    { role: 'AI Social Media Manager', x: 600, y: 180 },
+                    { role: 'AI Content Strategist', x: 200, y: 310 },
+                    { role: 'AI Analytics Expert', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Marketing Director', to: 'AI SEO Specialist', content: 'SEO策略' },
+                    { from: 'AI Social Media Manager', to: 'AI Marketing Director', content: '社交媒体数据' },
+                    { from: 'AI Content Strategist', to: 'AI SEO Specialist', content: '内容规划' },
+                    { from: 'AI Analytics Expert', to: 'AI Marketing Director', content: '营销分析报告' },
+                    { from: 'AI SEO Specialist', to: 'AI Analytics Expert', content: 'SEO效果数据' }
+                ]
+            },
+            // Cycle 376 新增模板 - AI智能人力资源系统
+            {
+                id: 'ai-hr-management',
+                name: 'AI智能人力资源系统',
+                icon: '👥',
+                desc: '从招聘到员工发展的完整人力资源流程',
+                agents: ['AI HR Director', 'AI Recruiter', 'AI Training Coordinator', 'AI Performance Manager', 'AI Employee Relations'],
+                positions: [
+                    { role: 'AI HR Director', x: 400, y: 50 },
+                    { role: 'AI Recruiter', x: 200, y: 180 },
+                    { role: 'AI Training Coordinator', x: 600, y: 180 },
+                    { role: 'AI Performance Manager', x: 200, y: 310 },
+                    { role: 'AI Employee Relations', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI HR Director', to: 'AI Recruiter', content: '招聘需求' },
+                    { from: 'AI Recruiter', to: 'AI HR Director', content: '候选人推荐' },
+                    { from: 'AI Training Coordinator', to: 'AI Recruiter', content: '新人培训计划' },
+                    { from: 'AI Performance Manager', to: 'AI HR Director', content: '绩效评估报告' },
+                    { from: 'AI Employee Relations', to: 'AI Performance Manager', content: '员工反馈' }
+                ]
+            },
+            // Cycle 376 新增模板 - AI智能知识管理系统
+            {
+                id: 'ai-knowledge',
+                name: 'AI智能知识管理系统',
+                icon: '📚',
+                desc: '从知识采集到知识应用的完整知识管理流程',
+                agents: ['AI Knowledge Manager', 'AI Content Curator', 'AI Documentation Engineer', 'AI Search Specialist', 'AI Learning Designer'],
+                positions: [
+                    { role: 'AI Knowledge Manager', x: 400, y: 50 },
+                    { role: 'AI Content Curator', x: 200, y: 180 },
+                    { role: 'AI Documentation Engineer', x: 600, y: 180 },
+                    { role: 'AI Search Specialist', x: 200, y: 310 },
+                    { role: 'AI Learning Designer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Knowledge Manager', to: 'AI Content Curator', content: '知识采集需求' },
+                    { from: 'AI Content Curator', to: 'AI Documentation Engineer', content: '内容整理' },
+                    { from: 'AI Documentation Engineer', to: 'AI Knowledge Manager', content: '文档库更新' },
+                    { from: 'AI Search Specialist', to: 'AI Knowledge Manager', content: '检索优化' },
+                    { from: 'AI Learning Designer', to: 'AI Content Curator', content: '学习内容需求' }
+                ]
+            },
+            // Cycle 376 新增模板 - AI智能合规审计系统
+            {
+                id: 'ai-compliance',
+                name: 'AI智能合规审计系统',
+                icon: '⚖️',
+                desc: '从合规检查到风险评估的完整合规审计流程',
+                agents: ['AI Compliance Officer', 'AI Risk Analyst', 'AI Audit Manager', 'AI Legal Advisor', 'AI Data Privacy Officer'],
+                positions: [
+                    { role: 'AI Compliance Officer', x: 400, y: 50 },
+                    { role: 'AI Risk Analyst', x: 200, y: 180 },
+                    { role: 'AI Audit Manager', x: 600, y: 180 },
+                    { role: 'AI Legal Advisor', x: 200, y: 310 },
+                    { role: 'AI Data Privacy Officer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Compliance Officer', to: 'AI Risk Analyst', content: '风险评估需求' },
+                    { from: 'AI Risk Analyst', to: 'AI Compliance Officer', content: '风险报告' },
+                    { from: 'AI Audit Manager', to: 'AI Compliance Officer', content: '审计计划' },
+                    { from: 'AI Legal Advisor', to: 'AI Risk Analyst', content: '法律风险意见' },
+                    { from: 'AI Data Privacy Officer', to: 'AI Compliance Officer', content: '隐私合规报告' }
+                ]
+            },
+            // Cycle 376 新增模板 - AI智能危机管理系统
+            {
+                id: 'ai-crisis',
+                name: 'AI智能危机管理系统',
+                icon: '🚨',
+                desc: '从危机预警到应急响应的完整危机管理流程',
+                agents: ['AI Crisis Manager', 'AI Emergency Planner', 'AI Communication Director', 'AI Safety Officer', 'AI Recovery Coordinator'],
+                positions: [
+                    { role: 'AI Crisis Manager', x: 400, y: 50 },
+                    { role: 'AI Emergency Planner', x: 200, y: 180 },
+                    { role: 'AI Communication Director', x: 600, y: 180 },
+                    { role: 'AI Safety Officer', x: 200, y: 310 },
+                    { role: 'AI Recovery Coordinator', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Crisis Manager', to: 'AI Emergency Planner', content: '应急响应计划' },
+                    { from: 'AI Emergency Planner', to: 'AI Crisis Manager', content: '应急预案' },
+                    { from: 'AI Communication Director', to: 'AI Crisis Manager', content: '危机沟通策略' },
+                    { from: 'AI Safety Officer', to: 'AI Emergency Planner', content: '安全评估' },
+                    { from: 'AI Recovery Coordinator', to: 'AI Crisis Manager', content: '恢复计划' }
+                ]
             }
         ];
 
@@ -19211,7 +19343,43 @@
             'AI Entertainment Manager': { icon: '🎭', color: '#8b5cf6', role: 'AI娱乐经理' },
             'AI Talent Scout': { icon: '🔍', color: '#22c55e', role: 'AI星探' },
             'AI Venue Manager': { icon: '🏟️', color: '#06b6d4', role: 'AI场馆经理' },
-            'AI Booking Agent': { icon: '📋', color: '#a855f7', role: 'AI预约经纪人' }
+            'AI Booking Agent': { icon: '📋', color: '#a855f7', role: 'AI预约经纪人' },
+            // Cycle 376 新增角色 - AI 智能远程办公
+            'AI Remote Work Manager': { icon: '🏠', color: '#8b5cf6', role: 'AI远程办公经理' },
+            'AI Team Coordinator': { icon: '👥', color: '#3b82f6', role: 'AI团队协调员' },
+            'AI Productivity Analyst': { icon: '📊', color: '#10b981', role: 'AI效率分析师' },
+            'AI Virtual Meeting Host': { icon: '📹', color: '#ec4899', role: 'AI虚拟会议主持' },
+            'AI Remote HR Manager': { icon: '👤', color: '#f59e0b', role: 'AI远程HR经理' },
+            // Cycle 376 新增角色 - AI 智能数字营销
+            'AI Marketing Director': { icon: '📢', color: '#ef4444', role: 'AI营销总监' },
+            'AI SEO Specialist': { icon: '🔎', color: '#06b6d4', role: 'AI SEO专家' },
+            'AI Social Media Manager': { icon: '📱', color: '#8b5cf6', role: 'AI社交媒体经理' },
+            'AI Content Strategist': { icon: '✍️', color: '#14b8a6', role: 'AI内容策略师' },
+            'AI Analytics Expert': { icon: '📈', color: '#f97316', role: 'AI分析专家' },
+            // Cycle 376 新增角色 - AI 智能人力资源
+            'AI HR Director': { icon: '👔', color: '#a855f7', role: 'AI人力资源总监' },
+            'AI Recruiter': { icon: '🔍', color: '#22c55e', role: 'AI招聘专员' },
+            'AI Training Coordinator': { icon: '🎓', color: '#3b82f6', role: 'AI培训协调员' },
+            'AI Performance Manager': { icon: '📊', color: '#ec4899', role: 'AI绩效经理' },
+            'AI Employee Relations': { icon: '🤝', color: '#f59e0b', role: 'AI员工关系专员' },
+            // Cycle 376 新增角色 - AI 智能知识管理
+            'AI Knowledge Manager': { icon: '📚', color: '#8b5cf6', role: 'AI知识经理' },
+            'AI Content Curator': { icon: '🎨', color: '#ec4899', role: 'AI内容策展人' },
+            'AI Documentation Engineer': { icon: '📝', color: '#06b6d4', role: 'AI文档工程师' },
+            'AI Search Specialist': { icon: '🔍', color: '#14b8a6', role: 'AI搜索专家' },
+            'AI Learning Designer': { icon: '🎯', color: '#f97316', role: 'AI学习设计师' },
+            // Cycle 376 新增角色 - AI 智能合规审计
+            'AI Compliance Officer': { icon: '⚖️', color: '#3b82f6', role: 'AI合规官' },
+            'AI Risk Analyst': { icon: '⚠️', color: '#ef4444', role: 'AI风险分析师' },
+            'AI Audit Manager': { icon: '📋', color: '#f59e0b', role: 'AI审计经理' },
+            'AI Legal Advisor': { icon: '⚖️', color: '#8b5cf6', role: 'AI法律顾问' },
+            'AI Data Privacy Officer': { icon: '🔐', color: '#22c55e', role: 'AI数据隐私官' },
+            // Cycle 376 新增角色 - AI 智能危机管理
+            'AI Crisis Manager': { icon: '🚨', color: '#ef4444', role: 'AI危机管理经理' },
+            'AI Emergency Planner': { icon: '📋', color: '#f97316', role: 'AI应急规划师' },
+            'AI Communication Director': { icon: '📣', color: '#8b5cf6', role: 'AI公关总监' },
+            'AI Safety Officer': { icon: '🛡️', color: '#22c55e', role: 'AI安全官' },
+            'AI Recovery Coordinator': { icon: '🔄', color: '#06b6d4', role: 'AI恢复协调员' }
         };
 
         // 拖拽相关变量
