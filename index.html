@@ -15657,6 +15657,138 @@
                     { from: 'AI Elevator Maintenance', to: 'AI Elevator Sales', content: '维护记录' },
                     { from: 'AI Elevator Sales', to: 'AI Elevator Designer', content: '市场需求' }
                 ]
+            },
+            // Cycle 369 新增模板 - AI智能电影制作系统
+            {
+                id: 'ai-film-production',
+                name: 'AI智能电影制作系统',
+                icon: '🎬',
+                desc: '从剧本创作到后期制作的完整电影制作流程',
+                agents: ['AI Film Producer', 'AI Screenwriter', 'AI Director', 'AI Cinematographer', 'AI Film Editor'],
+                positions: [
+                    { role: 'AI Film Producer', x: 400, y: 50 },
+                    { role: 'AI Screenwriter', x: 200, y: 180 },
+                    { role: 'AI Director', x: 600, y: 180 },
+                    { role: 'AI Cinematographer', x: 200, y: 310 },
+                    { role: 'AI Film Editor', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Film Producer', to: 'AI Screenwriter', content: '项目预算' },
+                    { from: 'AI Screenwriter', to: 'AI Director', content: '剧本大纲' },
+                    { from: 'AI Director', to: 'AI Cinematographer', content: '拍摄计划' },
+                    { from: 'AI Cinematographer', to: 'AI Film Editor', content: '拍摄素材' },
+                    { from: 'AI Film Editor', to: 'AI Film Producer', content: '成片交付' }
+                ]
+            },
+            // Cycle 369 新增模板 - AI智能音乐制作系统
+            {
+                id: 'ai-music-production',
+                name: 'AI智能音乐制作系统',
+                icon: '🎵',
+                desc: '从音乐创作到制作发行的完整音乐制作流程',
+                agents: ['AI Music Producer', 'AI Composer', 'AI Sound Engineer', 'AI Lyricist', 'AI Mastering'],
+                positions: [
+                    { role: 'AI Music Producer', x: 400, y: 50 },
+                    { role: 'AI Composer', x: 200, y: 180 },
+                    { role: 'AI Sound Engineer', x: 600, y: 180 },
+                    { role: 'AI Lyricist', x: 200, y: 310 },
+                    { role: 'AI Mastering', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Music Producer', to: 'AI Composer', content: '音乐方向' },
+                    { from: 'AI Composer', to: 'AI Lyricist', content: '旋律初稿' },
+                    { from: 'AI Lyricist', to: 'AI Sound Engineer', content: '歌词完成' },
+                    { from: 'AI Sound Engineer', to: 'AI Mastering', content: '混音完成' },
+                    { from: 'AI Mastering', to: 'AI Music Producer', content: '母带完成' }
+                ]
+            },
+            // Cycle 369 新增模板 - AI智能建筑设计系统
+            {
+                id: 'ai-building-design',
+                name: 'AI智能建筑设计系统',
+                icon: '🏛️',
+                desc: '从概念设计到施工图的完整建筑设计流程',
+                agents: ['AI Building Architect', 'AI Interior Designer', 'AI Landscape Designer', 'AI Structural Engineer', 'AI BIM Manager'],
+                positions: [
+                    { role: 'AI Building Architect', x: 400, y: 50 },
+                    { role: 'AI Interior Designer', x: 200, y: 180 },
+                    { role: 'AI Landscape Designer', x: 600, y: 180 },
+                    { role: 'AI Structural Engineer', x: 200, y: 310 },
+                    { role: 'AI BIM Manager', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Building Architect', to: 'AI Structural Engineer', content: '设计方案' },
+                    { from: 'AI Structural Engineer', to: 'AI BIM Manager', content: '结构图纸' },
+                    { from: 'AI Building Architect', to: 'AI Interior Designer', content: '建筑方案' },
+                    { from: 'AI Interior Designer', to: 'AI Landscape Designer', content: '室内设计' },
+                    { from: 'AI Landscape Designer', to: 'AI Building Architect', content: '景观方案' }
+                ]
+            },
+            // Cycle 369 新增模板 - AI智能城市运营系统
+            {
+                id: 'ai-city-operations',
+                name: 'AI智能城市运营系统',
+                icon: '🏙️',
+                desc: '从城市管理到应急响应的完整城市运营流程',
+                agents: ['AI City Manager', 'AI Traffic Controller', 'AI Public Safety', 'AI Infrastructure Manager', 'AI Emergency Response'],
+                positions: [
+                    { role: 'AI City Manager', x: 400, y: 50 },
+                    { role: 'AI Traffic Controller', x: 200, y: 180 },
+                    { role: 'AI Public Safety', x: 600, y: 180 },
+                    { role: 'AI Infrastructure Manager', x: 200, y: 310 },
+                    { role: 'AI Emergency Response', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI City Manager', to: 'AI Traffic Controller', content: '交通指令' },
+                    { from: 'AI City Manager', to: 'AI Public Safety', content: '安全指令' },
+                    { from: 'AI Traffic Controller', to: 'AI Infrastructure Manager', content: '交通状况' },
+                    { from: 'AI Public Safety', to: 'AI Emergency Response', content: '安全事件' },
+                    { from: 'AI Emergency Response', to: 'AI City Manager', content: '处置报告' }
+                ]
+            },
+            // Cycle 369 新增模板 - AI智能医疗设备系统
+            {
+                id: 'ai-medical-devices',
+                name: 'AI智能医疗设备系统',
+                icon: '🏥',
+                desc: '从设备设计到临床应用的完整医疗设备流程',
+                agents: ['AI Medical Device Designer', 'AI Surgical Robot Engineer', 'AI Diagnostic Equipment', 'AI Prosthetics Engineer', 'AI Medical Imaging'],
+                positions: [
+                    { role: 'AI Medical Device Designer', x: 400, y: 50 },
+                    { role: 'AI Surgical Robot Engineer', x: 200, y: 180 },
+                    { role: 'AI Diagnostic Equipment', x: 600, y: 180 },
+                    { role: 'AI Prosthetics Engineer', x: 200, y: 310 },
+                    { role: 'AI Medical Imaging', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Medical Device Designer', to: 'AI Surgical Robot Engineer', content: '设计需求' },
+                    { from: 'AI Surgical Robot Engineer', to: 'AI Diagnostic Equipment', content: '技术方案' },
+                    { from: 'AI Diagnostic Equipment', to: 'AI Prosthetics Engineer', content: '设备规格' },
+                    { from: 'AI Prosthetics Engineer', to: 'AI Medical Imaging', content: '产品设计' },
+                    { from: 'AI Medical Imaging', to: 'AI Medical Device Designer', content: '临床反馈' }
+                ]
+            },
+            // Cycle 369 新增模板 - AI智能环保治理系统
+            {
+                id: 'ai-environmental-governance',
+                name: 'AI智能环保治理系统',
+                icon: '🌿',
+                desc: '从环境监测到可持续发展的完整环保治理流程',
+                agents: ['AI Environmental Scientist', 'AI Pollution Monitor', 'AI Waste Management', 'AI Carbon Tracker', 'AI Sustainability Advisor'],
+                positions: [
+                    { role: 'AI Environmental Scientist', x: 400, y: 50 },
+                    { role: 'AI Pollution Monitor', x: 200, y: 180 },
+                    { role: 'AI Waste Management', x: 600, y: 180 },
+                    { role: 'AI Carbon Tracker', x: 200, y: 310 },
+                    { role: 'AI Sustainability Advisor', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Scientist', to: 'AI Pollution Monitor', content: '监测方案' },
+                    { from: 'AI Pollution Monitor', to: 'AI Waste Management', content: '污染数据' },
+                    { from: 'AI Waste Management', to: 'AI Carbon Tracker', content: '废物数据' },
+                    { from: 'AI Carbon Tracker', to: 'AI Sustainability Advisor', content: '碳排放报告' },
+                    { from: 'AI Sustainability Advisor', to: 'AI Environmental Scientist', content: '治理建议' }
+                ]
             }
         ];
 
@@ -18017,7 +18149,43 @@
             'AI Elevator Technician': { icon: '🔧', color: '#f97316', role: 'AI电梯技师' },
             'AI Elevator Safety': { icon: '🛡️', color: '#22c55e', role: 'AI电梯安全师' },
             'AI Elevator Maintenance': { icon: '🔩', color: '#64748b', role: 'AI电梯维护师' },
-            'AI Elevator Sales': { icon: '💰', color: '#f59e0b', role: 'AI电梯销售经理' }
+            'AI Elevator Sales': { icon: '💰', color: '#f59e0b', role: 'AI电梯销售经理' },
+            // Cycle 369 新增角色 - AI 智能电影制作
+            'AI Film Producer': { icon: '🎬', color: '#a855f7', role: 'AI电影制片人' },
+            'AI Screenwriter': { icon: '✍️', color: '#f43f5e', role: 'AI编剧师' },
+            'AI Director': { icon: '🎥', color: '#8b5cf6', role: 'AI导演' },
+            'AI Cinematographer': { icon: '📷', color: '#ec4899', role: 'AI摄影指导' },
+            'AI Film Editor': { icon: '🎞️', color: '#06b6d4', role: 'AI电影剪辑师' },
+            // Cycle 369 新增角色 - AI 智能音乐制作
+            'AI Music Producer': { icon: '🎵', color: '#22c55e', role: 'AI音乐制作人' },
+            'AI Composer': { icon: '🎹', color: '#f59e0b', role: 'AI作曲家' },
+            'AI Sound Engineer': { icon: '🔊', color: '#14b8a6', role: 'AI音响工程师' },
+            'AI Lyricist': { icon: '📝', color: '#f97316', role: 'AI作词人' },
+            'AI Mastering': { icon: '🎚️', color: '#84cc16', role: 'AI母带工程师' },
+            // Cycle 369 新增角色 - AI 智能建筑设计
+            'AI Building Architect': { icon: '🏛️', color: '#3b82f6', role: 'AI建筑设计师' },
+            'AI Interior Designer': { icon: '🛋️', color: '#ec4899', role: 'AI室内设计师' },
+            'AI Landscape Designer': { icon: '🌳', color: '#22c55e', role: 'AI景观设计师' },
+            'AI Structural Engineer': { icon: '📐', color: '#f59e0b', role: 'AI结构工程师' },
+            'AI BIM Manager': { icon: '📊', color: '#8b5cf6', role: 'AIBIM经理' },
+            // Cycle 369 新增角色 - AI 智能城市运营
+            'AI City Manager': { icon: '🏙️', color: '#0ea5e9', role: 'AI城市管理师' },
+            'AI Traffic Controller': { icon: '🚦', color: '#eab308', role: 'AI交通调度师' },
+            'AI Public Safety': { icon: '🛡️', color: '#dc2626', role: 'AI公共安全师' },
+            'AI Infrastructure Manager': { icon: '🏗️', color: '#64748b', role: 'AI基础设施经理' },
+            'AI Emergency Response': { icon: '🚨', color: '#ef4444', role: 'AI应急响应师' },
+            // Cycle 369 新增角色 - AI 智能医疗设备
+            'AI Medical Device Designer': { icon: '💉', color: '#0ea5e9', role: 'AI医疗设备设计师' },
+            'AI Surgical Robot Engineer': { icon: '🤖', color: '#8b5cf6', role: 'AI手术机器人工程师' },
+            'AI Diagnostic Equipment': { icon: '🔬', color: '#06b6d4', role: 'AI诊断设备工程师' },
+            'AI Prosthetics Engineer': { icon: '🦾', color: '#ec4899', role: 'AI假肢工程师' },
+            'AI Medical Imaging': { icon: '🏥', color: '#22c55e', role: 'AI医学影像师' },
+            // Cycle 369 新增角色 - AI 智能环保治理
+            'AI Environmental Scientist': { icon: '🌿', color: '#22c55e', role: 'AI环境科学家' },
+            'AI Pollution Monitor': { icon: '🌫️', color: '#64748b', role: 'AI污染监测师' },
+            'AI Waste Management': { icon: '♻️', color: '#14b8a6', role: 'AI废物管理工程师' },
+            'AI Carbon Tracker': { icon: '🌍', color: '#84cc16', role: 'AI碳追踪师' },
+            'AI Sustainability Advisor': { icon: '🌱', color: '#22c55e', role: 'AI可持续发展顾问' }
         };
 
         // 拖拽相关变量
