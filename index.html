@@ -27624,8 +27624,173 @@
             }
         ];
 
+        // Cycle 452 - 新增行业服务系统模板
+        const cycle452Templates = [
+            // AI智能医疗器械服务管理系统
+            {
+                id: 'ai-medical-equipment-services',
+                name: 'AI智能医疗器械服务管理系统',
+                icon: '🏥',
+                desc: '智能医疗器械服务，包括设备销售、维护培训、技术支持、配件管理等',
+                agents: ['AI Medical Equipment Director', 'AI Sales Manager', 'AI Maintenance Trainer', 'AI Tech Support', 'AI Parts Manager', 'AI Client Service'],
+                positions: [
+                    { role: 'AI Medical Equipment Director', x: 400, y: 30 },
+                    { role: 'AI Sales Manager', x: 150, y: 150 },
+                    { role: 'AI Maintenance Trainer', x: 650, y: 150 },
+                    { role: 'AI Tech Support', x: 150, y: 300 },
+                    { role: 'AI Parts Manager', x: 400, y: 350 },
+                    { role: 'AI Client Service', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Medical Equipment Director', to: 'AI Sales Manager', content: '设备销售' },
+                    { from: 'AI Medical Equipment Director', to: 'AI Maintenance Trainer', content: '维护培训' },
+                    { from: 'AI Sales Manager', to: 'AI Tech Support', content: '技术支持' },
+                    { from: 'AI Maintenance Trainer', to: 'AI Parts Manager', content: '配件管理' },
+                    { from: 'AI Parts Manager', to: 'AI Client Service', content: '客户服务' }
+                ]
+            },
+            // AI智能礼仪服务管理系统
+            {
+                id: 'ai-etiquette-services',
+                name: 'AI智能礼仪服务管理系统',
+                icon: '🎀',
+                desc: '智能礼仪服务管理，包括庆典策划、主持人安排、场地装饰、摄影摄像等',
+                agents: ['AI Etiquette Director', 'AI Event Planner', 'AI Host Coordinator', 'AI Decor Manager', 'AI Photographer', 'AI Video Producer'],
+                positions: [
+                    { role: 'AI Etiquette Director', x: 400, y: 30 },
+                    { role: 'AI Event Planner', x: 150, y: 150 },
+                    { role: 'AI Host Coordinator', x: 650, y: 150 },
+                    { role: 'AI Decor Manager', x: 150, y: 300 },
+                    { role: 'AI Photographer', x: 400, y: 350 },
+                    { role: 'AI Video Producer', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Etiquette Director', to: 'AI Event Planner', content: '活动策划' },
+                    { from: 'AI Etiquette Director', to: 'AI Host Coordinator', content: '主持安排' },
+                    { from: 'AI Event Planner', to: 'AI Decor Manager', content: '场地装饰' },
+                    { from: 'AI Host Coordinator', to: 'AI Photographer', content: '摄影安排' },
+                    { from: 'AI Photographer', to: 'AI Video Producer', content: '视频制作' }
+                ]
+            },
+            // AI智能安防服务管理系统
+            {
+                id: 'ai-security-services',
+                name: 'AI智能安防服务管理系统',
+                icon: '🔒',
+                desc: '智能安防服务管理，包括门禁系统、监控安装、巡逻保安、报警响应等',
+                agents: ['AI Security Director', 'AI Access Control Manager', 'AI Surveillance Installer', 'AI Patrol Guard', 'AI Alarm Response', 'AI Client Relations'],
+                positions: [
+                    { role: 'AI Security Director', x: 400, y: 30 },
+                    { role: 'AI Access Control Manager', x: 150, y: 150 },
+                    { role: 'AI Surveillance Installer', x: 650, y: 150 },
+                    { role: 'AI Patrol Guard', x: 150, y: 300 },
+                    { role: 'AI Alarm Response', x: 400, y: 350 },
+                    { role: 'AI Client Relations', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Security Director', to: 'AI Access Control Manager', content: '门禁管理' },
+                    { from: 'AI Security Director', to: 'AI Surveillance Installer', content: '监控安装' },
+                    { from: 'AI Access Control Manager', to: 'AI Patrol Guard', content: '巡逻保安' },
+                    { from: 'AI Surveillance Installer', to: 'AI Alarm Response', content: '报警响应' },
+                    { from: 'AI Alarm Response', to: 'AI Client Relations', content: '客户关系' }
+                ]
+            },
+            // AI智能清洁服务管理系统
+            {
+                id: 'ai-cleaning-services',
+                name: 'AI智能清洁服务管理系统',
+                icon: '🧹',
+                desc: '智能清洁服务管理，包括日常清洁、深度清洁、开荒保洁、绿化养护等',
+                agents: ['AI Cleaning Director', 'AI Daily Cleaner Manager', 'AI Deep Cleaner Manager', 'AI Renovation Cleaner', 'AI Landscaping Manager', 'AI Quality Supervisor'],
+                positions: [
+                    { role: 'AI Cleaning Director', x: 400, y: 30 },
+                    { role: 'AI Daily Cleaner Manager', x: 150, y: 150 },
+                    { role: 'AI Deep Cleaner Manager', x: 650, y: 150 },
+                    { role: 'AI Renovation Cleaner', x: 150, y: 300 },
+                    { role: 'AI Landscaping Manager', x: 400, y: 350 },
+                    { role: 'AI Quality Supervisor', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Cleaning Director', to: 'AI Daily Cleaner Manager', content: '日常清洁' },
+                    { from: 'AI Cleaning Director', to: 'AI Deep Cleaner Manager', content: '深度清洁' },
+                    { from: 'AI Daily Cleaner Manager', to: 'AI Renovation Cleaner', content: '开荒保洁' },
+                    { from: 'AI Deep Cleaner Manager', to: 'AI Landscaping Manager', content: '绿化养护' },
+                    { from: 'AI Landscaping Manager', to: 'AI Quality Supervisor', content: '质量监督' }
+                ]
+            },
+            // AI智能配送服务管理系统
+            {
+                id: 'ai-delivery-services',
+                name: 'AI智能配送服务管理系统',
+                icon: '🚚',
+                desc: '智能配送服务管理，包括同城配送、跨城物流、冷链配送、即时配送等',
+                agents: ['AI Delivery Director', 'AI SameCity Dispatcher', 'AI CrossCity Planner', 'AI ColdChain Manager', 'AI InstantDelivery', 'AI Customer Support'],
+                positions: [
+                    { role: 'AI Delivery Director', x: 400, y: 30 },
+                    { role: 'AI SameCity Dispatcher', x: 150, y: 150 },
+                    { role: 'AI CrossCity Planner', x: 650, y: 150 },
+                    { role: 'AI ColdChain Manager', x: 150, y: 300 },
+                    { role: 'AI InstantDelivery', x: 400, y: 350 },
+                    { role: 'AI Customer Support', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Delivery Director', to: 'AI SameCity Dispatcher', content: '同城配送' },
+                    { from: 'AI Delivery Director', to: 'AI CrossCity Planner', content: '跨城物流' },
+                    { from: 'AI SameCity Dispatcher', to: 'AI ColdChain Manager', content: '冷链配送' },
+                    { from: 'AI CrossCity Planner', to: 'AI InstantDelivery', content: '即时配送' },
+                    { from: 'AI InstantDelivery', to: 'AI Customer Support', content: '客户支持' }
+                ]
+            },
+            // AI智能维修服务管理系统
+            {
+                id: 'ai-repair-services',
+                name: 'AI智能维修服务管理系统',
+                icon: '🔧',
+                desc: '智能维修服务管理，包括家电维修、汽车维修、手机维修、设备维修等',
+                agents: ['AI Repair Director', 'AI Appliance Technician', 'AI Auto Mechanic', 'AI Phone Repairer', 'AI Equipment Specialist', 'AI Parts Coordinator'],
+                positions: [
+                    { role: 'AI Repair Director', x: 400, y: 30 },
+                    { role: 'AI Appliance Technician', x: 150, y: 150 },
+                    { role: 'AI Auto Mechanic', x: 650, y: 150 },
+                    { role: 'AI Phone Repairer', x: 150, y: 300 },
+                    { role: 'AI Equipment Specialist', x: 400, y: 350 },
+                    { role: 'AI Parts Coordinator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Repair Director', to: 'AI Appliance Technician', content: '家电维修' },
+                    { from: 'AI Repair Director', to: 'AI Auto Mechanic', content: '汽车维修' },
+                    { from: 'AI Appliance Technician', to: 'AI Phone Repairer', content: '手机维修' },
+                    { from: 'AI Auto Mechanic', to: 'AI Equipment Specialist', content: '设备维修' },
+                    { from: 'AI Equipment Specialist', to: 'AI Parts Coordinator', content: '配件协调' }
+                ]
+            },
+            // AI智能培训服务管理系统
+            {
+                id: 'ai-training-services',
+                name: 'AI智能培训服务管理系统',
+                icon: '📚',
+                desc: '智能培训服务管理，包括企业培训、技能认证、在线课程、师资管理等',
+                agents: ['AI Training Director', 'AI Corporate Trainer', 'AI Certification Manager', 'AI Course Developer', 'AI Instructor Coordinator', 'AI Learner Support'],
+                positions: [
+                    { role: 'AI Training Director', x: 400, y: 30 },
+                    { role: 'AI Corporate Trainer', x: 150, y: 150 },
+                    { role: 'AI Certification Manager', x: 650, y: 150 },
+                    { role: 'AI Course Developer', x: 150, y: 300 },
+                    { role: 'AI Instructor Coordinator', x: 400, y: 350 },
+                    { role: 'AI Learner Support', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Training Director', to: 'AI Corporate Trainer', content: '企业培训' },
+                    { from: 'AI Training Director', to: 'AI Certification Manager', content: '技能认证' },
+                    { from: 'AI Corporate Trainer', to: 'AI Course Developer', content: '课程开发' },
+                    { from: 'AI Certification Manager', to: 'AI Instructor Coordinator', content: '师资管理' },
+                    { from: 'AI Instructor Coordinator', to: 'AI Learner Support', content: '学员支持' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -33474,7 +33639,57 @@
             'AI Dentist Coordinator': { icon: '👨‍⚕️', color: '#22c55e', role: 'AI牙医协调员' },
             'AI Sterilization Manager': { icon: '🧼', color: '#ec4899', role: 'AI消毒经理' },
             'AI Patient Records': { icon: '📋', color: '#06b6d4', role: 'AI患者档案员' },
-            'AI Insurance Coordinator': { icon: '🏥', color: '#14b8a6', role: 'AI保险协调员' }
+            'AI Insurance Coordinator': { icon: '🏥', color: '#14b8a6', role: 'AI保险协调员' },
+            // Cycle 452 新增角色 - 7个行业服务系统
+            // AI智能医疗器械服务管理系统
+            'AI Medical Equipment Director': { icon: '🏥', color: '#3b82f6', role: 'AI医疗器械总监' },
+            'AI Sales Manager': { icon: '💰', color: '#f59e0b', role: 'AI销售经理' },
+            'AI Maintenance Trainer': { icon: '📚', color: '#22c55e', role: 'AI维护培训师' },
+            'AI Tech Support': { icon: '🔧', color: '#ec4899', role: 'AI技术支持员' },
+            'AI Parts Manager': { icon: '🔩', color: '#06b6d4', role: 'AI配件经理' },
+            'AI Client Service': { icon: '🤝', color: '#14b8a6', role: 'AI客户服务专员' },
+            // AI智能礼仪服务管理系统
+            'AI Etiquette Director': { icon: '🎀', color: '#8b5cf6', role: 'AI礼仪服务总监' },
+            'AI Event Planner': { icon: '🎪', color: '#f59e0b', role: 'AI活动策划师' },
+            'AI Host Coordinator': { icon: '🎤', color: '#22c55e', role: 'AI主持协调员' },
+            'AI Decor Manager': { icon: '🎨', color: '#ec4899', role: 'AI装饰经理' },
+            'AI Photographer': { icon: '📷', color: '#06b6d4', role: 'AI摄影师' },
+            'AI Video Producer': { icon: '🎬', color: '#14b8a6', role: 'AI视频制作人' },
+            // AI智能安防服务管理系统
+            'AI Security Director': { icon: '🔒', color: '#3b82f6', role: 'AI安防服务总监' },
+            'AI Access Control Manager': { icon: '🚪', color: '#f59e0b', role: 'AI门禁经理' },
+            'AI Surveillance Installer': { icon: '📹', color: '#22c55e', role: 'AI监控安装员' },
+            'AI Patrol Guard': { icon: '👮', color: '#ec4899', role: 'AI巡逻保安' },
+            'AI Alarm Response': { icon: '🚨', color: '#06b6d4', role: 'AI报警响应员' },
+            'AI Client Relations': { icon: '🤝', color: '#14b8a6', role: 'AI客户关系专员' },
+            // AI智能清洁服务管理系统
+            'AI Cleaning Director': { icon: '🧹', color: '#8b5cf6', role: 'AI清洁服务总监' },
+            'AI Daily Cleaner Manager': { icon: '🧽', color: '#f59e0b', role: 'AI日常清洁经理' },
+            'AI Deep Cleaner Manager': { icon: '✨', color: '#22c55e', role: 'AI深度清洁经理' },
+            'AI Renovation Cleaner': { icon: '🏗️', color: '#ec4899', role: 'AI开荒保洁员' },
+            'AI Landscaping Manager': { icon: '🌳', color: '#06b6d4', role: 'AI绿化养护经理' },
+            'AI Quality Supervisor': { icon: '📋', color: '#14b8a6', role: 'AI质量监督员' },
+            // AI智能配送服务管理系统
+            'AI Delivery Director': { icon: '🚚', color: '#3b82f6', role: 'AI配送服务总监' },
+            'AI SameCity Dispatcher': { icon: '🏃', color: '#f59e0b', role: 'AI同城调度员' },
+            'AI CrossCity Planner': { icon: '🗺️', color: '#22c55e', role: 'AI跨城规划师' },
+            'AI ColdChain Manager': { icon: '❄️', color: '#ec4899', role: 'AI冷链经理' },
+            'AI InstantDelivery': { icon: '⚡', color: '#06b6d4', role: 'AI即时配送员' },
+            'AI Customer Support': { icon: '📞', color: '#14b8a6', role: 'AI客户支持专员' },
+            // AI智能维修服务管理系统
+            'AI Repair Director': { icon: '🔧', color: '#8b5cf6', role: 'AI维修服务总监' },
+            'AI Appliance Technician': { icon: '🔌', color: '#f59e0b', role: 'AI家电技师' },
+            'AI Auto Mechanic': { icon: '🚗', color: '#22c55e', role: 'AI汽车技师' },
+            'AI Phone Repairer': { icon: '📱', color: '#ec4899', role: 'AI手机维修员' },
+            'AI Equipment Specialist': { icon: '⚙️', color: '#06b6d4', role: 'AI设备专员' },
+            'AI Parts Coordinator': { icon: '🔩', color: '#14b8a6', role: 'AI配件协调员' },
+            // AI智能培训服务管理系统
+            'AI Training Director': { icon: '📚', color: '#3b82f6', role: 'AI培训服务总监' },
+            'AI Corporate Trainer': { icon: '👔', color: '#f59e0b', role: 'AI企业培训师' },
+            'AI Certification Manager': { icon: '📜', color: '#22c55e', role: 'AI认证经理' },
+            'AI Course Developer': { icon: '📖', color: '#ec4899', role: 'AI课程开发师' },
+            'AI Instructor Coordinator': { icon: '👨‍🏫', color: '#06b6d4', role: 'AI师资协调员' },
+            'AI Learner Support': { icon: '🎓', color: '#14b8a6', role: 'AI学员支持专员' }
         };
 
         // 拖拽相关变量
