@@ -26150,10 +26150,173 @@
                     { from: 'AI Health Tracker', to: 'AI Nutrition Coach', content: '营养指导' }
                 ]
             }
+        // Cycle 444 - 新增行业服务系统模板
+        const cycle444Templates = [
+            // AI智能影视制作服务系统
+            {
+                id: 'ai-film-production-v2',
+                name: 'AI智能影视制作服务系统',
+                icon: '🎬',
+                desc: '智能影视制作管理，包括剧本创作、拍摄制作、后期特效等',
+                agents: ['AI Film Director', 'AI Screenwriter', 'AI Cinematographer', 'AI VFX Supervisor', 'AI Film Editor', 'AI Distribution Manager'],
+                positions: [
+                    { role: 'AI Film Director', x: 400, y: 30 },
+                    { role: 'AI Screenwriter', x: 150, y: 150 },
+                    { role: 'AI Cinematographer', x: 650, y: 150 },
+                    { role: 'AI VFX Supervisor', x: 150, y: 300 },
+                    { role: 'AI Film Editor', x: 400, y: 350 },
+                    { role: 'AI Distribution Manager', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Film Director', to: 'AI Screenwriter', content: '剧本创作' },
+                    { from: 'AI Film Director', to: 'AI Cinematographer', content: '拍摄指导' },
+                    { from: 'AI Screenwriter', to: 'AI Film Editor', content: '剪辑需求' },
+                    { from: 'AI Cinematographer', to: 'AI VFX Supervisor', content: '特效需求' },
+                    { from: 'AI VFX Supervisor', to: 'AI Distribution Manager', content: '发行计划' }
+                ]
+            },
+            // AI智能教育科技服务系统
+            {
+                id: 'ai-edtech-service-v2',
+                name: 'AI智能教育科技服务系统',
+                icon: '📚',
+                desc: '智能教育科技服务管理，包括课程设计、学习分析、在线教学等',
+                agents: ['AI Education Director', 'AI Curriculum Designer', 'AI Learning Analyst', 'AI Online Instructor', 'AI Student Support', 'AI Assessment Builder'],
+                positions: [
+                    { role: 'AI Education Director', x: 400, y: 30 },
+                    { role: 'AI Curriculum Designer', x: 150, y: 150 },
+                    { role: 'AI Learning Analyst', x: 650, y: 150 },
+                    { role: 'AI Online Instructor', x: 150, y: 300 },
+                    { role: 'AI Student Support', x: 400, y: 350 },
+                    { role: 'AI Assessment Builder', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Education Director', to: 'AI Curriculum Designer', content: '课程设计' },
+                    { from: 'AI Education Director', to: 'AI Learning Analyst', content: '学习分析' },
+                    { from: 'AI Curriculum Designer', to: 'AI Online Instructor', content: '教学安排' },
+                    { from: 'AI Learning Analyst', to: 'AI Student Support', content: '学生支持' },
+                    { from: 'AI Assessment Builder', to: 'AI Student Support', content: '评估反馈' }
+                ]
+            },
+            // AI智能金融投资服务系统
+            {
+                id: 'ai-finance-investment-v2',
+                name: 'AI智能金融投资服务系统',
+                icon: '💳',
+                desc: '智能金融投资服务管理，包括投资分析、风险管理、资产配置等',
+                agents: ['AI Finance Director', 'AI Investment Analyst', 'AI Risk Manager', 'AI Portfolio Manager', 'AI Market Strategist', 'AI Wealth Advisor'],
+                positions: [
+                    { role: 'AI Finance Director', x: 400, y: 30 },
+                    { role: 'AI Investment Analyst', x: 150, y: 150 },
+                    { role: 'AI Risk Manager', x: 650, y: 150 },
+                    { role: 'AI Portfolio Manager', x: 150, y: 300 },
+                    { role: 'AI Market Strategist', x: 400, y: 350 },
+                    { role: 'AI Wealth Advisor', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Finance Director', to: 'AI Investment Analyst', content: '投资分析' },
+                    { from: 'AI Finance Director', to: 'AI Risk Manager', content: '风险管理' },
+                    { from: 'AI Investment Analyst', to: 'AI Portfolio Manager', content: '资产配置' },
+                    { from: 'AI Risk Manager', to: 'AI Market Strategist', content: '市场策略' },
+                    { from: 'AI Portfolio Manager', to: 'AI Wealth Advisor', content: '财富建议' }
+                ]
+            },
+            // AI智能医疗健康服务系统
+            {
+                id: 'ai-healthcare-service-v2',
+                name: 'AI智能医疗健康服务系统',
+                icon: '🏥',
+                desc: '智能医疗健康服务管理，包括诊断辅助、患者护理、医疗预约等',
+                agents: ['AI Healthcare Director', 'AI Diagnostic Assistant', 'AI Patient Care', 'AI Medical Scheduler', 'AI Health Analyst', 'AI Medical Recorder'],
+                positions: [
+                    { role: 'AI Healthcare Director', x: 400, y: 30 },
+                    { role: 'AI Diagnostic Assistant', x: 150, y: 150 },
+                    { role: 'AI Patient Care', x: 650, y: 150 },
+                    { role: 'AI Medical Scheduler', x: 150, y: 300 },
+                    { role: 'AI Health Analyst', x: 400, y: 350 },
+                    { role: 'AI Medical Recorder', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Healthcare Director', to: 'AI Diagnostic Assistant', content: '诊断辅助' },
+                    { from: 'AI Healthcare Director', to: 'AI Patient Care', content: '患者护理' },
+                    { from: 'AI Diagnostic Assistant', to: 'AI Health Analyst', content: '健康分析' },
+                    { from: 'AI Patient Care', to: 'AI Medical Recorder', content: '医疗记录' },
+                    { from: 'AI Medical Scheduler', to: 'AI Patient Care', content: '预约安排' }
+                ]
+            },
+            // AI智能房地产服务系统
+            {
+                id: 'ai-realestate-service-v2',
+                name: 'AI智能房地产服务系统',
+                icon: '🏠',
+                desc: '智能房地产服务管理，包括房产评估、交易管理、租赁服务等',
+                agents: ['AI RealEstate Director', 'AI Property Appraiser', 'AI Transaction Manager', 'AI Leasing Agent', 'AI Market Analyst', 'AI Customer Liaison'],
+                positions: [
+                    { role: 'AI RealEstate Director', x: 400, y: 30 },
+                    { role: 'AI Property Appraiser', x: 150, y: 150 },
+                    { role: 'AI Transaction Manager', x: 650, y: 150 },
+                    { role: 'AI Leasing Agent', x: 150, y: 300 },
+                    { role: 'AI Market Analyst', x: 400, y: 350 },
+                    { role: 'AI Customer Liaison', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI RealEstate Director', to: 'AI Property Appraiser', content: '房产评估' },
+                    { from: 'AI RealEstate Director', to: 'AI Transaction Manager', content: '交易管理' },
+                    { from: 'AI Property Appraiser', to: 'AI Market Analyst', content: '市场分析' },
+                    { from: 'AI Transaction Manager', to: 'AI Customer Liaison', content: '客户联络' },
+                    { from: 'AI Leasing Agent', to: 'AI Customer Liaison', content: '租赁服务' }
+                ]
+            },
+            // AI智能酒店管理服务系统
+            {
+                id: 'ai-hotel-service-v2',
+                name: 'AI智能酒店管理服务系统',
+                icon: '🏨',
+                desc: '智能酒店管理服务，包括客房服务、餐饮管理、客户关系等',
+                agents: ['AI Hotel Manager', 'AI Room Service', 'AI Concierge', 'AI F&B Manager', 'AI Guest Relations', 'AI Revenue Manager'],
+                positions: [
+                    { role: 'AI Hotel Manager', x: 400, y: 30 },
+                    { role: 'AI Room Service', x: 150, y: 150 },
+                    { role: 'AI Concierge', x: 650, y: 150 },
+                    { role: 'AI F&B Manager', x: 150, y: 300 },
+                    { role: 'AI Guest Relations', x: 400, y: 350 },
+                    { role: 'AI Revenue Manager', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Hotel Manager', to: 'AI Room Service', content: '客房服务' },
+                    { from: 'AI Hotel Manager', to: 'AI Concierge', content: '礼宾服务' },
+                    { from: 'AI Room Service', to: 'AI Guest Relations', content: '客户关系' },
+                    { from: 'AI Concierge', to: 'AI F&B Manager', content: '餐饮管理' },
+                    { from: 'AI Revenue Manager', to: 'AI Guest Relations', content: '收益管理' }
+                ]
+            },
+            // AI智能汽车服务系统
+            {
+                id: 'ai-automotive-service-v2',
+                name: 'AI智能汽车服务系统',
+                icon: '🚗',
+                desc: '智能汽车服务管理，包括销售支持、售后服务、维修管理等',
+                agents: ['AI Auto Director', 'AI Sales Consultant', 'AI Service Advisor', 'AI Mechanic Manager', 'AI Parts Inventory', 'AI Customer Experience'],
+                positions: [
+                    { role: 'AI Auto Director', x: 400, y: 30 },
+                    { role: 'AI Sales Consultant', x: 150, y: 150 },
+                    { role: 'AI Service Advisor', x: 650, y: 150 },
+                    { role: 'AI Mechanic Manager', x: 150, y: 300 },
+                    { role: 'AI Parts Inventory', x: 400, y: 350 },
+                    { role: 'AI Customer Experience', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Auto Director', to: 'AI Sales Consultant', content: '销售咨询' },
+                    { from: 'AI Auto Director', to: 'AI Service Advisor', content: '服务咨询' },
+                    { from: 'AI Sales Consultant', to: 'AI Customer Experience', content: '客户体验' },
+                    { from: 'AI Service Advisor', to: 'AI Mechanic Manager', content: '维修管理' },
+                    { from: 'AI Mechanic Manager', to: 'AI Parts Inventory', content: '配件库存' }
+                ]
+            }
         ];
 
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -31553,7 +31716,57 @@
             'AI Posture Analyst': { icon: '🧘', color: '#22c55e', role: 'AI体态分析师' },
             'AI Health Tracker': { icon: '❤️', color: '#ec4899', role: 'AI健康追踪' },
             'AI Nutrition Coach': { icon: '🥗', color: '#06b6d4', role: 'AI营养教练' },
-            'AI Workout Monitor': { icon: '🏃', color: '#14b8a6', role: 'AI运动监控' }
+            'AI Workout Monitor': { icon: '🏃', color: '#14b8a6', role: 'AI运动监控' },
+            // Cycle 444 新增角色 - 7个行业服务系统
+            // AI智能影视制作服务系统
+            'AI Film Director': { icon: '🎬', color: '#8b5cf6', role: 'AI影视总监' },
+            'AI Screenwriter': { icon: '✍️', color: '#f59e0b', role: 'AI编剧' },
+            'AI Cinematographer': { icon: '📷', color: '#22c55e', role: 'AI摄影指导' },
+            'AI VFX Supervisor': { icon: '✨', color: '#ec4899', role: 'AI特效总监' },
+            'AI Film Editor': { icon: '🎞️', color: '#06b6d4', role: 'AI剪辑师' },
+            'AI Distribution Manager': { icon: '📡', color: '#14b8a6', role: 'AI发行经理' },
+            // AI智能教育科技服务系统
+            'AI Education Director': { icon: '📚', color: '#3b82f6', role: 'AI教育总监' },
+            'AI Curriculum Designer': { icon: '📖', color: '#f59e0b', role: 'AI课程设计' },
+            'AI Learning Analyst': { icon: '📊', color: '#22c55e', role: 'AI学习分析师' },
+            'AI Online Instructor': { icon: '💻', color: '#ec4899', role: 'AI在线教师' },
+            'AI Student Support': { icon: '🎓', color: '#06b6d4', role: 'AI学生支持' },
+            'AI Assessment Builder': { icon: '📝', color: '#14b8a6', role: 'AI测评师' },
+            // AI智能金融投资服务系统
+            'AI Finance Director': { icon: '💳', color: '#8b5cf6', role: 'AI金融总监' },
+            'AI Investment Analyst': { icon: '📈', color: '#f59e0b', role: 'AI投资分析师' },
+            'AI Risk Manager': { icon: '⚠️', color: '#22c55e', role: 'AI风险经理' },
+            'AI Portfolio Manager': { icon: '💼', color: '#ec4899', role: 'AI资产经理' },
+            'AI Market Strategist': { icon: '🎯', color: '#06b6d4', role: 'AI市场策略师' },
+            'AI Wealth Advisor': { icon: '💰', color: '#14b8a6', role: 'AI财富顾问' },
+            // AI智能医疗健康服务系统
+            'AI Healthcare Director': { icon: '🏥', color: '#3b82f6', role: 'AI医疗总监' },
+            'AI Diagnostic Assistant': { icon: '🩺', color: '#f59e0b', role: 'AI诊断助手' },
+            'AI Patient Care': { icon: '🤗', color: '#22c55e', role: 'AI患者护理' },
+            'AI Medical Scheduler': { icon: '📅', color: '#ec4899', role: 'AI预约调度' },
+            'AI Health Analyst': { icon: '📊', color: '#06b6d4', role: 'AI健康分析师' },
+            'AI Medical Recorder': { icon: '📋', color: '#14b8a6', role: 'AI医疗记录员' },
+            // AI智能房地产服务系统
+            'AI RealEstate Director': { icon: '🏠', color: '#8b5cf6', role: 'AI房产总监' },
+            'AI Property Appraiser': { icon: '📐', color: '#f59e0b', role: 'AI房产评估师' },
+            'AI Transaction Manager': { icon: '🤝', color: '#22c55e', role: 'AI交易经理' },
+            'AI Leasing Agent': { icon: '🔑', color: '#ec4899', role: 'AI租赁代理' },
+            'AI Market Analyst': { icon: '📊', color: '#06b6d4', role: 'AI市场分析师' },
+            'AI Customer Liaison': { icon: '👥', color: '#14b8a6', role: 'AI客户联络' },
+            // AI智能酒店管理服务系统
+            'AI Hotel Manager': { icon: '🏨', color: '#3b82f6', role: 'AI酒店经理' },
+            'AI Room Service': { icon: '🛏️', color: '#f59e0b', role: 'AI客房服务' },
+            'AI Concierge': { icon: '🎩', color: '#22c55e', role: 'AI礼宾员' },
+            'AI F&B Manager': { icon: '🍷', color: '#ec4899', role: 'AI餐饮经理' },
+            'AI Guest Relations': { icon: '🙋', color: '#06b6d4', role: 'AI客户关系' },
+            'AI Revenue Manager': { icon: '💵', color: '#14b8a6', role: 'AI收益经理' },
+            // AI智能汽车服务系统
+            'AI Auto Director': { icon: '🚗', color: '#8b5cf6', role: 'AI汽车总监' },
+            'AI Sales Consultant': { icon: '🛒', color: '#f59e0b', role: 'AI销售顾问' },
+            'AI Service Advisor': { icon: '🔧', color: '#22c55e', role: 'AI服务顾问' },
+            'AI Mechanic Manager': { icon: '⚙️', color: '#ec4899', role: 'AI维修经理' },
+            'AI Parts Inventory': { icon: '🔩', color: '#06b6d4', role: 'AI配件库存' },
+            'AI Customer Experience': { icon: '😊', color: '#14b8a6', role: 'AI客户体验' }
         };
 
         // 拖拽相关变量
