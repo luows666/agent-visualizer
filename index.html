@@ -17511,6 +17511,150 @@
                     { from: 'AI Tutoring Coordinator', to: 'AI Learning Architect', content: '教学反馈' },
                     { from: 'AI Corporate Trainer', to: 'AI Learning Architect', content: '培训效果报告' }
                 ]
+            },
+            // Cycle 383 新增模板 - AI智能卫星遥感系统
+            {
+                id: 'ai-satellite-remote-sensing',
+                name: 'AI智能卫星遥感系统',
+                icon: '🛰️',
+                desc: '从卫星数据采集到地理信息分析的完整遥感流程',
+                agents: ['AI Satellite Analyst', 'AI Remote Sensing Engineer', 'AI Image Interpreter', 'AI Terrain Modeler', 'AI GIS Specialist'],
+                positions: [
+                    { role: 'AI Satellite Analyst', x: 400, y: 50 },
+                    { role: 'AI Remote Sensing Engineer', x: 200, y: 180 },
+                    { role: 'AI Image Interpreter', x: 600, y: 180 },
+                    { role: 'AI Terrain Modeler', x: 200, y: 310 },
+                    { role: 'AI GIS Specialist', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Satellite Analyst', to: 'AI Remote Sensing Engineer', content: '卫星数据任务下达' },
+                    { from: 'AI Satellite Analyst', to: 'AI Image Interpreter', content: '图像解译任务' },
+                    { from: 'AI Remote Sensing Engineer', to: 'AI Terrain Modeler', content: '遥感数据处理' },
+                    { from: 'AI Image Interpreter', to: 'AI GIS Specialist', content: '解译结果入库' },
+                    { from: 'AI Terrain Modeler', to: 'AI Satellite Analyst', content: '地形模型完成' },
+                    { from: 'AI GIS Specialist', to: 'AI Satellite Analyst', content: 'GIS分析报告' }
+                ]
+            },
+            // Cycle 383 新增模板 - AI智能深海作业系统
+            {
+                id: 'ai-deep-sea-operations',
+                name: 'AI智能深海作业系统',
+                icon: '🌊',
+                desc: '从深海探测到资源开发的完整深海作业流程',
+                agents: ['AI Deep Sea Engineer', 'AI Subsea Robot', 'AI Marine Surveyor', 'AI Undersea Cable', 'AI Offshore Platform'],
+                positions: [
+                    { role: 'AI Deep Sea Engineer', x: 400, y: 50 },
+                    { role: 'AI Subsea Robot', x: 200, y: 180 },
+                    { role: 'AI Marine Surveyor', x: 600, y: 180 },
+                    { role: 'AI Undersea Cable', x: 200, y: 310 },
+                    { role: 'AI Offshore Platform', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Deep Sea Engineer', to: 'AI Subsea Robot', content: '作业任务下达' },
+                    { from: 'AI Deep Sea Engineer', to: 'AI Marine Surveyor', content: '海洋勘测任务' },
+                    { from: 'AI Subsea Robot', to: 'AI Deep Sea Engineer', content: '作业完成报告' },
+                    { from: 'AI Marine Surveyor', to: 'AI Undersea Cable', content: '电缆铺设方案' },
+                    { from: 'AI Marine Surveyor', to: 'AI Offshore Platform', content: '平台选址建议' },
+                    { from: 'AI Undersea Cable', to: 'AI Deep Sea Engineer', content: '铺设进度报告' }
+                ]
+            },
+            // Cycle 383 新增模板 - AI智能极地科考系统
+            {
+                id: 'ai-polar-research',
+                name: 'AI智能极地科考系统',
+                icon: '❄️',
+                desc: '从极地探测到气候研究的完整科考流程',
+                agents: ['AI Polar Scientist', 'AI Ice Researcher', 'AI Climate Modeler', 'AI Glacier Monitor', 'AI Arctic Navigator'],
+                positions: [
+                    { role: 'AI Polar Scientist', x: 400, y: 50 },
+                    { role: 'AI Ice Researcher', x: 200, y: 180 },
+                    { role: 'AI Climate Modeler', x: 600, y: 180 },
+                    { role: 'AI Glacier Monitor', x: 200, y: 310 },
+                    { role: 'AI Arctic Navigator', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Polar Scientist', to: 'AI Ice Researcher', content: '冰层研究任务' },
+                    { from: 'AI Polar Scientist', to: 'AI Climate Modeler', content: '气候建模任务' },
+                    { from: 'AI Ice Researcher', to: 'AI Glacier Monitor', content: '冰川监测数据' },
+                    { from: 'AI Climate Modeler', to: 'AI Arctic Navigator', content: '导航需求' },
+                    { from: 'AI Glacier Monitor', to: 'AI Polar Scientist', content: '监测报告' },
+                    { from: 'AI Arctic Navigator', to: 'AI Polar Scientist', content: '导航报告' }
+                ]
+            },
+            // Cycle 383 新增模板 - AI智能气象预警系统
+            {
+                id: 'ai-weather-warning',
+                name: 'AI智能气象预警系统',
+                icon: '⛈️',
+                desc: '从气象监测到灾害预警的完整气象预警流程',
+                agents: ['AI Weather Analyst', 'AI Storm Forecaster', 'AI Hurricane Tracker', 'AI Flood Predictor', 'AI Drought Monitor'],
+                positions: [
+                    { role: 'AI Weather Analyst', x: 400, y: 50 },
+                    { role: 'AI Storm Forecaster', x: 200, y: 180 },
+                    { role: 'AI Hurricane Tracker', x: 600, y: 180 },
+                    { role: 'AI Flood Predictor', x: 200, y: 310 },
+                    { role: 'AI Drought Monitor', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Weather Analyst', to: 'AI Storm Forecaster', content: '风暴监测任务' },
+                    { from: 'AI Weather Analyst', to: 'AI Hurricane Tracker', content: '飓风追踪任务' },
+                    { from: 'AI Weather Analyst', to: 'AI Flood Predictor', content: '洪水预测任务' },
+                    { from: 'AI Weather Analyst', to: 'AI Drought Monitor', content: '干旱监测任务' },
+                    { from: 'AI Storm Forecaster', to: 'AI Weather Analyst', content: '风暴预警报告' },
+                    { from: 'AI Hurricane Tracker', to: 'AI Weather Analyst', content: '飓风路径报告' },
+                    { from: 'AI Flood Predictor', to: 'AI Weather Analyst', content: '洪水风险评估' },
+                    { from: 'AI Drought Monitor', to: 'AI Weather Analyst', content: '干旱监测报告' }
+                ]
+            },
+            // Cycle 383 新增模板 - AI智能灾害评估系统
+            {
+                id: 'ai-disaster-assessment',
+                name: 'AI智能灾害评估系统',
+                icon: '🚨',
+                desc: '从灾害监测到损失评估的完整灾害评估流程',
+                agents: ['AI Disaster Analyst', 'AI Damage Assessor', 'AI Risk Modeler', 'AI Emergency Planner', 'AI Recovery Coordinator'],
+                positions: [
+                    { role: 'AI Disaster Analyst', x: 400, y: 50 },
+                    { role: 'AI Damage Assessor', x: 200, y: 180 },
+                    { role: 'AI Risk Modeler', x: 600, y: 180 },
+                    { role: 'AI Emergency Planner', x: 200, y: 310 },
+                    { role: 'AI Recovery Coordinator', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Disaster Analyst', to: 'AI Damage Assessor', content: '损失评估任务' },
+                    { from: 'AI Disaster Analyst', to: 'AI Risk Modeler', content: '风险建模任务' },
+                    { from: 'AI Disaster Analyst', to: 'AI Emergency Planner', content: '应急规划任务' },
+                    { from: 'AI Disaster Analyst', to: 'AI Recovery Coordinator', content: '恢复协调任务' },
+                    { from: 'AI Damage Assessor', to: 'AI Disaster Analyst', content: '损失评估报告' },
+                    { from: 'AI Risk Modeler', to: 'AI Disaster Analyst', content: '风险模型报告' },
+                    { from: 'AI Emergency Planner', to: 'AI Disaster Analyst', content: '应急预案' },
+                    { from: 'AI Recovery Coordinator', to: 'AI Disaster Analyst', content: '恢复计划' }
+                ]
+            },
+            // Cycle 383 新增模板 - AI智能应急救援系统
+            {
+                id: 'ai-emergency-rescue',
+                name: 'AI智能应急救援系统',
+                icon: '🚑',
+                desc: '从灾害响应到救援实施的完整应急救援流程',
+                agents: ['AI Rescue Coordinator', 'AI Search Team', 'AI Triage Specialist', 'AI Supply Logistics', 'AI Communication Hub'],
+                positions: [
+                    { role: 'AI Rescue Coordinator', x: 400, y: 50 },
+                    { role: 'AI Search Team', x: 200, y: 180 },
+                    { role: 'AI Triage Specialist', x: 600, y: 180 },
+                    { role: 'AI Supply Logistics', x: 200, y: 310 },
+                    { role: 'AI Communication Hub', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Rescue Coordinator', to: 'AI Search Team', content: '搜救任务下达' },
+                    { from: 'AI Rescue Coordinator', to: 'AI Triage Specialist', content: '分诊任务' },
+                    { from: 'AI Rescue Coordinator', to: 'AI Supply Logistics', content: '物资需求' },
+                    { from: 'AI Rescue Coordinator', to: 'AI Communication Hub', content: '通信需求' },
+                    { from: 'AI Search Team', to: 'AI Rescue Coordinator', content: '搜救进展报告' },
+                    { from: 'AI Triage Specialist', to: 'AI Rescue Coordinator', content: '分诊情况报告' },
+                    { from: 'AI Supply Logistics', to: 'AI Rescue Coordinator', content: '物资保障报告' },
+                    { from: 'AI Communication Hub', to: 'AI Rescue Coordinator', content: '通信保障报告' }
+                ]
             }
         ];
 
@@ -20419,7 +20563,55 @@
             'AI Curriculum Developer': { icon: '📖', color: '#ec4899', role: 'AI课程开发师' },
             'AI Assessment Designer': { icon: '📝', color: '#f59e0b', role: 'AI测评设计师' },
             'AI Tutoring Coordinator': { icon: '🎯', color: '#22c55e', role: 'AI导师协调师' },
-            'AI Corporate Trainer': { icon: '🏢', color: '#06b6d4', role: 'AI企业培训师' }
+            'AI Corporate Trainer': { icon: '🏢', color: '#06b6d4', role: 'AI企业培训师' },
+            // Cycle 383 新增角色 - AI智能卫星遥感
+            'AI Satellite Analyst': { icon: '🛰️', color: '#6366f1', role: 'AI卫星分析师' },
+            'AI Remote Sensing Engineer': { icon: '📡', color: '#8b5cf6', role: 'AI遥感工程师' },
+            'AI Image Interpreter': { icon: '🖼️', color: '#ec4899', role: 'AI图像解译师' },
+            'AI Terrain Modeler': { icon: '🏔️', color: '#f59e0b', role: 'AI地形建模师' },
+            'AI GIS Specialist': { icon: '🗺️', color: '#3b82f6', role: 'AI地理信息专家' },
+            // Cycle 383 新增角色 - AI智能深海作业
+            'AI Deep Sea Engineer': { icon: '🌊', color: '#0ea5e9', role: 'AI深海工程师' },
+            'AI Subsea Robot': { icon: '🤖', color: '#06b6d4', role: 'AI海底机器人工程师' },
+            'AI Marine Surveyor': { icon: '⚓', color: '#14b8a6', role: 'AI海洋测量师' },
+            'AI Undersea Cable': { icon: '🔌', color: '#22c55e', role: 'AI海底电缆工程师' },
+            'AI Offshore Platform': { icon: '🏗️', color: '#f97316', role: 'AI海上平台工程师' },
+            // Cycle 383 新增角色 - AI智能极地科考
+            'AI Polar Scientist': { icon: '❄️', color: '#a855f7', role: 'AI极地科学家' },
+            'AI Ice Researcher': { icon: '🧊', color: '#06b6d4', role: 'AI冰层研究员' },
+            'AI Climate Modeler': { icon: '🌍', color: '#3b82f6', role: 'AI气候建模师' },
+            'AI Glacier Monitor': { icon: '🏔️', color: '#22c55e', role: 'AI冰川监测师' },
+            'AI Arctic Navigator': { icon: '🧭', color: '#f59e0b', role: 'AI北极导航师' },
+            // Cycle 383 新增角色 - AI智能气象预警
+            'AI Weather Analyst': { icon: '🌤️', color: '#14b8a6', role: 'AI气象分析师' },
+            'AI Storm Forecaster': { icon: '⛈️', color: '#6366f1', role: 'AI风暴预报师' },
+            'AI Hurricane Tracker': { icon: '🌀', color: '#ec4899', role: 'AI飓风追踪师' },
+            'AI Flood Predictor': { icon: '🌊', color: '#0ea5e9', role: 'AI洪水预测师' },
+            'AI Drought Monitor': { icon: '🏜️', color: '#f59e0b', role: 'AI干旱监测师' },
+            // Cycle 383 新增角色 - AI智能灾害评估
+            'AI Disaster Analyst': { icon: '🚨', color: '#dc2626', role: 'AI灾害分析师' },
+            'AI Damage Assessor': { icon: '📊', color: '#f97316', role: 'AI损失评估师' },
+            'AI Risk Modeler': { icon: '⚠️', color: '#eab308', role: 'AI风险建模师' },
+            'AI Emergency Planner': { icon: '📋', color: '#3b82f6', role: 'AI应急规划师' },
+            'AI Recovery Coordinator': { icon: '🔄', color: '#22c55e', role: 'AI恢复协调师' },
+            // Cycle 383 新增角色 - AI智能应急救援
+            'AI Rescue Coordinator': { icon: '🚑', color: '#ef4444', role: 'AI救援协调员' },
+            'AI Search Team': { icon: '🔍', color: '#f59e0b', role: 'AI搜救队指挥' },
+            'AI Triage Specialist': { icon: '🏥', color: '#ec4899', role: 'AI分诊专家' },
+            'AI Supply Logistics': { icon: '📦', color: '#3b82f6', role: 'AI物资物流师' },
+            'AI Communication Hub': { icon: '📡', color: '#06b6d4', role: 'AI通信枢纽' },
+            // Cycle 383 新增角色 - AI智能电网运维
+            'AI Grid Operator': { icon: '⚡', color: '#eab308', role: 'AI电网操作员' },
+            'AI Power Analyst': { icon: '📊', color: '#f97316', role: 'AI电力分析师' },
+            'AI Line Inspector': { icon: '🔍', color: '#22c55e', role: 'AI线路巡检师' },
+            'AI Transformer Tech': { icon: '🔧', color: '#3b82f6', role: 'AI变压器技术员' },
+            'AI Load Dispatcher': { icon: '📈', color: '#8b5cf6', role: 'AI负荷调度师' },
+            // Cycle 383 新增角色 - AI智能核能安全
+            'AI Nuclear Engineer': { icon: '☢️', color: '#22c55e', role: 'AI核能工程师' },
+            'AI Radiation Monitor': { icon: '☢️', color: '#10b981', role: 'AI辐射监测师' },
+            'AI Safety Inspector': { icon: '✅', color: '#3b82f6', role: 'AI安全检查员' },
+            'AI Reactor Analyst': { icon: '🔬', color: '#8b5cf6', role: 'AI反应堆分析师' },
+            'AI Waste Manager': { icon: '♻️', color: '#06b6d4', role: 'AI核废料管理师' }
         };
 
         // 拖拽相关变量
