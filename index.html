@@ -23037,8 +23037,166 @@
             }
         ];
 
+        // Cycle 425 新增模板
+        const cycle425Templates = [
+            {
+                id: 'ai-kids-education-service',
+                name: 'AI智能少儿教育服务系统',
+                icon: '🎒',
+                desc: '从课程咨询到课后服务的完整少儿教育服务流程',
+                agents: ['AI Education Consultant', 'AI Curriculum Designer', 'AI Teacher Coordinator', 'AI Student Mentor', 'AI Parent Liaison', 'AI After-school Manager'],
+                positions: [
+                    { role: 'AI Education Consultant', x: 400, y: 30 },
+                    { role: 'AI Curriculum Designer', x: 150, y: 150 },
+                    { role: 'AI Teacher Coordinator', x: 650, y: 150 },
+                    { role: 'AI Student Mentor', x: 150, y: 270 },
+                    { role: 'AI Parent Liaison', x: 400, y: 350 },
+                    { role: 'AI After-school Manager', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Education Consultant', to: 'AI Curriculum Designer', content: '课程需求' },
+                    { from: 'AI Education Consultant', to: 'AI Teacher Coordinator', content: '师资需求' },
+                    { from: 'AI Curriculum Designer', to: 'AI Student Mentor', content: '教学需求' },
+                    { from: 'AI Teacher Coordinator', to: 'AI Parent Liaison', content: '家长沟通' },
+                    { from: 'AI Student Mentor', to: 'AI After-school Manager', content: '课后管理' }
+                ]
+            },
+            {
+                id: 'ai-senior-care-service',
+                name: 'AI智能老年大学服务系统',
+                icon: '🎓',
+                desc: '从课程报名到学习管理的完整老年大学服务流程',
+                agents: ['AI University Director', 'AI Course Advisor', 'AI Enrollment Manager', 'AI Learning Coach', 'AI Event Organizer', 'AI Alumni Coordinator'],
+                positions: [
+                    { role: 'AI University Director', x: 400, y: 30 },
+                    { role: 'AI Course Advisor', x: 150, y: 150 },
+                    { role: 'AI Enrollment Manager', x: 650, y: 150 },
+                    { role: 'AI Learning Coach', x: 150, y: 270 },
+                    { role: 'AI Event Organizer', x: 400, y: 350 },
+                    { role: 'AI Alumni Coordinator', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI University Director', to: 'AI Course Advisor', content: '课程规划' },
+                    { from: 'AI University Director', to: 'AI Enrollment Manager', content: '报名需求' },
+                    { from: 'AI Course Advisor', to: 'AI Learning Coach', content: '学习需求' },
+                    { from: 'AI Enrollment Manager', to: 'AI Event Organizer', content: '活动需求' },
+                    { from: 'AI Learning Coach', to: 'AI Alumni Coordinator', content: '校友联络' }
+                ]
+            },
+            {
+                id: 'ai-cosmetics-service',
+                name: 'AI智能美容化妆品服务系统',
+                icon: '💄',
+                desc: '从护肤咨询到产品推荐的完整美容化妆品服务流程',
+                agents: ['AI Beauty Director', 'AI Skincare Consultant', 'AI Makeup Artist', 'AI Product Recommender', 'AI Salon Manager', 'AI Customer Relations'],
+                positions: [
+                    { role: 'AI Beauty Director', x: 400, y: 30 },
+                    { role: 'AI Skincare Consultant', x: 150, y: 150 },
+                    { role: 'AI Makeup Artist', x: 650, y: 150 },
+                    { role: 'AI Product Recommender', x: 150, y: 270 },
+                    { role: 'AI Salon Manager', x: 400, y: 350 },
+                    { role: 'AI Customer Relations', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Beauty Director', to: 'AI Skincare Consultant', content: '护肤需求' },
+                    { from: 'AI Beauty Director', to: 'AI Makeup Artist', content: '化妆需求' },
+                    { from: 'AI Skincare Consultant', to: 'AI Product Recommender', content: '产品推荐' },
+                    { from: 'AI Makeup Artist', to: 'AI Salon Manager', content: '沙龙管理' },
+                    { from: 'AI Product Recommender', to: 'AI Customer Relations', content: '客户关系' }
+                ]
+            },
+            {
+                id: 'ai-fitness-center-service',
+                name: 'AI智能健身中心服务系统',
+                icon: '🏋️',
+                desc: '从体能测试到课程指导的完整健身中心服务流程',
+                agents: ['AI Fitness Director', 'AI Body Analyzer', 'AI Personal Trainer', 'AI Class Instructor', 'AI Nutrition Advisor', 'AI Membership Manager'],
+                positions: [
+                    { role: 'AI Fitness Director', x: 400, y: 30 },
+                    { role: 'AI Body Analyzer', x: 150, y: 150 },
+                    { role: 'AI Personal Trainer', x: 650, y: 150 },
+                    { role: 'AI Class Instructor', x: 150, y: 270 },
+                    { role: 'AI Nutrition Advisor', x: 400, y: 350 },
+                    { role: 'AI Membership Manager', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fitness Director', to: 'AI Body Analyzer', content: '体能测试需求' },
+                    { from: 'AI Fitness Director', to: 'AI Personal Trainer', content: '私教需求' },
+                    { from: 'AI Body Analyzer', to: 'AI Class Instructor', content: '课程需求' },
+                    { from: 'AI Personal Trainer', to: 'AI Nutrition Advisor', content: '营养建议' },
+                    { from: 'AI Class Instructor', to: 'AI Membership Manager', content: '会员管理' }
+                ]
+            },
+            {
+                id: 'ai-music-training-service',
+                name: 'AI智能音乐培训服务系统',
+                icon: '🎹',
+                desc: '从乐器学习到表演展示的完整音乐培训服务流程',
+                agents: ['AI Music Director', 'AI Instrument Teacher', 'AI Theory Instructor', 'AI Performance Coach', 'AI Exam Coordinator', 'AI Concert Manager'],
+                positions: [
+                    { role: 'AI Music Director', x: 400, y: 30 },
+                    { role: 'AI Instrument Teacher', x: 150, y: 150 },
+                    { role: 'AI Theory Instructor', x: 650, y: 150 },
+                    { role: 'AI Performance Coach', x: 150, y: 270 },
+                    { role: 'AI Exam Coordinator', x: 400, y: 350 },
+                    { role: 'AI Concert Manager', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Music Director', to: 'AI Instrument Teacher', content: '乐器教学需求' },
+                    { from: 'AI Music Director', to: 'AI Theory Instructor', content: '乐理需求' },
+                    { from: 'AI Instrument Teacher', to: 'AI Performance Coach', content: '表演指导' },
+                    { from: 'AI Theory Instructor', to: 'AI Exam Coordinator', content: '考级需求' },
+                    { from: 'AI Performance Coach', to: 'AI Concert Manager', content: '演出需求' }
+                ]
+            },
+            {
+                id: 'ai-art-training-service',
+                name: 'AI智能美术培训服务系统',
+                icon: '🎨',
+                desc: '从绘画启蒙到作品创作的完整美术培训服务流程',
+                agents: ['AI Art Director', 'AI Drawing Teacher', 'AI Design Instructor', 'AI Art Critic', 'AI Exhibition Coordinator', 'AI Supply Manager'],
+                positions: [
+                    { role: 'AI Art Director', x: 400, y: 30 },
+                    { role: 'AI Drawing Teacher', x: 150, y: 150 },
+                    { role: 'AI Design Instructor', x: 650, y: 150 },
+                    { role: 'AI Art Critic', x: 150, y: 270 },
+                    { role: 'AI Exhibition Coordinator', x: 400, y: 350 },
+                    { role: 'AI Supply Manager', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Art Director', to: 'AI Drawing Teacher', content: '绘画教学需求' },
+                    { from: 'AI Art Director', to: 'AI Design Instructor', content: '设计需求' },
+                    { from: 'AI Drawing Teacher', to: 'AI Art Critic', content: '作品评审' },
+                    { from: 'AI Design Instructor', to: 'AI Exhibition Coordinator', content: '展览需求' },
+                    { from: 'AI Art Critic', to: 'AI Supply Manager', content: '物资需求' }
+                ]
+            },
+            {
+                id: 'ai-dance-training-service',
+                name: 'AI智能舞蹈培训服务系统',
+                icon: '💃',
+                desc: '从舞蹈启蒙到舞台表演的完整舞蹈培训服务流程',
+                agents: ['AI Dance Director', 'AI Choreographer', 'AI Dance Teacher', 'AI Performance Coach', 'AI Costume Manager', 'AI Stage Coordinator'],
+                positions: [
+                    { role: 'AI Dance Director', x: 400, y: 30 },
+                    { role: 'AI Choreographer', x: 150, y: 150 },
+                    { role: 'AI Dance Teacher', x: 650, y: 150 },
+                    { role: 'AI Performance Coach', x: 150, y: 270 },
+                    { role: 'AI Costume Manager', x: 400, y: 350 },
+                    { role: 'AI Stage Coordinator', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Dance Director', to: 'AI Choreographer', content: '编舞需求' },
+                    { from: 'AI Dance Director', to: 'AI Dance Teacher', content: '教学需求' },
+                    { from: 'AI Choreographer', to: 'AI Performance Coach', content: '表演指导' },
+                    { from: 'AI Dance Teacher', to: 'AI Costume Manager', content: '服装需求' },
+                    { from: 'AI Performance Coach', to: 'AI Stage Coordinator', content: '舞台需求' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -27640,7 +27798,54 @@
             'AI Meal Planner': { icon: '🍱', color: '#f59e0b', role: 'AI膳食规划师' },
             'AI Activity Coordinator': { icon: '🎪', color: '#8b5cf6', role: 'AI活动协调师' },
             'AI Medical Companion': { icon: '🏥', color: '#3b82f6', role: 'AI医疗陪护师' },
-            'AI Family Liaison': { icon: '👨‍👩‍👧', color: '#ec4899', role: 'AI家属联络师' }
+            'AI Family Liaison': { icon: '👨‍👩‍👧', color: '#ec4899', role: 'AI家属联络师' },
+            // Cycle 425 新增角色 - AI智能少儿教育服务
+            'AI Education Consultant': { icon: '📚', color: '#06b6d4', role: 'AI教育咨询师' },
+            'AI Curriculum Designer': { icon: '📋', color: '#8b5cf6', role: 'AI课程设计师' },
+            'AI Teacher Coordinator': { icon: '👨‍🏫', color: '#3b82f6', role: 'AI教师协调师' },
+            'AI Student Mentor': { icon: '🎓', color: '#10b981', role: 'AI学员导师' },
+            'AI Parent Liaison': { icon: '👨‍👩', color: '#ec4899', role: 'AI家长联络师' },
+            'AI After-school Manager': { icon: '🎒', color: '#f59e0b', role: 'AI课后管理师' },
+            // Cycle 425 新增角色 - AI智能老年大学服务
+            'AI University Director': { icon: '🎓', color: '#f97316', role: 'AI老年大学总监' },
+            'AI Course Advisor': { icon: '📖', color: '#06b6d4', role: 'AI课程顾问' },
+            'AI Enrollment Manager': { icon: '📝', color: '#8b5cf6', role: 'AI报名管理师' },
+            'AI Learning Coach': { icon: '📚', color: '#10b981', role: 'AI学习教练' },
+            'AI Event Organizer': { icon: '🎉', color: '#ec4899', role: 'AI活动组织师' },
+            'AI Alumni Coordinator': { icon: '🎖️', color: '#f59e0b', role: 'AI校友协调师' },
+            // Cycle 425 新增角色 - AI智能美容化妆品服务
+            'AI Beauty Director': { icon: '💄', color: '#f43f5e', role: 'AI美容总监' },
+            'AI Skincare Consultant': { icon: '🧴', color: '#06b6d4', role: 'AI护肤顾问' },
+            'AI Makeup Artist': { icon: '✨', color: '#ec4899', role: 'AI化妆师' },
+            'AI Product Recommender': { icon: '🛍️', color: '#8b5cf6', role: 'AI产品推荐师' },
+            'AI Salon Manager': { icon: '✂️', color: '#3b82f6', role: 'AI沙龙经理' },
+            // Cycle 425 新增角色 - AI智能健身中心服务
+            'AI Fitness Director': { icon: '🏋️', color: '#f97316', role: 'AI健身总监' },
+            'AI Body Analyzer': { icon: '⚖️', color: '#06b6d4', role: 'AI体能分析师' },
+            'AI Personal Trainer': { icon: '💪', color: '#10b981', role: 'AI私人教练' },
+            'AI Class Instructor': { icon: '👟', color: '#3b82f6', role: 'AI课程教练' },
+            'AI Nutrition Advisor': { icon: '🥗', color: '#f59e0b', role: 'AI营养顾问' },
+            'AI Membership Manager': { icon: '💳', color: '#8b5cf6', role: 'AI会员经理' },
+            // Cycle 425 新增角色 - AI智能音乐培训服务
+            'AI Music Director': { icon: '🎹', color: '#8b5cf6', role: 'AI音乐总监' },
+            'AI Instrument Teacher': { icon: '🎸', color: '#06b6d4', role: 'AI乐器教师' },
+            'AI Theory Instructor': { icon: '🎼', color: '#3b82f6', role: 'AI乐理教师' },
+            'AI Performance Coach': { icon: '🎤', color: '#10b981', role: 'AI表演教练' },
+            'AI Exam Coordinator': { icon: '📋', color: '#f59e0b', role: 'AI考级协调师' },
+            'AI Concert Manager': { icon: '🎵', color: '#ec4899', role: 'AI演出经理' },
+            // Cycle 425 新增角色 - AI智能美术培训服务
+            'AI Art Director': { icon: '🎨', color: '#f43f5e', role: 'AI美术总监' },
+            'AI Drawing Teacher': { icon: '✏️', color: '#06b6d4', role: 'AI绘画教师' },
+            'AI Design Instructor': { icon: '📐', color: '#8b5cf6', role: 'AI设计教师' },
+            'AI Art Critic': { icon: '🔍', color: '#3b82f6', role: 'AI美术评论师' },
+            'AI Exhibition Coordinator': { icon: '🖼️', color: '#10b981', role: 'AI展览协调师' },
+            'AI Supply Manager': { icon: '🛒', color: '#f59e0b', role: 'AI物资管理师' },
+            // Cycle 425 新增角色 - AI智能舞蹈培训服务
+            'AI Dance Director': { icon: '💃', color: '#ec4899', role: 'AI舞蹈总监' },
+            'AI Choreographer': { icon: '🎬', color: '#8b5cf6', role: 'AI编舞师' },
+            'AI Dance Teacher': { icon: '👯', color: '#06b6d4', role: 'AI舞蹈教师' },
+            'AI Costume Manager': { icon: '👗', color: '#f43f5e', role: 'AI服装管理师' },
+            'AI Stage Coordinator': { icon: '🎭', color: '#3b82f6', role: 'AI舞台协调师' }
         };
 
         // 拖拽相关变量
