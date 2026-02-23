@@ -15921,6 +15921,138 @@
                     { from: 'AI Wind Engineer', to: 'AI Energy Manager', content: '发电数据' },
                     { from: 'AI Energy Manager', to: 'AI Fusion Energy', content: '能源需求' }
                 ]
+            },
+            // Cycle 371 新增模板 - AI智慧农业系统
+            {
+                id: 'ai-smart-farming',
+                name: 'AI智慧农业系统',
+                icon: '🌾',
+                desc: '从智慧种植到收获管理的完整智慧农业流程',
+                agents: ['AI Smart Farming', 'AI Crop Monitor', 'AI Drone Operator', 'AI Soil Scientist', 'AI Harvest Automation'],
+                positions: [
+                    { role: 'AI Smart Farming', x: 400, y: 50 },
+                    { role: 'AI Crop Monitor', x: 200, y: 180 },
+                    { role: 'AI Drone Operator', x: 600, y: 180 },
+                    { role: 'AI Soil Scientist', x: 200, y: 310 },
+                    { role: 'AI Harvest Automation', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Smart Farming', to: 'AI Crop Monitor', content: '监测任务' },
+                    { from: 'AI Crop Monitor', to: 'AI Drone Operator', content: '监测数据' },
+                    { from: 'AI Drone Operator', to: 'AI Soil Scientist', content: '航拍数据' },
+                    { from: 'AI Soil Scientist', to: 'AI Harvest Automation', content: '土壤分析' },
+                    { from: 'AI Harvest Automation', to: 'AI Smart Farming', content: '收获报告' }
+                ]
+            },
+            // Cycle 371 新增模板 - AI智能物流系统
+            {
+                id: 'ai-logistics',
+                name: 'AI智能物流系统',
+                icon: '🚚',
+                desc: '从仓储管理到配送优化的完整物流流程',
+                agents: ['AI Logistics Coordinator', 'AI Warehouse Manager', 'AI Delivery Route', 'AI Fleet Manager', 'AI Supply Chain'],
+                positions: [
+                    { role: 'AI Logistics Coordinator', x: 400, y: 50 },
+                    { role: 'AI Warehouse Manager', x: 200, y: 180 },
+                    { role: 'AI Delivery Route', x: 600, y: 180 },
+                    { role: 'AI Fleet Manager', x: 200, y: 310 },
+                    { role: 'AI Supply Chain', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Logistics Coordinator', to: 'AI Warehouse Manager', content: '仓储指令' },
+                    { from: 'AI Warehouse Manager', to: 'AI Delivery Route', content: '库存信息' },
+                    { from: 'AI Delivery Route', to: 'AI Fleet Manager', content: '路线规划' },
+                    { from: 'AI Fleet Manager', to: 'AI Supply Chain', content: '配送状态' },
+                    { from: 'AI Supply Chain', to: 'AI Logistics Coordinator', content: '供应链报告' }
+                ]
+            },
+            // Cycle 371 新增模板 - AI智能医疗系统
+            {
+                id: 'ai-medical',
+                name: 'AI智能医疗系统',
+                icon: '🏥',
+                desc: '从远程诊疗到健康管理的完整医疗流程',
+                agents: ['AI Telemedicine', 'AI Drug Discovery', 'AI Clinical Trial', 'AI Patient Monitor', 'AI Health Predictor'],
+                positions: [
+                    { role: 'AI Telemedicine', x: 400, y: 50 },
+                    { role: 'AI Drug Discovery', x: 200, y: 180 },
+                    { role: 'AI Clinical Trial', x: 600, y: 180 },
+                    { role: 'AI Patient Monitor', x: 200, y: 310 },
+                    { role: 'AI Health Predictor', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Telemedicine', to: 'AI Drug Discovery', content: '诊疗需求' },
+                    { from: 'AI Drug Discovery', to: 'AI Clinical Trial', content: '药物方案' },
+                    { from: 'AI Clinical Trial', to: 'AI Patient Monitor', content: '试验数据' },
+                    { from: 'AI Patient Monitor', to: 'AI Health Predictor', content: '监测数据' },
+                    { from: 'AI Health Predictor', to: 'AI Telemedicine', content: '健康预测' }
+                ]
+            },
+            // Cycle 371 新增模板 - AI智能金融系统
+            {
+                id: 'ai-finance',
+                name: 'AI智能金融系统',
+                icon: '💰',
+                desc: '从投资策略到风险管理的完整金融流程',
+                agents: ['AI Investment Strategist', 'AI Risk Analyst', 'AI Fraud Detection', 'AI Trading Bot', 'AI Portfolio Manager'],
+                positions: [
+                    { role: 'AI Investment Strategist', x: 400, y: 50 },
+                    { role: 'AI Risk Analyst', x: 200, y: 180 },
+                    { role: 'AI Fraud Detection', x: 600, y: 180 },
+                    { role: 'AI Trading Bot', x: 200, y: 310 },
+                    { role: 'AI Portfolio Manager', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Investment Strategist', to: 'AI Risk Analyst', content: '投资策略' },
+                    { from: 'AI Risk Analyst', to: 'AI Fraud Detection', content: '风险评估' },
+                    { from: 'AI Fraud Detection', to: 'AI Trading Bot', content: '风控通过' },
+                    { from: 'AI Trading Bot', to: 'AI Portfolio Manager', content: '交易记录' },
+                    { from: 'AI Portfolio Manager', to: 'AI Investment Strategist', content: '组合报告' }
+                ]
+            },
+            // Cycle 371 新增模板 - AI智能教育系统
+            {
+                id: 'ai-education',
+                name: 'AI智能教育系统',
+                icon: '📚',
+                desc: '从课程设计到个性化学习的完整教育流程',
+                agents: ['AI Curriculum Designer', 'AI Online Tutor', 'AI Exam Proctor', 'AI Learning Analytics', 'AI Student Mentor'],
+                positions: [
+                    { role: 'AI Curriculum Designer', x: 400, y: 50 },
+                    { role: 'AI Online Tutor', x: 200, y: 180 },
+                    { role: 'AI Exam Proctor', x: 600, y: 180 },
+                    { role: 'AI Learning Analytics', x: 200, y: 310 },
+                    { role: 'AI Student Mentor', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Curriculum Designer', to: 'AI Online Tutor', content: '课程内容' },
+                    { from: 'AI Online Tutor', to: 'AI Exam Proctor', content: '学习进度' },
+                    { from: 'AI Exam Proctor', to: 'AI Learning Analytics', content: '考试数据' },
+                    { from: 'AI Learning Analytics', to: 'AI Student Mentor', content: '分析报告' },
+                    { from: 'AI Student Mentor', to: 'AI Curriculum Designer', content: '反馈建议' }
+                ]
+            },
+            // Cycle 371 新增模板 - AI智能制造系统
+            {
+                id: 'ai-manufacturing',
+                name: 'AI智能制造系统',
+                icon: '🏭',
+                desc: '从智能工厂到预测性维护的完整制造流程',
+                agents: ['AI Smart Factory', 'AI Quality Control', 'AI Predictive Maintenance', 'AI Process Optimizer', 'AI Robotics Operator'],
+                positions: [
+                    { role: 'AI Smart Factory', x: 400, y: 50 },
+                    { role: 'AI Quality Control', x: 200, y: 180 },
+                    { role: 'AI Predictive Maintenance', x: 600, y: 180 },
+                    { role: 'AI Process Optimizer', x: 200, y: 310 },
+                    { role: 'AI Robotics Operator', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Smart Factory', to: 'AI Quality Control', content: '生产任务' },
+                    { from: 'AI Quality Control', to: 'AI Predictive Maintenance', content: '质量报告' },
+                    { from: 'AI Predictive Maintenance', to: 'AI Process Optimizer', content: '维护数据' },
+                    { from: 'AI Process Optimizer', to: 'AI Robotics Operator', content: '优化方案' },
+                    { from: 'AI Robotics Operator', to: 'AI Smart Factory', content: '执行结果' }
+                ]
             }
         ];
 
@@ -18353,7 +18485,49 @@
             'AI Consciousness': { icon: '🧠', color: '#ec4899', role: 'AI意识研究工程师' },
             'AI AGI Safety': { icon: '🛡️', color: '#22c55e', role: 'AI通用安全工程师' },
             'AI Alignment Researcher': { icon: '🎯', color: '#3b82f6', role: 'AI对齐研究员' },
-            'AI Existential Risk': { icon: '⚠️', color: '#dc2626', role: 'AI存在风险研究员' }
+            'AI Existential Risk': { icon: '⚠️', color: '#dc2626', role: 'AI存在风险研究员' },
+            // Cycle 371 新增角色 - AI 智能农业现代化
+            'AI Smart Farming': { icon: '🌾', color: '#22c55e', role: 'AI智慧农业工程师' },
+            'AI Crop Monitor': { icon: '🛰️', color: '#14b8a6', role: 'AI作物监测专家' },
+            'AI Drone Operator': { icon: '🚁', color: '#06b6d4', role: 'AI农业无人机操作员' },
+            'AI Soil Scientist': { icon: '🪨', color: '#a855f7', role: 'AI土壤科学家' },
+            'AI Harvest Automation': { icon: '🌽', color: '#f59e0b', role: 'AI收获自动化工程师' },
+            // Cycle 371 新增角色 - AI 智能物流系统
+            'AI Logistics Coordinator': { icon: '🚚', color: '#3b82f6', role: 'AI物流协调员' },
+            'AI Warehouse Manager': { icon: '🏭', color: '#f97316', role: 'AI仓储经理' },
+            'AI Delivery Route': { icon: '🗺️', color: '#ec4899', role: 'AI配送路线规划师' },
+            'AI Fleet Manager': { icon: '🚛', color: '#22c55e', role: 'AI车队管理师' },
+            'AI Supply Chain': { icon: '🔗', color: '#8b5cf6', role: 'AI供应链分析师' },
+            // Cycle 371 新增角色 - AI 智能医疗系统
+            'AI Telemedicine': { icon: '📞', color: '#06b6d4', role: 'AI远程医疗专家' },
+            'AI Drug Discovery': { icon: '💊', color: '#ec4899', role: 'AI药物发现工程师' },
+            'AI Clinical Trial': { icon: '🔬', color: '#a855f7', role: 'AI临床试验分析师' },
+            'AI Patient Monitor': { icon: '❤️', color: '#ef4444', role: 'AI患者监护师' },
+            'AI Health Predictor': { icon: '🔮', color: '#14b8a6', role: 'AI健康预测师' },
+            // Cycle 371 新增角色 - AI 智能金融系统
+            'AI Investment Strategist': { icon: '📈', color: '#10b981', role: 'AI投资策略师' },
+            'AI Risk Analyst': { icon: '⚠️', color: '#dc2626', role: 'AI风险分析师' },
+            'AI Fraud Detection': { icon: '🔍', color: '#f59e0b', role: 'AI欺诈检测师' },
+            'AI Trading Bot': { icon: '🤖', color: '#8b5cf6', role: 'AI交易机器人' },
+            'AI Portfolio Manager': { icon: '💼', color: '#3b82f6', role: 'AI投资组合经理' },
+            // Cycle 371 新增角色 - AI 智能教育系统
+            'AI Curriculum Designer': { icon: '📚', color: '#f43f5e', role: 'AI课程设计师' },
+            'AI Online Tutor': { icon: '🎓', color: '#a855f7', role: 'AI在线导师' },
+            'AI Exam Proctor': { icon: '👁️', color: '#06b6d4', role: 'AI智能监考系统' },
+            'AI Learning Analytics': { icon: '📊', color: '#22c55e', role: 'AI学习分析师' },
+            'AI Student Mentor': { icon: '👨‍🏫', color: '#f59e0b', role: 'AI学生导师' },
+            // Cycle 371 新增角色 - AI 智能能源系统
+            'AI Power Grid': { icon: '⚡', color: '#eab308', role: 'AI电网工程师' },
+            'AI Solar Engineer': { icon: '☀️', color: '#f97316', role: 'AI太阳能工程师' },
+            'AI Wind Engineer': { icon: '🌬️', color: '#06b6d4', role: 'AI风能工程师' },
+            'AI Nuclear Safety': { icon: '☢️', color: '#22c55e', role: 'AI核安全工程师' },
+            'AI Energy Storage': { icon: '🔋', color: '#8b5cf6', role: 'AI储能工程师' },
+            // Cycle 371 新增角色 - AI 智能制造系统
+            'AI Smart Factory': { icon: '🏭', color: '#64748b', role: 'AI智能工厂工程师' },
+            'AI Quality Control': { icon: '✅', color: '#22c55e', role: 'AI质量控制师' },
+            'AI Predictive Maintenance': { icon: '🔧', color: '#f59e0b', role: 'AI预测性维护工程师' },
+            'AI Process Optimizer': { icon: '⚙️', color: '#3b82f6', role: 'AI流程优化师' },
+            'AI Robotics Operator': { icon: '🤖', color: '#ec4899', role: 'AI机器人操作员' }
         };
 
         // 拖拽相关变量
