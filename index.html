@@ -15393,6 +15393,138 @@
                     { from: 'AI Water Quality Tester', to: 'AI Pollution Alert', content: '水质报告' },
                     { from: 'AI Noise Level Monitor', to: 'AI Pollution Alert', content: '噪音数据' }
                 ]
+            },
+            // Cycle 367 新增模板 - AI智能零售电商系统
+            {
+                id: 'ai-retail-ecommerce',
+                name: 'AI智能零售电商系统',
+                icon: '🛒',
+                desc: '从店铺运营到客户洞察的完整零售电商流程',
+                agents: ['AI Retail Manager', 'AI Inventory Analyst', 'AI Visual Merchandiser', 'AI Pricing Strategist', 'AI Customer Insights'],
+                positions: [
+                    { role: 'AI Retail Manager', x: 400, y: 50 },
+                    { role: 'AI Inventory Analyst', x: 200, y: 180 },
+                    { role: 'AI Visual Merchandiser', x: 600, y: 180 },
+                    { role: 'AI Pricing Strategist', x: 200, y: 310 },
+                    { role: 'AI Customer Insights', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Retail Manager', to: 'AI Inventory Analyst', content: '库存分析需求' },
+                    { from: 'AI Inventory Analyst', to: 'AI Pricing Strategist', content: '库存数据报告' },
+                    { from: 'AI Pricing Strategist', to: 'AI Visual Merchandiser', content: '定价方案' },
+                    { from: 'AI Visual Merchandiser', to: 'AI Customer Insights', content: '陈列效果' },
+                    { from: 'AI Customer Insights', to: 'AI Retail Manager', content: '客户洞察报告' }
+                ]
+            },
+            // Cycle 367 新增模板 - AI智能物流供应链系统
+            {
+                id: 'ai-logistics-supply-chain',
+                name: 'AI智能物流供应链系统',
+                icon: '🚚',
+                desc: '从仓储管理到配送优化的完整物流供应链流程',
+                agents: ['AI Logistics Manager', 'AI Warehouse Manager', 'AI Delivery Optimizer', 'AI Fleet Coordinator', 'AI Route Planner'],
+                positions: [
+                    { role: 'AI Logistics Manager', x: 400, y: 50 },
+                    { role: 'AI Warehouse Manager', x: 200, y: 180 },
+                    { role: 'AI Delivery Optimizer', x: 600, y: 180 },
+                    { role: 'AI Fleet Coordinator', x: 200, y: 310 },
+                    { role: 'AI Route Planner', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Logistics Manager', to: 'AI Warehouse Manager', content: '仓储任务分配' },
+                    { from: 'AI Warehouse Manager', to: 'AI Delivery Optimizer', content: '库存数据' },
+                    { from: 'AI Delivery Optimizer', to: 'AI Fleet Coordinator', content: '配送优化方案' },
+                    { from: 'AI Fleet Coordinator', to: 'AI Route Planner', content: '车队调度' },
+                    { from: 'AI Route Planner', to: 'AI Logistics Manager', content: '路线规划完成' }
+                ]
+            },
+            // Cycle 367 新增模板 - AI智能餐饮酒店系统
+            {
+                id: 'ai-restaurant-hotel',
+                name: 'AI智能餐饮酒店系统',
+                icon: '🍽️',
+                desc: '从餐厅运营到酒店管理的完整餐饮酒店流程',
+                agents: ['AI Restaurant Manager', 'AI Head Chef', 'AI Menu Designer', 'AI Kitchen Supervisor', 'AI Hotel Manager'],
+                positions: [
+                    { role: 'AI Restaurant Manager', x: 400, y: 50 },
+                    { role: 'AI Head Chef', x: 200, y: 180 },
+                    { role: 'AI Menu Designer', x: 600, y: 180 },
+                    { role: 'AI Kitchen Supervisor', x: 200, y: 310 },
+                    { role: 'AI Hotel Manager', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Restaurant Manager', to: 'AI Head Chef', content: '菜品研发需求' },
+                    { from: 'AI Head Chef', to: 'AI Menu Designer', content: '菜品配方' },
+                    { from: 'AI Menu Designer', to: 'AI Kitchen Supervisor', content: '菜单设计' },
+                    { from: 'AI Kitchen Supervisor', to: 'AI Hotel Manager', content: '厨房运营报告' },
+                    { from: 'AI Hotel Manager', to: 'AI Restaurant Manager', content: '整体运营分析' }
+                ]
+            },
+            // Cycle 367 新增模板 - AI智能美容健身系统
+            {
+                id: 'ai-beauty-fitness',
+                name: 'AI智能美容健身系统',
+                icon: '💪',
+                desc: '从美容服务到健身指导的完整美容健身流程',
+                agents: ['AI Hair Stylist', 'AI Beautician', 'AI Makeup Artist', 'AI Nail Artist', 'AI Fitness Trainer'],
+                positions: [
+                    { role: 'AI Hair Stylist', x: 400, y: 50 },
+                    { role: 'AI Beautician', x: 200, y: 180 },
+                    { role: 'AI Makeup Artist', x: 600, y: 180 },
+                    { role: 'AI Nail Artist', x: 200, y: 310 },
+                    { role: 'AI Fitness Trainer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Hair Stylist', to: 'AI Beautician', content: '美容需求' },
+                    { from: 'AI Beautician', to: 'AI Makeup Artist', content: '美容方案' },
+                    { from: 'AI Makeup Artist', to: 'AI Nail Artist', content: '化妆造型' },
+                    { from: 'AI Nail Artist', to: 'AI Fitness Trainer', content: '美甲完成' },
+                    { from: 'AI Fitness Trainer', to: 'AI Hair Stylist', content: '健身计划' }
+                ]
+            },
+            // Cycle 367 新增模板 - AI智能人力资源系统
+            {
+                id: 'ai-human-resources',
+                name: 'AI智能人力资源系统',
+                icon: '👔',
+                desc: '从招聘到员工发展的完整人力资源流程',
+                agents: ['AI HR Director', 'AI Recruiter', 'AI Training Coordinator', 'AI Performance Manager', 'AI Employee Relations'],
+                positions: [
+                    { role: 'AI HR Director', x: 400, y: 50 },
+                    { role: 'AI Recruiter', x: 200, y: 180 },
+                    { role: 'AI Training Coordinator', x: 600, y: 180 },
+                    { role: 'AI Performance Manager', x: 200, y: 310 },
+                    { role: 'AI Employee Relations', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI HR Director', to: 'AI Recruiter', content: '招聘需求' },
+                    { from: 'AI Recruiter', to: 'AI Training Coordinator', content: '候选人入职' },
+                    { from: 'AI Training Coordinator', to: 'AI Performance Manager', content: '培训计划' },
+                    { from: 'AI Performance Manager', to: 'AI Employee Relations', content: '绩效评估' },
+                    { from: 'AI Employee Relations', to: 'AI HR Director', content: '员工关系报告' }
+                ]
+            },
+            // Cycle 367 新增模板 - AI智能保险金融系统
+            {
+                id: 'ai-insurance-finance',
+                name: 'AI智能保险金融系统',
+                icon: '🏦',
+                desc: '从保险咨询到理赔服务的完整保险金融流程',
+                agents: ['AI Insurance Broker', 'AI Policy Designer', 'AI Claims Supervisor', 'AI Customer Claims', 'AI Insurance Analyst'],
+                positions: [
+                    { role: 'AI Insurance Broker', x: 400, y: 50 },
+                    { role: 'AI Policy Designer', x: 200, y: 180 },
+                    { role: 'AI Claims Supervisor', x: 600, y: 180 },
+                    { role: 'AI Customer Claims', x: 200, y: 310 },
+                    { role: 'AI Insurance Analyst', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Insurance Broker', to: 'AI Policy Designer', content: '保险需求' },
+                    { from: 'AI Policy Designer', to: 'AI Claims Supervisor', content: '保单设计' },
+                    { from: 'AI Claims Supervisor', to: 'AI Customer Claims', content: '理赔任务' },
+                    { from: 'AI Customer Claims', to: 'AI Insurance Analyst', content: '理赔完成' },
+                    { from: 'AI Insurance Analyst', to: 'AI Insurance Broker', content: '保险分析报告' }
+                ]
             }
         ];
 
@@ -17657,7 +17789,61 @@
             'AI Air Quality Analyst': { icon: '💨', color: '#06b6d4', role: 'AI空气质量分析师' },
             'AI Water Quality Tester': { icon: '💧', color: '#0ea5e9', role: 'AI水质检测师' },
             'AI Noise Level Monitor': { icon: '🔊', color: '#64748b', role: 'AI噪音监测师' },
-            'AI Pollution Alert': { icon: '🚨', color: '#dc2626', role: 'AI污染预警师' }
+            'AI Pollution Alert': { icon: '🚨', color: '#dc2626', role: 'AI污染预警师' },
+            // Cycle 367 新增角色 - AI 智能零售电商
+            'AI Retail Manager': { icon: '🛒', color: '#0ea5e9', role: 'AI零售经理' },
+            'AI Inventory Analyst': { icon: '📊', color: '#22c55e', role: 'AI库存分析师' },
+            'AI Visual Merchandiser': { icon: '🎨', color: '#ec4899', role: 'AI视觉陈列师' },
+            'AI Pricing Strategist': { icon: '💲', color: '#f59e0b', role: 'AI定价策略师' },
+            'AI Customer Insights': { icon: '👥', color: '#8b5cf6', role: 'AI客户洞察师' },
+            // Cycle 367 新增角色 - AI 智能物流供应链
+            'AI Logistics Manager': { icon: '🚚', color: '#f97316', role: 'AI物流经理' },
+            'AI Warehouse Manager': { icon: '🏭', color: '#06b6d4', role: 'AI仓储经理' },
+            'AI Delivery Optimizer': { icon: '📦', color: '#22c55e', role: 'AI配送优化师' },
+            'AI Fleet Coordinator': { icon: '🚛', color: '#a855f7', role: 'AI车队协调师' },
+            'AI Route Planner': { icon: '🗺️', color: '#14b8a6', role: 'AI路线规划师' },
+            // Cycle 367 新增角色 - AI 智能餐饮酒店
+            'AI Restaurant Manager': { icon: '🍽️', color: '#ec4899', role: 'AI餐厅经理' },
+            'AI Head Chef': { icon: '👨‍🍳', color: '#f59e0b', role: 'AI行政总厨' },
+            'AI Menu Designer': { icon: '📋', color: '#8b5cf6', role: 'AI菜单设计师' },
+            'AI Kitchen Supervisor': { icon: '🔧', color: '#64748b', role: 'AI厨房主管' },
+            'AI Hotel Manager': { icon: '🏨', color: '#0ea5e9', role: 'AI酒店经理' },
+            // Cycle 367 新增角色 - AI 智能美容健身
+            'AI Hair Stylist': { icon: '💇', color: '#f97316', role: 'AI美发师' },
+            'AI Beautician': { icon: '💄', color: '#ec4899', role: 'AI美容师' },
+            'AI Makeup Artist': { icon: '✨', color: '#a855f7', role: 'AI化妆师' },
+            'AI Nail Artist': { icon: '💅', color: '#22c55e', role: 'AI美甲师' },
+            'AI Fitness Trainer': { icon: '💪', color: '#06b6d4', role: 'AI健身教练' },
+            // Cycle 367 新增角色 - AI 智能人力资源
+            'AI HR Director': { icon: '🎯', color: '#8b5cf6', role: 'AI人力资源总监' },
+            'AI Recruiter': { icon: '🔍', color: '#22c55e', role: 'AI招聘专员' },
+            'AI Training Coordinator': { icon: '📚', color: '#f97316', role: 'AI培训协调员' },
+            'AI Performance Manager': { icon: '📊', color: '#ec4899', role: 'AI绩效经理' },
+            'AI Employee Relations': { icon: '🤝', color: '#06b6d4', role: 'AI员工关系专员' },
+            // Cycle 367 新增角色 - AI 智能保险金融
+            'AI Insurance Broker': { icon: '🏦', color: '#0ea5e9', role: 'AI保险经纪人' },
+            'AI Policy Designer': { icon: '📝', color: '#f59e0b', role: 'AI保单设计师' },
+            'AI Claims Supervisor': { icon: '📋', color: '#22c55e', role: 'AI理赔主管' },
+            'AI Customer Claims': { icon: '🤝', color: '#8b5cf6', role: 'AI客户理赔师' },
+            'AI Insurance Analyst': { icon: '📊', color: '#ec4899', role: 'AI保险分析师' },
+            // Cycle 367 新增角色 - AI 智能政府公共服务
+            'AI Policy Advisor': { icon: '📜', color: '#f97316', role: 'AI政策顾问' },
+            'AI Public Relations': { icon: '📣', color: '#06b6d4', role: 'AI公共关系师' },
+            'AI Citizen Service': { icon: '🏛️', color: '#14b8a6', role: 'AI公民服务师' },
+            'AI Urban Manager': { icon: '🏙️', color: '#a855f7', role: 'AI城市管理师' },
+            'AI Emergency Planner': { icon: '🚨', color: '#dc2626', role: 'AI应急规划师' },
+            // Cycle 367 新增角色 - AI 智能媒体直播
+            'AI Live Stream Host': { icon: '📹', color: '#ec4899', role: 'AI直播主播' },
+            'AI Content Moderator': { icon: '🛡️', color: '#dc2626', role: 'AI内容审核员' },
+            'AI Analytics Reporter': { icon: '📊', color: '#06b6d4', role: 'AI数据播报员' },
+            'AI Interactive Planner': { icon: '💬', color: '#8b5cf6', role: 'AI互动策划师' },
+            'AI弹幕 Analyst': { icon: '💭', color: '#22c55e', role: 'AI弹幕分析师' },
+            // Cycle 367 新增角色 - AI 智能能源化工
+            'AI Chemical Engineer': { icon: '⚗️', color: '#8b5cf6', role: 'AI化学工程师' },
+            'AI Refinery Operator': { icon: '🏭', color: '#f97316', role: 'AI炼油操作员' },
+            'AI Pipeline Engineer': { icon: '🛤️', color: '#64748b', role: 'AI管道工程师' },
+            'AI Safety Inspector': { icon: '✅', color: '#22c55e', role: 'AI安全检查员' },
+            'AI Environmental Engineer': { icon: '🌿', color: '#10b981', role: 'AI环境工程师' }
         };
 
         // 拖拽相关变量
