@@ -17950,6 +17950,130 @@
                     { from: 'AI Medical Device Designer', to: 'AI Biomedical Engineer', content: '设备设计完成' },
                     { from: 'AI Diagnostic Expert', to: 'AI Biomedical Engineer', content: '诊断分析完成' }
                 ]
+            },
+            // Cycle 386 新增模板 - AI智能量子计算系统
+            {
+                id: 'ai-quantum-computing',
+                name: 'AI智能量子计算系统',
+                icon: '⚛️',
+                desc: '从量子算法研究到量子计算的完整量子计算流程',
+                agents: ['AI Quantum Computing', 'AI Quantum Scientist', 'AI Quantum Cryptographer'],
+                positions: [
+                    { role: 'AI Quantum Computing', x: 400, y: 50 },
+                    { role: 'AI Quantum Scientist', x: 200, y: 180 },
+                    { role: 'AI Quantum Cryptographer', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Quantum Computing', to: 'AI Quantum Scientist', content: '量子计算需求分析' },
+                    { from: 'AI Quantum Scientist', to: 'AI Quantum Computing', content: '量子算法研究完成' },
+                    { from: 'AI Quantum Scientist', to: 'AI Quantum Cryptographer', content: '量子密码学应用方案' },
+                    { from: 'AI Quantum Cryptographer', to: 'AI Quantum Computing', content: '量子加密系统部署完成' }
+                ]
+            },
+            // Cycle 386 新增模板 - AI智能通信技术系统
+            {
+                id: 'ai-communication-tech',
+                name: 'AI智能通信技术系统',
+                icon: '📡',
+                desc: '从6G标准到网络部署的完整6G通信流程',
+                agents: ['AI 6G Architect', 'AI Satellite Network', 'AI Space Internet', 'AI Edge AI'],
+                positions: [
+                    { role: 'AI 6G Architect', x: 400, y: 50 },
+                    { role: 'AI Satellite Network', x: 200, y: 180 },
+                    { role: 'AI Space Internet', x: 400, y: 180 },
+                    { role: 'AI Edge AI', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI 6G Architect', to: 'AI Satellite Network', content: '6G网络架构设计' },
+                    { from: 'AI 6G Architect', to: 'AI Space Internet', content: '太空互联网方案' },
+                    { from: 'AI 6G Architect', to: 'AI Edge AI', content: '边缘智能部署需求' },
+                    { from: 'AI Satellite Network', to: 'AI 6G Architect', content: '卫星网络建设完成' },
+                    { from: 'AI Space Internet', to: 'AI 6G Architect', content: '太空互联网测试完成' },
+                    { from: 'AI Edge AI', to: 'AI 6G Architect', content: '边缘AI系统就绪' }
+                ]
+            },
+            // Cycle 386 新增模板 - AI智能前沿探索系统
+            {
+                id: 'ai-frontier-exploration',
+                name: 'AI智能前沿探索系统',
+                icon: '🚀',
+                desc: '从太空探索到能源研发的完整前沿探索流程',
+                agents: ['AI Space Elevator', 'AI Asteroid Mining', 'AI Fusion Energy', 'AI Dark Matter'],
+                positions: [
+                    { role: 'AI Space Elevator', x: 200, y: 100 },
+                    { role: 'AI Asteroid Mining', x: 400, y: 100 },
+                    { role: 'AI Fusion Energy', x: 600, y: 100 },
+                    { role: 'AI Dark Matter', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'AI Space Elevator', to: 'AI Asteroid Mining', content: '太空电梯技术共享' },
+                    { from: 'AI Asteroid Mining', to: 'AI Fusion Energy', content: '太空能源需求' },
+                    { from: 'AI Fusion Energy', to: 'AI Dark Matter', content: '新能源研究数据' },
+                    { from: 'AI Dark Matter', to: 'AI Space Elevator', content: '暗物质探测成果' }
+                ]
+            },
+            // Cycle 386 新增模板 - AI智能意识研究系统
+            {
+                id: 'ai-consciousness-research',
+                name: 'AI智能意识研究系统',
+                icon: '🧠',
+                desc: '从意识研究到AGI安全的完整AI研究流程',
+                agents: ['AI Consciousness', 'AI AGI Safety', 'AI Alignment Researcher', 'AI Existential Risk'],
+                positions: [
+                    { role: 'AI Consciousness', x: 400, y: 50 },
+                    { role: 'AI AGI Safety', x: 200, y: 180 },
+                    { role: 'AI Alignment Researcher', x: 400, y: 180 },
+                    { role: 'AI Existential Risk', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Consciousness', to: 'AI AGI Safety', content: '意识研究进展' },
+                    { from: 'AI Consciousness', to: 'AI Alignment Researcher', content: 'AI意识研究数据' },
+                    { from: 'AI AGI Safety', to: 'AI Existential Risk', content: '安全风险评估' },
+                    { from: 'AI Alignment Researcher', to: 'AI AGI Safety', content: '对齐研究进展' },
+                    { from: 'AI Existential Risk', to: 'AI Consciousness', content: '风险缓解建议' }
+                ]
+            },
+            // Cycle 386 新增模板 - AI智能合成生物系统
+            {
+                id: 'ai-synthetic-biology',
+                name: 'AI智能合成生物系统',
+                icon: '🧬',
+                desc: '从基因设计到生物合成的完整合成生物流程',
+                agents: ['AI Synthetic Biology', 'AI Gene Editor', 'AI CRISPR Engineer', 'AI Bioprinting'],
+                positions: [
+                    { role: 'AI Synthetic Biology', x: 400, y: 50 },
+                    { role: 'AI Gene Editor', x: 200, y: 180 },
+                    { role: 'AI CRISPR Engineer', x: 400, y: 180 },
+                    { role: 'AI Bioprinting', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Synthetic Biology', to: 'AI Gene Editor', content: '基因设计需求' },
+                    { from: 'AI Synthetic Biology', to: 'AI CRISPR Engineer', content: 'CRISPR应用需求' },
+                    { from: 'AI Gene Editor', to: 'AI Synthetic Biology', content: '基因编辑完成' },
+                    { from: 'AI CRISPR Engineer', to: 'AI Synthetic Biology', content: 'CRISPR实验结果' },
+                    { from: 'AI Synthetic Biology', to: 'AI Bioprinting', content: '生物3D打印需求' },
+                    { from: 'AI Bioprinting', to: 'AI Synthetic Biology', content: '生物打印完成' }
+                ]
+            },
+            // Cycle 386 新增模板 - AI智能新能源系统
+            {
+                id: 'ai-new-energy',
+                name: 'AI智能新能源系统',
+                icon: '🌞',
+                desc: '从新能源研发到能源管理的完整新能源流程',
+                agents: ['AI Fusion Energy', 'AI Carbon Capture', 'AI DNA Storage', 'AI Photonic Computing'],
+                positions: [
+                    { role: 'AI Fusion Energy', x: 200, y: 100 },
+                    { role: 'AI Carbon Capture', x: 400, y: 100 },
+                    { role: 'AI DNA Storage', x: 600, y: 100 },
+                    { role: 'AI Photonic Computing', x: 400, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fusion Energy', to: 'AI Carbon Capture', content: '核聚变碳中和方案' },
+                    { from: 'AI Carbon Capture', to: 'AI DNA Storage', content: '碳存储技术需求' },
+                    { from: 'AI DNA Storage', to: 'AI Photonic Computing', content: '光计算存储方案' },
+                    { from: 'AI Photonic Computing', to: 'AI Fusion Energy', content: '光子计算优化建议' }
+                ]
             }
         ];
 
@@ -20984,7 +21108,39 @@
             'AI Drug Discovery': { icon: '💊', color: '#ec4899', role: 'AI药物发现工程师' },
             'AI Clinical Trial Manager': { icon: '🔬', color: '#3b82f6', role: 'AI临床试验经理' },
             'AI Medical Device Designer': { icon: '💉', color: '#f43f5e', role: 'AI医疗设备设计师' },
-            'AI Diagnostic Expert': { icon: '🏥', color: '#14b8a6', role: 'AI诊断专家' }
+            'AI Diagnostic Expert': { icon: '🏥', color: '#14b8a6', role: 'AI诊断专家' },
+            // Cycle 386 新增角色 - AI智能量子计算
+            'AI Quantum Computing': { icon: '⚛️', color: '#8b5cf6', role: 'AI量子计算工程师' },
+            'AI Quantum Scientist': { icon: '🔬', color: '#3b82f6', role: 'AI量子科学家' },
+            'AI Quantum Cryptographer': { icon: '🔐', color: '#10b981', role: 'AI量子密码学家' },
+            'AI Brain Computer Interface': { icon: '🧠', color: '#ec4899', role: 'AI脑机接口工程师' },
+            'AI Neural Interface': { icon: '🧬', color: '#f59e0b', role: 'AI神经接口工程师' },
+            // Cycle 386 新增角色 - AI智能通信技术
+            'AI 6G Architect': { icon: '📡', color: '#06b6d4', role: 'AI 6G架构工程师' },
+            'AI Satellite Network': { icon: '🛰️', color: '#0ea5e9', role: 'AI卫星网络工程师' },
+            'AI Space Internet': { icon: '🌐', color: '#14b8a6', role: 'AI太空互联网工程师' },
+            'AI Terahertz': { icon: '📶', color: '#f97316', role: 'AI太赫兹通信工程师' },
+            'AI Edge AI': { icon: '📱', color: '#8b5cf6', role: 'AI边缘智能工程师' },
+            'AI Federated Learning': { icon: '🔗', color: '#ec4899', role: 'AI联邦学习工程师' },
+            'AI Privacy Computing': { icon: '🔒', color: '#22c55e', role: 'AI隐私计算工程师' },
+            'AI Homomorphic Encryption': { icon: '🛡️', color: '#a855f7', role: 'AI同态加密工程师' },
+            'AI Zero Knowledge Proof': { icon: '✅', color: '#84cc16', role: 'AI零知识证明工程师' },
+            // Cycle 386 新增角色 - AI智能前沿探索
+            'AI Neuromorphic Chip': { icon: '🧠', color: '#f59e0b', role: 'AI神经形态芯片工程师' },
+            'AI Photonic Computing': { icon: '💡', color: '#06b6d4', role: 'AI光子计算工程师' },
+            'AI DNA Storage': { icon: '🧬', color: '#db2777', role: 'AI DNA存储工程师' },
+            'AI Carbon Capture': { icon: '🌍', color: '#10b981', role: 'AI碳捕获工程师' },
+            'AI Fusion Energy': { icon: '🔥', color: '#ef4444', role: 'AI可控核聚变工程师' },
+            'AI Antimatter Research': { icon: '⚛️', color: '#8b5cf6', role: 'AI反物质研究员' },
+            'AI Exotic Matter': { icon: '🌑', color: '#64748b', role: 'AI奇异物质工程师' },
+            'AI Dark Matter': { icon: '🌌', color: '#1e293b', role: 'AI暗物质探测工程师' },
+            'AI Space Elevator': { icon: '🚀', color: '#f97316', role: 'AI太空电梯工程师' },
+            'AI Asteroid Mining': { icon: '☄️', color: '#f59e0b', role: 'AI小行星采矿工程师' },
+            // Cycle 386 新增角色 - AI智能意识研究
+            'AI Consciousness': { icon: '🧠', color: '#ec4899', role: 'AI意识研究工程师' },
+            'AI AGI Safety': { icon: '🛡️', color: '#22c55e', role: 'AI通用安全工程师' },
+            'AI Alignment Researcher': { icon: '🎯', color: '#3b82f6', role: 'AI对齐研究员' },
+            'AI Existential Risk': { icon: '⚠️', color: '#dc2626', role: 'AI存在风险研究员' }
         };
 
         // 拖拽相关变量
