@@ -26803,8 +26803,173 @@
             }
         ];
 
+        // Cycle 448 - 新增行业服务系统模板
+        const cycle448Templates = [
+            // AI智能跨境电商服务系统
+            {
+                id: 'ai-cross-border-ecommerce',
+                name: 'AI智能跨境电商服务系统',
+                icon: '🌐',
+                desc: '智能跨境电商服务管理，包括海外仓储、物流清关、商品推广等',
+                agents: ['AI Ecommerce Director', 'AI Warehouse Manager', 'AI Logistics Coordinator', 'AI Customs Handler', 'AI Global Marketing', 'AI Customer Service'],
+                positions: [
+                    { role: 'AI Ecommerce Director', x: 400, y: 30 },
+                    { role: 'AI Warehouse Manager', x: 150, y: 150 },
+                    { role: 'AI Logistics Coordinator', x: 650, y: 150 },
+                    { role: 'AI Customs Handler', x: 150, y: 300 },
+                    { role: 'AI Global Marketing', x: 400, y: 350 },
+                    { role: 'AI Customer Service', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Ecommerce Director', to: 'AI Warehouse Manager', content: '仓储管理' },
+                    { from: 'AI Ecommerce Director', to: 'AI Logistics Coordinator', content: '物流协调' },
+                    { from: 'AI Warehouse Manager', to: 'AI Customs Handler', content: '清关处理' },
+                    { from: 'AI Logistics Coordinator', to: 'AI Global Marketing', content: '全球推广' },
+                    { from: 'AI Global Marketing', to: 'AI Customer Service', content: '客户服务' }
+                ]
+            },
+            // AI智能智慧社区服务系统
+            {
+                id: 'ai-smart-community',
+                name: 'AI智能智慧社区服务系统',
+                icon: '🏘️',
+                desc: '智能智慧社区服务管理，包括物业服务、社区活动、便民设施等',
+                agents: ['AI Community Director', 'AI Property Manager', 'AI Event Organizer', 'AI Facility Manager', 'AI Security Coordinator', 'AI Resident Services'],
+                positions: [
+                    { role: 'AI Community Director', x: 400, y: 30 },
+                    { role: 'AI Property Manager', x: 150, y: 150 },
+                    { role: 'AI Event Organizer', x: 650, y: 150 },
+                    { role: 'AI Facility Manager', x: 150, y: 300 },
+                    { role: 'AI Security Coordinator', x: 400, y: 350 },
+                    { role: 'AI Resident Services', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Community Director', to: 'AI Property Manager', content: '物业管理' },
+                    { from: 'AI Community Director', to: 'AI Event Organizer', content: '活动组织' },
+                    { from: 'AI Property Manager', to: 'AI Facility Manager', content: '设施管理' },
+                    { from: 'AI Event Organizer', to: 'AI Security Coordinator', content: '安全管理' },
+                    { from: 'AI Security Coordinator', to: 'AI Resident Services', content: '居民服务' }
+                ]
+            },
+            // AI智能亲子活动服务系统
+            {
+                id: 'ai-parent-child-activities',
+                name: 'AI智能亲子活动服务系统',
+                icon: '👨‍👩‍👧',
+                desc: '智能亲子活动服务管理，包括活动策划、场地预约、亲子教育等',
+                agents: ['AI Activity Director', 'AI Event Planner', 'AI Venue Booker', 'AI Educator', 'AI Safety Officer', 'AI Experience Manager'],
+                positions: [
+                    { role: 'AI Activity Director', x: 400, y: 30 },
+                    { role: 'AI Event Planner', x: 150, y: 150 },
+                    { role: 'AI Venue Booker', x: 650, y: 150 },
+                    { role: 'AI Educator', x: 150, y: 300 },
+                    { role: 'AI Safety Officer', x: 400, y: 350 },
+                    { role: 'AI Experience Manager', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Activity Director', to: 'AI Event Planner', content: '活动策划' },
+                    { from: 'AI Activity Director', to: 'AI Venue Booker', content: '场地预约' },
+                    { from: 'AI Event Planner', to: 'AI Educator', content: '教育内容' },
+                    { from: 'AI Venue Booker', to: 'AI Safety Officer', content: '安全保障' },
+                    { from: 'AI Safety Officer', to: 'AI Experience Manager', content: '体验管理' }
+                ]
+            },
+            // AI智能图书共享服务系统
+            {
+                id: 'ai-book-sharing',
+                name: 'AI智能图书共享服务系统',
+                icon: '📖',
+                desc: '智能图书共享服务管理，包括图书借阅、库存管理、阅读推荐等',
+                agents: ['AI Library Director', 'AI Book Lender', 'AI Inventory Manager', 'AI Recommendation Engine', 'AI Reading Coach', 'AI Community Builder'],
+                positions: [
+                    { role: 'AI Library Director', x: 400, y: 30 },
+                    { role: 'AI Book Lender', x: 150, y: 150 },
+                    { role: 'AI Inventory Manager', x: 650, y: 150 },
+                    { role: 'AI Recommendation Engine', x: 150, y: 300 },
+                    { role: 'AI Reading Coach', x: 400, y: 350 },
+                    { role: 'AI Community Builder', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Library Director', to: 'AI Book Lender', content: '借阅管理' },
+                    { from: 'AI Library Director', to: 'AI Inventory Manager', content: '库存管理' },
+                    { from: 'AI Book Lender', to: 'AI Recommendation Engine', content: '推荐系统' },
+                    { from: 'AI Inventory Manager', to: 'AI Reading Coach', content: '阅读指导' },
+                    { from: 'AI Reading Coach', to: 'AI Community Builder', content: '社区建设' }
+                ]
+            },
+            // AI智能养老服务系统
+            {
+                id: 'ai-elderly-care',
+                name: 'AI智能养老服务系统',
+                icon: '👴',
+                desc: '智能养老服务管理，包括健康监测、生活照料、陪伴服务等',
+                agents: ['AI Care Director', 'AI Health Monitor', 'AI Life Companion', 'AI Medical Coordinator', 'AI Activity Planner', 'AI Family Liaison'],
+                positions: [
+                    { role: 'AI Care Director', x: 400, y: 30 },
+                    { role: 'AI Health Monitor', x: 150, y: 150 },
+                    { role: 'AI Life Companion', x: 650, y: 150 },
+                    { role: 'AI Medical Coordinator', x: 150, y: 300 },
+                    { role: 'AI Activity Planner', x: 400, y: 350 },
+                    { role: 'AI Family Liaison', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Care Director', to: 'AI Health Monitor', content: '健康监测' },
+                    { from: 'AI Care Director', to: 'AI Life Companion', content: '生活陪伴' },
+                    { from: 'AI Health Monitor', to: 'AI Medical Coordinator', content: '医疗协调' },
+                    { from: 'AI Life Companion', to: 'AI Activity Planner', content: '活动安排' },
+                    { from: 'AI Activity Planner', to: 'AI Family Liaison', content: '家属联络' }
+                ]
+            },
+            // AI智能宠物服务系统
+            {
+                id: 'ai-pet-service',
+                name: 'AI智能宠物服务系统',
+                icon: '🐕',
+                desc: '智能宠物服务管理，包括宠物寄养、医疗美容、宠物培训等',
+                agents: ['AI Pet Director', 'AI Pet Sitter', 'AI Grooming Specialist', 'AI Vet Coordinator', 'AI Trainer', 'AI Pet Hotel Manager'],
+                positions: [
+                    { role: 'AI Pet Director', x: 400, y: 30 },
+                    { role: 'AI Pet Sitter', x: 150, y: 150 },
+                    { role: 'AI Grooming Specialist', x: 650, y: 150 },
+                    { role: 'AI Vet Coordinator', x: 150, y: 300 },
+                    { role: 'AI Trainer', x: 400, y: 350 },
+                    { role: 'AI Pet Hotel Manager', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Pet Director', to: 'AI Pet Sitter', content: '寄养服务' },
+                    { from: 'AI Pet Director', to: 'AI Grooming Specialist', content: '美容服务' },
+                    { from: 'AI Pet Sitter', to: 'AI Vet Coordinator', content: '医疗协调' },
+                    { from: 'AI Grooming Specialist', to: 'AI Trainer', content: '培训安排' },
+                    { from: 'AI Trainer', to: 'AI Pet Hotel Manager', content: '酒店管理' }
+                ]
+            },
+            // AI智能物流仓储服务系统
+            {
+                id: 'ai-logistics-warehouse',
+                name: 'AI智能物流仓储服务系统',
+                icon: '📦',
+                desc: '智能物流仓储服务管理，包括订单处理、仓储配送、库存管理等',
+                agents: ['AI Logistics Director', 'AI Order Processor', 'AI Warehouse Operator', 'AI Delivery Coordinator', 'AI Inventory Controller', 'AI Supply Chain Planner'],
+                positions: [
+                    { role: 'AI Logistics Director', x: 400, y: 30 },
+                    { role: 'AI Order Processor', x: 150, y: 150 },
+                    { role: 'AI Warehouse Operator', x: 650, y: 150 },
+                    { role: 'AI Delivery Coordinator', x: 150, y: 300 },
+                    { role: 'AI Inventory Controller', x: 400, y: 350 },
+                    { role: 'AI Supply Chain Planner', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Logistics Director', to: 'AI Order Processor', content: '订单处理' },
+                    { from: 'AI Logistics Director', to: 'AI Warehouse Operator', content: '仓储操作' },
+                    { from: 'AI Order Processor', to: 'AI Delivery Coordinator', content: '配送协调' },
+                    { from: 'AI Warehouse Operator', to: 'AI Inventory Controller', content: '库存控制' },
+                    { from: 'AI Inventory Controller', to: 'AI Supply Chain Planner', content: '供应链规划' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates];
 
         // Agent 角色配置
         const agentRoles = {
