@@ -16053,6 +16053,138 @@
                     { from: 'AI Process Optimizer', to: 'AI Robotics Operator', content: '优化方案' },
                     { from: 'AI Robotics Operator', to: 'AI Smart Factory', content: '执行结果' }
                 ]
+            },
+            // Cycle 372 新增模板 - AI智能新闻传媒系统
+            {
+                id: 'ai-news-media',
+                name: 'AI智能新闻传媒系统',
+                icon: '📺',
+                desc: '从新闻采集到媒体发布的完整新闻传媒流程',
+                agents: ['AI News Anchor', 'AI Editor', 'AI Photojournalist', 'AI Broadcast Director', 'AI Media Analyst'],
+                positions: [
+                    { role: 'AI News Anchor', x: 400, y: 50 },
+                    { role: 'AI Editor', x: 200, y: 180 },
+                    { role: 'AI Photojournalist', x: 600, y: 180 },
+                    { role: 'AI Broadcast Director', x: 200, y: 310 },
+                    { role: 'AI Media Analyst', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI News Anchor', to: 'AI Editor', content: '新闻稿件' },
+                    { from: 'AI Editor', to: 'AI Photojournalist', content: '采访任务' },
+                    { from: 'AI Photojournalist', to: 'AI Broadcast Director', content: '素材提交' },
+                    { from: 'AI Broadcast Director', to: 'AI Media Analyst', content: '播出反馈' },
+                    { from: 'AI Media Analyst', to: 'AI News Anchor', content: '数据分析' }
+                ]
+            },
+            // Cycle 372 新增模板 - AI智能出版印刷系统
+            {
+                id: 'ai-publishing',
+                name: 'AI智能出版印刷系统',
+                icon: '📚',
+                desc: '从书籍编辑到印刷出版的完整出版流程',
+                agents: ['AI Print Designer', 'AI Typesetter', 'AI Publisher', 'AI Proofreader', 'AI ISBN Manager'],
+                positions: [
+                    { role: 'AI Publisher', x: 400, y: 50 },
+                    { role: 'AI Print Designer', x: 200, y: 180 },
+                    { role: 'AI Typesetter', x: 600, y: 180 },
+                    { role: 'AI Proofreader', x: 200, y: 310 },
+                    { role: 'AI ISBN Manager', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Publisher', to: 'AI Print Designer', content: '出版计划' },
+                    { from: 'AI Print Designer', to: 'AI Typesetter', content: '设计稿' },
+                    { from: 'AI Typesetter', to: 'AI Proofreader', content: '排版文件' },
+                    { from: 'AI Proofreader', to: 'AI ISBN Manager', content: '校对报告' },
+                    { from: 'AI ISBN Manager', to: 'AI Publisher', content: 'ISBN分配' }
+                ]
+            },
+            // Cycle 372 新增模板 - AI智能体育用品系统
+            {
+                id: 'ai-sports-equipment',
+                name: 'AI智能体育用品系统',
+                icon: '⚽',
+                desc: '从产品设计到质量检测的完整体育用品流程',
+                agents: ['AI Sports Designer', 'AI Gym Equipment', 'AI Sportswear Designer', 'AI Equipment Tester', 'AI Sports Marketing'],
+                positions: [
+                    { role: 'AI Sports Designer', x: 400, y: 50 },
+                    { role: 'AI Gym Equipment', x: 200, y: 180 },
+                    { role: 'AI Sportswear Designer', x: 600, y: 180 },
+                    { role: 'AI Equipment Tester', x: 200, y: 310 },
+                    { role: 'AI Sports Marketing', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sports Designer', to: 'AI Gym Equipment', content: '设计要求' },
+                    { from: 'AI Gym Equipment', to: 'AI Equipment Tester', content: '样品制作' },
+                    { from: 'AI Sportswear Designer', to: 'AI Equipment Tester', content: '样品提交' },
+                    { from: 'AI Equipment Tester', to: 'AI Sports Marketing', content: '测试报告' },
+                    { from: 'AI Sports Marketing', to: 'AI Sports Designer', content: '市场反馈' }
+                ]
+            },
+            // Cycle 372 新增模板 - AI智能乐器制造系统
+            {
+                id: 'ai-instrument-making',
+                name: 'AI智能乐器制造系统',
+                icon: '🎸',
+                desc: '从乐器设计到制作生产的完整乐器制造流程',
+                agents: ['AI Instrument Designer', 'AI Luthier', 'AI Piano Technician', 'AI Audio Engineer', 'AI Music Sales'],
+                positions: [
+                    { role: 'AI Instrument Designer', x: 400, y: 50 },
+                    { role: 'AI Luthier', x: 200, y: 180 },
+                    { role: 'AI Piano Technician', x: 600, y: 180 },
+                    { role: 'AI Audio Engineer', x: 200, y: 310 },
+                    { role: 'AI Music Sales', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Instrument Designer', to: 'AI Luthier', content: '设计图纸' },
+                    { from: 'AI Luthier', to: 'AI Piano Technician', content: '制作进度' },
+                    { from: 'AI Piano Technician', to: 'AI Audio Engineer', content: '调音完成' },
+                    { from: 'AI Audio Engineer', to: 'AI Music Sales', content: '质检报告' },
+                    { from: 'AI Music Sales', to: 'AI Instrument Designer', content: '销售反馈' }
+                ]
+            },
+            // Cycle 372 新增模板 - AI智能玩具设计系统
+            {
+                id: 'ai-toy-design',
+                name: 'AI智能玩具设计系统',
+                icon: '🧸',
+                desc: '从玩具设计到安全检测的完整玩具设计流程',
+                agents: ['AI Toy Designer', 'AI Toy Engineer', 'AI Plush Maker', 'AI Toy Safety', 'AI Toy Marketing'],
+                positions: [
+                    { role: 'AI Toy Designer', x: 400, y: 50 },
+                    { role: 'AI Toy Engineer', x: 200, y: 180 },
+                    { role: 'AI Plush Maker', x: 600, y: 180 },
+                    { role: 'AI Toy Safety', x: 200, y: 310 },
+                    { role: 'AI Toy Marketing', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Toy Designer', to: 'AI Toy Engineer', content: '设计概念' },
+                    { from: 'AI Toy Engineer', to: 'AI Plush Maker', content: '工程要求' },
+                    { from: 'AI Plush Maker', to: 'AI Toy Safety', content: '样品完成' },
+                    { from: 'AI Toy Safety', to: 'AI Toy Marketing', content: '安全认证' },
+                    { from: 'AI Toy Marketing', to: 'AI Toy Designer', content: '市场调研' }
+                ]
+            },
+            // Cycle 372 新增模板 - AI智能医疗健康系统
+            {
+                id: 'ai-dental-care',
+                name: 'AI智能牙科医疗系统',
+                icon: '🦷',
+                desc: '从口腔检查到牙齿治疗的完整牙科医疗流程',
+                agents: ['AI Dentist', 'AI Orthodontist', 'AI Dental Hygienist', 'AI Dental Technician', 'AI Dental Receptionist'],
+                positions: [
+                    { role: 'AI Dentist', x: 400, y: 50 },
+                    { role: 'AI Orthodontist', x: 200, y: 180 },
+                    { role: 'AI Dental Hygienist', x: 600, y: 180 },
+                    { role: 'AI Dental Technician', x: 200, y: 310 },
+                    { role: 'AI Dental Receptionist', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Dentist', to: 'AI Orthodontist', content: '诊断结果' },
+                    { from: 'AI Orthodontist', to: 'AI Dental Hygienist', content: '治疗计划' },
+                    { from: 'AI Dental Hygienist', to: 'AI Dental Technician', content: '洁牙记录' },
+                    { from: 'AI Dental Technician', to: 'AI Dentist', content: '牙冠制作' },
+                    { from: 'AI Dental Receptionist', to: 'AI Dentist', content: '预约信息' }
+                ]
             }
         ];
 
@@ -18527,7 +18659,49 @@
             'AI Quality Control': { icon: '✅', color: '#22c55e', role: 'AI质量控制师' },
             'AI Predictive Maintenance': { icon: '🔧', color: '#f59e0b', role: 'AI预测性维护工程师' },
             'AI Process Optimizer': { icon: '⚙️', color: '#3b82f6', role: 'AI流程优化师' },
-            'AI Robotics Operator': { icon: '🤖', color: '#ec4899', role: 'AI机器人操作员' }
+            'AI Robotics Operator': { icon: '🤖', color: '#ec4899', role: 'AI机器人操作员' },
+            // Cycle 372 新增角色 - AI 智能新闻传媒
+            'AI News Anchor': { icon: '📺', color: '#3b82f6', role: 'AI新闻主播' },
+            'AI Editor': { icon: '✏️', color: '#8b5cf6', role: 'AI编辑' },
+            'AI Photojournalist': { icon: '📷', color: '#ec4899', role: 'AI摄影记者' },
+            'AI Broadcast Director': { icon: '🎙️', color: '#f59e0b', role: 'AI广播导演' },
+            'AI Media Analyst': { icon: '📊', color: '#10b981', role: 'AI媒体分析师' },
+            // Cycle 372 新增角色 - AI 智能出版印刷
+            'AI Print Designer': { icon: '🖨️', color: '#64748b', role: 'AI印刷设计师' },
+            'AI Typesetter': { icon: '📝', color: '#a855f7', role: 'AI排版师' },
+            'AI Publisher': { icon: '📚', color: '#f43f5e', role: 'AI出版商' },
+            'AI Proofreader': { icon: '🔍', color: '#06b6d4', role: 'AI校对员' },
+            'AI ISBN Manager': { icon: '📖', color: '#22c55e', role: 'AI ISBN管理员' },
+            // Cycle 372 新增角色 - AI 智能体育用品
+            'AI Sports Designer': { icon: '⚽', color: '#f97316', role: 'AI体育用品设计师' },
+            'AI Gym Equipment': { icon: '🏋️', color: '#3b82f6', role: 'AI健身器材工程师' },
+            'AI Sportswear Designer': { icon: '👕', color: '#ec4899', role: 'AI运动服设计师' },
+            'AI Equipment Tester': { icon: '🧪', color: '#10b981', role: 'AI器材测试员' },
+            'AI Sports Marketing': { icon: '📢', color: '#f59e0b', role: 'AI体育营销师' },
+            // Cycle 372 新增角色 - AI 智能乐器制造
+            'AI Instrument Designer': { icon: '🎸', color: '#8b5cf6', role: 'AI乐器设计师' },
+            'AI Luthier': { icon: '🎻', color: '#f43f5e', role: 'AI制琴师' },
+            'AI Piano Technician': { icon: '🎹', color: '#06b6d4', role: 'AI钢琴调律师' },
+            'AI Audio Engineer': { icon: '🔊', color: '#22c55e', role: 'AI音响工程师' },
+            'AI Music Sales': { icon: '🎵', color: '#f59e0b', role: 'AI乐器销售师' },
+            // Cycle 372 新增角色 - AI 智能玩具设计
+            'AI Toy Designer': { icon: '🧸', color: '#ec4899', role: 'AI玩具设计师' },
+            'AI Toy Engineer': { icon: '🎮', color: '#3b82f6', role: 'AI玩具工程师' },
+            'AI Plush Maker': { icon: '🧸', color: '#a855f7', role: 'AI毛绒玩具制作师' },
+            'AI Toy Safety': { icon: '✅', color: '#10b981', role: 'AI玩具安全测试员' },
+            'AI Toy Marketing': { icon: '📢', color: '#f97316', role: 'AI玩具营销师' },
+            // Cycle 372 新增角色 - AI 智能牙科医疗
+            'AI Dentist': { icon: '🦷', color: '#06b6d4', role: 'AI牙科医生' },
+            'AI Orthodontist': { icon: '😬', color: '#8b5cf6', role: 'AI正畸医生' },
+            'AI Dental Hygienist': { icon: '✨', color: '#22c55e', role: 'AI口腔卫生师' },
+            'AI Dental Technician': { icon: '🔧', color: '#64748b', role: 'AI牙科技师' },
+            'AI Dental Receptionist': { icon: '🏥', color: '#f43f5e', role: 'AI牙科接待员' },
+            // Cycle 372 新增角色 - AI 智能宠物医疗
+            'AI Vet': { icon: '🐕', color: '#f97316', role: 'AI宠物医生' },
+            'AI Vet Surgeon': { icon: '🔬', color: '#dc2626', role: 'AI宠物外科医生' },
+            'AI Pet Nutritionist': { icon: '🦴', color: '#22c55e', role: 'AI宠物营养师' },
+            'AI Pet Pharmacist': { icon: '💊', color: '#8b5cf6', role: 'AI宠物药剂师' },
+            'AI Pet Groomer': { icon: '✂️', color: '#ec4899', role: 'AI宠物美容师' }
         };
 
         // 拖拽相关变量
