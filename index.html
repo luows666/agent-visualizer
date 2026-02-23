@@ -18337,6 +18337,138 @@
                     { from: 'AI Print Quality', to: 'AI Production Planner', content: '质量检测报告' },
                     { from: 'AI Production Planner', to: 'AI Print Engineer', content: '生产计划确认' }
                 ]
+            },
+            // Cycle 389 新增模板 - AI智能汽车制造系统
+            {
+                id: 'ai-automotive',
+                name: 'AI智能汽车制造系统',
+                icon: '🚗',
+                desc: '从汽车设计到生产的完整汽车制造流程',
+                agents: ['AI Automotive Engineer', 'AI EV Designer', 'AI Auto Supply Chain', 'AI Car Quality Inspector', 'AI Dealer Manager'],
+                positions: [
+                    { role: 'AI Automotive Engineer', x: 400, y: 50 },
+                    { role: 'AI EV Designer', x: 200, y: 180 },
+                    { role: 'AI Auto Supply Chain', x: 400, y: 180 },
+                    { role: 'AI Car Quality Inspector', x: 600, y: 180 },
+                    { role: 'AI Dealer Manager', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Automotive Engineer', to: 'AI EV Designer', content: '汽车设计需求' },
+                    { from: 'AI EV Designer', to: 'AI Auto Supply Chain', content: 'EV设计方案' },
+                    { from: 'AI Auto Supply Chain', to: 'AI Car Quality Inspector', content: '供应链确认' },
+                    { from: 'AI Car Quality Inspector', to: 'AI Dealer Manager', content: '质量检测报告' },
+                    { from: 'AI Dealer Manager', to: 'AI Automotive Engineer', content: '销售反馈' }
+                ]
+            },
+            // Cycle 389 新增模板 - AI智能铁路交通系统
+            {
+                id: 'ai-railway',
+                name: 'AI智能铁路交通系统',
+                icon: '🚂',
+                desc: '从铁路设计到运营调度的完整铁路交通流程',
+                agents: ['AI Railway Engineer', 'AI Train Driver', 'AI Rail Safety Inspector', 'AI Station Manager', 'AI Rail Traffic Controller'],
+                positions: [
+                    { role: 'AI Railway Engineer', x: 400, y: 50 },
+                    { role: 'AI Train Driver', x: 200, y: 180 },
+                    { role: 'AI Rail Safety Inspector', x: 400, y: 180 },
+                    { role: 'AI Station Manager', x: 600, y: 180 },
+                    { role: 'AI Rail Traffic Controller', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Railway Engineer', to: 'AI Train Driver', content: '铁路运营培训' },
+                    { from: 'AI Train Driver', to: 'AI Rail Safety Inspector', content: '安全检查' },
+                    { from: 'AI Rail Safety Inspector', to: 'AI Station Manager', content: '安全报告' },
+                    { from: 'AI Station Manager', to: 'AI Rail Traffic Controller', content: '车站运营' },
+                    { from: 'AI Rail Traffic Controller', to: 'AI Railway Engineer', content: '调度优化建议' }
+                ]
+            },
+            // Cycle 389 新增模板 - AI智能物流仓储系统
+            {
+                id: 'ai-logistics',
+                name: 'AI智能物流仓储系统',
+                icon: '🏭',
+                desc: '从仓储管理到配送物流的完整物流仓储流程',
+                agents: ['AI Warehouse Manager', 'AI Logistics Planner', 'AI Delivery Driver', 'AI Freight Broker', 'AI Cold Chain Manager'],
+                positions: [
+                    { role: 'AI Warehouse Manager', x: 400, y: 50 },
+                    { role: 'AI Logistics Planner', x: 200, y: 180 },
+                    { role: 'AI Delivery Driver', x: 400, y: 180 },
+                    { role: 'AI Freight Broker', x: 600, y: 180 },
+                    { role: 'AI Cold Chain Manager', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Warehouse Manager', to: 'AI Logistics Planner', content: '库存情况' },
+                    { from: 'AI Logistics Planner', to: 'AI Delivery Driver', content: '配送路线' },
+                    { from: 'AI Delivery Driver', to: 'AI Freight Broker', content: '运输状态' },
+                    { from: 'AI Freight Broker', to: 'AI Cold Chain Manager', content: '货运需求' },
+                    { from: 'AI Cold Chain Manager', to: 'AI Warehouse Manager', content: '冷链优化' }
+                ]
+            },
+            // Cycle 389 新增模板 - AI智能建筑设计系统
+            {
+                id: 'ai-building-design',
+                name: 'AI智能建筑设计系统',
+                icon: '🏛️',
+                desc: '从建筑概念设计到施工图的完整建筑设计流程',
+                agents: ['AI Building Architect', 'AI Interior Designer', 'AI Landscape Architect', 'AI BIM Manager', 'AI Building Energy Engineer'],
+                positions: [
+                    { role: 'AI Building Architect', x: 400, y: 50 },
+                    { role: 'AI Interior Designer', x: 200, y: 180 },
+                    { role: 'AI Landscape Architect', x: 400, y: 180 },
+                    { role: 'AI BIM Manager', x: 600, y: 180 },
+                    { role: 'AI Building Energy Engineer', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Building Architect', to: 'AI Interior Designer', content: '室内设计需求' },
+                    { from: 'AI Interior Designer', to: 'AI Landscape Architect', content: '景观设计' },
+                    { from: 'AI Landscape Architect', to: 'AI BIM Manager', content: 'BIM模型' },
+                    { from: 'AI BIM Manager', to: 'AI Building Energy Engineer', content: '能耗分析' },
+                    { from: 'AI Building Energy Engineer', to: 'AI Building Architect', content: '节能优化建议' }
+                ]
+            },
+            // Cycle 389 新增模板 - AI智能环保工程系统
+            {
+                id: 'ai-environmental',
+                name: 'AI智能环保工程系统',
+                icon: '🌿',
+                desc: '从环境监测到治理保护的完整环保工程流程',
+                agents: ['AI Environmental Engineer', 'AI Waste Management', 'AI Recycling Specialist', 'AI Water Treatment', 'AI Air Quality Monitor'],
+                positions: [
+                    { role: 'AI Environmental Engineer', x: 400, y: 50 },
+                    { role: 'AI Waste Management', x: 200, y: 180 },
+                    { role: 'AI Recycling Specialist', x: 400, y: 180 },
+                    { role: 'AI Water Treatment', x: 600, y: 180 },
+                    { role: 'AI Air Quality Monitor', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Engineer', to: 'AI Waste Management', content: '废物处理方案' },
+                    { from: 'AI Waste Management', to: 'AI Recycling Specialist', content: '回收利用计划' },
+                    { from: 'AI Recycling Specialist', to: 'AI Water Treatment', content: '水资源回收' },
+                    { from: 'AI Water Treatment', to: 'AI Air Quality Monitor', content: '空气质量监测' },
+                    { from: 'AI Air Quality Monitor', to: 'AI Environmental Engineer', content: '环境评估报告' }
+                ]
+            },
+            // Cycle 389 新增模板 - AI智能能源电力系统
+            {
+                id: 'ai-energy',
+                name: 'AI智能能源电力系统',
+                icon: '⚡',
+                desc: '从电力生产到能源管理的完整能源电力流程',
+                agents: ['AI Power Grid Engineer', 'AI Renewable Energy', 'AI Nuclear Engineer', 'AI Energy Storage', 'AI Smart Meter'],
+                positions: [
+                    { role: 'AI Power Grid Engineer', x: 400, y: 50 },
+                    { role: 'AI Renewable Energy', x: 200, y: 180 },
+                    { role: 'AI Nuclear Engineer', x: 400, y: 180 },
+                    { role: 'AI Energy Storage', x: 600, y: 180 },
+                    { role: 'AI Smart Meter', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Power Grid Engineer', to: 'AI Renewable Energy', content: '新能源并网需求' },
+                    { from: 'AI Renewable Energy', to: 'AI Nuclear Engineer', content: '核电配合计划' },
+                    { from: 'AI Nuclear Engineer', to: 'AI Energy Storage', content: '储能需求' },
+                    { from: 'AI Energy Storage', to: 'AI Smart Meter', content: '智能调度' },
+                    { from: 'AI Smart Meter', to: 'AI Power Grid Engineer', content: '用电数据分析' }
+                ]
             }
         ];
 
@@ -21487,7 +21619,49 @@
             'AI Gemologist': { icon: '💍', color: '#8b5cf6', role: 'AI宝石学家' },
             'AI Watchmaker': { icon: '⌚', color: '#f59e0b', role: 'AI钟表师' },
             'AI Goldsmith': { icon: '🥇', color: '#eab308', role: 'AI金匠师' },
-            'AI Jewelry Appraiser': { icon: '📊', color: '#14b8a6', role: 'AI珠宝估价师' }
+            'AI Jewelry Appraiser': { icon: '📊', color: '#14b8a6', role: 'AI珠宝估价师' },
+            // Cycle 389 新增角色 - AI智能汽车制造
+            'AI Automotive Engineer': { icon: '🚗', color: '#ef4444', role: 'AI汽车工程师' },
+            'AI EV Designer': { icon: '⚡', color: '#22c55e', role: 'AI电动汽车设计师' },
+            'AI Auto Supply Chain': { icon: '🔗', color: '#3b82f6', role: 'AI汽车供应链经理' },
+            'AI Car Quality Inspector': { icon: '✅', color: '#f59e0b', role: 'AI汽车质检师' },
+            'AI Dealer Manager': { icon: '🏪', color: '#ec4899', role: 'AI经销商经理' },
+            // Cycle 389 新增角色 - AI智能铁路交通
+            'AI Railway Engineer': { icon: '🚂', color: '#8b5cf6', role: 'AI铁路工程师' },
+            'AI Train Driver': { icon: '🚃', color: '#06b6d4', role: 'AI列车司机' },
+            'AI Rail Safety Inspector': { icon: '🛡️', color: '#14b8a6', role: 'AI铁路安全检查员' },
+            'AI Station Manager': { icon: '🏢', color: '#f97316', role: 'AI车站经理' },
+            'AI Rail Traffic Controller': { icon: '🚦', color: '#eab308', role: 'AI铁路调度员' },
+            // Cycle 389 新增角色 - AI智能物流仓储
+            'AI Warehouse Manager': { icon: '🏭', color: '#64748b', role: 'AI仓储经理' },
+            'AI Logistics Planner': { icon: '📋', color: '#0ea5e9', role: 'AI物流规划师' },
+            'AI Delivery Driver': { icon: '🚚', color: '#22c55e', role: 'AI配送司机' },
+            'AI Freight Broker': { icon: '📦', color: '#a855f7', role: 'AI货运经纪人' },
+            'AI Cold Chain Manager': { icon: '❄️', color: '#06b6d4', role: 'AI冷链管理师' },
+            // Cycle 389 新增角色 - AI智能建筑设计
+            'AI Building Architect': { icon: '🏛️', color: '#f59e0b', role: 'AI建筑设计师' },
+            'AI Interior Designer': { icon: '🛋️', color: '#ec4899', role: 'AI室内设计师' },
+            'AI Landscape Architect': { icon: '🌳', color: '#22c55e', role: 'AI园林景观设计师' },
+            'AI BIM Manager': { icon: '📐', color: '#3b82f6', role: 'AIBIM模型经理' },
+            'AI Building Energy Engineer': { icon: '⚡', color: '#eab308', role: 'AI建筑节能工程师' },
+            // Cycle 389 新增角色 - AI智能城市规划
+            'AI Urban Planner': { icon: '🏙️', color: '#8b5cf6', role: 'AI城市规划师' },
+            'AI Traffic Engineer': { icon: '🚦', color: '#ef4444', role: 'AI交通工程师' },
+            'AI Public Space Designer': { icon: '🌆', color: '#14b8a6', role: 'AI公共空间设计师' },
+            'AI Zoning Specialist': { icon: '📍', color: '#f97316', role: 'AI分区规划师' },
+            'AI Smart City Architect': { icon: '🌐', color: '#06b6d4', role: 'AI智慧城市架构师' },
+            // Cycle 389 新增角色 - AI智能环保工程
+            'AI Environmental Engineer': { icon: '🌿', color: '#22c55e', role: 'AI环保工程师' },
+            'AI Waste Management': { icon: '♻️', color: '#14b8a6', role: 'AI废物管理工程师' },
+            'AI Recycling Specialist': { icon: '🔄', color: '#3b82f6', role: 'AI回收利用专家' },
+            'AI Water Treatment': { icon: '💧', color: '#0ea5e9', role: 'AI水处理工程师' },
+            'AI Air Quality Monitor': { icon: '💨', color: '#a855f7', role: 'AI空气质量监测师' },
+            // Cycle 389 新增角色 - AI智能能源电力
+            'AI Power Grid Engineer': { icon: '⚡', color: '#eab308', role: 'AI电网工程师' },
+            'AI Renewable Energy': { icon: '🌞', color: '#22c55e', role: 'AI可再生能源工程师' },
+            'AI Nuclear Engineer': { icon: '☢️', color: '#ef4444', role: 'AI核能工程师' },
+            'AI Energy Storage': { icon: '🔋', color: '#8b5cf6', role: 'AI储能工程师' },
+            'AI Smart Meter': { icon: '📡', color: '#06b6d4', role: 'AI智能电表工程师' }
         };
 
         // 拖拽相关变量
