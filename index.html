@@ -16449,6 +16449,138 @@
                     { from: 'AI Stress Counselor', to: 'AI Therapy Coach', content: '压力咨询' },
                     { from: 'AI Couples Counselor', to: 'AI Mental Health Advisor', content: '婚姻咨询' }
                 ]
+            },
+            // Cycle 375 新增模板 - AI智能口腔医疗系统
+            {
+                id: 'ai-oral-healthcare',
+                name: 'AI智能口腔医疗系统',
+                icon: '🦷',
+                desc: '从口腔检查到牙齿治疗的完整口腔医疗流程',
+                agents: ['AI Orthodontist', 'AI Oral Surgeon', 'AI Dental Hygienist', 'AI Dental Technician', 'AI Dental Receptionist'],
+                positions: [
+                    { role: 'AI Orthodontist', x: 400, y: 50 },
+                    { role: 'AI Oral Surgeon', x: 200, y: 180 },
+                    { role: 'AI Dental Hygienist', x: 600, y: 180 },
+                    { role: 'AI Dental Technician', x: 200, y: 310 },
+                    { role: 'AI Dental Receptionist', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Orthodontist', to: 'AI Oral Surgeon', content: '会诊需求' },
+                    { from: 'AI Oral Surgeon', to: 'AI Dental Technician', content: '手术方案' },
+                    { from: 'AI Dental Hygienist', to: 'AI Orthodontist', content: '口腔清洁' },
+                    { from: 'AI Dental Technician', to: 'AI Dental Hygienist', content: '义齿制作' },
+                    { from: 'AI Dental Receptionist', to: 'AI Orthodontist', content: '预约确认' }
+                ]
+            },
+            // Cycle 375 新增模板 - AI智能环保工程系统
+            {
+                id: 'ai-environmental-engineering',
+                name: 'AI智能环保工程系统',
+                icon: '🌿',
+                desc: '从环境监测到治理保护的完整环保工程流程',
+                agents: ['AI Environmental Engineer', 'AI Waste Treatment', 'AI Recycling Specialist', 'AI Pollution Control', 'AI Environmental Inspector'],
+                positions: [
+                    { role: 'AI Environmental Engineer', x: 400, y: 50 },
+                    { role: 'AI Waste Treatment', x: 200, y: 180 },
+                    { role: 'AI Recycling Specialist', x: 600, y: 180 },
+                    { role: 'AI Pollution Control', x: 200, y: 310 },
+                    { role: 'AI Environmental Inspector', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Engineer', to: 'AI Pollution Control', content: '污染评估' },
+                    { from: 'AI Waste Treatment', to: 'AI Recycling Specialist', content: '废物处理' },
+                    { from: 'AI Recycling Specialist', to: 'AI Environmental Engineer', content: '回收进度' },
+                    { from: 'AI Pollution Control', to: 'AI Waste Treatment', content: '治理方案' },
+                    { from: 'AI Environmental Inspector', to: 'AI Environmental Engineer', content: '检查报告' }
+                ]
+            },
+            // Cycle 375 新增模板 - AI智能能源管理系统
+            {
+                id: 'ai-energy-management',
+                name: 'AI智能能源管理系统',
+                icon: '⚡',
+                desc: '从能源生产到节能优化的完整能源管理流程',
+                agents: ['AI Energy Manager', 'AI Power Grid Engineer', 'AI Solar Engineer', 'AI Wind Engineer', 'AI Energy Efficiency Expert'],
+                positions: [
+                    { role: 'AI Energy Manager', x: 400, y: 50 },
+                    { role: 'AI Power Grid Engineer', x: 200, y: 180 },
+                    { role: 'AI Solar Engineer', x: 600, y: 180 },
+                    { role: 'AI Wind Engineer', x: 200, y: 310 },
+                    { role: 'AI Energy Efficiency Expert', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Energy Manager', to: 'AI Power Grid Engineer', content: '供电计划' },
+                    { from: 'AI Solar Engineer', to: 'AI Energy Manager', content: '太阳能产能' },
+                    { from: 'AI Wind Engineer', to: 'AI Energy Manager', content: '风能产能' },
+                    { from: 'AI Power Grid Engineer', to: 'AI Energy Efficiency Expert', content: '电网状态' },
+                    { from: 'AI Energy Efficiency Expert', to: 'AI Energy Manager', content: '节能建议' }
+                ]
+            },
+            // Cycle 375 新增模板 - AI智能航空航天系统
+            {
+                id: 'ai-aerospace',
+                name: 'AI智能航空航天系统',
+                icon: '🚀',
+                desc: '从飞行计划到太空任务的完整航空航天流程',
+                agents: ['AI Aerospace Engineer', 'AI Satellite Designer', 'AI Avionics Engineer', 'AI Flight Test Engineer', 'AI Space Mission Planner'],
+                positions: [
+                    { role: 'AI Aerospace Engineer', x: 400, y: 50 },
+                    { role: 'AI Satellite Designer', x: 200, y: 180 },
+                    { role: 'AI Avionics Engineer', x: 600, y: 180 },
+                    { role: 'AI Flight Test Engineer', x: 200, y: 310 },
+                    { role: 'AI Space Mission Planner', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Aerospace Engineer', to: 'AI Satellite Designer', content: '设计需求' },
+                    { from: 'AI Avionics Engineer', to: 'AI Aerospace Engineer', content: '航电系统' },
+                    { from: 'AI Flight Test Engineer', to: 'AI Avionics Engineer', content: '测试数据' },
+                    { from: 'AI Space Mission Planner', to: 'AI Satellite Designer', content: '任务需求' },
+                    { from: 'AI Satellite Designer', to: 'AI Space Mission Planner', content: '设计方案' }
+                ]
+            },
+            // Cycle 375 新增模板 - AI智能船舶航运系统
+            {
+                id: 'ai-maritime',
+                name: 'AI智能船舶航运系统',
+                icon: '⚓',
+                desc: '从港口运营到航运调度的完整船舶航运流程',
+                agents: ['AI Ship Captain', 'AI Maritime Navigator', 'AI Port Operations', 'AI Cargo Manager', 'AI Shipping Coordinator'],
+                positions: [
+                    { role: 'AI Ship Captain', x: 400, y: 50 },
+                    { role: 'AI Maritime Navigator', x: 200, y: 180 },
+                    { role: 'AI Port Operations', x: 600, y: 180 },
+                    { role: 'AI Cargo Manager', x: 200, y: 310 },
+                    { role: 'AI Shipping Coordinator', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Ship Captain', to: 'AI Maritime Navigator', content: '航行指令' },
+                    { from: 'AI Maritime Navigator', to: 'AI Ship Captain', content: '航线确认' },
+                    { from: 'AI Port Operations', to: 'AI Cargo Manager', content: '装卸计划' },
+                    { from: 'AI Cargo Manager', to: 'AI Shipping Coordinator', content: '货运状态' },
+                    { from: 'AI Shipping Coordinator', to: 'AI Port Operations', content: '调度安排' }
+                ]
+            },
+            // Cycle 375 新增模板 - AI智能文体娱乐系统
+            {
+                id: 'ai-entertainment',
+                name: 'AI智能文体娱乐系统',
+                icon: '🎪',
+                desc: '从活动策划到场馆管理的完整文体娱乐流程',
+                agents: ['AI Event Producer', 'AI Entertainment Manager', 'AI Talent Scout', 'AI Venue Manager', 'AI Booking Agent'],
+                positions: [
+                    { role: 'AI Event Producer', x: 400, y: 50 },
+                    { role: 'AI Entertainment Manager', x: 200, y: 180 },
+                    { role: 'AI Talent Scout', x: 600, y: 180 },
+                    { role: 'AI Venue Manager', x: 200, y: 310 },
+                    { role: 'AI Booking Agent', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Event Producer', to: 'AI Entertainment Manager', content: '活动策划' },
+                    { from: 'AI Talent Scout', to: 'AI Entertainment Manager', content: '艺人推荐' },
+                    { from: 'AI Entertainment Manager', to: 'AI Venue Manager', content: '场馆预约' },
+                    { from: 'AI Venue Manager', to: 'AI Booking Agent', content: '场地确认' },
+                    { from: 'AI Booking Agent', to: 'AI Event Producer', content: '预约完成' }
+                ]
             }
         ];
 
@@ -19037,7 +19169,49 @@
             'AI Therapy Coach': { icon: '💭', color: '#3b82f6', role: 'AI治疗师' },
             'AI Mental Health Advisor': { icon: '🌈', color: '#10b981', role: 'AI心理健康顾问' },
             'AI Stress Counselor': { icon: '🧘', color: '#f59e0b', role: 'AI压力咨询师' },
-            'AI Couples Counselor': { icon: '💑', color: '#ec4899', role: 'AI婚姻咨询师' }
+            'AI Couples Counselor': { icon: '💑', color: '#ec4899', role: 'AI婚姻咨询师' },
+            // Cycle 375 新增角色 - AI 智能口腔医疗
+            'AI Orthodontist': { icon: '😬', color: '#8b5cf6', role: 'AI正畸医生' },
+            'AI Oral Surgeon': { icon: '🦷', color: '#3b82f6', role: 'AI口腔外科医生' },
+            'AI Dental Hygienist': { icon: '✨', color: '#10b981', role: 'AI口腔卫生师' },
+            'AI Dental Technician': { icon: '🔧', color: '#ec4899', role: 'AI牙科技师' },
+            'AI Dental Receptionist': { icon: '🏥', color: '#f59e0b', role: 'AI牙科接待员' },
+            // Cycle 375 新增角色 - AI 智能医疗器械维修
+            'AI Medical Device Repair': { icon: '🔧', color: '#06b6d4', role: 'AI医疗设备维修师' },
+            'AI Equipment Calibration': { icon: '📏', color: '#ef4444', role: 'AI设备校准师' },
+            'AI Biomedical Technician': { icon: '💉', color: '#84cc16', role: 'AI生物医学技术员' },
+            'AI Imaging Equipment Expert': { icon: '🏥', color: '#a855f7', role: 'AI影像设备专家' },
+            'AI Surgical Robot Maintenance': { icon: '🤖', color: '#14b8a6', role: 'AI手术机器人维护' },
+            // Cycle 375 新增角色 - AI 智能环保工程
+            'AI Environmental Engineer': { icon: '🌿', color: '#10b981', role: 'AI环保工程师' },
+            'AI Waste Treatment': { icon: '♻️', color: '#22c55e', role: 'AI废物处理工程师' },
+            'AI Recycling Specialist': { icon: '♻️', color: '#14b8a6', role: 'AI回收专家' },
+            'AI Pollution Control': { icon: '🌫️', color: '#06b6d4', role: 'AI污染控制工程师' },
+            'AI Environmental Inspector': { icon: '✅', color: '#f59e0b', role: 'AI环保检查员' },
+            // Cycle 375 新增角色 - AI 智能能源管理
+            'AI Energy Manager': { icon: '⚡', color: '#f59e0b', role: 'AI能源经理' },
+            'AI Power Grid Engineer': { icon: '🔌', color: '#22c55e', role: 'AI电网工程师' },
+            'AI Solar Engineer': { icon: '☀️', color: '#f97316', role: 'AI太阳能工程师' },
+            'AI Wind Engineer': { icon: '🌬️', color: '#06b6d4', role: 'AI风能工程师' },
+            'AI Energy Efficiency Expert': { icon: '💡', color: '#ec4899', role: 'AI能效专家' },
+            // Cycle 375 新增角色 - AI 智能航空航天
+            'AI Aerospace Engineer': { icon: '🚀', color: '#3b82f6', role: 'AI航空航天工程师' },
+            'AI Satellite Designer': { icon: '🛰️', color: '#8b5cf6', role: 'AI卫星设计师' },
+            'AI Avionics Engineer': { icon: '📡', color: '#06b6d4', role: 'AI航电工程师' },
+            'AI Flight Test Engineer': { icon: '✈️', color: '#f97316', role: 'AI试飞工程师' },
+            'AI Space Mission Planner': { icon: '🗺️', color: '#a855f7', role: 'AI太空任务规划师' },
+            // Cycle 375 新增角色 - AI 智能船舶航运
+            'AI Ship Captain': { icon: '⚓', color: '#0ea5e9', role: 'AI船长' },
+            'AI Maritime Navigator': { icon: '🧭', color: '#14b8a6', role: 'AI航海导航员' },
+            'AI Port Operations': { icon: '⚓', color: '#22c55e', role: 'AI港口运营师' },
+            'AI Cargo Manager': { icon: '📦', color: '#f59e0b', role: 'AI货运经理' },
+            'AI Shipping Coordinator': { icon: '🚢', color: '#ec4899', role: 'AI航运协调员' },
+            // Cycle 375 新增角色 - AI 智能文体娱乐
+            'AI Event Producer': { icon: '🎪', color: '#f97316', role: 'AI活动制作人' },
+            'AI Entertainment Manager': { icon: '🎭', color: '#8b5cf6', role: 'AI娱乐经理' },
+            'AI Talent Scout': { icon: '🔍', color: '#22c55e', role: 'AI星探' },
+            'AI Venue Manager': { icon: '🏟️', color: '#06b6d4', role: 'AI场馆经理' },
+            'AI Booking Agent': { icon: '📋', color: '#a855f7', role: 'AI预约经纪人' }
         };
 
         // 拖拽相关变量
