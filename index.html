@@ -12778,6 +12778,138 @@
                     { from: 'AI Pattern Maker', to: 'AI Garment Technologist', content: '版型设计' },
                     { from: 'AI Garment Technologist', to: 'AI Fashion Trend Analyst', content: '生产反馈' }
                 ]
+            },
+            // Cycle 348 新增模板 - AI智能印刷包装系统
+            {
+                id: 'ai-print-packaging',
+                name: 'AI智能印刷包装系统',
+                icon: '🖨️',
+                desc: '从印刷设计到生产优化的完整印刷包装流程',
+                agents: ['AI Print Engineer', 'AI Packaging Designer', 'AI Print Quality Inspector', 'AI Production Planner', 'AI Material Optimizer'],
+                positions: [
+                    { role: 'AI Production Planner', x: 400, y: 50 },
+                    { role: 'AI Print Engineer', x: 200, y: 180 },
+                    { role: 'AI Packaging Designer', x: 400, y: 180 },
+                    { role: 'AI Material Optimizer', x: 600, y: 180 },
+                    { role: 'AI Print Quality Inspector', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Production Planner', to: 'AI Print Engineer', content: '生产计划' },
+                    { from: 'AI Print Engineer', to: 'AI Packaging Designer', content: '印刷方案' },
+                    { from: 'AI Packaging Designer', to: 'AI Material Optimizer', content: '包装设计方案' },
+                    { from: 'AI Material Optimizer', to: 'AI Print Quality Inspector', content: '材料优化建议' },
+                    { from: 'AI Print Quality Inspector', to: 'AI Production Planner', content: '质量报告' }
+                ]
+            },
+            // Cycle 348 新增模板 - AI智能保险科技系统
+            {
+                id: 'ai-insurance-tech',
+                name: 'AI智能保险科技系统',
+                icon: '📋',
+                desc: '从保险理赔到风险评估的完整保险科技流程',
+                agents: ['AI Insurance Claims', 'AI Underwriting', 'AI Risk Assessment', 'AI Policy Advisor', 'AI Fraud Prevention'],
+                positions: [
+                    { role: 'AI Policy Advisor', x: 400, y: 50 },
+                    { role: 'AI Insurance Claims', x: 200, y: 180 },
+                    { role: 'AI Underwriting', x: 400, y: 180 },
+                    { role: 'AI Risk Assessment', x: 600, y: 180 },
+                    { role: 'AI Fraud Prevention', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Policy Advisor', to: 'AI Insurance Claims', content: '保险方案' },
+                    { from: 'AI Insurance Claims', to: 'AI Underwriting', content: '理赔申请' },
+                    { from: 'AI Underwriting', to: 'AI Risk Assessment', content: '核保评估' },
+                    { from: 'AI Risk Assessment', to: 'AI Fraud Prevention', content: '风险评估' },
+                    { from: 'AI Fraud Prevention', to: 'AI Policy Advisor', content: '欺诈检测报告' }
+                ]
+            },
+            // Cycle 348 新增模板 - AI智能酒店旅游系统
+            {
+                id: 'ai-hotel-travel',
+                name: 'AI智能酒店旅游系统',
+                icon: '🏨',
+                desc: '从酒店管理到旅行规划的完整酒店旅游流程',
+                agents: ['AI Hotel Manager', 'AI Travel Planner', 'AI Concierge', 'AI Revenue Manager', 'AI Guest Experience'],
+                positions: [
+                    { role: 'AI Revenue Manager', x: 400, y: 50 },
+                    { role: 'AI Hotel Manager', x: 200, y: 180 },
+                    { role: 'AI Concierge', x: 400, y: 180 },
+                    { role: 'AI Travel Planner', x: 600, y: 180 },
+                    { role: 'AI Guest Experience', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Revenue Manager', to: 'AI Hotel Manager', content: '收益目标' },
+                    { from: 'AI Hotel Manager', to: 'AI Guest Experience', content: '运营计划' },
+                    { from: 'AI Guest Experience', to: 'AI Concierge', content: '客户反馈' },
+                    { from: 'AI Concierge', to: 'AI Travel Planner', content: '服务需求' },
+                    { from: 'AI Travel Planner', to: 'AI Revenue Manager', content: '旅行方案' }
+                ]
+            },
+            // Cycle 348 新增模板 - AI智能体育科技系统
+            {
+                id: 'ai-sports-tech',
+                name: 'AI智能体育科技系统',
+                icon: '⚽',
+                desc: '从体育分析到赛事执教的完整体育科技流程',
+                agents: ['AI Sports Analyst', 'AI Performance Coach', 'AI Injury Prevention', 'AI Fan Engagement', 'AI Game Strategy'],
+                positions: [
+                    { role: 'AI Game Strategy', x: 400, y: 50 },
+                    { role: 'AI Sports Analyst', x: 200, y: 180 },
+                    { role: 'AI Performance Coach', x: 400, y: 180 },
+                    { role: 'AI Injury Prevention', x: 600, y: 180 },
+                    { role: 'AI Fan Engagement', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Game Strategy', to: 'AI Sports Analyst', content: '战术要求' },
+                    { from: 'AI Sports Analyst', to: 'AI Performance Coach', content: '数据分析' },
+                    { from: 'AI Performance Coach', to: 'AI Injury Prevention', content: '训练计划' },
+                    { from: 'AI Injury Prevention', to: 'AI Fan Engagement', content: '健康报告' },
+                    { from: 'AI Fan Engagement', to: 'AI Game Strategy', content: '粉丝反馈' }
+                ]
+            },
+            // Cycle 348 新增模板 - AI智能环保技术系统
+            {
+                id: 'ai-environmental-tech',
+                name: 'AI智能环保技术系统',
+                icon: '🌿',
+                desc: '从环境监测到可持续发展的完整环保技术流程',
+                agents: ['AI Environmental Monitor', 'AI Waste Management', 'AI Carbon Tracker', 'AI Pollution Detector', 'AI Sustainability'],
+                positions: [
+                    { role: 'AI Sustainability', x: 400, y: 50 },
+                    { role: 'AI Environmental Monitor', x: 200, y: 180 },
+                    { role: 'AI Carbon Tracker', x: 400, y: 180 },
+                    { role: 'AI Pollution Detector', x: 600, y: 180 },
+                    { role: 'AI Waste Management', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sustainability', to: 'AI Environmental Monitor', content: '可持续发展目标' },
+                    { from: 'AI Environmental Monitor', to: 'AI Carbon Tracker', content: '环境数据' },
+                    { from: 'AI Carbon Tracker', to: 'AI Pollution Detector', content: '碳排放数据' },
+                    { from: 'AI Pollution Detector', to: 'AI Waste Management', content: '污染检测结果' },
+                    { from: 'AI Waste Management', to: 'AI Sustainability', content: '废物管理方案' }
+                ]
+            },
+            // Cycle 348 新增模板 - AI智能交通系统
+            {
+                id: 'ai-transport',
+                name: 'AI智能交通系统',
+                icon: '🚦',
+                desc: '从交通控制到智能出行的完整交通流程',
+                agents: ['AI Traffic Control', 'AI Smart Parking', 'AI Vehicle Routing', 'AI Autonomous Driving', 'AI Public Transit'],
+                positions: [
+                    { role: 'AI Autonomous Driving', x: 400, y: 50 },
+                    { role: 'AI Traffic Control', x: 200, y: 180 },
+                    { role: 'AI Smart Parking', x: 400, y: 180 },
+                    { role: 'AI Vehicle Routing', x: 600, y: 180 },
+                    { role: 'AI Public Transit', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Autonomous Driving', to: 'AI Traffic Control', content: '驾驶需求' },
+                    { from: 'AI Traffic Control', to: 'AI Smart Parking', content: '交通流量' },
+                    { from: 'AI Smart Parking', to: 'AI Vehicle Routing', content: '停车信息' },
+                    { from: 'AI Vehicle Routing', to: 'AI Public Transit', content: '路径规划' },
+                    { from: 'AI Public Transit', to: 'AI Autonomous Driving', content: '公共交通数据' }
+                ]
             }
         ];
 
@@ -14294,7 +14426,43 @@
             'AI Gemologist': { icon: '💍', color: '#f59e0b', role: 'AI宝石学家' },
             'AI Watchmaker': { icon: '⌚', color: '#6366f1', role: 'AI钟表师' },
             'AI Appraiser': { icon: '📊', color: '#22c55e', role: 'AI估价师' },
-            'AI Jewelry CAD Engineer': { icon: '🎨', color: '#ec4899', role: 'AI珠宝CAD工程师' }
+            'AI Jewelry CAD Engineer': { icon: '🎨', color: '#ec4899', role: 'AI珠宝CAD工程师' },
+            // Cycle 348 新增角色 - AI 智能印刷包装
+            'AI Print Engineer': { icon: '🖨️', color: '#0891b2', role: 'AI印刷工程师' },
+            'AI Packaging Designer': { icon: '📦', color: '#f97316', role: 'AI包装设计师' },
+            'AI Print Quality Inspector': { icon: '🔍', color: '#22c55e', role: 'AI印刷质检员' },
+            'AI Production Planner': { icon: '📋', color: '#8b5cf6', role: 'AI生产计划师' },
+            'AI Material Optimizer': { icon: '♻️', color: '#06b6d4', role: 'AI材料优化师' },
+            // Cycle 348 新增角色 - AI 智能保险科技
+            'AI Insurance Claims': { icon: '📋', color: '#14b8a6', role: 'AI保险理赔师' },
+            'AI Underwriting': { icon: '📝', color: '#ec4899', role: 'AI核保工程师' },
+            'AI Risk Assessment': { icon: '⚖️', color: '#dc2626', role: 'AI风险评估师' },
+            'AI Policy Advisor': { icon: '💡', color: '#f59e0b', role: 'AI保险顾问' },
+            'AI Fraud Prevention': { icon: '🔒', color: '#7c3aed', role: 'AI反欺诈工程师' },
+            // Cycle 348 新增角色 - AI 智能酒店旅游
+            'AI Hotel Manager': { icon: '🏨', color: '#0ea5e9', role: 'AI酒店经理' },
+            'AI Travel Planner': { icon: '✈️', color: '#22c55e', role: 'AI旅行规划师' },
+            'AI Concierge': { icon: '🛎️', color: '#f97316', role: 'AI礼宾服务师' },
+            'AI Revenue Manager': { icon: '💰', color: '#eab308', role: 'AI收益管理师' },
+            'AI Guest Experience': { icon: '😊', color: '#ec4899', role: 'AI宾客体验师' },
+            // Cycle 348 新增角色 - AI 智能体育科技
+            'AI Sports Analyst': { icon: '⚽', color: '#14b8a6', role: 'AI体育分析师' },
+            'AI Performance Coach': { icon: '🏃', color: '#8b5cf6', role: 'AI表现教练' },
+            'AI Injury Prevention': { icon: '🏥', color: '#22c55e', role: 'AI伤病预防师' },
+            'AI Fan Engagement': { icon: '📣', color: '#f97316', role: 'AI球迷互动师' },
+            'AI Game Strategy': { icon: '🎯', color: '#06b6d4', role: 'AI战术策略师' },
+            // Cycle 348 新增角色 - AI 智能环保技术
+            'AI Environmental Monitor': { icon: '🌿', color: '#10b981', role: 'AI环境监测师' },
+            'AI Waste Management': { icon: '♻️', color: '#22c55e', role: 'AI废物管理工程师' },
+            'AI Carbon Tracker': { icon: '🌍', color: '#06b6d4', role: 'AI碳足迹追踪师' },
+            'AI Pollution Detector': { icon: '🧪', color: '#f59e0b', role: 'AI污染检测师' },
+            'AI Sustainability': { icon: '🌱', color: '#84cc16', role: 'AI可持续发展工程师' },
+            // Cycle 348 新增角色 - AI 智能交通
+            'AI Traffic Control': { icon: '🚦', color: '#ef4444', role: 'AI交通控制工程师' },
+            'AI Smart Parking': { icon: '🅿️', color: '#0ea5e9', role: 'AI智能停车工程师' },
+            'AI Vehicle Routing': { icon: '🚗', color: '#22c55e', role: 'AI车辆路径规划师' },
+            'AI Autonomous Driving': { icon: '🚙', color: '#8b5cf6', role: 'AI自动驾驶工程师' },
+            'AI Public Transit': { icon: '🚌', color: '#f97316', role: 'AI公共交通优化师' }
         };
 
         // 拖拽相关变量
