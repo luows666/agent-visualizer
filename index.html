@@ -23195,8 +23195,166 @@
             }
         ];
 
+        // Cycle 426 新增模板 - 更多服务行业
+        const cycle426Templates = [
+            {
+                id: 'ai-dental-clinic-service',
+                name: 'AI智能牙科诊所服务系统',
+                icon: '🦷',
+                desc: '从口腔检查到牙齿治疗的完整牙科诊所服务流程',
+                agents: ['AI Dental Director', 'AI Orthodontist', 'AI Oral Surgeon', 'AI Dental Hygienist', 'AI Dental Technician', 'AI Receptionist'],
+                positions: [
+                    { role: 'AI Dental Director', x: 400, y: 30 },
+                    { role: 'AI Orthodontist', x: 150, y: 150 },
+                    { role: 'AI Oral Surgeon', x: 650, y: 150 },
+                    { role: 'AI Dental Hygienist', x: 150, y: 270 },
+                    { role: 'AI Dental Technician', x: 400, y: 350 },
+                    { role: 'AI Receptionist', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Dental Director', to: 'AI Orthodontist', content: '正畸需求' },
+                    { from: 'AI Dental Director', to: 'AI Oral Surgeon', content: '外科需求' },
+                    { from: 'AI Orthodontist', to: 'AI Dental Hygienist', content: '口腔清洁' },
+                    { from: 'AI Oral Surgeon', to: 'AI Dental Technician', content: '牙冠制作' },
+                    { from: 'AI Dental Hygienist', to: 'AI Receptionist', content: '预约安排' }
+                ]
+            },
+            {
+                id: 'ai-pet-hospital-service',
+                name: 'AI智能宠物医院服务系统',
+                icon: '🐾',
+                desc: '从宠物诊疗到健康管理的完整宠物医院服务流程',
+                agents: ['AI Pet Hospital Director', 'AI Veterinarian', 'AI Pet Surgeon', 'AI Pet Nurse', 'AI Pet Pharmacist', 'AI Pet Groomer'],
+                positions: [
+                    { role: 'AI Pet Hospital Director', x: 400, y: 30 },
+                    { role: 'AI Veterinarian', x: 150, y: 150 },
+                    { role: 'AI Pet Surgeon', x: 650, y: 150 },
+                    { role: 'AI Pet Nurse', x: 150, y: 270 },
+                    { role: 'AI Pet Pharmacist', x: 400, y: 350 },
+                    { role: 'AI Pet Groomer', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Pet Hospital Director', to: 'AI Veterinarian', content: '诊疗需求' },
+                    { from: 'AI Pet Hospital Director', to: 'AI Pet Surgeon', content: '手术需求' },
+                    { from: 'AI Veterinarian', to: 'AI Pet Nurse', content: '护理需求' },
+                    { from: 'AI Pet Surgeon', to: 'AI Pet Pharmacist', content: '用药需求' },
+                    { from: 'AI Pet Nurse', to: 'AI Pet Groomer', content: '美容需求' }
+                ]
+            },
+            {
+                id: 'ai-optometry-service',
+                name: 'AI智能眼镜店服务系统',
+                icon: '👓',
+                desc: '从验光配镜到视力保护的完整眼镜店服务流程',
+                agents: ['AI Optometry Director', 'AI Optometrist', 'AI Lens Specialist', 'AI Frame Stylist', 'AI Eye Exam Technician', 'AI Vision Consultant'],
+                positions: [
+                    { role: 'AI Optometry Director', x: 400, y: 30 },
+                    { role: 'AI Optometrist', x: 150, y: 150 },
+                    { role: 'AI Lens Specialist', x: 650, y: 150 },
+                    { role: 'AI Frame Stylist', x: 150, y: 270 },
+                    { role: 'AI Eye Exam Technician', x: 400, y: 350 },
+                    { role: 'AI Vision Consultant', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Optometry Director', to: 'AI Optometrist', content: '验光需求' },
+                    { from: 'AI Optometry Director', to: 'AI Eye Exam Technician', content: '视力检查' },
+                    { from: 'AI Optometrist', to: 'AI Lens Specialist', content: '镜片推荐' },
+                    { from: 'AI Lens Specialist', to: 'AI Frame Stylist', content: '镜框搭配' },
+                    { from: 'AI Frame Stylist', to: 'AI Vision Consultant', content: '视力咨询' }
+                ]
+            },
+            {
+                id: 'ai-tea-house-service',
+                name: 'AI智能茶楼服务系统',
+                icon: '🍵',
+                desc: '从茶艺表演到休闲娱乐的完整茶楼服务流程',
+                agents: ['AI Tea House Manager', 'AI Tea Master', 'AI Tea Sommelier', 'AI Receptionist', 'AI Entertainment Coordinator', 'AI Customer Service'],
+                positions: [
+                    { role: 'AI Tea House Manager', x: 400, y: 30 },
+                    { role: 'AI Tea Master', x: 150, y: 150 },
+                    { role: 'AI Tea Sommelier', x: 650, y: 150 },
+                    { role: 'AI Receptionist', x: 150, y: 270 },
+                    { role: 'AI Entertainment Coordinator', x: 400, y: 350 },
+                    { role: 'AI Customer Service', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Tea House Manager', to: 'AI Tea Master', content: '茶艺需求' },
+                    { from: 'AI Tea House Manager', to: 'AI Tea Sommelier', content: '品茶需求' },
+                    { from: 'AI Tea Master', to: 'AI Receptionist', content: '接待安排' },
+                    { from: 'AI Tea Sommelier', to: 'AI Entertainment Coordinator', content: '娱乐安排' },
+                    { from: 'AI Receptionist', to: 'AI Customer Service', content: '客户服务' }
+                ]
+            },
+            {
+                id: 'ai-chess-room-service',
+                name: 'AI智能棋牌室服务系统',
+                icon: '🎲',
+                desc: '从棋牌娱乐到会员管理的完整棋牌室服务流程',
+                agents: ['AI Chess Room Manager', 'AI Game Host', 'AI Member Coordinator', 'AI Equipment Manager', 'AI Food Beverage Staff', 'AI Security Staff'],
+                positions: [
+                    { role: 'AI Chess Room Manager', x: 400, y: 30 },
+                    { role: 'AI Game Host', x: 150, y: 150 },
+                    { role: 'AI Member Coordinator', x: 650, y: 150 },
+                    { role: 'AI Equipment Manager', x: 150, y: 270 },
+                    { role: 'AI Food Beverage Staff', x: 400, y: 350 },
+                    { role: 'AI Security Staff', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Chess Room Manager', to: 'AI Game Host', content: '游戏需求' },
+                    { from: 'AI Chess Room Manager', to: 'AI Member Coordinator', content: '会员需求' },
+                    { from: 'AI Game Host', to: 'AI Equipment Manager', content: '器材需求' },
+                    { from: 'AI Member Coordinator', to: 'AI Food Beverage Staff', content: '餐饮需求' },
+                    { from: 'AI Equipment Manager', to: 'AI Security Staff', content: '安保需求' }
+                ]
+            },
+            {
+                id: 'ai-ktv-service',
+                name: 'AI智能KTV服务系统',
+                icon: '🎤',
+                desc: '从点歌服务到包房管理的完整KTV服务流程',
+                agents: ['AI KTV Manager', 'AI Song Selector', 'AI Sound Engineer', 'AI Room Coordinator', 'AI Food Beverage Manager', 'AI Customer Relations'],
+                positions: [
+                    { role: 'AI KTV Manager', x: 400, y: 30 },
+                    { role: 'AI Song Selector', x: 150, y: 150 },
+                    { role: 'AI Sound Engineer', x: 650, y: 150 },
+                    { role: 'AI Room Coordinator', x: 150, y: 270 },
+                    { role: 'AI Food Beverage Manager', x: 400, y: 350 },
+                    { role: 'AI Customer Relations', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI KTV Manager', to: 'AI Song Selector', content: '点歌需求' },
+                    { from: 'AI KTV Manager', to: 'AI Sound Engineer', content: '音响需求' },
+                    { from: 'AI Song Selector', to: 'AI Room Coordinator', content: '包房安排' },
+                    { from: 'AI Sound Engineer', to: 'AI Food Beverage Manager', content: '餐饮需求' },
+                    { from: 'AI Room Coordinator', to: 'AI Customer Relations', content: '客户关系' }
+                ]
+            },
+            {
+                id: 'ai-foot-spa-service',
+                name: 'AI智能足浴服务系统',
+                icon: '🦶',
+                desc: '从足部护理到休闲放松的完整足浴服务流程',
+                agents: ['AI Foot Spa Director', 'AI Massage Therapist', 'AI Foot Care Specialist', 'AI Health Consultant', 'AI Reception Manager', 'AI Wellness Advisor'],
+                positions: [
+                    { role: 'AI Foot Spa Director', x: 400, y: 30 },
+                    { role: 'AI Massage Therapist', x: 150, y: 150 },
+                    { role: 'AI Foot Care Specialist', x: 650, y: 150 },
+                    { role: 'AI Health Consultant', x: 150, y: 270 },
+                    { role: 'AI Reception Manager', x: 400, y: 350 },
+                    { role: 'AI Wellness Advisor', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Foot Spa Director', to: 'AI Massage Therapist', content: '按摩需求' },
+                    { from: 'AI Foot Spa Director', to: 'AI Foot Care Specialist', content: '护理需求' },
+                    { from: 'AI Massage Therapist', to: 'AI Health Consultant', content: '健康咨询' },
+                    { from: 'AI Foot Care Specialist', to: 'AI Reception Manager', content: '接待安排' },
+                    { from: 'AI Health Consultant', to: 'AI Wellness Advisor', content: '养生建议' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -27845,7 +28003,56 @@
             'AI Choreographer': { icon: '🎬', color: '#8b5cf6', role: 'AI编舞师' },
             'AI Dance Teacher': { icon: '👯', color: '#06b6d4', role: 'AI舞蹈教师' },
             'AI Costume Manager': { icon: '👗', color: '#f43f5e', role: 'AI服装管理师' },
-            'AI Stage Coordinator': { icon: '🎭', color: '#3b82f6', role: 'AI舞台协调师' }
+            'AI Stage Coordinator': { icon: '🎭', color: '#3b82f6', role: 'AI舞台协调师' },
+            // Cycle 426 新增角色 - AI智能牙科诊所服务
+            'AI Dental Director': { icon: '🦷', color: '#f97316', role: 'AI牙科总监' },
+            'AI Orthodontist': { icon: '😬', color: '#06b6d4', role: 'AI正畸医生' },
+            'AI Oral Surgeon': { icon: '👨‍⚕️', color: '#10b981', role: 'AI口腔外科医生' },
+            'AI Dental Hygienist': { icon: '🪥', color: '#8b5cf6', role: 'AI口腔卫生师' },
+            'AI Dental Technician': { icon: '🔧', color: '#ec4899', role: 'AI牙科技师' },
+            'AI Receptionist': { icon: '🛎️', color: '#f59e0b', role: 'AI接待员' },
+            // Cycle 426 新增角色 - AI智能宠物医院服务
+            'AI Pet Hospital Director': { icon: '🏥', color: '#f43f5e', role: 'AI宠物医院总监' },
+            'AI Veterinarian': { icon: '🐕', color: '#06b6d4', role: 'AI兽医' },
+            'AI Pet Surgeon': { icon: '🩺', color: '#10b981', role: 'AI宠物外科医生' },
+            'AI Pet Nurse': { icon: '💉', color: '#8b5cf6', role: 'AI宠物护士' },
+            'AI Pet Pharmacist': { icon: '💊', color: '#ec4899', role: 'AI宠物药剂师' },
+            'AI Pet Groomer': { icon: '✂️', color: '#f59e0b', role: 'AI宠物美容师' },
+            // Cycle 426 新增角色 - AI智能眼镜店服务
+            'AI Optometry Director': { icon: '👓', color: '#3b82f6', role: 'AI眼镜店总监' },
+            'AI Optometrist': { icon: '🔬', color: '#06b6d4', role: 'AI验光师' },
+            'AI Lens Specialist': { icon: '🔍', color: '#10b981', role: 'AI镜片专员' },
+            'AI Frame Stylist': { icon: '🕶️', color: '#8b5cf6', role: 'AI镜框造型师' },
+            'AI Eye Exam Technician': { icon: '📋', color: '#ec4899', role: 'AI视力检测师' },
+            'AI Vision Consultant': { icon: '💡', color: '#f59e0b', role: 'AI视力顾问' },
+            // Cycle 426 新增角色 - AI智能茶楼服务
+            'AI Tea House Manager': { icon: '🍵', color: '#84cc16', role: 'AI茶楼经理' },
+            'AI Tea Master': { icon: '🫖', color: '#06b6d4', role: 'AI茶艺师' },
+            'AI Tea Sommelier': { icon: '🍃', color: '#10b981', role: 'AI品茶师' },
+            'AI Tea Receptionist': { icon: '🪑', color: '#8b5cf6', role: 'AI茶楼接待' },
+            'AI Entertainment Coordinator': { icon: '🎭', color: '#ec4899', role: 'AI娱乐协调员' },
+            'AI Tea Customer Service': { icon: '📞', color: '#f59e0b', role: 'AI客服' },
+            // Cycle 426 新增角色 - AI智能棋牌室服务
+            'AI Chess Room Manager': { icon: '�️', color: '#f97316', role: 'AI棋牌室经理' },
+            'AI Game Host': { icon: '🎲', color: '#06b6d4', role: 'AI牌局主持' },
+            'AI Member Coordinator': { icon: '👥', color: '#10b981', role: 'AI会员协调' },
+            'AI Equipment Manager': { icon: '🃏', color: '#8b5cf6', role: 'AI设备管理' },
+            'AI Chess Food Beverage Staff': { icon: '🥤', color: '#ec4899', role: 'AI餐饮服务' },
+            'AI Chess Security Staff': { icon: '🔒', color: '#f59e0b', role: 'AI安保' },
+            // Cycle 426 新增角色 - AI智能KTV服务
+            'AI KTV Manager': { icon: '🎤', color: '#ef4444', role: 'AI KTV经理' },
+            'AI Song Selector': { icon: '🎵', color: '#06b6d4', role: 'AI点歌师' },
+            'AI Sound Engineer': { icon: '🔊', color: '#10b981', role: 'AI音响工程师' },
+            'AI KTV Room Coordinator': { icon: '🚪', color: '#8b5cf6', role: 'AI包房协调' },
+            'AI KTV Food Beverage Manager': { icon: '🍕', color: '#ec4899', role: 'AI餐饮管理' },
+            'AI KTV Customer Relations': { icon: '💌', color: '#f59e0b', role: 'AI客户关系' },
+            // Cycle 426 新增角色 - AI智能足浴服务
+            'AI Foot Spa Director': { icon: '🦶', color: '#f43f5e', role: 'AI足浴总监' },
+            'AI Massage Therapist': { icon: '💆', color: '#06b6d4', role: 'AI按摩师' },
+            'AI Foot Care Specialist': { icon: '�足', color: '#10b981', role: 'AI足部护理师' },
+            'AI Foot Health Consultant': { icon: '🩸', color: '#8b5cf6', role: 'AI健康顾问' },
+            'AI Foot Reception Manager': { icon: '🏠', color: '#ec4899', role: 'AI接待经理' },
+            'AI Wellness Advisor': { icon: '🌿', color: '#f59e0b', role: 'AI养生顾问' }
         };
 
         // 拖拽相关变量
