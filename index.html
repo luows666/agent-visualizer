@@ -14469,6 +14469,138 @@
                     { from: 'AI Utility Bill Analyzer', to: 'AI Energy Efficiency Expert', content: '节能建议' },
                     { from: 'AI Energy Efficiency Expert', to: 'AI Energy Auditor', content: '能效优化报告' }
                 ]
+            },
+            // Cycle 360 新增模板 - AI智能农业生产系统
+            {
+                id: 'ai-smart-agriculture',
+                name: 'AI智能农业生产系统',
+                icon: '🌾',
+                desc: '从作物种植到收获管理的完整农业生产流程',
+                agents: ['AI Crop Scientist', 'AI Irrigation Engineer', 'AI Pest Control Specialist', 'AI Harvest Planner', 'AI Soil Analyst'],
+                positions: [
+                    { role: 'AI Crop Scientist', x: 400, y: 50 },
+                    { role: 'AI Soil Analyst', x: 200, y: 180 },
+                    { role: 'AI Irrigation Engineer', x: 400, y: 180 },
+                    { role: 'AI Pest Control Specialist', x: 600, y: 180 },
+                    { role: 'AI Harvest Planner', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Crop Scientist', to: 'AI Soil Analyst', content: '土壤分析请求' },
+                    { from: 'AI Soil Analyst', to: 'AI Crop Scientist', content: '土壤分析报告' },
+                    { from: 'AI Crop Scientist', to: 'AI Irrigation Engineer', content: '灌溉方案设计' },
+                    { from: 'AI Crop Scientist', to: 'AI Pest Control Specialist', content: '病虫害防治方案' },
+                    { from: 'AI Crop Scientist', to: 'AI Harvest Planner', content: '收获计划安排' }
+                ]
+            },
+            // Cycle 360 新增模板 - AI智能畜牧养殖系统
+            {
+                id: 'ai-livestock-farming',
+                name: 'AI智能畜牧养殖系统',
+                icon: '🐄',
+                desc: '从畜牧管理到健康养殖的完整畜牧养殖流程',
+                agents: ['AI Livestock Manager', 'AI Animal Health', 'AI Feed Nutritionist', 'AI Breeding Expert', 'AI Pasture Manager'],
+                positions: [
+                    { role: 'AI Livestock Manager', x: 400, y: 50 },
+                    { role: 'AI Animal Health', x: 200, y: 180 },
+                    { role: 'AI Feed Nutritionist', x: 400, y: 180 },
+                    { role: 'AI Breeding Expert', x: 600, y: 180 },
+                    { role: 'AI Pasture Manager', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Livestock Manager', to: 'AI Animal Health', content: '动物健康监测' },
+                    { from: 'AI Livestock Manager', to: 'AI Feed Nutritionist', content: '饲料营养方案' },
+                    { from: 'AI Livestock Manager', to: 'AI Breeding Expert', content: '繁殖计划制定' },
+                    { from: 'AI Livestock Manager', to: 'AI Pasture Manager', content: '牧场管理方案' },
+                    { from: 'AI Animal Health', to: 'AI Livestock Manager', content: '健康报告' }
+                ]
+            },
+            // Cycle 360 新增模板 - AI智能建筑设计系统
+            {
+                id: 'ai-building-design',
+                name: 'AI智能建筑设计系统',
+                icon: '🏛️',
+                desc: '从建筑概念设计到施工图的完整建筑设计流程',
+                agents: ['AI Building Architect', 'AI Structural Engineer', 'AI Interior Designer', 'AI MEP Engineer', 'AI Building Energy'],
+                positions: [
+                    { role: 'AI Building Architect', x: 400, y: 50 },
+                    { role: 'AI Structural Engineer', x: 200, y: 180 },
+                    { role: 'AI Interior Designer', x: 400, y: 180 },
+                    { role: 'AI MEP Engineer', x: 600, y: 180 },
+                    { role: 'AI Building Energy', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Building Architect', to: 'AI Structural Engineer', content: '结构设计需求' },
+                    { from: 'AI Building Architect', to: 'AI Interior Designer', content: '室内设计需求' },
+                    { from: 'AI Building Architect', to: 'AI MEP Engineer', content: '机电设计需求' },
+                    { from: 'AI Structural Engineer', to: 'AI Building Architect', content: '结构设计方案' },
+                    { from: 'AI Building Energy', to: 'AI Building Architect', content: '节能方案建议' }
+                ]
+            },
+            // Cycle 360 新增模板 - AI智能城市规划系统
+            {
+                id: 'ai-urban-planning',
+                name: 'AI智能城市规划系统',
+                icon: '🏙️',
+                desc: '从城市规划到智慧城市建设的完整城市规划流程',
+                agents: ['AI Urban Planner', 'AI Traffic Designer', 'AI Green Space Planner', 'AI Infrastructure Planner', 'AI Smart City Designer'],
+                positions: [
+                    { role: 'AI Urban Planner', x: 400, y: 50 },
+                    { role: 'AI Traffic Designer', x: 200, y: 180 },
+                    { role: 'AI Green Space Planner', x: 400, y: 180 },
+                    { role: 'AI Infrastructure Planner', x: 600, y: 180 },
+                    { role: 'AI Smart City Designer', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Urban Planner', to: 'AI Traffic Designer', content: '交通规划需求' },
+                    { from: 'AI Urban Planner', to: 'AI Green Space Planner', content: '绿地规划需求' },
+                    { from: 'AI Urban Planner', to: 'AI Infrastructure Planner', content: '基础设施规划' },
+                    { from: 'AI Urban Planner', to: 'AI Smart City Designer', content: '智慧城市需求' },
+                    { from: 'AI Smart City Designer', to: 'AI Urban Planner', content: '智慧城市方案' }
+                ]
+            },
+            // Cycle 360 新增模板 - AI智能水利工程系统
+            {
+                id: 'ai-water-engineering',
+                name: 'AI智能水利工程系统',
+                icon: '🌊',
+                desc: '从水利工程设计到水资源管理的完整水利工程流程',
+                agents: ['AI Water Engineer', 'AI Dam Designer', 'AI Flood Control', 'AI Water Treatment', 'AI Irrigation System'],
+                positions: [
+                    { role: 'AI Water Engineer', x: 400, y: 50 },
+                    { role: 'AI Dam Designer', x: 200, y: 180 },
+                    { role: 'AI Flood Control', x: 400, y: 180 },
+                    { role: 'AI Water Treatment', x: 600, y: 180 },
+                    { role: 'AI Irrigation System', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Water Engineer', to: 'AI Dam Designer', content: '大坝设计需求' },
+                    { from: 'AI Water Engineer', to: 'AI Flood Control', content: '防洪设计需求' },
+                    { from: 'AI Water Engineer', to: 'AI Water Treatment', content: '水处理需求' },
+                    { from: 'AI Water Engineer', to: 'AI Irrigation System', content: '灌溉系统需求' },
+                    { from: 'AI Flood Control', to: 'AI Water Engineer', content: '防洪方案报告' }
+                ]
+            },
+            // Cycle 360 新增模板 - AI智能交通运输系统
+            {
+                id: 'ai-transport',
+                name: 'AI智能交通运输系统',
+                icon: '🚚',
+                desc: '从运输规划到物流优化的完整交通运输流程',
+                agents: ['AI Transport Planner', 'AI Route Designer', 'AI Fleet Manager', 'AI Traffic Control', 'AI Logistics Optimizer'],
+                positions: [
+                    { role: 'AI Transport Planner', x: 400, y: 50 },
+                    { role: 'AI Route Designer', x: 200, y: 180 },
+                    { role: 'AI Fleet Manager', x: 400, y: 180 },
+                    { role: 'AI Traffic Control', x: 600, y: 180 },
+                    { role: 'AI Logistics Optimizer', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Transport Planner', to: 'AI Route Designer', content: '线路设计需求' },
+                    { from: 'AI Transport Planner', to: 'AI Fleet Manager', content: '车队管理需求' },
+                    { from: 'AI Transport Planner', to: 'AI Traffic Control', content: '交通调度需求' },
+                    { from: 'AI Route Designer', to: 'AI Logistics Optimizer', content: '路线优化建议' },
+                    { from: 'AI Fleet Manager', to: 'AI Logistics Optimizer', content: '物流优化方案' }
+                ]
             }
         ];
 
@@ -16453,7 +16585,49 @@
             'AI Carbon Footprint': { icon: '🌍', color: '#22c55e', role: 'AI碳足迹审计师' },
             'AI Energy Efficiency Expert': { icon: '💡', color: '#f97316', role: 'AI能效专家' },
             'AI Renewable Energy Advisor': { icon: '🌞', color: '#eab308', role: 'AI可再生能源顾问' },
-            'AI Utility Bill Analyzer': { icon: '💰', color: '#14b8a6', role: 'AI水电费分析师' }
+            'AI Utility Bill Analyzer': { icon: '💰', color: '#14b8a6', role: 'AI水电费分析师' },
+            // Cycle 360 新增角色 - AI 智能农业生产
+            'AI Crop Scientist': { icon: '🌾', color: '#f59e0b', role: 'AI作物科学家' },
+            'AI Irrigation Engineer': { icon: '💧', color: '#0ea5e9', role: 'AI灌溉工程师' },
+            'AI Pest Control Specialist': { icon: '🐛', color: '#22c55e', role: 'AI病虫害防治专家' },
+            'AI Harvest Planner': { icon: '🌽', color: '#f97316', role: 'AI收获规划师' },
+            'AI Soil Analyst': { icon: '🪨', color: '#8b5cf6', role: 'AI土壤分析师' },
+            // Cycle 360 新增角色 - AI 智能畜牧养殖
+            'AI Livestock Manager': { icon: '🐄', color: '#a855f7', role: 'AI畜牧管理师' },
+            'AI Animal Health': { icon: '🏥', color: '#ec4899', role: 'AI动物健康师' },
+            'AI Feed Nutritionist': { icon: '🦴', color: '#f59e0b', role: 'AI饲料营养师' },
+            'AI Breeding Expert': { icon: '🥚', color: '#14b8a6', role: 'AI繁殖专家' },
+            'AI Pasture Manager': { icon: '🌿', color: '#10b981', role: 'AI牧场管理师' },
+            // Cycle 360 新增角色 - AI 智能建筑设计
+            'AI Building Architect': { icon: '🏛️', color: '#6366f1', role: 'AI建筑设计师' },
+            'AI Structural Engineer': { icon: '📐', color: '#8b5cf6', role: 'AI结构工程师' },
+            'AI Interior Designer': { icon: '🛋️', color: '#ec4899', role: 'AI室内设计师' },
+            'AI MEP Engineer': { icon: '🔧', color: '#06b6d4', role: 'AI机电工程师' },
+            'AI Building Energy': { icon: '⚡', color: '#eab308', role: 'AI建筑节能师' },
+            // Cycle 360 新增角色 - AI 智能城市规划
+            'AI Urban Planner': { icon: '🏙️', color: '#64748b', role: 'AI城市规划师' },
+            'AI Traffic Designer': { icon: '🚦', color: '#f59e0b', role: 'AI交通设计师' },
+            'AI Green Space Planner': { icon: '🌳', color: '#22c55e', role: 'AI绿地规划师' },
+            'AI Infrastructure Planner': { icon: '🏗️', color: '#14b8a6', role: 'AI基础设施规划师' },
+            'AI Smart City Designer': { icon: '🌐', color: '#0ea5e9', role: 'AI智慧城市设计师' },
+            // Cycle 360 新增角色 - AI 智能水利工程
+            'AI Water Engineer': { icon: '🌊', color: '#0ea5e9', role: 'AI水利工程师' },
+            'AI Dam Designer': { icon: '🧱', color: '#64748b', role: 'AI大坝设计师' },
+            'AI Flood Control': { icon: '🌊', color: '#dc2626', role: 'AI防洪工程师' },
+            'AI Water Treatment': { icon: '💧', color: '#06b6d4', role: 'AI水处理工程师' },
+            'AI Irrigation System': { icon: '🚿', color: '#22c55e', role: 'AI灌溉系统工程师' },
+            // Cycle 360 新增角色 - AI 智能交通运输
+            'AI Transport Planner': { icon: '🚚', color: '#f97316', role: 'AI运输规划师' },
+            'AI Route Designer': { icon: '🛤️', color: '#8b5cf6', role: 'AI线路设计师' },
+            'AI Fleet Manager': { icon: '🚛', color: '#a855f7', role: 'AI车队管理师' },
+            'AI Traffic Control': { icon: '🚦', color: '#dc2626', role: 'AI交通调度师' },
+            'AI Logistics Optimizer': { icon: '📦', color: '#14b8a6', role: 'AI物流优化师' },
+            // Cycle 360 新增角色 - AI 智能公共服务
+            'AI Public Service': { icon: '🏛️', color: '#6366f1', role: 'AI公共服务师' },
+            'AI Emergency Response': { icon: '🚨', color: '#dc2626', role: 'AI应急响应师' },
+            'AI Social Worker': { icon: '🤝', color: '#22c55e', role: 'AI社会工作者' },
+            'AI Community Police': { icon: '👮', color: '#3b82f6', role: 'AI社区民警' },
+            'AI City Manager': { icon: '🏙️', color: '#f59e0b', role: 'AI城市管理师' }
         };
 
         // 拖拽相关变量
