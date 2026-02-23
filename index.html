@@ -21931,8 +21931,166 @@
             }
         ];
 
+        // Cycle 418 新增模板
+        const cycle418Templates = [
+            {
+                id: 'ai-medical-health-service',
+                name: 'AI智能医疗健康服务系统',
+                icon: '🏥',
+                desc: '从诊疗服务到健康管理的完整医疗健康流程',
+                agents: ['AI Medical Director', 'AI Diagnostic Specialist', 'AI Treatment Planner', 'AI Patient Coordinator', 'AI Medical Records', 'AI Telemedicine'],
+                positions: [
+                    { role: 'AI Medical Director', x: 400, y: 30 },
+                    { role: 'AI Diagnostic Specialist', x: 150, y: 150 },
+                    { role: 'AI Treatment Planner', x: 650, y: 150 },
+                    { role: 'AI Patient Coordinator', x: 150, y: 270 },
+                    { role: 'AI Medical Records', x: 400, y: 350 },
+                    { role: 'AI Telemedicine', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Medical Director', to: 'AI Diagnostic Specialist', content: '诊断需求' },
+                    { from: 'AI Medical Director', to: 'AI Treatment Planner', content: '治疗计划需求' },
+                    { from: 'AI Diagnostic Specialist', to: 'AI Patient Coordinator', content: '患者协调需求' },
+                    { from: 'AI Treatment Planner', to: 'AI Medical Records', content: '病历记录需求' },
+                    { from: 'AI Patient Coordinator', to: 'AI Telemedicine', content: '远程医疗需求' }
+                ]
+            },
+            {
+                id: 'ai-financial-service',
+                name: 'AI智能金融服务系统',
+                icon: '💰',
+                desc: '从投资顾问到风险管理的完整金融流程',
+                agents: ['AI Finance Director', 'AI Investment Advisor', 'AI Risk Analyst', 'AI Insurance Broker', 'AI Tax Consultant', 'AI Wealth Manager'],
+                positions: [
+                    { role: 'AI Finance Director', x: 400, y: 30 },
+                    { role: 'AI Investment Advisor', x: 150, y: 150 },
+                    { role: 'AI Risk Analyst', x: 650, y: 150 },
+                    { role: 'AI Insurance Broker', x: 150, y: 270 },
+                    { role: 'AI Tax Consultant', x: 400, y: 350 },
+                    { role: 'AI Wealth Manager', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Finance Director', to: 'AI Investment Advisor', content: '投资需求' },
+                    { from: 'AI Finance Director', to: 'AI Risk Analyst', content: '风险评估需求' },
+                    { from: 'AI Investment Advisor', to: 'AI Wealth Manager', content: '财富管理需求' },
+                    { from: 'AI Risk Analyst', to: 'AI Insurance Broker', content: '保险需求' },
+                    { from: 'AI Insurance Broker', to: 'AI Tax Consultant', content: '税务需求' }
+                ]
+            },
+            {
+                id: 'ai-education-training-service',
+                name: 'AI智能教育培训服务系统',
+                icon: '📚',
+                desc: '从课程设计到培训评估的完整教育培训流程',
+                agents: ['AI Education Director', 'AI Curriculum Designer', 'AI Online Tutor', 'AI Exam Proctor', 'AI Learning Analyst', 'AI Training Coordinator'],
+                positions: [
+                    { role: 'AI Education Director', x: 400, y: 30 },
+                    { role: 'AI Curriculum Designer', x: 150, y: 150 },
+                    { role: 'AI Online Tutor', x: 650, y: 150 },
+                    { role: 'AI Exam Proctor', x: 150, y: 270 },
+                    { role: 'AI Learning Analyst', x: 400, y: 350 },
+                    { role: 'AI Training Coordinator', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Education Director', to: 'AI Curriculum Designer', content: '课程设计需求' },
+                    { from: 'AI Education Director', to: 'AI Online Tutor', content: '在线教学需求' },
+                    { from: 'AI Curriculum Designer', to: 'AI Training Coordinator', content: '培训协调需求' },
+                    { from: 'AI Online Tutor', to: 'AI Exam Proctor', content: '考试监考需求' },
+                    { from: 'AI Exam Proctor', to: 'AI Learning Analyst', content: '学习分析需求' }
+                ]
+            },
+            {
+                id: 'ai-retail-ecommerce-service',
+                name: 'AI智能零售电商服务系统',
+                icon: '🛒',
+                desc: '从店铺运营到客户管理的完整零售电商流程',
+                agents: ['AI Retail Director', 'AI Store Manager', 'AI Inventory Analyst', 'AI Visual Merchandiser', 'AI Pricing Strategist', 'AI Customer Insights'],
+                positions: [
+                    { role: 'AI Retail Director', x: 400, y: 30 },
+                    { role: 'AI Store Manager', x: 150, y: 150 },
+                    { role: 'AI Inventory Analyst', x: 650, y: 150 },
+                    { role: 'AI Visual Merchandiser', x: 150, y: 270 },
+                    { role: 'AI Pricing Strategist', x: 400, y: 350 },
+                    { role: 'AI Customer Insights', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Retail Director', to: 'AI Store Manager', content: '店铺运营需求' },
+                    { from: 'AI Retail Director', to: 'AI Inventory Analyst', content: '库存分析需求' },
+                    { from: 'AI Store Manager', to: 'AI Visual Merchandiser', content: '视觉陈列需求' },
+                    { from: 'AI Inventory Analyst', to: 'AI Pricing Strategist', content: '定价策略需求' },
+                    { from: 'AI Visual Merchandiser', to: 'AI Customer Insights', content: '客户洞察需求' }
+                ]
+            },
+            {
+                id: 'ai-logistics-warehouse-service',
+                name: 'AI智能物流仓储服务系统',
+                icon: '🚚',
+                desc: '从仓储管理到配送优化的完整物流仓储流程',
+                agents: ['AI Logistics Director', 'AI Warehouse Manager', 'AI Delivery Optimizer', 'AI Fleet Coordinator', 'AI Route Planner', 'AI Supply Chain Analyst'],
+                positions: [
+                    { role: 'AI Logistics Director', x: 400, y: 30 },
+                    { role: 'AI Warehouse Manager', x: 150, y: 150 },
+                    { role: 'AI Delivery Optimizer', x: 650, y: 150 },
+                    { role: 'AI Fleet Coordinator', x: 150, y: 270 },
+                    { role: 'AI Route Planner', x: 400, y: 350 },
+                    { role: 'AI Supply Chain Analyst', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Logistics Director', to: 'AI Warehouse Manager', content: '仓储管理需求' },
+                    { from: 'AI Logistics Director', to: 'AI Delivery Optimizer', content: '配送优化需求' },
+                    { from: 'AI Warehouse Manager', to: 'AI Fleet Coordinator', content: '车队协调需求' },
+                    { from: 'AI Delivery Optimizer', to: 'AI Route Planner', content: '路线规划需求' },
+                    { from: 'AI Fleet Coordinator', to: 'AI Supply Chain Analyst', content: '供应链分析需求' }
+                ]
+            },
+            {
+                id: 'ai-media-entertainment-service',
+                name: 'AI智能媒体娱乐服务系统',
+                icon: '📺',
+                desc: '从内容制作到危机公关的完整媒体娱乐流程',
+                agents: ['AI Media Director', 'AI News Editor', 'AI PR Specialist', 'AI Crisis Manager', 'AI Media Planner', 'AI Broadcast Engineer'],
+                positions: [
+                    { role: 'AI Media Director', x: 400, y: 30 },
+                    { role: 'AI News Editor', x: 150, y: 150 },
+                    { role: 'AI PR Specialist', x: 650, y: 150 },
+                    { role: 'AI Crisis Manager', x: 150, y: 270 },
+                    { role: 'AI Media Planner', x: 400, y: 350 },
+                    { role: 'AI Broadcast Engineer', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Media Director', to: 'AI News Editor', content: '新闻编辑需求' },
+                    { from: 'AI Media Director', to: 'AI PR Specialist', content: '公关需求' },
+                    { from: 'AI News Editor', to: 'AI Media Planner', content: '媒体策划需求' },
+                    { from: 'AI PR Specialist', to: 'AI Crisis Manager', content: '危机管理需求' },
+                    { from: 'AI Crisis Manager', to: 'AI Broadcast Engineer', content: '广播工程需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-manufacturing-service',
+                name: 'AI智能制造服务系统',
+                icon: '🏭',
+                desc: '从智能工厂到预测性维护的完整智能制造流程',
+                agents: ['AI Manufacturing Director', 'AI Quality Control', 'AI Equipment Maintenance', 'AI Process Optimizer', 'AI Production Planner', 'AI Automation Engineer'],
+                positions: [
+                    { role: 'AI Manufacturing Director', x: 400, y: 30 },
+                    { role: 'AI Quality Control', x: 150, y: 150 },
+                    { role: 'AI Equipment Maintenance', x: 650, y: 150 },
+                    { role: 'AI Process Optimizer', x: 150, y: 270 },
+                    { role: 'AI Production Planner', x: 400, y: 350 },
+                    { role: 'AI Automation Engineer', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Manufacturing Director', to: 'AI Quality Control', content: '质量控制需求' },
+                    { from: 'AI Manufacturing Director', to: 'AI Equipment Maintenance', content: '设备维护需求' },
+                    { from: 'AI Quality Control', to: 'AI Process Optimizer', content: '流程优化需求' },
+                    { from: 'AI Equipment Maintenance', to: 'AI Production Planner', content: '生产计划需求' },
+                    { from: 'AI Process Optimizer', to: 'AI Automation Engineer', content: '自动化需求' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -26204,7 +26362,49 @@
             'AI DeFi Analyst': { icon: '💰', color: '#22c55e', role: 'AI去中心化金融分析师' },
             'AI Crypto Trader': { icon: '🪙', color: '#f97316', role: 'AI加密货币交易师' },
             'AI NFT Curator': { icon: '🖼️', color: '#ec4899', role: 'AI NFT策展师' },
-            'AI DAO Manager': { icon: '🏛️', color: '#06b6d4', role: 'AI DAO管理师' }
+            'AI DAO Manager': { icon: '🏛️', color: '#06b6d4', role: 'AI DAO管理师' },
+            // Cycle 418 新增角色 - AI智能医疗健康服务
+            'AI Medical Director': { icon: '🏥', color: '#ef4444', role: 'AI医疗服务总监' },
+            'AI Diagnostic Specialist': { icon: '🔬', color: '#dc2626', role: 'AI诊断专家' },
+            'AI Treatment Planner': { icon: '💊', color: '#f97316', role: 'AI治疗规划师' },
+            'AI Patient Coordinator': { icon: '🤝', color: '#22c55e', role: 'AI患者协调师' },
+            'AI Medical Records': { icon: '📋', color: '#3b82f6', role: 'AI病历管理师' },
+            'AI Telemedicine': { icon: '📞', color: '#8b5cf6', role: 'AI远程医疗师' },
+            // Cycle 418 新增角色 - AI智能金融服务
+            'AI Finance Director': { icon: '💰', color: '#14b8a6', role: 'AI金融服务总监' },
+            'AI Investment Advisor': { icon: '📈', color: '#10b981', role: 'AI投资顾问' },
+            'AI Risk Analyst': { icon: '⚠️', color: '#f59e0b', role: 'AI风险分析师' },
+            'AI Insurance Broker': { icon: '🛡️', color: '#3b82f6', role: 'AI保险经纪人' },
+            'AI Tax Consultant': { icon: '💵', color: '#8b5cf6', role: 'AI税务顾问' },
+            'AI Wealth Manager': { icon: '💎', color: '#f97316', role: 'AI财富管理师' },
+            // Cycle 418 新增角色 - AI智能教育培训服务
+            'AI Education Director': { icon: '📚', color: '#6366f1', role: 'AI教育培训总监' },
+            'AI Curriculum Designer': { icon: '📖', color: '#8b5cf6', role: 'AI课程设计师' },
+            'AI Online Tutor': { icon: '🎓', color: '#22c55e', role: 'AI在线导师' },
+            'AI Exam Proctor': { icon: '👁️', color: '#ec4899', role: 'AI智能监考' },
+            'AI Learning Analyst': { icon: '📊', color: '#06b6d4', role: 'AI学习分析师' },
+            'AI Training Coordinator': { icon: '📋', color: '#f59e0b', role: 'AI培训协调师' },
+            // Cycle 418 新增角色 - AI智能零售电商服务
+            'AI Retail Director': { icon: '🛒', color: '#f43f5e', role: 'AI零售电商总监' },
+            'AI Store Manager': { icon: '🏪', color: '#22c55e', role: 'AI店铺经理' },
+            'AI Inventory Analyst': { icon: '📦', color: '#3b82f6', role: 'AI库存分析师' },
+            'AI Visual Merchandiser': { icon: '🎨', color: '#ec4899', role: 'AI视觉陈列师' },
+            'AI Pricing Strategist': { icon: '💲', color: '#f97316', role: 'AI定价策略师' },
+            'AI Customer Insights': { icon: '👥', color: '#8b5cf6', role: 'AI客户洞察师' },
+            // Cycle 418 新增角色 - AI智能物流仓储服务
+            'AI Logistics Director': { icon: '🚚', color: '#0ea5e9', role: 'AI物流仓储总监' },
+            'AI Warehouse Manager': { icon: '🏭', color: '#14b8a6', role: 'AI仓储经理' },
+            'AI Delivery Optimizer': { icon: '📦', color: '#22c55e', role: 'AI配送优化师' },
+            'AI Fleet Coordinator': { icon: '🚛', color: '#f59e0b', role: 'AI车队协调师' },
+            'AI Route Planner': { icon: '🗺️', color: '#8b5cf6', role: 'AI路线规划师' },
+            'AI Supply Chain Analyst': { icon: '🔗', color: '#06b6d4', role: 'AI供应链分析师' },
+            // Cycle 418 新增角色 - AI智能媒体娱乐服务
+            'AI Media Director': { icon: '📺', color: '#ec4899', role: 'AI媒体娱乐总监' },
+            'AI News Editor': { icon: '📰', color: '#8b5cf6', role: 'AI新闻编辑' },
+            'AI PR Specialist': { icon: '📣', color: '#f97316', role: 'AI公关专员' },
+            'AI Crisis Manager': { icon: '🚨', color: '#ef4444', role: 'AI危机公关经理' },
+            'AI Media Planner': { icon: '📅', color: '#06b6d4', role: 'AI媒体策划师' },
+            'AI Broadcast Engineer': { icon: '📡', color: '#3b82f6', role: 'AI广播工程师' }
         };
 
         // 拖拽相关变量
