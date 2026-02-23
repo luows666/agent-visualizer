@@ -20682,6 +20682,132 @@
                     { from: 'AI Safety Officer', to: 'AI Quality Control', content: '质量标准' },
                     { from: 'AI Quality Control', to: 'AI Environmental Engineer', content: '环保指标' }
                 ]
+            },
+            // Cycle 409 新增模板 - AI智能影视传媒系统
+            {
+                id: 'ai-media-entertainment',
+                name: 'AI智能影视传媒系统',
+                icon: '🎬',
+                desc: '从影视制作到传媒发布的完整影视传媒流程',
+                agents: ['AI Film Producer', 'AI Screenwriter', 'AI Director', 'AI Cinematographer', 'AI Film Editor'],
+                positions: [
+                    { role: 'AI Film Producer', x: 400, y: 30 },
+                    { role: 'AI Screenwriter', x: 200, y: 150 },
+                    { role: 'AI Director', x: 600, y: 150 },
+                    { role: 'AI Cinematographer', x: 200, y: 270 },
+                    { role: 'AI Film Editor', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Film Producer', to: 'AI Screenwriter', content: '项目策划' },
+                    { from: 'AI Screenwriter', to: 'AI Director', content: '剧本完成' },
+                    { from: 'AI Director', to: 'AI Cinematographer', content: '拍摄计划' },
+                    { from: 'AI Cinematographer', to: 'AI Film Editor', content: '拍摄素材' }
+                ]
+            },
+            // Cycle 409 新增模板 - AI智能体育竞技系统
+            {
+                id: 'ai-sports-competition',
+                name: 'AI智能体育竞技系统',
+                icon: '⚽',
+                desc: '从训练指导到赛事执教的完整体育竞技流程',
+                agents: ['AI Sports Coach', 'AI Fitness Instructor', 'AI Sports Analyst', 'AI Nutritionist', 'AI Referee'],
+                positions: [
+                    { role: 'AI Sports Coach', x: 400, y: 30 },
+                    { role: 'AI Fitness Instructor', x: 200, y: 150 },
+                    { role: 'AI Sports Analyst', x: 600, y: 150 },
+                    { role: 'AI Nutritionist', x: 200, y: 270 },
+                    { role: 'AI Referee', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sports Coach', to: 'AI Fitness Instructor', content: '训练计划' },
+                    { from: 'AI Fitness Instructor', to: 'AI Nutritionist', content: '营养需求' },
+                    { from: 'AI Nutritionist', to: 'AI Sports Analyst', content: '身体数据' },
+                    { from: 'AI Sports Analyst', to: 'AI Referee', content: '比赛分析' }
+                ]
+            },
+            // Cycle 409 新增模板 - AI智能餐饮烹饪系统
+            {
+                id: 'ai-dining-cooking',
+                name: 'AI智能餐饮烹饪系统',
+                icon: '👨‍🍳',
+                desc: '从菜品研发到餐厅运营的完整餐饮烹饪流程',
+                agents: ['AI Head Chef', 'AI Baker', 'AI Bartender', 'AI Food Stylist', 'AI Restaurant Manager'],
+                positions: [
+                    { role: 'AI Head Chef', x: 400, y: 30 },
+                    { role: 'AI Baker', x: 200, y: 150 },
+                    { role: 'AI Bartender', x: 600, y: 150 },
+                    { role: 'AI Food Stylist', x: 200, y: 270 },
+                    { role: 'AI Restaurant Manager', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Head Chef', to: 'AI Food Stylist', content: '菜品设计' },
+                    { from: 'AI Food Stylist', to: 'AI Restaurant Manager', content: '呈现方案' },
+                    { from: 'AI Restaurant Manager', to: 'AI Baker', content: '烘焙需求' },
+                    { from: 'AI Restaurant Manager', to: 'AI Bartender', content: '饮品需求' }
+                ]
+            },
+            // Cycle 409 新增模板 - AI智能美容美发系统
+            {
+                id: 'ai-beauty-hair',
+                name: 'AI智能美容美发系统',
+                icon: '💇',
+                desc: '从形象设计到美容服务的完整美容美发流程',
+                agents: ['AI Hair Stylist', 'AI Beautician', 'AI Makeup Artist', 'AI Nail Artist', 'AI Image Consultant'],
+                positions: [
+                    { role: 'AI Image Consultant', x: 400, y: 30 },
+                    { role: 'AI Hair Stylist', x: 200, y: 150 },
+                    { role: 'AI Beautician', x: 600, y: 150 },
+                    { role: 'AI Makeup Artist', x: 200, y: 270 },
+                    { role: 'AI Nail Artist', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Image Consultant', to: 'AI Hair Stylist', content: '造型方案' },
+                    { from: 'AI Hair Stylist', to: 'AI Beautician', content: '护肤需求' },
+                    { from: 'AI Beautician', to: 'AI Makeup Artist', content: '妆容设计' },
+                    { from: 'AI Makeup Artist', to: 'AI Nail Artist', content: '美甲方案' }
+                ]
+            },
+            // Cycle 409 新增模板 - AI智能家政服务系统
+            {
+                id: 'ai-home-service',
+                name: 'AI智能家政服务系统',
+                icon: '🧹',
+                desc: '从家政服务到居家护理的完整家政服务流程',
+                agents: ['AI Housekeeper', 'AI Nanny', 'AI Elderly Caregiver', 'AI Errand Runner', 'AI Home Maintenance'],
+                positions: [
+                    { role: 'AI Housekeeper', x: 400, y: 30 },
+                    { role: 'AI Nanny', x: 200, y: 150 },
+                    { role: 'AI Elderly Caregiver', x: 600, y: 150 },
+                    { role: 'AI Errand Runner', x: 200, y: 270 },
+                    { role: 'AI Home Maintenance', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Housekeeper', to: 'AI Errand Runner', content: '采购需求' },
+                    { from: 'AI Errand Runner', to: 'AI Home Maintenance', content: '维修需求' },
+                    { from: 'AI Housekeeper', to: 'AI Nanny', content: '育儿协调' },
+                    { from: 'AI Nanny', to: 'AI Elderly Caregiver', content: '家庭看护' }
+                ]
+            },
+            // Cycle 409 新增模板 - AI智能宠物服务系统
+            {
+                id: 'ai-pet-service',
+                name: 'AI智能宠物服务系统',
+                icon: '🐕',
+                desc: '从宠物医疗到护理服务的完整宠物服务流程',
+                agents: ['AI Vet', 'AI Pet Trainer', 'AI Pet Groomer', 'AI Pet Nutritionist', 'AI Pet Behaviorist'],
+                positions: [
+                    { role: 'AI Vet', x: 400, y: 30 },
+                    { role: 'AI Pet Trainer', x: 200, y: 150 },
+                    { role: 'AI Pet Groomer', x: 600, y: 150 },
+                    { role: 'AI Pet Nutritionist', x: 200, y: 270 },
+                    { role: 'AI Pet Behaviorist', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Vet', to: 'AI Pet Nutritionist', content: '健康建议' },
+                    { from: 'AI Pet Nutritionist', to: 'AI Pet Trainer', content: '营养方案' },
+                    { from: 'AI Pet Trainer', to: 'AI Pet Behaviorist', content: '行为分析' },
+                    { from: 'AI Pet Behaviorist', to: 'AI Pet Groomer', content: '护理需求' }
+                ]
             }
         ];
 
@@ -24603,7 +24729,43 @@
             'AI Process Designer': { icon: '📐', color: '#ec4899', role: 'AI工艺设计师' },
             'AI Safety Officer': { icon: '🛡️', color: '#dc2626', role: 'AI安全官员' },
             'AI Quality Control': { icon: '✅', color: '#22c55e', role: 'AI质量控制工程师' },
-            'AI Environmental Engineer': { icon: '🌿', color: '#14b8a6', role: 'AI环保工程师' }
+            'AI Environmental Engineer': { icon: '🌿', color: '#14b8a6', role: 'AI环保工程师' },
+            // Cycle 409 新增角色 - AI智能影视传媒
+            'AI Film Producer': { icon: '🎬', color: '#8b5cf6', role: 'AI电影制片人' },
+            'AI Screenwriter': { icon: '✍️', color: '#ec4899', role: 'AI编剧师' },
+            'AI Director': { icon: '🎥', color: '#3b82f6', role: 'AI导演' },
+            'AI Cinematographer': { icon: '📷', color: '#10b981', role: 'AI摄影指导' },
+            'AI Film Editor': { icon: '🎞️', color: '#f59e0b', role: 'AI电影剪辑师' },
+            // Cycle 409 新增角色 - AI智能体育竞技
+            'AI Sports Coach': { icon: '⚽', color: '#ef4444', role: 'AI体育教练' },
+            'AI Fitness Instructor': { icon: '🏋️', color: '#06b6d4', role: 'AI健身指导师' },
+            'AI Sports Analyst': { icon: '📊', color: '#22c55e', role: 'AI体育分析师' },
+            'AI Nutritionist': { icon: '🥗', color: '#14b8a6', role: 'AI营养师' },
+            'AI Referee': { icon: '⚖️', color: '#a855f7', role: 'AI裁判' },
+            // Cycle 409 新增角色 - AI智能餐饮烹饪
+            'AI Head Chef': { icon: '👨‍🍳', color: '#f97316', role: 'AI行政总厨' },
+            'AI Baker': { icon: '🥐', color: '#eab308', role: 'AI烘焙师' },
+            'AI Bartender': { icon: '🍸', color: '#8b5cf6', role: 'AI调酒师' },
+            'AI Food Stylist': { icon: '🍽️', color: '#ec4899', role: 'AI食物造型师' },
+            'AI Restaurant Manager': { icon: '🍽️', color: '#3b82f6', role: 'AI餐厅经理' },
+            // Cycle 409 新增角色 - AI智能美容美发
+            'AI Hair Stylist': { icon: '💇', color: '#f43f5e', role: 'AI美发师' },
+            'AI Beautician': { icon: '💄', color: '#ec4899', role: 'AI美容师' },
+            'AI Makeup Artist': { icon: '✨', color: '#a855f7', role: 'AI化妆师' },
+            'AI Nail Artist': { icon: '💅', color: '#f59e0b', role: 'AI美甲师' },
+            'AI Image Consultant': { icon: '🎭', color: '#06b6d4', role: 'AI形象顾问' },
+            // Cycle 409 新增角色 - AI智能家政服务
+            'AI Housekeeper': { icon: '🧹', color: '#64748b', role: 'AI家政保洁师' },
+            'AI Nanny': { icon: '👶', color: '#f97316', role: 'AI育儿保姆' },
+            'AI Elderly Caregiver': { icon: '👴', color: '#06b6d4', role: 'AI养老护理员' },
+            'AI Errand Runner': { icon: '🏃', color: '#22c55e', role: 'AI跑腿服务师' },
+            'AI Home Maintenance': { icon: '🔧', color: '#3b82f6', role: 'AI家政维修师' },
+            // Cycle 409 新增角色 - AI智能宠物服务
+            'AI Vet': { icon: '🐕', color: '#10b981', role: 'AI宠物医生' },
+            'AI Pet Trainer': { icon: '🎾', color: '#f59e0b', role: 'AI宠物训练师' },
+            'AI Pet Groomer': { icon: '✂️', color: '#ec4899', role: 'AI宠物美容师' },
+            'AI Pet Nutritionist': { icon: '🦴', color: '#a855f7', role: 'AI宠物营养师' },
+            'AI Pet Behaviorist': { icon: '🧠', color: '#8b5cf6', role: 'AI宠物行为学家' }
         };
 
         // 拖拽相关变量
