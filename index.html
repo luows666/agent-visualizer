@@ -18975,6 +18975,126 @@
                     { from: 'AI Safety Officer', to: 'AI Quality Control', content: '安全标准' },
                     { from: 'AI Quality Control', to: 'AI Chemical Engineer', content: '质量报告' }
                 ]
+            },
+            // Cycle 394 新增模板 - AI智能半导体芯片系统
+            {
+                id: 'ai-semiconductor',
+                name: 'AI智能半导体芯片系统',
+                icon: '🔲',
+                desc: '从芯片设计到封装测试的完整半导体流程',
+                agents: ['AI Chip Designer', 'AI Process Engineer', 'AI Wafer Engineer', 'AI Test Engineer'],
+                positions: [
+                    { role: 'AI Chip Designer', x: 400, y: 50 },
+                    { role: 'AI Process Engineer', x: 200, y: 180 },
+                    { role: 'AI Wafer Engineer', x: 400, y: 180 },
+                    { role: 'AI Test Engineer', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Chip Designer', to: 'AI Process Engineer', content: '设计规格' },
+                    { from: 'AI Process Engineer', to: 'AI Wafer Engineer', content: '制程参数' },
+                    { from: 'AI Wafer Engineer', to: 'AI Test Engineer', content: '晶圆数据' },
+                    { from: 'AI Test Engineer', to: 'AI Chip Designer', content: '测试报告' }
+                ]
+            },
+            // Cycle 394 新增模板 - AI智能生物医药系统
+            {
+                id: 'ai-biomedicine',
+                name: 'AI智能生物医药系统',
+                icon: '🧬',
+                desc: '从药物研发到临床试验的完整生物医药流程',
+                agents: ['AI Drug Discovery', 'AI Clinical Trial', 'AI Medical Imaging', 'AI Bioinformatics'],
+                positions: [
+                    { role: 'AI Drug Discovery', x: 400, y: 50 },
+                    { role: 'AI Clinical Trial', x: 200, y: 180 },
+                    { role: 'AI Medical Imaging', x: 400, y: 180 },
+                    { role: 'AI Bioinformatics', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Drug Discovery', to: 'AI Clinical Trial', content: '药物方案' },
+                    { from: 'AI Clinical Trial', to: 'AI Medical Imaging', content: '临床数据' },
+                    { from: 'AI Medical Imaging', to: 'AI Bioinformatics', content: '影像分析' },
+                    { from: 'AI Bioinformatics', to: 'AI Drug Discovery', content: '研究报告' }
+                ]
+            },
+            // Cycle 394 新增模板 - AI智能金融保险系统
+            {
+                id: 'ai-finance-insurance',
+                name: 'AI智能金融保险系统',
+                icon: '🏦',
+                desc: '从投资分析到风险管理的完整金融保险流程',
+                agents: ['AI Investment Advisor', 'AI Risk Analyst', 'AI Insurance Agent', 'AI Fraud Detection'],
+                positions: [
+                    { role: 'AI Investment Advisor', x: 400, y: 50 },
+                    { role: 'AI Risk Analyst', x: 200, y: 180 },
+                    { role: 'AI Insurance Agent', x: 400, y: 180 },
+                    { role: 'AI Fraud Detection', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Investment Advisor', to: 'AI Risk Analyst', content: '投资方案' },
+                    { from: 'AI Risk Analyst', to: 'AI Insurance Agent', content: '风险评估' },
+                    { from: 'AI Insurance Agent', to: 'AI Fraud Detection', content: '保单数据' },
+                    { from: 'AI Fraud Detection', to: 'AI Investment Advisor', content: '风控报告' }
+                ]
+            },
+            // Cycle 394 新增模板 - AI智能教育培训系统
+            {
+                id: 'ai-education-training',
+                name: 'AI智能教育培训系统',
+                icon: '📚',
+                desc: '从课程设计到培训评估的完整教育培训流程',
+                agents: ['AI Curriculum Designer', 'AI Online Tutor', 'AI Exam Proctor', 'AI Learning Analytics'],
+                positions: [
+                    { role: 'AI Curriculum Designer', x: 400, y: 50 },
+                    { role: 'AI Online Tutor', x: 200, y: 180 },
+                    { role: 'AI Exam Proctor', x: 400, y: 180 },
+                    { role: 'AI Learning Analytics', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Curriculum Designer', to: 'AI Online Tutor', content: '课程内容' },
+                    { from: 'AI Online Tutor', to: 'AI Exam Proctor', content: '学习进度' },
+                    { from: 'AI Exam Proctor', to: 'AI Learning Analytics', content: '考试数据' },
+                    { from: 'AI Learning Analytics', to: 'AI Curriculum Designer', content: '分析报告' }
+                ]
+            },
+            // Cycle 394 新增模板 - AI智能媒体娱乐系统
+            {
+                id: 'ai-media-entertainment',
+                name: 'AI智能媒体娱乐系统',
+                icon: '🎬',
+                desc: '从内容创作到媒体发布的完整媒体娱乐流程',
+                agents: ['AI Content Creator', 'AI Video Editor', 'AI Music Producer', 'AI Social Media Manager'],
+                positions: [
+                    { role: 'AI Content Creator', x: 400, y: 50 },
+                    { role: 'AI Video Editor', x: 200, y: 180 },
+                    { role: 'AI Music Producer', x: 400, y: 180 },
+                    { role: 'AI Social Media Manager', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Content Creator', to: 'AI Video Editor', content: '创意脚本' },
+                    { from: 'AI Video Editor', to: 'AI Music Producer', content: '视频素材' },
+                    { from: 'AI Music Producer', to: 'AI Social Media Manager', content: '配乐文件' },
+                    { from: 'AI Social Media Manager', to: 'AI Content Creator', content: '发布数据' }
+                ]
+            },
+            // Cycle 394 新增模板 - AI智能环保能源系统
+            {
+                id: 'ai-environment-energy',
+                name: 'AI智能环保能源系统',
+                icon: '🌍',
+                desc: '从环境监测到能源管理的完整环保能源流程',
+                agents: ['AI Environmental Monitor', 'AI Carbon Tracker', 'AI Renewable Energy', 'AI Energy Efficiency'],
+                positions: [
+                    { role: 'AI Environmental Monitor', x: 400, y: 50 },
+                    { role: 'AI Carbon Tracker', x: 200, y: 180 },
+                    { role: 'AI Renewable Energy', x: 400, y: 180 },
+                    { role: 'AI Energy Efficiency', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Monitor', to: 'AI Carbon Tracker', content: '监测数据' },
+                    { from: 'AI Carbon Tracker', to: 'AI Renewable Energy', content: '碳排放报告' },
+                    { from: 'AI Renewable Energy', to: 'AI Energy Efficiency', content: '能源方案' },
+                    { from: 'AI Energy Efficiency', to: 'AI Environmental Monitor', content: '效率评估' }
+                ]
             }
         ];
 
@@ -22322,7 +22442,49 @@
             'AI Entertainment Manager': { icon: '🎭', color: '#ec4899', role: 'AI娱乐经理' },
             'AI Talent Scout': { icon: '🔍', color: '#a855f7', role: 'AI星探' },
             'AI Venue Manager': { icon: '🏟️', color: '#3b82f6', role: 'AI场馆经理' },
-            'AI Booking Agent': { icon: '📋', color: '#06b6d4', role: 'AI预约经纪人' }
+            'AI Booking Agent': { icon: '📋', color: '#06b6d4', role: 'AI预约经纪人' },
+            // Cycle 394 新增角色 - AI 智能半导体芯片
+            'AI Chip Designer': { icon: '🔲', color: '#8b5cf6', role: 'AI芯片设计师' },
+            'AI Process Engineer': { icon: '⚙️', color: '#3b82f6', role: 'AI制程工程师' },
+            'AI Wafer Engineer': { icon: '💎', color: '#10b981', role: 'AI晶圆工程师' },
+            'AI Test Engineer': { icon: '🧪', color: '#ec4899', role: 'AI测试工程师' },
+            'AI Packaging Engineer': { icon: '📦', color: '#f59e0b', role: 'AI封装工程师' },
+            // Cycle 394 新增角色 - AI 智能生物医药
+            'AI Drug Discovery': { icon: '💊', color: '#8b5cf6', role: 'AI药物发现工程师' },
+            'AI Clinical Trial': { icon: '🔬', color: '#3b82f6', role: 'AI临床试验分析师' },
+            'AI Medical Imaging': { icon: '🏥', color: '#10b981', role: 'AI医学影像师' },
+            'AI Bioinformatics': { icon: '🧬', color: '#ec4899', role: 'AI生物信息学家' },
+            'AI Genomics': { icon: '🧪', color: '#f59e0b', role: 'AI基因组学家' },
+            'AI Pharmaceutist': { icon: '💉', color: '#06b6d4', role: 'AI药剂师' },
+            // Cycle 394 新增角色 - AI 智能金融保险
+            'AI Investment Advisor': { icon: '📈', color: '#8b5cf6', role: 'AI投资顾问' },
+            'AI Risk Analyst': { icon: '⚠️', color: '#3b82f6', role: 'AI风险分析师' },
+            'AI Insurance Agent': { icon: '🛡️', color: '#10b981', role: 'AI保险代理' },
+            'AI Fraud Detection': { icon: '🔍', color: '#ec4899', role: 'AI欺诈检测师' },
+            'AI Actuary': { icon: '📊', color: '#f59e0b', role: 'AI精算师' },
+            'AI Credit Analyst': { icon: '💳', color: '#06b6d4', role: 'AI信用分析师' },
+            'AI Wealth Manager': { icon: '💎', color: '#a855f7', role: 'AI财富经理' },
+            // Cycle 394 新增角色 - AI 智能教育培训
+            'AI Curriculum Designer': { icon: '📚', color: '#8b5cf6', role: 'AI课程设计师' },
+            'AI Online Tutor': { icon: '🎓', color: '#3b82f6', role: 'AI在线导师' },
+            'AI Exam Proctor': { icon: '👁️', color: '#10b981', role: 'AI监考系统' },
+            'AI Learning Analytics': { icon: '📊', color: '#ec4899', role: 'AI学习分析师' },
+            'AI Tutoring Bot': { icon: '🎓', color: '#f59e0b', role: 'AI辅导机器人' },
+            'AI Education Analyst': { icon: '📈', color: '#06b6d4', role: 'AI教育分析师' },
+            // Cycle 394 新增角色 - AI 智能媒体娱乐
+            'AI Content Creator': { icon: '✨', color: '#8b5cf6', role: 'AI内容创作者' },
+            'AI Video Editor': { icon: '🎬', color: '#3b82f6', role: 'AI视频剪辑师' },
+            'AI Music Producer': { icon: '🎵', color: '#10b981', role: 'AI音乐制作人' },
+            'AI Social Media Manager': { icon: '📱', color: '#ec4899', role: 'AI社交媒体经理' },
+            'AI Brand Manager': { icon: '💎', color: '#f59e0b', role: 'AI品牌经理' },
+            'AI Cinematographer': { icon: '📷', color: '#06b6d4', role: 'AI摄影指导' },
+            // Cycle 394 新增角色 - AI 智能环保能源
+            'AI Environmental Monitor': { icon: '🌿', color: '#8b5cf6', role: 'AI环境监测师' },
+            'AI Carbon Tracker': { icon: '🌍', color: '#3b82f6', role: 'AI碳追踪师' },
+            'AI Renewable Energy': { icon: '🌞', color: '#10b981', role: 'AI可再生能源工程师' },
+            'AI Energy Efficiency': { icon: '💡', color: '#ec4899', role: 'AI能效专家' },
+            'AI Pollution Control': { icon: '🌫️', color: '#f59e0b', role: 'AI污染控制工程师' },
+            'AI Sustainability Advisor': { icon: '🌱', color: '#06b6d4', role: 'AI可持续发展顾问' }
         };
 
         // 拖拽相关变量
