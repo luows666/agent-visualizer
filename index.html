@@ -17373,6 +17373,144 @@
                     { from: 'AI Citizen Service', to: 'AI Emergency Planner', content: '服务需求' },
                     { from: 'AI Urban Manager', to: 'AI Policy Advisor', content: '城市运营报告' }
                 ]
+            },
+            // Cycle 382 新增模板 - AI智能法律咨询系统
+            {
+                id: 'ai-legal-consultation',
+                name: 'AI智能法律咨询系统',
+                icon: '⚖️',
+                desc: '从法律咨询到诉讼代理的完整法律服务流程',
+                agents: ['AI Legal Consultant', 'AI Contract Reviewer', 'AI Litigation Assistant', 'AI Compliance Officer', 'AI Intellectual Property'],
+                positions: [
+                    { role: 'AI Legal Consultant', x: 400, y: 50 },
+                    { role: 'AI Contract Reviewer', x: 200, y: 180 },
+                    { role: 'AI Litigation Assistant', x: 600, y: 180 },
+                    { role: 'AI Compliance Officer', x: 200, y: 310 },
+                    { role: 'AI Intellectual Property', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Legal Consultant', to: 'AI Contract Reviewer', content: '法律咨询任务' },
+                    { from: 'AI Legal Consultant', to: 'AI Litigation Assistant', content: '诉讼协助请求' },
+                    { from: 'AI Contract Reviewer', to: 'AI Compliance Officer', content: '合规审查报告' },
+                    { from: 'AI Litigation Assistant', to: 'AI Intellectual Property', content: '知识产权需求' },
+                    { from: 'AI Compliance Officer', to: 'AI Legal Consultant', content: '合规建议' },
+                    { from: 'AI Intellectual Property', to: 'AI Legal Consultant', content: '知识产权保护方案' }
+                ]
+            },
+            // Cycle 382 新增模板 - AI智能人力资源系统
+            {
+                id: 'ai-hr-management',
+                name: 'AI智能人力资源系统',
+                icon: '👥',
+                desc: '从人才招聘到员工发展的完整人力资源流程',
+                agents: ['AI Talent Scout', 'AI Interview Coordinator', 'AI Compensation Analyst', 'AI Training Designer', 'AI Employee Wellness'],
+                positions: [
+                    { role: 'AI Talent Scout', x: 400, y: 50 },
+                    { role: 'AI Interview Coordinator', x: 200, y: 180 },
+                    { role: 'AI Compensation Analyst', x: 600, y: 180 },
+                    { role: 'AI Training Designer', x: 200, y: 310 },
+                    { role: 'AI Employee Wellness', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Talent Scout', to: 'AI Interview Coordinator', content: '人才推荐' },
+                    { from: 'AI Talent Scout', to: 'AI Compensation Analyst', content: '薪酬方案需求' },
+                    { from: 'AI Interview Coordinator', to: 'AI Training Designer', content: '培训需求' },
+                    { from: 'AI Compensation Analyst', to: 'AI Employee Wellness', content: '员工福利方案' },
+                    { from: 'AI Training Designer', to: 'AI Talent Scout', content: '培训效果反馈' },
+                    { from: 'AI Employee Wellness', to: 'AI Talent Scout', content: '员工满意度报告' }
+                ]
+            },
+            // Cycle 382 新增模板 - AI智能环保治理系统
+            {
+                id: 'ai-environmental-governance',
+                name: 'AI智能环保治理系统',
+                icon: '🌿',
+                desc: '从环境监测到可持续发展的完整环保治理流程',
+                agents: ['AI Carbon Footprint', 'AI Waste Analyst', 'AI Climate Scientist', 'AI Renewable Planner', 'AI Environmental Auditor'],
+                positions: [
+                    { role: 'AI Carbon Footprint', x: 400, y: 50 },
+                    { role: 'AI Waste Analyst', x: 200, y: 180 },
+                    { role: 'AI Climate Scientist', x: 600, y: 180 },
+                    { role: 'AI Renewable Planner', x: 200, y: 310 },
+                    { role: 'AI Environmental Auditor', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Carbon Footprint', to: 'AI Waste Analyst', content: '碳排放数据' },
+                    { from: 'AI Carbon Footprint', to: 'AI Climate Scientist', content: '气候影响分析' },
+                    { from: 'AI Waste Analyst', to: 'AI Environmental Auditor', content: '废物审计报告' },
+                    { from: 'AI Climate Scientist', to: 'AI Renewable Planner', content: '可再生能源规划' },
+                    { from: 'AI Renewable Planner', to: 'AI Carbon Footprint', content: '减排方案' },
+                    { from: 'AI Environmental Auditor', to: 'AI Carbon Footprint', content: '合规审查结果' }
+                ]
+            },
+            // Cycle 382 新增模板 - AI智能能源管理系统
+            {
+                id: 'ai-energy-management',
+                name: 'AI智能能源管理系统',
+                icon: '⚡',
+                desc: '从能源生产到节能优化的完整能源管理流程',
+                agents: ['AI Power Trader', 'AI Grid Optimizer', 'AI Energy Analyst', 'AI Carbon Credit', 'AI Smart Meter'],
+                positions: [
+                    { role: 'AI Power Trader', x: 400, y: 50 },
+                    { role: 'AI Grid Optimizer', x: 200, y: 180 },
+                    { role: 'AI Energy Analyst', x: 600, y: 180 },
+                    { role: 'AI Carbon Credit', x: 200, y: 310 },
+                    { role: 'AI Smart Meter', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Power Trader', to: 'AI Grid Optimizer', content: '电力交易需求' },
+                    { from: 'AI Power Trader', to: 'AI Carbon Credit', content: '碳信用交易' },
+                    { from: 'AI Grid Optimizer', to: 'AI Energy Analyst', content: '电网优化方案' },
+                    { from: 'AI Energy Analyst', to: 'AI Smart Meter', content: '能耗分析数据' },
+                    { from: 'AI Carbon Credit', to: 'AI Power Trader', content: '碳信用额度' },
+                    { from: 'AI Smart Meter', to: 'AI Energy Analyst', content: '智能电表数据' }
+                ]
+            },
+            // Cycle 382 新增模板 - AI智能医疗健康系统
+            {
+                id: 'ai-healthcare',
+                name: 'AI智能医疗健康系统',
+                icon: '🏥',
+                desc: '从诊疗服务到健康管理的完整医疗健康流程',
+                agents: ['AI Patient Navigator', 'AI Medical Records', 'AI Drug Safety', 'AI Health Educator', 'AI Telemedicine'],
+                positions: [
+                    { role: 'AI Patient Navigator', x: 400, y: 50 },
+                    { role: 'AI Medical Records', x: 200, y: 180 },
+                    { role: 'AI Drug Safety', x: 600, y: 180 },
+                    { role: 'AI Health Educator', x: 200, y: 310 },
+                    { role: 'AI Telemedicine', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Patient Navigator', to: 'AI Medical Records', content: '患者信息' },
+                    { from: 'AI Patient Navigator', to: 'AI Telemedicine', content: '远程医疗需求' },
+                    { from: 'AI Medical Records', to: 'AI Drug Safety', content: '用药历史' },
+                    { from: 'AI Drug Safety', to: 'AI Health Educator', content: '用药安全指导' },
+                    { from: 'AI Telemedicine', to: 'AI Patient Navigator', content: '远程诊疗结果' },
+                    { from: 'AI Health Educator', to: 'AI Patient Navigator', content: '健康教育计划' }
+                ]
+            },
+            // Cycle 382 新增模板 - AI智能教育培训系统
+            {
+                id: 'ai-education-training',
+                name: 'AI智能教育培训系统',
+                icon: '🎓',
+                desc: '从课程设计到培训评估的完整教育培训流程',
+                agents: ['AI Learning Architect', 'AI Curriculum Developer', 'AI Assessment Designer', 'AI Tutoring Coordinator', 'AI Corporate Trainer'],
+                positions: [
+                    { role: 'AI Learning Architect', x: 400, y: 50 },
+                    { role: 'AI Curriculum Developer', x: 200, y: 180 },
+                    { role: 'AI Assessment Designer', x: 600, y: 180 },
+                    { role: 'AI Tutoring Coordinator', x: 200, y: 310 },
+                    { role: 'AI Corporate Trainer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Learning Architect', to: 'AI Curriculum Developer', content: '学习架构设计' },
+                    { from: 'AI Learning Architect', to: 'AI Assessment Designer', content: '评估标准' },
+                    { from: 'AI Curriculum Developer', to: 'AI Tutoring Coordinator', content: '课程内容' },
+                    { from: 'AI Assessment Designer', to: 'AI Corporate Trainer', content: '评估工具' },
+                    { from: 'AI Tutoring Coordinator', to: 'AI Learning Architect', content: '教学反馈' },
+                    { from: 'AI Corporate Trainer', to: 'AI Learning Architect', content: '培训效果报告' }
+                ]
             }
         ];
 
@@ -20245,7 +20383,43 @@
             'AI Public Relations': { icon: '📣', color: '#ec4899', role: 'AI公共关系师' },
             'AI Citizen Service': { icon: '🏛️', color: '#f59e0b', role: 'AI公民服务师' },
             'AI Urban Manager': { icon: '🏙️', color: '#06b6d4', role: 'AI城市管理师' },
-            'AI Emergency Planner': { icon: '🚨', color: '#22c55e', role: 'AI应急规划师' }
+            'AI Emergency Planner': { icon: '🚨', color: '#22c55e', role: 'AI应急规划师' },
+            // Cycle 382 新增角色 - AI智能法律咨询
+            'AI Legal Consultant': { icon: '⚖️', color: '#8b5cf6', role: 'AI法律咨询师' },
+            'AI Contract Reviewer': { icon: '📄', color: '#3b82f6', role: 'AI合同审查师' },
+            'AI Litigation Assistant': { icon: '⚔️', color: '#ec4899', role: 'AI诉讼助理' },
+            'AI Compliance Officer': { icon: '✅', color: '#10b981', role: 'AI合规官' },
+            'AI Intellectual Property': { icon: '💡', color: '#f59e0b', role: 'AI知识产权师' },
+            // Cycle 382 新增角色 - AI智能人力资源
+            'AI Talent Scout': { icon: '🔍', color: '#06b6d4', role: 'AI人才猎头' },
+            'AI Interview Coordinator': { icon: '📅', color: '#22c55e', role: 'AI面试协调员' },
+            'AI Compensation Analyst': { icon: '💰', color: '#f97316', role: 'AI薪酬分析师' },
+            'AI Training Designer': { icon: '📚', color: '#a855f7', role: 'AI培训设计师' },
+            'AI Employee Wellness': { icon: '❤️', color: '#ef4444', role: 'AI员工关怀师' },
+            // Cycle 382 新增角色 - AI智能环保治理
+            'AI Carbon Footprint': { icon: '🌍', color: '#10b981', role: 'AI碳足迹分析师' },
+            'AI Waste Analyst': { icon: '♻️', color: '#22c55e', role: 'AI废物分析师' },
+            'AI Climate Scientist': { icon: '🌡️', color: '#3b82f6', role: 'AI气候科学家' },
+            'AI Renewable Planner': { icon: '🌞', color: '#f59e0b', role: 'AI可再生能源规划师' },
+            'AI Environmental Auditor': { icon: '🔍', color: '#06b6d4', role: 'AI环保审计师' },
+            // Cycle 382 新增角色 - AI智能能源管理
+            'AI Power Trader': { icon: '⚡', color: '#eab308', role: 'AI电力交易师' },
+            'AI Grid Optimizer': { icon: '🔌', color: '#3b82f6', role: 'AI电网优化师' },
+            'AI Energy Analyst': { icon: '📊', color: '#8b5cf6', role: 'AI能源分析师' },
+            'AI Carbon Credit': { icon: '💵', color: '#22c55e', role: 'AI碳信用交易师' },
+            'AI Smart Meter': { icon: '📡', color: '#ec4899', role: 'AI智能电表管理师' },
+            // Cycle 382 新增角色 - AI智能医疗健康
+            'AI Patient Navigator': { icon: '🏥', color: '#ef4444', role: 'AI患者导航师' },
+            'AI Medical Records': { icon: '📋', color: '#3b82f6', role: 'AI病历管理师' },
+            'AI Drug Safety': { icon: '💊', color: '#10b981', role: 'AI用药安全师' },
+            'AI Health Educator': { icon: '📚', color: '#8b5cf6', role: 'AI健康教育师' },
+            'AI Telemedicine': { icon: '📞', color: '#06b6d4', role: 'AI远程医疗师' },
+            // Cycle 382 新增角色 - AI智能教育培训
+            'AI Learning Architect': { icon: '🎓', color: '#a855f7', role: 'AI学习架构师' },
+            'AI Curriculum Developer': { icon: '📖', color: '#ec4899', role: 'AI课程开发师' },
+            'AI Assessment Designer': { icon: '📝', color: '#f59e0b', role: 'AI测评设计师' },
+            'AI Tutoring Coordinator': { icon: '🎯', color: '#22c55e', role: 'AI导师协调师' },
+            'AI Corporate Trainer': { icon: '🏢', color: '#06b6d4', role: 'AI企业培训师' }
         };
 
         // 拖拽相关变量
