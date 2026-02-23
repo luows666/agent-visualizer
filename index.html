@@ -18601,6 +18601,138 @@
                     { from: 'AI Paralegal', to: 'AI Compliance Officer', content: '合规审查' },
                     { from: 'AI Lawyer', to: 'AI Mediator', content: '调解协商安排' }
                 ]
+            },
+            // Cycle 391 新增模板 - AI智能零售电商系统
+            {
+                id: 'ai-retail',
+                name: 'AI智能零售电商系统',
+                icon: '🛒',
+                desc: '从店铺运营到客户洞察的完整零售电商流程',
+                agents: ['AI Retail Manager', 'AI Ecommerce Specialist', 'AI Inventory Analyst', 'AI Visual Merchandiser', 'AI Pricing Strategist'],
+                positions: [
+                    { role: 'AI Retail Manager', x: 400, y: 50 },
+                    { role: 'AI Ecommerce Specialist', x: 200, y: 180 },
+                    { role: 'AI Inventory Analyst', x: 400, y: 180 },
+                    { role: 'AI Visual Merchandiser', x: 600, y: 180 },
+                    { role: 'AI Pricing Strategist', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Retail Manager', to: 'AI Ecommerce Specialist', content: '制定电商运营策略' },
+                    { from: 'AI Ecommerce Specialist', to: 'AI Inventory Analyst', content: '库存需求分析' },
+                    { from: 'AI Inventory Analyst', to: 'AI Visual Merchandiser', content: '库存数据报告' },
+                    { from: 'AI Visual Merchandiser', to: 'AI Pricing Strategist', content: '陈列效果反馈' },
+                    { from: 'AI Pricing Strategist', to: 'AI Retail Manager', content: '定价策略建议' }
+                ]
+            },
+            // Cycle 391 新增模板 - AI智能物流仓储系统
+            {
+                id: 'ai-logistics',
+                name: 'AI智能物流仓储系统',
+                icon: '🚚',
+                desc: '从仓储管理到配送优化的完整物流仓储流程',
+                agents: ['AI Warehouse Manager', 'AI Logistics Planner', 'AI Delivery Driver', 'AI Freight Broker', 'AI Cold Chain Manager'],
+                positions: [
+                    { role: 'AI Warehouse Manager', x: 400, y: 50 },
+                    { role: 'AI Logistics Planner', x: 200, y: 180 },
+                    { role: 'AI Delivery Driver', x: 400, y: 180 },
+                    { role: 'AI Freight Broker', x: 600, y: 180 },
+                    { role: 'AI Cold Chain Manager', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Warehouse Manager', to: 'AI Logistics Planner', content: '仓储计划需求' },
+                    { from: 'AI Logistics Planner', to: 'AI Delivery Driver', content: '配送路线规划' },
+                    { from: 'AI Delivery Driver', to: 'AI Freight Broker', content: '货运状态更新' },
+                    { from: 'AI Freight Broker', to: 'AI Cold Chain Manager', content: '冷链需求确认' },
+                    { from: 'AI Cold Chain Manager', to: 'AI Warehouse Manager', content: '冷链监控报告' }
+                ]
+            },
+            // Cycle 391 新增模板 - AI智能建筑设计系统
+            {
+                id: 'ai-architecture',
+                name: 'AI智能建筑设计系统',
+                icon: '🏛️',
+                desc: '从建筑概念设计到施工图的完整建筑设计流程',
+                agents: ['AI Building Architect', 'AI Interior Designer', 'AI Landscape Architect', 'AI BIM Manager', 'AI Building Energy Engineer'],
+                positions: [
+                    { role: 'AI Building Architect', x: 400, y: 50 },
+                    { role: 'AI Interior Designer', x: 200, y: 180 },
+                    { role: 'AI Landscape Architect', x: 400, y: 180 },
+                    { role: 'AI BIM Manager', x: 600, y: 180 },
+                    { role: 'AI Building Energy Engineer', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Building Architect', to: 'AI Interior Designer', content: '室内设计需求' },
+                    { from: 'AI Interior Designer', to: 'AI Landscape Architect', content: '景观设计要求' },
+                    { from: 'AI Landscape Architect', to: 'AI BIM Manager', content: '景观BIM数据' },
+                    { from: 'AI BIM Manager', to: 'AI Building Energy Engineer', content: '建筑能源模型' },
+                    { from: 'AI Building Energy Engineer', to: 'AI Building Architect', content: '节能方案建议' }
+                ]
+            },
+            // Cycle 391 新增模板 - AI智能环保工程系统
+            {
+                id: 'ai-environment',
+                name: 'AI智能环保工程系统',
+                icon: '🌿',
+                desc: '从环境监测到治理保护的完整环保工程流程',
+                agents: ['AI Environmental Engineer', 'AI Waste Management', 'AI Recycling Specialist', 'AI Water Treatment', 'AI Air Quality Monitor'],
+                positions: [
+                    { role: 'AI Environmental Engineer', x: 400, y: 50 },
+                    { role: 'AI Waste Management', x: 200, y: 180 },
+                    { role: 'AI Recycling Specialist', x: 400, y: 180 },
+                    { role: 'AI Water Treatment', x: 600, y: 180 },
+                    { role: 'AI Air Quality Monitor', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Engineer', to: 'AI Waste Management', content: '废物处理计划' },
+                    { from: 'AI Waste Management', to: 'AI Recycling Specialist', content: '回收利用需求' },
+                    { from: 'AI Recycling Specialist', to: 'AI Water Treatment', content: '水资源循环' },
+                    { from: 'AI Water Treatment', to: 'AI Air Quality Monitor', content: '空气质量数据' },
+                    { from: 'AI Air Quality Monitor', to: 'AI Environmental Engineer', content: '环境评估报告' }
+                ]
+            },
+            // Cycle 391 新增模板 - AI智能餐饮服务系统
+            {
+                id: 'ai-restaurant',
+                name: 'AI智能餐饮服务系统',
+                icon: '🍽️',
+                desc: '从餐厅运营到菜品管理的完整餐饮服务流程',
+                agents: ['AI Restaurant Manager', 'AI Head Chef', 'AI Menu Designer', 'AI Kitchen Supervisor', 'AI Food Critic'],
+                positions: [
+                    { role: 'AI Restaurant Manager', x: 400, y: 50 },
+                    { role: 'AI Head Chef', x: 200, y: 180 },
+                    { role: 'AI Menu Designer', x: 400, y: 180 },
+                    { role: 'AI Kitchen Supervisor', x: 600, y: 180 },
+                    { role: 'AI Food Critic', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Restaurant Manager', to: 'AI Head Chef', content: '菜品研发需求' },
+                    { from: 'AI Head Chef', to: 'AI Menu Designer', content: '新菜品配方' },
+                    { from: 'AI Menu Designer', to: 'AI Kitchen Supervisor', content: '菜单制作标准' },
+                    { from: 'AI Kitchen Supervisor', to: 'AI Food Critic', content: '菜品出品报告' },
+                    { from: 'AI Food Critic', to: 'AI Restaurant Manager', content: '食客反馈总结' }
+                ]
+            },
+            // Cycle 391 新增模板 - AI智能美容健身系统
+            {
+                id: 'ai-beauty-fitness',
+                name: 'AI智能美容健身系统',
+                icon: '💪',
+                desc: '从美容服务到健身指导的完整美容健身流程',
+                agents: ['AI Hair Stylist', 'AI Beautician', 'AI Makeup Artist', 'AI Fitness Trainer', 'AI Nutrition Planner'],
+                positions: [
+                    { role: 'AI Hair Stylist', x: 400, y: 50 },
+                    { role: 'AI Beautician', x: 200, y: 180 },
+                    { role: 'AI Makeup Artist', x: 400, y: 180 },
+                    { role: 'AI Fitness Trainer', x: 600, y: 180 },
+                    { role: 'AI Nutrition Planner', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Hair Stylist', to: 'AI Beautician', content: '美容服务需求' },
+                    { from: 'AI Beautician', to: 'AI Makeup Artist', content: '化妆造型要求' },
+                    { from: 'AI Makeup Artist', to: 'AI Fitness Trainer', content: '健身计划需求' },
+                    { from: 'AI Fitness Trainer', to: 'AI Nutrition Planner', content: '营养配餐需求' },
+                    { from: 'AI Nutrition Planner', to: 'AI Hair Stylist', content: '整体方案建议' }
+                ]
             }
         ];
 
@@ -21829,7 +21961,49 @@
             'AI Legal Consultant': { icon: '📜', color: '#8b5cf6', role: 'AI法律顾问' },
             'AI Paralegal': { icon: '📋', color: '#3b82f6', role: 'AI律师助理' },
             'AI Compliance Officer': { icon: '✅', color: '#22c55e', role: 'AI合规官' },
-            'AI Mediator': { icon: '🤝', color: '#f97316', role: 'AI调解员' }
+            'AI Mediator': { icon: '🤝', color: '#f97316', role: 'AI调解员' },
+            // Cycle 391 新增角色 - AI智能零售电商
+            'AI Retail Manager': { icon: '🛒', color: '#f43f5e', role: 'AI零售经理' },
+            'AI Ecommerce Specialist': { icon: '🛍️', color: '#a855f7', role: 'AI电商专员' },
+            'AI Inventory Analyst': { icon: '📦', color: '#06b6d4', role: 'AI库存分析师' },
+            'AI Visual Merchandiser': { icon: '🎨', color: '#ec4899', role: 'AI视觉陈列师' },
+            'AI Pricing Strategist': { icon: '💲', color: '#22c55e', role: 'AI定价策略师' },
+            // Cycle 391 新增角色 - AI智能物流仓储
+            'AI Warehouse Manager': { icon: '🏭', color: '#14b8a6', role: 'AI仓储经理' },
+            'AI Logistics Planner': { icon: '📋', color: '#f97316', role: 'AI物流规划师' },
+            'AI Delivery Driver': { icon: '🚚', color: '#8b5cf6', role: 'AI配送司机' },
+            'AI Freight Broker': { icon: '📦', color: '#06b6d4', role: 'AI货运经纪人' },
+            'AI Cold Chain Manager': { icon: '❄️', color: '#0ea5e9', role: 'AI冷链管理师' },
+            // Cycle 391 新增角色 - AI智能建筑设计
+            'AI Building Architect': { icon: '🏛️', color: '#f59e0b', role: 'AI建筑设计师' },
+            'AI Interior Designer': { icon: '🛋️', color: '#ec4899', role: 'AI室内设计师' },
+            'AI Landscape Architect': { icon: '🌳', color: '#22c55e', role: 'AI园林景观设计师' },
+            'AI BIM Manager': { icon: '📐', color: '#3b82f6', role: 'AIBIM模型经理' },
+            'AI Building Energy Engineer': { icon: '⚡', color: '#f97316', role: 'AI建筑节能工程师' },
+            // Cycle 391 新增角色 - AI智能城市规划
+            'AI Urban Planner': { icon: '🏙️', color: '#8b5cf6', role: 'AI城市规划师' },
+            'AI Traffic Engineer': { icon: '🚦', color: '#eab308', role: 'AI交通工程师' },
+            'AI Public Space Designer': { icon: '🌆', color: '#06b6d4', role: 'AI公共空间设计师' },
+            'AI Zoning Specialist': { icon: '📍', color: '#14b8a6', role: 'AI分区规划师' },
+            'AI Smart City Architect': { icon: '🌐', color: '#22c55e', role: 'AI智慧城市架构师' },
+            // Cycle 391 新增角色 - AI智能环保工程
+            'AI Environmental Engineer': { icon: '🌿', color: '#10b981', role: 'AI环保工程师' },
+            'AI Waste Management': { icon: '♻️', color: '#84cc16', role: 'AI废物管理工程师' },
+            'AI Recycling Specialist': { icon: '🔄', color: '#22c55e', role: 'AI回收利用专家' },
+            'AI Water Treatment': { icon: '💧', color: '#06b6d4', role: 'AI水处理工程师' },
+            'AI Air Quality Monitor': { icon: '💨', color: '#64748b', role: 'AI空气质量监测师' },
+            // Cycle 391 新增角色 - AI智能餐饮服务
+            'AI Restaurant Manager': { icon: '🍽️', color: '#f43f5e', role: 'AI餐厅经理' },
+            'AI Head Chef': { icon: '👨‍🍳', color: '#f97316', role: 'AI行政总厨' },
+            'AI Menu Designer': { icon: '📋', color: '#a855f7', role: 'AI菜单设计师' },
+            'AI Kitchen Supervisor': { icon: '🔧', color: '#14b8a6', role: 'AI厨房主管' },
+            'AI Food Critic': { icon: '👨‍🍽️', color: '#22c55e', role: 'AI美食评论家' },
+            // Cycle 391 新增角色 - AI智能美容健身
+            'AI Hair Stylist': { icon: '💇', color: '#ec4899', role: 'AI美发师' },
+            'AI Beautician': { icon: '💄', color: '#f59e0b', role: 'AI美容师' },
+            'AI Makeup Artist': { icon: '✨', color: '#8b5cf6', role: 'AI化妆师' },
+            'AI Fitness Trainer': { icon: '💪', color: '#06b6d4', role: 'AI健身教练' },
+            'AI Nutrition Planner': { icon: '🥗', color: '#22c55e', role: 'AI营养规划师' }
         };
 
         // 拖拽相关变量
