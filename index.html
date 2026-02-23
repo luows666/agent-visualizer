@@ -26480,8 +26480,166 @@
             }
         ];
 
+        // Cycle 446 - 新增行业服务系统模板
+        const cycle446Templates = [
+            {
+                id: 'ai-crossborder-ecommerce-service',
+                name: 'AI智能跨境电商服务系统',
+                icon: '🌏',
+                desc: '智能跨境电商服务管理，包括海外仓储、物流配送、海关报关等',
+                agents: ['AI CrossBorder Director', 'AI Warehouse Manager', 'AI Logistics Coordinator', 'AI Customs Broker', 'AI International Seller', 'AI Compliance Officer'],
+                positions: [
+                    { role: 'AI CrossBorder Director', x: 400, y: 30 },
+                    { role: 'AI Warehouse Manager', x: 150, y: 150 },
+                    { role: 'AI Logistics Coordinator', x: 650, y: 150 },
+                    { role: 'AI Customs Broker', x: 150, y: 300 },
+                    { role: 'AI International Seller', x: 400, y: 350 },
+                    { role: 'AI Compliance Officer', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI CrossBorder Director', to: 'AI Warehouse Manager', content: '仓储安排' },
+                    { from: 'AI CrossBorder Director', to: 'AI Logistics Coordinator', content: '物流调度' },
+                    { from: 'AI Warehouse Manager', to: 'AI Customs Broker', content: '报关资料' },
+                    { from: 'AI Logistics Coordinator', to: 'AI International Seller', content: '销售支持' },
+                    { from: 'AI Customs Broker', to: 'AI Compliance Officer', content: '合规审查' }
+                ]
+            },
+            {
+                id: 'ai-medical-device-service',
+                name: 'AI智能医疗器械服务系统',
+                icon: '🏥',
+                desc: '智能医疗器械服务管理，包括设备销售、维护培训、临床支持等',
+                agents: ['AI Medical Device Director', 'AI Sales Representative', 'AI Field Engineer', 'AI Clinical Specialist', 'AI Training Coordinator', 'AI Regulatory Affairs'],
+                positions: [
+                    { role: 'AI Medical Device Director', x: 400, y: 30 },
+                    { role: 'AI Sales Representative', x: 150, y: 150 },
+                    { role: 'AI Field Engineer', x: 650, y: 150 },
+                    { role: 'AI Clinical Specialist', x: 150, y: 300 },
+                    { role: 'AI Training Coordinator', x: 400, y: 350 },
+                    { role: 'AI Regulatory Affairs', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Medical Device Director', to: 'AI Sales Representative', content: '销售任务' },
+                    { from: 'AI Medical Device Director', to: 'AI Field Engineer', content: '设备部署' },
+                    { from: 'AI Sales Representative', to: 'AI Clinical Specialist', content: '临床需求' },
+                    { from: 'AI Field Engineer', to: 'AI Training Coordinator', content: '培训安排' },
+                    { from: 'AI Clinical Specialist', to: 'AI Regulatory Affairs', content: '法规要求' }
+                ]
+            },
+            {
+                id: 'ai-elderly-community-service',
+                name: 'AI智能养老社区服务系统',
+                icon: '🏘️',
+                desc: '智能养老社区服务管理，包括生活照料、健康管理、精神慰藉等',
+                agents: ['AI Community Director', 'AI Life Caregiver', 'AI Health Manager', 'AI Activity Organizer', 'AI Nutrition Chef', 'AI Family Liaison'],
+                positions: [
+                    { role: 'AI Community Director', x: 400, y: 30 },
+                    { role: 'AI Life Caregiver', x: 150, y: 150 },
+                    { role: 'AI Health Manager', x: 650, y: 150 },
+                    { role: 'AI Activity Organizer', x: 150, y: 300 },
+                    { role: 'AI Nutrition Chef', x: 400, y: 350 },
+                    { role: 'AI Family Liaison', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Community Director', to: 'AI Life Caregiver', content: '生活照料' },
+                    { from: 'AI Community Director', to: 'AI Health Manager', content: '健康管理' },
+                    { from: 'AI Life Caregiver', to: 'AI Activity Organizer', content: '活动组织' },
+                    { from: 'AI Health Manager', to: 'AI Nutrition Chef', content: '营养配餐' },
+                    { from: 'AI Activity Organizer', to: 'AI Family Liaison', content: '家属沟通' }
+                ]
+            },
+            {
+                id: 'ai-shared-office-service',
+                name: 'AI智能共享办公服务系统',
+                icon: '🏢',
+                desc: '智能共享办公服务管理，包括工位租赁、资源预约、企业服务等',
+                agents: ['AI Office Director', 'AI Space Manager', 'AI Booking Coordinator', 'AI Enterprise Liaison', 'AI Facilities Manager', 'AI Member Relations'],
+                positions: [
+                    { role: 'AI Office Director', x: 400, y: 30 },
+                    { role: 'AI Space Manager', x: 150, y: 150 },
+                    { role: 'AI Booking Coordinator', x: 650, y: 150 },
+                    { role: 'AI Enterprise Liaison', x: 150, y: 300 },
+                    { role: 'AI Facilities Manager', x: 400, y: 350 },
+                    { role: 'AI Member Relations', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Office Director', to: 'AI Space Manager', content: '空间管理' },
+                    { from: 'AI Office Director', to: 'AI Booking Coordinator', content: '预约安排' },
+                    { from: 'AI Space Manager', to: 'AI Facilities Manager', content: '设施维护' },
+                    { from: 'AI Booking Coordinator', to: 'AI Member Relations', content: '会员服务' },
+                    { from: 'AI Enterprise Liaison', to: 'AI Office Director', content: '企业合作' }
+                ]
+            },
+            {
+                id: 'ai-sports-event-service',
+                name: 'AI智能赛事运营服务系统',
+                icon: '🏆',
+                desc: '智能赛事运营服务管理，包括赛事策划、报名管理、现场执行等',
+                agents: ['AI Event Director', 'AI Event Planner', 'AI Registration Manager', 'AI Venue Coordinator', 'AI Media Liaison', 'AI Sponsorship Manager'],
+                positions: [
+                    { role: 'AI Event Director', x: 400, y: 30 },
+                    { role: 'AI Event Planner', x: 150, y: 150 },
+                    { role: 'AI Registration Manager', x: 650, y: 150 },
+                    { role: 'AI Venue Coordinator', x: 150, y: 300 },
+                    { role: 'AI Media Liaison', x: 400, y: 350 },
+                    { role: 'AI Sponsorship Manager', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Event Director', to: 'AI Event Planner', content: '赛事策划' },
+                    { from: 'AI Event Director', to: 'AI Registration Manager', content: '报名管理' },
+                    { from: 'AI Event Planner', to: 'AI Venue Coordinator', content: '场地协调' },
+                    { from: 'AI Registration Manager', to: 'AI Media Liaison', content: '媒体对接' },
+                    { from: 'AI Venue Coordinator', to: 'AI Sponsorship Manager', content: '赞助协调' }
+                ]
+            },
+            {
+                id: 'ai-ip-service',
+                name: 'AI智能知识产权服务系统',
+                icon: '💡',
+                desc: '智能知识产权服务管理，包括专利申请、商标注册、版权保护等',
+                agents: ['AI IP Director', 'AI Patent Attorney', 'AI Trademark Specialist', 'AI Copyright Agent', 'AI IP Analyst', 'AI Legal Consultant'],
+                positions: [
+                    { role: 'AI IP Director', x: 400, y: 30 },
+                    { role: 'AI Patent Attorney', x: 150, y: 150 },
+                    { role: 'AI Trademark Specialist', x: 650, y: 150 },
+                    { role: 'AI Copyright Agent', x: 150, y: 300 },
+                    { role: 'AI IP Analyst', x: 400, y: 350 },
+                    { role: 'AI Legal Consultant', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI IP Director', to: 'AI Patent Attorney', content: '专利申请' },
+                    { from: 'AI IP Director', to: 'AI Trademark Specialist', content: '商标注册' },
+                    { from: 'AI Patent Attorney', to: 'AI IP Analyst', content: '分析需求' },
+                    { from: 'AI Trademark Specialist', to: 'AI Copyright Agent', content: '版权保护' },
+                    { from: 'AI IP Analyst', to: 'AI Legal Consultant', content: '法律咨询' }
+                ]
+            },
+            {
+                id: 'ai-eco-agriculture-service',
+                name: 'AI智能生态农业服务系统',
+                icon: '🌾',
+                desc: '智能生态农业服务管理，包括有机种植、农技推广、农产品销售等',
+                agents: ['AI AgriDirector', 'AI Organic Farmer', 'AI AgriTech Specialist', 'AI Crop Consultant', 'AI Harvest Manager', 'AI Market Coordinator'],
+                positions: [
+                    { role: 'AI AgriDirector', x: 400, y: 30 },
+                    { role: 'AI Organic Farmer', x: 150, y: 150 },
+                    { role: 'AI AgriTech Specialist', x: 650, y: 150 },
+                    { role: 'AI Crop Consultant', x: 150, y: 300 },
+                    { role: 'AI Harvest Manager', x: 400, y: 350 },
+                    { role: 'AI Market Coordinator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI AgriDirector', to: 'AI Organic Farmer', content: '种植任务' },
+                    { from: 'AI AgriDirector', to: 'AI AgriTech Specialist', content: '技术支持' },
+                    { from: 'AI Organic Farmer', to: 'AI Crop Consultant', content: '作物咨询' },
+                    { from: 'AI AgriTech Specialist', to: 'AI Harvest Manager', content: '收获安排' },
+                    { from: 'AI Crop Consultant', to: 'AI Market Coordinator', content: '市场对接' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -31981,7 +32139,57 @@
             'AI School Advisor': { icon: '🏫', color: '#22c55e', role: 'AI学校顾问' },
             'AI Application Manager': { icon: '📝', color: '#ec4899', role: 'AI申请经理' },
             'AI Document Preparer': { icon: '📁', color: '#06b6d4', role: 'AI材料准备员' },
-            'AI Travel Coordinator': { icon: '✈️', color: '#14b8a6', role: 'AI行程协调员' }
+            'AI Travel Coordinator': { icon: '✈️', color: '#14b8a6', role: 'AI行程协调员' },
+            // Cycle 446 新增角色 - 7个行业服务系统
+            // AI智能跨境电商服务系统
+            'AI CrossBorder Director': { icon: '🌏', color: '#8b5cf6', role: 'AI跨境总监' },
+            'AI Warehouse Manager': { icon: '🏭', color: '#f59e0b', role: 'AI仓储经理' },
+            'AI Logistics Coordinator': { icon: '🚚', color: '#22c55e', role: 'AI物流协调' },
+            'AI Customs Broker': { icon: '🛃', color: '#ec4899', role: 'AI报关员' },
+            'AI International Seller': { icon: '🌍', color: '#06b6d4', role: 'AI国际销售' },
+            'AI Compliance Officer': { icon: '⚖️', color: '#14b8a6', role: 'AI合规专员' },
+            // AI智能医疗器械服务系统
+            'AI Medical Device Director': { icon: '🏥', color: '#3b82f6', role: 'AI医疗设备总监' },
+            'AI Sales Representative': { icon: '💼', color: '#f59e0b', role: 'AI销售代表' },
+            'AI Field Engineer': { icon: '🔧', color: '#22c55e', role: 'AI现场工程师' },
+            'AI Clinical Specialist': { icon: '👨‍⚕️', color: '#ec4899', role: 'AI临床专家' },
+            'AI Training Coordinator': { icon: '📚', color: '#06b6d4', role: 'AI培训协调' },
+            'AI Regulatory Affairs': { icon: '📜', color: '#14b8a6', role: 'AI法规事务' },
+            // AI智能养老社区服务系统
+            'AI Community Director': { icon: '🏘️', color: '#8b5cf6', role: 'AI社区总监' },
+            'AI Life Caregiver': { icon: '👴', color: '#f59e0b', role: 'AI生活照料' },
+            'AI Health Manager': { icon: '💊', color: '#22c55e', role: 'AI健康管理' },
+            'AI Activity Organizer': { icon: '🎭', color: '#ec4899', role: 'AI活动组织' },
+            'AI Nutrition Chef': { icon: '🍲', color: '#06b6d4', role: 'AI营养厨师' },
+            'AI Family Liaison': { icon: '👨‍👩‍👧', color: '#14b8a6', role: 'AI家属联络' },
+            // AI智能共享办公服务系统
+            'AI Office Director': { icon: '🏢', color: '#3b82f6', role: 'AI办公总监' },
+            'AI Space Manager': { icon: '🖥️', color: '#f59e0b', role: 'AI空间管理' },
+            'AI Booking Coordinator': { icon: '📅', color: '#22c55e', role: 'AI预约协调' },
+            'AI Enterprise Liaison': { icon: '🤝', color: '#ec4899', role: 'AI企业联络' },
+            'AI Facilities Manager': { icon: '🔧', color: '#06b6d4', role: 'AI设施管理' },
+            'AI Member Relations': { icon: '👥', color: '#14b8a6', role: 'AI会员关系' },
+            // AI智能赛事运营服务系统
+            'AI Sports Event Director': { icon: '🏆', color: '#8b5cf6', role: 'AI赛事总监' },
+            'AI Event Planner': { icon: '📝', color: '#f59e0b', role: 'AI赛事策划' },
+            'AI Registration Manager': { icon: '📋', color: '#22c55e', role: 'AI报名管理' },
+            'AI Venue Coordinator': { icon: '🏟️', color: '#ec4899', role: 'AI场地协调' },
+            'AI Media Liaison': { icon: '📰', color: '#06b6d4', role: 'AI媒体联络' },
+            'AI Sponsorship Manager': { icon: '💰', color: '#14b8a6', role: 'AI赞助管理' },
+            // AI智能知识产权服务系统
+            'AI IP Director': { icon: '💡', color: '#3b82f6', role: 'AI知识产权总监' },
+            'AI Patent Attorney': { icon: '📜', color: '#f59e0b', role: 'AI专利律师' },
+            'AI Trademark Specialist': { icon: '™️', color: '#22c55e', role: 'AI商标专员' },
+            'AI Copyright Agent': { icon: '©️', color: '#ec4899', role: 'AI版权代理' },
+            'AI IP Analyst': { icon: '📊', color: '#06b6d4', role: 'AI分析师' },
+            'AI Legal Consultant': { icon: '⚖️', color: '#14b8a6', role: 'AI法律顾问' },
+            // AI智能生态农业服务系统
+            'AI AgriDirector': { icon: '🌾', color: '#8b5cf6', role: 'AI农业总监' },
+            'AI Organic Farmer': { icon: '🌱', color: '#f59e0b', role: 'AI有机农夫' },
+            'AI AgriTech Specialist': { icon: '🔬', color: '#22c55e', role: 'AI农技专家' },
+            'AI Crop Consultant': { icon: '🌿', color: '#ec4899', role: 'AI作物顾问' },
+            'AI Harvest Manager': { icon: '🌽', color: '#06b6d4', role: 'AI收获管理' },
+            'AI Market Coordinator': { icon: '🛒', color: '#14b8a6', role: 'AI市场协调' }
         };
 
         // 拖拽相关变量
