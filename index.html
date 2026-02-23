@@ -12514,6 +12514,138 @@
                     { from: 'AI Urban Manager', to: 'AI Emergency Planner', content: '城市管理' },
                     { from: 'AI Emergency Planner', to: 'AI Policy Advisor', content: '应急规划' }
                 ]
+            },
+            // Cycle 346 新增模板 - AI智能半导体系统
+            {
+                id: 'ai-semiconductor',
+                name: 'AI智能半导体系统',
+                icon: '🔲',
+                desc: '从芯片设计到封装测试的完整半导体流程',
+                agents: ['AI Chip Designer', 'AI Process Engineer', 'AI Wafer Engineer', 'AI Test Engineer', 'AI Packaging Engineer'],
+                positions: [
+                    { role: 'AI Chip Designer', x: 400, y: 50 },
+                    { role: 'AI Process Engineer', x: 200, y: 180 },
+                    { role: 'AI Wafer Engineer', x: 600, y: 180 },
+                    { role: 'AI Test Engineer', x: 300, y: 310 },
+                    { role: 'AI Packaging Engineer', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Chip Designer', to: 'AI Process Engineer', content: '芯片设计方案' },
+                    { from: 'AI Process Engineer', to: 'AI Wafer Engineer', content: '制程需求' },
+                    { from: 'AI Wafer Engineer', to: 'AI Test Engineer', content: '晶圆制造' },
+                    { from: 'AI Test Engineer', to: 'AI Packaging Engineer', content: '测试结果' },
+                    { from: 'AI Packaging Engineer', to: 'AI Chip Designer', content: '封装反馈' }
+                ]
+            },
+            // Cycle 346 新增模板 - AI智能航空铁路系统
+            {
+                id: 'ai-transportation',
+                name: 'AI智能航空铁路系统',
+                icon: '🚂',
+                desc: '从航班规划到铁路调度的完整交通运输流程',
+                agents: ['AI Pilot', 'AI Air Traffic Controller', 'AI Flight Planner', 'AI Railway Engineer', 'AI Train Dispatcher'],
+                positions: [
+                    { role: 'AI Flight Planner', x: 400, y: 50 },
+                    { role: 'AI Pilot', x: 200, y: 180 },
+                    { role: 'AI Air Traffic Controller', x: 600, y: 180 },
+                    { role: 'AI Railway Engineer', x: 300, y: 310 },
+                    { role: 'AI Train Dispatcher', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Flight Planner', to: 'AI Pilot', content: '航班计划' },
+                    { from: 'AI Pilot', to: 'AI Air Traffic Controller', content: '飞行状态' },
+                    { from: 'AI Air Traffic Controller', to: 'AI Railway Engineer', content: '交通协调' },
+                    { from: 'AI Railway Engineer', to: 'AI Train Dispatcher', content: '铁路方案' },
+                    { from: 'AI Train Dispatcher', to: 'AI Flight Planner', content: '调度反馈' }
+                ]
+            },
+            // Cycle 346 新增模板 - AI智能建筑设计系统
+            {
+                id: 'ai-architecture-design',
+                name: 'AI智能建筑设计系统',
+                icon: '🏛️',
+                desc: '从结构设计到景观规划的完整建筑设计流程',
+                agents: ['AI Structural Engineer', 'AI MEP Engineer', 'AI Building Energy', 'AI Landscape Designer', 'AI BIM Manager'],
+                positions: [
+                    { role: 'AI Structural Engineer', x: 400, y: 50 },
+                    { role: 'AI MEP Engineer', x: 200, y: 180 },
+                    { role: 'AI Building Energy', x: 600, y: 180 },
+                    { role: 'AI Landscape Designer', x: 300, y: 310 },
+                    { role: 'AI BIM Manager', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Structural Engineer', to: 'AI MEP Engineer', content: '结构设计' },
+                    { from: 'AI MEP Engineer', to: 'AI Building Energy', content: '机电设计' },
+                    { from: 'AI Building Energy', to: 'AI Landscape Designer', content: '节能方案' },
+                    { from: 'AI Landscape Designer', to: 'AI BIM Manager', content: '景观设计' },
+                    { from: 'AI BIM Manager', to: 'AI Structural Engineer', content: 'BIM整合' }
+                ]
+            },
+            // Cycle 346 新增模板 - AI智能媒体娱乐系统
+            {
+                id: 'ai-media-entertainment',
+                name: 'AI智能媒体娱乐系统',
+                icon: '🎬',
+                desc: '从剧本创作到后期制作的完整影视制作流程',
+                agents: ['AI Film Producer', 'AI Screenwriter', 'AI Cinematographer', 'AI VFX Artist', 'AI Music Composer'],
+                positions: [
+                    { role: 'AI Film Producer', x: 400, y: 50 },
+                    { role: 'AI Screenwriter', x: 200, y: 180 },
+                    { role: 'AI Cinematographer', x: 600, y: 180 },
+                    { role: 'AI VFX Artist', x: 300, y: 310 },
+                    { role: 'AI Music Composer', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Film Producer', to: 'AI Screenwriter', content: '制作需求' },
+                    { from: 'AI Screenwriter', to: 'AI Cinematographer', content: '剧本完成' },
+                    { from: 'AI Cinematographer', to: 'AI VFX Artist', content: '拍摄素材' },
+                    { from: 'AI VFX Artist', to: 'AI Music Composer', content: '特效完成' },
+                    { from: 'AI Music Composer', to: 'AI Film Producer', content: '配乐完成' }
+                ]
+            },
+            // Cycle 346 新增模板 - AI智能能源化工系统
+            {
+                id: 'ai-energy-chemical',
+                name: 'AI智能能源化工系统',
+                icon: '⚗️',
+                desc: '从化工生产到安全环保的完整能源化工流程',
+                agents: ['AI Chemical Engineer', 'AI Refinery Operator', 'AI Pipeline Engineer', 'AI Safety Inspector', 'AI Environmental Engineer'],
+                positions: [
+                    { role: 'AI Chemical Engineer', x: 400, y: 50 },
+                    { role: 'AI Refinery Operator', x: 200, y: 180 },
+                    { role: 'AI Pipeline Engineer', x: 600, y: 180 },
+                    { role: 'AI Safety Inspector', x: 300, y: 310 },
+                    { role: 'AI Environmental Engineer', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Chemical Engineer', to: 'AI Refinery Operator', content: '化工方案' },
+                    { from: 'AI Refinery Operator', to: 'AI Pipeline Engineer', content: '生产需求' },
+                    { from: 'AI Pipeline Engineer', to: 'AI Safety Inspector', content: '管道设计' },
+                    { from: 'AI Safety Inspector', to: 'AI Environmental Engineer', content: '安全检查' },
+                    { from: 'AI Environmental Engineer', to: 'AI Chemical Engineer', content: '环保评估' }
+                ]
+            },
+            // Cycle 346 新增模板 - AI智能军事安防系统
+            {
+                id: 'ai-military-security',
+                name: 'AI智能军事安防系统',
+                icon: '🛡️',
+                desc: '从国防分析到危机管理的完整军事安防流程',
+                agents: ['AI Defense Analyst', 'AI Cyber Warfare', 'AI Intelligence Analyst', 'AI Emergency Response', 'AI Crisis Manager'],
+                positions: [
+                    { role: 'AI Defense Analyst', x: 400, y: 50 },
+                    { role: 'AI Cyber Warfare', x: 200, y: 180 },
+                    { role: 'AI Intelligence Analyst', x: 600, y: 180 },
+                    { role: 'AI Emergency Response', x: 300, y: 310 },
+                    { role: 'AI Crisis Manager', x: 500, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Defense Analyst', to: 'AI Cyber Warfare', content: '国防分析' },
+                    { from: 'AI Cyber Warfare', to: 'AI Intelligence Analyst', content: '网络情报' },
+                    { from: 'AI Intelligence Analyst', to: 'AI Emergency Response', content: '情报汇总' },
+                    { from: 'AI Emergency Response', to: 'AI Crisis Manager', content: '应急响应' },
+                    { from: 'AI Crisis Manager', to: 'AI Defense Analyst', content: '危机评估' }
+                ]
             }
         ];
 
@@ -13946,7 +14078,49 @@
             'AI Citizen Service': { icon: '🏛️', color: '#14b8a6', role: 'AI公民服务师' },
             'AI Urban Manager': { icon: '🏙️', color: '#22c55e', role: 'AI城市管理师' },
             'AI Emergency Planner': { icon: '🚨', color: '#ef4444', role: 'AI应急规划师' },
-            'AI Grant Writer': { icon: '💵', color: '#f59e0b', role: 'AI补助撰写师' }
+            'AI Grant Writer': { icon: '💵', color: '#f59e0b', role: 'AI补助撰写师' },
+            // Cycle 346 新增角色 - AI 智能半导体
+            'AI Chip Designer': { icon: '🔲', color: '#0ea5e9', role: 'AI芯片设计师' },
+            'AI Process Engineer': { icon: '⚙️', color: '#6366f1', role: 'AI制程工程师' },
+            'AI Wafer Engineer': { icon: '💎', color: '#8b5cf6', role: 'AI晶圆工程师' },
+            'AI Test Engineer': { icon: '🧪', color: '#22c55e', role: 'AI测试工程师' },
+            'AI Packaging Engineer': { icon: '📦', color: '#f97316', role: 'AI封装工程师' },
+            // Cycle 346 新增角色 - AI 智能航空铁路
+            'AI Pilot': { icon: '✈️', color: '#06b6d4', role: 'AI飞行员' },
+            'AI Air Traffic Controller': { icon: '🛩️', color: '#3b82f6', role: 'AI空管员' },
+            'AI Flight Planner': { icon: '🗺️', color: '#14b8a6', role: 'AI航班规划师' },
+            'AI Railway Engineer': { icon: '🚂', color: '#dc2626', role: 'AI铁路工程师' },
+            'AI Train Dispatcher': { icon: '🚃', color: '#f59e0b', role: 'AI列车调度员' },
+            // Cycle 346 新增角色 - AI 智能建筑设计
+            'AI Structural Engineer': { icon: '📐', color: '#64748b', role: 'AI结构工程师' },
+            'AI MEP Engineer': { icon: '🔧', color: '#8b5cf6', role: 'AI机电工程师' },
+            'AI Building Energy': { icon: '⚡', color: '#f97316', role: 'AI建筑节能师' },
+            'AI Landscape Designer': { icon: '🌳', color: '#22c55e', role: 'AI景观设计师' },
+            'AI BIM Manager': { icon: '📐', color: '#06b6d4', role: 'AIBIM经理' },
+            // Cycle 346 新增角色 - AI 智能媒体娱乐
+            'AI Film Producer': { icon: '🎬', color: '#ec4899', role: 'AI电影制片人' },
+            'AI Screenwriter': { icon: '✍️', color: '#a855f7', role: 'AI编剧师' },
+            'AI Cinematographer': { icon: '🎥', color: '#f59e0b', role: 'AI摄影指导' },
+            'AI VFX Artist': { icon: '✨', color: '#22c55e', role: 'AI特效艺术家' },
+            'AI Music Composer': { icon: '🎵', color: '#8b5cf6', role: 'AI作曲家' },
+            // Cycle 346 新增角色 - AI 智能能源化工
+            'AI Chemical Engineer': { icon: '⚗️', color: '#06b6d4', role: 'AI化学工程师' },
+            'AI Refinery Operator': { icon: '🏭', color: '#f97316', role: 'AI炼油操作员' },
+            'AI Pipeline Engineer': { icon: '🛤️', color: '#3b82f6', role: 'AI管道工程师' },
+            'AI Safety Inspector': { icon: '✅', color: '#22c55e', role: 'AI安全检查员' },
+            'AI Environmental Engineer': { icon: '🌿', color: '#10b981', role: 'AI环境工程师' },
+            // Cycle 346 新增角色 - AI 智能军事安防
+            'AI Defense Analyst': { icon: '🛡️', color: '#dc2626', role: 'AI国防分析师' },
+            'AI Cyber Warfare': { icon: '💻', color: '#0ea5e9', role: 'AI网络战专家' },
+            'AI Intelligence Analyst': { icon: '🔍', color: '#64748b', role: 'AI情报分析师' },
+            'AI Emergency Response': { icon: '🚨', color: '#ef4444', role: 'AI应急响应专家' },
+            'AI Crisis Manager': { icon: '⚠️', color: '#f59e0b', role: 'AI危机管理师' },
+            // Cycle 346 新增角色 - AI 智能科学研究
+            'AI Physicist': { icon: '⚛️', color: '#8b5cf6', role: 'AI物理学家' },
+            'AI Chemist': { icon: '🧪', color: '#06b6d4', role: 'AI化学家' },
+            'AI Biologist': { icon: '🧬', color: '#22c55e', role: 'AI生物学家' },
+            'AI Mathematician': { icon: '🔢', color: '#ec4899', role: 'AI数学家' },
+            'AI Astronomer': { icon: '🔭', color: '#3b82f6', role: 'AI天文学家' }
         };
 
         // 拖拽相关变量
