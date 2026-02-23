@@ -22721,8 +22721,166 @@
             }
         ];
 
+        // Cycle 423 - 新增行业服务系统模板
+        const cycle423Templates = [
+            {
+                id: 'ai-insurance-service-v2',
+                name: 'AI智能保险服务系统',
+                icon: '🛡️',
+                desc: '从保险咨询到理赔服务的完整保险服务流程',
+                agents: ['AI Insurance Service Director', 'AI Policy Consultant', 'AI Claims Adjuster', 'AI Underwriter', 'AI Risk Analyst', 'AI Customer Service'],
+                positions: [
+                    { role: 'AI Insurance Service Director', x: 400, y: 30 },
+                    { role: 'AI Policy Consultant', x: 150, y: 150 },
+                    { role: 'AI Claims Adjuster', x: 650, y: 150 },
+                    { role: 'AI Underwriter', x: 150, y: 270 },
+                    { role: 'AI Risk Analyst', x: 400, y: 350 },
+                    { role: 'AI Customer Service', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Insurance Service Director', to: 'AI Policy Consultant', content: '咨询需求' },
+                    { from: 'AI Insurance Service Director', to: 'AI Claims Adjuster', content: '理赔需求' },
+                    { from: 'AI Insurance Service Director', to: 'AI Underwriter', content: '核保需求' },
+                    { from: 'AI Policy Consultant', to: 'AI Risk Analyst', content: '风险评估' },
+                    { from: 'AI Claims Adjuster', to: 'AI Customer Service', content: '客服需求' }
+                ]
+            },
+            {
+                id: 'ai-logistics-service-v2',
+                name: 'AI智能物流服务系统',
+                icon: '🚚',
+                desc: '从仓储管理到配送优化的完整物流服务流程',
+                agents: ['AI Logistics Service Director', 'AI Warehouse Manager', 'AI Delivery Optimizer', 'AI Fleet Coordinator', 'AI Route Planner', 'AI Supply Chain Analyst'],
+                positions: [
+                    { role: 'AI Logistics Service Director', x: 400, y: 30 },
+                    { role: 'AI Warehouse Manager', x: 150, y: 150 },
+                    { role: 'AI Delivery Optimizer', x: 650, y: 150 },
+                    { role: 'AI Fleet Coordinator', x: 150, y: 270 },
+                    { role: 'AI Route Planner', x: 400, y: 350 },
+                    { role: 'AI Supply Chain Analyst', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Logistics Service Director', to: 'AI Warehouse Manager', content: '仓储需求' },
+                    { from: 'AI Logistics Service Director', to: 'AI Delivery Optimizer', content: '配送需求' },
+                    { from: 'AI Logistics Service Director', to: 'AI Fleet Coordinator', content: '车队需求' },
+                    { from: 'AI Warehouse Manager', to: 'AI Route Planner', content: '路线规划' },
+                    { from: 'AI Delivery Optimizer', to: 'AI Supply Chain Analyst', content: '供应链分析' }
+                ]
+            },
+            {
+                id: 'ai-environmental-service-v2',
+                name: 'AI智能环保服务系统',
+                icon: '🌿',
+                desc: '从环境监测到治理保护的完整环保服务流程',
+                agents: ['AI Environmental Service Director', 'AI Pollution Monitor', 'AI Waste Manager', 'AI Carbon Analyst', 'AI Sustainability Advisor', 'AI Eco Inspector'],
+                positions: [
+                    { role: 'AI Environmental Service Director', x: 400, y: 30 },
+                    { role: 'AI Pollution Monitor', x: 150, y: 150 },
+                    { role: 'AI Waste Manager', x: 650, y: 150 },
+                    { role: 'AI Carbon Analyst', x: 150, y: 270 },
+                    { role: 'AI Sustainability Advisor', x: 400, y: 350 },
+                    { role: 'AI Eco Inspector', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Service Director', to: 'AI Pollution Monitor', content: '监测需求' },
+                    { from: 'AI Environmental Service Director', to: 'AI Waste Manager', content: '废物处理' },
+                    { from: 'AI Environmental Service Director', to: 'AI Carbon Analyst', content: '碳分析需求' },
+                    { from: 'AI Pollution Monitor', to: 'AI Eco Inspector', content: '检查需求' },
+                    { from: 'AI Carbon Analyst', to: 'AI Sustainability Advisor', content: '可持续建议' }
+                ]
+            },
+            {
+                id: 'ai-security-service',
+                name: 'AI智能安防服务系统',
+                icon: '🔐',
+                desc: '从安全监控到应急响应的完整安防服务流程',
+                agents: ['AI Security Service Director', 'AI Surveillance Operator', 'AI Access Control', 'AI Alarm Response', 'AI Risk Assessor', 'AI Emergency Coordinator'],
+                positions: [
+                    { role: 'AI Security Service Director', x: 400, y: 30 },
+                    { role: 'AI Surveillance Operator', x: 150, y: 150 },
+                    { role: 'AI Access Control', x: 650, y: 150 },
+                    { role: 'AI Alarm Response', x: 150, y: 270 },
+                    { role: 'AI Risk Assessor', x: 400, y: 350 },
+                    { role: 'AI Emergency Coordinator', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Security Service Director', to: 'AI Surveillance Operator', content: '监控需求' },
+                    { from: 'AI Security Service Director', to: 'AI Access Control', content: '门禁需求' },
+                    { from: 'AI Security Service Director', to: 'AI Alarm Response', content: '报警响应' },
+                    { from: 'AI Alarm Response', to: 'AI Emergency Coordinator', content: '应急需求' },
+                    { from: 'AI Surveillance Operator', to: 'AI Risk Assessor', content: '风险评估' }
+                ]
+            },
+            {
+                id: 'ai-finance-tax-service',
+                name: 'AI智能财税服务系统',
+                icon: '💰',
+                desc: '从税务申报到财务分析的完整财税服务流程',
+                agents: ['AI Finance Tax Director', 'AI Tax Accountant', 'AI Bookkeeper', 'AI Financial Analyst', 'AI Audit Assistant', 'AI Payroll Manager'],
+                positions: [
+                    { role: 'AI Finance Tax Director', x: 400, y: 30 },
+                    { role: 'AI Tax Accountant', x: 150, y: 150 },
+                    { role: 'AI Bookkeeper', x: 650, y: 150 },
+                    { role: 'AI Financial Analyst', x: 150, y: 270 },
+                    { role: 'AI Audit Assistant', x: 400, y: 350 },
+                    { role: 'AI Payroll Manager', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Finance Tax Director', to: 'AI Tax Accountant', content: '税务需求' },
+                    { from: 'AI Finance Tax Director', to: 'AI Bookkeeper', content: '记账需求' },
+                    { from: 'AI Finance Tax Director', to: 'AI Financial Analyst', content: '分析需求' },
+                    { from: 'AI Bookkeeper', to: 'AI Audit Assistant', content: '审计需求' },
+                    { from: 'AI Tax Accountant', to: 'AI Payroll Manager', content: '薪资需求' }
+                ]
+            },
+            {
+                id: 'ai-hr-service-v2',
+                name: 'AI智能人力资源服务系统',
+                icon: '👥',
+                desc: '从招聘到员工发展的完整人力资源服务流程',
+                agents: ['AI HR Service Director', 'AI Recruiter', 'AI Training Specialist', 'AI Performance Analyst', 'AI Compensation Manager', 'AI Employee Relations'],
+                positions: [
+                    { role: 'AI HR Service Director', x: 400, y: 30 },
+                    { role: 'AI Recruiter', x: 150, y: 150 },
+                    { role: 'AI Training Specialist', x: 650, y: 150 },
+                    { role: 'AI Performance Analyst', x: 150, y: 270 },
+                    { role: 'AI Compensation Manager', x: 400, y: 350 },
+                    { role: 'AI Employee Relations', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI HR Service Director', to: 'AI Recruiter', content: '招聘需求' },
+                    { from: 'AI HR Service Director', to: 'AI Training Specialist', content: '培训需求' },
+                    { from: 'AI HR Service Director', to: 'AI Performance Analyst', content: '绩效需求' },
+                    { from: 'AI Recruiter', to: 'AI Employee Relations', content: '员工关系' },
+                    { from: 'AI Training Specialist', to: 'AI Compensation Manager', content: '薪酬需求' }
+                ]
+            },
+            {
+                id: 'ai-culture-entertainment-service',
+                name: 'AI智能文化娱乐服务系统',
+                icon: '🎭',
+                desc: '从文化活动到娱乐服务的完整文化娱乐流程',
+                agents: ['AI Culture Entertainment Director', 'AI Event Planner', 'AI Performer Manager', 'AI Venue Coordinator', 'AI Audience Analyst', 'AI Marketing Promoter'],
+                positions: [
+                    { role: 'AI Culture Entertainment Director', x: 400, y: 30 },
+                    { role: 'AI Event Planner', x: 150, y: 150 },
+                    { role: 'AI Performer Manager', x: 650, y: 150 },
+                    { role: 'AI Venue Coordinator', x: 150, y: 270 },
+                    { role: 'AI Audience Analyst', x: 400, y: 350 },
+                    { role: 'AI Marketing Promoter', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Culture Entertainment Director', to: 'AI Event Planner', content: '活动需求' },
+                    { from: 'AI Culture Entertainment Director', to: 'AI Performer Manager', content: '艺人需求' },
+                    { from: 'AI Culture Entertainment Director', to: 'AI Venue Coordinator', content: '场馆需求' },
+                    { from: 'AI Event Planner', to: 'AI Audience Analyst', content: '观众分析' },
+                    { from: 'AI Performer Manager', to: 'AI Marketing Promoter', content: '推广需求' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -27232,7 +27390,51 @@
             'AI Wedding Photographer': { icon: '💒', color: '#a855f7', role: 'AI婚礼摄影师' },
             'AI Product Photographer': { icon: '📦', color: '#22c55e', role: 'AI产品摄影师' },
             'AI Photo Editor': { icon: '🎞️', color: '#8b5cf6', role: 'AI照片修图师' },
-            'AI Album Designer': { icon: '📒', color: '#06b6d4', role: 'AI相册设计师' }
+            'AI Album Designer': { icon: '📒', color: '#06b6d4', role: 'AI相册设计师' },
+            // Cycle 423 新增角色 - AI智能保险服务
+            'AI Insurance Service Director': { icon: '🛡️', color: '#3b82f6', role: 'AI保险服务总监' },
+            'AI Policy Consultant': { icon: '📝', color: '#10b981', role: 'AI保单顾问' },
+            'AI Claims Adjuster': { icon: '⚖️', color: '#f97316', role: 'AI理赔员' },
+            'AI Underwriter': { icon: '📋', color: '#8b5cf6', role: 'AI核保员' },
+            'AI Risk Analyst': { icon: '⚠️', color: '#ef4444', role: 'AI风险分析师' },
+            // Cycle 423 新增角色 - AI智能物流服务
+            'AI Logistics Service Director': { icon: '🚚', color: '#f59e0b', role: 'AI物流服务总监' },
+            'AI Delivery Optimizer': { icon: '📦', color: '#22c55e', role: 'AI配送优化师' },
+            'AI Fleet Coordinator': { icon: '🚛', color: '#3b82f6', role: 'AI车队协调师' },
+            'AI Supply Chain Analyst': { icon: '🔗', color: '#8b5cf6', role: 'AI供应链分析师' },
+            // Cycle 423 新增角色 - AI智能环保服务
+            'AI Environmental Service Director': { icon: '🌿', color: '#10b981', role: 'AI环保服务总监' },
+            'AI Pollution Monitor': { icon: '🌫️', color: '#64748b', role: 'AI污染监测师' },
+            'AI Waste Manager': { icon: '♻️', color: '#22c55e', role: 'AI废物管理师' },
+            'AI Carbon Analyst': { icon: '🌍', color: '#3b82f6', role: 'AI碳分析师' },
+            'AI Sustainability Advisor': { icon: '🌱', color: '#10b981', role: 'AI可持续发展顾问' },
+            'AI Eco Inspector': { icon: '✅', color: '#06b6d4', role: 'AI生态检查员' },
+            // Cycle 423 新增角色 - AI智能安防服务
+            'AI Security Service Director': { icon: '🔐', color: '#dc2626', role: 'AI安防服务总监' },
+            'AI Surveillance Operator': { icon: '📹', color: '#64748b', role: 'AI监控操作员' },
+            'AI Access Control': { icon: '🔑', color: '#3b82f6', role: 'AI门禁管理师' },
+            'AI Alarm Response': { icon: '🚨', color: '#ef4444', role: 'AI报警响应员' },
+            'AI Emergency Coordinator': { icon: '🚑', color: '#f97316', role: 'AI应急协调员' },
+            // Cycle 423 新增角色 - AI智能财税服务
+            'AI Finance Tax Director': { icon: '💰', color: '#14b8a6', role: 'AI财税服务总监' },
+            'AI Tax Accountant': { icon: '📊', color: '#3b82f6', role: 'AI税务会计' },
+            'AI Bookkeeper': { icon: '📒', color: '#8b5cf6', role: 'AI记账员' },
+            'AI Financial Analyst': { icon: '📈', color: '#10b981', role: 'AI财务分析师' },
+            'AI Audit Assistant': { icon: '🔍', color: '#f97316', role: 'AI审计助理' },
+            'AI Payroll Manager': { icon: '💵', color: '#ec4899', role: 'AI薪资经理' },
+            // Cycle 423 新增角色 - AI智能人力资源服务
+            'AI HR Service Director': { icon: '👥', color: '#a855f7', role: 'AI人力资源总监' },
+            'AI Training Specialist': { icon: '📚', color: '#3b82f6', role: 'AI培训专员' },
+            'AI Performance Analyst': { icon: '📊', color: '#22c55e', role: 'AI绩效分析师' },
+            'AI Compensation Manager': { icon: '💰', color: '#f97316', role: 'AI薪酬经理' },
+            'AI Employee Relations': { icon: '🤝', color: '#ec4899', role: 'AI员工关系专员' },
+            // Cycle 423 新增角色 - AI智能文化娱乐服务
+            'AI Culture Entertainment Director': { icon: '🎭', color: '#ec4899', role: 'AI文化娱乐总监' },
+            'AI Event Planner': { icon: '🎪', color: '#f97316', role: 'AI活动策划师' },
+            'AI Performer Manager': { icon: '🌟', color: '#fbbf24', role: 'AI艺人经纪' },
+            'AI Venue Coordinator': { icon: '🏟️', color: '#3b82f6', role: 'AI场馆协调员' },
+            'AI Audience Analyst': { icon: '👥', color: '#8b5cf6', role: 'AI观众分析师' },
+            'AI Marketing Promoter': { icon: '📢', color: '#ef4444', role: 'AI营销推广员' }
         };
 
         // 拖拽相关变量
