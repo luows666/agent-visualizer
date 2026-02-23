@@ -22089,8 +22089,166 @@
             }
         ];
 
+        // Cycle 419 新增模板
+        const cycle419Templates = [
+            {
+                id: 'ai-energy-service',
+                name: 'AI智能能源服务系统',
+                icon: '⚡',
+                desc: '从能源管理到碳排放交易的完整能源服务流程',
+                agents: ['AI Energy Director', 'AI Grid Manager', 'AI Renewable Energy Specialist', 'AI Energy Trader', 'AI Carbon Analyst', 'AI Power Engineer'],
+                positions: [
+                    { role: 'AI Energy Director', x: 400, y: 30 },
+                    { role: 'AI Grid Manager', x: 150, y: 150 },
+                    { role: 'AI Renewable Energy Specialist', x: 650, y: 150 },
+                    { role: 'AI Energy Trader', x: 150, y: 270 },
+                    { role: 'AI Carbon Analyst', x: 400, y: 350 },
+                    { role: 'AI Power Engineer', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Energy Director', to: 'AI Grid Manager', content: '电网管理需求' },
+                    { from: 'AI Energy Director', to: 'AI Renewable Energy Specialist', content: '新能源需求' },
+                    { from: 'AI Grid Manager', to: 'AI Energy Trader', content: '能源交易需求' },
+                    { from: 'AI Renewable Energy Specialist', to: 'AI Carbon Analyst', content: '碳排放分析需求' },
+                    { from: 'AI Energy Trader', to: 'AI Power Engineer', content: '电力工程需求' }
+                ]
+            },
+            {
+                id: 'ai-real-estate-service',
+                name: 'AI智能房地产服务系统',
+                icon: '🏠',
+                desc: '从房产交易到物业管理的完整房地产服务流程',
+                agents: ['AI Real Estate Director', 'AI Property Valuer', 'AI Leasing Agent', 'AI Property Manager', 'AI Smart Building Engineer', 'AI Market Analyst'],
+                positions: [
+                    { role: 'AI Real Estate Director', x: 400, y: 30 },
+                    { role: 'AI Property Valuer', x: 150, y: 150 },
+                    { role: 'AI Leasing Agent', x: 650, y: 150 },
+                    { role: 'AI Property Manager', x: 150, y: 270 },
+                    { role: 'AI Smart Building Engineer', x: 400, y: 350 },
+                    { role: 'AI Market Analyst', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Real Estate Director', to: 'AI Property Valuer', content: '房产估值需求' },
+                    { from: 'AI Real Estate Director', to: 'AI Leasing Agent', content: '租赁需求' },
+                    { from: 'AI Property Valuer', to: 'AI Property Manager', content: '物业管理需求' },
+                    { from: 'AI Leasing Agent', to: 'AI Market Analyst', content: '市场分析需求' },
+                    { from: 'AI Property Manager', to: 'AI Smart Building Engineer', content: '智能建筑需求' }
+                ]
+            },
+            {
+                id: 'ai-agriculture-service',
+                name: 'AI智能农业服务系统',
+                icon: '🌾',
+                desc: '从智慧种植到农产品销售的完整农业服务流程',
+                agents: ['AI Agriculture Director', 'AI Crop Scientist', 'AI Farm Manager', 'AI Irrigation Specialist', 'AI Harvest Planner', 'AI AgriTrader'],
+                positions: [
+                    { role: 'AI Agriculture Director', x: 400, y: 30 },
+                    { role: 'AI Crop Scientist', x: 150, y: 150 },
+                    { role: 'AI Farm Manager', x: 650, y: 150 },
+                    { role: 'AI Irrigation Specialist', x: 150, y: 270 },
+                    { role: 'AI Harvest Planner', x: 400, y: 350 },
+                    { role: 'AI AgriTrader', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Agriculture Director', to: 'AI Crop Scientist', content: '作物科学需求' },
+                    { from: 'AI Agriculture Director', to: 'AI Farm Manager', content: '农场管理需求' },
+                    { from: 'AI Crop Scientist', to: 'AI Irrigation Specialist', content: '灌溉需求' },
+                    { from: 'AI Farm Manager', to: 'AI Harvest Planner', content: '收获计划需求' },
+                    { from: 'AI Irrigation Specialist', to: 'AI AgriTrader', content: '农产品交易需求' }
+                ]
+            },
+            {
+                id: 'ai-legal-service',
+                name: 'AI智能法律服务系统',
+                icon: '⚖️',
+                desc: '从合同审查到诉讼支持的完整法律服务流程',
+                agents: ['AI Legal Director', 'AI Contract Reviewer', 'AI Litigation Support', 'AI Compliance Officer', 'AI IP Attorney', 'AI Legal Researcher'],
+                positions: [
+                    { role: 'AI Legal Director', x: 400, y: 30 },
+                    { role: 'AI Contract Reviewer', x: 150, y: 150 },
+                    { role: 'AI Litigation Support', x: 650, y: 150 },
+                    { role: 'AI Compliance Officer', x: 150, y: 270 },
+                    { role: 'AI IP Attorney', x: 400, y: 350 },
+                    { role: 'AI Legal Researcher', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Legal Director', to: 'AI Contract Reviewer', content: '合同审查需求' },
+                    { from: 'AI Legal Director', to: 'AI Litigation Support', content: '诉讼支持需求' },
+                    { from: 'AI Contract Reviewer', to: 'AI Compliance Officer', content: '合规需求' },
+                    { from: 'AI Litigation Support', to: 'AI Legal Researcher', content: '法律研究需求' },
+                    { from: 'AI Compliance Officer', to: 'AI IP Attorney', content: '知识产权需求' }
+                ]
+            },
+            {
+                id: 'ai-hr-service',
+                name: 'AI智能人力资源服务系统',
+                icon: '👥',
+                desc: '从招聘到员工发展的完整人力资源服务流程',
+                agents: ['AI HR Director', 'AI Recruiter', 'AI Training Specialist', 'AI Performance Analyst', 'AI Compensation Manager', 'AI Employee Relations'],
+                positions: [
+                    { role: 'AI HR Director', x: 400, y: 30 },
+                    { role: 'AI Recruiter', x: 150, y: 150 },
+                    { role: 'AI Training Specialist', x: 650, y: 150 },
+                    { role: 'AI Performance Analyst', x: 150, y: 270 },
+                    { role: 'AI Compensation Manager', x: 400, y: 350 },
+                    { role: 'AI Employee Relations', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI HR Director', to: 'AI Recruiter', content: '招聘需求' },
+                    { from: 'AI HR Director', to: 'AI Training Specialist', content: '培训需求' },
+                    { from: 'AI Recruiter', to: 'AI Performance Analyst', content: '绩效分析需求' },
+                    { from: 'AI Training Specialist', to: 'AI Employee Relations', content: '员工关系需求' },
+                    { from: 'AI Performance Analyst', to: 'AI Compensation Manager', content: '薪酬需求' }
+                ]
+            },
+            {
+                id: 'ai-travel-service',
+                name: 'AI智能旅游服务系统',
+                icon: '✈️',
+                desc: '从行程规划到客户服务的完整旅游服务流程',
+                agents: ['AI Travel Director', 'AI Trip Planner', 'AI Hotel Booker', 'AI Transport Coordinator', 'AI Travel Guide', 'AI Concierge'],
+                positions: [
+                    { role: 'AI Travel Director', x: 400, y: 30 },
+                    { role: 'AI Trip Planner', x: 150, y: 150 },
+                    { role: 'AI Hotel Booker', x: 650, y: 150 },
+                    { role: 'AI Transport Coordinator', x: 150, y: 270 },
+                    { role: 'AI Travel Guide', x: 400, y: 350 },
+                    { role: 'AI Concierge', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Travel Director', to: 'AI Trip Planner', content: '行程规划需求' },
+                    { from: 'AI Travel Director', to: 'AI Hotel Booker', content: '酒店预订需求' },
+                    { from: 'AI Trip Planner', to: 'AI Transport Coordinator', content: '交通协调需求' },
+                    { from: 'AI Hotel Booker', to: 'AI Concierge', content: '礼宾服务需求' },
+                    { from: 'AI Transport Coordinator', to: 'AI Travel Guide', content: '导游需求' }
+                ]
+            },
+            {
+                id: 'ai-food-service',
+                name: 'AI智能餐饮服务系统',
+                icon: '🍽️',
+                desc: '从菜单设计到客户体验的完整餐饮服务流程',
+                agents: ['AI Food Director', 'AI Menu Designer', 'AI Kitchen Manager', 'AI Supplier Manager', 'AI Quality Inspector', 'AI Customer Experience'],
+                positions: [
+                    { role: 'AI Food Director', x: 400, y: 30 },
+                    { role: 'AI Menu Designer', x: 150, y: 150 },
+                    { role: 'AI Kitchen Manager', x: 650, y: 150 },
+                    { role: 'AI Supplier Manager', x: 150, y: 270 },
+                    { role: 'AI Quality Inspector', x: 400, y: 350 },
+                    { role: 'AI Customer Experience', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Food Director', to: 'AI Menu Designer', content: '菜单设计需求' },
+                    { from: 'AI Food Director', to: 'AI Kitchen Manager', content: '厨房管理需求' },
+                    { from: 'AI Menu Designer', to: 'AI Supplier Manager', content: '供应商需求' },
+                    { from: 'AI Kitchen Manager', to: 'AI Quality Inspector', content: '质量检查需求' },
+                    { from: 'AI Supplier Manager', to: 'AI Customer Experience', content: '客户体验需求' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -26411,7 +26569,56 @@
             'AI Equipment Maintenance': { icon: '🔧', color: '#f59e0b', role: 'AI设备维护工程师' },
             'AI Process Optimizer': { icon: '⚙️', color: '#8b5cf6', role: 'AI流程优化师' },
             'AI Production Planner': { icon: '📅', color: '#06b6d4', role: 'AI生产计划师' },
-            'AI Automation Engineer': { icon: '🤖', color: '#ec4899', role: 'AI自动化工程师' }
+            'AI Automation Engineer': { icon: '🤖', color: '#ec4899', role: 'AI自动化工程师' },
+            // Cycle 419 新增角色 - AI智能能源服务
+            'AI Energy Director': { icon: '⚡', color: '#fbbf24', role: 'AI能源总监' },
+            'AI Grid Manager': { icon: '🔌', color: '#3b82f6', role: 'AI电网经理' },
+            'AI Renewable Energy Specialist': { icon: '🌱', color: '#10b981', role: 'AI新能源专家' },
+            'AI Energy Trader': { icon: '📈', color: '#8b5cf6', role: 'AI能源交易员' },
+            'AI Carbon Analyst': { icon: '🌍', color: '#06b6d4', role: 'AI碳分析师' },
+            'AI Power Engineer': { icon: '⚡', color: '#f59e0b', role: 'AI电力工程师' },
+            // Cycle 419 新增角色 - AI智能房地产服务
+            'AI Real Estate Director': { icon: '🏠', color: '#f97316', role: 'AI房地产总监' },
+            'AI Property Valuer': { icon: '💵', color: '#22c55e', role: 'AI房产估价师' },
+            'AI Leasing Agent': { icon: '🔑', color: '#a855f7', role: 'AI租赁经纪人' },
+            'AI Property Manager': { icon: '🏢', color: '#ec4899', role: 'AI物业经理' },
+            'AI Smart Building Engineer': { icon: '🏗️', color: '#06b6d4', role: 'AI智能建筑工程师' },
+            'AI Market Analyst': { icon: '📊', color: '#14b8a6', role: 'AI市场分析师' },
+            // Cycle 419 新增角色 - AI智能农业服务
+            'AI Agriculture Director': { icon: '🌾', color: '#84cc16', role: 'AI农业总监' },
+            'AI Crop Scientist': { icon: '🌱', color: '#22c55e', role: 'AI作物科学家' },
+            'AI Farm Manager': { icon: '🚜', color: '#f59e0b', role: 'AI农场经理' },
+            'AI Irrigation Specialist': { icon: '💧', color: '#0ea5e9', role: 'AI灌溉专家' },
+            'AI Harvest Planner': { icon: '🌽', color: '#f97316', role: 'AI收获计划师' },
+            'AI AgriTrader': { icon: '📦', color: '#8b5cf6', role: 'AI农产品交易员' },
+            // Cycle 419 新增角色 - AI智能法律服务
+            'AI Legal Director': { icon: '⚖️', color: '#7c3aed', role: 'AI法律总监' },
+            'AI Contract Reviewer': { icon: '📄', color: '#3b82f6', role: 'AI合同审查员' },
+            'AI Litigation Support': { icon: '🏛️', color: '#ef4444', role: 'AI诉讼支持' },
+            'AI Compliance Officer': { icon: '✅', color: '#10b981', role: 'AI合规官' },
+            'AI IP Attorney': { icon: '💡', color: '#f59e0b', role: 'AI知识产权律师' },
+            'AI Legal Researcher': { icon: '🔍', color: '#a855f7', role: 'AI法律研究员' },
+            // Cycle 419 新增角色 - AI智能人力资源服务
+            'AI HR Director': { icon: '👥', color: '#ec4899', role: 'AI人力资源总监' },
+            'AI Recruiter': { icon: '🎯', color: '#f97316', role: 'AI招聘专员' },
+            'AI Training Specialist': { icon: '📚', color: '#8b5cf6', role: 'AI培训专家' },
+            'AI Performance Analyst': { icon: '📈', color: '#06b6d4', role: 'AI绩效分析师' },
+            'AI Compensation Manager': { icon: '💰', color: '#22c55e', role: 'AI薪酬经理' },
+            'AI Employee Relations': { icon: '🤝', color: '#14b8a6', role: 'AI员工关系专员' },
+            // Cycle 419 新增角色 - AI智能旅游服务
+            'AI Travel Director': { icon: '✈️', color: '#3b82f6', role: 'AI旅游总监' },
+            'AI Trip Planner': { icon: '🗺️', color: '#10b981', role: 'AI行程规划师' },
+            'AI Hotel Booker': { icon: '🏨', color: '#f97316', role: 'AI酒店预订员' },
+            'AI Transport Coordinator': { icon: '🚗', color: '#a855f7', role: 'AI交通协调员' },
+            'AI Travel Guide': { icon: '🗣️', color: '#ec4899', role: 'AI导游' },
+            'AI Concierge': { icon: '🎩', color: '#06b6d4', role: 'AI礼宾服务' },
+            // Cycle 419 新增角色 - AI智能餐饮服务
+            'AI Food Director': { icon: '🍽️', color: '#ef4444', role: 'AI餐饮总监' },
+            'AI Menu Designer': { icon: '📜', color: '#f59e0b', role: 'AI菜单设计师' },
+            'AI Kitchen Manager': { icon: '👨‍🍳', color: '#22c55e', role: 'AI厨房经理' },
+            'AI Supplier Manager': { icon: '📦', color: '#8b5cf6', role: 'AI供应商经理' },
+            'AI Quality Inspector': { icon: '🔍', color: '#14b8a6', role: 'AI质量检查员' },
+            'AI Customer Experience': { icon: '😊', color: '#ec4899', role: 'AI客户体验专员' }
         };
 
         // 拖拽相关变量
