@@ -14997,6 +14997,138 @@
                     { from: 'AI Signal Engineer', to: 'AI Station Manager', content: '站点运营配合' },
                     { from: 'AI Station Manager', to: 'AI Metro Operator', content: '运营反馈' }
                 ]
+            },
+            // Cycle 364 新增模板 - AI智能钢铁冶金系统
+            {
+                id: 'ai-steel-metallurgy',
+                name: 'AI智能钢铁冶金系统',
+                icon: '🏗️',
+                desc: '从钢铁冶炼到质量检测的完整钢铁冶金流程',
+                agents: ['AI Steel Metallurgist', 'AI Blast Furnace Operator', 'AI Steel Quality Inspector', 'AI Rolling Mill Engineer', 'AI Foundry Engineer'],
+                positions: [
+                    { role: 'AI Steel Metallurgist', x: 400, y: 50 },
+                    { role: 'AI Blast Furnace Operator', x: 200, y: 180 },
+                    { role: 'AI Steel Quality Inspector', x: 600, y: 180 },
+                    { role: 'AI Rolling Mill Engineer', x: 200, y: 310 },
+                    { role: 'AI Foundry Engineer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Steel Metallurgist', to: 'AI Blast Furnace Operator', content: '冶炼工艺需求' },
+                    { from: 'AI Blast Furnace Operator', to: 'AI Steel Quality Inspector', content: '冶炼质量数据' },
+                    { from: 'AI Steel Quality Inspector', to: 'AI Rolling Mill Engineer', content: '质量检测报告' },
+                    { from: 'AI Rolling Mill Engineer', to: 'AI Foundry Engineer', content: '轧制工艺要求' },
+                    { from: 'AI Foundry Engineer', to: 'AI Steel Metallurgist', content: '铸造工艺反馈' }
+                ]
+            },
+            // Cycle 364 新增模板 - AI智能烟草行业系统
+            {
+                id: 'ai-tobacco-industry',
+                name: 'AI智能烟草行业系统',
+                icon: '🍂',
+                desc: '从烟草种植到产品销售的完整烟草行业流程',
+                agents: ['AI Tobacco Engineer', 'AI Cigarette Designer', 'AI Tobacco Quality Expert', 'AI Tobacco Agronomist', 'AI Tobacco Sales Manager'],
+                positions: [
+                    { role: 'AI Tobacco Engineer', x: 400, y: 50 },
+                    { role: 'AI Cigarette Designer', x: 200, y: 180 },
+                    { role: 'AI Tobacco Quality Expert', x: 600, y: 180 },
+                    { role: 'AI Tobacco Agronomist', x: 200, y: 310 },
+                    { role: 'AI Tobacco Sales Manager', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Tobacco Engineer', to: 'AI Tobacco Agronomist', content: '原料需求' },
+                    { from: 'AI Tobacco Agronomist', to: 'AI Cigarette Designer', content: '烟草原料数据' },
+                    { from: 'AI Cigarette Designer', to: 'AI Tobacco Quality Expert', content: '产品设计方案' },
+                    { from: 'AI Tobacco Quality Expert', to: 'AI Tobacco Sales Manager', content: '质量检测报告' },
+                    { from: 'AI Tobacco Sales Manager', to: 'AI Tobacco Engineer', content: '市场反馈' }
+                ]
+            },
+            // Cycle 364 新增模板 - AI智能造纸印刷系统
+            {
+                id: 'ai-paper-printing',
+                name: 'AI智能造纸印刷系统',
+                icon: '📜',
+                desc: '从造纸到印刷的完整造纸印刷流程',
+                agents: ['AI Paper Engineer', 'AI Pulp Specialist', 'AI Paper Quality Controller', 'AI Printing Engineer', 'AI Packaging Designer'],
+                positions: [
+                    { role: 'AI Paper Engineer', x: 400, y: 50 },
+                    { role: 'AI Pulp Specialist', x: 200, y: 180 },
+                    { role: 'AI Paper Quality Controller', x: 600, y: 180 },
+                    { role: 'AI Printing Engineer', x: 200, y: 310 },
+                    { role: 'AI Packaging Designer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Paper Engineer', to: 'AI Pulp Specialist', content: '纸张生产需求' },
+                    { from: 'AI Pulp Specialist', to: 'AI Paper Quality Controller', content: '纸浆质量数据' },
+                    { from: 'AI Paper Quality Controller', to: 'AI Printing Engineer', content: '质量检测报告' },
+                    { from: 'AI Printing Engineer', to: 'AI Packaging Designer', content: '印刷工艺要求' },
+                    { from: 'AI Packaging Designer', to: 'AI Paper Engineer', content: '包装设计方案' }
+                ]
+            },
+            // Cycle 364 新增模板 - AI智能电梯制造系统
+            {
+                id: 'ai-elevator-manufacturing',
+                name: 'AI智能电梯制造系统',
+                icon: '🏢',
+                desc: '从电梯设计到安装维护的完整电梯制造流程',
+                agents: ['AI Elevator Designer', 'AI Elevator Control Engineer', 'AI Elevator Safety Inspector', 'AI Elevator Maintenance', 'AI Elevator Test Engineer'],
+                positions: [
+                    { role: 'AI Elevator Designer', x: 400, y: 50 },
+                    { role: 'AI Elevator Control Engineer', x: 200, y: 180 },
+                    { role: 'AI Elevator Safety Inspector', x: 600, y: 180 },
+                    { role: 'AI Elevator Maintenance', x: 200, y: 310 },
+                    { role: 'AI Elevator Test Engineer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Elevator Designer', to: 'AI Elevator Control Engineer', content: '设计需求' },
+                    { from: 'AI Elevator Control Engineer', to: 'AI Elevator Safety Inspector', content: '控制系统方案' },
+                    { from: 'AI Elevator Safety Inspector', to: 'AI Elevator Test Engineer', content: '安全检测报告' },
+                    { from: 'AI Elevator Test Engineer', to: 'AI Elevator Maintenance', content: '测试结果' },
+                    { from: 'AI Elevator Maintenance', to: 'AI Elevator Designer', content: '维护反馈' }
+                ]
+            },
+            // Cycle 364 新增模板 - AI智能游乐设施系统
+            {
+                id: 'ai-amusement-facilities',
+                name: 'AI智能游乐设施系统',
+                icon: '🎢',
+                desc: '从设施设计到安全运营的完整游乐设施流程',
+                agents: ['AI Amusement Designer', 'AI Ride Engineer', 'AI Theme Park Manager', 'AI Safety Inspection', 'AI Ride Operator'],
+                positions: [
+                    { role: 'AI Amusement Designer', x: 400, y: 50 },
+                    { role: 'AI Ride Engineer', x: 200, y: 180 },
+                    { role: 'AI Theme Park Manager', x: 600, y: 180 },
+                    { role: 'AI Safety Inspection', x: 200, y: 310 },
+                    { role: 'AI Ride Operator', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Amusement Designer', to: 'AI Ride Engineer', content: '设计需求' },
+                    { from: 'AI Ride Engineer', to: 'AI Safety Inspection', content: '设施技术参数' },
+                    { from: 'AI Safety Inspection', to: 'AI Theme Park Manager', content: '安全检测报告' },
+                    { from: 'AI Theme Park Manager', to: 'AI Ride Operator', content: '运营要求' },
+                    { from: 'AI Ride Operator', to: 'AI Amusement Designer', content: '运营反馈' }
+                ]
+            },
+            // Cycle 364 新增模板 - AI智能体育场馆系统
+            {
+                id: 'ai-stadium-venues',
+                name: 'AI智能体育场馆系统',
+                icon: '🏟️',
+                desc: '从场馆管理到赛事运营的完整体育场馆流程',
+                agents: ['AI Stadium Manager', 'AI Event Scheduler', 'AI Stadium Security', 'AI Stadium Operations', 'AI Venue Sales'],
+                positions: [
+                    { role: 'AI Stadium Manager', x: 400, y: 50 },
+                    { role: 'AI Event Scheduler', x: 200, y: 180 },
+                    { role: 'AI Stadium Security', x: 600, y: 180 },
+                    { role: 'AI Stadium Operations', x: 200, y: 310 },
+                    { role: 'AI Venue Sales', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Stadium Manager', to: 'AI Event Scheduler', content: '运营规划' },
+                    { from: 'AI Event Scheduler', to: 'AI Stadium Operations', content: '赛事安排' },
+                    { from: 'AI Stadium Operations', to: 'AI Stadium Security', content: '运营需求' },
+                    { from: 'AI Stadium Security', to: 'AI Venue Sales', content: '安保方案' },
+                    { from: 'AI Venue Sales', to: 'AI Stadium Manager', content: '销售报告' }
+                ]
             }
         ];
 
@@ -17137,7 +17269,48 @@
             'AI Nanomaterials Engineer': { icon: '⚛️', color: '#06b6d4', role: 'AI纳米材料工程师' },
             'AI Polymer Engineer': { icon: '🧪', color: '#ec4899', role: 'AI高分子材料工程师' },
             'AI Metallurgist': { icon: '⚙️', color: '#64748b', role: 'AI冶金工程师' },
-            'AI Ceramic Engineer': { icon: '🏺', color: '#f59e0b', role: 'AI陶瓷工程师' }
+            'AI Ceramic Engineer': { icon: '🏺', color: '#f59e0b', role: 'AI陶瓷工程师' },
+            // Cycle 364 新增角色 - AI 智能钢铁冶金
+            'AI Steel Metallurgist': { icon: '🏗️', color: '#dc2626', role: 'AI钢铁冶金工程师' },
+            'AI Blast Furnace Operator': { icon: '🔥', color: '#f97316', role: 'AI高炉操作员' },
+            'AI Steel Quality Inspector': { icon: '✅', color: '#22c55e', role: 'AI钢铁质检员' },
+            'AI Rolling Mill Engineer': { icon: '⚙️', color: '#64748b', role: 'AI轧钢工程师' },
+            'AI Foundry Engineer': { icon: '⚙️', color: '#8b5cf6', role: 'AI铸造工程师' },
+            'AI Heat Treatment Specialist': { icon: '🌡️', color: '#ef4444', role: 'AI热处理专家' },
+            'AI Steel Sales Manager': { icon: '📊', color: '#3b82f6', role: 'AI钢铁销售经理' },
+            // Cycle 364 新增角色 - AI 智能烟草行业
+            'AI Tobacco Engineer': { icon: '🍂', color: '#84cc16', role: 'AI烟草工程师' },
+            'AI Cigarette Designer': { icon: '🚬', color: '#f59e0b', role: 'AI香烟设计师' },
+            'AI Tobacco Quality Expert': { icon: '🔬', color: '#10b981', role: 'AI烟草质量专家' },
+            'AI Tobacco Agronomist': { icon: '🌱', color: '#22c55e', role: 'AI烟草农艺师' },
+            'AI Tobacco Sales Manager': { icon: '💼', color: '#6366f1', role: 'AI烟草销售经理' },
+            // Cycle 364 新增角色 - AI 智能造纸印刷
+            'AI Paper Engineer': { icon: '📜', color: '#f5f3ff', role: 'AI造纸工程师' },
+            'AI Pulp Specialist': { icon: '🧱', color: '#a78bfa', role: 'AI纸浆专家' },
+            'AI Paper Quality Controller': { icon: '📋', color: '#8b5cf6', role: 'AI纸张质量控制员' },
+            'AI Printing Engineer': { icon: '🖨️', color: '#06b6d4', role: 'AI印刷工程师' },
+            'AI Packaging Designer': { icon: '📦', color: '#f59e0b', role: 'AI包装设计师' },
+            'AI Paper Sales Manager': { icon: '💰', color: '#22c55e', role: 'AI纸张销售经理' },
+            // Cycle 364 新增角色 - AI 智能电梯制造
+            'AI Elevator Designer': { icon: '🏢', color: '#64748b', role: 'AI电梯设计师' },
+            'AI Elevator Control Engineer': { icon: '🎛️', color: '#3b82f6', role: 'AI电梯控制工程师' },
+            'AI Elevator Safety Inspector': { icon: '🛡️', color: '#ef4444', role: 'AI电梯安全检查员' },
+            'AI Elevator Maintenance': { icon: '🔧', color: '#f97316', role: 'AI电梯维护工程师' },
+            'AI Elevator Test Engineer': { icon: '🧪', color: '#8b5cf6', role: 'AI电梯测试工程师' },
+            'AI Elevator Sales Manager': { icon: '📈', color: '#06b6d4', role: 'AI电梯销售经理' },
+            // Cycle 364 新增角色 - AI 智能游乐设施
+            'AI Amusement Designer': { icon: '🎢', color: '#ec4899', role: 'AI游乐设施设计师' },
+            'AI Ride Engineer': { icon: '🎠', color: '#f59e0b', role: 'AI游乐设施工程师' },
+            'AI Theme Park Manager': { icon: '🏰', color: '#8b5cf6', role: 'AI主题公园经理' },
+            'AI Safety Inspection': { icon: '✅', color: '#22c55e', role: 'AI安全检查员' },
+            'AI Ride Operator': { icon: '🎪', color: '#06b6d4', role: 'AI游乐设施操作员' },
+            'AI Park Entertainment': { icon: '🎭', color: '#f97316', role: 'AI公园娱乐策划' },
+            // Cycle 364 新增角色 - AI 智能体育场馆
+            'AI Stadium Manager': { icon: '🏟️', color: '#3b82f6', role: 'AI体育场馆经理' },
+            'AI Event Scheduler': { icon: '📅', color: '#8b5cf6', role: 'AI赛事排程师' },
+            'AI Stadium Security': { icon: '🔒', color: '#ef4444', role: 'AI场馆安保经理' },
+            'AI Stadium Operations': { icon: '⚙️', color: '#64748b', role: 'AI场馆运营师' },
+            'AI Venue Sales': { icon: '💵', color: '#22c55e', role: 'AI场馆销售经理' }
         };
 
         // 拖拽相关变量
