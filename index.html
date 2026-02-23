@@ -23834,8 +23834,173 @@
             }
         ];
 
+        // Cycle 430 新增行业服务系统模板
+        const cycle430Templates = [
+            // AI智能打印复印服务系统
+            {
+                id: 'ai-print-copy-service',
+                name: 'AI智能打印复印服务系统',
+                icon: '🖨️',
+                desc: '从订单接收到文件交付的完整打印复印服务流程',
+                agents: ['AI Print Shop Manager', 'AI Order Reception', 'AI Document Editor', 'AI Print Technician', 'AI Binding Specialist', 'AI Delivery Coordinator'],
+                positions: [
+                    { role: 'AI Print Shop Manager', x: 400, y: 30 },
+                    { role: 'AI Order Reception', x: 150, y: 150 },
+                    { role: 'AI Document Editor', x: 650, y: 150 },
+                    { role: 'AI Print Technician', x: 150, y: 300 },
+                    { role: 'AI Binding Specialist', x: 400, y: 350 },
+                    { role: 'AI Delivery Coordinator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Print Shop Manager', to: 'AI Order Reception', content: '订单需求' },
+                    { from: 'AI Print Shop Manager', to: 'AI Document Editor', content: '文档处理' },
+                    { from: 'AI Order Reception', to: 'AI Print Technician', content: '打印任务' },
+                    { from: 'AI Document Editor', to: 'AI Binding Specialist', content: '装订需求' },
+                    { from: 'AI Binding Specialist', to: 'AI Delivery Coordinator', content: '配送安排' }
+                ]
+            },
+            // AI智能花店管理系统
+            {
+                id: 'ai-florist-service',
+                name: 'AI智能花店管理系统',
+                icon: '💐',
+                desc: '从订单接收到鲜花配送的完整花店服务流程',
+                agents: ['AI Florist Owner', 'AI Flower Consultant', 'AI Arrangement Artist', 'AI Inventory Manager', 'AI Delivery Driver', 'AI Event Planner'],
+                positions: [
+                    { role: 'AI Florist Owner', x: 400, y: 30 },
+                    { role: 'AI Flower Consultant', x: 150, y: 150 },
+                    { role: 'AI Arrangement Artist', x: 650, y: 150 },
+                    { role: 'AI Inventory Manager', x: 150, y: 300 },
+                    { role: 'AI Delivery Driver', x: 400, y: 350 },
+                    { role: 'AI Event Planner', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Florist Owner', to: 'AI Flower Consultant', content: '客户需求' },
+                    { from: 'AI Florist Owner', to: 'AI Event Planner', content: '活动策划' },
+                    { from: 'AI Flower Consultant', to: 'AI Arrangement Artist', content: '花艺设计' },
+                    { from: 'AI Arrangement Artist', to: 'AI Inventory Manager', content: '花材需求' },
+                    { from: 'AI Inventory Manager', to: 'AI Delivery Driver', content: '配送任务' }
+                ]
+            },
+            // AI智能文具店管理系统
+            {
+                id: 'ai-stationery-store',
+                name: 'AI智能文具店管理系统',
+                icon: '✏️',
+                desc: '从顾客咨询到商品销售的完整文具店服务流程',
+                agents: ['AI Store Manager', 'AI Product Consultant', 'AI Inventory Clerk', 'AI Cashier', 'AI Procurement Agent', 'AI Display Designer'],
+                positions: [
+                    { role: 'AI Store Manager', x: 400, y: 30 },
+                    { role: 'AI Product Consultant', x: 150, y: 150 },
+                    { role: 'AI Inventory Clerk', x: 650, y: 150 },
+                    { role: 'AI Cashier', x: 150, y: 300 },
+                    { role: 'AI Procurement Agent', x: 400, y: 350 },
+                    { role: 'AI Display Designer', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Store Manager', to: 'AI Product Consultant', content: '销售需求' },
+                    { from: 'AI Store Manager', to: 'AI Display Designer', content: '陈列设计' },
+                    { from: 'AI Product Consultant', to: 'AI Cashier', content: '收银安排' },
+                    { from: 'AI Cashier', to: 'AI Inventory Clerk', content: '库存查询' },
+                    { from: 'AI Inventory Clerk', to: 'AI Procurement Agent', content: '补货需求' }
+                ]
+            },
+            // AI智能茶饮店管理系统
+            {
+                id: 'ai-bubble-tea-service',
+                name: 'AI智能茶饮店管理系统',
+                icon: '🧋',
+                desc: '从点单到制作的完整茶饮店服务流程',
+                agents: ['AI Tea Shop Manager', 'AI Order Taker', 'AI Beverage Maker', 'AI Ingredient Manager', 'AI Quality Tester', 'AI Loyalty Manager'],
+                positions: [
+                    { role: 'AI Tea Shop Manager', x: 400, y: 30 },
+                    { role: 'AI Order Taker', x: 150, y: 150 },
+                    { role: 'AI Beverage Maker', x: 650, y: 150 },
+                    { role: 'AI Ingredient Manager', x: 150, y: 300 },
+                    { role: 'AI Quality Tester', x: 400, y: 350 },
+                    { role: 'AI Loyalty Manager', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Tea Shop Manager', to: 'AI Order Taker', content: '点单需求' },
+                    { from: 'AI Tea Shop Manager', to: 'AI Loyalty Manager', content: '会员管理' },
+                    { from: 'AI Order Taker', to: 'AI Beverage Maker', content: '制作任务' },
+                    { from: 'AI Beverage Maker', to: 'AI Ingredient Manager', content: '原料需求' },
+                    { from: 'AI Quality Tester', to: 'AI Loyalty Manager', content: '会员积分' }
+                ]
+            },
+            // AI智能批发配送服务系统
+            {
+                id: 'ai-wholesale-delivery',
+                name: 'AI智能批发配送服务系统',
+                icon: '🚚',
+                desc: '从订单处理到物流配送的完整批发服务流程',
+                agents: ['AI Wholesale Manager', 'AI Order Processor', 'AI Warehouse Operator', 'AI Logistics Coordinator', 'AI Fleet Manager', 'AI Account Manager'],
+                positions: [
+                    { role: 'AI Wholesale Manager', x: 400, y: 30 },
+                    { role: 'AI Order Processor', x: 150, y: 150 },
+                    { role: 'AI Warehouse Operator', x: 650, y: 150 },
+                    { role: 'AI Logistics Coordinator', x: 150, y: 300 },
+                    { role: 'AI Fleet Manager', x: 400, y: 350 },
+                    { role: 'AI Account Manager', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Wholesale Manager', to: 'AI Order Processor', content: '订单处理' },
+                    { from: 'AI Wholesale Manager', to: 'AI Account Manager', content: '客户管理' },
+                    { from: 'AI Order Processor', to: 'AI Warehouse Operator', content: '备货需求' },
+                    { from: 'AI Warehouse Operator', to: 'AI Logistics Coordinator', content: '物流安排' },
+                    { from: 'AI Logistics Coordinator', to: 'AI Fleet Manager', content: '车队调度' }
+                ]
+            },
+            // AI智能宠物美容服务系统
+            {
+                id: 'ai-pet-grooming-service',
+                name: 'AI智能宠物美容服务系统',
+                icon: '🐩',
+                desc: '从预约到美容完成的完整宠物美容服务流程',
+                agents: ['AI Pet Grooming Manager', 'AI Pet Receptionist', 'AI Groomer', 'AI Pet Stylist', 'AI Nail Technician', 'AI Spa Attendant'],
+                positions: [
+                    { role: 'AI Pet Grooming Manager', x: 400, y: 30 },
+                    { role: 'AI Pet Receptionist', x: 150, y: 150 },
+                    { role: 'AI Pet Stylist', x: 650, y: 150 },
+                    { role: 'AI Groomer', x: 150, y: 300 },
+                    { role: 'AI Nail Technician', x: 400, y: 350 },
+                    { role: 'AI Spa Attendant', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Pet Grooming Manager', to: 'AI Pet Receptionist', content: '预约需求' },
+                    { from: 'AI Pet Grooming Manager', to: 'AI Spa Attendant', content: 'SPA安排' },
+                    { from: 'AI Pet Receptionist', to: 'AI Groomer', content: '美容任务' },
+                    { from: 'AI Groomer', to: 'AI Pet Stylist', content: '造型设计' },
+                    { from: 'AI Pet Stylist', to: 'AI Nail Technician', content: '美甲服务' }
+                ]
+            },
+            // AI智能烘焙店管理系统
+            {
+                id: 'ai-bakery-service',
+                name: 'AI智能烘焙店管理系统',
+                icon: '🍰',
+                desc: '从订单到烘焙出品的完整烘焙店服务流程',
+                agents: ['AI Bakery Owner', 'AI Pastry Chef', 'AI Cake Designer', 'AI Baking Technician', 'AI Quality Controller', 'AI Sales Associate'],
+                positions: [
+                    { role: 'AI Bakery Owner', x: 400, y: 30 },
+                    { role: 'AI Pastry Chef', x: 150, y: 150 },
+                    { role: 'AI Cake Designer', x: 650, y: 150 },
+                    { role: 'AI Baking Technician', x: 150, y: 300 },
+                    { role: 'AI Quality Controller', x: 400, y: 350 },
+                    { role: 'AI Sales Associate', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Bakery Owner', to: 'AI Pastry Chef', content: '烘焙需求' },
+                    { from: 'AI Bakery Owner', to: 'AI Sales Associate', content: '销售任务' },
+                    { from: 'AI Pastry Chef', to: 'AI Baking Technician', content: '制作安排' },
+                    { from: 'AI Cake Designer', to: 'AI Quality Controller', content: '质检需求' },
+                    { from: 'AI Quality Controller', to: 'AI Sales Associate', content: '上架安排' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -28678,7 +28843,54 @@
             'AI Maid Supervisor': { icon: '👩‍🍳', color: '#10b981', role: 'AI保姆主管' },
             'AI Cleaner': { icon: '🧽', color: '#ec4899', role: 'AI清洁员' },
             'AI Cook': { icon: '🍳', color: '#f59e0b', role: 'AI厨师' },
-            'AI Elderly Caregiver': { icon: '👴', color: '#8b5cf6', role: 'AI养老护理员' }
+            'AI Elderly Caregiver': { icon: '👴', color: '#8b5cf6', role: 'AI养老护理员' },
+            // Cycle 430 新增角色 - 7个行业服务系统
+            // AI智能打印复印服务系统
+            'AI Print Shop Manager': { icon: '🖨️', color: '#3b82f6', role: 'AI打印店经理' },
+            'AI Order Reception': { icon: '📋', color: '#10b981', role: 'AI订单接待员' },
+            'AI Document Editor': { icon: '📝', color: '#f59e0b', role: 'AI文档编辑员' },
+            'AI Print Technician': { icon: '🖌️', color: '#ec4899', role: 'AI打印技术员' },
+            'AI Binding Specialist': { icon: '📒', color: '#8b5cf6', role: 'AI装订专员' },
+            'AI Delivery Coordinator': { icon: '🚗', color: '#06b6d4', role: 'AI配送协调员' },
+            // AI智能花店管理系统
+            'AI Florist Owner': { icon: '💐', color: '#f43f5e', role: 'AI花店老板' },
+            'AI Flower Consultant': { icon: '🌸', color: '#ec4899', role: 'AI花艺顾问' },
+            'AI Arrangement Artist': { icon: '💐', color: '#8b5cf6', role: 'AI插花艺术家' },
+            'AI Inventory Manager': { icon: '📦', color: '#f59e0b', role: 'AI库存管理员' },
+            'AI Event Planner': { icon: '🎉', color: '#3b82f6', role: 'AI活动策划师' },
+            // AI智能文具店管理系统
+            'AI Store Manager': { icon: '🏪', color: '#14b8a6', role: 'AI店长' },
+            'AI Product Consultant': { icon: '💡', color: '#f97316', role: 'AI产品顾问' },
+            'AI Inventory Clerk': { icon: '📊', color: '#06b6d4', role: 'AI理货员' },
+            'AI Cashier': { icon: '💵', color: '#84cc16', role: 'AI收银员' },
+            'AI Procurement Agent': { icon: '🛒', color: '#a855f7', role: 'AI采购员' },
+            'AI Display Designer': { icon: '🎨', color: '#ec4899', role: 'AI陈列设计师' },
+            // AI智能茶饮店管理系统
+            'AI Tea Shop Manager': { icon: '🧋', color: '#f59e0b', role: 'AI茶饮店经理' },
+            'AI Order Taker': { icon: '📱', color: '#3b82f6', role: 'AI点单员' },
+            'AI Beverage Maker': { icon: '🥤', color: '#10b981', role: 'AI饮品制作师' },
+            'AI Ingredient Manager': { icon: '🍵', color: '#8b5cf6', role: 'AI原料管理员' },
+            'AI Quality Tester': { icon: '🔬', color: '#06b6d4', role: 'AI品控员' },
+            'AI Loyalty Manager': { icon: '💳', color: '#f43f5e', role: 'AI会员管理员' },
+            // AI智能批发配送服务系统
+            'AI Wholesale Manager': { icon: '🏭', color: '#64748b', role: 'AI批发经理' },
+            'AI Order Processor': { icon: '📋', color: '#3b82f6', role: 'AI订单处理员' },
+            'AI Warehouse Operator': { icon: '🏚️', color: '#f59e0b', role: 'AI仓库操作员' },
+            'AI Logistics Coordinator': { icon: '🚚', color: '#10b981', role: 'AI物流协调员' },
+            'AI Fleet Manager': { icon: '🚛', color: '#ec4899', role: 'AI车队经理' },
+            'AI Account Manager': { icon: '👔', color: '#8b5cf6', role: 'AI客户经理' },
+            // AI智能宠物美容服务系统
+            'AI Pet Grooming Manager': { icon: '🐩', color: '#f97316', role: 'AI宠物美容经理' },
+            'AI Pet Stylist': { icon: '💇', color: '#ec4899', role: 'AI宠物造型师' },
+            'AI Nail Technician': { icon: '💅', color: '#8b5cf6', role: 'AI美甲师' },
+            'AI Spa Attendant': { icon: '🛁', color: '#06b6d4', role: 'AI美容助理' },
+            // AI智能烘焙店管理系统
+            'AI Bakery Owner': { icon: '🍰', color: '#f59e0b', role: 'AI烘焙店老板' },
+            'AI Pastry Chef': { icon: '🥐', color: '#ec4899', role: 'AI糕点厨师' },
+            'AI Cake Designer': { icon: '🎂', color: '#8b5cf6', role: 'AI蛋糕设计师' },
+            'AI Baking Technician': { icon: '🔥', color: '#f43f5e', role: 'AI烘焙技师' },
+            'AI Quality Controller': { icon: '✅', color: '#10b981', role: 'AI品控员' },
+            'AI Sales Associate': { icon: '🛍️', color: '#3b82f6', role: 'AI销售员' }
         };
 
         // 拖拽相关变量
