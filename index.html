@@ -16977,6 +16977,138 @@
                     { from: 'AI Urban Manager', to: 'AI Policy Advisor', content: '城市管理报告' },
                     { from: 'AI Emergency Planner', to: 'AI Urban Manager', content: '应急预案' }
                 ]
+            },
+            // Cycle 379 新增模板 - AI智能量子计算系统
+            {
+                id: 'ai-quantum-computing',
+                name: 'AI智能量子计算系统',
+                icon: '⚛️',
+                desc: '从量子算法研究到量子计算的完整量子计算流程',
+                agents: ['AI Quantum Computing', 'AI Quantum Scientist', 'AI Quantum Cryptographer', 'AI Brain Computer Interface', 'AI Neural Interface'],
+                positions: [
+                    { role: 'AI Quantum Computing', x: 400, y: 50 },
+                    { role: 'AI Quantum Scientist', x: 200, y: 180 },
+                    { role: 'AI Quantum Cryptographer', x: 600, y: 180 },
+                    { role: 'AI Brain Computer Interface', x: 200, y: 310 },
+                    { role: 'AI Neural Interface', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Quantum Computing', to: 'AI Quantum Scientist', content: '量子算法研究' },
+                    { from: 'AI Quantum Scientist', to: 'AI Quantum Computing', content: '算法优化建议' },
+                    { from: 'AI Quantum Cryptographer', to: 'AI Quantum Computing', content: '密码学研究' },
+                    { from: 'AI Brain Computer Interface', to: 'AI Neural Interface', content: '脑机接口设计' },
+                    { from: 'AI Neural Interface', to: 'AI Quantum Computing', content: '接口测试报告' }
+                ]
+            },
+            // Cycle 379 新增模板 - AI智能合成生物系统
+            {
+                id: 'ai-synthetic-biology',
+                name: 'AI智能合成生物系统',
+                icon: '🧬',
+                desc: '从基因设计到生物合成的完整合成生物流程',
+                agents: ['AI Synthetic Biology', 'AI Gene Editor', 'AI CRISPR Engineer', 'AI Bioprinting', 'AI 6G Architect'],
+                positions: [
+                    { role: 'AI Synthetic Biology', x: 400, y: 50 },
+                    { role: 'AI Gene Editor', x: 200, y: 180 },
+                    { role: 'AI CRISPR Engineer', x: 600, y: 180 },
+                    { role: 'AI Bioprinting', x: 200, y: 310 },
+                    { role: 'AI 6G Architect', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Synthetic Biology', to: 'AI Gene Editor', content: '基因设计方案' },
+                    { from: 'AI Gene Editor', to: 'AI CRISPR Engineer', content: 'CRISPR编辑方案' },
+                    { from: 'AI CRISPR Engineer', to: 'AI Synthetic Biology', content: '编辑结果反馈' },
+                    { from: 'AI Bioprinting', to: 'AI Gene Editor', content: '生物打印需求' },
+                    { from: 'AI 6G Architect', to: 'AI Synthetic Biology', content: '生物数据传输' }
+                ]
+            },
+            // Cycle 379 新增模板 - AI智能脑机接口系统
+            {
+                id: 'ai-brain-computer',
+                name: 'AI智能脑机接口系统',
+                icon: '🧠',
+                desc: '从神经信号到脑机交互的完整脑机接口流程',
+                agents: ['AI Brain Computer Interface', 'AI Neural Interface', 'AI Quantum Scientist', 'AI Synthetic Biology', 'AI Bioprinting'],
+                positions: [
+                    { role: 'AI Brain Computer Interface', x: 400, y: 50 },
+                    { role: 'AI Neural Interface', x: 200, y: 180 },
+                    { role: 'AI Quantum Scientist', x: 600, y: 180 },
+                    { role: 'AI Synthetic Biology', x: 200, y: 310 },
+                    { role: 'AI Bioprinting', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Brain Computer Interface', to: 'AI Neural Interface', content: '神经信号采集' },
+                    { from: 'AI Neural Interface', to: 'AI Brain Computer Interface', content: '信号处理结果' },
+                    { from: 'AI Quantum Scientist', to: 'AI Neural Interface', content: '量子计算支持' },
+                    { from: 'AI Synthetic Biology', to: 'AI Bioprinting', content: '生物材料需求' },
+                    { from: 'AI Bioprinting', to: 'AI Neural Interface', content: '生物接口打印' }
+                ]
+            },
+            // Cycle 379 新增模板 - AI智能太空探索系统
+            {
+                id: 'ai-space-exploration',
+                name: 'AI智能太空探索系统',
+                icon: '🚀',
+                desc: '从太空任务到星际探索的完整太空探索流程',
+                agents: ['AI Quantum Computing', 'AI Brain Computer Interface', 'AI Synthetic Biology', 'AI 6G Architect', 'AI Quantum Scientist'],
+                positions: [
+                    { role: 'AI Quantum Computing', x: 400, y: 50 },
+                    { role: 'AI Brain Computer Interface', x: 200, y: 180 },
+                    { role: 'AI Synthetic Biology', x: 600, y: 180 },
+                    { role: 'AI 6G Architect', x: 200, y: 310 },
+                    { role: 'AI Quantum Scientist', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Quantum Computing', to: 'AI Quantum Scientist', content: '量子通信研究' },
+                    { from: 'AI Quantum Scientist', to: 'AI 6G Architect', content: '通信协议设计' },
+                    { from: 'AI Brain Computer Interface', to: 'AI Synthetic Biology', content: '太空人生物研究' },
+                    { from: 'AI Synthetic Biology', to: 'AI Brain Computer Interface', content: '生物反馈' },
+                    { from: 'AI 6G Architect', to: 'AI Quantum Computing', content: '网络架构方案' }
+                ]
+            },
+            // Cycle 379 新增模板 - AI智能6G通信系统
+            {
+                id: 'ai-6g-communication',
+                name: 'AI智能6G通信系统',
+                icon: '📡',
+                desc: '从6G标准到网络部署的完整6G通信流程',
+                agents: ['AI 6G Architect', 'AI Quantum Cryptographer', 'AI Quantum Computing', 'AI Neural Interface', 'AI Brain Computer Interface'],
+                positions: [
+                    { role: 'AI 6G Architect', x: 400, y: 50 },
+                    { role: 'AI Quantum Cryptographer', x: 200, y: 180 },
+                    { role: 'AI Quantum Computing', x: 600, y: 180 },
+                    { role: 'AI Neural Interface', x: 200, y: 310 },
+                    { role: 'AI Brain Computer Interface', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI 6G Architect', to: 'AI Quantum Cryptographer', content: '安全协议设计' },
+                    { from: 'AI Quantum Cryptographer', to: 'AI Quantum Computing', content: '加密算法实现' },
+                    { from: 'AI Quantum Computing', to: 'AI 6G Architect', content: '性能优化建议' },
+                    { from: 'AI Neural Interface', to: 'AI Brain Computer Interface', content: '神经通信需求' },
+                    { from: 'AI Brain Computer Interface', to: 'AI 6G Architect', content: '通信接口设计' }
+                ]
+            },
+            // Cycle 379 新增模板 - AI智能新能源系统
+            {
+                id: 'ai-new-energy',
+                name: 'AI智能新能源系统',
+                icon: '🌞',
+                desc: '从新能源研发到能源管理的完整新能源流程',
+                agents: ['AI Energy Auditor', 'AI Carbon Footprint', 'AI Energy Efficiency Expert', 'AI Renewable Energy Advisor', 'AI Utility Bill Analyzer'],
+                positions: [
+                    { role: 'AI Energy Auditor', x: 400, y: 50 },
+                    { role: 'AI Carbon Footprint', x: 200, y: 180 },
+                    { role: 'AI Energy Efficiency Expert', x: 600, y: 180 },
+                    { role: 'AI Renewable Energy Advisor', x: 200, y: 310 },
+                    { role: 'AI Utility Bill Analyzer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Energy Auditor', to: 'AI Carbon Footprint', content: '能源审计需求' },
+                    { from: 'AI Carbon Footprint', to: 'AI Energy Auditor', content: '碳足迹报告' },
+                    { from: 'AI Energy Efficiency Expert', to: 'AI Renewable Energy Advisor', content: '能效优化方案' },
+                    { from: 'AI Renewable Energy Advisor', to: 'AI Utility Bill Analyzer', content: '新能源建议' },
+                    { from: 'AI Utility Bill Analyzer', to: 'AI Energy Auditor', content: '账单分析' }
+                ]
             }
         ];
 
@@ -19716,7 +19848,56 @@
             'AI Citizen Service': { icon: '🏛️', color: '#3b82f6', role: 'AI公民服务师' },
             'AI Urban Manager': { icon: '🏙️', color: '#64748b', role: 'AI城市管理师' },
             'AI Emergency Planner': { icon: '🚨', color: '#ef4444', role: 'AI应急规划师' },
-            'AI Grant Writer': { icon: '💵', color: '#22c55e', role: 'AI补助撰写师' }
+            'AI Grant Writer': { icon: '💵', color: '#22c55e', role: 'AI补助撰写师' },
+            // Cycle 379 新增角色 - AI智能医疗健康
+            'AI Rehabilitation Doctor': { icon: '🏥', color: '#ef4444', role: 'AI康复医生' },
+            'AI Physical Therapist': { icon: '💪', color: '#f97316', role: 'AI物理治疗师' },
+            'AI Occupational Therapist': { icon: '🎯', color: '#8b5cf6', role: 'AI作业治疗师' },
+            'AI Rehabilitation Nurse': { icon: '👩‍⚕️', color: '#06b6d4', role: 'AI康复护士' },
+            'AI Rehabilitation Planner': { icon: '📋', color: '#10b981', role: 'AI康复规划师' },
+            // Cycle 379 新增角色 - AI智能养老社区
+            'AI Community Manager': { icon: '🏘️', color: '#f59e0b', role: 'AI社区经理' },
+            'AI Elderly Care Coordinator': { icon: '👴', color: '#ec4899', role: 'AI养老协调员' },
+            'AI Senior Activity Planner': { icon: '🎪', color: '#a855f7', role: 'AI老年活动策划师' },
+            'AI Caregiver Manager': { icon: '🤝', color: '#22c55e', role: 'AI护理员管理员' },
+            'AI Health Monitor': { icon: '❤️', color: '#ef4444', role: 'AI健康监护师' },
+            // Cycle 379 新增角色 - AI智能家居服务
+            'AI Home Service Coordinator': { icon: '🏠', color: '#3b82f6', role: 'AI家政协调员' },
+            'AI House Cleaner': { icon: '🧹', color: '#06b6d4', role: 'AI家政保洁师' },
+            'AI Meal Planning': { icon: '🍽️', color: '#f59e0b', role: 'AI膳食规划师' },
+            'AI Errand Runner': { icon: '🏃', color: '#10b981', role: 'AI跑腿服务师' },
+            'AI Home Maintenance': { icon: '🔧', color: '#64748b', role: 'AI家政维修师' },
+            // Cycle 379 新增角色 - AI智能环保监测
+            'AI Environmental Monitor': { icon: '🌿', color: '#22c55e', role: 'AI环境监测师' },
+            'AI Air Quality Analyst': { icon: '💨', color: '#06b6d4', role: 'AI空气质量分析师' },
+            'AI Water Quality Tester': { icon: '💧', color: '#3b82f6', role: 'AI水质检测师' },
+            'AI Noise Level Monitor': { icon: '🔊', color: '#f59e0b', role: 'AI噪音监测师' },
+            'AI Pollution Alert': { icon: '🚨', color: '#ef4444', role: 'AI污染预警师' },
+            // Cycle 379 新增角色 - AI智能能源审计
+            'AI Energy Auditor': { icon: '⚡', color: '#eab308', role: 'AI能源审计师' },
+            'AI Carbon Footprint': { icon: '🌍', color: '#22c55e', role: 'AI碳足迹审计师' },
+            'AI Energy Efficiency Expert': { icon: '💡', color: '#f59e0b', role: 'AI能效专家' },
+            'AI Renewable Energy Advisor': { icon: '🌞', color: '#f97316', role: 'AI可再生能源顾问' },
+            'AI Utility Bill Analyzer': { icon: '💰', color: '#14b8a6', role: 'AI水电费分析师' },
+            // Cycle 379 新增角色 - AI智能政府公共服务
+            'AI Policy Advisor': { icon: '📜', color: '#8b5cf6', role: 'AI政策顾问' },
+            'AI Public Relations': { icon: '📣', color: '#ec4899', role: 'AI公共关系师' },
+            'AI Citizen Service': { icon: '🏛️', color: '#3b82f6', role: 'AI公民服务师' },
+            'AI Urban Manager': { icon: '🏙️', color: '#64748b', role: 'AI城市管理师' },
+            'AI Emergency Planner': { icon: '🚨', color: '#ef4444', role: 'AI应急规划师' },
+            'AI Grant Writer': { icon: '💵', color: '#22c55e', role: 'AI补助撰写师' },
+            // Cycle 379 新增角色 - AI智能前沿科技
+            'AI Quantum Computing': { icon: '⚛️', color: '#8b5cf6', role: 'AI量子计算工程师' },
+            'AI Quantum Scientist': { icon: '🔬', color: '#7c3aed', role: 'AI量子科学家' },
+            'AI Quantum Cryptographer': { icon: '🔐', color: '#6366f1', role: 'AI量子密码学家' },
+            'AI Brain Computer Interface': { icon: '🧠', color: '#ec4899', role: 'AI脑机接口工程师' },
+            'AI Neural Interface': { icon: '🧬', color: '#a855f7', role: 'AI神经接口工程师' },
+            // Cycle 379 新增角色 - AI智能合成生物
+            'AI Synthetic Biology': { icon: '🧪', color: '#10b981', role: 'AI合成生物工程师' },
+            'AI Gene Editor': { icon: '🧬', color: '#ec4899', role: 'AI基因编辑工程师' },
+            'AI CRISPR Engineer': { icon: '🔬', color: '#ef4444', role: 'AI CRISPR工程师' },
+            'AI Bioprinting': { icon: '🖨️', color: '#f97316', role: 'AI生物3D打印工程师' },
+            'AI 6G Architect': { icon: '📡', color: '#3b82f6', role: 'AI 6G架构工程师' }
         };
 
         // 拖拽相关变量
