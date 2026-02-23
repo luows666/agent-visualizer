@@ -21841,8 +21841,98 @@
             }
         ];
 
+        // Cycle 417 新增模板
+        const cycle417Templates = [
+            {
+                id: 'ai-space-exploration',
+                name: 'AI智能星际探索系统',
+                icon: '🚀',
+                desc: '从太空任务规划到星际探索的完整探索流程',
+                agents: ['AI Space Explorer', 'AI Mission Planner', 'AI Astronaut Trainer', 'AI Satellite Operator', 'AI Spacecraft Engineer', 'AI Mission Control'],
+                positions: [
+                    { role: 'AI Space Explorer', x: 400, y: 30 },
+                    { role: 'AI Mission Planner', x: 150, y: 150 },
+                    { role: 'AI Astronaut Trainer', x: 650, y: 150 },
+                    { role: 'AI Satellite Operator', x: 150, y: 270 },
+                    { role: 'AI Spacecraft Engineer', x: 650, y: 270 },
+                    { role: 'AI Mission Control', x: 400, y: 350 }
+                ],
+                messageFlows: [
+                    { from: 'AI Space Explorer', to: 'AI Mission Planner', content: '探索任务规划' },
+                    { from: 'AI Space Explorer', to: 'AI Mission Control', content: '任务控制需求' },
+                    { from: 'AI Mission Planner', to: 'AI Astronaut Trainer', content: '宇航员培训需求' },
+                    { from: 'AI Mission Planner', to: 'AI Satellite Operator', content: '卫星运营需求' },
+                    { from: 'AI Spacecraft Engineer', to: 'AI Satellite Operator', content: '技术支持需求' }
+                ]
+            },
+            {
+                id: 'ai-deep-sea-exploration',
+                name: 'AI智能深海探测系统',
+                icon: '🌊',
+                desc: '从海洋探测到资源开发的完整深海探测流程',
+                agents: ['AI Deep Sea Explorer', 'AI Marine Biologist', 'AI Subsea Engineer', 'AI Oceanographer', 'AI Underwater Robot', 'AI Coastal Manager'],
+                positions: [
+                    { role: 'AI Deep Sea Explorer', x: 400, y: 30 },
+                    { role: 'AI Marine Biologist', x: 150, y: 150 },
+                    { role: 'AI Subsea Engineer', x: 650, y: 150 },
+                    { role: 'AI Oceanographer', x: 150, y: 270 },
+                    { role: 'AI Underwater Robot', x: 650, y: 270 },
+                    { role: 'AI Coastal Manager', x: 400, y: 350 }
+                ],
+                messageFlows: [
+                    { from: 'AI Deep Sea Explorer', to: 'AI Marine Biologist', content: '生物研究需求' },
+                    { from: 'AI Deep Sea Explorer', to: 'AI Subsea Engineer', content: '工程技术需求' },
+                    { from: 'AI Marine Biologist', to: 'AI Oceanographer', content: '海洋数据分析' },
+                    { from: 'AI Subsea Engineer', to: 'AI Underwater Robot', content: '机器人技术支持' },
+                    { from: 'AI Oceanographer', to: 'AI Coastal Manager', content: '海岸管理建议' }
+                ]
+            },
+            {
+                id: 'ai-quantum-computing',
+                name: 'AI智能量子计算系统',
+                icon: '⚛️',
+                desc: '从量子算法研究到量子计算的完整量子计算流程',
+                agents: ['AI Quantum Scientist', 'AI Quantum Engineer', 'AI Quantum Programmer', 'AI Cryptographer', 'AI Quantum Analyst'],
+                positions: [
+                    { role: 'AI Quantum Scientist', x: 400, y: 30 },
+                    { role: 'AI Quantum Engineer', x: 200, y: 150 },
+                    { role: 'AI Quantum Programmer', x: 600, y: 150 },
+                    { role: 'AI Cryptographer', x: 200, y: 270 },
+                    { role: 'AI Quantum Analyst', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Quantum Scientist', to: 'AI Quantum Engineer', content: '量子工程需求' },
+                    { from: 'AI Quantum Scientist', to: 'AI Quantum Programmer', content: '量子编程需求' },
+                    { from: 'AI Quantum Engineer', to: 'AI Cryptographer', content: '密码学应用' },
+                    { from: 'AI Quantum Programmer', to: 'AI Quantum Analyst', content: '量子分析需求' }
+                ]
+            },
+            {
+                id: 'ai-blockchain-system',
+                name: 'AI智能区块链系统',
+                icon: '⛓️',
+                desc: '从区块链架构到智能合约开发的完整区块链流程',
+                agents: ['AI Blockchain Architect', 'AI Smart Contract Dev', 'AI DeFi Analyst', 'AI Crypto Trader', 'AI NFT Curator', 'AI DAO Manager'],
+                positions: [
+                    { role: 'AI Blockchain Architect', x: 400, y: 30 },
+                    { role: 'AI Smart Contract Dev', x: 150, y: 150 },
+                    { role: 'AI DeFi Analyst', x: 650, y: 150 },
+                    { role: 'AI Crypto Trader', x: 150, y: 270 },
+                    { role: 'AI NFT Curator', x: 650, y: 270 },
+                    { role: 'AI DAO Manager', x: 400, y: 350 }
+                ],
+                messageFlows: [
+                    { from: 'AI Blockchain Architect', to: 'AI Smart Contract Dev', content: '智能合约开发' },
+                    { from: 'AI Blockchain Architect', to: 'AI DeFi Analyst', content: 'DeFi分析需求' },
+                    { from: 'AI Smart Contract Dev', to: 'AI Crypto Trader', content: '交易技术支持' },
+                    { from: 'AI DeFi Analyst', to: 'AI NFT Curator', content: 'NFT分析需求' },
+                    { from: 'AI Crypto Trader', to: 'AI DAO Manager', content: 'DAO管理需求' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -26087,7 +26177,34 @@
             'AI Athletic Trainer': { icon: '💪', color: '#ec4899', role: 'AI运动训练师' },
             'AI Event Manager': { icon: '🏆', color: '#14b8a6', role: 'AI赛事经理' },
             'AI Sports Analyst': { icon: '📊', color: '#8b5cf6', role: 'AI体育分析师' },
-            'AI Athlete Agent': { icon: '🤝', color: '#06b6d4', role: 'AI运动员经纪人' }
+            'AI Athlete Agent': { icon: '🤝', color: '#06b6d4', role: 'AI运动员经纪人' },
+            // Cycle 417 新增角色 - AI智能星际探索
+            'AI Space Explorer': { icon: '🚀', color: '#1e40af', role: 'AI星际探索家' },
+            'AI Mission Planner': { icon: '🗺️', color: '#7c3aed', role: 'AI任务规划师' },
+            'AI Astronaut Trainer': { icon: '👨‍🚀', color: '#059669', role: 'AI宇航员训练师' },
+            'AI Satellite Operator': { icon: '🛰️', color: '#0891b2', role: 'AI卫星运营商' },
+            'AI Spacecraft Engineer': { icon: '🛸', color: '#dc2626', role: 'AI航天器工程师' },
+            'AI Mission Control': { icon: '📡', color: '#f59e0b', role: 'AI任务控制师' },
+            // Cycle 417 新增角色 - AI智能深海探测
+            'AI Deep Sea Explorer': { icon: '🌊', color: '#0ea5e9', role: 'AI深海探测师' },
+            'AI Marine Biologist': { icon: '🐋', color: '#14b8a6', role: 'AI海洋生物学家' },
+            'AI Subsea Engineer': { icon: '⚓', color: '#6366f1', role: 'AI海底工程师' },
+            'AI Oceanographer': { icon: '🧭', color: '#8b5cf6', role: 'AI海洋学家' },
+            'AI Underwater Robot': { icon: '🤖', color: '#ec4899', role: 'AI水下机器人工程师' },
+            'AI Coastal Manager': { icon: '🏖️', color: '#f97316', role: 'AI海岸管理师' },
+            // Cycle 417 新增角色 - AI智能量子计算
+            'AI Quantum Scientist': { icon: '⚛️', color: '#06b6d4', role: 'AI量子科学家' },
+            'AI Quantum Engineer': { icon: '🔬', color: '#7c3aed', role: 'AI量子工程师' },
+            'AI Quantum Programmer': { icon: '💻', color: '#2563eb', role: 'AI量子程序员' },
+            'AI Cryptographer': { icon: '🔐', color: '#059669', role: 'AI密码学家' },
+            'AI Quantum Analyst': { icon: '📊', color: '#db2777', role: 'AI量子分析师' },
+            // Cycle 417 新增角色 - AI智能区块链
+            'AI Blockchain Architect': { icon: '⛓️', color: '#f59e0b', role: 'AI区块链架构师' },
+            'AI Smart Contract Dev': { icon: '📜', color: '#8b5cf6', role: 'AI智能合约开发师' },
+            'AI DeFi Analyst': { icon: '💰', color: '#22c55e', role: 'AI去中心化金融分析师' },
+            'AI Crypto Trader': { icon: '🪙', color: '#f97316', role: 'AI加密货币交易师' },
+            'AI NFT Curator': { icon: '🖼️', color: '#ec4899', role: 'AI NFT策展师' },
+            'AI DAO Manager': { icon: '🏛️', color: '#06b6d4', role: 'AI DAO管理师' }
         };
 
         // 拖拽相关变量
