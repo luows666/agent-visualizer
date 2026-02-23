@@ -19917,6 +19917,138 @@
                     { from: 'AI Steel Quality Inspector', to: 'AI Rolling Mill Engineer', content: '质检合格' },
                     { from: 'AI Rolling Mill Engineer', to: 'AI Foundry Engineer', content: '轧制计划' }
                 ]
+            },
+            // Cycle 403 新增模板 - AI智能虚拟现实系统
+            {
+                id: 'ai-virtual-reality',
+                name: 'AI智能虚拟现实系统',
+                icon: '🥽',
+                desc: '从VR设计到沉浸式体验开发的完整流程',
+                agents: ['AI VR Designer', 'AI VR Developer', 'AI 3D Modeler', 'AI Spatial Computing', 'AI Immersive Audio'],
+                positions: [
+                    { role: 'AI VR Designer', x: 400, y: 30 },
+                    { role: 'AI VR Developer', x: 200, y: 150 },
+                    { role: 'AI 3D Modeler', x: 600, y: 150 },
+                    { role: 'AI Spatial Computing', x: 200, y: 270 },
+                    { role: 'AI Immersive Audio', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI VR Designer', to: 'AI VR Developer', content: 'VR设计方案' },
+                    { from: 'AI VR Developer', to: 'AI 3D Modeler', content: '3D模型需求' },
+                    { from: 'AI 3D Modeler', to: 'AI Spatial Computing', content: '空间计算需求' },
+                    { from: 'AI Spatial Computing', to: 'AI Immersive Audio', content: '音频需求' },
+                    { from: 'AI VR Developer', to: 'AI VR Designer', content: '开发进度汇报' }
+                ]
+            },
+            // Cycle 403 新增模板 - AI智能区块链系统
+            {
+                id: 'ai-blockchain',
+                name: 'AI智能区块链系统',
+                icon: '⛓️',
+                desc: '从区块链架构到智能合约开发的完整流程',
+                agents: ['AI Blockchain Architect', 'AI Smart Contract Dev', 'AI DeFi Analyst', 'AI Crypto Trader', 'AI NFT Curator'],
+                positions: [
+                    { role: 'AI Blockchain Architect', x: 400, y: 30 },
+                    { role: 'AI Smart Contract Dev', x: 200, y: 150 },
+                    { role: 'AI DeFi Analyst', x: 600, y: 150 },
+                    { role: 'AI Crypto Trader', x: 200, y: 270 },
+                    { role: 'AI NFT Curator', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Blockchain Architect', to: 'AI Smart Contract Dev', content: '智能合约需求' },
+                    { from: 'AI Smart Contract Dev', to: 'AI DeFi Analyst', content: 'DeFi逻辑确认' },
+                    { from: 'AI DeFi Analyst', to: 'AI Crypto Trader', content: '交易策略' },
+                    { from: 'AI Crypto Trader', to: 'AI NFT Curator', content: 'NFT资产' },
+                    { from: 'AI Smart Contract Dev', to: 'AI Blockchain Architect', content: '合约审计' }
+                ]
+            },
+            // Cycle 403 新增模板 - AI智能无人机系统
+            {
+                id: 'ai-drone-systems',
+                name: 'AI智能无人机系统',
+                icon: '🚁',
+                desc: '从无人机设计到航空作业的完整流程',
+                agents: ['AI Drone Engineer', 'AI Flight Control', 'AI Aerial Surveyor', 'AI Drone Delivery', 'AI Drone Maintenance'],
+                positions: [
+                    { role: 'AI Drone Engineer', x: 400, y: 30 },
+                    { role: 'AI Flight Control', x: 200, y: 150 },
+                    { role: 'AI Aerial Surveyor', x: 600, y: 150 },
+                    { role: 'AI Drone Delivery', x: 200, y: 270 },
+                    { role: 'AI Drone Maintenance', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Drone Engineer', to: 'AI Flight Control', content: '飞控系统需求' },
+                    { from: 'AI Flight Control', to: 'AI Aerial Surveyor', content: '航测任务' },
+                    { from: 'AI Aerial Surveyor', to: 'AI Drone Delivery', content: '配送路线规划' },
+                    { from: 'AI Drone Delivery', to: 'AI Drone Maintenance', content: '维护计划' },
+                    { from: 'AI Drone Engineer', to: 'AI Drone Maintenance', content: '质量反馈' }
+                ]
+            },
+            // Cycle 403 新增模板 - AI智能机器人系统
+            {
+                id: 'ai-robotics',
+                name: 'AI智能机器人系统',
+                icon: '🤖',
+                desc: '从机器人设计到自动化部署的完整流程',
+                agents: ['AI Robotics Engineer', 'AI Robot Designer', 'AI Control Systems', 'AI Automation Engineer', 'AI Motion Planning'],
+                positions: [
+                    { role: 'AI Robotics Engineer', x: 400, y: 30 },
+                    { role: 'AI Robot Designer', x: 200, y: 150 },
+                    { role: 'AI Control Systems', x: 600, y: 150 },
+                    { role: 'AI Automation Engineer', x: 200, y: 270 },
+                    { role: 'AI Motion Planning', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Robotics Engineer', to: 'AI Robot Designer', content: '机器人设计方案' },
+                    { from: 'AI Robot Designer', to: 'AI Control Systems', content: '控制系统需求' },
+                    { from: 'AI Control Systems', to: 'AI Motion Planning', content: '运动规划算法' },
+                    { from: 'AI Motion Planning', to: 'AI Automation Engineer', content: '自动化方案' },
+                    { from: 'AI Automation Engineer', to: 'AI Robotics Engineer', content: '部署测试报告' }
+                ]
+            },
+            // Cycle 403 新增模板 - AI智能物联网系统
+            {
+                id: 'ai-iot',
+                name: 'AI智能物联网系统',
+                icon: '🌐',
+                desc: '从IoT架构到智能设备管理的完整流程',
+                agents: ['AI IoT Architect', 'AI Sensor Network', 'AI Edge Computing', 'AI Smart Home', 'AI Industrial IoT'],
+                positions: [
+                    { role: 'AI IoT Architect', x: 400, y: 30 },
+                    { role: 'AI Sensor Network', x: 200, y: 150 },
+                    { role: 'AI Edge Computing', x: 600, y: 150 },
+                    { role: 'AI Smart Home', x: 200, y: 270 },
+                    { role: 'AI Industrial IoT', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI IoT Architect', to: 'AI Sensor Network', content: '传感器网络设计' },
+                    { from: 'AI Sensor Network', to: 'AI Edge Computing', content: '边缘计算需求' },
+                    { from: 'AI Edge Computing', to: 'AI Smart Home', content: '智能家居集成' },
+                    { from: 'AI Edge Computing', to: 'AI Industrial IoT', content: '工业物联网集成' },
+                    { from: 'AI Smart Home', to: 'AI IoT Architect', content: '用户体验反馈' }
+                ]
+            },
+            // Cycle 403 新增模板 - AI智能网络安全系统
+            {
+                id: 'ai-cybersecurity',
+                name: 'AI智能网络安全系统',
+                icon: '🔒',
+                desc: '从安全分析到威胁应对的完整流程',
+                agents: ['AI Security Analyst', 'AI Penetration Tester', 'AI Incident Response', 'AI Threat Hunter', 'AI Security Auditor'],
+                positions: [
+                    { role: 'AI Security Analyst', x: 400, y: 30 },
+                    { role: 'AI Penetration Tester', x: 200, y: 150 },
+                    { role: 'AI Incident Response', x: 600, y: 150 },
+                    { role: 'AI Threat Hunter', x: 200, y: 270 },
+                    { role: 'AI Security Auditor', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Security Analyst', to: 'AI Penetration Tester', content: '渗透测试任务' },
+                    { from: 'AI Penetration Tester', to: 'AI Incident Response', content: '漏洞报告' },
+                    { from: 'AI Incident Response', to: 'AI Threat Hunter', content: '威胁情报' },
+                    { from: 'AI Threat Hunter', to: 'AI Security Auditor', content: '审计需求' },
+                    { from: 'AI Security Auditor', to: 'AI Security Analyst', content: '审计报告' }
+                ]
             }
         ];
 
@@ -23628,7 +23760,43 @@
             'AI Mechatronics': { icon: '⚙️', color: '#3b82f6', role: 'AI机电工程师' },
             'AI Safety Systems': { icon: '🛡️', color: '#ef4444', role: 'AI安全系统工程师' },
             'AI Maintenance Tech': { icon: '🔧', color: '#f97316', role: 'AI维护技术员' },
-            'AI Inspector': { icon: '📋', color: '#14b8a6', role: 'AI检验师' }
+            'AI Inspector': { icon: '📋', color: '#14b8a6', role: 'AI检验师' },
+            // Cycle 403 新增角色 - AI智能虚拟现实
+            'AI VR Designer': { icon: '🥽', color: '#8b5cf6', role: 'AI虚拟现实设计师' },
+            'AI VR Developer': { icon: '🎮', color: '#ec4899', role: 'AI虚拟现实开发工程师' },
+            'AI 3D Modeler': { icon: '🎲', color: '#10b981', role: 'AI 3D建模师' },
+            'AI Spatial Computing': { icon: '🌍', color: '#06b6d4', role: 'AI空间计算工程师' },
+            'AI Immersive Audio': { icon: '🎧', color: '#f59e0b', role: 'AI沉浸式音频工程师' },
+            // Cycle 403 新增角色 - AI智能区块链
+            'AI Blockchain Architect': { icon: '⛓️', color: '#3b82f6', role: 'AI区块链架构师' },
+            'AI Smart Contract Dev': { icon: '📜', color: '#f97316', role: 'AI智能合约开发工程师' },
+            'AI DeFi Analyst': { icon: '💰', color: '#22c55e', role: 'AI去中心化金融分析师' },
+            'AI Crypto Trader': { icon: '🪙', color: '#eab308', role: 'AI加密货币交易师' },
+            'AI NFT Curator': { icon: '🖼️', color: '#a855f7', role: 'AI NFT策展师' },
+            // Cycle 403 新增角色 - AI智能无人机
+            'AI Drone Engineer': { icon: '🚁', color: '#64748b', role: 'AI无人机工程师' },
+            'AI Flight Control': { icon: '🎛️', color: '#3b82f6', role: 'AI飞控系统工程师' },
+            'AI Aerial Surveyor': { icon: '📡', color: '#06b6d4', role: 'AI航空测量师' },
+            'AI Drone Delivery': { icon: '📦', color: '#f97316', role: 'AI无人机配送调度师' },
+            'AI Drone Maintenance': { icon: '🔧', color: '#22c55e', role: 'AI无人机维护工程师' },
+            // Cycle 403 新增角色 - AI智能机器人
+            'AI Robotics Engineer': { icon: '🤖', color: '#8b5cf6', role: 'AI机器人工程师' },
+            'AI Robot Designer': { icon: '🎨', color: '#ec4899', role: 'AI机器人设计师' },
+            'AI Control Systems': { icon: '🎛️', color: '#10b981', role: 'AI控制系统工程师' },
+            'AI Automation Engineer': { icon: '⚙️', color: '#06b6d4', role: 'AI自动化工程师' },
+            'AI Motion Planning': { icon: '🗺️', color: '#f59e0b', role: 'AI运动规划师' },
+            // Cycle 403 新增角色 - AI智能物联网
+            'AI IoT Architect': { icon: '🌐', color: '#3b82f6', role: 'AI物联网架构师' },
+            'AI Sensor Network': { icon: '📡', color: '#f97316', role: 'AI传感器网络工程师' },
+            'AI Edge Computing': { icon: '⚡', color: '#22c55e', role: 'AI边缘计算工程师' },
+            'AI Smart Home': { icon: '🏡', color: '#eab308', role: 'AI智能家居工程师' },
+            'AI Industrial IoT': { icon: '🏭', color: '#a855f7', role: 'AI工业物联网工程师' },
+            // Cycle 403 新增角色 - AI智能网络安全
+            'AI Security Analyst': { icon: '🔒', color: '#ef4444', role: 'AI网络安全分析师' },
+            'AI Penetration Tester': { icon: '🔓', color: '#f97316', role: 'AI渗透测试工程师' },
+            'AI Incident Response': { icon: '🚨', color: '#22c55e', role: 'AI安全事件响应师' },
+            'AI Threat Hunter': { icon: '🎯', color: '#a855f7', role: 'AI威胁猎手' },
+            'AI Security Auditor': { icon: '✅', color: '#14b8a6', role: 'AI安全审计员' }
         };
 
         // 拖拽相关变量
