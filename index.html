@@ -27133,8 +27133,173 @@
             }
         ];
 
+        // Cycle 450 - 新增行业服务系统模板
+        const cycle450Templates = [
+            // AI智能家政服务管理系统
+            {
+                id: 'ai-home-services',
+                name: 'AI智能家政服务管理系统',
+                icon: '🏠',
+                desc: '智能家政服务管理，包括保姆、月嫂、清洁、维修等全方位服务',
+                agents: ['AI Home Service Director', 'AI Nanny Coordinator', 'AI Housekeeper Manager', 'AI Cleaner Dispatcher', 'AI Repair Technician', 'AI Client Relations'],
+                positions: [
+                    { role: 'AI Home Service Director', x: 400, y: 30 },
+                    { role: 'AI Nanny Coordinator', x: 150, y: 150 },
+                    { role: 'AI Housekeeper Manager', x: 650, y: 150 },
+                    { role: 'AI Cleaner Dispatcher', x: 150, y: 300 },
+                    { role: 'AI Repair Technician', x: 400, y: 350 },
+                    { role: 'AI Client Relations', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Home Service Director', to: 'AI Nanny Coordinator', content: '保姆协调' },
+                    { from: 'AI Home Service Director', to: 'AI Housekeeper Manager', content: '管家管理' },
+                    { from: 'AI Nanny Coordinator', to: 'AI Cleaner Dispatcher', content: '清洁调度' },
+                    { from: 'AI Housekeeper Manager', to: 'AI Repair Technician', content: '维修安排' },
+                    { from: 'AI Repair Technician', to: 'AI Client Relations', content: '客户关系' }
+                ]
+            },
+            // AI智能保险服务管理系统
+            {
+                id: 'ai-insurance-services',
+                name: 'AI智能保险服务管理系统',
+                icon: '🛡️',
+                desc: '智能保险服务管理，包括投保咨询、理赔处理、客户服务等',
+                agents: ['AI Insurance Director', 'AI Policy Advisor', 'AI Claims Processor', 'AI Risk Assessor', 'AI Customer Service Rep', 'AI Compliance Officer'],
+                positions: [
+                    { role: 'AI Insurance Director', x: 400, y: 30 },
+                    { role: 'AI Policy Advisor', x: 150, y: 150 },
+                    { role: 'AI Claims Processor', x: 650, y: 150 },
+                    { role: 'AI Risk Assessor', x: 150, y: 300 },
+                    { role: 'AI Customer Service Rep', x: 400, y: 350 },
+                    { role: 'AI Compliance Officer', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Insurance Director', to: 'AI Policy Advisor', content: '投保咨询' },
+                    { from: 'AI Insurance Director', to: 'AI Claims Processor', content: '理赔处理' },
+                    { from: 'AI Policy Advisor', to: 'AI Risk Assessor', content: '风险评估' },
+                    { from: 'AI Claims Processor', to: 'AI Customer Service Rep', content: '客户服务' },
+                    { from: 'AI Customer Service Rep', to: 'AI Compliance Officer', content: '合规审查' }
+                ]
+            },
+            // AI智能房产服务管理系统
+            {
+                id: 'ai-real-estate',
+                name: 'AI智能房产服务管理系统',
+                icon: '🏢',
+                desc: '智能房产服务管理，包括买卖咨询、租赁管理、房产评估等',
+                agents: ['AI Real Estate Director', 'AI Property Consultant', 'AI Rental Manager', 'AI Property Evaluator', 'AI Tour Guide', 'AI Transaction Coordinator'],
+                positions: [
+                    { role: 'AI Real Estate Director', x: 400, y: 30 },
+                    { role: 'AI Property Consultant', x: 150, y: 150 },
+                    { role: 'AI Rental Manager', x: 650, y: 150 },
+                    { role: 'AI Property Evaluator', x: 150, y: 300 },
+                    { role: 'AI Tour Guide', x: 400, y: 350 },
+                    { role: 'AI Transaction Coordinator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Real Estate Director', to: 'AI Property Consultant', content: '房产咨询' },
+                    { from: 'AI Real Estate Director', to: 'AI Rental Manager', content: '租赁管理' },
+                    { from: 'AI Property Consultant', to: 'AI Property Evaluator', content: '房产评估' },
+                    { from: 'AI Rental Manager', to: 'AI Tour Guide', content: '看房引导' },
+                    { from: 'AI Tour Guide', to: 'AI Transaction Coordinator', content: '交易协调' }
+                ]
+            },
+            // AI智能人力资源服务管理系统
+            {
+                id: 'ai-hr-services',
+                name: 'AI智能人力资源服务管理系统',
+                icon: '👥',
+                desc: '智能人力资源服务管理，包括招聘、培训、绩效考核、薪酬管理等',
+                agents: ['AI HR Director', 'AI Recruiter', 'AI Training Coordinator', 'AI Performance Analyst', 'AI Payroll Manager', 'AI Employee Relations'],
+                positions: [
+                    { role: 'AI HR Director', x: 400, y: 30 },
+                    { role: 'AI Recruiter', x: 150, y: 150 },
+                    { role: 'AI Training Coordinator', x: 650, y: 150 },
+                    { role: 'AI Performance Analyst', x: 150, y: 300 },
+                    { role: 'AI Payroll Manager', x: 400, y: 350 },
+                    { role: 'AI Employee Relations', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HR Director', to: 'AI Recruiter', content: '招聘安排' },
+                    { from: 'AI HR Director', to: 'AI Training Coordinator', content: '培训协调' },
+                    { from: 'AI Recruiter', to: 'AI Performance Analyst', content: '绩效分析' },
+                    { from: 'AI Training Coordinator', to: 'AI Payroll Manager', content: '薪酬管理' },
+                    { from: 'AI Payroll Manager', to: 'AI Employee Relations', content: '员工关系' }
+                ]
+            },
+            // AI智能金融服务管理系统
+            {
+                id: 'ai-financial-services',
+                name: 'AI智能金融服务管理系统',
+                icon: '💳',
+                desc: '智能金融服务管理，包括投资咨询、理财规划、风险管理等',
+                agents: ['AI Financial Director', 'AI Investment Advisor', 'AI Wealth Planner', 'AI Risk Manager', 'AI Account Manager', 'AI Compliance Auditor'],
+                positions: [
+                    { role: 'AI Financial Director', x: 400, y: 30 },
+                    { role: 'AI Investment Advisor', x: 150, y: 150 },
+                    { role: 'AI Wealth Planner', x: 650, y: 150 },
+                    { role: 'AI Risk Manager', x: 150, y: 300 },
+                    { role: 'AI Account Manager', x: 400, y: 350 },
+                    { role: 'AI Compliance Auditor', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Financial Director', to: 'AI Investment Advisor', content: '投资咨询' },
+                    { from: 'AI Financial Director', to: 'AI Wealth Planner', content: '理财规划' },
+                    { from: 'AI Investment Advisor', to: 'AI Risk Manager', content: '风险管理' },
+                    { from: 'AI Wealth Planner', to: 'AI Account Manager', content: '账户管理' },
+                    { from: 'AI Account Manager', to: 'AI Compliance Auditor', content: '合规审计' }
+                ]
+            },
+            // AI智能环保服务管理系统
+            {
+                id: 'ai-environmental-services',
+                name: 'AI智能环保服务管理系统',
+                icon: '🌿',
+                desc: '智能环保服务管理，包括垃圾分类、环境监测、资源回收等',
+                agents: ['AI Environmental Director', 'AI Waste Manager', 'AI Monitoring Specialist', 'AI Recycling Coordinator', 'AI Sustainability Analyst', 'AI Community Liaison'],
+                positions: [
+                    { role: 'AI Environmental Director', x: 400, y: 30 },
+                    { role: 'AI Waste Manager', x: 150, y: 150 },
+                    { role: 'AI Monitoring Specialist', x: 650, y: 150 },
+                    { role: 'AI Recycling Coordinator', x: 150, y: 300 },
+                    { role: 'AI Sustainability Analyst', x: 400, y: 350 },
+                    { role: 'AI Community Liaison', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Director', to: 'AI Waste Manager', content: '垃圾分类' },
+                    { from: 'AI Environmental Director', to: 'AI Monitoring Specialist', content: '环境监测' },
+                    { from: 'AI Waste Manager', to: 'AI Recycling Coordinator', content: '回收协调' },
+                    { from: 'AI Monitoring Specialist', to: 'AI Sustainability Analyst', content: '可持续分析' },
+                    { from: 'AI Sustainability Analyst', to: 'AI Community Liaison', content: '社区联络' }
+                ]
+            },
+            // AI智能能源服务管理系统
+            {
+                id: 'ai-energy-services',
+                name: 'AI智能能源服务管理系统',
+                icon: '⚡',
+                desc: '智能能源服务管理，包括电力调度、节能咨询、设施维护等',
+                agents: ['AI Energy Director', 'AI Power Dispatcher', 'AI Energy Consultant', 'AI Grid Operator', 'AI Maintenance Tech', 'AI Usage Analyst'],
+                positions: [
+                    { role: 'AI Energy Director', x: 400, y: 30 },
+                    { role: 'AI Power Dispatcher', x: 150, y: 150 },
+                    { role: 'AI Energy Consultant', x: 650, y: 150 },
+                    { role: 'AI Grid Operator', x: 150, y: 300 },
+                    { role: 'AI Maintenance Tech', x: 400, y: 350 },
+                    { role: 'AI Usage Analyst', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Energy Director', to: 'AI Power Dispatcher', content: '电力调度' },
+                    { from: 'AI Energy Director', to: 'AI Energy Consultant', content: '节能咨询' },
+                    { from: 'AI Power Dispatcher', to: 'AI Grid Operator', content: '电网运营' },
+                    { from: 'AI Energy Consultant', to: 'AI Maintenance Tech', content: '设备维护' },
+                    { from: 'AI Maintenance Tech', to: 'AI Usage Analyst', content: '用量分析' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -32834,7 +32999,57 @@
             'AI Doctor Matcher': { icon: '👨‍⚕️', color: '#22c55e', role: 'AI医生匹配师' },
             'AI Health Record Manager': { icon: '📁', color: '#ec4899', role: 'AI健康档案经理' },
             'AI Treatment Coordinator': { icon: '🩺', color: '#06b6d4', role: 'AI治疗协调员' },
-            'AI Patient Liaison': { icon: '🙋', color: '#14b8a6', role: 'AI患者联络员' }
+            'AI Patient Liaison': { icon: '🙋', color: '#14b8a6', role: 'AI患者联络员' },
+            // Cycle 450 新增角色 - 7个行业服务系统
+            // AI智能家政服务管理系统
+            'AI Home Service Director': { icon: '🏠', color: '#3b82f6', role: 'AI家政服务总监' },
+            'AI Nanny Coordinator': { icon: '👶', color: '#f59e0b', role: 'AI保姆协调员' },
+            'AI Housekeeper Manager': { icon: '🧹', color: '#22c55e', role: 'AI管家经理' },
+            'AI Cleaner Dispatcher': { icon: '🧽', color: '#ec4899', role: 'AI清洁调度员' },
+            'AI Repair Technician': { icon: '🔨', color: '#06b6d4', role: 'AI维修技师' },
+            'AI Client Relations': { icon: '🤝', color: '#14b8a6', role: 'AI客户关系专员' },
+            // AI智能保险服务管理系统
+            'AI Insurance Director': { icon: '🛡️', color: '#8b5cf6', role: 'AI保险总监' },
+            'AI Policy Advisor': { icon: '📋', color: '#f59e0b', role: 'AI保单顾问' },
+            'AI Claims Processor': { icon: '📝', color: '#22c55e', role: 'AI理赔处理员' },
+            'AI Risk Assessor': { icon: '⚖️', color: '#ec4899', role: 'AI风险评估师' },
+            'AI Customer Service Rep': { icon: '📞', color: '#06b6d4', role: 'AI客服代表' },
+            'AI Compliance Officer': { icon: '📜', color: '#14b8a6', role: 'AI合规专员' },
+            // AI智能房产服务管理系统
+            'AI Real Estate Director': { icon: '🏢', color: '#3b82f6', role: 'AI房产总监' },
+            'AI Property Consultant': { icon: '🏠', color: '#f59e0b', role: 'AI房产顾问' },
+            'AI Rental Manager': { icon: '🔑', color: '#22c55e', role: 'AI租赁经理' },
+            'AI Property Evaluator': { icon: '📊', color: '#ec4899', role: 'AI房产评估师' },
+            'AI Tour Guide': { icon: '🚶', color: '#06b6d4', role: 'AI看房向导' },
+            'AI Transaction Coordinator': { icon: '📑', color: '#14b8a6', role: 'AI交易协调员' },
+            // AI智能人力资源服务管理系统
+            'AI HR Director': { icon: '👥', color: '#8b5cf6', role: 'AI人力资源总监' },
+            'AI Recruiter': { icon: '🔍', color: '#f59e0b', role: 'AI招聘专员' },
+            'AI Training Coordinator': { icon: '📚', color: '#22c55e', role: 'AI培训协调员' },
+            'AI Performance Analyst': { icon: '📈', color: '#ec4899', role: 'AI绩效分析师' },
+            'AI Payroll Manager': { icon: '💵', color: '#06b6d4', role: 'AI薪酬经理' },
+            'AI Employee Relations': { icon: '❤️', color: '#14b8a6', role: 'AI员工关系专员' },
+            // AI智能金融服务管理系统
+            'AI Financial Director': { icon: '💳', color: '#3b82f6', role: 'AI金融总监' },
+            'AI Investment Advisor': { icon: '📈', color: '#f59e0b', role: 'AI投资顾问' },
+            'AI Wealth Planner': { icon: '💰', color: '#22c55e', role: 'AI理财规划师' },
+            'AI Risk Manager': { icon: '🎯', color: '#ec4899', role: 'AI风险管理师' },
+            'AI Account Manager': { icon: '👤', color: '#06b6d4', role: 'AI客户经理' },
+            'AI Compliance Auditor': { icon: '🔍', color: '#14b8a6', role: 'AI合规审计员' },
+            // AI智能环保服务管理系统
+            'AI Environmental Director': { icon: '🌿', color: '#8b5cf6', role: 'AI环保总监' },
+            'AI Waste Manager': { icon: '🗑️', color: '#f59e0b', role: 'AI垃圾分类经理' },
+            'AI Monitoring Specialist': { icon: '📡', color: '#22c55e', role: 'AI监测专员' },
+            'AI Recycling Coordinator': { icon: '♻️', color: '#ec4899', role: 'AI回收协调员' },
+            'AI Sustainability Analyst': { icon: '🌱', color: '#06b6d4', role: 'AI可持续分析师' },
+            'AI Community Liaison': { icon: '🏘️', color: '#14b8a6', role: 'AI社区联络员' },
+            // AI智能能源服务管理系统
+            'AI Energy Director': { icon: '⚡', color: '#3b82f6', role: 'AI能源总监' },
+            'AI Power Dispatcher': { icon: '🔌', color: '#f59e0b', role: 'AI电力调度员' },
+            'AI Energy Consultant': { icon: '💡', color: '#22c55e', role: 'AI节能顾问' },
+            'AI Grid Operator': { icon: '🔗', color: '#ec4899', role: 'AI电网运营员' },
+            'AI Maintenance Tech': { icon: '🔧', color: '#06b6d4', role: 'AI维护技师' },
+            'AI Usage Analyst': { icon: '📊', color: '#14b8a6', role: 'AI用量分析师' }
         };
 
         // 拖拽相关变量
