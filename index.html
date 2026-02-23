@@ -20556,6 +20556,132 @@
                     { from: 'AI Water Treatment', to: 'AI Air Quality', content: '空气质量' },
                     { from: 'AI Air Quality', to: 'AI Environmental Scientist', content: '环境报告' }
                 ]
+            },
+            // Cycle 408 新增模板 - AI智能司法执法系统
+            {
+                id: 'ai-legal-system',
+                name: 'AI智能司法执法系统',
+                icon: '⚖️',
+                desc: '从案件审理到判决执行的完整司法执法流程',
+                agents: ['AI Judge', 'AI Prosecutor', 'AI Defense Attorney', 'AI Court Clerk', 'AI Legal Aid'],
+                positions: [
+                    { role: 'AI Judge', x: 400, y: 30 },
+                    { role: 'AI Prosecutor', x: 200, y: 150 },
+                    { role: 'AI Defense Attorney', x: 600, y: 150 },
+                    { role: 'AI Court Clerk', x: 200, y: 270 },
+                    { role: 'AI Legal Aid', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Prosecutor', to: 'AI Judge', content: '提起公诉' },
+                    { from: 'AI Defense Attorney', to: 'AI Judge', content: '辩护意见' },
+                    { from: 'AI Judge', to: 'AI Court Clerk', content: '判决结果' },
+                    { from: 'AI Court Clerk', to: 'AI Legal Aid', content: '法律援助' }
+                ]
+            },
+            // Cycle 408 新增模板 - AI智能政府行政系统
+            {
+                id: 'ai-government-admin',
+                name: 'AI智能政府行政系统',
+                icon: '🏛️',
+                desc: '从政策制定到公共服务的完整政府行政流程',
+                agents: ['AI Mayor', 'AI City Council', 'AI Government Spokesperson', 'AI Policy Analyst', 'AI Public Relations'],
+                positions: [
+                    { role: 'AI Mayor', x: 400, y: 30 },
+                    { role: 'AI City Council', x: 200, y: 150 },
+                    { role: 'AI Government Spokesperson', x: 600, y: 150 },
+                    { role: 'AI Policy Analyst', x: 200, y: 270 },
+                    { role: 'AI Public Relations', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Mayor', to: 'AI City Council', content: '施政纲领' },
+                    { from: 'AI City Council', to: 'AI Policy Analyst', content: '政策建议' },
+                    { from: 'AI Policy Analyst', to: 'AI Government Spokesperson', content: '政策解读' },
+                    { from: 'AI Government Spokesperson', to: 'AI Public Relations', content: '公关宣传' }
+                ]
+            },
+            // Cycle 408 新增模板 - AI智能国防军事系统
+            {
+                id: 'ai-defense-military',
+                name: 'AI智能国防军事系统',
+                icon: '🎖️',
+                desc: '从战略规划到应急响应的完整国防军事流程',
+                agents: ['AI Military Strategist', 'AI Defense Analyst', 'AI Intelligence Officer', 'AI Cyber Defense', 'AI Emergency Commander'],
+                positions: [
+                    { role: 'AI Military Strategist', x: 400, y: 30 },
+                    { role: 'AI Defense Analyst', x: 200, y: 150 },
+                    { role: 'AI Intelligence Officer', x: 600, y: 150 },
+                    { role: 'AI Cyber Defense', x: 200, y: 270 },
+                    { role: 'AI Emergency Commander', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Military Strategist', to: 'AI Defense Analyst', content: '战略部署' },
+                    { from: 'AI Defense Analyst', to: 'AI Intelligence Officer', content: '情报需求' },
+                    { from: 'AI Intelligence Officer', to: 'AI Cyber Defense', content: '网络威胁' },
+                    { from: 'AI Cyber Defense', to: 'AI Emergency Commander', content: '应急响应' }
+                ]
+            },
+            // Cycle 408 新增模板 - AI智能航空航天系统
+            {
+                id: 'ai-aerospace',
+                name: 'AI智能航空航天系统',
+                icon: '🚀',
+                desc: '从飞行计划到太空任务的完整航空航天流程',
+                agents: ['AI Power Grid Manager', 'AI Energy Trader', 'AI Nuclear Engineer', 'AI Renewable Energy', 'AI Smart Meter'],
+                positions: [
+                    { role: 'AI Power Grid Manager', x: 400, y: 30 },
+                    { role: 'AI Energy Trader', x: 200, y: 150 },
+                    { role: 'AI Nuclear Engineer', x: 600, y: 150 },
+                    { role: 'AI Renewable Energy', x: 200, y: 270 },
+                    { role: 'AI Smart Meter', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Power Grid Manager', to: 'AI Energy Trader', content: '电网调度' },
+                    { from: 'AI Energy Trader', to: 'AI Nuclear Engineer', content: '核电需求' },
+                    { from: 'AI Nuclear Engineer', to: 'AI Renewable Energy', content: '新能源' },
+                    { from: 'AI Renewable Energy', to: 'AI Smart Meter', content: '智能计量' }
+                ]
+            },
+            // Cycle 408 新增模板 - AI智能能源电力系统
+            {
+                id: 'ai-energy-power',
+                name: 'AI智能能源电力系统',
+                icon: '⚡',
+                desc: '从电力生产到能源交易的完整能源电力流程',
+                agents: ['AI Power Grid Manager', 'AI Energy Trader', 'AI Nuclear Engineer', 'AI Renewable Energy', 'AI Smart Meter'],
+                positions: [
+                    { role: 'AI Power Grid Manager', x: 400, y: 30 },
+                    { role: 'AI Energy Trader', x: 200, y: 150 },
+                    { role: 'AI Nuclear Engineer', x: 600, y: 150 },
+                    { role: 'AI Renewable Energy', x: 200, y: 270 },
+                    { role: 'AI Smart Meter', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Power Grid Manager', to: 'AI Energy Trader', content: '电网调度' },
+                    { from: 'AI Energy Trader', to: 'AI Nuclear Engineer', content: '核电需求' },
+                    { from: 'AI Nuclear Engineer', to: 'AI Renewable Energy', content: '新能源' },
+                    { from: 'AI Renewable Energy', to: 'AI Smart Meter', content: '智能计量' }
+                ]
+            },
+            // Cycle 408 新增模板 - AI智能化工材料系统
+            {
+                id: 'ai-chemical-materials',
+                name: 'AI智能化工材料系统',
+                icon: '⚗️',
+                desc: '从化工生产到材料研发的完整化工材料流程',
+                agents: ['AI Chemical Engineer', 'AI Process Designer', 'AI Safety Officer', 'AI Quality Control', 'AI Environmental Engineer'],
+                positions: [
+                    { role: 'AI Chemical Engineer', x: 400, y: 30 },
+                    { role: 'AI Process Designer', x: 200, y: 150 },
+                    { role: 'AI Safety Officer', x: 600, y: 150 },
+                    { role: 'AI Quality Control', x: 200, y: 270 },
+                    { role: 'AI Environmental Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Chemical Engineer', to: 'AI Process Designer', content: '化工工艺' },
+                    { from: 'AI Process Designer', to: 'AI Safety Officer', content: '安全要求' },
+                    { from: 'AI Safety Officer', to: 'AI Quality Control', content: '质量标准' },
+                    { from: 'AI Quality Control', to: 'AI Environmental Engineer', content: '环保指标' }
+                ]
             }
         ];
 
@@ -24447,7 +24573,37 @@
             'AI Pollution Monitor': { icon: '🌫️', color: '#6b7280', role: 'AI污染监测工程师' },
             'AI Waste Management': { icon: '♻️', color: '#14b8a6', role: 'AI废物管理工程师' },
             'AI Water Treatment': { icon: '💧', color: '#0ea5e9', role: 'AI水处理工程师' },
-            'AI Air Quality': { icon: '💨', color: '#94a3b8', role: 'AI空气质量工程师' }
+            'AI Air Quality': { icon: '💨', color: '#94a3b8', role: 'AI空气质量工程师' },
+            // Cycle 408 新增角色 - AI智能司法执法
+            'AI Judge': { icon: '⚖️', color: '#8b5cf6', role: 'AI法官' },
+            'AI Prosecutor': { icon: '🎯', color: '#ef4444', role: 'AI检察官' },
+            'AI Defense Attorney': { icon: '🛡️', color: '#3b82f6', role: 'AI辩护律师' },
+            'AI Court Clerk': { icon: '📜', color: '#f59e0b', role: 'AI法院书记员' },
+            'AI Legal Aid': { icon: '📋', color: '#22c55e', role: 'AI法律援助师' },
+            // Cycle 408 新增角色 - AI智能政府行政
+            'AI Mayor': { icon: '🏙️', color: '#ec4899', role: 'AI市长' },
+            'AI City Council': { icon: '🏛️', color: '#a855f7', role: 'AI市议员' },
+            'AI Government Spokesperson': { icon: '📣', color: '#f97316', role: 'AI政府发言人' },
+            'AI Policy Analyst': { icon: '📊', color: '#06b6d4', role: 'AI政策分析师' },
+            'AI Public Relations': { icon: '📢', color: '#14b8a6', role: 'AI公共关系师' },
+            // Cycle 408 新增角色 - AI智能国防军事
+            'AI Military Strategist': { icon: '🎖️', color: '#dc2626', role: 'AI军事战略家' },
+            'AI Defense Analyst': { icon: '🛡️', color: '#64748b', role: 'AI国防分析师' },
+            'AI Intelligence Officer': { icon: '🔐', color: '#0ea5e9', role: 'AI情报官员' },
+            'AI Cyber Defense': { icon: '💻', color: '#8b5cf6', role: 'AI网络防御师' },
+            'AI Emergency Commander': { icon: '🚨', color: '#f43f5e', role: 'AI应急指挥官' },
+            // Cycle 408 新增角色 - AI智能能源电力
+            'AI Power Grid Manager': { icon: '⚡', color: '#eab308', role: 'AI电网管理师' },
+            'AI Energy Trader': { icon: '💰', color: '#22c55e', role: 'AI能源交易师' },
+            'AI Nuclear Engineer': { icon: '☢️', color: '#06b6d4', role: 'AI核能工程师' },
+            'AI Renewable Energy': { icon: '🌞', color: '#84cc16', role: 'AI可再生能源工程师' },
+            'AI Smart Meter': { icon: '📡', color: '#f59e0b', role: 'AI智能电表工程师' },
+            // Cycle 408 新增角色 - AI智能化工材料
+            'AI Chemical Engineer': { icon: '⚗️', color: '#6366f1', role: 'AI化学工程师' },
+            'AI Process Designer': { icon: '📐', color: '#ec4899', role: 'AI工艺设计师' },
+            'AI Safety Officer': { icon: '🛡️', color: '#dc2626', role: 'AI安全官员' },
+            'AI Quality Control': { icon: '✅', color: '#22c55e', role: 'AI质量控制工程师' },
+            'AI Environmental Engineer': { icon: '🌿', color: '#14b8a6', role: 'AI环保工程师' }
         };
 
         // 拖拽相关变量
