@@ -25658,11 +25658,337 @@
                     { from: 'AI Efficiency Expert', to: 'AI Maintenance Lead', content: '维护安排' },
                     { from: 'AI Equipment Manager', to: 'AI Sustainability Advisor', content: '可持续建议' }
                 ]
+            },
+            // AI智能医疗服务系统
+            {
+                id: 'ai-medical-service',
+                name: 'AI智能医疗服务系统',
+                icon: '🏥',
+                desc: '智能医疗服务管理，包括预约挂号、诊断辅助、健康管理等',
+                agents: ['AI Medical Director', 'AI Diagnostic Assistant', 'AI Appointment Manager', 'AI Health Advisor', 'AI Patient Coordinator', 'AI Medical Records'],
+                positions: [
+                    { role: 'AI Medical Director', x: 400, y: 30 },
+                    { role: 'AI Diagnostic Assistant', x: 150, y: 150 },
+                    { role: 'AI Appointment Manager', x: 650, y: 150 },
+                    { role: 'AI Health Advisor', x: 150, y: 300 },
+                    { role: 'AI Patient Coordinator', x: 400, y: 350 },
+                    { role: 'AI Medical Records', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Medical Director', to: 'AI Diagnostic Assistant', content: '诊断辅助' },
+                    { from: 'AI Medical Director', to: 'AI Appointment Manager', content: '预约管理' },
+                    { from: 'AI Diagnostic Assistant', to: 'AI Health Advisor', content: '健康建议' },
+                    { from: 'AI Appointment Manager', to: 'AI Patient Coordinator', content: '患者协调' },
+                    { from: 'AI Health Advisor', to: 'AI Medical Records', content: '病历管理' }
+                ]
+            },
+            // AI智能法律服务系统
+            {
+                id: 'ai-legal-service-v3',
+                name: 'AI智能法律服务系统',
+                icon: '⚖️',
+                desc: '智能法律服务管理，包括合同审核、法律咨询、诉讼辅助等',
+                agents: ['AI Legal Director', 'AI Contract Reviewer', 'AI Legal Consultant', 'AI Case Manager', 'AI Litigation Assistant', 'AI Compliance Officer'],
+                positions: [
+                    { role: 'AI Legal Director', x: 400, y: 30 },
+                    { role: 'AI Contract Reviewer', x: 150, y: 150 },
+                    { role: 'AI Legal Consultant', x: 650, y: 150 },
+                    { role: 'AI Case Manager', x: 150, y: 300 },
+                    { role: 'AI Litigation Assistant', x: 400, y: 350 },
+                    { role: 'AI Compliance Officer', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Legal Director', to: 'AI Contract Reviewer', content: '合同审核' },
+                    { from: 'AI Legal Director', to: 'AI Legal Consultant', content: '法律咨询' },
+                    { from: 'AI Contract Reviewer', to: 'AI Case Manager', content: '案件管理' },
+                    { from: 'AI Legal Consultant', to: 'AI Litigation Assistant', content: '诉讼辅助' },
+                    { from: 'AI Case Manager', to: 'AI Compliance Officer', content: '合规审查' }
+                ]
+            },
+            // AI智能物流服务系统
+            {
+                id: 'ai-logistics-service-v3',
+                name: 'AI智能物流服务系统',
+                icon: '🚚',
+                desc: '智能物流服务管理，包括仓储管理、配送调度、供应链优化等',
+                agents: ['AI Logistics Director', 'AI Warehouse Manager', 'AI Delivery Dispatcher', 'AI Supply Chain Analyst', 'AI Route Optimizer', 'AI Fleet Coordinator'],
+                positions: [
+                    { role: 'AI Logistics Director', x: 400, y: 30 },
+                    { role: 'AI Warehouse Manager', x: 150, y: 150 },
+                    { role: 'AI Delivery Dispatcher', x: 650, y: 150 },
+                    { role: 'AI Supply Chain Analyst', x: 150, y: 300 },
+                    { role: 'AI Route Optimizer', x: 400, y: 350 },
+                    { role: 'AI Fleet Coordinator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Logistics Director', to: 'AI Warehouse Manager', content: '仓储管理' },
+                    { from: 'AI Logistics Director', to: 'AI Delivery Dispatcher', content: '配送调度' },
+                    { from: 'AI Warehouse Manager', to: 'AI Supply Chain Analyst', content: '供应链分析' },
+                    { from: 'AI Delivery Dispatcher', to: 'AI Route Optimizer', content: '路线优化' },
+                    { from: 'AI Supply Chain Analyst', to: 'AI Fleet Coordinator', content: '车队协调' }
+                ]
+            },
+            // AI智能建筑工程服务系统
+            {
+                id: 'ai-construction-service',
+                name: 'AI智能建筑工程服务系统',
+                icon: '🏗️',
+                desc: '智能建筑工程项目管理，包括设计审核、施工监督、成本控制等',
+                agents: ['AI Construction Director', 'AI Design Reviewer', 'AI Site Supervisor', 'AI Cost Controller', 'AI Safety Officer', 'AI Project Estimator'],
+                positions: [
+                    { role: 'AI Construction Director', x: 400, y: 30 },
+                    { role: 'AI Design Reviewer', x: 150, y: 150 },
+                    { role: 'AI Site Supervisor', x: 650, y: 150 },
+                    { role: 'AI Cost Controller', x: 150, y: 300 },
+                    { role: 'AI Safety Officer', x: 400, y: 350 },
+                    { role: 'AI Project Estimator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Construction Director', to: 'AI Design Reviewer', content: '设计审核' },
+                    { from: 'AI Construction Director', to: 'AI Site Supervisor', content: '施工监督' },
+                    { from: 'AI Design Reviewer', to: 'AI Cost Controller', content: '成本控制' },
+                    { from: 'AI Site Supervisor', to: 'AI Safety Officer', content: '安全管理' },
+                    { from: 'AI Cost Controller', to: 'AI Project Estimator', content: '项目预算' }
+                ]
+            },
+            // AI智能农业服务系统
+            {
+                id: 'ai-agriculture-service-v2',
+                name: 'AI智能农业服务系统',
+                icon: '🌾',
+                desc: '智能农业服务管理，包括作物监测、农资供应、市场对接等',
+                agents: ['AI Agriculture Director', 'AI Crop Monitor', 'AI Agri Supplier', 'AI Market Connector', 'AI Weather Analyst', 'AI Farm Advisor'],
+                positions: [
+                    { role: 'AI Agriculture Director', x: 400, y: 30 },
+                    { role: 'AI Crop Monitor', x: 150, y: 150 },
+                    { role: 'AI Agri Supplier', x: 650, y: 150 },
+                    { role: 'AI Market Connector', x: 150, y: 300 },
+                    { role: 'AI Weather Analyst', x: 400, y: 350 },
+                    { role: 'AI Farm Advisor', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Agriculture Director', to: 'AI Crop Monitor', content: '作物监测' },
+                    { from: 'AI Agriculture Director', to: 'AI Agri Supplier', content: '农资供应' },
+                    { from: 'AI Crop Monitor', to: 'AI Weather Analyst', content: '气象分析' },
+                    { from: 'AI Agri Supplier', to: 'AI Market Connector', content: '市场对接' },
+                    { from: 'AI Weather Analyst', to: 'AI Farm Advisor', content: '农技建议' }
+                ]
+            },
+            // AI智能制造服务系统
+            {
+                id: 'ai-manufacturing-service',
+                name: 'AI智能制造服务系统',
+                icon: '🏭',
+                desc: '智能制造服务管理，包括生产调度、质量控制、设备维护等',
+                agents: ['AI Manufacturing Director', 'AI Production Scheduler', 'AI Quality Controller', 'AI Equipment Maintainer', 'AI Inventory Manager', 'AI Process Optimizer'],
+                positions: [
+                    { role: 'AI Manufacturing Director', x: 400, y: 30 },
+                    { role: 'AI Production Scheduler', x: 150, y: 150 },
+                    { role: 'AI Quality Controller', x: 650, y: 150 },
+                    { role: 'AI Equipment Maintainer', x: 150, y: 300 },
+                    { role: 'AI Inventory Manager', x: 400, y: 350 },
+                    { role: 'AI Process Optimizer', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Manufacturing Director', to: 'AI Production Scheduler', content: '生产调度' },
+                    { from: 'AI Manufacturing Director', to: 'AI Quality Controller', content: '质量控制' },
+                    { from: 'AI Production Scheduler', to: 'AI Equipment Maintainer', content: '设备维护' },
+                    { from: 'AI Quality Controller', to: 'AI Inventory Manager', content: '库存管理' },
+                    { from: 'AI Equipment Maintainer', to: 'AI Process Optimizer', content: '流程优化' }
+                ]
+            },
+            // AI智能媒体广告服务系统
+            {
+                id: 'ai-media-advertising-service',
+                name: 'AI智能媒体广告服务系统',
+                icon: '📺',
+                desc: '智能媒体广告服务管理，包括内容策划、投放优化、效果分析等',
+                agents: ['AI Media Director', 'AI Content Strategist', 'AI Ad Optimizer', 'AI Media Buyer', 'AI Analytics Expert', 'AI Brand Manager'],
+                positions: [
+                    { role: 'AI Media Director', x: 400, y: 30 },
+                    { role: 'AI Content Strategist', x: 150, y: 150 },
+                    { role: 'AI Ad Optimizer', x: 650, y: 150 },
+                    { role: 'AI Media Buyer', x: 150, y: 300 },
+                    { role: 'AI Analytics Expert', x: 400, y: 350 },
+                    { role: 'AI Brand Manager', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Media Director', to: 'AI Content Strategist', content: '内容策划' },
+                    { from: 'AI Media Director', to: 'AI Ad Optimizer', content: '投放优化' },
+                    { from: 'AI Content Strategist', to: 'AI Media Buyer', content: '媒体采购' },
+                    { from: 'AI Ad Optimizer', to: 'AI Analytics Expert', content: '效果分析' },
+                    { from: 'AI Media Buyer', to: 'AI Brand Manager', content: '品牌管理' }
+                ]
+            }
+        ];
+
+        // Cycle 442 - 新增行业服务系统模板
+        const cycle442Templates = [
+            // AI智能农业服务系统
+            {
+                id: 'ai-agriculture-service',
+                name: 'AI智能农业服务系统',
+                icon: '🌾',
+                desc: '智能农业服务管理，包括种植规划、病虫害防治、收获管理等',
+                agents: ['AI Agriculture Director', 'AI Crop Planner', 'AI Pest Control Specialist', 'AI Harvest Manager', 'AI Soil Analyst', 'AI Farm Operations'],
+                positions: [
+                    { role: 'AI Agriculture Director', x: 400, y: 30 },
+                    { role: 'AI Crop Planner', x: 150, y: 150 },
+                    { role: 'AI Pest Control Specialist', x: 650, y: 150 },
+                    { role: 'AI Harvest Manager', x: 150, y: 300 },
+                    { role: 'AI Soil Analyst', x: 400, y: 350 },
+                    { role: 'AI Farm Operations', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Agriculture Director', to: 'AI Crop Planner', content: '种植规划' },
+                    { from: 'AI Agriculture Director', to: 'AI Pest Control Specialist', content: '病虫害防治' },
+                    { from: 'AI Crop Planner', to: 'AI Soil Analyst', content: '土壤分析' },
+                    { from: 'AI Pest Control Specialist', to: 'AI Harvest Manager', content: '收获管理' },
+                    { from: 'AI Soil Analyst', to: 'AI Farm Operations', content: '农场运营' }
+                ]
+            },
+            // AI智能房地产服务系统
+            {
+                id: 'ai-real-estate-service',
+                name: 'AI智能房地产服务系统',
+                icon: '🏠',
+                desc: '智能房产服务管理，包括房源管理、交易评估、租赁管理等',
+                agents: ['AI RealEstate Director', 'AI Property Manager', 'AI Transaction Evaluator', 'AI Leasing Agent', 'AI Market Analyst', 'AI Client Advisor'],
+                positions: [
+                    { role: 'AI RealEstate Director', x: 400, y: 30 },
+                    { role: 'AI Property Manager', x: 150, y: 150 },
+                    { role: 'AI Transaction Evaluator', x: 650, y: 150 },
+                    { role: 'AI Leasing Agent', x: 150, y: 300 },
+                    { role: 'AI Market Analyst', x: 400, y: 350 },
+                    { role: 'AI Client Advisor', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI RealEstate Director', to: 'AI Property Manager', content: '房源管理' },
+                    { from: 'AI RealEstate Director', to: 'AI Transaction Evaluator', content: '交易评估' },
+                    { from: 'AI Property Manager', to: 'AI Leasing Agent', content: '租赁管理' },
+                    { from: 'AI Transaction Evaluator', to: 'AI Market Analyst', content: '市场分析' },
+                    { from: 'AI Market Analyst', to: 'AI Client Advisor', content: '客户咨询' }
+                ]
+            },
+            // AI智能保险服务系统
+            {
+                id: 'ai-insurance-service',
+                name: 'AI智能保险服务系统',
+                icon: '🛡️',
+                desc: '智能保险服务管理，包括保险理赔、风险评估、客户咨询等',
+                agents: ['AI Insurance Director', 'AI Claims Adjuster', 'AI Risk Assessor', 'AI Policy Manager', 'AI Underwriter', 'AI Customer Liaison'],
+                positions: [
+                    { role: 'AI Insurance Director', x: 400, y: 30 },
+                    { role: 'AI Claims Adjuster', x: 150, y: 150 },
+                    { role: 'AI Risk Assessor', x: 650, y: 150 },
+                    { role: 'AI Policy Manager', x: 150, y: 300 },
+                    { role: 'AI Underwriter', x: 400, y: 350 },
+                    { role: 'AI Customer Liaison', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Insurance Director', to: 'AI Claims Adjuster', content: '理赔处理' },
+                    { from: 'AI Insurance Director', to: 'AI Risk Assessor', content: '风险评估' },
+                    { from: 'AI Claims Adjuster', to: 'AI Underwriter', content: '核保决策' },
+                    { from: 'AI Risk Assessor', to: 'AI Policy Manager', content: '保单管理' },
+                    { from: 'AI Policy Manager', to: 'AI Customer Liaison', content: '客户沟通' }
+                ]
+            },
+            // AI智能人力资源服务系统
+            {
+                id: 'ai-hr-service',
+                name: 'AI智能人力资源服务系统',
+                icon: '👥',
+                desc: '智能人力资源服务管理，包括招聘培训、绩效管理、员工关系等',
+                agents: ['AI HR Director', 'AI Recruiter', 'AI Training Coordinator', 'AI Performance Manager', 'AI Employee Relations', 'AI Payroll Specialist'],
+                positions: [
+                    { role: 'AI HR Director', x: 400, y: 30 },
+                    { role: 'AI Recruiter', x: 150, y: 150 },
+                    { role: 'AI Training Coordinator', x: 650, y: 150 },
+                    { role: 'AI Performance Manager', x: 150, y: 300 },
+                    { role: 'AI Employee Relations', x: 400, y: 350 },
+                    { role: 'AI Payroll Specialist', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HR Director', to: 'AI Recruiter', content: '招聘需求' },
+                    { from: 'AI HR Director', to: 'AI Training Coordinator', content: '培训安排' },
+                    { from: 'AI Recruiter', to: 'AI Performance Manager', content: '绩效评估' },
+                    { from: 'AI Training Coordinator', to: 'AI Employee Relations', content: '员工关系' },
+                    { from: 'AI Employee Relations', to: 'AI Payroll Specialist', content: '薪资管理' }
+                ]
+            },
+            // AI智能环保服务系统
+            {
+                id: 'ai-environmental-service',
+                name: 'AI智能环保服务系统',
+                icon: '🌿',
+                desc: '智能环保服务管理，包括环境监测、污染治理、资源回收等',
+                agents: ['AI Environmental Director', 'AI Monitor Specialist', 'AI Pollution Controller', 'AI Recycling Manager', 'AI Sustainability Analyst', 'AI Compliance Inspector'],
+                positions: [
+                    { role: 'AI Environmental Director', x: 400, y: 30 },
+                    { role: 'AI Monitor Specialist', x: 150, y: 150 },
+                    { role: 'AI Pollution Controller', x: 650, y: 150 },
+                    { role: 'AI Recycling Manager', x: 150, y: 300 },
+                    { role: 'AI Sustainability Analyst', x: 400, y: 350 },
+                    { role: 'AI Compliance Inspector', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Director', to: 'AI Monitor Specialist', content: '环境监测' },
+                    { from: 'AI Environmental Director', to: 'AI Pollution Controller', content: '污染治理' },
+                    { from: 'AI Monitor Specialist', to: 'AI Sustainability Analyst', content: '可持续分析' },
+                    { from: 'AI Pollution Controller', to: 'AI Recycling Manager', content: '回收管理' },
+                    { from: 'AI Recycling Manager', to: 'AI Compliance Inspector', content: '合规检查' }
+                ]
+            },
+            // AI智能航空航天服务系统
+            {
+                id: 'ai-aerospace-service',
+                name: 'AI智能航空航天服务系统',
+                icon: '✈️',
+                desc: '智能航空航天服务管理，包括航班调度、维修管理、客服服务等',
+                agents: ['AI Aerospace Director', 'AI Flight Scheduler', 'AI Maintenance Engineer', 'AI Customer Service Lead', 'AI Safety Inspector', 'AI Crew Coordinator'],
+                positions: [
+                    { role: 'AI Aerospace Director', x: 400, y: 30 },
+                    { role: 'AI Flight Scheduler', x: 150, y: 150 },
+                    { role: 'AI Maintenance Engineer', x: 650, y: 150 },
+                    { role: 'AI Customer Service Lead', x: 150, y: 300 },
+                    { role: 'AI Safety Inspector', x: 400, y: 350 },
+                    { role: 'AI Crew Coordinator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Aerospace Director', to: 'AI Flight Scheduler', content: '航班调度' },
+                    { from: 'AI Aerospace Director', to: 'AI Maintenance Engineer', content: '维修管理' },
+                    { from: 'AI Flight Scheduler', to: 'AI Crew Coordinator', content: '机组协调' },
+                    { from: 'AI Maintenance Engineer', to: 'AI Safety Inspector', content: '安全检查' },
+                    { from: 'AI Safety Inspector', to: 'AI Customer Service Lead', content: '客服服务' }
+                ]
+            },
+            // AI智能媒体广告服务系统
+            {
+                id: 'ai-media-advertising-service',
+                name: 'AI智能媒体广告服务系统',
+                icon: '📺',
+                desc: '智能媒体广告服务管理，包括广告创意、投放优化、品牌推广等',
+                agents: ['AI Media Director', 'AI Creative Strategist', 'AI Ad Optimizer', 'AI Brand Manager', 'AI Content Producer', 'AI Analytics Specialist'],
+                positions: [
+                    { role: 'AI Media Director', x: 400, y: 30 },
+                    { role: 'AI Creative Strategist', x: 150, y: 150 },
+                    { role: 'AI Ad Optimizer', x: 650, y: 150 },
+                    { role: 'AI Brand Manager', x: 150, y: 300 },
+                    { role: 'AI Content Producer', x: 400, y: 350 },
+                    { role: 'AI Analytics Specialist', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Media Director', to: 'AI Creative Strategist', content: '创意策略' },
+                    { from: 'AI Media Director', to: 'AI Ad Optimizer', content: '投放优化' },
+                    { from: 'AI Creative Strategist', to: 'AI Content Producer', content: '内容制作' },
+                    { from: 'AI Ad Optimizer', to: 'AI Analytics Specialist', content: '数据分析' },
+                    { from: 'AI Analytics Specialist', to: 'AI Brand Manager', content: '品牌管理' }
+                ]
             }
         ];
 
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates];
 
         // Agent 角色配置
         const agentRoles = {
