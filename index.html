@@ -14170,6 +14170,167 @@
                     { from: 'AI Toy Marketing', to: 'AI Toy Designer', content: '市场需求反馈' },
                     { from: 'AI Plush Maker', to: 'AI Toy Designer', content: '制作完成样品' }
                 ]
+            },
+            // Cycle 358 新增模板 - AI智能影视制作系统
+            {
+                id: 'ai-film-production-system',
+                name: 'AI智能影视制作系统',
+                icon: '🎬',
+                desc: '从剧本创作到后期制作的完整影视制作流程',
+                agents: ['AI Film Producer', 'AI Screenwriter', 'AI Director', 'AI Cinematographer', 'AI Film Editor'],
+                positions: [
+                    { role: 'AI Film Producer', x: 400, y: 50 },
+                    { role: 'AI Screenwriter', x: 200, y: 180 },
+                    { role: 'AI Director', x: 600, y: 180 },
+                    { role: 'AI Cinematographer', x: 200, y: 310 },
+                    { role: 'AI Film Editor', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Film Producer', to: 'AI Screenwriter', content: '剧本需求下达' },
+                    { from: 'AI Screenwriter', to: 'AI Director', content: '剧本完成提交' },
+                    { from: 'AI Director', to: 'AI Cinematographer', content: '拍摄计划分配' },
+                    { from: 'AI Cinematographer', to: 'AI Film Editor', content: '素材交接' },
+                    { from: 'AI Film Editor', to: 'AI Film Producer', content: '成片提交' },
+                    { from: 'AI Director', to: 'AI Film Producer', content: '拍摄进度汇报' }
+                ]
+            },
+            // Cycle 358 新增模板 - AI智能广告创意系统
+            {
+                id: 'ai-ad-creative-system',
+                name: 'AI智能广告创意系统',
+                icon: '💡',
+                desc: '从创意策划到广告制作投放的完整广告流程',
+                agents: ['AI Creative Director', 'AI Copywriter', 'AI Art Director', 'AI Media Planner', 'AI Brand Manager'],
+                positions: [
+                    { role: 'AI Creative Director', x: 400, y: 50 },
+                    { role: 'AI Copywriter', x: 200, y: 180 },
+                    { role: 'AI Art Director', x: 600, y: 180 },
+                    { role: 'AI Media Planner', x: 200, y: 310 },
+                    { role: 'AI Brand Manager', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Creative Director', to: 'AI Copywriter', content: '文案需求下达' },
+                    { from: 'AI Creative Director', to: 'AI Art Director', content: '视觉需求下达' },
+                    { from: 'AI Copywriter', to: 'AI Art Director', content: '文案素材提交' },
+                    { from: 'AI Art Director', to: 'AI Media Planner', content: '广告素材完成' },
+                    { from: 'AI Media Planner', to: 'AI Brand Manager', content: '投放效果报告' },
+                    { from: 'AI Brand Manager', to: 'AI Creative Director', content: '策略反馈' }
+                ]
+            },
+            // Cycle 358 新增音乐制作系统
+            {
+                id: 'ai-music-production-system',
+                name: 'AI智能音乐制作系统',
+                icon: '🎵',
+                desc: '从音乐创作到制作发行的完整音乐制作流程',
+                agents: ['AI Music Producer', 'AI Beatmaker', 'AI Lyricist', 'AI Sound Designer', 'AI Mastering Engineer'],
+                positions: [
+                    { role: 'AI Music Producer', x: 400, y: 50 },
+                    { role: 'AI Beatmaker', x: 200, y: 180 },
+                    { role: 'AI Lyricist', x: 600, y: 180 },
+                    { role: 'AI Sound Designer', x: 200, y: 310 },
+                    { role: 'AI Mastering Engineer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Music Producer', to: 'AI Beatmaker', content: '编曲需求下达' },
+                    { from: 'AI Music Producer', to: 'AI Lyricist', content: '歌词需求下达' },
+                    { from: 'AI Beatmaker', to: 'AI Sound Designer', content: '编曲完成' },
+                    { from: 'AI Lyricist', to: 'AI Sound Designer', content: '歌词提交' },
+                    { from: 'AI Sound Designer', to: 'AI Mastering Engineer', content: '混音完成' },
+                    { from: 'AI Mastering Engineer', to: 'AI Music Producer', content: '母带完成' }
+                ]
+            },
+            // Cycle 358 新增模板 - AI智能动漫设计系统
+            {
+                id: 'ai-animation-design-system',
+                name: 'AI智能动漫设计系统',
+                icon: '👤',
+                desc: '从角色设计到动画制作的完整动漫制作流程',
+                agents: ['AI Character Designer', 'AI Storyboard Artist', 'AI Animator', 'AI Background Artist', 'AI Voice Director'],
+                positions: [
+                    { role: 'AI Character Designer', x: 400, y: 50 },
+                    { role: 'AI Storyboard Artist', x: 200, y: 180 },
+                    { role: 'AI Animator', x: 600, y: 180 },
+                    { role: 'AI Background Artist', x: 200, y: 310 },
+                    { role: 'AI Voice Director', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Character Designer', to: 'AI Storyboard Artist', content: '角色设定提交' },
+                    { from: 'AI Character Designer', to: 'AI Background Artist', content: '场景风格需求' },
+                    { from: 'AI Storyboard Artist', to: 'AI Animator', content: '分镜交付' },
+                    { from: 'AI Background Artist', to: 'AI Animator', content: '背景素材交付' },
+                    { from: 'AI Animator', to: 'AI Voice Director', content: '动画交付' },
+                    { from: 'AI Voice Director', to: 'AI Character Designer', content: '配音完成反馈' }
+                ]
+            },
+            // Cycle 358 新增模板 - AI智能摄影摄像系统
+            {
+                id: 'ai-photography-system',
+                name: 'AI智能摄影摄像系统',
+                icon: '📷',
+                desc: '从拍摄到后期制作的完整摄影摄像流程',
+                agents: ['AI Photographer', 'AI Photo Retoucher', 'AI Colorist', 'AI Videographer', 'AI Video Editor'],
+                positions: [
+                    { role: 'AI Photographer', x: 400, y: 50 },
+                    { role: 'AI Photo Retoucher', x: 200, y: 180 },
+                    { role: 'AI Colorist', x: 600, y: 180 },
+                    { role: 'AI Videographer', x: 200, y: 310 },
+                    { role: 'AI Video Editor', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Photographer', to: 'AI Photo Retoucher', content: '照片素材提交' },
+                    { from: 'AI Photographer', to: 'AI Videographer', content: '视频需求下达' },
+                    { from: 'AI Photo Retoucher', to: 'AI Colorist', content: '修图完成' },
+                    { from: 'AI Videographer', to: 'AI Video Editor', content: '视频素材提交' },
+                    { from: 'AI Colorist', to: 'AI Photographer', content: '调色完成' },
+                    { from: 'AI Video Editor', to: 'AI Photographer', content: '视频剪辑完成' }
+                ]
+            },
+            // Cycle 358 新增模板 - AI智能舞台灯光系统
+            {
+                id: 'ai-stage-lighting-system',
+                name: 'AI智能舞台灯光系统',
+                icon: '💡',
+                desc: '从舞台设计到灯光音响的完整舞台制作流程',
+                agents: ['AI Lighting Designer', 'AI Stage Designer', 'AI Sound Engineer', 'AI Visual Engineer', 'AI Stage Manager'],
+                positions: [
+                    { role: 'AI Lighting Designer', x: 400, y: 50 },
+                    { role: 'AI Stage Designer', x: 200, y: 180 },
+                    { role: 'AI Sound Engineer', x: 600, y: 180 },
+                    { role: 'AI Visual Engineer', x: 200, y: 310 },
+                    { role: 'AI Stage Manager', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Lighting Designer', to: 'AI Stage Designer', content: '灯光设计需求' },
+                    { from: 'AI Stage Designer', to: 'AI Sound Engineer', content: '舞美设计完成' },
+                    { from: 'AI Sound Engineer', to: 'AI Visual Engineer', content: '音响方案确定' },
+                    { from: 'AI Visual Engineer', to: 'AI Stage Manager', content: '视觉方案完成' },
+                    { from: 'AI Stage Manager', to: 'AI Lighting Designer', content: '整体方案确定' },
+                    { from: 'AI Lighting Designer', to: 'AI Stage Manager', content: '灯光彩排完成' }
+                ]
+            },
+            // Cycle 358 新增模板 - AI智能影视特效系统
+            {
+                id: 'ai-vfx-system',
+                name: 'AI智能影视特效系统',
+                icon: '✨',
+                desc: '从特效设计到合成输出的完整影视特效流程',
+                agents: ['AI VFX Artist', 'AI Compositor', 'AI Motion Graphics', 'AI CGI Artist', 'AI Visual Effects Supervisor'],
+                positions: [
+                    { role: 'AI VFX Artist', x: 400, y: 50 },
+                    { role: 'AI Compositor', x: 200, y: 180 },
+                    { role: 'AI Motion Graphics', x: 600, y: 180 },
+                    { role: 'AI CGI Artist', x: 200, y: 310 },
+                    { role: 'AI Visual Effects Supervisor', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI VFX Artist', to: 'AI Compositor', content: '特效素材提交' },
+                    { from: 'AI VFX Artist', to: 'AI CGI Artist', content: 'CGI需求下达' },
+                    { from: 'AI Motion Graphics', to: 'AI Compositor', content: '动效素材提交' },
+                    { from: 'AI CGI Artist', to: 'AI Visual Effects Supervisor', content: 'CGI渲染完成' },
+                    { from: 'AI Compositor', to: 'AI Visual Effects Supervisor', content: '合成完成' },
+                    { from: 'AI Visual Effects Supervisor', to: 'AI VFX Artist', content: '特效审核反馈' }
+                ]
             }
         ];
 
@@ -16076,7 +16237,49 @@
             'AI Toy Engineer': { icon: '🎮', color: '#ec4899', role: 'AI玩具工程师' },
             'AI Plush Maker': { icon: '🧸', color: '#f59e0b', role: 'AI毛绒玩具制作师' },
             'AI Toy Safety Tester': { icon: '✅', color: '#3b82f6', role: 'AI玩具安全测试员' },
-            'AI Toy Marketing': { icon: '📢', color: '#22c55e', role: 'AI玩具营销师' }
+            'AI Toy Marketing': { icon: '📢', color: '#22c55e', role: 'AI玩具营销师' },
+            // Cycle 358 新增角色 - AI 智能影视制作
+            'AI Film Producer': { icon: '🎬', color: '#8b5cf6', role: 'AI电影制片人' },
+            'AI Screenwriter': { icon: '✍️', color: '#ec4899', role: 'AI编剧师' },
+            'AI Director': { icon: '🎥', color: '#f59e0b', role: 'AI导演' },
+            'AI Cinematographer': { icon: '📷', color: '#3b82f6', role: 'AI摄影指导' },
+            'AI Film Editor': { icon: '🎞️', color: '#22c55e', role: 'AI电影剪辑师' },
+            // Cycle 358 新增角色 - AI 智能广告创意
+            'AI Creative Director': { icon: '💡', color: '#f97316', role: 'AI创意总监' },
+            'AI Copywriter': { icon: '✏️', color: '#06b6d4', role: 'AI文案撰写师' },
+            'AI Art Director': { icon: '🎨', color: '#a855f7', role: 'AI美术指导' },
+            'AI Media Planner': { icon: '📺', color: '#14b8a6', role: 'AI媒体策划师' },
+            'AI Brand Manager': { icon: '💎', color: '#ec4899', role: 'AI品牌经理' },
+            // Cycle 358 新增角色 - AI 智能音乐制作
+            'AI Music Producer': { icon: '🎵', color: '#8b5cf6', role: 'AI音乐制作人' },
+            'AI Beatmaker': { icon: '🥁', color: '#f59e0b', role: 'AI节拍制作师' },
+            'AI Lyricist': { icon: '📝', color: '#ec4899', role: 'AI作词人' },
+            'AI Sound Designer': { icon: '🔊', color: '#3b82f6', role: 'AI音效设计师' },
+            'AI Mastering Engineer': { icon: '🎚️', color: '#22c55e', role: 'AI母带工程师' },
+            // Cycle 358 新增角色 - AI 智能动漫设计
+            'AI Character Designer': { icon: '👤', color: '#f97316', role: 'AI角色设计师' },
+            'AI Storyboard Artist': { icon: '📖', color: '#06b6d4', role: 'AI分镜画师' },
+            'AI Animator': { icon: '🎬', color: '#a855f7', role: 'AI动画师' },
+            'AI Background Artist': { icon: '🏞️', color: '#14b8a6', role: 'AI背景画师' },
+            'AI Voice Director': { icon: '🎤', color: '#ec4899', role: 'AI配音导演' },
+            // Cycle 358 新增角色 - AI 智能摄影摄像
+            'AI Photographer': { icon: '📷', color: '#8b5cf6', role: 'AI摄影师' },
+            'AI Photo Retoucher': { icon: '🎞️', color: '#ec4899', role: 'AI照片修图师' },
+            'AI Colorist': { icon: '🎨', color: '#f59e0b', role: 'AI调色师' },
+            'AI Videographer': { icon: '🎥', color: '#3b82f6', role: 'AI摄像师' },
+            'AI Video Editor': { icon: '🎬', color: '#22c55e', role: 'AI视频剪辑师' },
+            // Cycle 358 新增角色 - AI 智能舞台灯光
+            'AI Lighting Designer': { icon: '💡', color: '#f97316', role: 'AI灯光设计师' },
+            'AI Stage Designer': { icon: '🎭', color: '#06b6d4', role: 'AI舞台设计师' },
+            'AI Sound Engineer': { icon: '🔊', color: '#a855f7', role: 'AI音响工程师' },
+            'AI Visual Engineer': { icon: '✨', color: '#14b8a6', role: 'AI视觉工程师' },
+            'AI Stage Manager': { icon: '📋', color: '#ec4899', role: 'AI舞台监督' },
+            // Cycle 358 新增角色 - AI 智能影视特效
+            'AI VFX Artist': { icon: '✨', color: '#8b5cf6', role: 'AI特效艺术家' },
+            'AI Compositor': { icon: '🔬', color: '#ec4899', role: 'AI合成师' },
+            'AI Motion Graphics': { icon: '🎬', color: '#f59e0b', role: 'AI动效设计师' },
+            'AI CGI Artist': { icon: '🖼️', color: '#3b82f6', role: 'AI CGI艺术家' },
+            'AI Visual Effects Supervisor': { icon: '🌟', color: '#22c55e', role: 'AI特效总监' }
         };
 
         // 拖拽相关变量
