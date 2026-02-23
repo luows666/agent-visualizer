@@ -17804,6 +17804,152 @@
                     { from: 'AI Price Optimizer', to: 'AI Retail Tech', content: '价格优化方案' },
                     { from: 'AI Customer Insights', to: 'AI Retail Tech', content: '客户洞察报告' }
                 ]
+            },
+            // Cycle 385 新增模板 - AI智能公共服务系统
+            {
+                id: 'ai-public-service',
+                name: 'AI智能公共服务系统',
+                icon: '🏛️',
+                desc: '从政策制定到服务实施的完整公共服务流程',
+                agents: ['AI Public Policy', 'AI Citizen Service', 'AI Urban Manager', 'AI Emergency Planner', 'AI Social Worker'],
+                positions: [
+                    { role: 'AI Public Policy', x: 400, y: 50 },
+                    { role: 'AI Citizen Service', x: 200, y: 180 },
+                    { role: 'AI Urban Manager', x: 600, y: 180 },
+                    { role: 'AI Emergency Planner', x: 200, y: 310 },
+                    { role: 'AI Social Worker', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Public Policy', to: 'AI Citizen Service', content: '政策执行方案' },
+                    { from: 'AI Public Policy', to: 'AI Urban Manager', content: '城市管理政策' },
+                    { from: 'AI Public Policy', to: 'AI Emergency Planner', content: '应急预案要求' },
+                    { from: 'AI Public Policy', to: 'AI Social Worker', content: '社会服务政策' },
+                    { from: 'AI Citizen Service', to: 'AI Public Policy', content: '服务反馈' },
+                    { from: 'AI Urban Manager', to: 'AI Public Policy', content: '城市管理报告' },
+                    { from: 'AI Emergency Planner', to: 'AI Public Policy', content: '应急响应情况' },
+                    { from: 'AI Social Worker', to: 'AI Public Policy', content: '社会服务报告' }
+                ]
+            },
+            // Cycle 385 新增模板 - AI智能国防军事系统
+            {
+                id: 'ai-defense-military',
+                name: 'AI智能国防军事系统',
+                icon: '🛡️',
+                desc: '从战略规划到军事行动的完整国防军事流程',
+                agents: ['AI Defense Strategist', 'AI Intelligence Analyst', 'AI Cyber Warfare', 'AI Logistics Commander', 'AI Training Officer'],
+                positions: [
+                    { role: 'AI Defense Strategist', x: 400, y: 50 },
+                    { role: 'AI Intelligence Analyst', x: 200, y: 180 },
+                    { role: 'AI Cyber Warfare', x: 600, y: 180 },
+                    { role: 'AI Logistics Commander', x: 200, y: 310 },
+                    { role: 'AI Training Officer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Defense Strategist', to: 'AI Intelligence Analyst', content: '情报需求' },
+                    { from: 'AI Defense Strategist', to: 'AI Cyber Warfare', content: '网络作战计划' },
+                    { from: 'AI Defense Strategist', to: 'AI Logistics Commander', content: '后勤保障需求' },
+                    { from: 'AI Defense Strategist', to: 'AI Training Officer', content: '训练计划要求' },
+                    { from: 'AI Intelligence Analyst', to: 'AI Defense Strategist', content: '情报分析报告' },
+                    { from: 'AI Cyber Warfare', to: 'AI Defense Strategist', content: '网络作战情况' },
+                    { from: 'AI Logistics Commander', to: 'AI Defense Strategist', content: '后勤保障报告' },
+                    { from: 'AI Training Officer', to: 'AI Defense Strategist', content: '训练结果反馈' }
+                ]
+            },
+            // Cycle 385 新增模板 - AI智能航空航天系统
+            {
+                id: 'ai-aerospace',
+                name: 'AI智能航空航天系统',
+                icon: '🚀',
+                desc: '从飞行设计到太空任务的完整航空航天流程',
+                agents: ['AI Aircraft Designer', 'AI Flight Engineer', 'AI Space Mission Planner', 'AI Satellite Operator', 'AI Avionics Engineer'],
+                positions: [
+                    { role: 'AI Aircraft Designer', x: 400, y: 50 },
+                    { role: 'AI Flight Engineer', x: 200, y: 180 },
+                    { role: 'AI Space Mission Planner', x: 600, y: 180 },
+                    { role: 'AI Satellite Operator', x: 200, y: 310 },
+                    { role: 'AI Avionics Engineer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Aircraft Designer', to: 'AI Flight Engineer', content: '飞行设计要求' },
+                    { from: 'AI Aircraft Designer', to: 'AI Space Mission Planner', content: '任务设计需求' },
+                    { from: 'AI Aircraft Designer', to: 'AI Avionics Engineer', content: '航电设计要求' },
+                    { from: 'AI Flight Engineer', to: 'AI Aircraft Designer', content: '飞行测试报告' },
+                    { from: 'AI Space Mission Planner', to: 'AI Aircraft Designer', content: '任务规划完成' },
+                    { from: 'AI Satellite Operator', to: 'AI Space Mission Planner', content: '卫星运营数据' },
+                    { from: 'AI Avionics Engineer', to: 'AI Aircraft Designer', content: '航电系统完成' }
+                ]
+            },
+            // Cycle 385 新增模板 - AI智能海洋工程系统
+            {
+                id: 'ai-marine-engineering',
+                name: 'AI智能海洋工程系统',
+                icon: '🌊',
+                desc: '从海洋探测到资源开发的完整海洋工程流程',
+                agents: ['AI Marine Surveyor', 'AI Oceanographer', 'AI Subsea Engineer', 'AI Offshore Platform Manager', 'AI Coastal Engineer'],
+                positions: [
+                    { role: 'AI Marine Surveyor', x: 400, y: 50 },
+                    { role: 'AI Oceanographer', x: 200, y: 180 },
+                    { role: 'AI Subsea Engineer', x: 600, y: 180 },
+                    { role: 'AI Offshore Platform Manager', x: 200, y: 310 },
+                    { role: 'AI Coastal Engineer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Marine Surveyor', to: 'AI Oceanographer', content: '海洋调查数据' },
+                    { from: 'AI Marine Surveyor', to: 'AI Subsea Engineer', content: '海底工程需求' },
+                    { from: 'AI Marine Surveyor', to: 'AI Coastal Engineer', content: '海岸工程需求' },
+                    { from: 'AI Oceanographer', to: 'AI Marine Surveyor', content: '海洋分析报告' },
+                    { from: 'AI Subsea Engineer', to: 'AI Marine Surveyor', content: '海底工程完成' },
+                    { from: 'AI Offshore Platform Manager', to: 'AI Subsea Engineer', content: '平台运营需求' },
+                    { from: 'AI Coastal Engineer', to: 'AI Marine Surveyor', content: '海岸工程完成' }
+                ]
+            },
+            // Cycle 385 新增模板 - AI智能材料科学系统
+            {
+                id: 'ai-materials-science',
+                name: 'AI智能材料科学系统',
+                icon: '🔬',
+                desc: '从材料研发到性能测试的完整材料科学流程',
+                agents: ['AI Materials Scientist', 'AI Nanomaterials Engineer', 'AI Polymer Engineer', 'AI Metallurgist', 'AI Quality Tester'],
+                positions: [
+                    { role: 'AI Materials Scientist', x: 400, y: 50 },
+                    { role: 'AI Nanomaterials Engineer', x: 200, y: 180 },
+                    { role: 'AI Polymer Engineer', x: 600, y: 180 },
+                    { role: 'AI Metallurgist', x: 200, y: 310 },
+                    { role: 'AI Quality Tester', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Materials Scientist', to: 'AI Nanomaterials Engineer', content: '纳米材料研发需求' },
+                    { from: 'AI Materials Scientist', to: 'AI Polymer Engineer', content: '高分子材料需求' },
+                    { from: 'AI Materials Scientist', to: 'AI Metallurgist', content: '金属材料需求' },
+                    { from: 'AI Nanomaterials Engineer', to: 'AI Materials Scientist', content: '纳米材料完成' },
+                    { from: 'AI Polymer Engineer', to: 'AI Materials Scientist', content: '高分子材料完成' },
+                    { from: 'AI Metallurgist', to: 'AI Materials Scientist', content: '金属材料完成' },
+                    { from: 'AI Quality Tester', to: 'AI Materials Scientist', content: '质量测试报告' }
+                ]
+            },
+            // Cycle 385 新增模板 - AI智能生物医学系统
+            {
+                id: 'ai-biomedical',
+                name: 'AI智能生物医学系统',
+                icon: '🧬',
+                desc: '从医学研究到临床应用的完整生物医学流程',
+                agents: ['AI Biomedical Engineer', 'AI Drug Discovery', 'AI Clinical Trial Manager', 'AI Medical Device Designer', 'AI Diagnostic Expert'],
+                positions: [
+                    { role: 'AI Biomedical Engineer', x: 400, y: 50 },
+                    { role: 'AI Drug Discovery', x: 200, y: 180 },
+                    { role: 'AI Clinical Trial Manager', x: 600, y: 180 },
+                    { role: 'AI Medical Device Designer', x: 200, y: 310 },
+                    { role: 'AI Diagnostic Expert', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Biomedical Engineer', to: 'AI Drug Discovery', content: '药物研发需求' },
+                    { from: 'AI Biomedical Engineer', to: 'AI Medical Device Designer', content: '医疗设备需求' },
+                    { from: 'AI Biomedical Engineer', to: 'AI Diagnostic Expert', content: '诊断技术需求' },
+                    { from: 'AI Drug Discovery', to: 'AI Biomedical Engineer', content: '药物研发完成' },
+                    { from: 'AI Clinical Trial Manager', to: 'AI Drug Discovery', content: '临床试验方案' },
+                    { from: 'AI Medical Device Designer', to: 'AI Biomedical Engineer', content: '设备设计完成' },
+                    { from: 'AI Diagnostic Expert', to: 'AI Biomedical Engineer', content: '诊断分析完成' }
+                ]
             }
         ];
 
@@ -20802,7 +20948,43 @@
             'AI Route Optimizer': { icon: '🗺️', color: '#22c55e', role: 'AI路线优化师' },
             'AI Warehouse Automation': { icon: '🏭', color: '#f97316', role: 'AI仓储自动化工程师' },
             'AI Fleet Management': { icon: '🚛', color: '#8b5cf6', role: 'AI车队管理师' },
-            'AI Delivery Prediction': { icon: '📍', color: '#06b6d4', role: 'AI配送预测师' }
+            'AI Delivery Prediction': { icon: '📍', color: '#06b6d4', role: 'AI配送预测师' },
+            // Cycle 385 新增角色 - AI智能公共服务
+            'AI Public Policy': { icon: '📜', color: '#8b5cf6', role: 'AI公共政策师' },
+            'AI Citizen Service': { icon: '🏛️', color: '#3b82f6', role: 'AI公民服务师' },
+            'AI Urban Manager': { icon: '🏙️', color: '#10b981', role: 'AI城市管理师' },
+            'AI Emergency Planner': { icon: '🚨', color: '#ef4444', role: 'AI应急规划师' },
+            'AI Social Worker': { icon: '🤝', color: '#ec4899', role: 'AI社会工作者' },
+            // Cycle 385 新增角色 - AI智能国防军事
+            'AI Defense Strategist': { icon: '🛡️', color: '#f59e0b', role: 'AI国防战略师' },
+            'AI Intelligence Analyst': { icon: '🔍', color: '#06b6d4', role: 'AI情报分析师' },
+            'AI Cyber Warfare': { icon: '💻', color: '#dc2626', role: 'AI网络战专家' },
+            'AI Logistics Commander': { icon: '⚔️', color: '#84cc16', role: 'AI后勤指挥官' },
+            'AI Training Officer': { icon: '🎖️', color: '#a855f7', role: 'AI训练官' },
+            // Cycle 385 新增角色 - AI智能航空航天
+            'AI Aircraft Designer': { icon: '✈️', color: '#0ea5e9', role: 'AI飞机设计师' },
+            'AI Flight Engineer': { icon: '🛫', color: '#14b8a6', role: 'AI飞行工程师' },
+            'AI Space Mission Planner': { icon: '🗺️', color: '#f97316', role: 'AI太空任务规划师' },
+            'AI Satellite Operator': { icon: '🛰️', color: '#8b5cf6', role: 'AI卫星运营商' },
+            'AI Avionics Engineer': { icon: '📡', color: '#ec4899', role: 'AI航电工程师' },
+            // Cycle 385 新增角色 - AI智能海洋工程
+            'AI Marine Surveyor': { icon: '⚓', color: '#06b6d4', role: 'AI海洋测量师' },
+            'AI Oceanographer': { icon: '🌊', color: '#0ea5e9', role: 'AI海洋学家' },
+            'AI Subsea Engineer': { icon: '🔧', color: '#14b8a6', role: 'AI海底工程师' },
+            'AI Offshore Platform Manager': { icon: '🏗️', color: '#f59e0b', role: 'AI海上平台经理' },
+            'AI Coastal Engineer': { icon: '🏖️', color: '#84cc16', role: 'AI海岸工程师' },
+            // Cycle 385 新增角色 - AI智能材料科学
+            'AI Materials Scientist': { icon: '🔬', color: '#8b5cf6', role: 'AI材料科学家' },
+            'AI Nanomaterials Engineer': { icon: '⚛️', color: '#3b82f6', role: 'AI纳米材料工程师' },
+            'AI Polymer Engineer': { icon: '🧪', color: '#ec4899', role: 'AI高分子材料工程师' },
+            'AI Metallurgist': { icon: '⚙️', color: '#f59e0b', role: 'AI冶金工程师' },
+            'AI Quality Tester': { icon: '✅', color: '#22c55e', role: 'AI质量测试员' },
+            // Cycle 385 新增角色 - AI智能生物医学
+            'AI Biomedical Engineer': { icon: '🧬', color: '#8b5cf6', role: 'AI生物医学工程师' },
+            'AI Drug Discovery': { icon: '💊', color: '#ec4899', role: 'AI药物发现工程师' },
+            'AI Clinical Trial Manager': { icon: '🔬', color: '#3b82f6', role: 'AI临床试验经理' },
+            'AI Medical Device Designer': { icon: '💉', color: '#f43f5e', role: 'AI医疗设备设计师' },
+            'AI Diagnostic Expert': { icon: '🏥', color: '#14b8a6', role: 'AI诊断专家' }
         };
 
         // 拖拽相关变量
