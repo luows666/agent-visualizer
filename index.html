@@ -13750,6 +13750,150 @@
                     { from: 'AI Stress Counselor', to: 'AI Psychologist', content: '咨询记录' },
                     { from: 'AI Psychologist', to: 'AI Couples Counselor', content: '婚姻咨询需求' }
                 ]
+            },
+            // Cycle 355 新增模板 - AI智能人力资源系统
+            {
+                id: 'ai-hr-system',
+                name: 'AI智能人力资源系统',
+                icon: '👥',
+                desc: '从招聘到员工发展的完整人力资源流程',
+                agents: ['AI HR Director', 'AI Recruiter', 'AI Training Coordinator', 'AI Performance Manager', 'AI Employee Relations'],
+                positions: [
+                    { role: 'AI HR Director', x: 400, y: 50 },
+                    { role: 'AI Recruiter', x: 200, y: 180 },
+                    { role: 'AI Training Coordinator', x: 400, y: 180 },
+                    { role: 'AI Performance Manager', x: 600, y: 180 },
+                    { role: 'AI Employee Relations', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI HR Director', to: 'AI Recruiter', content: '招聘需求' },
+                    { from: 'AI Recruiter', to: 'AI HR Director', content: '候选人推荐' },
+                    { from: 'AI HR Director', to: 'AI Training Coordinator', content: '培训需求' },
+                    { from: 'AI Training Coordinator', to: 'AI HR Director', content: '培训计划' },
+                    { from: 'AI HR Director', to: 'AI Performance Manager', content: '绩效评估需求' },
+                    { from: 'AI Performance Manager', to: 'AI HR Director', content: '绩效报告' },
+                    { from: 'AI HR Director', to: 'AI Employee Relations', content: '员工关系需求' }
+                ]
+            },
+            // Cycle 355 新增模板 - AI智能保险服务系统
+            {
+                id: 'ai-insurance-system',
+                name: 'AI智能保险服务系统',
+                icon: '🛡️',
+                desc: '从保险咨询到理赔服务的完整保险服务流程',
+                agents: ['AI Insurance Agent', 'AI Claims Adjuster', 'AI Underwriter', 'AI Insurance Consultant', 'AI Risk Evaluator'],
+                positions: [
+                    { role: 'AI Insurance Agent', x: 400, y: 50 },
+                    { role: 'AI Insurance Consultant', x: 200, y: 180 },
+                    { role: 'AI Underwriter', x: 400, y: 180 },
+                    { role: 'AI Risk Evaluator', x: 600, y: 180 },
+                    { role: 'AI Claims Adjuster', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Insurance Agent', to: 'AI Insurance Consultant', content: '客户咨询需求' },
+                    { from: 'AI Insurance Consultant', to: 'AI Insurance Agent', content: '保险方案' },
+                    { from: 'AI Insurance Agent', to: 'AI Underwriter', content: '核保需求' },
+                    { from: 'AI Underwriter', to: 'AI Insurance Agent', content: '核保结果' },
+                    { from: 'AI Underwriter', to: 'AI Risk Evaluator', content: '风险评估需求' },
+                    { from: 'AI Risk Evaluator', to: 'AI Underwriter', content: '风险评估报告' },
+                    { from: 'AI Insurance Agent', to: 'AI Claims Adjuster', content: '理赔申请' }
+                ]
+            },
+            // Cycle 355 新增模板 - AI智能摄影服务系统
+            {
+                id: 'ai-photography-system',
+                name: 'AI智能摄影服务系统',
+                icon: '📷',
+                desc: '从摄影预约到后期制作的完整摄影服务流程',
+                agents: ['AI Portrait Photographer', 'AI Wedding Photographer', 'AI Product Photographer', 'AI Photo Retoucher', 'AI Album Designer'],
+                positions: [
+                    { role: 'AI Portrait Photographer', x: 400, y: 50 },
+                    { role: 'AI Wedding Photographer', x: 200, y: 180 },
+                    { role: 'AI Product Photographer', x: 600, y: 180 },
+                    { role: 'AI Photo Retoucher', x: 200, y: 310 },
+                    { role: 'AI Album Designer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Portrait Photographer', to: 'AI Photo Retoucher', content: '人像照片' },
+                    { from: 'AI Wedding Photographer', to: 'AI Photo Retoucher', content: '婚礼照片' },
+                    { from: 'AI Product Photographer', to: 'AI Photo Retoucher', content: '产品照片' },
+                    { from: 'AI Photo Retoucher', to: 'AI Album Designer', content: '修图完成' },
+                    { from: 'AI Album Designer', to: 'AI Portrait Photographer', content: '相册设计需求' },
+                    { from: 'AI Album Designer', to: 'AI Wedding Photographer', content: '婚礼相册需求' },
+                    { from: 'AI Album Designer', to: 'AI Product Photographer', content: '产品相册需求' }
+                ]
+            },
+            // Cycle 355 新增模板 - AI智能家政服务系统
+            {
+                id: 'ai-housekeeping-system',
+                name: 'AI智能家政服务系统',
+                icon: '🧹',
+                desc: '从家政预约到服务完成的完整家政服务流程',
+                agents: ['AI Housekeeper', 'AI Deep Cleaner', 'AI Move-in Cleaner', 'AI Move-out Cleaner', 'AI Disinfection Specialist'],
+                positions: [
+                    { role: 'AI Housekeeper', x: 400, y: 50 },
+                    { role: 'AI Deep Cleaner', x: 200, y: 180 },
+                    { role: 'AI Move-in Cleaner', x: 600, y: 180 },
+                    { role: 'AI Move-out Cleaner', x: 200, y: 310 },
+                    { role: 'AI Disinfection Specialist', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Housekeeper', to: 'AI Deep Cleaner', content: '深度清洁派单' },
+                    { from: 'AI Housekeeper', to: 'AI Move-in Cleaner', content: '入住清洁派单' },
+                    { from: 'AI Housekeeper', to: 'AI Move-out Cleaner', content: '退房清洁派单' },
+                    { from: 'AI Housekeeper', to: 'AI Disinfection Specialist', content: '消杀服务派单' },
+                    { from: 'AI Deep Cleaner', to: 'AI Housekeeper', content: '清洁完成报告' },
+                    { from: 'AI Move-in Cleaner', to: 'AI Housekeeper', content: '入住清洁完成' },
+                    { from: 'AI Move-out Cleaner', to: 'AI Housekeeper', content: '退房清洁完成' }
+                ]
+            },
+            // Cycle 355 新增模板 - AI智能养老服务系统
+            {
+                id: 'ai-elderly-care-system',
+                name: 'AI智能养老服务系统',
+                icon: '👴',
+                desc: '从养老护理到健康管理的完整养老服务流程',
+                agents: ['AI Elderly Caregiver', 'AI Medical Companion', 'AI Rehabilitation Coach', 'AI Meal Delivery', 'AI Safety Monitor'],
+                positions: [
+                    { role: 'AI Elderly Caregiver', x: 400, y: 50 },
+                    { role: 'AI Medical Companion', x: 200, y: 180 },
+                    { role: 'AI Rehabilitation Coach', x: 600, y: 180 },
+                    { role: 'AI Meal Delivery', x: 200, y: 310 },
+                    { role: 'AI Safety Monitor', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Elderly Caregiver', to: 'AI Medical Companion', content: '医疗陪护需求' },
+                    { from: 'AI Elderly Caregiver', to: 'AI Rehabilitation Coach', content: '康复训练需求' },
+                    { from: 'AI Elderly Caregiver', to: 'AI Meal Delivery', content: '送餐服务需求' },
+                    { from: 'AI Elderly Caregiver', to: 'AI Safety Monitor', content: '安全监控需求' },
+                    { from: 'AI Medical Companion', to: 'AI Elderly Caregiver', content: '陪护记录' },
+                    { from: 'AI Rehabilitation Coach', to: 'AI Elderly Caregiver', content: '康复计划' },
+                    { from: 'AI Safety Monitor', to: 'AI Elderly Caregiver', content: '安全报告' }
+                ]
+            },
+            // Cycle 355 新增模板 - AI智能维修服务系统
+            {
+                id: 'ai-repair-service-system',
+                name: 'AI智能维修服务系统',
+                icon: '🔧',
+                desc: '从维修接单到服务完成的完整维修服务流程',
+                agents: ['AI Maintenance Technician', 'AI Appliance Specialist', 'AI Vehicle Mechanic', 'AI Phone Technician', 'AI Computer Repair Tech'],
+                positions: [
+                    { role: 'AI Maintenance Technician', x: 400, y: 50 },
+                    { role: 'AI Appliance Specialist', x: 200, y: 180 },
+                    { role: 'AI Vehicle Mechanic', x: 600, y: 180 },
+                    { role: 'AI Phone Technician', x: 200, y: 310 },
+                    { role: 'AI Computer Repair Tech', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Maintenance Technician', to: 'AI Appliance Specialist', content: '家电维修派单' },
+                    { from: 'AI Maintenance Technician', to: 'AI Vehicle Mechanic', content: '汽车维修派单' },
+                    { from: 'AI Maintenance Technician', to: 'AI Phone Technician', content: '手机维修派单' },
+                    { from: 'AI Maintenance Technician', to: 'AI Computer Repair Tech', content: '电脑维修派单' },
+                    { from: 'AI Appliance Specialist', to: 'AI Maintenance Technician', content: '维修完成报告' },
+                    { from: 'AI Vehicle Mechanic', to: 'AI Maintenance Technician', content: '汽车维修完成' },
+                    { from: 'AI Phone Technician', to: 'AI Maintenance Technician', content: '手机维修完成' }
+                ]
             }
         ];
 
@@ -15530,7 +15674,49 @@
             'AI Therapy Coach': { icon: '💭', color: '#ec4899', role: 'AI治疗师' },
             'AI Mental Health Advisor': { icon: '🌈', color: '#f59e0b', role: 'AI心理健康顾问' },
             'AI Stress Counselor': { icon: '🧘', color: '#3b82f6', role: 'AI压力咨询师' },
-            'AI Couples Counselor': { icon: '💑', color: '#22c55e', role: 'AI婚姻咨询师' }
+            'AI Couples Counselor': { icon: '💑', color: '#22c55e', role: 'AI婚姻咨询师' },
+            // Cycle 355 新增角色 - AI 智能人力资源
+            'AI HR Director': { icon: '🎯', color: '#8b5cf6', role: 'AI人力资源总监' },
+            'AI Recruiter': { icon: '🔍', color: '#ec4899', role: 'AI招聘专员' },
+            'AI Training Coordinator': { icon: '📚', color: '#f59e0b', role: 'AI培训协调员' },
+            'AI Performance Manager': { icon: '📊', color: '#3b82f6', role: 'AI绩效经理' },
+            'AI Employee Relations': { icon: '🤝', color: '#22c55e', role: 'AI员工关系专员' },
+            // Cycle 355 新增角色 - AI 智能保险服务
+            'AI Insurance Agent': { icon: '💼', color: '#8b5cf6', role: 'AI保险代理人' },
+            'AI Claims Adjuster': { icon: '⚖️', color: '#ec4899', role: 'AI理赔师' },
+            'AI Underwriter': { icon: '📝', color: '#f59e0b', role: 'AI核保师' },
+            'AI Insurance Consultant': { icon: '💡', color: '#3b82f6', role: 'AI保险顾问' },
+            'AI Risk Evaluator': { icon: '📊', color: '#22c55e', role: 'AI风险评估师' },
+            // Cycle 355 新增角色 - AI 智能摄影服务
+            'AI Portrait Photographer': { icon: '📷', color: '#8b5cf6', role: 'AI人像摄影师' },
+            'AI Wedding Photographer': { icon: '💒', color: '#ec4899', role: 'AI婚礼摄影师' },
+            'AI Product Photographer': { icon: '📦', color: '#f59e0b', role: 'AI产品摄影师' },
+            'AI Photo Retoucher': { icon: '🎞️', color: '#3b82f6', role: 'AI照片修图师' },
+            'AI Album Designer': { icon: '📒', color: '#22c55e', role: 'AI相册设计师' },
+            // Cycle 355 新增角色 - AI 智能家政服务
+            'AI Housekeeper': { icon: '🧹', color: '#8b5cf6', role: 'AI家政保洁师' },
+            'AI Deep Cleaner': { icon: '✨', color: '#ec4899', role: 'AI深度清洁师' },
+            'AI Move-in Cleaner': { icon: '🏠', color: '#f59e0b', role: 'AI入住清洁师' },
+            'AI Move-out Cleaner': { icon: '🚚', color: '#3b82f6', role: 'AI退房清洁师' },
+            'AI Disinfection Specialist': { icon: '🧼', color: '#22c55e', role: 'AI消杀专家' },
+            // Cycle 355 新增角色 - AI 智能养老服务
+            'AI Elderly Caregiver': { icon: '👴', color: '#8b5cf6', role: 'AI养老护理员' },
+            'AI Medical Companion': { icon: '🏥', color: '#ec4899', role: 'AI医疗陪护师' },
+            'AI Rehabilitation Coach': { icon: '💪', color: '#f59e0b', role: 'AI康复教练' },
+            'AI Meal Delivery': { icon: '🍱', color: '#3b82f6', role: 'AI送餐服务师' },
+            'AI Safety Monitor': { icon: '👁️', color: '#22c55e', role: 'AI安全看护师' },
+            // Cycle 355 新增角色 - AI 智能维修服务
+            'AI Maintenance Technician': { icon: '🔧', color: '#8b5cf6', role: 'AI维修技师' },
+            'AI Appliance Specialist': { icon: '🎰', color: '#ec4899', role: 'AI家电维修师' },
+            'AI Vehicle Mechanic': { icon: '🚗', color: '#f59e0b', role: 'AI汽车维修师' },
+            'AI Phone Technician': { icon: '📱', color: '#3b82f6', role: 'AI手机维修师' },
+            'AI Computer Repair Tech': { icon: '💻', color: '#22c55e', role: 'AI电脑维修师' },
+            // Cycle 355 新增角色 - AI 智能租赁服务
+            'AI Rental Agent': { icon: '🏠', color: '#8b5cf6', role: 'AI租赁经纪人' },
+            'AI Property Lister': { icon: '📋', color: '#ec4899', role: 'AI房源上架师' },
+            'AI Tenant Screener': { icon: '🔍', color: '#f59e0b', role: 'AI租客审核师' },
+            'AI Lease Manager': { icon: '📜', color: '#3b82f6', role: 'AI租约管理师' },
+            'AI Rent Collector': { icon: '💰', color: '#22c55e', role: 'AI租金收取师' }
         };
 
         // 拖拽相关变量
