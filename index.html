@@ -13462,6 +13462,150 @@
                     { from: 'AI Nutritionist', to: 'AI Food Process Engineer', content: '营养方案' },
                     { from: 'AI Food Process Engineer', to: 'AI Food Safety Expert', content: '安全检测需求' }
                 ]
+            },
+            // Cycle 353 新增模板 - AI智能游戏系统
+            {
+                id: 'ai-gaming-system',
+                name: 'AI智能游戏系统',
+                icon: '🎮',
+                desc: '从游戏设计到开发测试的完整游戏开发流程',
+                agents: ['AI Game Designer', 'AI Game Writer', 'AI Game Artist', 'AI Game Programmer', 'AI Game QA'],
+                positions: [
+                    { role: 'AI Game Designer', x: 400, y: 50 },
+                    { role: 'AI Game Writer', x: 200, y: 180 },
+                    { role: 'AI Game Artist', x: 400, y: 180 },
+                    { role: 'AI Game Programmer', x: 600, y: 180 },
+                    { role: 'AI Game QA', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Game Designer', to: 'AI Game Writer', content: '游戏剧情需求' },
+                    { from: 'AI Game Writer', to: 'AI Game Designer', content: '剧情设计方案' },
+                    { from: 'AI Game Designer', to: 'AI Game Artist', content: '美术需求' },
+                    { from: 'AI Game Artist', to: 'AI Game Designer', content: '美术方案' },
+                    { from: 'AI Game Designer', to: 'AI Game Programmer', content: '开发需求' },
+                    { from: 'AI Game Programmer', to: 'AI Game Designer', content: '开发进度' },
+                    { from: 'AI Game Designer', to: 'AI Game QA', content: '测试需求' }
+                ]
+            },
+            // Cycle 353 新增模板 - AI智能音乐系统
+            {
+                id: 'ai-music-system',
+                name: 'AI智能音乐系统',
+                icon: '🎵',
+                desc: '从音乐创作到制作发行的完整音乐制作流程',
+                agents: ['AI Music Composer', 'AI Lyricist', 'AI Sound Engineer', 'AI Mastering Engineer', 'AI Music Producer'],
+                positions: [
+                    { role: 'AI Music Composer', x: 400, y: 50 },
+                    { role: 'AI Lyricist', x: 200, y: 180 },
+                    { role: 'AI Sound Engineer', x: 400, y: 180 },
+                    { role: 'AI Mastering Engineer', x: 600, y: 180 },
+                    { role: 'AI Music Producer', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Music Composer', to: 'AI Lyricist', content: '歌词需求' },
+                    { from: 'AI Lyricist', to: 'AI Music Composer', content: '歌词稿件' },
+                    { from: 'AI Music Composer', to: 'AI Sound Engineer', content: '编曲需求' },
+                    { from: 'AI Sound Engineer', to: 'AI Music Composer', content: '混音方案' },
+                    { from: 'AI Music Composer', to: 'AI Mastering Engineer', content: '母带需求' },
+                    { from: 'AI Mastering Engineer', to: 'AI Music Composer', content: '母带成品' },
+                    { from: 'AI Music Composer', to: 'AI Music Producer', content: '制作需求' }
+                ]
+            },
+            // Cycle 353 新增模板 - AI智能家居系统
+            {
+                id: 'ai-smart-home-system',
+                name: 'AI智能家居系统',
+                icon: '🏠',
+                desc: '从智能家居设计到安装维护的完整流程',
+                agents: ['AI Smart Home Designer', 'AI Home Automation', 'AI Energy Manager', 'AI Security System', 'AI IoT Engineer'],
+                positions: [
+                    { role: 'AI Smart Home Designer', x: 400, y: 50 },
+                    { role: 'AI Home Automation', x: 200, y: 180 },
+                    { role: 'AI Energy Manager', x: 400, y: 180 },
+                    { role: 'AI Security System', x: 600, y: 180 },
+                    { role: 'AI IoT Engineer', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Smart Home Designer', to: 'AI Home Automation', content: '自动化需求' },
+                    { from: 'AI Home Automation', to: 'AI Smart Home Designer', content: '方案设计' },
+                    { from: 'AI Smart Home Designer', to: 'AI Energy Manager', content: '能耗需求' },
+                    { from: 'AI Energy Manager', to: 'AI Smart Home Designer', content: '节能方案' },
+                    { from: 'AI Smart Home Designer', to: 'AI Security System', content: '安防需求' },
+                    { from: 'AI Security System', to: 'AI Smart Home Designer', content: '安防方案' },
+                    { from: 'AI Smart Home Designer', to: 'AI IoT Engineer', content: 'IoT集成需求' }
+                ]
+            },
+            // Cycle 353 新增模板 - AI智能服装设计系统
+            {
+                id: 'ai-fashion-design-system',
+                name: 'AI智能服装设计系统',
+                icon: '👗',
+                desc: '从服装设计到生产的完整服装设计流程',
+                agents: ['AI Fashion Designer', 'AI Pattern Maker', 'AI Textile Expert', 'AI Garment Technologist', 'AI Fashion Trend Analyst'],
+                positions: [
+                    { role: 'AI Fashion Designer', x: 400, y: 50 },
+                    { role: 'AI Pattern Maker', x: 200, y: 180 },
+                    { role: 'AI Textile Expert', x: 400, y: 180 },
+                    { role: 'AI Garment Technologist', x: 600, y: 180 },
+                    { role: 'AI Fashion Trend Analyst', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fashion Designer', to: 'AI Pattern Maker', content: '版型需求' },
+                    { from: 'AI Pattern Maker', to: 'AI Fashion Designer', content: '版型方案' },
+                    { from: 'AI Fashion Designer', to: 'AI Textile Expert', content: '面料需求' },
+                    { from: 'AI Textile Expert', to: 'AI Fashion Designer', content: '面料推荐' },
+                    { from: 'AI Fashion Designer', to: 'AI Garment Technologist', content: '工艺需求' },
+                    { from: 'AI Garment Technologist', to: 'AI Fashion Designer', content: '工艺方案' },
+                    { from: 'AI Fashion Designer', to: 'AI Fashion Trend Analyst', content: '趋势需求' }
+                ]
+            },
+            // Cycle 353 新增模板 - AI智能珠宝设计系统
+            {
+                id: 'ai-jewelry-design-system',
+                name: 'AI智能珠宝设计系统',
+                icon: '💎',
+                desc: '从珠宝设计到制作的完整珠宝设计流程',
+                agents: ['AI Jewelry Designer', 'AI Gemologist', 'AI Jewelry CAD Engineer', 'AI Appraiser', 'AI Jewelry Manufacturer'],
+                positions: [
+                    { role: 'AI Jewelry Designer', x: 400, y: 50 },
+                    { role: 'AI Gemologist', x: 200, y: 180 },
+                    { role: 'AI Jewelry CAD Engineer', x: 400, y: 180 },
+                    { role: 'AI Appraiser', x: 600, y: 180 },
+                    { role: 'AI Jewelry Manufacturer', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Jewelry Designer', to: 'AI Gemologist', content: '宝石需求' },
+                    { from: 'AI Gemologist', to: 'AI Jewelry Designer', content: '宝石评估' },
+                    { from: 'AI Jewelry Designer', to: 'AI Jewelry CAD Engineer', content: 'CAD设计需求' },
+                    { from: 'AI Jewelry CAD Engineer', to: 'AI Jewelry Designer', content: '3D模型' },
+                    { from: 'AI Jewelry Designer', to: 'AI Appraiser', content: '估价需求' },
+                    { from: 'AI Appraiser', to: 'AI Jewelry Designer', content: '估价报告' },
+                    { from: 'AI Jewelry Designer', to: 'AI Jewelry Manufacturer', content: '生产需求' }
+                ]
+            },
+            // Cycle 353 新增模板 - AI智能VR系统
+            {
+                id: 'ai-vr-ar-system',
+                name: 'AI智能VR系统',
+                icon: '🥽',
+                desc: '从VR内容创作到体验设计的完整虚拟现实流程',
+                agents: ['AI VR Developer', 'AI 3D Modeler', 'AI Spatial Designer', 'AI Interaction Designer', 'AI VR Content Creator'],
+                positions: [
+                    { role: 'AI VR Developer', x: 400, y: 50 },
+                    { role: 'AI 3D Modeler', x: 200, y: 180 },
+                    { role: 'AI Spatial Designer', x: 400, y: 180 },
+                    { role: 'AI Interaction Designer', x: 600, y: 180 },
+                    { role: 'AI VR Content Creator', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI VR Developer', to: 'AI 3D Modeler', content: '3D建模需求' },
+                    { from: 'AI 3D Modeler', to: 'AI VR Developer', content: '3D模型' },
+                    { from: 'AI VR Developer', to: 'AI Spatial Designer', content: '空间设计需求' },
+                    { from: 'AI Spatial Designer', to: 'AI VR Developer', content: '空间方案' },
+                    { from: 'AI VR Developer', to: 'AI Interaction Designer', content: '交互需求' },
+                    { from: 'AI Interaction Designer', to: 'AI VR Developer', content: '交互方案' },
+                    { from: 'AI VR Developer', to: 'AI VR Content Creator', content: '内容需求' }
+                ]
             }
         ];
 
@@ -15164,7 +15308,43 @@
             'AI Flavor Chemist': { icon: '🧪', color: '#ec4899', role: 'AI风味化学师' },
             'AI Quality Inspector': { icon: '✅', color: '#22c55e', role: 'AI质检员' },
             'AI Nutritionist': { icon: '🥗', color: '#8b5cf6', role: 'AI营养师' },
-            'AI Food Safety Expert': { icon: '🛡️', color: '#06b6d4', role: 'AI食品安全专家' }
+            'AI Food Safety Expert': { icon: '🛡️', color: '#06b6d4', role: 'AI食品安全专家' },
+            // Cycle 353 新增角色 - AI 智能游戏
+            'AI Game Designer': { icon: '🎮', color: '#8b5cf6', role: 'AI游戏设计师' },
+            'AI Game Writer': { icon: '📖', color: '#ec4899', role: 'AI游戏文案' },
+            'AI Game Artist': { icon: '🖼️', color: '#f59e0b', role: 'AI游戏美术' },
+            'AI Game Programmer': { icon: '💻', color: '#3b82f6', role: 'AI游戏程序员' },
+            'AI Game QA': { icon: '🧪', color: '#22c55e', role: 'AI游戏测试工程师' },
+            // Cycle 353 新增角色 - AI 智能音乐
+            'AI Music Composer': { icon: '🎵', color: '#8b5cf6', role: 'AI作曲家' },
+            'AI Lyricist': { icon: '📝', color: '#ec4899', role: 'AI作词人' },
+            'AI Sound Engineer': { icon: '🔊', color: '#f59e0b', role: 'AI音响工程师' },
+            'AI Mastering Engineer': { icon: '🎚️', color: '#3b82f6', role: 'AI母带工程师' },
+            'AI Music Producer': { icon: '🎹', color: '#22c55e', role: 'AI音乐制作人' },
+            // Cycle 353 新增角色 - AI 智能家居
+            'AI Smart Home Designer': { icon: '🏠', color: '#8b5cf6', role: 'AI智能家居设计师' },
+            'AI Home Automation': { icon: '🔧', color: '#ec4899', role: 'AI家庭自动化工程师' },
+            'AI Energy Manager': { icon: '⚡', color: '#f59e0b', role: 'AI能源管理师' },
+            'AI Security System': { icon: '🛡️', color: '#3b82f6', role: 'AI安防系统工程师' },
+            'AI IoT Engineer': { icon: '📡', color: '#22c55e', role: 'AI物联网工程师' },
+            // Cycle 353 新增角色 - AI 智能服装设计
+            'AI Fashion Designer': { icon: '👗', color: '#8b5cf6', role: 'AI服装设计师' },
+            'AI Pattern Maker': { icon: '📐', color: '#ec4899', role: 'AI版型师' },
+            'AI Textile Expert': { icon: '🧶', color: '#f59e0b', role: 'AI面料专家' },
+            'AI Garment Technologist': { icon: '👔', color: '#3b82f6', role: 'AI服装工艺师' },
+            'AI Fashion Trend Analyst': { icon: '👘', color: '#22c55e', role: 'AI时尚趋势分析师' },
+            // Cycle 353 新增角色 - AI 智能珠宝设计
+            'AI Jewelry Designer': { icon: '💎', color: '#8b5cf6', role: 'AI珠宝设计师' },
+            'AI Gemologist': { icon: '💍', color: '#ec4899', role: 'AI宝石学家' },
+            'AI Jewelry CAD Engineer': { icon: '🎨', color: '#f59e0b', role: 'AI珠宝CAD工程师' },
+            'AI Appraiser': { icon: '📊', color: '#3b82f6', role: 'AI估价师' },
+            'AI Jewelry Manufacturer': { icon: '⚙️', color: '#22c55e', role: 'AI珠宝制造商' },
+            // Cycle 353 新增角色 - AI 智能VR
+            'AI VR Developer': { icon: '🥽', color: '#8b5cf6', role: 'AI虚拟现实开发者' },
+            'AI 3D Modeler': { icon: '🎲', color: '#ec4899', role: 'AI 3D建模师' },
+            'AI Spatial Designer': { icon: '🌍', color: '#f59e0b', role: 'AI空间设计师' },
+            'AI Interaction Designer': { icon: '🖐️', color: '#3b82f6', role: 'AI交互设计师' },
+            'AI VR Content Creator': { icon: '📺', color: '#22c55e', role: 'AI VR内容创作者' }
         };
 
         // 拖拽相关变量
