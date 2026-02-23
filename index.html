@@ -20314,6 +20314,138 @@
                     { from: 'AI Price Optimizer', to: 'AI Customer Insights', content: '客户反馈' },
                     { from: 'AI Customer Insights', to: 'AI Retail Tech', content: '洞察报告' }
                 ]
+            },
+            // Cycle 406 新增模板 - AI智能航空航天系统
+            {
+                id: 'ai-aerospace',
+                name: 'AI智能航空航天系统',
+                icon: '🚀',
+                desc: '从航天器设计到卫星运营的完整航空航天流程',
+                agents: ['AI Aerospace Engineer', 'AI Satellite Designer', 'AI Avionics Engineer', 'AI Flight Test Engineer', 'AI Propulsion Engineer'],
+                positions: [
+                    { role: 'AI Aerospace Engineer', x: 400, y: 30 },
+                    { role: 'AI Satellite Designer', x: 200, y: 150 },
+                    { role: 'AI Avionics Engineer', x: 600, y: 150 },
+                    { role: 'AI Flight Test Engineer', x: 200, y: 270 },
+                    { role: 'AI Propulsion Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Aerospace Engineer', to: 'AI Satellite Designer', content: '设计需求' },
+                    { from: 'AI Satellite Designer', to: 'AI Avionics Engineer', content: '航电方案' },
+                    { from: 'AI Avionics Engineer', to: 'AI Flight Test Engineer', content: '测试计划' },
+                    { from: 'AI Flight Test Engineer', to: 'AI Propulsion Engineer', content: '推进系统' },
+                    { from: 'AI Propulsion Engineer', to: 'AI Aerospace Engineer', content: '技术报告' }
+                ]
+            },
+            // Cycle 406 新增模板 - AI智能能源电力系统
+            {
+                id: 'ai-energy-power',
+                name: 'AI智能能源电力系统',
+                icon: '⚡',
+                desc: '从电力生产到智能电网的完整能源电力流程',
+                agents: ['AI Power Grid Engineer', 'AI Renewable Energy', 'AI Nuclear Engineer', 'AI Energy Storage', 'AI Smart Meter'],
+                positions: [
+                    { role: 'AI Power Grid Engineer', x: 400, y: 30 },
+                    { role: 'AI Renewable Energy', x: 200, y: 150 },
+                    { role: 'AI Nuclear Engineer', x: 600, y: 150 },
+                    { role: 'AI Energy Storage', x: 200, y: 270 },
+                    { role: 'AI Smart Meter', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Power Grid Engineer', to: 'AI Renewable Energy', content: '能源需求' },
+                    { from: 'AI Renewable Energy', to: 'AI Nuclear Engineer', content: '核电方案' },
+                    { from: 'AI Nuclear Engineer', to: 'AI Energy Storage', content: '储能需求' },
+                    { from: 'AI Energy Storage', to: 'AI Smart Meter', content: '智能计量' },
+                    { from: 'AI Smart Meter', to: 'AI Power Grid Engineer', content: '用电数据' }
+                ]
+            },
+            // Cycle 406 新增模板 - AI智能化工材料系统
+            {
+                id: 'ai-chemical-materials',
+                name: 'AI智能化工材料系统',
+                icon: '⚗️',
+                desc: '从化工生产到材料研发的完整化工材料流程',
+                agents: ['AI Chemical Engineer', 'AI Process Designer', 'AI Safety Officer', 'AI Quality Control', 'AI Environmental Engineer'],
+                positions: [
+                    { role: 'AI Chemical Engineer', x: 400, y: 30 },
+                    { role: 'AI Process Designer', x: 200, y: 150 },
+                    { role: 'AI Safety Officer', x: 600, y: 150 },
+                    { role: 'AI Quality Control', x: 200, y: 270 },
+                    { role: 'AI Environmental Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Chemical Engineer', to: 'AI Process Designer', content: '工艺需求' },
+                    { from: 'AI Process Designer', to: 'AI Safety Officer', content: '安全方案' },
+                    { from: 'AI Safety Officer', to: 'AI Quality Control', content: '质量标准' },
+                    { from: 'AI Quality Control', to: 'AI Environmental Engineer', content: '环保评估' },
+                    { from: 'AI Environmental Engineer', to: 'AI Chemical Engineer', content: '环保报告' }
+                ]
+            },
+            // Cycle 406 新增模板 - AI智能医疗健康系统
+            {
+                id: 'ai-medical-health',
+                name: 'AI智能医疗健康系统',
+                icon: '🏥',
+                desc: '从诊疗服务到健康管理的完整医疗健康流程',
+                agents: ['AI Hospital Administrator', 'AI Patient Coordinator', 'AI Medical Records', 'AI Diagnostic Assistant', 'AI Treatment Planner'],
+                positions: [
+                    { role: 'AI Hospital Administrator', x: 400, y: 30 },
+                    { role: 'AI Patient Coordinator', x: 200, y: 150 },
+                    { role: 'AI Medical Records', x: 600, y: 150 },
+                    { role: 'AI Diagnostic Assistant', x: 200, y: 270 },
+                    { role: 'AI Treatment Planner', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Hospital Administrator', to: 'AI Patient Coordinator', content: '患者信息' },
+                    { from: 'AI Patient Coordinator', to: 'AI Medical Records', content: '病历调取' },
+                    { from: 'AI Medical Records', to: 'AI Diagnostic Assistant', content: '诊断需求' },
+                    { from: 'AI Diagnostic Assistant', to: 'AI Treatment Planner', content: '治疗方案' },
+                    { from: 'AI Treatment Planner', to: 'AI Hospital Administrator', content: '治疗计划' }
+                ]
+            },
+            // Cycle 406 新增模板 - AI智能法律服务系统
+            {
+                id: 'ai-legal-service',
+                name: 'AI智能法律服务系统',
+                icon: '⚖️',
+                desc: '从法律咨询到诉讼代理的完整法律服务流程',
+                agents: ['AI Litigation Attorney', 'AI Contract Drafter', 'AI Legal Analyst', 'AI Paralegal', 'AI Compliance Officer'],
+                positions: [
+                    { role: 'AI Litigation Attorney', x: 400, y: 30 },
+                    { role: 'AI Contract Drafter', x: 200, y: 150 },
+                    { role: 'AI Legal Analyst', x: 600, y: 150 },
+                    { role: 'AI Paralegal', x: 200, y: 270 },
+                    { role: 'AI Compliance Officer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Litigation Attorney', to: 'AI Contract Drafter', content: '合同需求' },
+                    { from: 'AI Contract Drafter', to: 'AI Legal Analyst', content: '法律分析' },
+                    { from: 'AI Legal Analyst', to: 'AI Paralegal', content: '案件材料' },
+                    { from: 'AI Paralegal', to: 'AI Compliance Officer', content: '合规审查' },
+                    { from: 'AI Compliance Officer', to: 'AI Litigation Attorney', content: '合规意见' }
+                ]
+            },
+            // Cycle 406 新增模板 - AI智能人力资源系统
+            {
+                id: 'ai-human-resources',
+                name: 'AI智能人力资源系统',
+                icon: '👥',
+                desc: '从招聘到员工发展的完整人力资源流程',
+                agents: ['AI Talent Scout', 'AI Interview Coordinator', 'AI Compensation Analyst', 'AI Training Designer', 'AI Employee Wellness'],
+                positions: [
+                    { role: 'AI Talent Scout', x: 400, y: 30 },
+                    { role: 'AI Interview Coordinator', x: 200, y: 150 },
+                    { role: 'AI Compensation Analyst', x: 600, y: 150 },
+                    { role: 'AI Training Designer', x: 200, y: 270 },
+                    { role: 'AI Employee Wellness', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Talent Scout', to: 'AI Interview Coordinator', content: '候选人' },
+                    { from: 'AI Interview Coordinator', to: 'AI Compensation Analyst', content: '薪资方案' },
+                    { from: 'AI Compensation Analyst', to: 'AI Training Designer', content: '培训需求' },
+                    { from: 'AI Training Designer', to: 'AI Employee Wellness', content: '员工关怀' },
+                    { from: 'AI Employee Wellness', to: 'AI Talent Scout', content: '人才需求' }
+                ]
             }
         ];
 
@@ -24139,7 +24271,43 @@
             'AI Inventory Prediction': { icon: '📦', color: '#22c55e', role: 'AI库存预测师' },
             'AI Recommendation Engine': { icon: '🎯', color: '#f97316', role: 'AI推荐引擎工程师' },
             'AI Price Optimizer': { icon: '💲', color: '#8b5cf6', role: 'AI价格优化师' },
-            'AI Customer Insights': { icon: '👥', color: '#ec4899', role: 'AI客户洞察师' }
+            'AI Customer Insights': { icon: '👥', color: '#ec4899', role: 'AI客户洞察师' },
+            // Cycle 406 新增角色 - AI智能航空航天
+            'AI Aerospace Engineer': { icon: '🚀', color: '#6366f1', role: 'AI航空航天工程师' },
+            'AI Satellite Designer': { icon: '🛰️', color: '#0ea5e9', role: 'AI卫星设计师' },
+            'AI Avionics Engineer': { icon: '📡', color: '#22c55e', role: 'AI航电工程师' },
+            'AI Flight Test Engineer': { icon: '✈️', color: '#f97316', role: 'AI试飞工程师' },
+            'AI Propulsion Engineer': { icon: '🔥', color: '#ef4444', role: 'AI推进系统工程师' },
+            // Cycle 406 新增角色 - AI智能能源电力
+            'AI Power Grid Engineer': { icon: '⚡', color: '#eab308', role: 'AI电网工程师' },
+            'AI Renewable Energy': { icon: '🌞', color: '#22c55e', role: 'AI可再生能源工程师' },
+            'AI Nuclear Engineer': { icon: '☢️', color: '#14b8a6', role: 'AI核能工程师' },
+            'AI Energy Storage': { icon: '🔋', color: '#8b5cf6', role: 'AI储能工程师' },
+            'AI Smart Meter': { icon: '📡', color: '#06b6d4', role: 'AI智能电表工程师' },
+            // Cycle 406 新增角色 - AI智能化工材料
+            'AI Chemical Engineer': { icon: '⚗️', color: '#a855f7', role: 'AI化学工程师' },
+            'AI Process Designer': { icon: '📐', color: '#f43f5e', role: 'AI工艺设计师' },
+            'AI Safety Officer': { icon: '🛡️', color: '#dc2626', role: 'AI安全官员' },
+            'AI Quality Control': { icon: '✅', color: '#22c55e', role: 'AI质量控制工程师' },
+            'AI Environmental Engineer': { icon: '🌿', color: '#10b981', role: 'AI环保工程师' },
+            // Cycle 406 新增角色 - AI智能医疗健康
+            'AI Hospital Administrator': { icon: '🏥', color: '#ec4899', role: 'AI医院管理师' },
+            'AI Patient Coordinator': { icon: '🤝', color: '#22c55e', role: 'AI患者协调师' },
+            'AI Medical Records': { icon: '📋', color: '#0ea5e9', role: 'AI病历管理师' },
+            'AI Diagnostic Assistant': { icon: '🔬', color: '#8b5cf6', role: 'AI诊断助理' },
+            'AI Treatment Planner': { icon: '💊', color: '#f97316', role: 'AI治疗规划师' },
+            // Cycle 406 新增角色 - AI智能法律服务
+            'AI Litigation Attorney': { icon: '⚖️', color: '#6366f1', role: 'AI诉讼律师' },
+            'AI Contract Drafter': { icon: '📜', color: '#a855f7', role: 'AI合同起草师' },
+            'AI Legal Analyst': { icon: '🔍', color: '#14b8a6', role: 'AI法律分析师' },
+            'AI Paralegal': { icon: '📋', color: '#06b6d4', role: 'AI律师助理' },
+            'AI Compliance Officer': { icon: '✅', color: '#22c55e', role: 'AI合规官' },
+            // Cycle 406 新增角色 - AI智能人力资源
+            'AI Talent Scout': { icon: '🔍', color: '#f59e0b', role: 'AI人才猎头' },
+            'AI Interview Coordinator': { icon: '📅', color: '#ec4899', role: 'AI面试协调员' },
+            'AI Compensation Analyst': { icon: '💰', color: '#22c55e', role: 'AI薪酬分析师' },
+            'AI Training Designer': { icon: '📚', color: '#8b5cf6', role: 'AI培训设计师' },
+            'AI Employee Wellness': { icon: '❤️', color: '#f43f5e', role: 'AI员工关怀师' }
         };
 
         // 拖拽相关变量
