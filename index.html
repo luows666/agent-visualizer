@@ -18469,6 +18469,138 @@
                     { from: 'AI Energy Storage', to: 'AI Smart Meter', content: '智能调度' },
                     { from: 'AI Smart Meter', to: 'AI Power Grid Engineer', content: '用电数据分析' }
                 ]
+            },
+            // Cycle 390 新增模板 - AI智能精密制造系统
+            {
+                id: 'ai-precision-manufacturing',
+                name: 'AI智能精密制造系统',
+                icon: '⚙️',
+                desc: '从精密加工到质量检测的完整制造流程',
+                agents: ['AI Manufacturing Engineer', 'AI Quality Inspector', 'AI Process Engineer', 'AI Equipment Manager', 'AI Supply Chain'],
+                positions: [
+                    { role: 'AI Manufacturing Engineer', x: 400, y: 50 },
+                    { role: 'AI Process Engineer', x: 200, y: 180 },
+                    { role: 'AI Equipment Manager', x: 400, y: 180 },
+                    { role: 'AI Quality Inspector', x: 600, y: 180 },
+                    { role: 'AI Supply Chain', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Manufacturing Engineer', to: 'AI Process Engineer', content: '开始精密加工工艺设计' },
+                    { from: 'AI Process Engineer', to: 'AI Equipment Manager', content: '设备参数配置完成' },
+                    { from: 'AI Equipment Manager', to: 'AI Manufacturing Engineer', content: '加工任务执行中' },
+                    { from: 'AI Manufacturing Engineer', to: 'AI Quality Inspector', content: '提交产品进行质量检测' },
+                    { from: 'AI Quality Inspector', to: 'AI Supply Chain', content: '质检通过，准备发货' }
+                ]
+            },
+            // Cycle 390 新增模板 - AI智能医疗健康系统
+            {
+                id: 'ai-medical-health',
+                name: 'AI智能医疗健康系统',
+                icon: '🏥',
+                desc: '从诊断到治疗的完整医疗健康流程',
+                agents: ['AI Doctor', 'AI Nurse', 'AI Diagnostic', 'AI Pharmacist', 'AI Health Coach'],
+                positions: [
+                    { role: 'AI Doctor', x: 400, y: 50 },
+                    { role: 'AI Diagnostic', x: 200, y: 180 },
+                    { role: 'AI Nurse', x: 400, y: 180 },
+                    { role: 'AI Pharmacist', x: 600, y: 180 },
+                    { role: 'AI Health Coach', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Doctor', to: 'AI Diagnostic', content: '需要进行诊断检查' },
+                    { from: 'AI Diagnostic', to: 'AI Doctor', content: '诊断结果：需要进一步治疗' },
+                    { from: 'AI Doctor', to: 'AI Nurse', content: '制定治疗护理方案' },
+                    { from: 'AI Nurse', to: 'AI Pharmacist', content: '处方用药确认' },
+                    { from: 'AI Doctor', to: 'AI Health Coach', content: '安排健康管理计划' }
+                ]
+            },
+            // Cycle 390 新增模板 - AI智能金融服务系统
+            {
+                id: 'ai-financial',
+                name: 'AI智能金融服务系统',
+                icon: '💰',
+                desc: '从投资分析到风险管理的完整金融流程',
+                agents: ['AI Investment Advisor', 'AI Risk Analyst', 'AI Banker', 'AI Insurance Agent', 'AI Tax Consultant'],
+                positions: [
+                    { role: 'AI Investment Advisor', x: 400, y: 50 },
+                    { role: 'AI Risk Analyst', x: 200, y: 180 },
+                    { role: 'AI Banker', x: 400, y: 180 },
+                    { role: 'AI Insurance Agent', x: 600, y: 180 },
+                    { role: 'AI Tax Consultant', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Investment Advisor', to: 'AI Risk Analyst', content: '需要进行投资风险评估' },
+                    { from: 'AI Risk Analyst', to: 'AI Investment Advisor', content: '风险评估报告已生成' },
+                    { from: 'AI Investment Advisor', to: 'AI Banker', content: '执行投资方案' },
+                    { from: 'AI Banker', to: 'AI Insurance Agent', content: '客户保险需求确认' },
+                    { from: 'AI Banker', to: 'AI Tax Consultant', content: '税务规划咨询' }
+                ]
+            },
+            // Cycle 390 新增模板 - AI智能教育培训系统
+            {
+                id: 'ai-education',
+                name: 'AI智能教育培训系统',
+                icon: '📚',
+                desc: '从课程设计到教学评估的完整教育流程',
+                agents: ['AI Teacher', 'AI Curriculum Designer', 'AI Tutor', 'AI Exam Proctor', 'AI Education Analyst'],
+                positions: [
+                    { role: 'AI Teacher', x: 400, y: 50 },
+                    { role: 'AI Curriculum Designer', x: 200, y: 180 },
+                    { role: 'AI Tutor', x: 400, y: 180 },
+                    { role: 'AI Exam Proctor', x: 600, y: 180 },
+                    { role: 'AI Education Analyst', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Teacher', to: 'AI Curriculum Designer', content: '需要设计新课程' },
+                    { from: 'AI Curriculum Designer', to: 'AI Teacher', content: '课程设计已完成' },
+                    { from: 'AI Teacher', to: 'AI Tutor', content: '安排个性化辅导' },
+                    { from: 'AI Tutor', to: 'AI Exam Proctor', content: '学员学习进度汇报' },
+                    { from: 'AI Exam Proctor', to: 'AI Education Analyst', content: '考试评估结果' }
+                ]
+            },
+            // Cycle 390 新增模板 - AI智能媒体娱乐系统
+            {
+                id: 'ai-media-entertainment',
+                name: 'AI智能媒体娱乐系统',
+                icon: '🎬',
+                desc: '从内容创作到发布的完整媒体流程',
+                agents: ['AI Content Creator', 'AI Video Editor', 'AI Music Producer', 'AI Social Media Manager', 'AI Brand Manager'],
+                positions: [
+                    { role: 'AI Content Creator', x: 400, y: 50 },
+                    { role: 'AI Video Editor', x: 200, y: 180 },
+                    { role: 'AI Music Producer', x: 400, y: 180 },
+                    { role: 'AI Social Media Manager', x: 600, y: 180 },
+                    { role: 'AI Brand Manager', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Content Creator', to: 'AI Video Editor', content: '视频素材已准备好' },
+                    { from: 'AI Video Editor', to: 'AI Content Creator', content: '视频剪辑完成' },
+                    { from: 'AI Content Creator', to: 'AI Music Producer', content: '需要背景音乐' },
+                    { from: 'AI Music Producer', to: 'AI Social Media Manager', content: '音乐制作完成' },
+                    { from: 'AI Social Media Manager', to: 'AI Brand Manager', content: '发布效果汇报' }
+                ]
+            },
+            // Cycle 390 新增模板 - AI智能法律服务系统
+            {
+                id: 'ai-legal',
+                name: 'AI智能法律服务系统',
+                icon: '⚖️',
+                desc: '从法律咨询到诉讼代理的完整法律流程',
+                agents: ['AI Lawyer', 'AI Legal Consultant', 'AI Paralegal', 'AI Compliance Officer', 'AI Mediator'],
+                positions: [
+                    { role: 'AI Lawyer', x: 400, y: 50 },
+                    { role: 'AI Legal Consultant', x: 200, y: 180 },
+                    { role: 'AI Paralegal', x: 400, y: 180 },
+                    { role: 'AI Compliance Officer', x: 600, y: 180 },
+                    { role: 'AI Mediator', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Lawyer', to: 'AI Legal Consultant', content: '需要进行法律咨询' },
+                    { from: 'AI Legal Consultant', to: 'AI Lawyer', content: '提供法律建议' },
+                    { from: 'AI Lawyer', to: 'AI Paralegal', content: '准备诉讼材料' },
+                    { from: 'AI Paralegal', to: 'AI Compliance Officer', content: '合规审查' },
+                    { from: 'AI Lawyer', to: 'AI Mediator', content: '调解协商安排' }
+                ]
             }
         ];
 
@@ -21661,7 +21793,43 @@
             'AI Renewable Energy': { icon: '🌞', color: '#22c55e', role: 'AI可再生能源工程师' },
             'AI Nuclear Engineer': { icon: '☢️', color: '#ef4444', role: 'AI核能工程师' },
             'AI Energy Storage': { icon: '🔋', color: '#8b5cf6', role: 'AI储能工程师' },
-            'AI Smart Meter': { icon: '📡', color: '#06b6d4', role: 'AI智能电表工程师' }
+            'AI Smart Meter': { icon: '📡', color: '#06b6d4', role: 'AI智能电表工程师' },
+            // Cycle 390 新增角色 - AI智能精密制造
+            'AI Manufacturing Engineer': { icon: '⚙️', color: '#64748b', role: 'AI制造工程师' },
+            'AI Quality Inspector': { icon: '✅', color: '#22c55e', role: 'AI质检员' },
+            'AI Process Engineer': { icon: '🔧', color: '#3b82f6', role: 'AI工艺工程师' },
+            'AI Equipment Manager': { icon: '🔩', color: '#f59e0b', role: 'AI设备经理' },
+            'AI Supply Chain': { icon: '🔗', color: '#8b5cf6', role: 'AI供应链经理' },
+            // Cycle 390 新增角色 - AI智能医疗健康
+            'AI Medical Doctor': { icon: '👨‍⚕️', color: '#ef4444', role: 'AI医生' },
+            'AI Nurse': { icon: '👩‍⚕️', color: '#ec4899', role: 'AI护士' },
+            'AI Diagnostic': { icon: '🔬', color: '#06b6d4', role: 'AI诊断师' },
+            'AI Pharmacist': { icon: '💊', color: '#22c55e', role: 'AI药剂师' },
+            'AI Health Coach': { icon: '💪', color: '#f59e0b', role: 'AI健康教练' },
+            // Cycle 390 新增角色 - AI智能金融服务
+            'AI Investment Advisor': { icon: '📈', color: '#10b981', role: 'AI投资顾问' },
+            'AI Banker': { icon: '🏦', color: '#3b82f6', role: 'AI银行家' },
+            'AI Insurance Agent': { icon: '🛡️', color: '#8b5cf6', role: 'AI保险代理' },
+            'AI Tax Consultant': { icon: '💵', color: '#f97316', role: 'AI税务顾问' },
+            'AI Wealth Manager': { icon: '💎', color: '#eab308', role: 'AI财富经理' },
+            // Cycle 390 新增角色 - AI智能教育培训
+            'AI Teacher': { icon: '📚', color: '#14b8a6', role: 'AI教师' },
+            'AI Curriculum Designer': { icon: '📖', color: '#ec4899', role: 'AI课程设计师' },
+            'AI Tutor': { icon: '🎓', color: '#8b5cf6', role: 'AI导师' },
+            'AI Exam Proctor': { icon: '👁️', color: '#06b6d4', role: 'AI监考系统' },
+            'AI Education Analyst': { icon: '📊', color: '#22c55e', role: 'AI教育分析师' },
+            // Cycle 390 新增角色 - AI智能媒体娱乐
+            'AI Content Creator': { icon: '✨', color: '#f43f5e', role: 'AI内容创作者' },
+            'AI Video Editor': { icon: '🎬', color: '#8b5cf6', role: 'AI视频剪辑师' },
+            'AI Music Producer': { icon: '🎵', color: '#ec4899', role: 'AI音乐制作人' },
+            'AI Social Media Manager': { icon: '📱', color: '#06b6d4', role: 'AI社交媒体经理' },
+            'AI Brand Manager': { icon: '💎', color: '#f59e0b', role: 'AI品牌经理' },
+            // Cycle 390 新增角色 - AI智能法律服务
+            'AI Lawyer': { icon: '⚖️', color: '#64748b', role: 'AI律师' },
+            'AI Legal Consultant': { icon: '📜', color: '#8b5cf6', role: 'AI法律顾问' },
+            'AI Paralegal': { icon: '📋', color: '#3b82f6', role: 'AI律师助理' },
+            'AI Compliance Officer': { icon: '✅', color: '#22c55e', role: 'AI合规官' },
+            'AI Mediator': { icon: '🤝', color: '#f97316', role: 'AI调解员' }
         };
 
         // 拖拽相关变量
