@@ -24831,8 +24831,350 @@
             }
         ];
 
+        const cycle437Templates = [
+            {
+                id: 'ai-decorate-service',
+                name: 'AI智能装修服务系统',
+                icon: '🏠',
+                desc: '智能装修服务管理，包括设计规划、施工管理、材料采购等',
+                agents: ['AI Decoration Director', 'AI Designer', 'AI Construction Manager', 'AI Material Purchaser', 'AI Quality Inspector', 'AI Customer Liaison'],
+                positions: [
+                    { id: 'p1', name: '装修总监', x: 400, y: 50 },
+                    { id: 'p2', name: '设计师', x: 200, y: 180 },
+                    { id: 'p3', name: '施工经理', x: 400, y: 180 },
+                    { id: 'p4', name: '采购员', x: 600, y: 180 },
+                    { id: 'p5', name: '质检', x: 400, y: 310 },
+                    { id: 'p6', name: '客户联络', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Decoration Director', to: 'AI Designer', content: '设计任务' },
+                    { from: 'AI Decoration Director', to: 'AI Construction Manager', content: '施工安排' },
+                    { from: 'AI Decoration Director', to: 'AI Material Purchaser', content: '采购需求' },
+                    { from: 'AI Designer', to: 'AI Construction Manager', content: '设计方案' },
+                    { from: 'AI Construction Manager', to: 'AI Quality Inspector', content: '质检请求' },
+                    { from: 'AI Quality Inspector', to: 'AI Customer Liaison', content: '质量报告' },
+                    { from: 'AI Material Purchaser', to: 'AI Decoration Director', content: '采购报告' }
+                ]
+            },
+            {
+                id: 'ai-housekeeping-service',
+                name: 'AI智能家政服务系统',
+                icon: '🧹',
+                desc: '智能家政服务平台，包括保姆、月嫂、保洁等服务管理',
+                agents: ['AI Housekeeping Director', 'AI Nanny Manager', 'AI Cleaner Supervisor', 'AI Elderly Care', 'AI Training Manager', 'AI Customer Service'],
+                positions: [
+                    { id: 'p1', name: '家政总监', x: 400, y: 50 },
+                    { id: 'p2', name: '保姆管理', x: 200, y: 180 },
+                    { id: 'p3', name: '保洁管理', x: 400, y: 180 },
+                    { id: 'p4', name: '养老护理', x: 600, y: 180 },
+                    { id: 'p5', name: '培训管理', x: 400, y: 310 },
+                    { id: 'p6', name: '客服', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Housekeeping Director', to: 'AI Nanny Manager', content: '保姆调配' },
+                    { from: 'AI Housekeeping Director', to: 'AI Cleaner Supervisor', content: '保洁安排' },
+                    { from: 'AI Housekeeping Director', to: 'AI Elderly Care', content: '护理需求' },
+                    { from: 'AI Nanny Manager', to: 'AI Training Manager', content: '培训需求' },
+                    { from: 'AI Cleaner Supervisor', to: 'AI Customer Service', content: '服务反馈' },
+                    { from: 'AI Elderly Care', to: 'AI Housekeeping Director', content: '护理报告' },
+                    { from: 'AI Training Manager', to: 'AI Customer Service', content: '培训反馈' }
+                ]
+            },
+            {
+                id: 'ai-security-service',
+                name: 'AI智能安防服务系统',
+                icon: '🔒',
+                desc: '智能安防服务管理，包括监控、巡更、报警处理等',
+                agents: ['AI Security Director', 'AI Monitor Center', 'AI Patrol Manager', 'AI Alarm Handler', 'AI Equipment Manager', 'AI Emergency Response'],
+                positions: [
+                    { id: 'p1', name: '安防总监', x: 400, y: 50 },
+                    { id: 'p2', name: '监控中心', x: 200, y: 180 },
+                    { id: 'p3', name: '巡更管理', x: 400, y: 180 },
+                    { id: 'p4', name: '报警处理', x: 600, y: 180 },
+                    { id: 'p5', name: '设备管理', x: 400, y: 310 },
+                    { id: 'p6', name: '应急响应', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Security Director', to: 'AI Monitor Center', content: '监控任务' },
+                    { from: 'AI Security Director', to: 'AI Patrol Manager', content: '巡更安排' },
+                    { from: 'AI Security Director', to: 'AI Alarm Handler', content: '报警处理' },
+                    { from: 'AI Monitor Center', to: 'AI Alarm Handler', content: '异常通知' },
+                    { from: 'AI Patrol Manager', to: 'AI Equipment Manager', content: '设备需求' },
+                    { from: 'AI Alarm Handler', to: 'AI Emergency Response', content: '应急请求' },
+                    { from: 'AI Emergency Response', to: 'AI Security Director', content: '处置报告' }
+                ]
+            },
+            {
+                id: 'ai-property-service',
+                name: 'AI智能物业服务系统',
+                icon: '🏢',
+                desc: '智能物业管理，包括维修、收费、绿化等服务',
+                agents: ['AI Property Manager', 'AI Maintenance Supervisor', 'AI Billing Specialist', 'AI Landscaping Manager', 'AI Complaint Handler', 'AI Tenant Relations'],
+                positions: [
+                    { id: 'p1', name: '物业经理', x: 400, y: 50 },
+                    { id: 'p2', name: '维修管理', x: 200, y: 180 },
+                    { id: 'p3', name: '收费管理', x: 400, y: 180 },
+                    { id: 'p4', name: '绿化管理', x: 600, y: 180 },
+                    { id: 'p5', name: '投诉处理', x: 400, y: 310 },
+                    { id: 'p6', name: '租户关系', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Property Manager', to: 'AI Maintenance Supervisor', content: '维修任务' },
+                    { from: 'AI Property Manager', to: 'AI Billing Specialist', content: '收费任务' },
+                    { from: 'AI Property Manager', to: 'AI Landscaping Manager', content: '绿化任务' },
+                    { from: 'AI Maintenance Supervisor', to: 'AI Tenant Relations', content: '维修反馈' },
+                    { from: 'AI Billing Specialist', to: 'AI Complaint Handler', content: '收费投诉' },
+                    { from: 'AI Landscaping Manager', to: 'AI Property Manager', content: '绿化报告' },
+                    { from: 'AI Complaint Handler', to: 'AI Tenant Relations', content: '投诉处理' }
+                ]
+            },
+            {
+                id: 'ai-landscaping-service',
+                name: 'AI智能园林绿化服务系统',
+                icon: '🌳',
+                desc: '智能园林绿化服务，包括养护、设计、施工等',
+                agents: ['AI Landscaping Director', 'AI Garden Designer', 'AI Plant Care Specialist', 'AI Irrigation Manager', 'AI Pest Control', 'AI Project Manager'],
+                positions: [
+                    { id: 'p1', name: '绿化总监', x: 400, y: 50 },
+                    { id: 'p2', name: '园林设计', x: 200, y: 180 },
+                    { id: 'p3', name: '养护管理', x: 400, y: 180 },
+                    { id: 'p4', name: '灌溉管理', x: 600, y: 180 },
+                    { id: 'p5', name: '病虫害防治', x: 400, y: 310 },
+                    { id: 'p6', name: '项目管理', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Landscaping Director', to: 'AI Garden Designer', content: '设计任务' },
+                    { from: 'AI Landscaping Director', to: 'AI Plant Care Specialist', content: '养护安排' },
+                    { from: 'AI Landscaping Director', to: 'AI Project Manager', content: '项目计划' },
+                    { from: 'AI Garden Designer', to: 'AI Irrigation Manager', content: '灌溉设计' },
+                    { from: 'AI Plant Care Specialist', to: 'AI Pest Control', content: '病虫害报告' },
+                    { from: 'AI Irrigation Manager', to: 'AI Landscaping Director', content: '灌溉报告' },
+                    { from: 'AI Project Manager', to: 'AI Landscaping Director', content: '项目进度' }
+                ]
+            },
+            {
+                id: 'ai-recycling-service',
+                name: 'AI智能环保回收服务系统',
+                icon: '♻️',
+                desc: '智能环保回收服务，包括垃圾分类、资源回收、旧物处理等',
+                agents: ['AI Recycling Director', 'AI Waste Sorter', 'AI Resource Evaluator', 'AI Collection Manager', 'AI Environmental Monitor', 'AI Public Education'],
+                positions: [
+                    { id: 'p1', name: '回收总监', x: 400, y: 50 },
+                    { id: 'p2', name: '垃圾分类', x: 200, y: 180 },
+                    { id: 'p3', name: '资源评估', x: 400, y: 180 },
+                    { id: 'p4', name: '回收调度', x: 600, y: 180 },
+                    { id: 'p5', name: '环境监测', x: 400, y: 310 },
+                    { id: 'p6', name: '宣传教育', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Recycling Director', to: 'AI Waste Sorter', content: '分类任务' },
+                    { from: 'AI Recycling Director', to: 'AI Collection Manager', content: '回收安排' },
+                    { from: 'AI Recycling Director', to: 'AI Public Education', content: '宣传计划' },
+                    { from: 'AI Waste Sorter', to: 'AI Resource Evaluator', content: '分类结果' },
+                    { from: 'AI Resource Evaluator', to: 'AI Collection Manager', content: '回收建议' },
+                    { from: 'AI Collection Manager', to: 'AI Environmental Monitor', content: '回收数据' },
+                    { from: 'AI Environmental Monitor', to: 'AI Recycling Director', content: '环境报告' }
+                ]
+            },
+            {
+                id: 'ai-community-service',
+                name: 'AI智能社区服务系统',
+                icon: '🏘️',
+                desc: '智能社区综合服务，包括便民服务、社区活动、志愿者管理等',
+                agents: ['AI Community Service Director', 'AI Convenience Services', 'AI Event Organizer', 'AI Volunteer Manager', 'AI Social Worker', 'AI Resource Coordinator'],
+                positions: [
+                    { id: 'p1', name: '服务总监', x: 400, y: 50 },
+                    { id: 'p2', name: '便民服务', x: 200, y: 180 },
+                    { id: 'p3', name: '活动组织', x: 400, y: 180 },
+                    { id: 'p4', name: '志愿者管理', x: 600, y: 180 },
+                    { id: 'p5', name: '社工服务', x: 400, y: 310 },
+                    { id: 'p6', name: '资源协调', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Community Service Director', to: 'AI Convenience Services', content: '服务任务' },
+                    { from: 'AI Community Service Director', to: 'AI Event Organizer', content: '活动安排' },
+                    { from: 'AI Community Service Director', to: 'AI Volunteer Manager', content: '志愿者需求' },
+                    { from: 'AI Convenience Services', to: 'AI Resource Coordinator', content: '资源需求' },
+                    { from: 'AI Event Organizer', to: 'AI Social Worker', content: '活动支持' },
+                    { from: 'AI Volunteer Manager', to: 'AI Community Service Director', content: '志愿报告' },
+                    { from: 'AI Social Worker', to: 'AI Resource Coordinator', content: '社工需求' }
+                ]
+            }
+        ];
+
+        const cycle438Templates = [
+            {
+                id: 'ai-theater-service',
+                name: 'AI智能剧院演出服务系统',
+                icon: '🎭',
+                desc: '智能剧院演出服务管理，包括演出策划、票务管理、观众服务等',
+                agents: ['AI Theater Director', 'AI Show Planner', 'AI Ticket Manager', 'AI Audience Service', 'AI Stage Manager', 'AI Marketing Coordinator'],
+                positions: [
+                    { id: 'p1', name: '剧院总监', x: 400, y: 50 },
+                    { id: 'p2', name: '演出策划', x: 200, y: 180 },
+                    { id: 'p3', name: '票务管理', x: 400, y: 180 },
+                    { id: 'p4', name: '观众服务', x: 600, y: 180 },
+                    { id: 'p5', name: '舞台管理', x: 400, y: 310 },
+                    { id: 'p6', name: '市场推广', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Theater Director', to: 'AI Show Planner', content: '演出计划' },
+                    { from: 'AI Theater Director', to: 'AI Ticket Manager', content: '票务安排' },
+                    { from: 'AI Theater Director', to: 'AI Marketing Coordinator', content: '推广计划' },
+                    { from: 'AI Show Planner', to: 'AI Stage Manager', content: '舞台需求' },
+                    { from: 'AI Ticket Manager', to: 'AI Audience Service', content: '观众信息' },
+                    { from: 'AI Stage Manager', to: 'AI Theater Director', content: '演出报告' },
+                    { from: 'AI Audience Service', to: 'AI Marketing Coordinator', content: '服务反馈' }
+                ]
+            },
+            {
+                id: 'ai-swimming-fitness',
+                name: 'AI智能游泳健身服务系统',
+                icon: '🏊',
+                desc: '智能游泳健身服务管理，包括课程安排、私教管理、设备维护等',
+                agents: ['AI Fitness Director', 'AI Swim Instructor', 'AI Personal Trainer', 'AI Equipment Manager', 'AI Member Services', 'AI Health Advisor'],
+                positions: [
+                    { id: 'p1', name: '健身总监', x: 400, y: 50 },
+                    { id: 'p2', name: '游泳教练', x: 200, y: 180 },
+                    { id: 'p3', name: '私教管理', x: 400, y: 180 },
+                    { id: 'p4', name: '设备管理', x: 600, y: 180 },
+                    { id: 'p5', name: '会员服务', x: 400, y: 310 },
+                    { id: 'p6', name: '健康顾问', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fitness Director', to: 'AI Swim Instructor', content: '课程安排' },
+                    { from: 'AI Fitness Director', to: 'AI Personal Trainer', content: '私教任务' },
+                    { from: 'AI Fitness Director', to: 'AI Member Services', content: '会员需求' },
+                    { from: 'AI Swim Instructor', to: 'AI Health Advisor', content: '健康建议' },
+                    { from: 'AI Personal Trainer', to: 'AI Equipment Manager', content: '设备需求' },
+                    { from: 'AI Equipment Manager', to: 'AI Fitness Director', content: '维护报告' },
+                    { from: 'AI Member Services', to: 'AI Fitness Director', content: '服务反馈' }
+                ]
+            },
+            {
+                id: 'ai-teahouse-service',
+                name: 'AI智能茶楼休闲服务系统',
+                icon: '🍵',
+                desc: '智能茶楼服务管理，包括茶艺表演、包间预订、茶品推荐等',
+                agents: ['AI Teahouse Manager', 'AI Tea Master', 'AI Reservation Manager', 'AI Tea Sommelier', 'AI Entertainment Coordinator', 'AI Customer Service'],
+                positions: [
+                    { id: 'p1', name: '茶楼经理', x: 400, y: 50 },
+                    { id: 'p2', name: '茶艺师', x: 200, y: 180 },
+                    { id: 'p3', name: '预订管理', x: 400, y: 180 },
+                    { id: 'p4', name: '品茶师', x: 600, y: 180 },
+                    { id: 'p5', name: '娱乐协调', x: 400, y: 310 },
+                    { id: 'p6', name: '客服', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Teahouse Manager', to: 'AI Tea Master', content: '茶艺安排' },
+                    { from: 'AI Teahouse Manager', to: 'AI Reservation Manager', content: '预订任务' },
+                    { from: 'AI Teahouse Manager', to: 'AI Tea Sommelier', content: '品茶推荐' },
+                    { from: 'AI Tea Master', to: 'AI Entertainment Coordinator', content: '表演安排' },
+                    { from: 'AI Reservation Manager', to: 'AI Customer Service', content: '预订确认' },
+                    { from: 'AI Tea Sommelier', to: 'AI Teahouse Manager', content: '推荐反馈' },
+                    { from: 'AI Entertainment Coordinator', to: 'AI Customer Service', content: '活动反馈' }
+                ]
+            },
+            {
+                id: 'ai-chess-card-service',
+                name: 'AI智能棋牌娱乐服务系统',
+                icon: '🀄',
+                desc: '智能棋牌娱乐服务管理，包括房间预订、赛事组织、会员服务等',
+                agents: ['AI Entertainment Manager', 'AI Room Booker', 'AI Tournament Organizer', 'AI Game Supervisor', 'AI Member Relations', 'AI Safety Monitor'],
+                positions: [
+                    { id: 'p1', name: '娱乐经理', x: 400, y: 50 },
+                    { id: 'p2', name: '房间预订', x: 200, y: 180 },
+                    { id: 'p3', name: '赛事组织', x: 400, y: 180 },
+                    { id: 'p4', name: '牌局监管', x: 600, y: 180 },
+                    { id: 'p5', name: '会员关系', x: 400, y: 310 },
+                    { id: 'p6', name: '安全监控', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Entertainment Manager', to: 'AI Room Booker', content: '预订任务' },
+                    { from: 'AI Entertainment Manager', to: 'AI Tournament Organizer', content: '赛事安排' },
+                    { from: 'AI Entertainment Manager', to: 'AI Safety Monitor', content: '安全任务' },
+                    { from: 'AI Room Booker', to: 'AI Game Supervisor', content: '房间分配' },
+                    { from: 'AI Tournament Organizer', to: 'AI Member Relations', content: '赛事通知' },
+                    { from: 'AI Game Supervisor', to: 'AI Entertainment Manager', content: '监管报告' },
+                    { from: 'AI Member Relations', to: 'AI Safety Monitor', content: '会员反馈' }
+                ]
+            },
+            {
+                id: 'ai-ktv-service',
+                name: 'AI智能KTV娱乐服务系统',
+                icon: '🎤',
+                desc: '智能KTV娱乐服务管理，包括包间预订、歌曲管理、氛围营造等',
+                agents: ['AI KTV Manager', 'AI Room Manager', 'AI Song Curator', 'AI Atmosphere Designer', 'AI Customer Service', 'AI Promotion Coordinator'],
+                positions: [
+                    { id: 'p1', name: 'KTV经理', x: 400, y: 50 },
+                    { id: 'p2', name: '包间管理', x: 200, y: 180 },
+                    { id: 'p3', name: '歌曲管理', x: 400, y: 180 },
+                    { id: 'p4', name: '氛围设计', x: 600, y: 180 },
+                    { id: 'p5', name: '客服', x: 400, y: 310 },
+                    { id: 'p6', name: '推广协调', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI KTV Manager', to: 'AI Room Manager', content: '包间任务' },
+                    { from: 'AI KTV Manager', to: 'AI Song Curator', content: '歌曲需求' },
+                    { from: 'AI KTV Manager', to: 'AI Promotion Coordinator', content: '推广计划' },
+                    { from: 'AI Room Manager', to: 'AI Atmosphere Designer', content: '氛围需求' },
+                    { from: 'AI Song Curator', to: 'AI Customer Service', content: '歌曲反馈' },
+                    { from: 'AI Atmosphere Designer', to: 'AI KTV Manager', content: '设计报告' },
+                    { from: 'AI Customer Service', to: 'AI Promotion Coordinator', content: '服务反馈' }
+                ]
+            },
+            {
+                id: 'ai-foot-spa-service',
+                name: 'AI智能足浴保健服务系统',
+                icon: '🦶',
+                desc: '智能足浴保健服务管理，包括预约管理、技师调度、服务质量监控等',
+                agents: ['AI Spa Director', 'AI Appointment Manager', 'AI Technician Scheduler', 'AI Health Consultant', 'AI Service Quality', 'AI Customer Relations'],
+                positions: [
+                    { id: 'p1', name: '足浴总监', x: 400, y: 50 },
+                    { id: 'p2', name: '预约管理', x: 200, y: 180 },
+                    { id: 'p3', name: '技师调度', x: 400, y: 180 },
+                    { id: 'p4', name: '健康顾问', x: 600, y: 180 },
+                    { id: 'p5', name: '服务质量', x: 400, y: 310 },
+                    { id: 'p6', name: '客户关系', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Spa Director', to: 'AI Appointment Manager', content: '预约任务' },
+                    { from: 'AI Spa Director', to: 'AI Technician Scheduler', content: '调度安排' },
+                    { from: 'AI Spa Director', to: 'AI Service Quality', content: '质量任务' },
+                    { from: 'AI Appointment Manager', to: 'AI Health Consultant', content: '客户信息' },
+                    { from: 'AI Technician Scheduler', to: 'AI Customer Relations', content: '技师安排' },
+                    { from: 'AI Health Consultant', to: 'AI Spa Director', content: '健康建议' },
+                    { from: 'AI Service Quality', to: 'AI Customer Relations', content: '质量反馈' }
+                ]
+            },
+            {
+                id: 'ai-dental-care-service',
+                name: 'AI智能牙科保健服务系统',
+                icon: '🦷',
+                desc: '智能牙科保健服务管理，包括预约挂号、诊疗管理、患者档案等',
+                agents: ['AI Dental Director', 'AI Appointment System', 'AI Dentist Coordinator', 'AI Patient Manager', 'AI Dental Technician', 'AI Insurance Liaison'],
+                positions: [
+                    { id: 'p1', name: '牙科总监', x: 400, y: 50 },
+                    { id: 'p2', name: '预约系统', x: 200, y: 180 },
+                    { id: 'p3', name: '医生协调', x: 400, y: 180 },
+                    { id: 'p4', name: '患者管理', x: 600, y: 180 },
+                    { id: 'p5', name: '牙科技师', x: 400, y: 310 },
+                    { id: 'p6', name: '保险联络', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Dental Director', to: 'AI Appointment System', content: '预约任务' },
+                    { from: 'AI Dental Director', to: 'AI Dentist Coordinator', content: '医生安排' },
+                    { from: 'AI Dental Director', to: 'AI Patient Manager', content: '患者任务' },
+                    { from: 'AI Appointment System', to: 'AI Dentist Coordinator', content: '预约信息' },
+                    { from: 'AI Dentist Coordinator', to: 'AI Dental Technician', content: '诊疗配合' },
+                    { from: 'AI Patient Manager', to: 'AI Insurance Liaison', content: '保险需求' },
+                    { from: 'AI Dental Technician', to: 'AI Dental Director', content: '诊疗报告' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates];
 
         // Agent 角色配置
         const agentRoles = {
