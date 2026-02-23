@@ -27298,8 +27298,173 @@
             }
         ];
 
+        // Cycle 451 - 新增行业服务系统模板
+        const cycle451Templates = [
+            // AI智能母婴服务管理系统
+            {
+                id: 'ai-maternity-services',
+                name: 'AI智能母婴服务管理系统',
+                icon: '👶',
+                desc: '智能母婴服务管理，包括月嫂、育儿嫂、奶粉用品、亲子活动等',
+                agents: ['AI Maternity Director', 'AI Nanny Service Manager', 'AI Childcare Specialist', 'AI Product Consultant', 'AI Activity Planner', 'AI Health Advisor'],
+                positions: [
+                    { role: 'AI Maternity Director', x: 400, y: 30 },
+                    { role: 'AI Nanny Service Manager', x: 150, y: 150 },
+                    { role: 'AI Childcare Specialist', x: 650, y: 150 },
+                    { role: 'AI Product Consultant', x: 150, y: 300 },
+                    { role: 'AI Activity Planner', x: 400, y: 350 },
+                    { role: 'AI Health Advisor', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Maternity Director', to: 'AI Nanny Service Manager', content: '月嫂服务' },
+                    { from: 'AI Maternity Director', to: 'AI Childcare Specialist', content: '育儿服务' },
+                    { from: 'AI Nanny Service Manager', to: 'AI Product Consultant', content: '产品咨询' },
+                    { from: 'AI Childcare Specialist', to: 'AI Activity Planner', content: '活动策划' },
+                    { from: 'AI Activity Planner', to: 'AI Health Advisor', content: '健康指导' }
+                ]
+            },
+            // AI智能留学服务管理系统
+            {
+                id: 'ai-study-abroad-services',
+                name: 'AI智能留学服务管理系统',
+                icon: '🎓',
+                desc: '智能留学服务管理，包括选校咨询、申请材料、签证办理、行前指导等',
+                agents: ['AI Study Abroad Director', 'AI School Selector', 'AI Application Manager', 'AI Visa Coordinator', 'AI Predeparture Advisor', 'AI Alumni Coordinator'],
+                positions: [
+                    { role: 'AI Study Abroad Director', x: 400, y: 30 },
+                    { role: 'AI School Selector', x: 150, y: 150 },
+                    { role: 'AI Application Manager', x: 650, y: 150 },
+                    { role: 'AI Visa Coordinator', x: 150, y: 300 },
+                    { role: 'AI Predeparture Advisor', x: 400, y: 350 },
+                    { role: 'AI Alumni Coordinator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Study Abroad Director', to: 'AI School Selector', content: '选校咨询' },
+                    { from: 'AI Study Abroad Director', to: 'AI Application Manager', content: '申请管理' },
+                    { from: 'AI School Selector', to: 'AI Visa Coordinator', content: '签证办理' },
+                    { from: 'AI Application Manager', to: 'AI Predeparture Advisor', content: '行前指导' },
+                    { from: 'AI Predeparture Advisor', to: 'AI Alumni Coordinator', content: '校友联络' }
+                ]
+            },
+            // AI智能移民服务管理系统
+            {
+                id: 'ai-immigration-services',
+                name: 'AI智能移民服务管理系统',
+                icon: '✈️',
+                desc: '智能移民服务管理，包括移民评估、文件准备、面试辅导、落地安置等',
+                agents: ['AI Immigration Director', 'AI Assessment Specialist', 'AI Document Preparer', 'AI Interview Coach', 'AI Settlement Advisor', 'AI Legal Consultant'],
+                positions: [
+                    { role: 'AI Immigration Director', x: 400, y: 30 },
+                    { role: 'AI Assessment Specialist', x: 150, y: 150 },
+                    { role: 'AI Document Preparer', x: 650, y: 150 },
+                    { role: 'AI Interview Coach', x: 150, y: 300 },
+                    { role: 'AI Settlement Advisor', x: 400, y: 350 },
+                    { role: 'AI Legal Consultant', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Immigration Director', to: 'AI Assessment Specialist', content: '移民评估' },
+                    { from: 'AI Immigration Director', to: 'AI Document Preparer', content: '文件准备' },
+                    { from: 'AI Assessment Specialist', to: 'AI Interview Coach', content: '面试辅导' },
+                    { from: 'AI Document Preparer', to: 'AI Settlement Advisor', content: '落地安置' },
+                    { from: 'AI Settlement Advisor', to: 'AI Legal Consultant', content: '法律咨询' }
+                ]
+            },
+            // AI智能养老服务管理系统
+            {
+                id: 'ai-elderly-care-services',
+                name: 'AI智能养老服务管理系统',
+                icon: '👴',
+                desc: '智能养老服务管理，包括健康监测、生活照料、康复护理、精神陪伴等',
+                agents: ['AI Elderly Care Director', 'AI Health Monitor', 'AI Life Caregiver', 'AI Rehab Specialist', 'AI Companion', 'AI Family Liaison'],
+                positions: [
+                    { role: 'AI Elderly Care Director', x: 400, y: 30 },
+                    { role: 'AI Health Monitor', x: 150, y: 150 },
+                    { role: 'AI Life Caregiver', x: 650, y: 150 },
+                    { role: 'AI Rehab Specialist', x: 150, y: 300 },
+                    { role: 'AI Companion', x: 400, y: 350 },
+                    { role: 'AI Family Liaison', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Elderly Care Director', to: 'AI Health Monitor', content: '健康监测' },
+                    { from: 'AI Elderly Care Director', to: 'AI Life Caregiver', content: '生活照料' },
+                    { from: 'AI Health Monitor', to: 'AI Rehab Specialist', content: '康复护理' },
+                    { from: 'AI Life Caregiver', to: 'AI Companion', content: '精神陪伴' },
+                    { from: 'AI Companion', to: 'AI Family Liaison', content: '家属联络' }
+                ]
+            },
+            // AI智能宠物服务管理系统
+            {
+                id: 'ai-pet-services',
+                name: 'AI智能宠物服务管理系统',
+                icon: '🐾',
+                desc: '智能宠物服务管理，包括宠物医疗美容、寄养训练、宠物用品、宠物殡葬等',
+                agents: ['AI Pet Service Director', 'AI Vet Coordinator', 'AI Grooming Manager', 'AI Boarding Trainer', 'AI Product Specialist', 'AI Pet Funeral Director'],
+                positions: [
+                    { role: 'AI Pet Service Director', x: 400, y: 30 },
+                    { role: 'AI Vet Coordinator', x: 150, y: 150 },
+                    { role: 'AI Grooming Manager', x: 650, y: 150 },
+                    { role: 'AI Boarding Trainer', x: 150, y: 300 },
+                    { role: 'AI Product Specialist', x: 400, y: 350 },
+                    { role: 'AI Pet Funeral Director', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Pet Service Director', to: 'AI Vet Coordinator', content: '宠物医疗' },
+                    { from: 'AI Pet Service Director', to: 'AI Grooming Manager', content: '美容护理' },
+                    { from: 'AI Vet Coordinator', to: 'AI Boarding Trainer', content: '寄养训练' },
+                    { from: 'AI Grooming Manager', to: 'AI Product Specialist', content: '宠物用品' },
+                    { from: 'AI Product Specialist', to: 'AI Pet Funeral Director', content: '宠物殡葬' }
+                ]
+            },
+            // AI智能茶饮服务管理系统
+            {
+                id: 'ai-tea-drink-services',
+                name: 'AI智能茶饮服务管理系统',
+                icon: '🧋',
+                desc: '智能茶饮服务管理，包括饮品研发、原料采购、门店运营、会员营销等',
+                agents: ['AI Tea Drink Director', 'AI Product Developer', 'AI Supply Chain Manager', 'AI Store Operations', 'AI Marketing Manager', 'AI Franchise Coordinator'],
+                positions: [
+                    { role: 'AI Tea Drink Director', x: 400, y: 30 },
+                    { role: 'AI Product Developer', x: 150, y: 150 },
+                    { role: 'AI Supply Chain Manager', x: 650, y: 150 },
+                    { role: 'AI Store Operations', x: 150, y: 300 },
+                    { role: 'AI Marketing Manager', x: 400, y: 350 },
+                    { role: 'AI Franchise Coordinator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Tea Drink Director', to: 'AI Product Developer', content: '产品研发' },
+                    { from: 'AI Tea Drink Director', to: 'AI Supply Chain Manager', content: '供应链管理' },
+                    { from: 'AI Product Developer', to: 'AI Store Operations', content: '门店运营' },
+                    { from: 'AI Supply Chain Manager', to: 'AI Marketing Manager', content: '营销推广' },
+                    { from: 'AI Marketing Manager', to: 'AI Franchise Coordinator', content: '加盟协调' }
+                ]
+            },
+            // AI智能搬家服务管理系统
+            {
+                id: 'ai-moving-services',
+                name: 'AI智能搬家服务管理系统',
+                icon: '📦',
+                desc: '智能搬家服务管理，包括物品打包、搬运调度、仓储物流、清洁还原等',
+                agents: ['AI Moving Director', 'AI Packing Supervisor', 'AI Transport Dispatcher', 'AI Warehouse Manager', 'AI Cleaning Coordinator', 'AI Customer Service Rep'],
+                positions: [
+                    { role: 'AI Moving Director', x: 400, y: 30 },
+                    { role: 'AI Packing Supervisor', x: 150, y: 150 },
+                    { role: 'AI Transport Dispatcher', x: 650, y: 150 },
+                    { role: 'AI Warehouse Manager', x: 150, y: 300 },
+                    { role: 'AI Cleaning Coordinator', x: 400, y: 350 },
+                    { role: 'AI Customer Service Rep', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Moving Director', to: 'AI Packing Supervisor', content: '物品打包' },
+                    { from: 'AI Moving Director', to: 'AI Transport Dispatcher', content: '搬运调度' },
+                    { from: 'AI Packing Supervisor', to: 'AI Warehouse Manager', content: '仓储管理' },
+                    { from: 'AI Transport Dispatcher', to: 'AI Cleaning Coordinator', content: '清洁还原' },
+                    { from: 'AI Cleaning Coordinator', to: 'AI Customer Service Rep', content: '客户服务' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -33049,7 +33214,57 @@
             'AI Energy Consultant': { icon: '💡', color: '#22c55e', role: 'AI节能顾问' },
             'AI Grid Operator': { icon: '🔗', color: '#ec4899', role: 'AI电网运营员' },
             'AI Maintenance Tech': { icon: '🔧', color: '#06b6d4', role: 'AI维护技师' },
-            'AI Usage Analyst': { icon: '📊', color: '#14b8a6', role: 'AI用量分析师' }
+            'AI Usage Analyst': { icon: '📊', color: '#14b8a6', role: 'AI用量分析师' },
+            // Cycle 451 新增角色 - 7个行业服务系统
+            // AI智能母婴服务管理系统
+            'AI Maternity Director': { icon: '👶', color: '#3b82f6', role: 'AI母婴服务总监' },
+            'AI Nanny Service Manager': { icon: '🍼', color: '#f59e0b', role: 'AI月嫂服务经理' },
+            'AI Childcare Specialist': { icon: '🧒', color: '#22c55e', role: 'AI育儿专家' },
+            'AI Product Consultant': { icon: '🛒', color: '#ec4899', role: 'AI产品顾问' },
+            'AI Activity Planner': { icon: '🎈', color: '#06b6d4', role: 'AI活动策划师' },
+            'AI Health Advisor': { icon: '💊', color: '#14b8a6', role: 'AI健康顾问' },
+            // AI智能留学服务管理系统
+            'AI Study Abroad Director': { icon: '🎓', color: '#8b5cf6', role: 'AI留学总监' },
+            'AI School Selector': { icon: '🏫', color: '#f59e0b', role: 'AI选校顾问' },
+            'AI Application Manager': { icon: '📄', color: '#22c55e', role: 'AI申请经理' },
+            'AI Visa Coordinator': { icon: '🛂', color: '#ec4899', role: 'AI签证协调员' },
+            'AI Predeparture Advisor': { icon: '✈️', color: '#06b6d4', role: 'AI行前顾问' },
+            'AI Alumni Coordinator': { icon: '🎓', color: '#14b8a6', role: 'AI校友协调员' },
+            // AI智能移民服务管理系统
+            'AI Immigration Director': { icon: '🌍', color: '#3b82f6', role: 'AI移民总监' },
+            'AI Assessment Specialist': { icon: '📋', color: '#f59e0b', role: 'AI评估专员' },
+            'AI Document Preparer': { icon: '📝', color: '#22c55e', role: 'AI文件准备员' },
+            'AI Interview Coach': { icon: '🎤', color: '#ec4899', role: 'AI面试辅导师' },
+            'AI Settlement Advisor': { icon: '🏠', color: '#06b6d4', role: 'AI落地顾问' },
+            'AI Legal Consultant': { icon: '⚖️', color: '#14b8a6', role: 'AI法律顾问' },
+            // AI智能养老服务管理系统
+            'AI Elderly Care Director': { icon: '👴', color: '#8b5cf6', role: 'AI养老服务总监' },
+            'AI Health Monitor': { icon: '💓', color: '#f59e0b', role: 'AI健康监测员' },
+            'AI Life Caregiver': { icon: '🧓', color: '#22c55e', role: 'AI生活护理员' },
+            'AI Rehab Specialist': { icon: '🏥', color: '#ec4899', role: 'AI康复专家' },
+            'AI Companion': { icon: '🤗', color: '#06b6d4', role: 'AI陪伴师' },
+            'AI Family Liaison': { icon: '👨‍👩‍👧', color: '#14b8a6', role: 'AI家属联络员' },
+            // AI智能宠物服务管理系统
+            'AI Pet Service Director': { icon: '🐾', color: '#3b82f6', role: 'AI宠物服务总监' },
+            'AI Vet Coordinator': { icon: '🏥', color: '#f59e0b', role: 'AI宠物医疗协调员' },
+            'AI Grooming Manager': { icon: '✂️', color: '#22c55e', role: 'AI美容经理' },
+            'AI Boarding Trainer': { icon: '🐕', color: '#ec4899', role: 'AI寄养训练师' },
+            'AI Product Specialist': { icon: '🦴', color: '#06b6d4', role: 'AI宠物产品专员' },
+            'AI Pet Funeral Director': { icon: '🕯️', color: '#14b8a6', role: 'AI宠物殡葬总监' },
+            // AI智能茶饮服务管理系统
+            'AI Tea Drink Director': { icon: '🧋', color: '#8b5cf6', role: 'AI茶饮服务总监' },
+            'AI Product Developer': { icon: '🧪', color: '#f59e0b', role: 'AI产品研发员' },
+            'AI Supply Chain Manager': { icon: '📦', color: '#22c55e', role: 'AI供应链经理' },
+            'AI Store Operations': { icon: '🏪', color: '#ec4899', role: 'AI门店运营员' },
+            'AI Marketing Manager': { icon: '📢', color: '#06b6d4', role: 'AI营销经理' },
+            'AI Franchise Coordinator': { icon: '🤝', color: '#14b8a6', role: 'AI加盟协调员' },
+            // AI智能搬家服务管理系统
+            'AI Moving Director': { icon: '🚛', color: '#3b82f6', role: 'AI搬家服务总监' },
+            'AI Packing Supervisor': { icon: '📦', color: '#f59e0b', role: 'AI打包主管' },
+            'AI Transport Dispatcher': { icon: '🚚', color: '#22c55e', role: 'AI运输调度员' },
+            'AI Warehouse Manager': { icon: '🏭', color: '#ec4899', role: 'AI仓储经理' },
+            'AI Cleaning Coordinator': { icon: '🧹', color: '#06b6d4', role: 'AI清洁协调员' },
+            'AI Customer Service Rep': { icon: '📞', color: '#14b8a6', role: 'AI客服代表' }
         };
 
         // 拖拽相关变量
