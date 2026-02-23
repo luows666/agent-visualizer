@@ -19654,6 +19654,132 @@
                     { from: 'AI Surveyor', to: 'AI Drone Mapping', content: '无人机测绘' },
                     { from: 'AI Drone Mapping', to: 'AI Surveyor', content: '测绘完成' }
                 ]
+            },
+            // Cycle 400 新增模板 - AI智能新能源系统
+            {
+                id: 'ai-new-energy',
+                name: 'AI智能新能源系统',
+                icon: '☀️',
+                desc: '从新能源研发到能源管理的完整新能源流程',
+                agents: ['AI Solar Engineer', 'AI Wind Engineer', 'AI Nuclear Engineer', 'AI Energy Storage', 'AI Power Grid'],
+                positions: [
+                    { role: 'AI Solar Engineer', x: 400, y: 30 },
+                    { role: 'AI Wind Engineer', x: 200, y: 150 },
+                    { role: 'AI Nuclear Engineer', x: 600, y: 150 },
+                    { role: 'AI Energy Storage', x: 200, y: 270 },
+                    { role: 'AI Power Grid', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Solar Engineer', to: 'AI Power Grid', content: '太阳能发电' },
+                    { from: 'AI Wind Engineer', to: 'AI Power Grid', content: '风电并网' },
+                    { from: 'AI Nuclear Engineer', to: 'AI Power Grid', content: '核电输送' },
+                    { from: 'AI Energy Storage', to: 'AI Power Grid', content: '储能调度' }
+                ]
+            },
+            // Cycle 400 新增模板 - AI智能半导体系统
+            {
+                id: 'ai-semiconductor',
+                name: 'AI智能半导体系统',
+                icon: '🔲',
+                desc: '从芯片设计到封装测试的完整半导体流程',
+                agents: ['AI Chip Designer', 'AI Process Engineer', 'AI Wafer Engineer', 'AI Test Engineer', 'AI Packaging Engineer'],
+                positions: [
+                    { role: 'AI Chip Designer', x: 400, y: 30 },
+                    { role: 'AI Process Engineer', x: 200, y: 150 },
+                    { role: 'AI Wafer Engineer', x: 600, y: 150 },
+                    { role: 'AI Test Engineer', x: 200, y: 270 },
+                    { role: 'AI Packaging Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Chip Designer', to: 'AI Process Engineer', content: '设计图纸' },
+                    { from: 'AI Process Engineer', to: 'AI Wafer Engineer', content: '制程参数' },
+                    { from: 'AI Wafer Engineer', to: 'AI Test Engineer', content: '晶圆成品' },
+                    { from: 'AI Test Engineer', to: 'AI Packaging Engineer', content: '测试报告' }
+                ]
+            },
+            // Cycle 400 新增模板 - AI智能医疗器械系统
+            {
+                id: 'ai-medical-device',
+                name: 'AI智能医疗器械系统',
+                icon: '💉',
+                desc: '从设备设计到临床应用的完整医疗器械流程',
+                agents: ['AI Medical Device Designer', 'AI Imaging Specialist', 'AI Surgical Assistant', 'AI Prosthetics Engineer', 'AI Diagnostic Expert'],
+                positions: [
+                    { role: 'AI Medical Device Designer', x: 400, y: 30 },
+                    { role: 'AI Imaging Specialist', x: 200, y: 150 },
+                    { role: 'AI Surgical Assistant', x: 600, y: 150 },
+                    { role: 'AI Prosthetics Engineer', x: 200, y: 270 },
+                    { role: 'AI Diagnostic Expert', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Medical Device Designer', to: 'AI Imaging Specialist', content: '设备需求' },
+                    { from: 'AI Imaging Specialist', to: 'AI Diagnostic Expert', content: '影像数据' },
+                    { from: 'AI Surgical Assistant', to: 'AI Medical Device Designer', content: '手术反馈' },
+                    { from: 'AI Prosthetics Engineer', to: 'AI Medical Device Designer', content: '假肢方案' }
+                ]
+            },
+            // Cycle 400 新增模板 - AI智能食品工业系统
+            {
+                id: 'ai-food-industry',
+                name: 'AI智能食品工业系统',
+                icon: '🏭',
+                desc: '从食品加工到质量检测的完整食品工业流程',
+                agents: ['AI Food Process Engineer', 'AI Flavor Chemist', 'AI Quality Inspector', 'AI Nutritionist', 'AI Food Safety Expert'],
+                positions: [
+                    { role: 'AI Food Process Engineer', x: 400, y: 30 },
+                    { role: 'AI Flavor Chemist', x: 200, y: 150 },
+                    { role: 'AI Quality Inspector', x: 600, y: 150 },
+                    { role: 'AI Nutritionist', x: 200, y: 270 },
+                    { role: 'AI Food Safety Expert', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Food Process Engineer', to: 'AI Flavor Chemist', content: '工艺需求' },
+                    { from: 'AI Flavor Chemist', to: 'AI Quality Inspector', content: '配方确认' },
+                    { from: 'AI Quality Inspector', to: 'AI Food Safety Expert', content: '质检报告' },
+                    { from: 'AI Nutritionist', to: 'AI Food Process Engineer', content: '营养配方' }
+                ]
+            },
+            // Cycle 400 新增模板 - AI智能纺织服装系统
+            {
+                id: 'ai-textile-fashion',
+                name: 'AI智能纺织服装系统',
+                icon: '🧵',
+                desc: '从纺织设计到服装生产的完整纺织服装流程',
+                agents: ['AI Textile Engineer', 'AI Fashion Designer', 'AI Pattern Maker', 'AI Fabric Expert', 'AI Garment Technologist'],
+                positions: [
+                    { role: 'AI Textile Engineer', x: 400, y: 30 },
+                    { role: 'AI Fashion Designer', x: 200, y: 150 },
+                    { role: 'AI Pattern Maker', x: 600, y: 150 },
+                    { role: 'AI Fabric Expert', x: 200, y: 270 },
+                    { role: 'AI Garment Technologist', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Textile Engineer', to: 'AI Fabric Expert', content: '面料需求' },
+                    { from: 'AI Fashion Designer', to: 'AI Pattern Maker', content: '设计稿' },
+                    { from: 'AI Pattern Maker', to: 'AI Garment Technologist', content: '版型数据' },
+                    { from: 'AI Garment Technologist', to: 'AI Textile Engineer', content: '工艺要求' }
+                ]
+            },
+            // Cycle 400 新增模板 - AI智能钢铁冶金系统
+            {
+                id: 'ai-steel-metallurgy',
+                name: 'AI智能钢铁冶金系统',
+                icon: '🏗️',
+                desc: '从钢铁冶炼到质量检测的完整钢铁冶金流程',
+                agents: ['AI Steel Metallurgist', 'AI Blast Furnace Operator', 'AI Steel Quality Inspector', 'AI Rolling Mill Engineer', 'AI Foundry Engineer'],
+                positions: [
+                    { role: 'AI Steel Metallurgist', x: 400, y: 30 },
+                    { role: 'AI Blast Furnace Operator', x: 200, y: 150 },
+                    { role: 'AI Steel Quality Inspector', x: 600, y: 150 },
+                    { role: 'AI Rolling Mill Engineer', x: 200, y: 270 },
+                    { role: 'AI Foundry Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Steel Metallurgist', to: 'AI Blast Furnace Operator', content: '冶炼配方' },
+                    { from: 'AI Blast Furnace Operator', to: 'AI Steel Quality Inspector', content: '生产数据' },
+                    { from: 'AI Steel Quality Inspector', to: 'AI Rolling Mill Engineer', content: '质检合格' },
+                    { from: 'AI Rolling Mill Engineer', to: 'AI Foundry Engineer', content: '轧制计划' }
+                ]
             }
         ];
 
@@ -23239,7 +23365,79 @@
             'AI Mine Safety': { icon: '⚠️', color: '#f97316', role: 'AI矿山安全工程师' },
             'AI Mineral Analysis': { icon: '🔬', color: '#8b5cf6', role: 'AI矿物分析师' },
             'AI Blast Design': { icon: '🧨', color: '#ec4899', role: 'AI爆破设计师' },
-            'AI Mine Planning': { icon: '📐', color: '#f59e0b', role: 'AI矿山规划师' }
+            'AI Mine Planning': { icon: '📐', color: '#f59e0b', role: 'AI矿山规划师' },
+            // Cycle 400 新增角色 - AI智能新能源
+            'AI Solar Engineer': { icon: '☀️', color: '#fbbf24', role: 'AI太阳能工程师' },
+            'AI Wind Engineer': { icon: '🌬️', color: '#38bdf8', role: 'AI风能工程师' },
+            'AI Nuclear Engineer': { icon: '☢️', color: '#22c55e', role: 'AI核能工程师' },
+            'AI Energy Storage': { icon: '🔋', color: '#a855f7', role: 'AI储能工程师' },
+            'AI Power Grid': { icon: '⚡', color: '#eab308', role: 'AI电网工程师' },
+            // Cycle 400 新增角色 - AI智能半导体
+            'AI Chip Designer': { icon: '🔲', color: '#6366f1', role: 'AI芯片设计师' },
+            'AI Process Engineer': { icon: '⚙️', color: '#8b5cf6', role: 'AI制程工程师' },
+            'AI Wafer Engineer': { icon: '💎', color: '#06b6d4', role: 'AI晶圆工程师' },
+            'AI Test Engineer': { icon: '🧪', color: '#14b8a6', role: 'AI测试工程师' },
+            'AI Packaging Engineer': { icon: '📦', color: '#f97316', role: 'AI封装工程师' },
+            // Cycle 400 新增角色 - AI智能医疗器械
+            'AI Medical Device Designer': { icon: '💉', color: '#ec4899', role: 'AI医疗设备设计师' },
+            'AI Imaging Specialist': { icon: '🏥', color: '#06b6d4', role: 'AI影像专家' },
+            'AI Surgical Assistant': { icon: '✂️', color: '#f43f5e', role: 'AI手术助理' },
+            'AI Prosthetics Engineer': { icon: '🦾', color: '#a855f7', role: 'AI假肢工程师' },
+            'AI Diagnostic Expert': { icon: '🔬', color: '#10b981', role: 'AI诊断专家' },
+            // Cycle 400 新增角色 - AI智能食品工业
+            'AI Food Process Engineer': { icon: '🏭', color: '#f59e0b', role: 'AI食品加工工程师' },
+            'AI Flavor Chemist': { icon: '🧪', color: '#ec4899', role: 'AI风味化学师' },
+            'AI Quality Inspector': { icon: '✅', color: '#22c55e', role: 'AI质检员' },
+            'AI Nutritionist': { icon: '🥗', color: '#14b8a6', role: 'AI营养师' },
+            'AI Food Safety Expert': { icon: '🛡️', color: '#06b6d4', role: 'AI食品安全专家' },
+            // Cycle 400 新增角色 - AI智能纺织服装
+            'AI Textile Engineer': { icon: '🧵', color: '#f472b6', role: 'AI纺织工程师' },
+            'AI Fashion Designer': { icon: '👗', color: '#f472b6', role: 'AI服装设计师' },
+            'AI Pattern Maker': { icon: '📐', color: '#a78bfa', role: 'AI版型师' },
+            'AI Fabric Expert': { icon: '🧶', color: '#c084fc', role: 'AI面料专家' },
+            'AI Garment Technologist': { icon: '👔', color: '#818cf8', role: 'AI服装工艺师' },
+            // Cycle 400 新增角色 - AI智能印刷包装
+            'AI Print Engineer': { icon: '🖨️', color: '#64748b', role: 'AI印刷工程师' },
+            'AI Packaging Designer': { icon: '📦', color: '#94a3b8', role: 'AI包装设计师' },
+            'AI Print Quality Inspector': { icon: '🔍', color: '#475569', role: 'AI印刷质检员' },
+            'AI Production Planner': { icon: '📋', color: '#334155', role: 'AI生产计划师' },
+            'AI Material Optimizer': { icon: '♻️', color: '#22c55e', role: 'AI材料优化师' },
+            // Cycle 400 新增角色 - AI智能珠宝钟表
+            'AI Jewelry Designer': { icon: '💎', color: '#fbbf24', role: 'AI珠宝设计师' },
+            'AI Gemologist': { icon: '💍', color: '#f59e0b', role: 'AI宝石学家' },
+            'AI Watchmaker': { icon: '⌚', color: '#78716c', role: 'AI钟表师' },
+            'AI Goldsmith': { icon: '🥇', color: '#eab308', role: 'AI金匠师' },
+            'AI Jewelry Appraiser': { icon: '📊', color: '#a16207', role: 'AI珠宝估价师' },
+            // Cycle 400 新增角色 - AI智能体育用品
+            'AI Sports Equipment Designer': { icon: '⚽', color: '#3b82f6', role: 'AI体育用品设计师' },
+            'AI Gym Equipment Engineer': { icon: '🏋️', color: '#ef4444', role: 'AI健身器材工程师' },
+            'AI Sportswear Designer': { icon: '👕', color: '#8b5cf6', role: 'AI运动服设计师' },
+            'AI Equipment Tester': { icon: '🧪', color: '#06b6d4', role: 'AI器材测试员' },
+            'AI Sports Marketing': { icon: '📢', color: '#f97316', role: 'AI体育营销师' },
+            // Cycle 400 新增角色 - AI智能游乐设施
+            'AI Amusement Designer': { icon: '🎢', color: '#ec4899', role: 'AI游乐设施设计师' },
+            'AI Ride Engineer': { icon: '🎠', color: '#f59e0b', role: 'AI游乐设施工程师' },
+            'AI Theme Park Manager': { icon: '🏰', color: '#8b5cf6', role: 'AI主题公园经理' },
+            'AI Safety Inspection': { icon: '✅', color: '#22c55e', role: 'AI安全检查员' },
+            'AI Ride Operator': { icon: '🎪', color: '#06b6d4', role: 'AI游乐设施操作员' },
+            // Cycle 400 新增角色 - AI智能电梯制造
+            'AI Elevator Designer': { icon: '🏢', color: '#475569', role: 'AI电梯设计师' },
+            'AI Elevator Technician': { icon: '🔧', color: '#64748b', role: 'AI电梯技师' },
+            'AI Elevator Safety': { icon: '🛡️', color: '#22c55e', role: 'AI电梯安全师' },
+            'AI Elevator Maintenance': { icon: '🔩', color: '#94a3b8', role: 'AI电梯维护师' },
+            'AI Elevator Sales': { icon: '💰', color: '#f59e0b', role: 'AI电梯销售经理' },
+            // Cycle 400 新增角色 - AI智能钢铁冶金
+            'AI Steel Metallurgist': { icon: '🏗️', color: '#71717a', role: 'AI钢铁冶金工程师' },
+            'AI Blast Furnace Operator': { icon: '🔥', color: '#ef4444', role: 'AI高炉操作员' },
+            'AI Steel Quality Inspector': { icon: '✅', color: '#22c55e', role: 'AI钢铁质检员' },
+            'AI Rolling Mill Engineer': { icon: '⚙️', color: '#78716c', role: 'AI轧钢工程师' },
+            'AI Foundry Engineer': { icon: '⚙️', color: '#a1a1aa', role: 'AI铸造工程师' },
+            // Cycle 400 新增角色 - AI智能烟草行业
+            'AI Tobacco Engineer': { icon: '🍂', color: '#84cc16', role: 'AI烟草工程师' },
+            'AI Cigarette Designer': { icon: '🚬', color: '#ef4444', role: 'AI香烟设计师' },
+            'AI Tobacco Quality Expert': { icon: '🔬', color: '#22c55e', role: 'AI烟草质量专家' },
+            'AI Tobacco Agronomist': { icon: '🌱', color: '#65a30d', role: 'AI烟草农艺师' },
+            'AI Tobacco Sales Manager': { icon: '💼', color: '#f97316', role: 'AI烟草销售经理' }
         };
 
         // 拖拽相关变量
