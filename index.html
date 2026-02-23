@@ -25338,8 +25338,166 @@
             }
         ];
 
+        // Cycle 440 - 新增行业服务系统模板
+        const cycle440Templates = [
+            {
+                id: 'ai-insurance-service',
+                name: 'AI智能保险服务系统',
+                icon: '🛡️',
+                desc: '智能保险服务管理，包括投保咨询、理赔处理、风险管理等',
+                agents: ['AI Insurance Director', 'AI Policy Advisor', 'AI Claims Processor', 'AI Risk Analyst', 'AI Underwriter', 'AI Customer Service'],
+                positions: [
+                    { role: 'AI Insurance Director', x: 400, y: 30 },
+                    { role: 'AI Policy Advisor', x: 150, y: 150 },
+                    { role: 'AI Claims Processor', x: 650, y: 150 },
+                    { role: 'AI Risk Analyst', x: 150, y: 300 },
+                    { role: 'AI Underwriter', x: 400, y: 350 },
+                    { role: 'AI Customer Service', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Insurance Director', to: 'AI Policy Advisor', content: '投保咨询' },
+                    { from: 'AI Insurance Director', to: 'AI Risk Analyst', content: '风险评估' },
+                    { from: 'AI Policy Advisor', to: 'AI Underwriter', content: '核保安排' },
+                    { from: 'AI Risk Analyst', to: 'AI Claims Processor', content: '理赔协调' },
+                    { from: 'AI Underwriter', to: 'AI Customer Service', content: '保单服务' }
+                ]
+            },
+            {
+                id: 'ai-real-estate-service',
+                name: 'AI智能房产服务系统',
+                icon: '🏠',
+                desc: '智能房产服务管理，包括房屋买卖、租赁管理、资产评估等',
+                agents: ['AI RealEstate Director', 'AI Property Lister', 'AI Buyer Matcher', 'AI Lease Manager', 'AI Appraiser', 'AI Transaction Coordinator'],
+                positions: [
+                    { role: 'AI RealEstate Director', x: 400, y: 30 },
+                    { role: 'AI Property Lister', x: 150, y: 150 },
+                    { role: 'AI Buyer Matcher', x: 650, y: 150 },
+                    { role: 'AI Lease Manager', x: 150, y: 300 },
+                    { role: 'AI Appraiser', x: 400, y: 350 },
+                    { role: 'AI Transaction Coordinator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI RealEstateDirector', to: 'AI Property Lister', content: '房源上架' },
+                    { from: 'AI RealEstateDirector', to: 'AI Buyer Matcher', content: '客户匹配' },
+                    { from: 'AI Property Lister', to: 'AI Appraiser', content: '评估请求' },
+                    { from: 'AI Buyer Matcher', to: 'AI Transaction Coordinator', content: '交易协调' },
+                    { from: 'AI Lease Manager', to: 'AI RealEstateDirector', content: '租赁管理' }
+                ]
+            },
+            {
+                id: 'ai-event-planning-service',
+                name: 'AI智能活动策划服务系统',
+                icon: '🎪',
+                desc: '智能活动策划管理，包括婚礼策划、企业活动、会议组织等',
+                agents: ['AI Event Director', 'AI Theme Designer', 'AI Vendor Coordinator', 'AI Budget Manager', 'AI Logistics Planner', 'AI Guest Relations'],
+                positions: [
+                    { role: 'AI Event Director', x: 400, y: 30 },
+                    { role: 'AI Theme Designer', x: 150, y: 150 },
+                    { role: 'AI Vendor Coordinator', x: 650, y: 150 },
+                    { role: 'AI Budget Manager', x: 150, y: 300 },
+                    { role: 'AI Logistics Planner', x: 400, y: 350 },
+                    { role: 'AI Guest Relations', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Event Director', to: 'AI Theme Designer', content: '主题设计' },
+                    { from: 'AI Event Director', to: 'AI Vendor Coordinator', content: '供应商协调' },
+                    { from: 'AI Theme Designer', to: 'AI Budget Manager', content: '预算需求' },
+                    { from: 'AI Vendor Coordinator', to: 'AI Logistics Planner', content: '物流安排' },
+                    { from: 'AI Logistics Planner', to: 'AI Guest Relations', content: '宾客接待' }
+                ]
+            },
+            {
+                id: 'ai-hr-recruitment-service',
+                name: 'AI智能人力资源招聘服务系统',
+                icon: '👥',
+                desc: '智能招聘服务管理，包括职位发布、简历筛选、面试安排等',
+                agents: ['AI HR Director', 'AI Job Lister', 'AI Resume Screener', 'AI Interview Coordinator', 'AI Skills Assessor', 'AI Onboarding Manager'],
+                positions: [
+                    { role: 'AI HR Director', x: 400, y: 30 },
+                    { role: 'AI Job Lister', x: 150, y: 150 },
+                    { role: 'AI Resume Screener', x: 650, y: 150 },
+                    { role: 'AI Interview Coordinator', x: 150, y: 300 },
+                    { role: 'AI Skills Assessor', x: 400, y: 350 },
+                    { role: 'AI Onboarding Manager', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HR Director', to: 'AI Job Lister', content: '职位发布' },
+                    { from: 'AI HR Director', to: 'AI Resume Screener', content: '简历筛选' },
+                    { from: 'AI Resume Screener', to: 'AI Interview Coordinator', content: '面试安排' },
+                    { from: 'AI Interview Coordinator', to: 'AI Skills Assessor', content: '能力评估' },
+                    { from: 'AI Skills Assessor', to: 'AI OnboardingManager', content: '入职安排' }
+                ]
+            },
+            {
+                id: 'ai-home-cleaning-service',
+                name: 'AI智能家政保洁服务系统',
+                icon: '🧹',
+                desc: '智能家政保洁服务管理，包括日常清洁、深度清洁、家电清洗等',
+                agents: ['AI Cleaning Director', 'AI House Cleaner', 'AI Deep Cleaner', 'AI Appliance Cleaner', 'AI Quality Inspector', 'AI Service Scheduler'],
+                positions: [
+                    { role: 'AI Cleaning Director', x: 400, y: 30 },
+                    { role: 'AI House Cleaner', x: 150, y: 150 },
+                    { role: 'AI Deep Cleaner', x: 650, y: 150 },
+                    { role: 'AI Appliance Cleaner', x: 150, y: 300 },
+                    { role: 'AI Quality Inspector', x: 400, y: 350 },
+                    { role: 'AI Service Scheduler', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Cleaning Director', to: 'AI House Cleaner', content: '日常清洁' },
+                    { from: 'AI Cleaning Director', to: 'AI Service Scheduler', content: '预约安排' },
+                    { from: 'AI House Cleaner', to: 'AI Deep Cleaner', content: '深度清洁' },
+                    { from: 'AI Deep Cleaner', to: 'AI Appliance Cleaner', content: '家电清洗' },
+                    { from: 'AI Appliance Cleaner', to: 'AI Quality Inspector', content: '质检交接' }
+                ]
+            },
+            {
+                id: 'ai-childcare-service',
+                name: 'AI智能儿童托管服务系统',
+                icon: '👶',
+                desc: '智能儿童托管服务管理，包括日托服务、兴趣培养、安全监护等',
+                agents: ['AI Childcare Director', 'AI Caregiver', 'AI Activity Leader', 'AI Safety Monitor', 'AI Meal Planner', 'AI Parent Liaison'],
+                positions: [
+                    { role: 'AI Childcare Director', x: 400, y: 30 },
+                    { role: 'AI Caregiver', x: 150, y: 150 },
+                    { role: 'AI Activity Leader', x: 650, y: 150 },
+                    { role: 'AI Safety Monitor', x: 150, y: 300 },
+                    { role: 'AI Meal Planner', x: 400, y: 350 },
+                    { role: 'AI Parent Liaison', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Childcare Director', to: 'AI Caregiver', content: '托管安排' },
+                    { from: 'AI Childcare Director', to: 'AI Activity Leader', content: '活动组织' },
+                    { from: 'AI Caregiver', to: 'AI Safety Monitor', content: '安全监护' },
+                    { from: 'AI Activity Leader', to: 'AI Meal Planner', content: '餐饮安排' },
+                    { from: 'AI Safety Monitor', to: 'AI Parent Liaison', content: '家长沟通' }
+                ]
+            },
+            {
+                id: 'ai-elderly-care-service',
+                name: 'AI智能老年护理服务系统',
+                icon: '👴',
+                desc: '智能老年护理服务管理，包括日常护理、健康监护、康复训练等',
+                agents: ['AI ElderCare Director', 'AI Care Nurse', 'AI Health Monitor', 'AI Rehabilitation Trainer', 'AI Social Companion', 'AI Family Coordinator'],
+                positions: [
+                    { role: 'AI ElderCare Director', x: 400, y: 30 },
+                    { role: 'AI Care Nurse', x: 150, y: 150 },
+                    { role: 'AI Health Monitor', x: 650, y: 150 },
+                    { role: 'AI Rehabilitation Trainer', x: 150, y: 300 },
+                    { role: 'AI Social Companion', x: 400, y: 350 },
+                    { role: 'AI Family Coordinator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI ElderCare Director', to: 'AI Care Nurse', content: '护理任务' },
+                    { from: 'AI ElderCare Director', to: 'AI Social Companion', content: '陪伴安排' },
+                    { from: 'AI Care Nurse', to: 'AI Health Monitor', content: '健康监测' },
+                    { from: 'AI Health Monitor', to: 'AI Rehabilitation Trainer', content: '康复训练' },
+                    { from: 'AI Social Companion', to: 'AI Family Coordinator', content: '家属沟通' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -30589,7 +30747,57 @@
             'AI Meditation Coach': { icon: '🧠', color: '#06b6d4', role: 'AI冥想导师' },
             'AI Flexibility Trainer': { icon: '🤸', color: '#f97316', role: 'AI柔韧训练师' },
             'AI Wellness Consultant': { icon: '💆', color: '#22c55e', role: 'AI健康顾问' },
-            'AI Class Coordinator': { icon: '📅', color: '#3b82f6', role: 'AI课程协调' }
+            'AI Class Coordinator': { icon: '📅', color: '#3b82f6', role: 'AI课程协调' },
+            // Cycle 440 新增角色 - 7个行业服务系统
+            // AI智能保险服务系统
+            'AI Insurance Director': { icon: '🛡️', color: '#8b5cf6', role: 'AI保险总监' },
+            'AI Policy Advisor': { icon: '📋', color: '#f59e0b', role: 'AI投保顾问' },
+            'AI Claims Processor': { icon: '💰', color: '#22c55e', role: 'AI理赔专员' },
+            'AI Risk Analyst': { icon: '⚠️', color: '#ec4899', role: 'AI风险分析师' },
+            'AI Underwriter': { icon: '✍️', color: '#06b6d4', role: 'AI核保专员' },
+            'AI Insurance Customer Service': { icon: '💬', color: '#14b8a6', role: 'AI客服' },
+            // AI智能房产服务系统
+            'AI RealEstate Director': { icon: '🏠', color: '#3b82f6', role: 'AI房产总监' },
+            'AI Property Lister': { icon: '📝', color: '#f59e0b', role: 'AI房源上架' },
+            'AI Buyer Matcher': { icon: '🤝', color: '#22c55e', role: 'AI客户匹配' },
+            'AI Lease Manager': { icon: '🔑', color: '#ec4899', role: 'AI租赁管理' },
+            'AI Appraiser': { icon: '📊', color: '#06b6d4', role: 'AI评估师' },
+            'AI Transaction Coordinator': { icon: '📜', color: '#14b8a6', role: 'AI交易协调' },
+            // AI智能活动策划服务系统
+            'AI Event Director': { icon: '🎪', color: '#8b5cf6', role: 'AI活动总监' },
+            'AI Theme Designer': { icon: '🎨', color: '#f59e0b', role: 'AI主题设计' },
+            'AI Vendor Coordinator': { icon: '🤝', color: '#22c55e', role: 'AI供应商协调' },
+            'AI Budget Manager': { icon: '💵', color: '#ec4899', role: 'AI预算管理' },
+            'AI Logistics Planner': { icon: '📦', color: '#06b6d4', role: 'AI物流策划' },
+            'AI Guest Relations': { icon: '👋', color: '#14b8a6', role: 'AI宾客关系' },
+            // AI智能人力资源招聘服务系统
+            'AI HR Director': { icon: '👥', color: '#3b82f6', role: 'AI人力资源总监' },
+            'AI Job Lister': { icon: '📋', color: '#f59e0b', role: 'AI职位发布' },
+            'AI Resume Screener': { icon: '📄', color: '#22c55e', role: 'AI简历筛选' },
+            'AI Interview Coordinator': { icon: '🗓️', color: '#ec4899', role: 'AI面试协调' },
+            'AI Skills Assessor': { icon: '📊', color: '#06b6d4', role: 'AI能力评估' },
+            'AI OnboardingManager': { icon: '🎓', color: '#14b8a6', role: 'AI入职管理' },
+            // AI智能家政保洁服务系统
+            'AI Cleaning Director': { icon: '🧹', color: '#8b5cf6', role: 'AI保洁总监' },
+            'AI House Cleaner': { icon: '🏠', color: '#f59e0b', role: 'AI日常清洁' },
+            'AI Deep Cleaner': { icon: '✨', color: '#22c55e', role: 'AI深度清洁' },
+            'AI Appliance Cleaner': { icon: '🔌', color: '#ec4899', role: 'AI家电清洗' },
+            'AI Cleaning Quality Inspector': { icon: '✅', color: '#06b6d4', role: 'AI质检员' },
+            'AI Service Scheduler': { icon: '📅', color: '#14b8a6', role: 'AI调度员' },
+            // AI智能儿童托管服务系统
+            'AI Childcare Director': { icon: '👶', color: '#3b82f6', role: 'AI托管总监' },
+            'AI Childcare Caregiver': { icon: '🧒', color: '#f59e0b', role: 'AI保育员' },
+            'AI Activity Leader': { icon: '🎨', color: '#22c55e', role: 'AI活动带领' },
+            'AI Safety Monitor': { icon: '👀', color: '#ec4899', role: 'AI安全监护' },
+            'AI Childcare Meal Planner': { icon: '🍎', color: '#06b6d4', role: 'AI餐饮规划' },
+            'AI Parent Liaison': { icon: '👨‍👩‍👧', color: '#14b8a6', role: 'AI家长联络' },
+            // AI智能老年护理服务系统
+            'AI ElderCare Director': { icon: '👴', color: '#8b5cf6', role: 'AI护理总监' },
+            'AI Care Nurse': { icon: '👩‍⚕️', color: '#f59e0b', role: 'AI护理护士' },
+            'AI Elderly Health Monitor': { icon: '💓', color: '#22c55e', role: 'AI健康监护' },
+            'AI Rehabilitation Trainer': { icon: '🏋️', color: '#ec4899', role: 'AI康复训练' },
+            'AI Social Companion': { icon: '💬', color: '#06b6d4', role: 'AI陪伴师' },
+            'AI Family Coordinator': { icon: '👨‍👩‍👴', color: '#14b8a6', role: 'AI家属协调' }
         };
 
         // 拖拽相关变量
