@@ -18733,6 +18733,128 @@
                     { from: 'AI Fitness Trainer', to: 'AI Nutrition Planner', content: '营养配餐需求' },
                     { from: 'AI Nutrition Planner', to: 'AI Hair Stylist', content: '整体方案建议' }
                 ]
+            },
+            // Cycle 392 新增模板 - AI智能政府公共服务系统
+            {
+                id: 'ai-government',
+                name: 'AI智能政府公共服务系统',
+                icon: '🏛️',
+                desc: '从政策制定到公民服务的完整政府流程',
+                agents: ['AI Government Liaison', 'AI Policy Analyst', 'AI Public Relations', 'AI Citizen Service', 'AI Emergency Planner'],
+                positions: [
+                    { role: 'AI Government Liaison', x: 400, y: 50 },
+                    { role: 'AI Policy Analyst', x: 200, y: 180 },
+                    { role: 'AI Public Relations', x: 400, y: 180 },
+                    { role: 'AI Citizen Service', x: 600, y: 180 },
+                    { role: 'AI Emergency Planner', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Government Liaison', to: 'AI Policy Analyst', content: '政策需求分析' },
+                    { from: 'AI Policy Analyst', to: 'AI Public Relations', content: '政策解读和公关策略' },
+                    { from: 'AI Public Relations', to: 'AI Citizen Service', content: '公关方案和服务计划' },
+                    { from: 'AI Citizen Service', to: 'AI Emergency Planner', content: '公民服务需求' },
+                    { from: 'AI Emergency Planner', to: 'AI Government Liaison', content: '应急响应计划' }
+                ]
+            },
+            // Cycle 392 新增模板 - AI智能体育运动系统
+            {
+                id: 'ai-sports-fitness',
+                name: 'AI智能体育运动系统',
+                icon: '🏃',
+                desc: '从训练指导到赛事执教的完整体育流程',
+                agents: ['AI Sports Coach', 'AI Fitness Instructor', 'AI Sports Analyst', 'AI Nutritionist'],
+                positions: [
+                    { role: 'AI Sports Coach', x: 400, y: 50 },
+                    { role: 'AI Fitness Instructor', x: 200, y: 180 },
+                    { role: 'AI Nutritionist', x: 400, y: 180 },
+                    { role: 'AI Sports Analyst', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sports Coach', to: 'AI Fitness Instructor', content: '训练计划安排' },
+                    { from: 'AI Fitness Instructor', to: 'AI Nutritionist', content: '营养方案需求' },
+                    { from: 'AI Nutritionist', to: 'AI Sports Analyst', content: '运动员营养数据' },
+                    { from: 'AI Sports Analyst', to: 'AI Sports Coach', content: '训练效果分析报告' }
+                ]
+            },
+            // Cycle 392 新增模板 - AI智能心理咨询系统
+            {
+                id: 'ai-psychology',
+                name: 'AI智能心理咨询系统',
+                icon: '🧠',
+                desc: '从心理评估到咨询服务的完整心理咨询流程',
+                agents: ['AI Psychologist', 'AI Counseling Therapist', 'AI Mental Health', 'AI Crisis Intervention'],
+                positions: [
+                    { role: 'AI Psychologist', x: 400, y: 50 },
+                    { role: 'AI Counseling Therapist', x: 200, y: 180 },
+                    { role: 'AI Mental Health', x: 400, y: 180 },
+                    { role: 'AI Crisis Intervention', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Psychologist', to: 'AI Counseling Therapist', content: '心理评估结果' },
+                    { from: 'AI Counseling Therapist', to: 'AI Mental Health', content: '咨询方案' },
+                    { from: 'AI Mental Health', to: 'AI Crisis Intervention', content: '心理健康状况' },
+                    { from: 'AI Crisis Intervention', to: 'AI Psychologist', content: '危机干预报告' }
+                ]
+            },
+            // Cycle 392 新增模板 - AI智能家居安防系统
+            {
+                id: 'ai-home-security',
+                name: 'AI智能家居安防系统',
+                icon: '🏠',
+                desc: '从安防监控到智能家居的完整家居系统',
+                agents: ['AI Home Security', 'AI Smart Home', 'AI Surveillance', 'AI Access Control'],
+                positions: [
+                    { role: 'AI Home Security', x: 400, y: 50 },
+                    { role: 'AI Smart Home', x: 200, y: 180 },
+                    { role: 'AI Surveillance', x: 400, y: 180 },
+                    { role: 'AI Access Control', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Home Security', to: 'AI Smart Home', content: '安防需求' },
+                    { from: 'AI Smart Home', to: 'AI Surveillance', content: '智能家居方案' },
+                    { from: 'AI Surveillance', to: 'AI Access Control', content: '监控数据' },
+                    { from: 'AI Access Control', to: 'AI Home Security', content: '门禁报告' }
+                ]
+            },
+            // Cycle 392 新增模板 - AI智能汽车服务系统
+            {
+                id: 'ai-auto-service',
+                name: 'AI智能汽车服务系统',
+                icon: '🚗',
+                desc: '从汽车维修到二手车评估的完整汽车服务流程',
+                agents: ['AI Auto Mechanic', 'AI Car Sales', 'AI Vehicle Inspection', 'AI Insurance Claims'],
+                positions: [
+                    { role: 'AI Auto Mechanic', x: 400, y: 50 },
+                    { role: 'AI Car Sales', x: 200, y: 180 },
+                    { role: 'AI Vehicle Inspection', x: 400, y: 180 },
+                    { role: 'AI Insurance Claims', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Auto Mechanic', to: 'AI Car Sales', content: '车辆维修记录' },
+                    { from: 'AI Car Sales', to: 'AI Vehicle Inspection', content: '销售需求' },
+                    { from: 'AI Vehicle Inspection', to: 'AI Insurance Claims', content: '检测报告' },
+                    { from: 'AI Insurance Claims', to: 'AI Auto Mechanic', content: '保险理赔进度' }
+                ]
+            },
+            // Cycle 392 新增模板 - AI智能餐饮服务系统
+            {
+                id: 'ai-dining-service',
+                name: 'AI智能餐饮服务系统',
+                icon: '🍽️',
+                desc: '从餐厅运营到菜品管理的完整餐饮服务流程',
+                agents: ['AI Restaurant Manager', 'AI Head Chef', 'AI Menu Designer', 'AI Kitchen Supervisor'],
+                positions: [
+                    { role: 'AI Restaurant Manager', x: 400, y: 50 },
+                    { role: 'AI Head Chef', x: 200, y: 180 },
+                    { role: 'AI Menu Designer', x: 400, y: 180 },
+                    { role: 'AI Kitchen Supervisor', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Restaurant Manager', to: 'AI Head Chef', content: '运营需求' },
+                    { from: 'AI Head Chef', to: 'AI Menu Designer', content: '菜品要求' },
+                    { from: 'AI Menu Designer', to: 'AI Kitchen Supervisor', content: '菜单设计' },
+                    { from: 'AI Kitchen Supervisor', to: 'AI Restaurant Manager', content: '厨房报告' }
+                ]
             }
         ];
 
@@ -22003,7 +22125,43 @@
             'AI Beautician': { icon: '💄', color: '#f59e0b', role: 'AI美容师' },
             'AI Makeup Artist': { icon: '✨', color: '#8b5cf6', role: 'AI化妆师' },
             'AI Fitness Trainer': { icon: '💪', color: '#06b6d4', role: 'AI健身教练' },
-            'AI Nutrition Planner': { icon: '🥗', color: '#22c55e', role: 'AI营养规划师' }
+            'AI Nutrition Planner': { icon: '🥗', color: '#22c55e', role: 'AI营养规划师' },
+            // Cycle 392 新增角色 - AI 智能政府公共服务
+            'AI Government Liaison': { icon: '🏛️', color: '#0ea5e9', role: 'AI政府联络官' },
+            'AI Policy Analyst': { icon: '📜', color: '#8b5cf6', role: 'AI政策分析师' },
+            'AI Public Relations': { icon: '📣', color: '#ec4899', role: 'AI公共关系师' },
+            'AI Citizen Service': { icon: '🤝', color: '#22c55e', role: 'AI公民服务师' },
+            'AI Emergency Planner': { icon: '🚨', color: '#dc2626', role: 'AI应急规划师' },
+            // Cycle 392 新增角色 - AI 智能体育运动
+            'AI Sports Coach': { icon: '⚽', color: '#10b981', role: 'AI体育教练' },
+            'AI Fitness Instructor': { icon: '🏋️', color: '#f59e0b', role: 'AI健身指导师' },
+            'AI Sports Analyst': { icon: '📊', color: '#3b82f6', role: 'AI体育分析师' },
+            'AI Nutritionist': { icon: '🥗', color: '#84cc16', role: 'AI营养师' },
+            // Cycle 392 新增角色 - AI 智能心理咨询
+            'AI Psychologist': { icon: '🧠', color: '#8b5cf6', role: 'AI心理学家' },
+            'AI Counseling Therapist': { icon: '💬', color: '#06b6d4', role: 'AI心理咨询师' },
+            'AI Mental Health': { icon: '🌿', color: '#22c55e', role: 'AI心理健康师' },
+            'AI Crisis Intervention': { icon: '🆘', color: '#dc2626', role: 'AI危机干预师' },
+            // Cycle 392 新增角色 - AI 智能家居安防
+            'AI Home Security': { icon: '🏠', color: '#0ea5e9', role: 'AI家居安防师' },
+            'AI Smart Home': { icon: '🏡', color: '#8b5cf6', role: 'AI智能家居师' },
+            'AI Surveillance': { icon: '📹', color: '#ec4899', role: 'AI监控分析师' },
+            'AI Access Control': { icon: '🔐', color: '#22c55e', role: 'AI门禁管理师' },
+            // Cycle 392 新增角色 - AI 智能汽车服务
+            'AI Auto Mechanic': { icon: '🔧', color: '#f59e0b', role: 'AI汽车维修师' },
+            'AI Car Sales': { icon: '🚗', color: '#3b82f6', role: 'AI汽车销售顾问' },
+            'AI Vehicle Inspection': { icon: '🔍', color: '#10b981', role: 'AI车辆检测师' },
+            'AI Insurance Claims': { icon: '📋', color: '#84cc16', role: 'AI保险理赔师' },
+            // Cycle 392 新增角色 - AI 智能摄影摄像
+            'AI Photographer': { icon: '📷', color: '#ec4899', role: 'AI摄影师' },
+            'AI Videographer': { icon: '🎥', color: '#8b5cf6', role: 'AI摄像师' },
+            'AI Photo Editor': { icon: '🖼️', color: '#06b6d4', role: 'AI图片编辑师' },
+            'AI Video Editor': { icon: '🎬', color: '#f59e0b', role: 'AI视频编辑师' },
+            // Cycle 392 新增角色 - AI 智能餐饮烹饪
+            'AI Chef': { icon: '👨‍🍳', color: '#f59e0b', role: 'AI厨师' },
+            'AI Baker': { icon: '🥐', color: '#d97706', role: 'AI烘焙师' },
+            'AI Bartender': { icon: '🍸', color: '#8b5cf6', role: 'AI调酒师' },
+            'AI Food Stylist': { icon: '🍽️', color: '#ec4899', role: 'AI食物造型师' }
         };
 
         // 拖拽相关变量
