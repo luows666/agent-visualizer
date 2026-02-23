@@ -21346,6 +21346,174 @@
                     { from: 'AI Onboarding Specialist', to: 'AI NPS Analyst', content: '入职满意度数据' },
                     { from: 'AI Complaint Handler', to: 'AI Customer Success Director', content: '投诉处理报告' }
                 ]
+            },
+            // Cycle 414 新增模板 - AI智能公共服务系统
+            {
+                id: 'ai-government-service',
+                name: 'AI智能公共服务系统',
+                icon: '🏛️',
+                desc: '从政策咨询到市民服务的全方位公共服务系统',
+                agents: ['AI Government Director', 'AI Public Service Agent', 'AI Permit Processor', 'AI Citizen Advisor', 'AI Policy Analyst', 'AI Service Navigator'],
+                positions: [
+                    { role: 'AI Government Director', x: 400, y: 30 },
+                    { role: 'AI Public Service Agent', x: 150, y: 150 },
+                    { role: 'AI Policy Analyst', x: 650, y: 150 },
+                    { role: 'AI Permit Processor', x: 150, y: 270 },
+                    { role: 'AI Citizen Advisor', x: 650, y: 270 },
+                    { role: 'AI Service Navigator', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Government Director', to: 'AI Public Service Agent', content: '服务任务分配' },
+                    { from: 'AI Government Director', to: 'AI Policy Analyst', content: '政策分析需求' },
+                    { from: 'AI Public Service Agent', to: 'AI Permit Processor', content: '许可办理需求' },
+                    { from: 'AI Policy Analyst', to: 'AI Citizen Advisor', content: '政策解读' },
+                    { from: 'AI Permit Processor', to: 'AI Service Navigator', content: '流程导航需求' },
+                    { from: 'AI Citizen Advisor', to: 'AI Government Director', content: '市民反馈汇总' }
+                ]
+            },
+            // Cycle 414 新增模板 - AI智能媒体传播系统
+            {
+                id: 'ai-media-communication',
+                name: 'AI智能媒体传播系统',
+                icon: '📺',
+                desc: '从内容制作到危机公关的全流程媒体传播系统',
+                agents: ['AI Media Director', 'AI News Editor', 'AI PR Specialist', 'AI Crisis Manager', 'AI Media Planner', 'AI Broadcast Engineer'],
+                positions: [
+                    { role: 'AI Media Director', x: 400, y: 30 },
+                    { role: 'AI News Editor', x: 150, y: 150 },
+                    { role: 'AI Media Planner', x: 650, y: 150 },
+                    { role: 'AI PR Specialist', x: 150, y: 270 },
+                    { role: 'AI Crisis Manager', x: 650, y: 270 },
+                    { role: 'AI Broadcast Engineer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Media Director', to: 'AI News Editor', content: '内容编辑任务' },
+                    { from: 'AI Media Director', to: 'AI Media Planner', content: '媒体规划需求' },
+                    { from: 'AI News Editor', to: 'AI PR Specialist', content: '公关稿件需求' },
+                    { from: 'AI Media Planner', to: 'AI Broadcast Engineer', content: '技术需求' },
+                    { from: 'AI PR Specialist', to: 'AI Crisis Manager', content: '危机预警' },
+                    { from: 'AI Crisis Manager', to: 'AI Media Director', content: '危机处理报告' }
+                ]
+            },
+            // Cycle 414 新增模板 - AI智能餐饮服务系统
+            {
+                id: 'ai-restaurant-service',
+                name: 'AI智能餐饮服务系统',
+                icon: '🍽️',
+                desc: '从菜单设计到顾客用餐体验的全程餐饮服务系统',
+                agents: ['AI Restaurant Director', 'AI Menu Designer', 'AI Chef Assistant', 'AI Food Safety', 'AI Inventory Chef', 'AI Customer Dining'],
+                positions: [
+                    { role: 'AI Restaurant Director', x: 400, y: 30 },
+                    { role: 'AI Menu Designer', x: 150, y: 150 },
+                    { role: 'AI Chef Assistant', x: 650, y: 150 },
+                    { role: 'AI Food Safety', x: 150, y: 270 },
+                    { role: 'AI Inventory Chef', x: 650, y: 270 },
+                    { role: 'AI Customer Dining', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Restaurant Director', to: 'AI Menu Designer', content: '菜单设计需求' },
+                    { from: 'AI Restaurant Director', to: 'AI Food Safety', content: '安全监管需求' },
+                    { from: 'AI Menu Designer', to: 'AI Chef Assistant', content: '菜品制作需求' },
+                    { from: 'AI Chef Assistant', to: 'AI Inventory Chef', content: '库存需求' },
+                    { from: 'AI Food Safety', to: 'AI Customer Dining', content: '服务标准' },
+                    { from: 'AI Customer Dining', to: 'AI Restaurant Director', content: '顾客反馈' }
+                ]
+            },
+            // Cycle 414 新增模板 - AI智能美容健身系统
+            {
+                id: 'ai-beauty-fitness',
+                name: 'AI智能美容健身系统',
+                icon: '💪',
+                desc: '从形象设计到健康管理的全方位美丽健身服务',
+                agents: ['AI Beauty Director', 'AI Style Consultant', 'AI Fitness Coach', 'AI Nutritionist', 'AI Wellness Advisor', 'AI Personal Trainer'],
+                positions: [
+                    { role: 'AI Beauty Director', x: 400, y: 30 },
+                    { role: 'AI Style Consultant', x: 150, y: 150 },
+                    { role: 'AI Fitness Coach', x: 650, y: 150 },
+                    { role: 'AI Nutritionist', x: 150, y: 270 },
+                    { role: 'AI Wellness Advisor', x: 650, y: 270 },
+                    { role: 'AI Personal Trainer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Beauty Director', to: 'AI Style Consultant', content: '形象设计需求' },
+                    { from: 'AI Beauty Director', to: 'AI Fitness Coach', content: '健身计划需求' },
+                    { from: 'AI Style Consultant', to: 'AI Nutritionist', content: '营养建议需求' },
+                    { from: 'AI Fitness Coach', to: 'AI Personal Trainer', content: '训练指导' },
+                    { from: 'AI Nutritionist', to: 'AI Wellness Advisor', content: '健康方案' },
+                    { from: 'AI Personal Trainer', to: 'AI Beauty Director', content: '效果评估' }
+                ]
+            },
+            // Cycle 414 新增模板 - AI智能家居服务系统
+            {
+                id: 'ai-home-service',
+                name: 'AI智能家居服务系统',
+                icon: '🏠',
+                desc: '从装修设计到智能家居安装的全流程家居服务',
+                agents: ['AI Home Director', 'AI Interior Designer', 'AI Renovation Planner', 'AI Home Maintenance', 'AI Smart Home', 'AI Moving Assistant'],
+                positions: [
+                    { role: 'AI Home Director', x: 400, y: 30 },
+                    { role: 'AI Interior Designer', x: 150, y: 150 },
+                    { role: 'AI Renovation Planner', x: 650, y: 150 },
+                    { role: 'AI Home Maintenance', x: 150, y: 270 },
+                    { role: 'AI Smart Home', x: 650, y: 270 },
+                    { role: 'AI Moving Assistant', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Home Director', to: 'AI Interior Designer', content: '设计需求' },
+                    { from: 'AI Home Director', to: 'AI Moving Assistant', content: '搬家需求' },
+                    { from: 'AI Interior Designer', to: 'AI Renovation Planner', content: '装修规划' },
+                    { from: 'AI Renovation Planner', to: 'AI Home Maintenance', content: '维护需求' },
+                    { from: 'AI Smart Home', to: 'AI Home Maintenance', content: '智能设备安装' },
+                    { from: 'AI Moving Assistant', to: 'AI Home Director', content: '服务完成报告' }
+                ]
+            },
+            // Cycle 414 新增模板 - AI智能汽车服务系统
+            {
+                id: 'ai-auto-service',
+                name: 'AI智能汽车服务系统',
+                icon: '🚗',
+                desc: '从销售咨询到售后维护的全流程汽车服务系统',
+                agents: ['AI Auto Director', 'AI Car Sales', 'AI Mechanic Assistant', 'AI Auto Insurance', 'AI Driving Instructor', 'AI Car Detailer'],
+                positions: [
+                    { role: 'AI Auto Director', x: 400, y: 30 },
+                    { role: 'AI Car Sales', x: 150, y: 150 },
+                    { role: 'AI Driving Instructor', x: 650, y: 150 },
+                    { role: 'AI Mechanic Assistant', x: 150, y: 270 },
+                    { role: 'AI Auto Insurance', x: 650, y: 270 },
+                    { role: 'AI Car Detailer', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Auto Director', to: 'AI Car Sales', content: '销售任务' },
+                    { from: 'AI Auto Director', to: 'AI Mechanic Assistant', content: '维修任务' },
+                    { from: 'AI Car Sales', to: 'AI Auto Insurance', content: '保险需求' },
+                    { from: 'AI Car Sales', to: 'AI Driving Instructor', content: '试驾安排' },
+                    { from: 'AI Mechanic Assistant', to: 'AI Car Detailer', content: '美容需求' },
+                    { from: 'AI Driving Instructor', to: 'AI Auto Director', content: '试驾反馈' }
+                ]
+            },
+            // Cycle 414 新增模板 - AI智能体育娱乐系统
+            {
+                id: 'ai-sports-entertainment',
+                name: 'AI智能体育娱乐系统',
+                icon: '⚽',
+                desc: '从赛事分析到运动员表现的全程体育娱乐服务',
+                agents: ['AI Sports Director', 'AI Game Analyst', 'AI Performance Coach', 'AI Sports Medicine', 'AI Event Planner', 'AI Scout'],
+                positions: [
+                    { role: 'AI Sports Director', x: 400, y: 30 },
+                    { role: 'AI Game Analyst', x: 150, y: 150 },
+                    { role: 'AI Event Planner', x: 650, y: 150 },
+                    { role: 'AI Performance Coach', x: 150, y: 270 },
+                    { role: 'AI Sports Medicine', x: 650, y: 270 },
+                    { role: 'AI Scout', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sports Director', to: 'AI Game Analyst', content: '赛事分析任务' },
+                    { from: 'AI Sports Director', to: 'AI Event Planner', content: '赛事策划需求' },
+                    { from: 'AI Game Analyst', to: 'AI Performance Coach', content: '表现数据' },
+                    { from: 'AI Event Planner', to: 'AI Scout', content: '人才需求' },
+                    { from: 'AI Performance Coach', to: 'AI Sports Medicine', content: '医疗需求' },
+                    { from: 'AI Scout', to: 'AI Sports Director', content: '人才评估报告' }
+                ]
             }
         ];
 
@@ -25460,7 +25628,56 @@
             'AI Complaint Handler': { icon: '📢', color: '#ef4444', role: 'AI投诉处理员' },
             'AI NPS Analyst': { icon: '📊', color: '#22c55e', role: 'AI NPS 分析师' },
             'AI Onboarding Specialist': { icon: '🚀', color: '#f59e0b', role: 'AI入职专员' },
-            'AI Relationship Manager': { icon: '💎', color: '#8b5cf6', role: 'AI客户关系经理' }
+            'AI Relationship Manager': { icon: '💎', color: '#8b5cf6', role: 'AI客户关系经理' },
+            // Cycle 414 新增角色 - AI智能公共服务
+            'AI Government Director': { icon: '🏛️', color: '#3b82f6', role: 'AI政府服务总监' },
+            'AI Public Service Agent': { icon: '📋', color: '#10b981', role: 'AI公共服务代理' },
+            'AI Permit Processor': { icon: '📝', color: '#f59e0b', role: 'AI许可证办理员' },
+            'AI Citizen Advisor': { icon: '💬', color: '#8b5cf6', role: 'AI市民顾问' },
+            'AI Policy Analyst': { icon: '📊', color: '#ec4899', role: 'AI政策分析师' },
+            'AI Service Navigator': { icon: '🧭', color: '#06b6d4', role: 'AI服务导航员' },
+            // Cycle 414 新增角色 - AI智能媒体传播
+            'AI Media Director': { icon: '📺', color: '#f43f5e', role: 'AI媒体传播总监' },
+            'AI News Editor': { icon: '📰', color: '#22c55e', role: 'AI新闻编辑' },
+            'AI PR Specialist': { icon: '📣', color: '#f97316', role: 'AI公关专员' },
+            'AI Crisis Manager': { icon: '🚨', color: '#dc2626', role: 'AI危机公关经理' },
+            'AI Media Planner': { icon: '📅', color: '#a855f7', role: 'AI媒体策划师' },
+            'AI Broadcast Engineer': { icon: '📡', color: '#06b6d4', role: 'AI广播工程师' },
+            // Cycle 414 新增角色 - AI智能体育娱乐
+            'AI Sports Director': { icon: '⚽', color: '#14b8a6', role: 'AI体育总监' },
+            'AI Game Analyst': { icon: '🎮', color: '#f59e0b', role: 'AI赛事分析师' },
+            'AI Performance Coach': { icon: '🏆', color: '#f97316', role: 'AI表现教练' },
+            'AI Sports Medicine': { icon: '💊', color: '#ec4899', role: 'AI运动医学专家' },
+            'AI Event Planner': { icon: '🎪', color: '#8b5cf6', role: 'AI赛事策划师' },
+            'AI Scout': { icon: '🔍', color: '#06b6d4', role: 'AI星探' },
+            // Cycle 414 新增角色 - AI智能餐饮服务
+            'AI Restaurant Director': { icon: '🍽️', color: '#f97316', role: 'AI餐饮总监' },
+            'AI Menu Designer': { icon: '📋', color: '#22c55e', role: 'AI菜单设计师' },
+            'AI Chef Assistant': { icon: '👨‍🍳', color: '#f59e0b', role: 'AI主厨助理' },
+            'AI Food Safety': { icon: '✅', color: '#3b82f6', role: 'AI食品安全监管员' },
+            'AI Inventory Chef': { icon: '📦', color: '#8b5cf6', role: 'AI库存管理厨师' },
+            'AI Customer Dining': { icon: '🍴', color: '#ec4899', role: 'AI餐饮服务员' },
+            // Cycle 414 新增角色 - AI智能美容健身
+            'AI Beauty Director': { icon: '💄', color: '#ec4899', role: 'AI美容总监' },
+            'AI Style Consultant': { icon: '👗', color: '#f59e0b', role: 'AI造型顾问' },
+            'AI Fitness Coach': { icon: '💪', color: '#22c55e', role: 'AI健身教练' },
+            'AI Nutritionist': { icon: '🥗', color: '#10b981', role: 'AI营养师' },
+            'AI Wellness Advisor': { icon: '🧘', color: '#8b5cf6', role: 'AI健康顾问' },
+            'AI Personal Trainer': { icon: '🏋️', color: '#f97316', role: 'AI私人教练' },
+            // Cycle 414 新增角色 - AI智能家居服务
+            'AI Home Director': { icon: '🏠', color: '#3b82f6', role: 'AI家居服务总监' },
+            'AI Interior Designer': { icon: '🎨', color: '#f43f5e', role: 'AI室内设计师' },
+            'AI Renovation Planner': { icon: '📋', color: '#22c55e', role: 'AI装修规划师' },
+            'AI Home Maintenance': { icon: '🔧', color: '#f59e0b', role: 'AI家居维护师' },
+            'AI Smart Home': { icon: '🏡', color: '#06b6d4', role: 'AI智能家居工程师' },
+            'AI Moving Assistant': { icon: '📦', color: '#8b5cf6', role: 'AI搬家助手' },
+            // Cycle 414 新增角色 - AI智能汽车服务
+            'AI Auto Director': { icon: '🚗', color: '#14b8a6', role: 'AI汽车服务总监' },
+            'AI Car Sales': { icon: '💰', color: '#22c55e', role: 'AI汽车销售顾问' },
+            'AI Mechanic Assistant': { icon: '🔧', color: '#f97316', role: 'AI修理技师助理' },
+            'AI Auto Insurance': { icon: '🛡️', color: '#3b82f6', role: 'AI车险顾问' },
+            'AI Driving Instructor': { icon: '🎓', color: '#8b5cf6', role: 'AI驾驶教练' },
+            'AI Car Detailer': { icon: '✨', color: '#ec4899', role: 'AI汽车美容师' }
         };
 
         // 拖拽相关变量
