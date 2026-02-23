@@ -18205,6 +18205,138 @@
                     { from: 'AI Medical Imaging', to: 'AI Prosthetics Engineer', content: '医学影像分析' },
                     { from: 'AI Prosthetics Engineer', to: 'AI Medical Device Designer', content: '假肢设计完成' }
                 ]
+            },
+            // Cycle 388 新增模板 - AI智能航空系统
+            {
+                id: 'ai-aerospace',
+                name: 'AI智能航空系统',
+                icon: '✈️',
+                desc: '从飞机设计到航空运营的完整航空流程',
+                agents: ['AI Aircraft Engineer', 'AI Avionics Specialist', 'AI Flight Control', 'AI Propulsion Engineer', 'AI Aerospace Quality'],
+                positions: [
+                    { role: 'AI Aircraft Engineer', x: 400, y: 50 },
+                    { role: 'AI Avionics Specialist', x: 200, y: 180 },
+                    { role: 'AI Flight Control', x: 400, y: 180 },
+                    { role: 'AI Propulsion Engineer', x: 600, y: 180 },
+                    { role: 'AI Aerospace Quality', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Aircraft Engineer', to: 'AI Avionics Specialist', content: '飞机设计方案' },
+                    { from: 'AI Avionics Specialist', to: 'AI Flight Control', content: '航电系统集成' },
+                    { from: 'AI Flight Control', to: 'AI Propulsion Engineer', content: '飞控参数确认' },
+                    { from: 'AI Propulsion Engineer', to: 'AI Aerospace Quality', content: '推进系统测试' },
+                    { from: 'AI Aerospace Quality', to: 'AI Aircraft Engineer', content: '质量认证通过' }
+                ]
+            },
+            // Cycle 388 新增模板 - AI智能船舶航运系统
+            {
+                id: 'ai-shipping',
+                name: 'AI智能船舶航运系统',
+                icon: '⚓',
+                desc: '从船舶设计到航运管理的完整船舶航运流程',
+                agents: ['AI Ship Designer', 'AI Marine Navigator', 'AI Port Operations', 'AI Cargo Manager', 'AI Shipping Safety'],
+                positions: [
+                    { role: 'AI Ship Designer', x: 400, y: 50 },
+                    { role: 'AI Marine Navigator', x: 200, y: 180 },
+                    { role: 'AI Port Operations', x: 400, y: 180 },
+                    { role: 'AI Cargo Manager', x: 600, y: 180 },
+                    { role: 'AI Shipping Safety', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Ship Designer', to: 'AI Marine Navigator', content: '船舶设计方案' },
+                    { from: 'AI Marine Navigator', to: 'AI Port Operations', content: '航行路线规划' },
+                    { from: 'AI Port Operations', to: 'AI Cargo Manager', content: '港口装卸计划' },
+                    { from: 'AI Cargo Manager', to: 'AI Shipping Safety', content: '货运安全管理' },
+                    { from: 'AI Shipping Safety', to: 'AI Ship Designer', content: '安全标准确认' }
+                ]
+            },
+            // Cycle 388 新增模板 - AI智能采矿冶金系统
+            {
+                id: 'ai-mining',
+                name: 'AI智能采矿冶金系统',
+                icon: '⛏️',
+                desc: '从矿石开采到金属冶炼的完整采矿冶金流程',
+                agents: ['AI Mining Engineer', 'AI Geology Analyst', 'AI Metallurgy Expert', 'AI Steel Quality', 'AI Mine Safety'],
+                positions: [
+                    { role: 'AI Mining Engineer', x: 400, y: 50 },
+                    { role: 'AI Geology Analyst', x: 200, y: 180 },
+                    { role: 'AI Metallurgy Expert', x: 400, y: 180 },
+                    { role: 'AI Steel Quality', x: 600, y: 180 },
+                    { role: 'AI Mine Safety', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Mining Engineer', to: 'AI Geology Analyst', content: '地质勘探报告' },
+                    { from: 'AI Geology Analyst', to: 'AI Metallurgy Expert', content: '矿石成分分析' },
+                    { from: 'AI Metallurgy Expert', to: 'AI Steel Quality', content: '冶炼工艺参数' },
+                    { from: 'AI Steel Quality', to: 'AI Mine Safety', content: '质量检测报告' },
+                    { from: 'AI Mine Safety', to: 'AI Mining Engineer', content: '安全标准确认' }
+                ]
+            },
+            // Cycle 388 新增模板 - AI智能化工材料系统
+            {
+                id: 'ai-chemical',
+                name: 'AI智能化工材料系统',
+                icon: '⚗️',
+                desc: '从化工生产到材料研发的完整化工流程',
+                agents: ['AI Chemical Engineer', 'AI Process Engineer', 'AI Polymer Scientist', 'AI Nanomaterials Expert', 'AI Quality Control Chem'],
+                positions: [
+                    { role: 'AI Chemical Engineer', x: 400, y: 50 },
+                    { role: 'AI Process Engineer', x: 200, y: 180 },
+                    { role: 'AI Polymer Scientist', x: 400, y: 180 },
+                    { role: 'AI Nanomaterials Expert', x: 600, y: 180 },
+                    { role: 'AI Quality Control Chem', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Chemical Engineer', to: 'AI Process Engineer', content: '化工工艺设计' },
+                    { from: 'AI Process Engineer', to: 'AI Polymer Scientist', content: '生产工艺参数' },
+                    { from: 'AI Polymer Scientist', to: 'AI Nanomaterials Expert', content: '高分子材料研发' },
+                    { from: 'AI Nanomaterials Expert', to: 'AI Quality Control Chem', content: '纳米材料测试' },
+                    { from: 'AI Quality Control Chem', to: 'AI Chemical Engineer', content: '质量控制报告' }
+                ]
+            },
+            // Cycle 388 新增模板 - AI智能纺织制造系统
+            {
+                id: 'ai-textile',
+                name: 'AI智能纺织制造系统',
+                icon: '🧵',
+                desc: '从纺织设计到服装生产的完整纺织制造流程',
+                agents: ['AI Textile Engineer', 'AI Fashion Designer', 'AI Pattern Maker', 'AI Fabric Quality', 'AI Garment Tech'],
+                positions: [
+                    { role: 'AI Textile Engineer', x: 400, y: 50 },
+                    { role: 'AI Fashion Designer', x: 200, y: 180 },
+                    { role: 'AI Pattern Maker', x: 400, y: 180 },
+                    { role: 'AI Fabric Quality', x: 600, y: 180 },
+                    { role: 'AI Garment Tech', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Textile Engineer', to: 'AI Fashion Designer', content: '纺织工艺要求' },
+                    { from: 'AI Fashion Designer', to: 'AI Pattern Maker', content: '服装设计方案' },
+                    { from: 'AI Pattern Maker', to: 'AI Fabric Quality', content: '版型数据输出' },
+                    { from: 'AI Fabric Quality', to: 'AI Garment Tech', content: '面料质量报告' },
+                    { from: 'AI Garment Tech', to: 'AI Textile Engineer', content: '生产工艺确认' }
+                ]
+            },
+            // Cycle 388 新增模板 - AI智能印刷包装系统
+            {
+                id: 'ai-printing',
+                name: 'AI智能印刷包装系统',
+                icon: '🖨️',
+                desc: '从印刷设计到包装生产的完整印刷包装流程',
+                agents: ['AI Print Engineer', 'AI Packaging Designer', 'AI Label Designer', 'AI Print Quality', 'AI Production Planner'],
+                positions: [
+                    { role: 'AI Print Engineer', x: 400, y: 50 },
+                    { role: 'AI Packaging Designer', x: 200, y: 180 },
+                    { role: 'AI Label Designer', x: 400, y: 180 },
+                    { role: 'AI Print Quality', x: 600, y: 180 },
+                    { role: 'AI Production Planner', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Print Engineer', to: 'AI Packaging Designer', content: '印刷工艺要求' },
+                    { from: 'AI Packaging Designer', to: 'AI Label Designer', content: '包装设计方案' },
+                    { from: 'AI Label Designer', to: 'AI Print Quality', content: '标签设计完成' },
+                    { from: 'AI Print Quality', to: 'AI Production Planner', content: '质量检测报告' },
+                    { from: 'AI Production Planner', to: 'AI Print Engineer', content: '生产计划确认' }
+                ]
             }
         ];
 
@@ -21313,7 +21445,49 @@
             'AI Surgical Robot Engineer': { icon: '🤖', color: '#8b5cf6', role: 'AI手术机器人工程师' },
             'AI Diagnostic Equipment': { icon: '🔬', color: '#06b6d4', role: 'AI诊断设备工程师' },
             'AI Prosthetics Engineer': { icon: '🦾', color: '#f97316', role: 'AI假肢工程师' },
-            'AI Medical Imaging': { icon: '🏥', color: '#14b8a6', role: 'AI医学影像师' }
+            'AI Medical Imaging': { icon: '🏥', color: '#14b8a6', role: 'AI医学影像师' },
+            // Cycle 388 新增角色 - AI智能航空系统
+            'AI Aircraft Engineer': { icon: '✈️', color: '#0ea5e9', role: 'AI飞机工程师' },
+            'AI Avionics Specialist': { icon: '📡', color: '#8b5cf6', role: 'AI航电专家' },
+            'AI Flight Control': { icon: '🎛️', color: '#22c55e', role: 'AI飞控工程师' },
+            'AI Propulsion Engineer': { icon: '🔥', color: '#f97316', role: 'AI推进工程师' },
+            'AI Aerospace Quality': { icon: '✅', color: '#14b8a6', role: 'AI航空质量师' },
+            // Cycle 388 新增角色 - AI智能船舶航运
+            'AI Ship Designer': { icon: '⚓', color: '#06b6d4', role: 'AI船舶设计师' },
+            'AI Marine Navigator': { icon: '🧭', color: '#0ea5e9', role: 'AI航海导航师' },
+            'AI Port Operations': { icon: '🏗️', color: '#8b5cf6', role: 'AI港口运营师' },
+            'AI Cargo Manager': { icon: '📦', color: '#f59e0b', role: 'AI货运经理' },
+            'AI Shipping Safety': { icon: '🛡️', color: '#22c55e', role: 'AI航运安全师' },
+            // Cycle 388 新增角色 - AI智能采矿冶金
+            'AI Mining Engineer': { icon: '⛏️', color: '#64748b', role: 'AI采矿工程师' },
+            'AI Geology Analyst': { icon: '🪨', color: '#8b5cf6', role: 'AI地质分析师' },
+            'AI Metallurgy Expert': { icon: '⚙️', color: '#f97316', role: 'AI冶金专家' },
+            'AI Steel Quality': { icon: '🔩', color: '#14b8a6', role: 'AI钢铁质量师' },
+            'AI Mine Safety': { icon: '⚠️', color: '#dc2626', role: 'AI矿山安全师' },
+            // Cycle 388 新增角色 - AI智能化工材料
+            'AI Chemical Engineer': { icon: '⚗️', color: '#06b6d4', role: 'AI化学工程师' },
+            'AI Process Engineer': { icon: '🔄', color: '#8b5cf6', role: 'AI工艺工程师' },
+            'AI Polymer Scientist': { icon: '🧪', color: '#ec4899', role: 'AI高分子科学家' },
+            'AI Nanomaterials Expert': { icon: '⚛️', color: '#a855f7', role: 'AI纳米材料专家' },
+            'AI Quality Control Chem': { icon: '✅', color: '#22c55e', role: 'AI化工质量控制' },
+            // Cycle 388 新增角色 - AI智能纺织制造
+            'AI Textile Engineer': { icon: '🧵', color: '#f43f5e', role: 'AI纺织工程师' },
+            'AI Fashion Designer': { icon: '👗', color: '#ec4899', role: 'AI服装设计师' },
+            'AI Pattern Maker': { icon: '📐', color: '#f59e0b', role: 'AI版型师' },
+            'AI Fabric Quality': { icon: '🔍', color: '#14b8a6', role: 'AI面料质量师' },
+            'AI Garment Tech': { icon: '👔', color: '#8b5cf6', role: 'AI服装工艺师' },
+            // Cycle 388 新增角色 - AI智能印刷包装
+            'AI Print Engineer': { icon: '🖨️', color: '#06b6d4', role: 'AI印刷工程师' },
+            'AI Packaging Designer': { icon: '📦', color: '#f97316', role: 'AI包装设计师' },
+            'AI Label Designer': { icon: '🏷️', color: '#22c55e', role: 'AI标签设计师' },
+            'AI Print Quality': { icon: '🔎', color: '#a855f7', role: 'AI印刷质量师' },
+            'AI Production Planner': { icon: '📋', color: '#64748b', role: 'AI生产计划师' },
+            // Cycle 388 新增角色 - AI智能珠宝钟表
+            'AI Jewelry Designer': { icon: '💎', color: '#ec4899', role: 'AI珠宝设计师' },
+            'AI Gemologist': { icon: '💍', color: '#8b5cf6', role: 'AI宝石学家' },
+            'AI Watchmaker': { icon: '⌚', color: '#f59e0b', role: 'AI钟表师' },
+            'AI Goldsmith': { icon: '🥇', color: '#eab308', role: 'AI金匠师' },
+            'AI Jewelry Appraiser': { icon: '📊', color: '#14b8a6', role: 'AI珠宝估价师' }
         };
 
         // 拖拽相关变量
