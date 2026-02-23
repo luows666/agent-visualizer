@@ -15525,6 +15525,138 @@
                     { from: 'AI Customer Claims', to: 'AI Insurance Analyst', content: '理赔完成' },
                     { from: 'AI Insurance Analyst', to: 'AI Insurance Broker', content: '保险分析报告' }
                 ]
+            },
+            // Cycle 368 新增模板 - AI智能汽车交通系统
+            {
+                id: 'ai-automotive-transport',
+                name: 'AI智能汽车交通系统',
+                icon: '🚗',
+                desc: '从汽车设计到交通管理的完整汽车交通流程',
+                agents: ['AI Automotive Engineer', 'AI Vehicle Designer', 'AI Auto Sales', 'AI Auto Mechanic', 'AI Driving Instructor'],
+                positions: [
+                    { role: 'AI Automotive Engineer', x: 400, y: 50 },
+                    { role: 'AI Vehicle Designer', x: 200, y: 180 },
+                    { role: 'AI Auto Sales', x: 600, y: 180 },
+                    { role: 'AI Auto Mechanic', x: 200, y: 310 },
+                    { role: 'AI Driving Instructor', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Automotive Engineer', to: 'AI Vehicle Designer', content: '汽车设计需求' },
+                    { from: 'AI Vehicle Designer', to: 'AI Auto Sales', content: '设计方案' },
+                    { from: 'AI Auto Sales', to: 'AI Auto Mechanic', content: '销售订单' },
+                    { from: 'AI Auto Mechanic', to: 'AI Driving Instructor', content: '维修记录' },
+                    { from: 'AI Driving Instructor', to: 'AI Automotive Engineer', content: '用户反馈' }
+                ]
+            },
+            // Cycle 368 新增模板 - AI智能航空航天系统
+            {
+                id: 'ai-aerospace-aviation',
+                name: 'AI智能航空航天系统',
+                icon: '🚀',
+                desc: '从航天器设计到航空管理的完整航空航天流程',
+                agents: ['AI Aerospace Designer', 'AI Rocket Scientist', 'AI Satellite Designer', 'AI Flight Simulator', 'AI Air Traffic'],
+                positions: [
+                    { role: 'AI Aerospace Designer', x: 400, y: 50 },
+                    { role: 'AI Rocket Scientist', x: 200, y: 180 },
+                    { role: 'AI Satellite Designer', x: 600, y: 180 },
+                    { role: 'AI Flight Simulator', x: 200, y: 310 },
+                    { role: 'AI Air Traffic', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Aerospace Designer', to: 'AI Rocket Scientist', content: '航天器需求' },
+                    { from: 'AI Rocket Scientist', to: 'AI Satellite Designer', content: '火箭设计方案' },
+                    { from: 'AI Satellite Designer', to: 'AI Flight Simulator', content: '卫星设计' },
+                    { from: 'AI Flight Simulator', to: 'AI Air Traffic', content: '模拟测试结果' },
+                    { from: 'AI Air Traffic', to: 'AI Aerospace Designer', content: '航空管制需求' }
+                ]
+            },
+            // Cycle 368 新增模板 - AI智能海洋渔业系统
+            {
+                id: 'ai-marine-fishery',
+                name: 'AI智能海洋渔业系统',
+                icon: '🐟',
+                desc: '从海洋养殖到渔业管理的完整海洋渔业流程',
+                agents: ['AI Fishery Manager', 'AI Fish Farmer', 'AI Seafood Processor', 'AI Marine Biologist', 'AI Aquaculture Engineer'],
+                positions: [
+                    { role: 'AI Fishery Manager', x: 400, y: 50 },
+                    { role: 'AI Fish Farmer', x: 200, y: 180 },
+                    { role: 'AI Seafood Processor', x: 600, y: 180 },
+                    { role: 'AI Marine Biologist', x: 200, y: 310 },
+                    { role: 'AI Aquaculture Engineer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fishery Manager', to: 'AI Fish Farmer', content: '养殖任务分配' },
+                    { from: 'AI Fish Farmer', to: 'AI Seafood Processor', content: '养殖数据' },
+                    { from: 'AI Seafood Processor', to: 'AI Marine Biologist', content: '加工需求' },
+                    { from: 'AI Marine Biologist', to: 'AI Aquaculture Engineer', content: '生物分析报告' },
+                    { from: 'AI Aquaculture Engineer', to: 'AI Fishery Manager', content: '养殖优化方案' }
+                ]
+            },
+            // Cycle 368 新增模板 - AI智能矿山冶金系统
+            {
+                id: 'ai-mining-metallurgy',
+                name: 'AI智能矿山冶金系统',
+                icon: '⛏️',
+                desc: '从矿山勘探到冶金生产的完整矿山冶金流程',
+                agents: ['AI Mining Geologist', 'AI Mine Planner', 'AI Mineral Processing', 'AI Metallurgical Engineer', 'AI Steel Quality'],
+                positions: [
+                    { role: 'AI Mining Geologist', x: 400, y: 50 },
+                    { role: 'AI Mine Planner', x: 200, y: 180 },
+                    { role: 'AI Mineral Processing', x: 600, y: 180 },
+                    { role: 'AI Metallurgical Engineer', x: 200, y: 310 },
+                    { role: 'AI Steel Quality', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Mining Geologist', to: 'AI Mine Planner', content: '地质勘探报告' },
+                    { from: 'AI Mine Planner', to: 'AI Mineral Processing', content: '开采计划' },
+                    { from: 'AI Mineral Processing', to: 'AI Metallurgical Engineer', content: '矿物数据' },
+                    { from: 'AI Metallurgical Engineer', to: 'AI Steel Quality', content: '冶金工艺' },
+                    { from: 'AI Steel Quality', to: 'AI Mining Geologist', content: '质量反馈' }
+                ]
+            },
+            // Cycle 368 新增模板 - AI智能造纸印刷系统
+            {
+                id: 'ai-paper-printing',
+                name: 'AI智能造纸印刷系统',
+                icon: '📜',
+                desc: '从造纸到印刷的完整造纸印刷流程',
+                agents: ['AI Paper Engineer', 'AI Printing Press', 'AI Packaging Engineer', 'AI Quality Controller', 'AI Production Manager'],
+                positions: [
+                    { role: 'AI Paper Engineer', x: 400, y: 50 },
+                    { role: 'AI Printing Press', x: 200, y: 180 },
+                    { role: 'AI Packaging Engineer', x: 600, y: 180 },
+                    { role: 'AI Quality Controller', x: 200, y: 310 },
+                    { role: 'AI Production Manager', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Paper Engineer', to: 'AI Printing Press', content: '纸张规格' },
+                    { from: 'AI Printing Press', to: 'AI Packaging Engineer', content: '印刷完成' },
+                    { from: 'AI Packaging Engineer', to: 'AI Quality Controller', content: '包装设计' },
+                    { from: 'AI Quality Controller', to: 'AI Production Manager', content: '质量检测报告' },
+                    { from: 'AI Production Manager', to: 'AI Paper Engineer', content: '生产计划' }
+                ]
+            },
+            // Cycle 368 新增模板 - AI智能电梯制造系统
+            {
+                id: 'ai-elevator-manufacturing',
+                name: 'AI智能电梯制造系统',
+                icon: '🏢',
+                desc: '从电梯设计到安装维护的完整电梯制造流程',
+                agents: ['AI Elevator Designer', 'AI Elevator Technician', 'AI Elevator Safety', 'AI Elevator Maintenance', 'AI Elevator Sales'],
+                positions: [
+                    { role: 'AI Elevator Designer', x: 400, y: 50 },
+                    { role: 'AI Elevator Technician', x: 200, y: 180 },
+                    { role: 'AI Elevator Safety', x: 600, y: 180 },
+                    { role: 'AI Elevator Maintenance', x: 200, y: 310 },
+                    { role: 'AI Elevator Sales', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Elevator Designer', to: 'AI Elevator Technician', content: '设计方案' },
+                    { from: 'AI Elevator Technician', to: 'AI Elevator Safety', content: '技术要求' },
+                    { from: 'AI Elevator Safety', to: 'AI Elevator Maintenance', content: '安全标准' },
+                    { from: 'AI Elevator Maintenance', to: 'AI Elevator Sales', content: '维护记录' },
+                    { from: 'AI Elevator Sales', to: 'AI Elevator Designer', content: '市场需求' }
+                ]
             }
         ];
 
@@ -17843,7 +17975,49 @@
             'AI Refinery Operator': { icon: '🏭', color: '#f97316', role: 'AI炼油操作员' },
             'AI Pipeline Engineer': { icon: '🛤️', color: '#64748b', role: 'AI管道工程师' },
             'AI Safety Inspector': { icon: '✅', color: '#22c55e', role: 'AI安全检查员' },
-            'AI Environmental Engineer': { icon: '🌿', color: '#10b981', role: 'AI环境工程师' }
+            'AI Environmental Engineer': { icon: '🌿', color: '#10b981', role: 'AI环境工程师' },
+            // Cycle 368 新增角色 - AI 智能汽车交通
+            'AI Automotive Engineer': { icon: '🚗', color: '#dc2626', role: 'AI汽车工程师' },
+            'AI Vehicle Designer': { icon: '🎨', color: '#f97316', role: 'AI汽车设计师' },
+            'AI Auto Sales': { icon: '💼', color: '#22c55e', role: 'AI汽车销售经理' },
+            'AI Auto Mechanic': { icon: '🔧', color: '#3b82f6', role: 'AI汽车维修师' },
+            'AI Driving Instructor': { icon: '🚘', color: '#8b5cf6', role: 'AI驾驶教练' },
+            'AI Car Detailer': { icon: '✨', color: '#ec4899', role: 'AI汽车美容师' },
+            // Cycle 368 新增角色 - AI 智能航空航天
+            'AI Aerospace Designer': { icon: '🚀', color: '#f59e0b', role: 'AI航天器设计师' },
+            'AI Rocket Scientist': { icon: '🔥', color: '#dc2626', role: 'AI火箭科学家' },
+            'AI Satellite Designer': { icon: '🛰️', color: '#06b6d4', role: 'AI卫星设计师' },
+            'AI Flight Simulator': { icon: '✈️', color: '#3b82f6', role: 'AI飞行模拟器工程师' },
+            'AI Air Traffic': { icon: '🛩️', color: '#22c55e', role: 'AI空中交通管制员' },
+            // Cycle 368 新增角色 - AI 智能海洋渔业
+            'AI Fishery Manager': { icon: '🐟', color: '#0ea5e9', role: 'AI渔业管理师' },
+            'AI Fish Farmer': { icon: '🐠', color: '#06b6d4', role: 'AI养鱼师' },
+            'AI Seafood Processor': { icon: '🦐', color: '#f97316', role: 'AI海鲜加工师' },
+            'AI Marine Biologist': { icon: '🔬', color: '#22c55e', role: 'AI海洋生物学家' },
+            'AI Aquaculture Engineer': { icon: '🌊', color: '#8b5cf6', role: 'AI水产养殖工程师' },
+            // Cycle 368 新增角色 - AI 智能矿山冶金
+            'AI Mining Geologist': { icon: '⛏️', color: '#64748b', role: 'AI矿山地质师' },
+            'AI Mine Planner': { icon: '📐', color: '#f59e0b', role: 'AI矿山规划师' },
+            'AI Mineral Processing': { icon: '🔧', color: '#3b82f6', role: 'AI矿物加工师' },
+            'AI Metallurgical Engineer': { icon: '⚙️', color: '#dc2626', role: 'AI冶金工程师' },
+            'AI Steel Quality': { icon: '✅', color: '#22c55e', role: 'AI钢铁质检师' },
+            // Cycle 368 新增角色 - AI 智能造纸印刷
+            'AI Paper Engineer': { icon: '📜', color: '#f5f5f4', role: 'AI造纸工程师' },
+            'AI Printing Press': { icon: '🖨️', color: '#64748b', role: 'AI印刷机工程师' },
+            'AI Packaging Engineer': { icon: '📦', color: '#f97316', role: 'AI包装工程师' },
+            'AI Quality Controller': { icon: '🔍', color: '#22c55e', role: 'AI质量控制师' },
+            'AI Production Manager': { icon: '📋', color: '#3b82f6', role: 'AI生产经理' },
+            // Cycle 368 新增角色 - AI 智能烟草
+            'AI Tobacco Agronomist': { icon: '🌱', color: '#22c55e', role: 'AI烟草农艺师' },
+            'AI Cigarette Designer': { icon: '🚬', color: '#dc2626', role: 'AI香烟设计师' },
+            'AI Tobacco Quality': { icon: '✅', color: '#f59e0b', role: 'AI烟草质量师' },
+            'AI Tobacco Sales': { icon: '💼', color: '#8b5cf6', role: 'AI烟草销售经理' },
+            // Cycle 368 新增角色 - AI 智能电梯
+            'AI Elevator Designer': { icon: '🏢', color: '#3b82f6', role: 'AI电梯设计师' },
+            'AI Elevator Technician': { icon: '🔧', color: '#f97316', role: 'AI电梯技师' },
+            'AI Elevator Safety': { icon: '🛡️', color: '#22c55e', role: 'AI电梯安全师' },
+            'AI Elevator Maintenance': { icon: '🔩', color: '#64748b', role: 'AI电梯维护师' },
+            'AI Elevator Sales': { icon: '💰', color: '#f59e0b', role: 'AI电梯销售经理' }
         };
 
         // 拖拽相关变量
