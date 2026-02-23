@@ -24494,8 +24494,173 @@
             }
         ];
 
+        // Cycle 435 行业服务系统模板 - 7个新行业
+        const cycle435Templates = [
+            // AI智能装修服务系统
+            {
+                id: 'ai-renovation-service',
+                name: 'AI智能装修服务系统',
+                icon: '🏠',
+                desc: '从设计到施工的完整装修服务流程',
+                agents: ['AI Renovation Manager', 'AI Interior Designer', 'AI Cost Estimator', 'AI Project Supervisor', 'AI Material Coordinator', 'AI Quality Inspector'],
+                positions: [
+                    { role: 'AI Renovation Manager', x: 400, y: 30 },
+                    { role: 'AI Interior Designer', x: 150, y: 150 },
+                    { role: 'AI Cost Estimator', x: 650, y: 150 },
+                    { role: 'AI Project Supervisor', x: 150, y: 300 },
+                    { role: 'AI Material Coordinator', x: 400, y: 350 },
+                    { role: 'AI Quality Inspector', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Renovation Manager', to: 'AI Interior Designer', content: '设计任务' },
+                    { from: 'AI Renovation Manager', to: 'AI Cost Estimator', content: '预算评估' },
+                    { from: 'AI Interior Designer', to: 'AI Project Supervisor', content: '施工计划' },
+                    { from: 'AI Cost Estimator', to: 'AI Material Coordinator', content: '材料预算' },
+                    { from: 'AI Project Supervisor', to: 'AI Quality Inspector', content: '质检安排' }
+                ]
+            },
+            // AI智能家政服务系统
+            {
+                id: 'ai-housekeeping-service',
+                name: 'AI智能家政服务系统',
+                icon: '🧹',
+                desc: '从预约到服务的完整家政服务流程',
+                agents: ['AI Housekeeping Director', 'AI Service Coordinator', 'AI Cleaner Supervisor', 'AI Deep Cleaner', 'AI Disinfection Specialist', 'AI Quality Supervisor'],
+                positions: [
+                    { role: 'AI Housekeeping Director', x: 400, y: 30 },
+                    { role: 'AI Service Coordinator', x: 150, y: 150 },
+                    { role: 'AI Cleaner Supervisor', x: 650, y: 150 },
+                    { role: 'AI Deep Cleaner', x: 150, y: 300 },
+                    { role: 'AI Disinfection Specialist', x: 400, y: 350 },
+                    { role: 'AI Quality Supervisor', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Housekeeping Director', to: 'AI Service Coordinator', content: '服务调度' },
+                    { from: 'AI Housekeeping Director', to: 'AI Quality Supervisor', content: '质量监督' },
+                    { from: 'AI Service Coordinator', to: 'AI Cleaner Supervisor', content: '清洁任务' },
+                    { from: 'AI Cleaner Supervisor', to: 'AI Deep Cleaner', content: '深度清洁' },
+                    { from: 'AI Deep Cleaner', to: 'AI Disinfection Specialist', content: '消毒需求' }
+                ]
+            },
+            // AI智能安防服务系统
+            {
+                id: 'ai-security-service',
+                name: 'AI智能安防服务系统',
+                icon: '🔐',
+                desc: '从监控到响应的完整安防服务流程',
+                agents: ['AI Security Director', 'AI Surveillance Operator', 'AI Alarm Response', 'AI Access Control', 'AI Patrol Officer', 'AI Incident Analyst'],
+                positions: [
+                    { role: 'AI Security Director', x: 400, y: 30 },
+                    { role: 'AI Surveillance Operator', x: 150, y: 150 },
+                    { role: 'AI Alarm Response', x: 650, y: 150 },
+                    { role: 'AI Access Control', x: 150, y: 300 },
+                    { role: 'AI Patrol Officer', x: 400, y: 350 },
+                    { role: 'AI Incident Analyst', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Security Director', to: 'AI Surveillance Operator', content: '监控任务' },
+                    { from: 'AI Security Director', to: 'AI Alarm Response', content: '报警响应' },
+                    { from: 'AI Surveillance Operator', to: 'AI Access Control', content: '门禁管理' },
+                    { from: 'AI Alarm Response', to: 'AI Patrol Officer', content: '巡逻任务' },
+                    { from: 'AI Patrol Officer', to: 'AI Incident Analyst', content: '事件分析' }
+                ]
+            },
+            // AI智能物业服务系统
+            {
+                id: 'ai-property-service',
+                name: 'AI智能物业服务系统',
+                icon: '🏢',
+                desc: '从报修到维护的完整物业服务流程',
+                agents: ['AI Property Manager', 'AI Maintenance Request', 'AI Repair Technician', 'AI Garden Manager', 'AI Security Coordinator', 'AI Billing Clerk'],
+                positions: [
+                    { role: 'AI Property Manager', x: 400, y: 30 },
+                    { role: 'AI Maintenance Request', x: 150, y: 150 },
+                    { role: 'AI Repair Technician', x: 650, y: 150 },
+                    { role: 'AI Garden Manager', x: 150, y: 300 },
+                    { role: 'AI Security Coordinator', x: 400, y: 350 },
+                    { role: 'AI Billing Clerk', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Property Manager', to: 'AI Maintenance Request', content: '报修管理' },
+                    { from: 'AI Property Manager', to: 'AI Billing Clerk', content: '费用管理' },
+                    { from: 'AI Maintenance Request', to: 'AI Repair Technician', content: '维修任务' },
+                    { from: 'AI Repair Technician', to: 'AI Garden Manager', content: '园林维护' },
+                    { from: 'AI Garden Manager', to: 'AI Security Coordinator', content: '安保协调' }
+                ]
+            },
+            // AI智能园林绿化服务系统
+            {
+                id: 'ai-landscaping-service',
+                name: 'AI智能园林绿化服务系统',
+                icon: '🌳',
+                desc: '从设计到养护的完整园林绿化服务流程',
+                agents: ['AI Landscaping Director', 'AI Landscape Designer', 'AI Tree Care Specialist', 'AI Irrigation Technician', 'AI Pest Control Specialist', 'AI Garden Inspector'],
+                positions: [
+                    { role: 'AI Landscaping Director', x: 400, y: 30 },
+                    { role: 'AI Landscape Designer', x: 150, y: 150 },
+                    { role: 'AI Tree Care Specialist', x: 650, y: 150 },
+                    { role: 'AI Irrigation Technician', x: 150, y: 300 },
+                    { role: 'AI Pest Control Specialist', x: 400, y: 350 },
+                    { role: 'AI Garden Inspector', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Landscaping Director', to: 'AI Landscape Designer', content: '设计任务' },
+                    { from: 'AI Landscaping Director', to: 'AI Garden Inspector', content: '质检监督' },
+                    { from: 'AI Landscape Designer', to: 'AI Tree Care Specialist', content: '绿化需求' },
+                    { from: 'AI Tree Care Specialist', to: 'AI Irrigation Technician', content: '灌溉任务' },
+                    { from: 'AI Irrigation Technician', to: 'AI Pest Control Specialist', content: '病虫害防治' }
+                ]
+            },
+            // AI智能环保回收服务系统
+            {
+                id: 'ai-recycling-service',
+                name: 'AI智能环保回收服务系统',
+                icon: '♻️',
+                desc: '从回收到再利用的完整环保回收服务流程',
+                agents: ['AI Recycling Director', 'AI Collection Coordinator', 'AI Sorting Specialist', 'AI Material Analyst', 'AI Recycling Technician', 'AI Environmental Reporter'],
+                positions: [
+                    { role: 'AI Recycling Director', x: 400, y: 30 },
+                    { role: 'AI Collection Coordinator', x: 150, y: 150 },
+                    { role: 'AI Sorting Specialist', x: 650, y: 150 },
+                    { role: 'AI Material Analyst', x: 150, y: 300 },
+                    { role: 'AI Recycling Technician', x: 400, y: 350 },
+                    { role: 'AI Environmental Reporter', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Recycling Director', to: 'AI Collection Coordinator', content: '回收调度' },
+                    { from: 'AI Recycling Director', to: 'AI Environmental Reporter', content: '环保报告' },
+                    { from: 'AI Collection Coordinator', to: 'AI Sorting Specialist', content: '分拣任务' },
+                    { from: 'AI Sorting Specialist', to: 'AI Material Analyst', content: '材料分析' },
+                    { from: 'AI Material Analyst', to: 'AI Recycling Technician', content: '回收处理' }
+                ]
+            },
+            // AI智能社区服务系统
+            {
+                id: 'ai-community-service',
+                name: 'AI智能社区服务系统',
+                icon: '🏘️',
+                desc: '从需求到解决的完整社区服务流程',
+                agents: ['AI Community Director', 'AI Resident Service', 'AI Event Coordinator', 'AI Volunteer Manager', 'AI Social Worker', 'AI Community Analyst'],
+                positions: [
+                    { role: 'AI Community Director', x: 400, y: 30 },
+                    { role: 'AI Resident Service', x: 150, y: 150 },
+                    { role: 'AI Event Coordinator', x: 650, y: 150 },
+                    { role: 'AI Volunteer Manager', x: 150, y: 300 },
+                    { role: 'AI Social Worker', x: 400, y: 350 },
+                    { role: 'AI Community Analyst', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Community Director', to: 'AI Resident Service', content: '居民服务' },
+                    { from: 'AI Community Director', to: 'AI Community Analyst', content: '社区分析' },
+                    { from: 'AI Resident Service', to: 'AI Event Coordinator', content: '活动安排' },
+                    { from: 'AI Event Coordinator', to: 'AI Volunteer Manager', content: '志愿者管理' },
+                    { from: 'AI Volunteer Manager', to: 'AI Social Worker', content: '社会工作' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -29523,7 +29688,57 @@
             // AI智能母婴用品店服务系统
             'AI Baby Products Manager': { icon: '👶', color: '#f97316', role: 'AI母婴用品经理' },
             'AI Product Consultant': { icon: '💡', color: '#ec4899', role: 'AI产品顾问' },
-            'AI Packing Specialist': { icon: '📦', color: '#8b5cf6', role: 'AI打包专员' }
+            'AI Packing Specialist': { icon: '📦', color: '#8b5cf6', role: 'AI打包专员' },
+            // Cycle 435 新增角色 - 7个行业服务系统
+            // AI智能装修服务系统
+            'AI Renovation Manager': { icon: '🏠', color: '#3b82f6', role: 'AI装修经理' },
+            'AI Interior Designer': { icon: '🎨', color: '#10b981', role: 'AI室内设计师' },
+            'AI Cost Estimator': { icon: '💰', color: '#ec4899', role: 'AI成本预算师' },
+            'AI Project Supervisor': { icon: '📋', color: '#f59e0b', role: 'AI项目监理' },
+            'AI Material Coordinator': { icon: '📦', color: '#8b5cf6', role: 'AI材料协调员' },
+            'AI Quality Inspector': { icon: '✅', color: '#06b6d4', role: 'AI质检员' },
+            // AI智能家政服务系统
+            'AI Housekeeping Director': { icon: '🧹', color: '#f43f5e', role: 'AI家政总监' },
+            'AI Service Coordinator': { icon: '📞', color: '#14b8a6', role: 'AI服务协调员' },
+            'AI Cleaner Supervisor': { icon: '🧽', color: '#a855f7', role: 'AI清洁主管' },
+            'AI Deep Cleaner': { icon: '✨', color: '#22c55e', role: 'AI深度清洁师' },
+            'AI Disinfection Specialist': { icon: '🦠', color: '#3b82f6', role: 'AI消毒专家' },
+            'AI Quality Supervisor': { icon: '🎯', color: '#f97316', role: 'AI质量主管' },
+            // AI智能安防服务系统
+            'AI Security Director': { icon: '🔐', color: '#dc2626', role: 'AI安防总监' },
+            'AI Surveillance Operator': { icon: '📹', color: '#0891b2', role: 'AI监控操作员' },
+            'AI Alarm Response': { icon: '🚨', color: '#f59e0b', role: 'AI报警响应员' },
+            'AI Access Control': { icon: '🚪', color: '#8b5cf6', role: 'AI门禁管理员' },
+            'AI Patrol Officer': { icon: '👮', color: '#10b981', role: 'AI巡逻员' },
+            'AI Incident Analyst': { icon: '📊', color: '#ec4899', role: 'AI事件分析师' },
+            // AI智能物业服务系统
+            'AI Property Manager': { icon: '🏢', color: '#3b82f6', role: 'AI物业经理' },
+            'AI Maintenance Request': { icon: '🔧', color: '#10b981', role: 'AI报修管理员' },
+            'AI Repair Technician': { icon: '🛠️', color: '#f59e0b', role: 'AI维修技师' },
+            'AI Garden Manager': { icon: '🌺', color: '#22c55e', role: 'AI园林经理' },
+            'AI Security Coordinator': { icon: '👥', color: '#8b5cf6', role: 'AI安保协调员' },
+            'AI Billing Clerk': { icon: '📋', color: '#06b6d4', role: 'AI账务员' },
+            // AI智能园林绿化服务系统
+            'AI Landscaping Director': { icon: '🌳', color: '#10b981', role: 'AI园林绿化总监' },
+            'AI Landscape Designer': { icon: '🎨', color: '#22c55e', role: 'AI园林设计师' },
+            'AI Tree Care Specialist': { icon: '🌲', color: '#3b82f6', role: 'AI树木护理专家' },
+            'AI Irrigation Technician': { icon: '💧', color: '#06b6d4', role: 'AI灌溉技师' },
+            'AI Pest Control Specialist': { icon: '🐛', color: '#f59e0b', role: 'AI病虫害防治专家' },
+            'AI Garden Inspector': { icon: '🔍', color: '#8b5cf6', role: 'AI园林质检员' },
+            // AI智能环保回收服务系统
+            'AI Recycling Director': { icon: '♻️', color: '#10b981', role: 'AI环保回收总监' },
+            'AI Collection Coordinator': { icon: '🚛', color: '#f97316', role: 'AI回收协调员' },
+            'AI Sorting Specialist': { icon: '🔀', color: '#8b5cf6', role: 'AI分拣专家' },
+            'AI Material Analyst': { icon: '🔬', color: '#06b6d4', role: 'AI材料分析师' },
+            'AI Recycling Technician': { icon: '⚙️', color: '#f59e0b', role: 'AI回收技师' },
+            'AI Environmental Reporter': { icon: '📈', color: '#22c55e', role: 'AI环保报告员' },
+            // AI智能社区服务系统
+            'AI Community Director': { icon: '🏘️', color: '#3b82f6', role: 'AI社区总监' },
+            'AI Resident Service': { icon: '👤', color: '#10b981', role: 'AI居民服务员' },
+            'AI Event Coordinator': { icon: '🎉', color: '#f43f5e', role: 'AI活动协调员' },
+            'AI Volunteer Manager': { icon: '🤝', color: '#a855f7', role: 'AI志愿者管理员' },
+            'AI Social Worker': { icon: '💼', color: '#f59e0b', role: 'AI社会工作者' },
+            'AI Community Analyst': { icon: '📊', color: '#8b5cf6', role: 'AI社区分析师' }
         };
 
         // 拖拽相关变量
