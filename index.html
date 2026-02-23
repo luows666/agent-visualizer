@@ -18855,6 +18855,126 @@
                     { from: 'AI Menu Designer', to: 'AI Kitchen Supervisor', content: '菜单设计' },
                     { from: 'AI Kitchen Supervisor', to: 'AI Restaurant Manager', content: '厨房报告' }
                 ]
+            },
+            // Cycle 393 新增模板 - AI智能司法执法系统
+            {
+                id: 'ai-legal-system',
+                name: 'AI智能司法执法系统',
+                icon: '⚖️',
+                desc: '从案件审理到判决执行的完整司法执法流程',
+                agents: ['AI Judge', 'AI Prosecutor', 'AI Defense Attorney', 'AI Court Clerk'],
+                positions: [
+                    { role: 'AI Judge', x: 400, y: 50 },
+                    { role: 'AI Prosecutor', x: 200, y: 180 },
+                    { role: 'AI Defense Attorney', x: 400, y: 180 },
+                    { role: 'AI Court Clerk', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Prosecutor', to: 'AI Judge', content: '起诉意见' },
+                    { from: 'AI Defense Attorney', to: 'AI Judge', content: '辩护意见' },
+                    { from: 'AI Court Clerk', to: 'AI Judge', content: '案件材料' },
+                    { from: 'AI Judge', to: 'AI Court Clerk', content: '判决结果' }
+                ]
+            },
+            // Cycle 393 新增模板 - AI智能政府行政系统
+            {
+                id: 'ai-government-admin',
+                name: 'AI智能政府行政系统',
+                icon: '🏛️',
+                desc: '从政策制定到公共服务的完整政府行政流程',
+                agents: ['AI Mayor', 'AI City Council', 'AI Government Spokesperson', 'AI Policy Analyst'],
+                positions: [
+                    { role: 'AI Mayor', x: 400, y: 50 },
+                    { role: 'AI City Council', x: 200, y: 180 },
+                    { role: 'AI Government Spokesperson', x: 400, y: 180 },
+                    { role: 'AI Policy Analyst', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI City Council', to: 'AI Mayor', content: '议案提案' },
+                    { from: 'AI Mayor', to: 'AI Policy Analyst', content: '政策需求' },
+                    { from: 'AI Policy Analyst', to: 'AI Government Spokesperson', content: '政策解读' },
+                    { from: 'AI Government Spokesperson', to: 'AI Mayor', content: '舆论反馈' }
+                ]
+            },
+            // Cycle 393 新增模板 - AI智能国防军事系统
+            {
+                id: 'ai-defense-military',
+                name: 'AI智能国防军事系统',
+                icon: '🎖️',
+                desc: '从战略规划到应急响应的完整国防军事流程',
+                agents: ['AI Military Strategist', 'AI Defense Analyst', 'AI Intelligence Officer', 'AI Emergency Commander'],
+                positions: [
+                    { role: 'AI Military Strategist', x: 400, y: 50 },
+                    { role: 'AI Defense Analyst', x: 200, y: 180 },
+                    { role: 'AI Intelligence Officer', x: 400, y: 180 },
+                    { role: 'AI Emergency Commander', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Intelligence Officer', to: 'AI Defense Analyst', content: '情报分析' },
+                    { from: 'AI Defense Analyst', to: 'AI Military Strategist', content: '威胁评估' },
+                    { from: 'AI Military Strategist', to: 'AI Emergency Commander', content: '作战指令' },
+                    { from: 'AI Emergency Commander', to: 'AI Military Strategist', content: '战场反馈' }
+                ]
+            },
+            // Cycle 393 新增模板 - AI智能航空航天系统
+            {
+                id: 'ai-aerospace',
+                name: 'AI智能航空航天系统',
+                icon: '🚀',
+                desc: '从飞行计划到太空任务的完整航空航天流程',
+                agents: ['AI Aerospace Engineer', 'AI Satellite Designer', 'AI Mission Control', 'AI Flight Director'],
+                positions: [
+                    { role: 'AI Aerospace Engineer', x: 400, y: 50 },
+                    { role: 'AI Satellite Designer', x: 200, y: 180 },
+                    { role: 'AI Mission Control', x: 400, y: 180 },
+                    { role: 'AI Flight Director', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Satellite Designer', to: 'AI Aerospace Engineer', content: '设计方案' },
+                    { from: 'AI Aerospace Engineer', to: 'AI Mission Control', content: '技术参数' },
+                    { from: 'AI Mission Control', to: 'AI Flight Director', content: '任务指令' },
+                    { from: 'AI Flight Director', to: 'AI Mission Control', content: '飞行状态' }
+                ]
+            },
+            // Cycle 393 新增模板 - AI智能能源电力系统
+            {
+                id: 'ai-energy-power',
+                name: 'AI智能能源电力系统',
+                icon: '⚡',
+                desc: '从电力生产到能源交易的完整能源电力流程',
+                agents: ['AI Power Grid Manager', 'AI Energy Trader', 'AI Nuclear Engineer', 'AI Renewable Energy'],
+                positions: [
+                    { role: 'AI Power Grid Manager', x: 400, y: 50 },
+                    { role: 'AI Energy Trader', x: 200, y: 180 },
+                    { role: 'AI Nuclear Engineer', x: 400, y: 180 },
+                    { role: 'AI Renewable Energy', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Nuclear Engineer', to: 'AI Power Grid Manager', content: '发电数据' },
+                    { from: 'AI Renewable Energy', to: 'AI Power Grid Manager', content: '新能源接入' },
+                    { from: 'AI Power Grid Manager', to: 'AI Energy Trader', content: '电力调度' },
+                    { from: 'AI Energy Trader', to: 'AI Power Grid Manager', content: '市场信息' }
+                ]
+            },
+            // Cycle 393 新增模板 - AI智能化工材料系统
+            {
+                id: 'ai-chemical-materials',
+                name: 'AI智能化工材料系统',
+                icon: '⚗️',
+                desc: '从化工生产到材料研发的完整化工材料流程',
+                agents: ['AI Chemical Engineer', 'AI Process Designer', 'AI Safety Officer', 'AI Quality Control'],
+                positions: [
+                    { role: 'AI Chemical Engineer', x: 400, y: 50 },
+                    { role: 'AI Process Designer', x: 200, y: 180 },
+                    { role: 'AI Safety Officer', x: 400, y: 180 },
+                    { role: 'AI Quality Control', x: 600, y: 180 }
+                ],
+                messageFlows: [
+                    { from: 'AI Process Designer', to: 'AI Chemical Engineer', content: '工艺要求' },
+                    { from: 'AI Chemical Engineer', to: 'AI Safety Officer', content: '安全评估' },
+                    { from: 'AI Safety Officer', to: 'AI Quality Control', content: '安全标准' },
+                    { from: 'AI Quality Control', to: 'AI Chemical Engineer', content: '质量报告' }
+                ]
             }
         ];
 
@@ -22161,7 +22281,48 @@
             'AI Chef': { icon: '👨‍🍳', color: '#f59e0b', role: 'AI厨师' },
             'AI Baker': { icon: '🥐', color: '#d97706', role: 'AI烘焙师' },
             'AI Bartender': { icon: '🍸', color: '#8b5cf6', role: 'AI调酒师' },
-            'AI Food Stylist': { icon: '🍽️', color: '#ec4899', role: 'AI食物造型师' }
+            // Cycle 393 新增角色 - AI 智能司法执法
+            'AI Judge': { icon: '⚖️', color: '#8b5cf6', role: 'AI法官' },
+            'AI Prosecutor': { icon: '🎯', color: '#dc2626', role: 'AI检察官' },
+            'AI Defense Attorney': { icon: '🛡️', color: '#3b82f6', role: 'AI辩护律师' },
+            'AI Court Clerk': { icon: '📜', color: '#64748b', role: 'AI法院书记员' },
+            'AI Legal Aid': { icon: '📋', color: '#22c55e', role: 'AI法律援助师' },
+            // Cycle 393 新增角色 - AI 智能政府行政
+            'AI Mayor': { icon: '🏙️', color: '#0ea5e9', role: 'AI市长' },
+            'AI City Council': { icon: '🏛️', color: '#a855f7', role: 'AI市议员' },
+            'AI Government Spokesperson': { icon: '📣', color: '#f59e0b', role: 'AI政府发言人' },
+            'AI Policy Analyst': { icon: '📊', color: '#14b8a6', role: 'AI政策分析师' },
+            'AI Public Relations': { icon: '📢', color: '#ec4899', role: 'AI公共关系师' },
+            // Cycle 393 新增角色 - AI 智能国防军事
+            'AI Military Strategist': { icon: '🎖️', color: '#dc2626', role: 'AI军事战略家' },
+            'AI Defense Analyst': { icon: '🛡️', color: '#f97316', role: 'AI国防分析师' },
+            'AI Intelligence Officer': { icon: '🔐', color: '#7c3aed', role: 'AI情报官员' },
+            'AI Cyber Defense': { icon: '💻', color: '#06b6d4', role: 'AI网络防御师' },
+            'AI Emergency Commander': { icon: '🚨', color: '#ef4444', role: 'AI应急指挥官' },
+            // Cycle 393 新增角色 - AI 智能航空航天
+            'AI Aerospace Engineer': { icon: '🚀', color: '#f43f5e', role: 'AI航空航天工程师' },
+            'AI Satellite Designer': { icon: '🛰️', color: '#0ea5e9', role: 'AI卫星设计师' },
+            'AI Mission Control': { icon: '📡', color: '#8b5cf6', role: 'AI任务控制师' },
+            'AI Flight Director': { icon: '✈️', color: '#06b6d4', role: 'AI飞行指挥' },
+            'AI Space Navigator': { icon: '🌌', color: '#3b82f6', role: 'AI太空导航师' },
+            // Cycle 393 新增角色 - AI 智能能源电力
+            'AI Power Grid Manager': { icon: '⚡', color: '#eab308', role: 'AI电网管理师' },
+            'AI Energy Trader': { icon: '💰', color: '#f59e0b', role: 'AI能源交易师' },
+            'AI Nuclear Engineer': { icon: '☢️', color: '#22c55e', role: 'AI核能工程师' },
+            'AI Renewable Energy': { icon: '🌞', color: '#10b981', role: 'AI可再生能源工程师' },
+            'AI Smart Meter': { icon: '📡', color: '#06b6d4', role: 'AI智能电表工程师' },
+            // Cycle 393 新增角色 - AI 智能化工材料
+            'AI Chemical Engineer': { icon: '⚗️', color: '#8b5cf6', role: 'AI化学工程师' },
+            'AI Process Designer': { icon: '📐', color: '#14b8a6', role: 'AI工艺设计师' },
+            'AI Safety Officer': { icon: '🛡️', color: '#dc2626', role: 'AI安全官员' },
+            'AI Quality Control': { icon: '✅', color: '#22c55e', role: 'AI质量控制工程师' },
+            'AI Environmental Engineer': { icon: '🌿', color: '#10b981', role: 'AI环保工程师' },
+            // Cycle 393 新增角色 - AI 智能文体娱乐
+            'AI Event Producer': { icon: '🎪', color: '#f97316', role: 'AI活动制作人' },
+            'AI Entertainment Manager': { icon: '🎭', color: '#ec4899', role: 'AI娱乐经理' },
+            'AI Talent Scout': { icon: '🔍', color: '#a855f7', role: 'AI星探' },
+            'AI Venue Manager': { icon: '🏟️', color: '#3b82f6', role: 'AI场馆经理' },
+            'AI Booking Agent': { icon: '📋', color: '#06b6d4', role: 'AI预约经纪人' }
         };
 
         // 拖拽相关变量
