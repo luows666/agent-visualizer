@@ -24659,8 +24659,180 @@
             }
         ];
 
+        // Cycle 436 - 新增行业服务系统模板
+        const cycle436Templates = [
+            {
+                id: 'ai-elderly-community-service',
+                name: 'AI智能养老社区服务系统',
+                icon: '🏡',
+                desc: '智慧养老社区的全面服务管理，包括健康监护、生活照料、精神关怀等',
+                agents: ['AI Community Director', 'AI Health Monitor', 'AI Caregiver', 'AI Activity Organizer', 'AI Meal Planner', 'AI Family Liaison'],
+                positions: [
+                    { id: 'p1', name: '社区总监', x: 400, y: 50 },
+                    { id: 'p2', name: '健康监护', x: 200, y: 180 },
+                    { id: 'p3', name: '护理员', x: 400, y: 180 },
+                    { id: 'p4', name: '活动组织', x: 600, y: 180 },
+                    { id: 'p5', name: '膳食规划', x: 400, y: 310 },
+                    { id: 'p6', name: '家属联络', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Community Director', to: 'AI Health Monitor', content: '健康任务' },
+                    { from: 'AI Community Director', to: 'AI Activity Organizer', content: '活动安排' },
+                    { from: 'AI Community Director', to: 'AI Family Liaison', content: '家属沟通' },
+                    { from: 'AI Health Monitor', to: 'AI Caregiver', content: '护理建议' },
+                    { from: 'AI Health Monitor', to: 'AI Meal Planner', content: '饮食建议' },
+                    { from: 'AI Caregiver', to: 'AI Community Director', content: '护理报告' },
+                    { from: 'AI Activity Organizer', to: 'AI Family Liaison', content: '活动反馈' }
+                ]
+            },
+            {
+                id: 'ai-smart-park-service',
+                name: 'AI智能智慧园区服务系统',
+                icon: '🏢',
+                desc: '智慧园区的全方位服务管理，包括设施管理、安保监控、企业服务等',
+                agents: ['AI Park Manager', 'AI Facility Manager', 'AI Security Chief', 'AI Enterprise Liaison', 'AI Event Coordinator', 'AI Maintenance Supervisor'],
+                positions: [
+                    { id: 'p1', name: '园区经理', x: 400, y: 50 },
+                    { id: 'p2', name: '设施管理', x: 200, y: 180 },
+                    { id: 'p3', name: '安保主管', x: 400, y: 180 },
+                    { id: 'p4', name: '企业联络', x: 600, y: 180 },
+                    { id: 'p5', name: '活动协调', x: 400, y: 310 },
+                    { id: 'p6', name: '维护主管', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Park Manager', to: 'AI Facility Manager', content: '设施任务' },
+                    { from: 'AI Park Manager', to: 'AI Security Chief', content: '安保安排' },
+                    { from: 'AI Park Manager', to: 'AI Enterprise Liaison', content: '企业需求' },
+                    { from: 'AI Facility Manager', to: 'AI Maintenance Supervisor', content: '维护任务' },
+                    { from: 'AI Security Chief', to: 'AI Park Manager', content: '安全报告' },
+                    { from: 'AI Enterprise Liaison', to: 'AI Event Coordinator', content: '活动需求' },
+                    { from: 'AI Maintenance Supervisor', to: 'AI Facility Manager', content: '维护报告' }
+                ]
+            },
+            {
+                id: 'ai-coworking-service',
+                name: 'AI智能共享办公服务系统',
+                icon: '💼',
+                desc: '共享办公空间的服务管理，包括工位预订、资源协调、社区活动等',
+                agents: ['AI Coworking Manager', 'AI Space Booker', 'AI Resource Coordinator', 'AI Community Manager', 'AI Network Organizer', 'AI Billing Specialist'],
+                positions: [
+                    { id: 'p1', name: '空间经理', x: 400, y: 50 },
+                    { id: 'p2', name: '预订管理', x: 200, y: 180 },
+                    { id: 'p3', name: '资源协调', x: 400, y: 180 },
+                    { id: 'p4', name: '社区经理', x: 600, y: 180 },
+                    { id: 'p5', name: '网络组织', x: 400, y: 310 },
+                    { id: 'p6', name: '账单专责', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Coworking Manager', to: 'AI Space Booker', content: '预订任务' },
+                    { from: 'AI Coworking Manager', to: 'AI Community Manager', content: '社区活动' },
+                    { from: 'AI Space Booker', to: 'AI Resource Coordinator', content: '资源需求' },
+                    { from: 'AI Resource Coordinator', to: 'AI Billing Specialist', content: '账单信息' },
+                    { from: 'AI Community Manager', to: 'AI Network Organizer', content: '网络活动' },
+                    { from: 'AI Network Organizer', to: 'AI Coworking Manager', content: '活动报告' },
+                    { from: 'AI Billing Specialist', to: 'AI Coworking Manager', content: '账单汇总' }
+                ]
+            },
+            {
+                id: 'ai-crossborder-ecommerce-service',
+                name: 'AI智能跨境电商服务系统',
+                icon: '🌏',
+                desc: '跨境电商全流程服务，包括海外仓储、物流配送、海关报关等',
+                agents: ['AI Ecommerce Director', 'AI International Logistics', 'AI Customs Specialist', 'AI Product Lister', 'AI Customer Service', 'AI Marketing Specialist'],
+                positions: [
+                    { id: 'p1', name: '电商总监', x: 400, y: 50 },
+                    { id: 'p2', name: '国际物流', x: 200, y: 180 },
+                    { id: 'p3', name: '报关专员', x: 400, y: 180 },
+                    { id: 'p4', name: '商品上架', x: 600, y: 180 },
+                    { id: 'p5', name: '客服', x: 400, y: 310 },
+                    { id: 'p6', name: '市场推广', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Ecommerce Director', to: 'AI International Logistics', content: '物流任务' },
+                    { from: 'AI Ecommerce Director', to: 'AI Product Lister', content: '商品上架' },
+                    { from: 'AI International Logistics', to: 'AI Customs Specialist', content: '报关资料' },
+                    { from: 'AI Customs Specialist', to: 'AI Ecommerce Director', content: '清关状态' },
+                    { from: 'AI Product Lister', to: 'AI Marketing Specialist', content: '推广需求' },
+                    { from: 'AI Customer Service', to: 'AI Product Lister', content: '商品咨询' },
+                    { from: 'AI Marketing Specialist', to: 'AI Customer Service', content: '活动反馈' }
+                ]
+            },
+            {
+                id: 'ai-live-streaming-service',
+                name: 'AI智能直播带货服务系统',
+                icon: '📱',
+                desc: '直播带货全流程服务，包括选品策划、直播运营、订单管理等',
+                agents: ['AI Live Director', 'AI Product Selector', 'AI Host Assistant', 'AI Chat Moderator', 'AI Order Manager', 'AI Analytics Specialist'],
+                positions: [
+                    { id: 'p1', name: '直播总监', x: 400, y: 50 },
+                    { id: 'p2', name: '选品策划', x: 200, y: 180 },
+                    { id: 'p3', name: '主播助理', x: 400, y: 180 },
+                    { id: 'p4', name: '场控', x: 600, y: 180 },
+                    { id: 'p5', name: '订单管理', x: 400, y: 310 },
+                    { id: 'p6', name: '数据分析', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Live Director', to: 'AI Product Selector', content: '选品任务' },
+                    { from: 'AI Live Director', to: 'AI Host Assistant', content: '直播安排' },
+                    { from: 'AI Product Selector', to: 'AI Live Director', content: '选品建议' },
+                    { from: 'AI Host Assistant', to: 'AI Chat Moderator', content: '互动任务' },
+                    { from: 'AI Chat Moderator', to: 'AI Order Manager', content: '订单信息' },
+                    { from: 'AI Order Manager', to: 'AI Analytics Specialist', content: '数据需求' },
+                    { from: 'AI Analytics Specialist', to: 'AI Live Director', content: '分析报告' }
+                ]
+            },
+            {
+                id: 'ai-warehouse-logistics-service',
+                name: 'AI智能仓储物流服务系统',
+                icon: '📦',
+                desc: '智能仓储和物流服务，包括库存管理、订单分拣、配送调度等',
+                agents: ['AI Warehouse Manager', 'AI Inventory Controller', 'AI Order Sorter', 'AI Delivery Scheduler', 'AI Quality Inspector', 'AI Equipment Manager'],
+                positions: [
+                    { id: 'p1', name: '仓储经理', x: 400, y: 50 },
+                    { id: 'p2', name: '库存管理', x: 200, y: 180 },
+                    { id: 'p3', name: '订单分拣', x: 400, y: 180 },
+                    { id: 'p4', name: '配送调度', x: 600, y: 180 },
+                    { id: 'p5', name: '质检', x: 400, y: 310 },
+                    { id: 'p6', name: '设备管理', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Warehouse Manager', to: 'AI Inventory Controller', content: '库存任务' },
+                    { from: 'AI Warehouse Manager', to: 'AI Delivery Scheduler', content: '配送任务' },
+                    { from: 'AI Inventory Controller', to: 'AI Order Sorter', content: '分拣指令' },
+                    { from: 'AI Order Sorter', to: 'AI Quality Inspector', content: '质检任务' },
+                    { from: 'AI Quality Inspector', to: 'AI Delivery Scheduler', content: '发货确认' },
+                    { from: 'AI Delivery Scheduler', to: 'AI Warehouse Manager', content: '配送报告' },
+                    { from: 'AI Equipment Manager', to: 'AI Warehouse Manager', content: '设备状态' }
+                ]
+            },
+            {
+                id: 'ai-smart-community-service',
+                name: 'AI智能智慧社区服务系统',
+                icon: '🏘️',
+                desc: '智慧社区综合服务，包括物业服务、社区活动、便民服务等',
+                agents: ['AI Community Manager', 'AI Property Service', 'AI Security Monitor', 'AI Event Planner', 'AI Volunteer Coordinator', 'AI Resident Liaison'],
+                positions: [
+                    { id: 'p1', name: '社区管理', x: 400, y: 50 },
+                    { id: 'p2', name: '物业服务', x: 200, y: 180 },
+                    { id: 'p3', name: '安保监控', x: 400, y: 180 },
+                    { id: 'p4', name: '活动策划', x: 600, y: 180 },
+                    { id: 'p5', name: '志愿者协调', x: 400, y: 310 },
+                    { id: 'p6', name: '居民联络', x: 400, y: 440 }
+                ],
+                messageFlows: [
+                    { from: 'AI Community Manager', to: 'AI Property Service', content: '服务任务' },
+                    { from: 'AI Community Manager', to: 'AI Security Monitor', content: '安保任务' },
+                    { from: 'AI Community Manager', to: 'AI Event Planner', content: '活动安排' },
+                    { from: 'AI Property Service', to: 'AI Resident Liaison', content: '居民反馈' },
+                    { from: 'AI Security Monitor', to: 'AI Community Manager', content: '安全报告' },
+                    { from: 'AI Event Planner', to: 'AI Volunteer Coordinator', content: '志愿者需求' },
+                    { from: 'AI Volunteer Coordinator', to: 'AI Resident Liaison', content: '活动通知' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -29738,7 +29910,57 @@
             'AI Event Coordinator': { icon: '🎉', color: '#f43f5e', role: 'AI活动协调员' },
             'AI Volunteer Manager': { icon: '🤝', color: '#a855f7', role: 'AI志愿者管理员' },
             'AI Social Worker': { icon: '💼', color: '#f59e0b', role: 'AI社会工作者' },
-            'AI Community Analyst': { icon: '📊', color: '#8b5cf6', role: 'AI社区分析师' }
+            'AI Community Analyst': { icon: '📊', color: '#8b5cf6', role: 'AI社区分析师' },
+            // Cycle 436 新增角色 - 7个行业服务系统
+            // AI智能养老社区服务系统
+            'AI Elderly Community Director': { icon: '🏡', color: '#8b5cf6', role: 'AI养老社区总监' },
+            'AI Health Monitor': { icon: '💓', color: '#f59e0b', role: 'AI健康监护' },
+            'AI Caregiver': { icon: '🧓', color: '#22c55e', role: 'AI护理员' },
+            'AI Elderly Activity Organizer': { icon: '🎯', color: '#ec4899', role: 'AI活动组织' },
+            'AI Meal Planner': { icon: '🍲', color: '#06b6d4', role: 'AI膳食规划' },
+            'AI Family Liaison': { icon: '👨‍👩‍👧', color: '#14b8a6', role: 'AI家属联络' },
+            // AI智能智慧园区服务系统
+            'AI Park Manager': { icon: '🏢', color: '#3b82f6', role: 'AI园区经理' },
+            'AI Facility Manager': { icon: '🔧', color: '#f59e0b', role: 'AI设施管理' },
+            'AI Security Chief': { icon: '🛡️', color: '#22c55e', role: 'AI安保主管' },
+            'AI Enterprise Liaison': { icon: '🤝', color: '#ec4899', role: 'AI企业联络' },
+            'AI Park Event Coordinator': { icon: '🎪', color: '#06b6d4', role: 'AI活动协调' },
+            'AI Maintenance Supervisor': { icon: '🔩', color: '#14b8a6', role: 'AI维护主管' },
+            // AI智能共享办公服务系统
+            'AI Coworking Manager': { icon: '💼', color: '#8b5cf6', role: 'AI空间经理' },
+            'AI Space Booker': { icon: '📅', color: '#f59e0b', role: 'AI预订管理' },
+            'AI Resource Coordinator': { icon: '🔄', color: '#22c55e', role: 'AI资源协调' },
+            'AI Coworking Community Manager': { icon: '👥', color: '#ec4899', role: 'AI社区经理' },
+            'AI Network Organizer': { icon: '🌐', color: '#06b6d4', role: 'AI网络组织' },
+            'AI Billing Specialist': { icon: '💵', color: '#14b8a6', role: 'AI账单专责' },
+            // AI智能跨境电商服务系统
+            'AI Ecommerce Director': { icon: '🌏', color: '#3b82f6', role: 'AI电商总监' },
+            'AI International Logistics': { icon: '🚢', color: '#f59e0b', role: 'AI国际物流' },
+            'AI Customs Specialist': { icon: '📋', color: '#22c55e', role: 'AI报关专员' },
+            'AI Product Lister': { icon: '📝', color: '#ec4899', role: 'AI商品上架' },
+            'AI Crossborder Customer Service': { icon: '💬', color: '#06b6d4', role: 'AI跨境客服' },
+            'AI Marketing Specialist': { icon: '📢', color: '#14b8a6', role: 'AI市场推广' },
+            // AI智能直播带货服务系统
+            'AI Live Director': { icon: '📱', color: '#8b5cf6', role: 'AI直播总监' },
+            'AI Product Selector': { icon: '🛍️', color: '#f59e0b', role: 'AI选品策划' },
+            'AI Host Assistant': { icon: '🎤', color: '#22c55e', role: 'AI主播助理' },
+            'AI Chat Moderator': { icon: '💬', color: '#ec4899', role: 'AI场控' },
+            'AI Order Manager': { icon: '📦', color: '#06b6d4', role: 'AI订单管理' },
+            'AI Analytics Specialist': { icon: '📈', color: '#14b8a6', role: 'AI数据分析' },
+            // AI智能仓储物流服务系统
+            'AI Warehouse Manager': { icon: '🏭', color: '#3b82f6', role: 'AI仓储经理' },
+            'AI Inventory Controller': { icon: '📊', color: '#f59e0b', role: 'AI库存管理' },
+            'AI Order Sorter': { icon: '🏷️', color: '#22c55e', role: 'AI订单分拣' },
+            'AI Delivery Scheduler': { icon: '🚛', color: '#ec4899', role: 'AI配送调度' },
+            'AI Quality Inspector': { icon: '✅', color: '#06b6d4', role: 'AI质检' },
+            'AI Warehouse Equipment Manager': { icon: '🔧', color: '#14b8a6', role: 'AI设备管理' },
+            // AI智能智慧社区服务系统
+            'AI Smart Community Manager': { icon: '🏘️', color: '#8b5cf6', role: 'AI智慧社区经理' },
+            'AI Property Service': { icon: '🏠', color: '#f59e0b', role: 'AI物业服务' },
+            'AI Security Monitor': { icon: '📹', color: '#22c55e', role: 'AI安保监控' },
+            'AI Smart Event Planner': { icon: '🎪', color: '#ec4899', role: 'AI活动策划' },
+            'AI Volunteer Coordinator': { icon: '❤️', color: '#06b6d4', role: 'AI志愿者协调' },
+            'AI Resident Liaison': { icon: '🏘️', color: '#14b8a6', role: 'AI居民联络' }
         };
 
         // 拖拽相关变量
