@@ -20049,6 +20049,138 @@
                     { from: 'AI Threat Hunter', to: 'AI Security Auditor', content: '审计需求' },
                     { from: 'AI Security Auditor', to: 'AI Security Analyst', content: '审计报告' }
                 ]
+            },
+            // Cycle 404 新增模板 - AI智能电动汽车系统
+            {
+                id: 'ai-ev-systems',
+                name: 'AI智能电动汽车系统',
+                icon: '🚗',
+                desc: '从电动汽车设计到自动驾驶的完整流程',
+                agents: ['AI EV Designer', 'AI Battery Engineer', 'AI Charging Infrastructure', 'AI EV Software', 'AI Autonomous Driving'],
+                positions: [
+                    { role: 'AI EV Designer', x: 400, y: 30 },
+                    { role: 'AI Battery Engineer', x: 200, y: 150 },
+                    { role: 'AI Charging Infrastructure', x: 600, y: 150 },
+                    { role: 'AI EV Software', x: 200, y: 270 },
+                    { role: 'AI Autonomous Driving', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI EV Designer', to: 'AI Battery Engineer', content: '电池需求' },
+                    { from: 'AI Battery Engineer', to: 'AI Charging Infrastructure', content: '充电需求' },
+                    { from: 'AI Charging Infrastructure', to: 'AI EV Software', content: '充电系统集成' },
+                    { from: 'AI EV Software', to: 'AI Autonomous Driving', content: '自动驾驶需求' },
+                    { from: 'AI Autonomous Driving', to: 'AI EV Designer', content: '测试反馈' }
+                ]
+            },
+            // Cycle 404 新增模板 - AI智能航空系统
+            {
+                id: 'ai-aviation',
+                name: 'AI智能航空系统',
+                icon: '✈️',
+                desc: '从飞机设计到空中交通管理的完整流程',
+                agents: ['AI Aircraft Designer', 'AI Avionics Engineer', 'AI Propulsion Engineer', 'AI Flight Test Engineer', 'AI Air Traffic Control'],
+                positions: [
+                    { role: 'AI Aircraft Designer', x: 400, y: 30 },
+                    { role: 'AI Avionics Engineer', x: 200, y: 150 },
+                    { role: 'AI Propulsion Engineer', x: 600, y: 150 },
+                    { role: 'AI Flight Test Engineer', x: 200, y: 270 },
+                    { role: 'AI Air Traffic Control', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Aircraft Designer', to: 'AI Avionics Engineer', content: '航电需求' },
+                    { from: 'AI Avionics Engineer', to: 'AI Propulsion Engineer', content: '推进系统需求' },
+                    { from: 'AI Propulsion Engineer', to: 'AI Flight Test Engineer', content: '试飞计划' },
+                    { from: 'AI Flight Test Engineer', to: 'AI Air Traffic Control', content: '试飞空域申请' },
+                    { from: 'AI Air Traffic Control', to: 'AI Aircraft Designer', content: '适航认证' }
+                ]
+            },
+            // Cycle 404 新增模板 - AI智能铁路系统
+            {
+                id: 'ai-railway',
+                name: 'AI智能铁路系统',
+                icon: '🚂',
+                desc: '从铁路设计到列车调度的完整流程',
+                agents: ['AI Railway Systems', 'AI Track Engineer', 'AI Signal Systems', 'AI Rolling Stock', 'AI Railway Safety'],
+                positions: [
+                    { role: 'AI Railway Systems', x: 400, y: 30 },
+                    { role: 'AI Track Engineer', x: 200, y: 150 },
+                    { role: 'AI Signal Systems', x: 600, y: 150 },
+                    { role: 'AI Rolling Stock', x: 200, y: 270 },
+                    { role: 'AI Railway Safety', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Railway Systems', to: 'AI Track Engineer', content: '轨道设计需求' },
+                    { from: 'AI Track Engineer', to: 'AI Signal Systems', content: '信号系统需求' },
+                    { from: 'AI Signal Systems', to: 'AI Rolling Stock', content: '机车车辆需求' },
+                    { from: 'AI Rolling Stock', to: 'AI Railway Safety', content: '安全标准' },
+                    { from: 'AI Railway Safety', to: 'AI Railway Systems', content: '安全认证' }
+                ]
+            },
+            // Cycle 404 新增模板 - AI智能船舶系统
+            {
+                id: 'ai-shipbuilding',
+                name: 'AI智能船舶系统',
+                icon: '⚓',
+                desc: '从船舶设计到航运管理的完整流程',
+                agents: ['AI Ship Designer', 'AI Naval Architect', 'AI Marine Systems', 'AI Port Operations', 'AI Shipping Logistics'],
+                positions: [
+                    { role: 'AI Ship Designer', x: 400, y: 30 },
+                    { role: 'AI Naval Architect', x: 200, y: 150 },
+                    { role: 'AI Marine Systems', x: 600, y: 150 },
+                    { role: 'AI Port Operations', x: 200, y: 270 },
+                    { role: 'AI Shipping Logistics', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Ship Designer', to: 'AI Naval Architect', content: '船舶设计需求' },
+                    { from: 'AI Naval Architect', to: 'AI Marine Systems', content: '船舶系统需求' },
+                    { from: 'AI Marine Systems', to: 'AI Port Operations', content: '港口需求' },
+                    { from: 'AI Port Operations', to: 'AI Shipping Logistics', content: '物流需求' },
+                    { from: 'AI Shipping Logistics', to: 'AI Ship Designer', content: '运营反馈' }
+                ]
+            },
+            // Cycle 404 新增模板 - AI智能医疗设备系统
+            {
+                id: 'ai-medical-equipment',
+                name: 'AI智能医疗设备系统',
+                icon: '🏥',
+                desc: '从医疗设备设计到临床应用的完整流程',
+                agents: ['AI Diagnostic Equipment', 'AI Surgical Robot', 'AI Medical Imaging', 'AI Prosthetics Design', 'AI Medical Safety'],
+                positions: [
+                    { role: 'AI Diagnostic Equipment', x: 400, y: 30 },
+                    { role: 'AI Surgical Robot', x: 200, y: 150 },
+                    { role: 'AI Medical Imaging', x: 600, y: 150 },
+                    { role: 'AI Prosthetics Design', x: 200, y: 270 },
+                    { role: 'AI Medical Safety', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Diagnostic Equipment', to: 'AI Surgical Robot', content: '手术需求' },
+                    { from: 'AI Surgical Robot', to: 'AI Medical Imaging', content: '影像需求' },
+                    { from: 'AI Medical Imaging', to: 'AI Prosthetics Design', content: '假肢需求' },
+                    { from: 'AI Prosthetics Design', to: 'AI Medical Safety', content: '安全标准' },
+                    { from: 'AI Medical Safety', to: 'AI Diagnostic Equipment', content: '认证反馈' }
+                ]
+            },
+            // Cycle 404 新增模板 - AI智能制药系统
+            {
+                id: 'ai-pharmaceutical',
+                name: 'AI智能制药系统',
+                icon: '💊',
+                desc: '从药物发现到生产的完整流程',
+                agents: ['AI Drug Discovery', 'AI Clinical Research', 'AI Pharmaceutical QA', 'AI Drug Manufacturing', 'AI Regulatory Affairs'],
+                positions: [
+                    { role: 'AI Drug Discovery', x: 400, y: 30 },
+                    { role: 'AI Clinical Research', x: 200, y: 150 },
+                    { role: 'AI Pharmaceutical QA', x: 600, y: 150 },
+                    { role: 'AI Drug Manufacturing', x: 200, y: 270 },
+                    { role: 'AI Regulatory Affairs', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Drug Discovery', to: 'AI Clinical Research', content: '药物候选' },
+                    { from: 'AI Clinical Research', to: 'AI Pharmaceutical QA', content: '质量要求' },
+                    { from: 'AI Pharmaceutical QA', to: 'AI Drug Manufacturing', content: '生产标准' },
+                    { from: 'AI Drug Manufacturing', to: 'AI Regulatory Affairs', content: '注册需求' },
+                    { from: 'AI Regulatory Affairs', to: 'AI Drug Discovery', content: '法规反馈' }
+                ]
             }
         ];
 
@@ -23796,7 +23928,49 @@
             'AI Penetration Tester': { icon: '🔓', color: '#f97316', role: 'AI渗透测试工程师' },
             'AI Incident Response': { icon: '🚨', color: '#22c55e', role: 'AI安全事件响应师' },
             'AI Threat Hunter': { icon: '🎯', color: '#a855f7', role: 'AI威胁猎手' },
-            'AI Security Auditor': { icon: '✅', color: '#14b8a6', role: 'AI安全审计员' }
+            'AI Security Auditor': { icon: '✅', color: '#14b8a6', role: 'AI安全审计员' },
+            // Cycle 404 新增角色 - AI智能电动汽车
+            'AI EV Designer': { icon: '🚗', color: '#10b981', role: 'AI电动汽车设计师' },
+            'AI Battery Engineer': { icon: '🔋', color: '#22c55e', role: 'AI电池工程师' },
+            'AI Charging Infrastructure': { icon: '⚡', color: '#eab308', role: 'AI充电基础设施工程师' },
+            'AI EV Software': { icon: '💻', color: '#3b82f6', role: 'AI电动汽车软件工程师' },
+            'AI Autonomous Driving': { icon: '🤖', color: '#8b5cf6', role: 'AI自动驾驶工程师' },
+            // Cycle 404 新增角色 - AI智能航空
+            'AI Aircraft Designer': { icon: '✈️', color: '#06b6d4', role: 'AI飞机设计师' },
+            'AI Avionics Engineer': { icon: '📡', color: '#f97316', role: 'AI航电工程师' },
+            'AI Propulsion Engineer': { icon: '🔥', color: '#ef4444', role: 'AI推进系统工程师' },
+            'AI Flight Test Engineer': { icon: '🛫', color: '#14b8a6', role: 'AI试飞工程师' },
+            'AI Air Traffic Control': { icon: '🛩️', color: '#a855f7', role: 'AI空中交通管制员' },
+            // Cycle 404 新增角色 - AI智能铁路
+            'AI Railway Systems': { icon: '🚂', color: '#f59e0b', role: 'AI铁路系统工程师' },
+            'AI Track Engineer': { icon: '🛤️', color: '#84cc16', role: 'AI轨道工程师' },
+            'AI Signal Systems': { icon: '🚦', color: '#ec4899', role: 'AI信号系统工程师' },
+            'AI Rolling Stock': { icon: '🚃', color: '#8b5cf6', role: 'AI机车车辆工程师' },
+            'AI Railway Safety': { icon: '🛡️', color: '#06b6d4', role: 'AI铁路安全工程师' },
+            // Cycle 404 新增角色 - AI智能船舶
+            'AI Ship Designer': { icon: '⚓', color: '#0ea5e9', role: 'AI船舶设计师' },
+            'AI Naval Architect': { icon: '🚢', color: '#14b8a6', role: 'AI造船工程师' },
+            'AI Marine Systems': { icon: '🌊', color: '#06b6d4', role: 'AI船舶系统工程师' },
+            'AI Port Operations': { icon: '🏗️', color: '#f97316', role: 'AI港口运营工程师' },
+            'AI Shipping Logistics': { icon: '📦', color: '#22c55e', role: 'AI航运物流工程师' },
+            // Cycle 404 新增角色 - AI智能医疗设备
+            'AI Diagnostic Equipment': { icon: '🏥', color: '#ef4444', role: 'AI诊断设备工程师' },
+            'AI Surgical Robot': { icon: '🤖', color: '#8b5cf6', role: 'AI手术机器人工程师' },
+            'AI Medical Imaging': { icon: '📷', color: '#06b6d4', role: 'AI医学影像工程师' },
+            'AI Prosthetics Design': { icon: '🦾', color: '#ec4899', role: 'AI假肢设计工程师' },
+            'AI Medical Safety': { icon: '🛡️', color: '#22c55e', role: 'AI医疗安全工程师' },
+            // Cycle 404 新增角色 - AI智能制药
+            'AI Drug Discovery': { icon: '💊', color: '#a855f7', role: 'AI药物发现工程师' },
+            'AI Clinical Research': { icon: '🔬', color: '#3b82f6', role: 'AI临床研究工程师' },
+            'AI Pharmaceutical QA': { icon: '✅', color: '#22c55e', role: 'AI制药质量工程师' },
+            'AI Drug Manufacturing': { icon: '🏭', color: '#f97316', role: 'AI制药生产工程师' },
+            'AI Regulatory Affairs': { icon: '📋', color: '#14b8a6', role: 'AI注册事务工程师' },
+            // Cycle 404 新增角色 - AI智能食品加工
+            'AI Food Process Engineer': { icon: '🏭', color: '#f59e0b', role: 'AI食品加工工程师' },
+            'AI Food Safety': { icon: '🛡️', color: '#22c55e', role: 'AI食品安全工程师' },
+            'AI Nutrition Scientist': { icon: '🥗', color: '#10b981', role: 'AI营养科学家' },
+            'AI Food Quality Control': { icon: '🔬', color: '#3b82f6', role: 'AI食品质量控制工程师' },
+            'AI Food Packaging': { icon: '📦', color: '#ec4899', role: 'AI食品包装工程师' }
         };
 
         // 拖拽相关变量
