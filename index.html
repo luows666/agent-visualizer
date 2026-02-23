@@ -15129,6 +15129,138 @@
                     { from: 'AI Stadium Security', to: 'AI Venue Sales', content: '安保方案' },
                     { from: 'AI Venue Sales', to: 'AI Stadium Manager', content: '销售报告' }
                 ]
+            },
+            // Cycle 365 新增模板 - AI智能保险经纪系统
+            {
+                id: 'ai-insurance-broker',
+                name: 'AI智能保险经纪系统',
+                icon: '🏦',
+                desc: '从保险咨询到理赔代理的完整保险经纪流程',
+                agents: ['AI Insurance Broker', 'AI Policy Designer', 'AI Claims Supervisor', 'AI Customer Claims', 'AI Insurance Analyst'],
+                positions: [
+                    { role: 'AI Insurance Broker', x: 400, y: 50 },
+                    { role: 'AI Policy Designer', x: 200, y: 180 },
+                    { role: 'AI Claims Supervisor', x: 600, y: 180 },
+                    { role: 'AI Customer Claims', x: 200, y: 310 },
+                    { role: 'AI Insurance Analyst', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Insurance Broker', to: 'AI Policy Designer', content: '客户需求分析' },
+                    { from: 'AI Policy Designer', to: 'AI Insurance Broker', content: '保险方案设计' },
+                    { from: 'AI Insurance Broker', to: 'AI Claims Supervisor', content: '理赔申请' },
+                    { from: 'AI Claims Supervisor', to: 'AI Customer Claims', content: '理赔处理' },
+                    { from: 'AI Customer Claims', to: 'AI Insurance Analyst', content: '理赔数据分析' }
+                ]
+            },
+            // Cycle 365 新增模板 - AI智能体育赛事系统
+            {
+                id: 'ai-sports-event',
+                name: 'AI智能体育赛事系统',
+                icon: '🏆',
+                desc: '从赛事策划到现场执行的完整体育赛事流程',
+                agents: ['AI Sports Event Manager', 'AI Event Coordinator', 'AI Athlete Agent', 'AI Sports Broadcaster', 'AI Venue Manager'],
+                positions: [
+                    { role: 'AI Sports Event Manager', x: 400, y: 50 },
+                    { role: 'AI Event Coordinator', x: 200, y: 180 },
+                    { role: 'AI Athlete Agent', x: 600, y: 180 },
+                    { role: 'AI Sports Broadcaster', x: 200, y: 310 },
+                    { role: 'AI Venue Manager', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sports Event Manager', to: 'AI Event Coordinator', content: '赛事策划方案' },
+                    { from: 'AI Event Coordinator', to: 'AI Venue Manager', content: '场地安排需求' },
+                    { from: 'AI Venue Manager', to: 'AI Sports Broadcaster', content: '场馆设施情况' },
+                    { from: 'AI Sports Event Manager', to: 'AI Athlete Agent', content: '参赛运动员邀请' },
+                    { from: 'AI Athlete Agent', to: 'AI Sports Event Manager', content: '参赛确认' }
+                ]
+            },
+            // Cycle 365 新增模板 - AI智能会展活动系统
+            {
+                id: 'ai-exhibition-event',
+                name: 'AI智能会展活动系统',
+                icon: '🎪',
+                desc: '从会展策划到展商服务的完整会展活动流程',
+                agents: ['AI Exhibition Manager', 'AI Booth Designer', 'AI Event Marketer', 'AI Attendee Service', 'AI Event Tech'],
+                positions: [
+                    { role: 'AI Exhibition Manager', x: 400, y: 50 },
+                    { role: 'AI Booth Designer', x: 200, y: 180 },
+                    { role: 'AI Event Marketer', x: 600, y: 180 },
+                    { role: 'AI Attendee Service', x: 200, y: 310 },
+                    { role: 'AI Event Tech', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Exhibition Manager', to: 'AI Event Marketer', content: '会展推广需求' },
+                    { from: 'AI Event Marketer', to: 'AI Exhibition Manager', content: '推广方案' },
+                    { from: 'AI Exhibition Manager', to: 'AI Booth Designer', content: '展位设计需求' },
+                    { from: 'AI Booth Designer', to: 'AI Attendee Service', content: '展位设计方案' },
+                    { from: 'AI Attendee Service', to: 'AI Event Tech', content: '观众服务需求' }
+                ]
+            },
+            // Cycle 365 新增模板 - AI智能环境保护系统
+            {
+                id: 'ai-environmental-protection',
+                name: 'AI智能环境保护系统',
+                icon: '🌿',
+                desc: '从环境监测到治理保护的完整环境保护流程',
+                agents: ['AI Environmental Scientist', 'AI Pollution Monitor', 'AI Carbon Analyst', 'AI Eco Assessor', 'AI Green Planner'],
+                positions: [
+                    { role: 'AI Environmental Scientist', x: 400, y: 50 },
+                    { role: 'AI Pollution Monitor', x: 200, y: 180 },
+                    { role: 'AI Carbon Analyst', x: 600, y: 180 },
+                    { role: 'AI Eco Assessor', x: 200, y: 310 },
+                    { role: 'AI Green Planner', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Scientist', to: 'AI Pollution Monitor', content: '监测任务分配' },
+                    { from: 'AI Pollution Monitor', to: 'AI Carbon Analyst', content: '污染数据报告' },
+                    { from: 'AI Carbon Analyst', to: 'AI Eco Assessor', content: '碳排放分析' },
+                    { from: 'AI Eco Assessor', to: 'AI Green Planner', content: '生态评估报告' },
+                    { from: 'AI Green Planner', to: 'AI Environmental Scientist', content: '治理方案建议' }
+                ]
+            },
+            // Cycle 365 新增模板 - AI智能水资源管理系统
+            {
+                id: 'ai-water-resource',
+                name: 'AI智能水资源管理系统',
+                icon: '💧',
+                desc: '从水源保护到用水管理的完整水资源管理流程',
+                agents: ['AI Water Resource Manager', 'AI Water Quality Tester', 'AI Irrigation Engineer', 'AI Flood Forecaster', 'AI Water Conservator'],
+                positions: [
+                    { role: 'AI Water Resource Manager', x: 400, y: 50 },
+                    { role: 'AI Water Quality Tester', x: 200, y: 180 },
+                    { role: 'AI Irrigation Engineer', x: 600, y: 180 },
+                    { role: 'AI Flood Forecaster', x: 200, y: 310 },
+                    { role: 'AI Water Conservator', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Water Resource Manager', to: 'AI Water Quality Tester', content: '水质监测任务' },
+                    { from: 'AI Water Quality Tester', to: 'AI Water Conservator', content: '水质报告' },
+                    { from: 'AI Water Resource Manager', to: 'AI Irrigation Engineer', content: '灌溉需求' },
+                    { from: 'AI Irrigation Engineer', to: 'AI Flood Forecaster', content: '用水调度方案' },
+                    { from: 'AI Flood Forecaster', to: 'AI Water Resource Manager', content: '洪水预警' }
+                ]
+            },
+            // Cycle 365 新增模板 - AI智能园林绿化系统
+            {
+                id: 'ai-landscape-greening',
+                name: 'AI智能园林绿化系统',
+                icon: '🌳',
+                desc: '从园林设计到绿化养护的完整园林绿化流程',
+                agents: ['AI Landscape Manager', 'AI Garden Designer', 'AI Tree Care Specialist', 'AI Park Manager', 'AI Greenery Engineer'],
+                positions: [
+                    { role: 'AI Landscape Manager', x: 400, y: 50 },
+                    { role: 'AI Garden Designer', x: 200, y: 180 },
+                    { role: 'AI Tree Care Specialist', x: 600, y: 180 },
+                    { role: 'AI Park Manager', x: 200, y: 310 },
+                    { role: 'AI Greenery Engineer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Landscape Manager', to: 'AI Garden Designer', content: '园林设计需求' },
+                    { from: 'AI Garden Designer', to: 'AI Greenery Engineer', content: '设计方案' },
+                    { from: 'AI Greenery Engineer', to: 'AI Tree Care Specialist', content: '绿化施工要求' },
+                    { from: 'AI Tree Care Specialist', to: 'AI Park Manager', content: '养护方案' },
+                    { from: 'AI Park Manager', to: 'AI Landscape Manager', content: '运营反馈' }
+                ]
             }
         ];
 
@@ -17310,7 +17442,49 @@
             'AI Event Scheduler': { icon: '📅', color: '#8b5cf6', role: 'AI赛事排程师' },
             'AI Stadium Security': { icon: '🔒', color: '#ef4444', role: 'AI场馆安保经理' },
             'AI Stadium Operations': { icon: '⚙️', color: '#64748b', role: 'AI场馆运营师' },
-            'AI Venue Sales': { icon: '💵', color: '#22c55e', role: 'AI场馆销售经理' }
+            'AI Venue Sales': { icon: '💵', color: '#22c55e', role: 'AI场馆销售经理' },
+            // Cycle 365 新增角色 - AI 智能保险经纪
+            'AI Insurance Broker': { icon: '🏦', color: '#3b82f6', role: 'AI保险经纪人' },
+            'AI Policy Designer': { icon: '📝', color: '#8b5cf6', role: 'AI保单设计师' },
+            'AI Claims Supervisor': { icon: '📋', color: '#10b981', role: 'AI理赔主管' },
+            'AI Customer Claims': { icon: '🤝', color: '#ec4899', role: 'AI客户理赔师' },
+            'AI Insurance Analyst': { icon: '📊', color: '#f59e0b', role: 'AI保险分析师' },
+            // Cycle 365 新增角色 - AI 智能体育赛事
+            'AI Sports Event Manager': { icon: '🏆', color: '#f97316', role: 'AI体育赛事经理' },
+            'AI Event Coordinator': { icon: '📋', color: '#06b6d4', role: 'AI赛事协调员' },
+            'AI Athlete Agent': { icon: '🏃', color: '#84cc16', role: 'AI体育经纪人' },
+            'AI Sports Broadcaster': { icon: '📺', color: '#a855f7', role: 'AI体育解说员' },
+            'AI Venue Manager': { icon: '🏟️', color: '#14b8a6', role: 'AI场馆经理' },
+            // Cycle 365 新增角色 - AI 智能会展活动
+            'AI Exhibition Manager': { icon: '🎪', color: '#f43f5e', role: 'AI会展经理' },
+            'AI Booth Designer': { icon: '🎨', color: '#0ea5e9', role: 'AI展位设计师' },
+            'AI Event Marketer': { icon: '📢', color: '#22c55e', role: 'AI会展营销师' },
+            'AI Attendee Service': { icon: '👥', color: '#8b5cf6', role: 'AI会展服务师' },
+            'AI Event Tech': { icon: '🔧', color: '#64748b', role: 'AI会展技术师' },
+            // Cycle 365 新增角色 - AI 智能环境保护
+            'AI Environmental Scientist': { icon: '🌿', color: '#10b981', role: 'AI环境科学家' },
+            'AI Pollution Monitor': { icon: '🌫️', color: '#6b7280', role: 'AI污染监测师' },
+            'AI Carbon Analyst': { icon: '🌍', color: '#3b82f6', role: 'AI碳分析师' },
+            'AI Eco Assessor': { icon: '✅', color: '#22c55e', role: 'AI生态评估师' },
+            'AI Green Planner': { icon: '🌱', color: '#84cc16', role: 'AI绿色规划师' },
+            // Cycle 365 新增角色 - AI 智能水资源管理
+            'AI Water Resource Manager': { icon: '💧', color: '#0ea5e9', role: 'AI水资源管理师' },
+            'AI Water Quality Tester': { icon: '🔬', color: '#06b6d4', role: 'AI水质检测师' },
+            'AI Irrigation Engineer': { icon: '🚿', color: '#14b8a6', role: 'AI灌溉工程师' },
+            'AI Flood Forecaster': { icon: '🌊', color: '#3b82f6', role: 'AI洪水预报师' },
+            'AI Water Conservator': { icon: '🏞️', color: '#22c55e', role: 'AI水源保护师' },
+            // Cycle 365 新增角色 - AI 智能园林绿化
+            'AI Landscape Manager': { icon: '🌳', color: '#22c55e', role: 'AI园林管理师' },
+            'AI Garden Designer': { icon: '🏡', color: '#ec4899', role: 'AI园林设计师' },
+            'AI Tree Care Specialist': { icon: '🌲', color: '#84cc16', role: 'AI树木养护师' },
+            'AI Park Manager': { icon: '🌴', color: '#10b981', role: 'AI公园管理师' },
+            'AI Greenery Engineer': { icon: '🍀', color: '#22c55e', role: 'AI绿化工程师' },
+            // Cycle 365 新增角色 - AI 智能社区服务
+            'AI Community Service Manager': { icon: '🏘️', color: '#f97316', role: 'AI社区服务经理' },
+            'AI Resident Service': { icon: '👤', color: '#8b5cf6', role: 'AI居民服务师' },
+            'AI Community Events': { icon: '🎉', color: '#ec4899', role: 'AI社区活动师' },
+            'AI Volunteer Coordinator': { icon: '🙋', color: '#06b6d4', role: 'AI志愿者协调师' },
+            'AI Neighborhood Watch': { icon: '👁️', color: '#64748b', role: 'AI邻里守望师' }
         };
 
         // 拖拽相关变量
