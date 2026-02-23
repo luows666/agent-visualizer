@@ -13174,6 +13174,150 @@
                     { from: 'AI Equipment Monitor', to: 'AI Quality Inspector', content: '生产数据' },
                     { from: 'AI Quality Inspector', to: 'AI Factory Manager', content: '质量报告' }
                 ]
+            },
+            // Cycle 351 新增模板 - AI智能矿山系统
+            {
+                id: 'ai-mining-system',
+                name: 'AI智能矿山系统',
+                icon: '⛏️',
+                desc: '从矿山勘探到安全开采的完整矿业流程',
+                agents: ['AI Mining Engineer', 'AI Mine Safety', 'AI Mineral Analysis', 'AI Blast Design', 'AI Mine Planning'],
+                positions: [
+                    { role: 'AI Mining Engineer', x: 400, y: 50 },
+                    { role: 'AI Mine Safety', x: 200, y: 180 },
+                    { role: 'AI Mineral Analysis', x: 400, y: 180 },
+                    { role: 'AI Blast Design', x: 600, y: 180 },
+                    { role: 'AI Mine Planning', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Mining Engineer', to: 'AI Mine Safety', content: '安全需求' },
+                    { from: 'AI Mine Safety', to: 'AI Mining Engineer', content: '安全报告' },
+                    { from: 'AI Mining Engineer', to: 'AI Mineral Analysis', content: '分析需求' },
+                    { from: 'AI Mineral Analysis', to: 'AI Mining Engineer', content: '分析报告' },
+                    { from: 'AI Mining Engineer', to: 'AI Blast Design', content: '爆破设计需求' },
+                    { from: 'AI Blast Design', to: 'AI Mining Engineer', content: '设计方案' },
+                    { from: 'AI Mining Engineer', to: 'AI Mine Planning', content: '规划需求' }
+                ]
+            },
+            // Cycle 351 新增模板 - AI智能石油化工系统
+            {
+                id: 'ai-petrochemical-system',
+                name: 'AI智能石油化工系统',
+                icon: '🛢️',
+                desc: '从原油加工到化工生产的完整石化流程',
+                agents: ['AI Petrochemical Engineer', 'AI Refinery Operator', 'AI Process Safety', 'AI Pipeline Engineer', 'AI Quality Control'],
+                positions: [
+                    { role: 'AI Petrochemical Engineer', x: 400, y: 50 },
+                    { role: 'AI Refinery Operator', x: 200, y: 180 },
+                    { role: 'AI Process Safety', x: 400, y: 180 },
+                    { role: 'AI Pipeline Engineer', x: 600, y: 180 },
+                    { role: 'AI Quality Control', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Petrochemical Engineer', to: 'AI Refinery Operator', content: '生产任务' },
+                    { from: 'AI Refinery Operator', to: 'AI Petrochemical Engineer', content: '生产报告' },
+                    { from: 'AI Petrochemical Engineer', to: 'AI Process Safety', content: '安全需求' },
+                    { from: 'AI Process Safety', to: 'AI Petrochemical Engineer', content: '安全评估' },
+                    { from: 'AI Petrochemical Engineer', to: 'AI Pipeline Engineer', content: '管道设计需求' },
+                    { from: 'AI Pipeline Engineer', to: 'AI Petrochemical Engineer', content: '设计方案' },
+                    { from: 'AI Refinery Operator', to: 'AI Quality Control', content: '质量检测需求' }
+                ]
+            },
+            // Cycle 351 新增模板 - AI智能电力系统
+            {
+                id: 'ai-power-system',
+                name: 'AI智能电力系统',
+                icon: '⚡',
+                desc: '从电力生产到智能配送的完整电力流程',
+                agents: ['AI Power Engineer', 'AI Grid Operator', 'AI Power Distribution', 'AI Power Planning', 'AI Renewable Integration'],
+                positions: [
+                    { role: 'AI Power Engineer', x: 400, y: 50 },
+                    { role: 'AI Grid Operator', x: 200, y: 180 },
+                    { role: 'AI Power Distribution', x: 400, y: 180 },
+                    { role: 'AI Power Planning', x: 600, y: 180 },
+                    { role: 'AI Renewable Integration', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Power Engineer', to: 'AI Grid Operator', content: '电网运营需求' },
+                    { from: 'AI Grid Operator', to: 'AI Power Engineer', content: '运营报告' },
+                    { from: 'AI Power Engineer', to: 'AI Power Distribution', content: '配电需求' },
+                    { from: 'AI Power Distribution', to: 'AI Power Engineer', content: '配电方案' },
+                    { from: 'AI Power Engineer', to: 'AI Power Planning', content: '规划需求' },
+                    { from: 'AI Power Planning', to: 'AI Power Engineer', content: '规划方案' },
+                    { from: 'AI Renewable Integration', to: 'AI Grid Operator', content: '新能源并网需求' }
+                ]
+            },
+            // Cycle 351 新增模板 - AI智能建筑系统
+            {
+                id: 'ai-building-system',
+                name: 'AI智能建筑系统',
+                icon: '🏗️',
+                desc: '从建筑设计到施工管理的完整建筑流程',
+                agents: ['AI Building Engineer', 'AI Structural Engineer', 'AI MEP Engineer', 'AI BIM Coordinator', 'AI Construction Manager'],
+                positions: [
+                    { role: 'AI Building Engineer', x: 400, y: 50 },
+                    { role: 'AI Structural Engineer', x: 200, y: 180 },
+                    { role: 'AI MEP Engineer', x: 400, y: 180 },
+                    { role: 'AI BIM Coordinator', x: 600, y: 180 },
+                    { role: 'AI Construction Manager', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Building Engineer', to: 'AI Structural Engineer', content: '结构设计需求' },
+                    { from: 'AI Structural Engineer', to: 'AI Building Engineer', content: '设计方案' },
+                    { from: 'AI Building Engineer', to: 'AI MEP Engineer', content: '机电设计需求' },
+                    { from: 'AI MEP Engineer', to: 'AI Building Engineer', content: '设计方案' },
+                    { from: 'AI Building Engineer', to: 'AI BIM Coordinator', content: 'BIM协调需求' },
+                    { from: 'AI BIM Coordinator', to: 'AI Building Engineer', content: '协调报告' },
+                    { from: 'AI Building Engineer', to: 'AI Construction Manager', content: '施工管理需求' }
+                ]
+            },
+            // Cycle 351 新增模板 - AI智能测绘系统
+            {
+                id: 'ai-surveying-system',
+                name: 'AI智能测绘系统',
+                icon: '📐',
+                desc: '从地形测绘到地图制作的完整测绘流程',
+                agents: ['AI Surveyor', 'AI GIS Analyst', 'AI Cartographer', 'AI Remote Sensing', 'AI Drone Mapping'],
+                positions: [
+                    { role: 'AI Surveyor', x: 400, y: 50 },
+                    { role: 'AI GIS Analyst', x: 200, y: 180 },
+                    { role: 'AI Cartographer', x: 400, y: 180 },
+                    { role: 'AI Remote Sensing', x: 600, y: 180 },
+                    { role: 'AI Drone Mapping', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Surveyor', to: 'AI GIS Analyst', content: '地理信息需求' },
+                    { from: 'AI GIS Analyst', to: 'AI Surveyor', content: '分析报告' },
+                    { from: 'AI Surveyor', to: 'AI Cartographer', content: '制图需求' },
+                    { from: 'AI Cartographer', to: 'AI Surveyor', content: '地图成果' },
+                    { from: 'AI Surveyor', to: 'AI Remote Sensing', content: '遥感需求' },
+                    { from: 'AI Remote Sensing', to: 'AI Surveyor', content: '遥感数据' },
+                    { from: 'AI Drone Mapping', to: 'AI Surveyor', content: '测绘数据' }
+                ]
+            },
+            // Cycle 351 新增模板 - AI智能园林系统
+            {
+                id: 'ai-horticulture-system',
+                name: 'AI智能园林系统',
+                icon: '🌳',
+                desc: '从园林设计到养护管理的完整园林流程',
+                agents: ['AI Horticulturist', 'AI Landscape Architect', 'AI Garden Maintenance', 'AI Plant Doctor', 'AI Irrigation Designer'],
+                positions: [
+                    { role: 'AI Horticulturist', x: 400, y: 50 },
+                    { role: 'AI Landscape Architect', x: 200, y: 180 },
+                    { role: 'AI Garden Maintenance', x: 400, y: 180 },
+                    { role: 'AI Plant Doctor', x: 600, y: 180 },
+                    { role: 'AI Irrigation Designer', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Horticulturist', to: 'AI Landscape Architect', content: '设计需求' },
+                    { from: 'AI Landscape Architect', to: 'AI Horticulturist', content: '设计方案' },
+                    { from: 'AI Horticulturist', to: 'AI Garden Maintenance', content: '养护需求' },
+                    { from: 'AI Garden Maintenance', to: 'AI Horticulturist', content: '养护报告' },
+                    { from: 'AI Horticulturist', to: 'AI Plant Doctor', content: '病虫害诊断' },
+                    { from: 'AI Plant Doctor', to: 'AI Horticulturist', content: '诊断报告' },
+                    { from: 'AI Horticulturist', to: 'AI Irrigation Designer', content: '灌溉设计需求' }
+                ]
             }
         ];
 
@@ -14804,7 +14948,43 @@
             'AI Power Grid': { icon: '🔌', color: '#22c55e', role: 'AI电网工程师' },
             'AI Renewable Engineer': { icon: '🌞', color: '#8b5cf6', role: 'AI新能源工程师' },
             'AI Carbon Tracker': { icon: '🌍', color: '#06b6d4', role: 'AI碳追踪师' },
-            'AI Sustainability': { icon: '🌱', color: '#22c55e', role: 'AI可持续发展工程师' }
+            'AI Sustainability': { icon: '🌱', color: '#22c55e', role: 'AI可持续发展工程师' },
+            // Cycle 351 新增角色 - AI 智能矿山
+            'AI Mining Engineer': { icon: '⛏️', color: '#64748b', role: 'AI矿业工程师' },
+            'AI Mine Safety': { icon: '⚠️', color: '#dc2626', role: 'AI矿山安全工程师' },
+            'AI Mineral Analysis': { icon: '🔬', color: '#8b5cf6', role: 'AI矿物分析师' },
+            'AI Blast Design': { icon: '🧨', color: '#f97316', role: 'AI爆破设计师' },
+            'AI Mine Planning': { icon: '📐', color: '#06b6d4', role: 'AI矿山规划师' },
+            // Cycle 351 新增角色 - AI 智能石油化工
+            'AI Petrochemical Engineer': { icon: '🛢️', color: '#3b82f6', role: 'AI石油化工工程师' },
+            'AI Refinery Operator': { icon: '🏭', color: '#f59e0b', role: 'AI炼油操作员' },
+            'AI Process Safety': { icon: '🔒', color: '#dc2626', role: 'AI过程安全工程师' },
+            'AI Pipeline Engineer': { icon: '🛤️', color: '#06b6d4', role: 'AI管道工程师' },
+            'AI Quality Control': { icon: '✅', color: '#22c55e', role: 'AI质量控制工程师' },
+            // Cycle 351 新增角色 - AI 智能电力
+            'AI Power Engineer': { icon: '⚡', color: '#eab308', role: 'AI电力工程师' },
+            'AI Grid Operator': { icon: '🔌', color: '#f97316', role: 'AI电网操作员' },
+            'AI Power Distribution': { icon: '📡', color: '#06b6d4', role: 'AI配电工程师' },
+            'AI Power Planning': { icon: '📋', color: '#8b5cf6', role: 'AI电力规划师' },
+            'AI Renewable Integration': { icon: '🌞', color: '#22c55e', role: 'AI新能源并网工程师' },
+            // Cycle 351 新增角色 - AI 智能建筑
+            'AI Building Engineer': { icon: '🏗️', color: '#f59e0b', role: 'AI建筑工程师' },
+            'AI Structural Engineer': { icon: '📐', color: '#64748b', role: 'AI结构工程师' },
+            'AI MEP Engineer': { icon: '🔧', color: '#8b5cf6', role: 'AI机电工程师' },
+            'AI BIM Coordinator': { icon: '📊', color: '#06b6d4', role: 'AIBIM协调师' },
+            'AI Construction Manager': { icon: '👷', color: '#f97316', role: 'AI工程经理' },
+            // Cycle 351 新增角色 - AI 智能测绘
+            'AI Surveyor': { icon: '📐', color: '#14b8a6', role: 'AI测绘工程师' },
+            'AI GIS Analyst': { icon: '🗺️', color: '#22c55e', role: 'AI地理信息分析师' },
+            'AI Cartographer': { icon: '🗺️', color: '#8b5cf6', role: 'AI地图制图师' },
+            'AI Remote Sensing': { icon: '📡', color: '#06b6d4', role: 'AI遥感工程师' },
+            'AI Drone Mapping': { icon: '🚁', color: '#f97316', role: 'AI无人机测绘师' },
+            // Cycle 351 新增角色 - AI 智能园艺
+            'AI Horticulturist': { icon: '🌳', color: '#22c55e', role: 'AI园艺师' },
+            'AI Landscape Architect': { icon: '🏡', color: '#8b5cf6', role: 'AI园林设计师' },
+            'AI Garden Maintenance': { icon: '✂️', color: '#f59e0b', role: 'AI园林养护师' },
+            'AI Plant Doctor': { icon: '🌿', color: '#06b6d4', role: 'AI植物医生' },
+            'AI Irrigation Designer': { icon: '💧', color: '#0ea5e9', role: 'AI灌溉设计师' }
         };
 
         // 拖拽相关变量
