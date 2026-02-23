@@ -14032,6 +14032,144 @@
                     { from: 'AI Tree Care Specialist', to: 'AI Landscape Manager', content: '养护完成报告' },
                     { from: 'AI Park Manager', to: 'AI Landscape Manager', content: '公园管理反馈' }
                 ]
+            },
+            // Cycle 357 新增模板 - AI智能牙科医疗系统
+            {
+                id: 'ai-dental-medical-system',
+                name: 'AI智能牙科医疗系统',
+                icon: '🦷',
+                desc: '从口腔检查到牙齿治疗的完整牙科医疗流程',
+                agents: ['AI Dentist', 'AI Orthodontist', 'AI Dental Hygienist', 'AI Dental Technician', 'AI Dental Receptionist'],
+                positions: [
+                    { role: 'AI Dentist', x: 400, y: 50 },
+                    { role: 'AI Orthodontist', x: 200, y: 180 },
+                    { role: 'AI Dental Hygienist', x: 600, y: 180 },
+                    { role: 'AI Dental Technician', x: 200, y: 310 },
+                    { role: 'AI Dental Receptionist', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Dentist', to: 'AI Orthodontist', content: '正畸治疗需求' },
+                    { from: 'AI Dentist', to: 'AI Dental Hygienist', content: '口腔清洁任务' },
+                    { from: 'AI Dentist', to: 'AI Dental Technician', content: '牙具制作需求' },
+                    { from: 'AI Orthodontist', to: 'AI Dentist', content: '正畸治疗方案' },
+                    { from: 'AI Dental Hygienist', to: 'AI Dentist', content: '清洁完成报告' },
+                    { from: 'AI Dental Receptionist', to: 'AI Dentist', content: '患者预约信息' }
+                ]
+            },
+            // Cycle 357 新增模板 - AI智能宠物医疗系统
+            {
+                id: 'ai-pet-medical-system',
+                name: 'AI智能宠物医疗系统',
+                icon: '🐕',
+                desc: '从宠物诊疗到健康管理的完整宠物医疗流程',
+                agents: ['AI Vet', 'AI Vet Surgeon', 'AI Pet Nutritionist', 'AI Pet Pharmacist', 'AI Pet Groomer'],
+                positions: [
+                    { role: 'AI Vet', x: 400, y: 50 },
+                    { role: 'AI Vet Surgeon', x: 200, y: 180 },
+                    { role: 'AI Pet Nutritionist', x: 600, y: 180 },
+                    { role: 'AI Pet Pharmacist', x: 200, y: 310 },
+                    { role: 'AI Pet Groomer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Vet', to: 'AI Vet Surgeon', content: '手术需求评估' },
+                    { from: 'AI Vet', to: 'AI Pet Nutritionist', content: '营养咨询需求' },
+                    { from: 'AI Vet', to: 'AI Pet Pharmacist', content: '处方用药需求' },
+                    { from: 'AI Vet Surgeon', to: 'AI Vet', content: '手术完成报告' },
+                    { from: 'AI Pet Nutritionist', to: 'AI Vet', content: '营养方案建议' },
+                    { from: 'AI Pet Groomer', to: 'AI Vet', content: '宠物护理报告' }
+                ]
+            },
+            // Cycle 357 新增模板 - AI智能家具制造系统
+            {
+                id: 'ai-furniture-manufacturing-system',
+                name: 'AI智能家具制造系统',
+                icon: '🪑',
+                desc: '从家具设计到生产的完整家具制造流程',
+                agents: ['AI Furniture Designer', 'AI Woodworking', 'AI Furniture Maker', 'AI Upholsterer', 'AI Furniture Finisher'],
+                positions: [
+                    { role: 'AI Furniture Designer', x: 400, y: 50 },
+                    { role: 'AI Woodworking', x: 200, y: 180 },
+                    { role: 'AI Furniture Maker', x: 600, y: 180 },
+                    { role: 'AI Upholsterer', x: 200, y: 310 },
+                    { role: 'AI Furniture Finisher', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Furniture Designer', to: 'AI Woodworking', content: '木材加工需求' },
+                    { from: 'AI Furniture Designer', to: 'AI Upholsterer', content: '软包制作需求' },
+                    { from: 'AI Furniture Designer', to: 'AI Furniture Finisher', content: '表面处理需求' },
+                    { from: 'AI Woodworking', to: 'AI Furniture Maker', content: '家具组装需求' },
+                    { from: 'AI Furniture Maker', to: 'AI Furniture Designer', content: '制作进度报告' },
+                    { from: 'AI Furniture Finisher', to: 'AI Furniture Designer', content: '涂装完成报告' }
+                ]
+            },
+            // Cycle 357 新增模板 - AI智能印刷出版系统
+            {
+                id: 'ai-print-publishing-system',
+                name: 'AI智能印刷出版系统',
+                icon: '🖨️',
+                desc: '从书籍编辑到印刷出版的完整出版流程',
+                agents: ['AI Print Designer', 'AI Typesetter', 'AI Editor', 'AI Proofreader', 'AI Publisher'],
+                positions: [
+                    { role: 'AI Print Designer', x: 400, y: 50 },
+                    { role: 'AI Typesetter', x: 200, y: 180 },
+                    { role: 'AI Editor', x: 600, y: 180 },
+                    { role: 'AI Proofreader', x: 200, y: 310 },
+                    { role: 'AI Publisher', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Print Designer', to: 'AI Typesetter', content: '排版设计需求' },
+                    { from: 'AI Editor', to: 'AI Proofreader', content: '校对任务分配' },
+                    { from: 'AI Editor', to: 'AI Publisher', content: '出版审核申请' },
+                    { from: 'AI Typesetter', to: 'AI Print Designer', content: '排版完成稿件' },
+                    { from: 'AI Proofreader', to: 'AI Editor', content: '校对完成报告' },
+                    { from: 'AI Publisher', to: 'AI Editor', content: '出版批准通知' }
+                ]
+            },
+            // Cycle 357 新增模板 - AI智能体育用品系统
+            {
+                id: 'ai-sports-equipment-system',
+                name: 'AI智能体育用品系统',
+                icon: '⚽',
+                desc: '从产品设计到质量检测的完整体育用品流程',
+                agents: ['AI Sports Equipment Designer', 'AI Gym Equipment Engineer', 'AI Sportswear Designer', 'AI Equipment Tester', 'AI Sports Analyst'],
+                positions: [
+                    { role: 'AI Sports Equipment Designer', x: 400, y: 50 },
+                    { role: 'AI Gym Equipment Engineer', x: 200, y: 180 },
+                    { role: 'AI Sportswear Designer', x: 600, y: 180 },
+                    { role: 'AI Equipment Tester', x: 200, y: 310 },
+                    { role: 'AI Sports Analyst', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sports Equipment Designer', to: 'AI Gym Equipment Engineer', content: '器材工程需求' },
+                    { from: 'AI Sports Equipment Designer', to: 'AI Sportswear Designer', content: '运动服装设计需求' },
+                    { from: 'AI Gym Equipment Engineer', to: 'AI Equipment Tester', content: '测试任务分配' },
+                    { from: 'AI Equipment Tester', to: 'AI Sports Analyst', content: '测试数据分析' },
+                    { from: 'AI Sports Analyst', to: 'AI Sports Equipment Designer', content: '分析报告反馈' },
+                    { from: 'AI Sportswear Designer', to: 'AI Sports Equipment Designer', content: '设计稿完成' }
+                ]
+            },
+            // Cycle 357 新增模板 - AI智能玩具设计系统
+            {
+                id: 'ai-toy-design-system',
+                name: 'AI智能玩具设计系统',
+                icon: '🧸',
+                desc: '从玩具设计到安全检测的完整玩具设计流程',
+                agents: ['AI Toy Designer', 'AI Toy Engineer', 'AI Plush Maker', 'AI Toy Safety Tester', 'AI Toy Marketing'],
+                positions: [
+                    { role: 'AI Toy Designer', x: 400, y: 50 },
+                    { role: 'AI Toy Engineer', x: 200, y: 180 },
+                    { role: 'AI Plush Maker', x: 600, y: 180 },
+                    { role: 'AI Toy Safety Tester', x: 200, y: 310 },
+                    { role: 'AI Toy Marketing', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Toy Designer', to: 'AI Toy Engineer', content: '玩具工程需求' },
+                    { from: 'AI Toy Designer', to: 'AI Plush Maker', content: '毛绒玩具制作需求' },
+                    { from: 'AI Toy Engineer', to: 'AI Toy Safety Tester', content: '安全测试需求' },
+                    { from: 'AI Toy Safety Tester', to: 'AI Toy Marketing', content: '安全认证报告' },
+                    { from: 'AI Toy Marketing', to: 'AI Toy Designer', content: '市场需求反馈' },
+                    { from: 'AI Plush Maker', to: 'AI Toy Designer', content: '制作完成样品' }
+                ]
             }
         ];
 
@@ -15896,7 +16034,49 @@
             'AI Resident Service': { icon: '👤', color: '#ec4899', role: 'AI居民服务师' },
             'AI Community Events': { icon: '🎉', color: '#f59e0b', role: 'AI社区活动师' },
             'AI Volunteer Coordinator': { icon: '🙋', color: '#3b82f6', role: 'AI志愿者协调师' },
-            'AI Neighborhood Watch': { icon: '👁️', color: '#22c55e', role: 'AI邻里守望师' }
+            'AI Neighborhood Watch': { icon: '👁️', color: '#22c55e', role: 'AI邻里守望师' },
+            // Cycle 357 新增角色 - AI 智能牙科医疗
+            'AI Dentist': { icon: '🦷', color: '#8b5cf6', role: 'AI牙科医生' },
+            'AI Orthodontist': { icon: '😬', color: '#ec4899', role: 'AI正畸医生' },
+            'AI Dental Hygienist': { icon: '✨', color: '#f59e0b', role: 'AI口腔卫生师' },
+            'AI Dental Technician': { icon: '🔧', color: '#3b82f6', role: 'AI牙科技师' },
+            'AI Dental Receptionist': { icon: '🏥', color: '#22c55e', role: 'AI牙科接待员' },
+            // Cycle 357 新增角色 - AI 智能宠物医疗
+            'AI Vet': { icon: '🐕', color: '#8b5cf6', role: 'AI宠物医生' },
+            'AI Vet Surgeon': { icon: '🔬', color: '#ec4899', role: 'AI宠物外科医生' },
+            'AI Pet Nutritionist': { icon: '🦴', color: '#f59e0b', role: 'AI宠物营养师' },
+            'AI Pet Pharmacist': { icon: '💊', color: '#3b82f6', role: 'AI宠物药剂师' },
+            'AI Pet Groomer': { icon: '✂️', color: '#22c55e', role: 'AI宠物美容师' },
+            // Cycle 357 新增角色 - AI 智能家具制造
+            'AI Furniture Designer': { icon: '🪑', color: '#8b5cf6', role: 'AI家具设计师' },
+            'AI Woodworking': { icon: '🪵', color: '#ec4899', role: 'AI木工匠师' },
+            'AI Furniture Maker': { icon: '🔨', color: '#f59e0b', role: 'AI家具制造师' },
+            'AI Upholsterer': { icon: '🛋️', color: '#3b82f6', role: 'AI软包工匠' },
+            'AI Furniture Finisher': { icon: '🎨', color: '#22c55e', role: 'AI家具涂装师' },
+            // Cycle 357 新增角色 - AI 智能印刷出版
+            'AI Print Designer': { icon: '🖨️', color: '#8b5cf6', role: 'AI印刷设计师' },
+            'AI Typesetter': { icon: '📝', color: '#ec4899', role: 'AI排版师' },
+            'AI Editor': { icon: '✏️', color: '#f59e0b', role: 'AI编辑' },
+            'AI Proofreader': { icon: '🔍', color: '#3b82f6', role: 'AI校对员' },
+            'AI Publisher': { icon: '📚', color: '#22c55e', role: 'AI出版商' },
+            // Cycle 357 新增角色 - AI 智能体育用品
+            'AI Sports Equipment Designer': { icon: '⚽', color: '#8b5cf6', role: 'AI体育用品设计师' },
+            'AI Gym Equipment Engineer': { icon: '🏋️', color: '#ec4899', role: 'AI健身器材工程师' },
+            'AI Sportswear Designer': { icon: '👕', color: '#f59e0b', role: 'AI运动服设计师' },
+            'AI Equipment Tester': { icon: '🧪', color: '#3b82f6', role: 'AI器材测试员' },
+            'AI Sports Analyst': { icon: '📊', color: '#22c55e', role: 'AI体育分析师' },
+            // Cycle 357 新增角色 - AI 智能乐器制造
+            'AI Instrument Designer': { icon: '🎸', color: '#8b5cf6', role: 'AI乐器设计师' },
+            'AI Luthier': { icon: '🎻', color: '#ec4899', role: 'AI制琴师' },
+            'AI Piano Technician': { icon: '🎹', color: '#f59e0b', role: 'AI钢琴调律师' },
+            'AI Audio Engineer': { icon: '🔊', color: '#3b82f6', role: 'AI音响工程师' },
+            'AI Music Equipment Sales': { icon: '🎵', color: '#22c55e', role: 'AI乐器销售师' },
+            // Cycle 357 新增角色 - AI 智能玩具设计
+            'AI Toy Designer': { icon: '🧸', color: '#8b5cf6', role: 'AI玩具设计师' },
+            'AI Toy Engineer': { icon: '🎮', color: '#ec4899', role: 'AI玩具工程师' },
+            'AI Plush Maker': { icon: '🧸', color: '#f59e0b', role: 'AI毛绒玩具制作师' },
+            'AI Toy Safety Tester': { icon: '✅', color: '#3b82f6', role: 'AI玩具安全测试员' },
+            'AI Toy Marketing': { icon: '📢', color: '#22c55e', role: 'AI玩具营销师' }
         };
 
         // 拖拽相关变量
