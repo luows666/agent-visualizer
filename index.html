@@ -18074,6 +18074,137 @@
                     { from: 'AI DNA Storage', to: 'AI Photonic Computing', content: '光计算存储方案' },
                     { from: 'AI Photonic Computing', to: 'AI Fusion Energy', content: '光子计算优化建议' }
                 ]
+            },
+            // Cycle 387 新增模板 - AI智能深海探测系统
+            {
+                id: 'ai-deep-sea-exploration',
+                name: 'AI智能深海探测系统',
+                icon: '🌊',
+                desc: '从深海探测到海洋资源开发的完整深海探测流程',
+                agents: ['AI Deep Sea Explorer', 'AI Submarine Systems', 'AI Marine Biologist', 'AI Ocean Surveyor', 'AI Underwater Robot'],
+                positions: [
+                    { role: 'AI Deep Sea Explorer', x: 400, y: 50 },
+                    { role: 'AI Submarine Systems', x: 200, y: 180 },
+                    { role: 'AI Marine Biologist', x: 400, y: 180 },
+                    { role: 'AI Ocean Surveyor', x: 600, y: 180 },
+                    { role: 'AI Underwater Robot', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Deep Sea Explorer', to: 'AI Submarine Systems', content: '制定深海探测方案' },
+                    { from: 'AI Submarine Systems', to: 'AI Ocean Surveyor', content: '潜艇系统准备就绪' },
+                    { from: 'AI Ocean Surveyor', to: 'AI Marine Biologist', content: '海洋勘测数据' },
+                    { from: 'AI Marine Biologist', to: 'AI Underwater Robot', content: '生物样本采集任务' },
+                    { from: 'AI Underwater Robot', to: 'AI Deep Sea Explorer', content: '探测完成报告' }
+                ]
+            },
+            // Cycle 387 新增模板 - AI智能极地科考系统
+            {
+                id: 'ai-polar-exploration',
+                name: 'AI智能极地科考系统',
+                icon: '❄️',
+                desc: '从极地探测到气候研究的完整极地科考流程',
+                agents: ['AI Polar Explorer', 'AI Ice Core Analyst', 'AI Climate Modeler', 'AI Glacier Monitor', 'AI Arctic Navigator'],
+                positions: [
+                    { role: 'AI Polar Explorer', x: 400, y: 50 },
+                    { role: 'AI Ice Core Analyst', x: 200, y: 180 },
+                    { role: 'AI Climate Modeler', x: 400, y: 180 },
+                    { role: 'AI Glacier Monitor', x: 600, y: 180 },
+                    { role: 'AI Arctic Navigator', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Polar Explorer', to: 'AI Ice Core Analyst', content: '极地采样任务' },
+                    { from: 'AI Ice Core Analyst', to: 'AI Climate Modeler', content: '冰芯分析数据' },
+                    { from: 'AI Climate Modeler', to: 'AI Glacier Monitor', content: '气候模型预测' },
+                    { from: 'AI Glacier Monitor', to: 'AI Arctic Navigator', content: '冰川监测报告' },
+                    { from: 'AI Arctic Navigator', to: 'AI Polar Explorer', content: '科考导航完成' }
+                ]
+            },
+            // Cycle 387 新增模板 - AI智能灾害预警系统
+            {
+                id: 'ai-disaster-warning',
+                name: 'AI智能灾害预警系统',
+                icon: '🚨',
+                desc: '从灾害监测到预警响应的完整灾害预警流程',
+                agents: ['AI Seismologist', 'AI Tsunami Warning', 'AI Volcano Monitor', 'AI Landslide Predictor', 'AI Emergency Response'],
+                positions: [
+                    { role: 'AI Seismologist', x: 200, y: 100 },
+                    { role: 'AI Tsunami Warning', x: 400, y: 100 },
+                    { role: 'AI Volcano Monitor', x: 600, y: 100 },
+                    { role: 'AI Landslide Predictor', x: 300, y: 250 },
+                    { role: 'AI Emergency Response', x: 500, y: 250 }
+                ],
+                messageFlows: [
+                    { from: 'AI Seismologist', to: 'AI Emergency Response', content: '地震预警信息' },
+                    { from: 'AI Tsunami Warning', to: 'AI Emergency Response', content: '海啸预警信息' },
+                    { from: 'AI Volcano Monitor', to: 'AI Emergency Response', content: '火山活动监测' },
+                    { from: 'AI Landslide Predictor', to: 'AI Emergency Response', content: '滑坡风险预警' }
+                ]
+            },
+            // Cycle 387 新增模板 - AI智能电网运维系统
+            {
+                id: 'ai-power-grid',
+                name: 'AI智能电网运维系统',
+                icon: '⚡',
+                desc: '从电网调度到故障修复的完整电网运维流程',
+                agents: ['AI Grid Operator', 'AI Power Analyst', 'AI Line Inspector', 'AI Transformer Tech', 'AI Load Dispatcher'],
+                positions: [
+                    { role: 'AI Grid Operator', x: 400, y: 50 },
+                    { role: 'AI Power Analyst', x: 200, y: 180 },
+                    { role: 'AI Line Inspector', x: 400, y: 180 },
+                    { role: 'AI Transformer Tech', x: 600, y: 180 },
+                    { role: 'AI Load Dispatcher', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Grid Operator', to: 'AI Power Analyst', content: '电网运行数据分析' },
+                    { from: 'AI Power Analyst', to: 'AI Load Dispatcher', content: '负荷预测报告' },
+                    { from: 'AI Load Dispatcher', to: 'AI Line Inspector', content: '线路巡检任务' },
+                    { from: 'AI Line Inspector', to: 'AI Transformer Tech', content: '发现故障点' },
+                    { from: 'AI Transformer Tech', to: 'AI Grid Operator', content: '设备修复完成' }
+                ]
+            },
+            // Cycle 387 新增模板 - AI智能核能安全系统
+            {
+                id: 'ai-nuclear-safety',
+                name: 'AI智能核能安全系统',
+                icon: '☢️',
+                desc: '从核能发电到安全监测的完整核能安全流程',
+                agents: ['AI Nuclear Engineer', 'AI Radiation Monitor', 'AI Safety Inspector', 'AI Reactor Analyst', 'AI Waste Manager'],
+                positions: [
+                    { role: 'AI Nuclear Engineer', x: 400, y: 50 },
+                    { role: 'AI Reactor Analyst', x: 200, y: 180 },
+                    { role: 'AI Radiation Monitor', x: 400, y: 180 },
+                    { role: 'AI Safety Inspector', x: 600, y: 180 },
+                    { role: 'AI Waste Manager', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Nuclear Engineer', to: 'AI Reactor Analyst', content: '反应堆运行状态' },
+                    { from: 'AI Reactor Analyst', to: 'AI Radiation Monitor', content: '辐射水平数据' },
+                    { from: 'AI Radiation Monitor', to: 'AI Safety Inspector', content: '安全评估报告' },
+                    { from: 'AI Safety Inspector', to: 'AI Waste Manager', content: '废料处理方案' },
+                    { from: 'AI Waste Manager', to: 'AI Nuclear Engineer', content: '核废料管理完成' }
+                ]
+            },
+            // Cycle 387 新增模板 - AI智能医疗设备系统
+            {
+                id: 'ai-medical-devices',
+                name: 'AI智能医疗设备系统',
+                icon: '🏥',
+                desc: '从设备设计到临床应用的完整医疗设备流程',
+                agents: ['AI Medical Device Designer', 'AI Surgical Robot Engineer', 'AI Diagnostic Equipment', 'AI Prosthetics Engineer', 'AI Medical Imaging'],
+                positions: [
+                    { role: 'AI Medical Device Designer', x: 400, y: 50 },
+                    { role: 'AI Surgical Robot Engineer', x: 200, y: 180 },
+                    { role: 'AI Diagnostic Equipment', x: 400, y: 180 },
+                    { role: 'AI Prosthetics Engineer', x: 600, y: 180 },
+                    { role: 'AI Medical Imaging', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Medical Device Designer', to: 'AI Surgical Robot Engineer', content: '手术机器人设计方案' },
+                    { from: 'AI Surgical Robot Engineer', to: 'AI Diagnostic Equipment', content: '设备技术参数' },
+                    { from: 'AI Diagnostic Equipment', to: 'AI Medical Imaging', content: '诊断数据整合' },
+                    { from: 'AI Medical Imaging', to: 'AI Prosthetics Engineer', content: '医学影像分析' },
+                    { from: 'AI Prosthetics Engineer', to: 'AI Medical Device Designer', content: '假肢设计完成' }
+                ]
             }
         ];
 
@@ -21140,7 +21271,49 @@
             'AI Consciousness': { icon: '🧠', color: '#ec4899', role: 'AI意识研究工程师' },
             'AI AGI Safety': { icon: '🛡️', color: '#22c55e', role: 'AI通用安全工程师' },
             'AI Alignment Researcher': { icon: '🎯', color: '#3b82f6', role: 'AI对齐研究员' },
-            'AI Existential Risk': { icon: '⚠️', color: '#dc2626', role: 'AI存在风险研究员' }
+            'AI Existential Risk': { icon: '⚠️', color: '#dc2626', role: 'AI存在风险研究员' },
+            // Cycle 387 新增角色 - AI智能深海探测
+            'AI Deep Sea Explorer': { icon: '🌊', color: '#0891b2', role: 'AI深海探测工程师' },
+            'AI Submarine Systems': { icon: '⚓', color: '#0ea5e9', role: 'AI潜艇系统工程师' },
+            'AI Marine Biologist': { icon: '🐋', color: '#14b8a6', role: 'AI海洋生物学家' },
+            'AI Ocean Surveyor': { icon: '📡', color: '#06b6d4', role: 'AI海洋测量师' },
+            'AI Underwater Robot': { icon: '🤖', color: '#22c55e', role: 'AI水下机器人工程师' },
+            // Cycle 387 新增角色 - AI智能极地科考
+            'AI Polar Explorer': { icon: '❄️', color: '#a855f7', role: 'AI极地探险家' },
+            'AI Ice Core Analyst': { icon: '🧊', color: '#06b6d4', role: 'AI冰芯分析师' },
+            'AI Climate Modeler': { icon: '🌍', color: '#10b981', role: 'AI气候建模师' },
+            'AI Glacier Monitor': { icon: '🏔️', color: '#64748b', role: 'AI冰川监测师' },
+            'AI Arctic Navigator': { icon: '🧭', color: '#3b82f6', role: 'AI北极导航师' },
+            // Cycle 387 新增角色 - AI智能灾害预警
+            'AI Seismologist': { icon: '🔔', color: '#dc2626', role: 'AI地震学家' },
+            'AI Tsunami Warning': { icon: '🌊', color: '#0ea5e9', role: 'AI海啸预警师' },
+            'AI Volcano Monitor': { icon: '🔥', color: '#f97316', role: 'AI火山监测师' },
+            'AI Landslide Predictor': { icon: '⛰️', color: '#a855f7', role: 'AI滑坡预测师' },
+            'AI Emergency Response': { icon: '🚨', color: '#ef4444', role: 'AI应急响应师' },
+            // Cycle 387 新增角色 - AI智能电网运维
+            'AI Grid Operator': { icon: '⚡', color: '#eab308', role: 'AI电网操作员' },
+            'AI Power Analyst': { icon: '📊', color: '#f59e0b', role: 'AI电力分析师' },
+            'AI Line Inspector': { icon: '🔍', color: '#84cc16', role: 'AI线路巡检师' },
+            'AI Transformer Tech': { icon: '🔧', color: '#22c55e', role: 'AI变压器技术员' },
+            'AI Load Dispatcher': { icon: '📈', color: '#ec4899', role: 'AI负荷调度师' },
+            // Cycle 387 新增角色 - AI智能核能安全
+            'AI Nuclear Engineer': { icon: '☢️', color: '#22c55e', role: 'AI核能工程师' },
+            'AI Radiation Monitor': { icon: '☢️', color: '#14b8a6', role: 'AI辐射监测师' },
+            'AI Safety Inspector': { icon: '✅', color: '#10b981', role: 'AI安全检查员' },
+            'AI Reactor Analyst': { icon: '🔬', color: '#06b6d4', role: 'AI反应堆分析师' },
+            'AI Waste Manager': { icon: '♻️', color: '#64748b', role: 'AI核废料管理师' },
+            // Cycle 387 新增角色 - AI智能建筑设计
+            'AI Building Architect': { icon: '🏛️', color: '#8b5cf6', role: 'AI建筑设计师' },
+            'AI Structural Engineer': { icon: '📐', color: '#3b82f6', role: 'AI结构工程师' },
+            'AI Interior Designer': { icon: '🛋️', color: '#ec4899', role: 'AI室内设计师' },
+            'AI MEP Engineer': { icon: '🔧', color: '#f59e0b', role: 'AI机电工程师' },
+            'AI Building Energy': { icon: '⚡', color: '#22c55e', role: 'AI建筑节能师' },
+            // Cycle 387 新增角色 - AI智能医疗设备
+            'AI Medical Device Designer': { icon: '💉', color: '#ec4899', role: 'AI医疗设备设计师' },
+            'AI Surgical Robot Engineer': { icon: '🤖', color: '#8b5cf6', role: 'AI手术机器人工程师' },
+            'AI Diagnostic Equipment': { icon: '🔬', color: '#06b6d4', role: 'AI诊断设备工程师' },
+            'AI Prosthetics Engineer': { icon: '🦾', color: '#f97316', role: 'AI假肢工程师' },
+            'AI Medical Imaging': { icon: '🏥', color: '#14b8a6', role: 'AI医学影像师' }
         };
 
         // 拖拽相关变量
