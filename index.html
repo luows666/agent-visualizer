@@ -14601,6 +14601,138 @@
                     { from: 'AI Route Designer', to: 'AI Logistics Optimizer', content: '路线优化建议' },
                     { from: 'AI Fleet Manager', to: 'AI Logistics Optimizer', content: '物流优化方案' }
                 ]
+            },
+            // Cycle 361 新增模板 - AI智能医疗卫生系统
+            {
+                id: 'ai-medical-health',
+                name: 'AI智能医疗卫生系统',
+                icon: '🏥',
+                desc: '从诊疗到护理的完整医疗卫生流程',
+                agents: ['AI Doctor', 'AI Surgeon', 'AI Nurse', 'AI Pharmacist', 'AI Medical Admin'],
+                positions: [
+                    { role: 'AI Doctor', x: 400, y: 50 },
+                    { role: 'AI Surgeon', x: 200, y: 180 },
+                    { role: 'AI Nurse', x: 400, y: 180 },
+                    { role: 'AI Pharmacist', x: 600, y: 180 },
+                    { role: 'AI Medical Admin', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Doctor', to: 'AI Surgeon', content: '手术会诊请求' },
+                    { from: 'AI Doctor', to: 'AI Nurse', content: '护理安排' },
+                    { from: 'AI Doctor', to: 'AI Pharmacist', content: '处方用药' },
+                    { from: 'AI Surgeon', to: 'AI Doctor', content: '手术报告' },
+                    { from: 'AI Nurse', to: 'AI Doctor', content: '患者状态更新' }
+                ]
+            },
+            // Cycle 361 新增模板 - AI智能文化艺术系统
+            {
+                id: 'ai-culture-art',
+                name: 'AI智能文化艺术系统',
+                icon: '🎭',
+                desc: '从文化创作到艺术策划的完整文化艺术流程',
+                agents: ['AI Cultural Manager', 'AI Art Curator', 'AI Music Director', 'AI Film Director', 'AI Writer'],
+                positions: [
+                    { role: 'AI Cultural Manager', x: 400, y: 50 },
+                    { role: 'AI Art Curator', x: 200, y: 180 },
+                    { role: 'AI Music Director', x: 400, y: 180 },
+                    { role: 'AI Film Director', x: 600, y: 180 },
+                    { role: 'AI Writer', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Cultural Manager', to: 'AI Art Curator', content: '艺术展览策划' },
+                    { from: 'AI Cultural Manager', to: 'AI Music Director', content: '音乐活动安排' },
+                    { from: 'AI Cultural Manager', to: 'AI Film Director', content: '电影制作计划' },
+                    { from: 'AI Cultural Manager', to: 'AI Writer', content: '文案创作需求' },
+                    { from: 'AI Writer', to: 'AI Film Director', content: '剧本创作完成' }
+                ]
+            },
+            // Cycle 361 新增模板 - AI智能体育运动系统
+            {
+                id: 'ai-sports-fitness',
+                name: 'AI智能体育运动系统',
+                icon: '🏃',
+                desc: '从训练指导到赛事分析的完整体育运动流程',
+                agents: ['AI Sports Coach', 'AI Fitness Instructor', 'AI Sports Analyst', 'AI Nutritionist', 'AI Referee'],
+                positions: [
+                    { role: 'AI Sports Coach', x: 400, y: 50 },
+                    { role: 'AI Fitness Instructor', x: 200, y: 180 },
+                    { role: 'AI Sports Analyst', x: 400, y: 180 },
+                    { role: 'AI Nutritionist', x: 600, y: 180 },
+                    { role: 'AI Referee', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sports Coach', to: 'AI Fitness Instructor', content: '训练计划安排' },
+                    { from: 'AI Sports Coach', to: 'AI Sports Analyst', content: '赛事数据分析' },
+                    { from: 'AI Sports Coach', to: 'AI Nutritionist', content: '营养计划制定' },
+                    { from: 'AI Sports Analyst', to: 'AI Sports Coach', content: '分析报告' },
+                    { from: 'AI Referee', to: 'AI Sports Coach', content: '比赛判罚反馈' }
+                ]
+            },
+            // Cycle 361 新增模板 - AI智能餐饮烹饪系统
+            {
+                id: 'ai-culinary',
+                name: 'AI智能餐饮烹饪系统',
+                icon: '👨‍🍳',
+                desc: '从菜品研发到餐厅管理的完整餐饮烹饪流程',
+                agents: ['AI Head Chef', 'AI Baker', 'AI Bartender', 'AI Restaurant Manager', 'AI Food Critic'],
+                positions: [
+                    { role: 'AI Head Chef', x: 400, y: 50 },
+                    { role: 'AI Baker', x: 200, y: 180 },
+                    { role: 'AI Bartender', x: 400, y: 180 },
+                    { role: 'AI Restaurant Manager', x: 600, y: 180 },
+                    { role: 'AI Food Critic', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Head Chef', to: 'AI Baker', content: '烘焙产品研发' },
+                    { from: 'AI Head Chef', to: 'AI Bartender', content: '饮品研发需求' },
+                    { from: 'AI Restaurant Manager', to: 'AI Head Chef', content: '菜品需求规划' },
+                    { from: 'AI Food Critic', to: 'AI Head Chef', content: '美食评价反馈' },
+                    { from: 'AI Food Critic', to: 'AI Restaurant Manager', content: '餐厅改进建议' }
+                ]
+            },
+            // Cycle 361 新增模板 - AI智能金融服务系统
+            {
+                id: 'ai-finance',
+                name: 'AI智能金融服务系统',
+                icon: '🏦',
+                desc: '从投资顾问到风险管理的完整金融服务流程',
+                agents: ['AI Banker', 'AI Investment Advisor', 'AI Insurance Agent', 'AI Tax Specialist', 'AI Financial Analyst'],
+                positions: [
+                    { role: 'AI Banker', x: 400, y: 50 },
+                    { role: 'AI Investment Advisor', x: 200, y: 180 },
+                    { role: 'AI Insurance Agent', x: 400, y: 180 },
+                    { role: 'AI Tax Specialist', x: 600, y: 180 },
+                    { role: 'AI Financial Analyst', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Banker', to: 'AI Investment Advisor', content: '投资产品需求' },
+                    { from: 'AI Banker', to: 'AI Insurance Agent', content: '保险产品需求' },
+                    { from: 'AI Banker', to: 'AI Tax Specialist', content: '税务咨询需求' },
+                    { from: 'AI Financial Analyst', to: 'AI Banker', content: '财务分析报告' },
+                    { from: 'AI Investment Advisor', to: 'AI Financial Analyst', content: '投资分析需求' }
+                ]
+            },
+            // Cycle 361 新增模板 - AI智能教育培训系统
+            {
+                id: 'ai-education',
+                name: 'AI智能教育培训系统',
+                icon: '🎓',
+                desc: '从课程设计到培训管理的完整教育培训流程',
+                agents: ['AI Tutor', 'AI Curriculum Designer', 'AI Education Admin', 'AI Student Advisor', 'AI Training Coordinator'],
+                positions: [
+                    { role: 'AI Tutor', x: 400, y: 50 },
+                    { role: 'AI Curriculum Designer', x: 200, y: 180 },
+                    { role: 'AI Education Admin', x: 400, y: 180 },
+                    { role: 'AI Student Advisor', x: 600, y: 180 },
+                    { role: 'AI Training Coordinator', x: 400, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Education Admin', to: 'AI Curriculum Designer', content: '课程设计需求' },
+                    { from: 'AI Education Admin', to: 'AI Training Coordinator', content: '培训安排' },
+                    { from: 'AI Tutor', to: 'AI Student Advisor', content: '学生反馈' },
+                    { from: 'AI Student Advisor', to: 'AI Education Admin', content: '学生情况汇报' },
+                    { from: 'AI Curriculum Designer', to: 'AI Tutor', content: '课程内容交付' }
+                ]
             }
         ];
 
@@ -16627,7 +16759,49 @@
             'AI Emergency Response': { icon: '🚨', color: '#dc2626', role: 'AI应急响应师' },
             'AI Social Worker': { icon: '🤝', color: '#22c55e', role: 'AI社会工作者' },
             'AI Community Police': { icon: '👮', color: '#3b82f6', role: 'AI社区民警' },
-            'AI City Manager': { icon: '🏙️', color: '#f59e0b', role: 'AI城市管理师' }
+            'AI City Manager': { icon: '🏙️', color: '#f59e0b', role: 'AI城市管理师' },
+            // Cycle 361 新增角色 - AI 智能医疗卫生
+            'AI Doctor': { icon: '👨‍⚕️', color: '#ef4444', role: 'AI医生' },
+            'AI Surgeon': { icon: '🔬', color: '#dc2626', role: 'AI外科医生' },
+            'AI Nurse': { icon: '👩‍⚕️', color: '#f97316', role: 'AI护士' },
+            'AI Pharmacist': { icon: '💊', color: '#22c55e', role: 'AI药剂师' },
+            'AI Medical Admin': { icon: '🏥', color: '#3b82f6', role: 'AI医疗管理员' },
+            // Cycle 361 新增角色 - AI 智能文化艺术
+            'AI Cultural Manager': { icon: '🎭', color: '#8b5cf6', role: 'AI文化管理员' },
+            'AI Art Curator': { icon: '🎨', color: '#ec4899', role: 'AI艺术策展人' },
+            'AI Music Director': { icon: '🎵', color: '#f59e0b', role: 'AI音乐总监' },
+            'AI Film Director': { icon: '🎬', color: '#6366f1', role: 'AI电影导演' },
+            'AI Writer': { icon: '✍️', color: '#14b8a6', role: 'AI作家' },
+            // Cycle 361 新增角色 - AI 智能体育运动
+            'AI Sports Coach': { icon: '🏃', color: '#f97316', role: 'AI体育教练' },
+            'AI Fitness Instructor': { icon: '💪', color: '#22c55e', role: 'AI健身指导' },
+            'AI Sports Analyst': { icon: '📊', color: '#3b82f6', role: 'AI体育分析师' },
+            'AI Nutritionist': { icon: '🥗', color: '#84cc16', role: 'AI营养师' },
+            'AI Referee': { icon: '⚖️', color: '#6b7280', role: 'AI裁判' },
+            // Cycle 361 新增角色 - AI 智能餐饮烹饪
+            'AI Head Chef': { icon: '👨‍🍳', color: '#f59e0b', role: 'AI行政总厨' },
+            'AI Baker': { icon: '🍞', color: '#d97706', role: 'AI烘焙师' },
+            'AI Bartender': { icon: '🍸', color: '#8b5cf6', role: 'AI调酒师' },
+            'AI Restaurant Manager': { icon: '🍽️', color: '#ef4444', role: 'AI餐厅经理' },
+            'AI Food Critic': { icon: '👨‍🍽️', color: '#ec4899', role: 'AI美食评论家' },
+            // Cycle 361 新增角色 - AI 智能金融服务
+            'AI Banker': { icon: '🏦', color: '#3b82f6', role: 'AI银行家' },
+            'AI Investment Advisor': { icon: '💰', color: '#22c55e', role: 'AI投资顾问' },
+            'AI Insurance Agent': { icon: '🛡️', color: '#6366f1', role: 'AI保险代理人' },
+            'AI Tax Specialist': { icon: '💵', color: '#f97316', role: 'AI税务专员' },
+            'AI Financial Analyst': { icon: '📈', color: '#14b8a6', role: 'AI财务分析师' },
+            // Cycle 361 新增角色 - AI 智能教育培训
+            'AI Tutor': { icon: '🎓', color: '#8b5cf6', role: 'AI导师' },
+            'AI Curriculum Designer': { icon: '📚', color: '#ec4899', role: 'AI课程设计师' },
+            'AI Education Admin': { icon: '🏫', color: '#3b82f6', role: 'AI教育管理员' },
+            'AI Student Advisor': { icon: '👨‍🎓', color: '#22c55e', role: 'AI学生顾问' },
+            'AI Training Coordinator': { icon: '📋', color: '#f59e0b', role: 'AI培训协调员' },
+            // Cycle 361 新增角色 - AI 智能美容化妆
+            'AI Makeup Artist': { icon: '💄', color: '#ec4899', role: 'AI化妆师' },
+            'AI Hairstylist': { icon: '💇', color: '#f97316', role: 'AI美发师' },
+            'AI Skincare Specialist': { icon: '✨', color: '#ffd700', role: 'AI护肤专家' },
+            'AI Nail Artist': { icon: '💅', color: '#db2777', role: 'AI美甲师' },
+            'AI Beauty Consultant': { icon: '💎', color: '#8b5cf6', role: 'AI美容顾问' }
         };
 
         // 拖拽相关变量
