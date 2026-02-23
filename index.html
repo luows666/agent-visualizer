@@ -14865,6 +14865,138 @@
                     { from: 'AI Plant Doctor', to: 'AI Garden Maintenance', content: '病虫害防治' },
                     { from: 'AI Irrigation Designer', to: 'AI Landscape Architect', content: '灌溉系统方案' }
                 ]
+            },
+            // Cycle 363 新增模板 - AI智能医疗器械系统
+            {
+                id: 'ai-medical-device',
+                name: 'AI智能医疗器械系统',
+                icon: '💉',
+                desc: '从设备设计到临床应用的完整医疗器械流程',
+                agents: ['AI Medical Device Designer', 'AI Imaging Specialist', 'AI Surgical Assistant', 'AI Prosthetics Engineer', 'AI Diagnostic Expert'],
+                positions: [
+                    { role: 'AI Medical Device Designer', x: 400, y: 50 },
+                    { role: 'AI Imaging Specialist', x: 200, y: 180 },
+                    { role: 'AI Surgical Assistant', x: 600, y: 180 },
+                    { role: 'AI Prosthetics Engineer', x: 200, y: 310 },
+                    { role: 'AI Diagnostic Expert', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Medical Device Designer', to: 'AI Imaging Specialist', content: '影像设备需求' },
+                    { from: 'AI Imaging Specialist', to: 'AI Surgical Assistant', content: '手术设备方案' },
+                    { from: 'AI Surgical Assistant', to: 'AI Prosthetics Engineer', content: '假肢设备需求' },
+                    { from: 'AI Prosthetics Engineer', to: 'AI Diagnostic Expert', content: '诊断设备集成' },
+                    { from: 'AI Diagnostic Expert', to: 'AI Medical Device Designer', content: '临床反馈' }
+                ]
+            },
+            // Cycle 363 新增模板 - AI智能食品工业系统
+            {
+                id: 'ai-food-industry',
+                name: 'AI智能食品工业系统',
+                icon: '🏭',
+                desc: '从食品加工到质量检测的完整食品工业流程',
+                agents: ['AI Food Process Engineer', 'AI Flavor Chemist', 'AI Quality Inspector', 'AI Nutritionist', 'AI Food Safety Expert'],
+                positions: [
+                    { role: 'AI Food Process Engineer', x: 400, y: 50 },
+                    { role: 'AI Flavor Chemist', x: 200, y: 180 },
+                    { role: 'AI Quality Inspector', x: 600, y: 180 },
+                    { role: 'AI Nutritionist', x: 200, y: 310 },
+                    { role: 'AI Food Safety Expert', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Food Process Engineer', to: 'AI Flavor Chemist', content: '产品配方需求' },
+                    { from: 'AI Flavor Chemist', to: 'AI Quality Inspector', content: '风味测试结果' },
+                    { from: 'AI Quality Inspector', to: 'AI Nutritionist', content: '营养成分检测' },
+                    { from: 'AI Nutritionist', to: 'AI Food Safety Expert', content: '营养安全性评估' },
+                    { from: 'AI Food Safety Expert', to: 'AI Food Process Engineer', content: '安全标准确认' }
+                ]
+            },
+            // Cycle 363 新增模板 - AI智能纺织服装系统
+            {
+                id: 'ai-textile-fashion',
+                name: 'AI智能纺织服装系统',
+                icon: '🧵',
+                desc: '从纺织设计到服装生产的完整纺织服装流程',
+                agents: ['AI Textile Designer', 'AI Pattern Maker', 'AI Fashion Trend Analyst', 'AI Fabric Expert', 'AI Garment Technologist'],
+                positions: [
+                    { role: 'AI Textile Designer', x: 400, y: 50 },
+                    { role: 'AI Pattern Maker', x: 200, y: 180 },
+                    { role: 'AI Fashion Trend Analyst', x: 600, y: 180 },
+                    { role: 'AI Fabric Expert', x: 200, y: 310 },
+                    { role: 'AI Garment Technologist', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Textile Designer', to: 'AI Fashion Trend Analyst', content: '时尚趋势需求' },
+                    { from: 'AI Fashion Trend Analyst', to: 'AI Pattern Maker', content: '版型设计需求' },
+                    { from: 'AI Pattern Maker', to: 'AI Fabric Expert', content: '面料选择建议' },
+                    { from: 'AI Fabric Expert', to: 'AI Garment Technologist', content: '生产工艺确认' },
+                    { from: 'AI Garment Technologist', to: 'AI Textile Designer', content: '生产可行性反馈' }
+                ]
+            },
+            // Cycle 363 新增模板 - AI智能珠宝钟表系统
+            {
+                id: 'ai-jewelry-watch',
+                name: 'AI智能珠宝钟表系统',
+                icon: '💎',
+                desc: '从珠宝设计到制作的完整珠宝钟表流程',
+                agents: ['AI Jewelry Designer', 'AI Gemologist', 'AI Watchmaker', 'AI Appraiser', 'AI Jewelry CAD Engineer'],
+                positions: [
+                    { role: 'AI Jewelry Designer', x: 400, y: 50 },
+                    { role: 'AI Gemologist', x: 200, y: 180 },
+                    { role: 'AI Watchmaker', x: 600, y: 180 },
+                    { role: 'AI Appraiser', x: 200, y: 310 },
+                    { role: 'AI Jewelry CAD Engineer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Jewelry Designer', to: 'AI Gemologist', content: '宝石鉴定需求' },
+                    { from: 'AI Gemologist', to: 'AI Jewelry CAD Engineer', content: '宝石镶嵌方案' },
+                    { from: 'AI Jewelry CAD Engineer', to: 'AI Watchmaker', content: '工艺技术确认' },
+                    { from: 'AI Watchmaker', to: 'AI Appraiser', content: '产品估值' },
+                    { from: 'AI Appraiser', to: 'AI Jewelry Designer', content: '市场定价反馈' }
+                ]
+            },
+            // Cycle 363 新增模板 - AI智能港口航运系统
+            {
+                id: 'ai-port-shipping',
+                name: 'AI智能港口航运系统',
+                icon: '⚓',
+                desc: '从港口运营到货运配送的完整航运流程',
+                agents: ['AI Port Operations', 'AI Shipping Coordinator', 'AI Cargo Manager', 'AI Vessel Tracker', 'AI Customs Broker'],
+                positions: [
+                    { role: 'AI Port Operations', x: 400, y: 50 },
+                    { role: 'AI Shipping Coordinator', x: 200, y: 180 },
+                    { role: 'AI Cargo Manager', x: 600, y: 180 },
+                    { role: 'AI Vessel Tracker', x: 200, y: 310 },
+                    { role: 'AI Customs Broker', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Port Operations', to: 'AI Shipping Coordinator', content: '航运计划' },
+                    { from: 'AI Shipping Coordinator', to: 'AI Cargo Manager', content: '货物调配' },
+                    { from: 'AI Cargo Manager', to: 'AI Vessel Tracker', content: '船舶追踪' },
+                    { from: 'AI Vessel Tracker', to: 'AI Customs Broker', content: '清关准备' },
+                    { from: 'AI Customs Broker', to: 'AI Port Operations', content: '清关完成' }
+                ]
+            },
+            // Cycle 363 新增模板 - AI智能轨道交通系统
+            {
+                id: 'ai-rail-transit',
+                name: 'AI智能轨道交通系统',
+                icon: '🚇',
+                desc: '从轨道设计到列车调度的完整轨道交通流程',
+                agents: ['AI Metro Operator', 'AI Track Engineer', 'AI Signal Engineer', 'AI Station Manager', 'AI Transit Planner'],
+                positions: [
+                    { role: 'AI Metro Operator', x: 400, y: 50 },
+                    { role: 'AI Track Engineer', x: 200, y: 180 },
+                    { role: 'AI Signal Engineer', x: 600, y: 180 },
+                    { role: 'AI Station Manager', x: 200, y: 310 },
+                    { role: 'AI Transit Planner', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Metro Operator', to: 'AI Transit Planner', content: '运营规划需求' },
+                    { from: 'AI Transit Planner', to: 'AI Track Engineer', content: '轨道设计需求' },
+                    { from: 'AI Track Engineer', to: 'AI Signal Engineer', content: '信号系统要求' },
+                    { from: 'AI Signal Engineer', to: 'AI Station Manager', content: '站点运营配合' },
+                    { from: 'AI Station Manager', to: 'AI Metro Operator', content: '运营反馈' }
+                ]
             }
         ];
 
@@ -16964,12 +17096,48 @@
             'AI Cartographer': { icon: '🗺️', color: '#ec4899', role: 'AI地图制图师' },
             'AI Remote Sensing': { icon: '📡', color: '#0ea5e9', role: 'AI遥感工程师' },
             'AI Drone Mapping': { icon: '🚁', color: '#22c55e', role: 'AI无人机测绘师' },
-            // Cycle 362 新增角色 - AI 智能园林园艺
-            'AI Horticulturist': { icon: '🌳', color: '#22c55e', role: 'AI园艺师' },
-            'AI Landscape Architect': { icon: '🏡', color: '#10b981', role: 'AI园林设计师' },
-            'AI Garden Maintenance': { icon: '✂️', color: '#84cc16', role: 'AI园林养护师' },
-            'AI Plant Doctor': { icon: '🌿', color: '#22c55e', role: 'AI植物医生' },
-            'AI Irrigation Designer': { icon: '💧', color: '#0ea5e9', role: 'AI灌溉设计师' }
+            // Cycle 363 新增角色 - AI 智能医疗器械
+            'AI Medical Device Designer': { icon: '💉', color: '#ec4899', role: 'AI医疗设备设计师' },
+            'AI Imaging Specialist': { icon: '🏥', color: '#06b6d4', role: 'AI影像专家' },
+            'AI Surgical Assistant': { icon: '✂️', color: '#f59e0b', role: 'AI手术助理' },
+            'AI Prosthetics Engineer': { icon: '🦾', color: '#8b5cf6', role: 'AI假肢工程师' },
+            'AI Diagnostic Expert': { icon: '🔬', color: '#22c55e', role: 'AI诊断专家' },
+            // Cycle 363 新增角色 - AI 智能食品工业
+            'AI Food Process Engineer': { icon: '🏭', color: '#f97316', role: 'AI食品加工工程师' },
+            'AI Flavor Chemist': { icon: '🧪', color: '#a855f7', role: 'AI风味化学师' },
+            'AI Quality Inspector': { icon: '✅', color: '#22c55e', role: 'AI质检员' },
+            'AI Nutritionist': { icon: '🥗', color: '#10b981', role: 'AI营养师' },
+            'AI Food Safety Expert': { icon: '🛡️', color: '#14b8a6', role: 'AI食品安全专家' },
+            // Cycle 363 新增角色 - AI 智能纺织服装
+            'AI Textile Designer': { icon: '🧵', color: '#ec4899', role: 'AI纺织设计师' },
+            'AI Pattern Maker': { icon: '📐', color: '#f59e0b', role: 'AI版型师' },
+            'AI Fashion Trend Analyst': { icon: '👗', color: '#8b5cf6', role: 'AI时尚趋势分析师' },
+            'AI Fabric Expert': { icon: '🧶', color: '#06b6d4', role: 'AI面料专家' },
+            'AI Garment Technologist': { icon: '👔', color: '#64748b', role: 'AI服装工艺师' },
+            // Cycle 363 新增角色 - AI 智能珠宝钟表
+            'AI Jewelry Designer': { icon: '💎', color: '#f43f5e', role: 'AI珠宝设计师' },
+            'AI Gemologist': { icon: '💍', color: '#a855f7', role: 'AI宝石学家' },
+            'AI Watchmaker': { icon: '⌚', color: '#0ea5e9', role: 'AI钟表师' },
+            'AI Appraiser': { icon: '📊', color: '#eab308', role: 'AI估价师' },
+            'AI Jewelry CAD Engineer': { icon: '🎨', color: '#8b5cf6', role: 'AI珠宝CAD工程师' },
+            // Cycle 363 新增角色 - AI 智能港口航运
+            'AI Port Operations': { icon: '⚓', color: '#0ea5e9', role: 'AI港口运营师' },
+            'AI Shipping Coordinator': { icon: '🚢', color: '#06b6d4', role: 'AI航运协调师' },
+            'AI Cargo Manager': { icon: '📦', color: '#f97316', role: 'AI货运经理' },
+            'AI Vessel Tracker': { icon: '🛰️', color: '#8b5cf6', role: 'AI船舶追踪师' },
+            'AI Customs Broker': { icon: '📋', color: '#22c55e', role: 'AI报关师' },
+            // Cycle 363 新增角色 - AI 智能轨道交通
+            'AI Metro Operator': { icon: '🚇', color: '#3b82f6', role: 'AI地铁运营师' },
+            'AI Track Engineer': { icon: '🛤️', color: '#64748b', role: 'AI轨道工程师' },
+            'AI Signal Engineer': { icon: '🚦', color: '#eab308', role: 'AI信号工程师' },
+            'AI Station Manager': { icon: '🏢', color: '#8b5cf6', role: 'AI车站经理' },
+            'AI Transit Planner': { icon: '🗺️', color: '#06b6d4', role: 'AI交通规划师' },
+            // Cycle 363 新增角色 - AI 智能新材料
+            'AI Materials Scientist': { icon: '🔬', color: '#8b5cf6', role: 'AI材料科学家' },
+            'AI Nanomaterials Engineer': { icon: '⚛️', color: '#06b6d4', role: 'AI纳米材料工程师' },
+            'AI Polymer Engineer': { icon: '🧪', color: '#ec4899', role: 'AI高分子材料工程师' },
+            'AI Metallurgist': { icon: '⚙️', color: '#64748b', role: 'AI冶金工程师' },
+            'AI Ceramic Engineer': { icon: '🏺', color: '#f59e0b', role: 'AI陶瓷工程师' }
         };
 
         // 拖拽相关变量
