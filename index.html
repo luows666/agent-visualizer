@@ -19510,6 +19510,150 @@
                     { from: 'AI Route Optimizer', to: 'AI Last Mile Manager', content: '末端配送' },
                     { from: 'AI Last Mile Manager', to: 'AI Warehouse Manager', content: '配送完成' }
                 ]
+            },
+            // Cycle 398 新增模板 - AI智能污水处理系统
+            {
+                id: 'ai-wastewater-treatment',
+                name: 'AI智能污水处理系统',
+                icon: '🌊',
+                desc: '从污水收集到水处理的完整污水处理流程',
+                agents: ['AI Wastewater Engineer', 'AI Water Treatment', 'AI Sewage Monitor', 'AI Water Quality Tester', 'AI Recycling Engineer'],
+                positions: [
+                    { role: 'AI Wastewater Engineer', x: 400, y: 30 },
+                    { role: 'AI Water Treatment', x: 200, y: 150 },
+                    { role: 'AI Sewage Monitor', x: 600, y: 150 },
+                    { role: 'AI Water Quality Tester', x: 200, y: 270 },
+                    { role: 'AI Recycling Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Wastewater Engineer', to: 'AI Water Treatment', content: '处理方案' },
+                    { from: 'AI Water Treatment', to: 'AI Wastewater Engineer', content: '处理进度' },
+                    { from: 'AI Sewage Monitor', to: 'AI Wastewater Engineer', content: '监测数据' },
+                    { from: 'AI Wastewater Engineer', to: 'AI Water Quality Tester', content: '水质检测' },
+                    { from: 'AI Water Quality Tester', to: 'AI Wastewater Engineer', content: '检测报告' },
+                    { from: 'AI Wastewater Engineer', to: 'AI Recycling Engineer', content: '回收利用' },
+                    { from: 'AI Recycling Engineer', to: 'AI Wastewater Engineer', content: '回收报告' }
+                ]
+            },
+            // Cycle 398 新增模板 - AI智能殡葬服务系统
+            {
+                id: 'ai-funeral-service',
+                name: 'AI智能殡葬服务系统',
+                icon: '⚰️',
+                desc: '从殡葬策划到纪念服务的完整殡葬服务流程',
+                agents: ['AI Funeral Director', 'AI Cremation Specialist', 'AI Memorial Planner', 'AI Bereavement Counselor', 'AI Cemetery Manager'],
+                positions: [
+                    { role: 'AI Funeral Director', x: 400, y: 30 },
+                    { role: 'AI Cremation Specialist', x: 200, y: 150 },
+                    { role: 'AI Memorial Planner', x: 600, y: 150 },
+                    { role: 'AI Bereavement Counselor', x: 200, y: 270 },
+                    { role: 'AI Cemetery Manager', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Funeral Director', to: 'AI Cremation Specialist', content: '火化安排' },
+                    { from: 'AI Cremation Specialist', to: 'AI Funeral Director', content: '火化完成' },
+                    { from: 'AI Funeral Director', to: 'AI Memorial Planner', content: '悼念策划' },
+                    { from: 'AI Memorial Planner', to: 'AI Funeral Director', content: '策划方案' },
+                    { from: 'AI Funeral Director', to: 'AI Bereavement Counselor', content: '心理疏导' },
+                    { from: 'AI Bereavement Counselor', to: 'AI Funeral Director', content: '疏导报告' },
+                    { from: 'AI Funeral Director', to: 'AI Cemetery Manager', content: '墓地管理' }
+                ]
+            },
+            // Cycle 398 新增模板 - AI智能养老服务系统
+            {
+                id: 'ai-elderly-care',
+                name: 'AI智能养老服务系统',
+                icon: '👴',
+                desc: '从养老护理到健康管理的完整养老服务流程',
+                agents: ['AI Elderly Care', 'AI Senior Companion', 'AI Geriatric Doctor', 'AI Retirement Planner', 'AI Nursing Home Manager'],
+                positions: [
+                    { role: 'AI Elderly Care', x: 400, y: 30 },
+                    { role: 'AI Senior Companion', x: 200, y: 150 },
+                    { role: 'AI Geriatric Doctor', x: 600, y: 150 },
+                    { role: 'AI Retirement Planner', x: 200, y: 270 },
+                    { role: 'AI Nursing Home Manager', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Elderly Care', to: 'AI Geriatric Doctor', content: '健康检查' },
+                    { from: 'AI Geriatric Doctor', to: 'AI Elderly Care', content: '健康报告' },
+                    { from: 'AI Elderly Care', to: 'AI Senior Companion', content: '陪伴安排' },
+                    { from: 'AI Senior Companion', to: 'AI Elderly Care', content: '陪伴反馈' },
+                    { from: 'AI Retirement Planner', to: 'AI Elderly Care', content: '退休规划' },
+                    { from: 'AI Elderly Care', to: 'AI Nursing Home Manager', content: '护理管理' },
+                    { from: 'AI Nursing Home Manager', to: 'AI Elderly Care', content: '管理报告' }
+                ]
+            },
+            // Cycle 398 新增模板 - AI智能搬家服务系统
+            {
+                id: 'ai-moving-service',
+                name: 'AI智能搬家服务系统',
+                icon: '📦',
+                desc: '从搬家规划到物品配送的完整搬家服务流程',
+                agents: ['AI Moving Planner', 'AI Furniture Assembler', 'AI Packing Expert', 'AI Storage Manager', 'AI Logistics Coordinator'],
+                positions: [
+                    { role: 'AI Moving Planner', x: 400, y: 30 },
+                    { role: 'AI Furniture Assembler', x: 200, y: 150 },
+                    { role: 'AI Packing Expert', x: 600, y: 150 },
+                    { role: 'AI Storage Manager', x: 200, y: 270 },
+                    { role: 'AI Logistics Coordinator', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Moving Planner', to: 'AI Packing Expert', content: '打包计划' },
+                    { from: 'AI Packing Expert', to: 'AI Moving Planner', content: '打包完成' },
+                    { from: 'AI Moving Planner', to: 'AI Furniture Assembler', content: '家具装配' },
+                    { from: 'AI Furniture Assembler', to: 'AI Moving Planner', content: '装配完成' },
+                    { from: 'AI Moving Planner', to: 'AI Logistics Coordinator', content: '物流调度' },
+                    { from: 'AI Logistics Coordinator', to: 'AI Moving Planner', content: '调度完成' },
+                    { from: 'AI Moving Planner', to: 'AI Storage Manager', content: '仓储管理' }
+                ]
+            },
+            // Cycle 398 新增模板 - AI智能水利工程系统
+            {
+                id: 'ai-water-engineering',
+                name: 'AI智能水利工程系统',
+                icon: '🌊',
+                desc: '从水利工程设计到水资源管理的完整水利工程流程',
+                agents: ['AI Water Engineer', 'AI Dam Designer', 'AI Flood Control', 'AI Irrigation System', 'AI Drainage Engineer'],
+                positions: [
+                    { role: 'AI Water Engineer', x: 400, y: 30 },
+                    { role: 'AI Dam Designer', x: 200, y: 150 },
+                    { role: 'AI Flood Control', x: 600, y: 150 },
+                    { role: 'AI Irrigation System', x: 200, y: 270 },
+                    { role: 'AI Drainage Engineer', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Water Engineer', to: 'AI Dam Designer', content: '大坝设计' },
+                    { from: 'AI Dam Designer', to: 'AI Water Engineer', content: '设计方案' },
+                    { from: 'AI Water Engineer', to: 'AI Flood Control', content: '防洪方案' },
+                    { from: 'AI Flood Control', to: 'AI Water Engineer', content: '防洪报告' },
+                    { from: 'AI Water Engineer', to: 'AI Irrigation System', content: '灌溉系统' },
+                    { from: 'AI Irrigation System', to: 'AI Water Engineer', content: '系统方案' },
+                    { from: 'AI Water Engineer', to: 'AI Drainage Engineer', content: '排水方案' }
+                ]
+            },
+            // Cycle 398 新增模板 - AI智能测绘遥感系统
+            {
+                id: 'ai-surveying-remote-sensing',
+                name: 'AI智能测绘遥感系统',
+                icon: '📡',
+                desc: '从地形测绘到遥感分析的完整测绘遥感流程',
+                agents: ['AI Surveyor', 'AI GIS Analyst', 'AI Cartographer', 'AI Remote Sensing', 'AI Drone Mapping'],
+                positions: [
+                    { role: 'AI Surveyor', x: 400, y: 30 },
+                    { role: 'AI GIS Analyst', x: 200, y: 150 },
+                    { role: 'AI Cartographer', x: 600, y: 150 },
+                    { role: 'AI Remote Sensing', x: 200, y: 270 },
+                    { role: 'AI Drone Mapping', x: 600, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Surveyor', to: 'AI GIS Analyst', content: '测绘数据' },
+                    { from: 'AI GIS Analyst', to: 'AI Surveyor', content: '分析结果' },
+                    { from: 'AI Surveyor', to: 'AI Cartographer', content: '制图需求' },
+                    { from: 'AI Cartographer', to: 'AI Surveyor', content: '地图完成' },
+                    { from: 'AI Remote Sensing', to: 'AI Surveyor', content: '遥感数据' },
+                    { from: 'AI Surveyor', to: 'AI Drone Mapping', content: '无人机测绘' },
+                    { from: 'AI Drone Mapping', to: 'AI Surveyor', content: '测绘完成' }
+                ]
             }
         ];
 
@@ -23041,7 +23185,61 @@
             'AI Packaging Engineer': { icon: '📦', color: '#f59e0b', role: 'AI包装工程师' },
             'AI Warehouse Operator': { icon: '🏭', color: '#64748b', role: 'AI仓储操作员' },
             'AI Inventory Controller': { icon: '📋', color: '#22c55e', role: 'AI库存控制员' },
-            'AI Procurement Manager': { icon: '🛒', color: '#f97316', role: 'AI采购经理' }
+            'AI Procurement Manager': { icon: '🛒', color: '#f97316', role: 'AI采购经理' },
+            // Cycle 398 新增角色 - AI智能污水处理
+            'AI Wastewater Engineer': { icon: '🌊', color: '#0ea5e9', role: 'AI污水处理工程师' },
+            'AI Water Treatment': { icon: '🏭', color: '#06b6d4', role: 'AI水处理师' },
+            'AI Sewage Monitor': { icon: '🌊', color: '#14b8a6', role: 'AI污水监测师' },
+            'AI Water Quality Tester': { icon: '🔬', color: '#22c55e', role: 'AI水质检测师' },
+            'AI Recycling Engineer': { icon: '♻️', color: '#84cc16', role: 'AI回收工程师' },
+            // Cycle 398 新增角色 - AI智能殡葬服务
+            'AI Funeral Director': { icon: '⚰️', color: '#64748b', role: 'AI殡葬师' },
+            'AI Cremation Specialist': { icon: '🔥', color: '#f97316', role: 'AI火化师' },
+            'AI Memorial Planner': { icon: '🕯️', color: '#f59e0b', role: 'AI悼念策划师' },
+            'AI Bereavement Counselor': { icon: '💐', color: '#ec4899', role: 'AI丧亲咨询师' },
+            'AI Cemetery Manager': { icon: '🪦', color: '#8b5cf6', role: 'AI墓地管理员' },
+            // Cycle 398 新增角色 - AI智能养老服务
+            'AI Elderly Care': { icon: '👴', color: '#06b6d4', role: 'AI养老护理师' },
+            'AI Senior Companion': { icon: '🤝', color: '#14b8a6', role: 'AI老年陪伴师' },
+            'AI Geriatric Doctor': { icon: '👨‍⚕️', color: '#22c55e', role: 'AI老年病医生' },
+            'AI Retirement Planner': { icon: '📋', color: '#f97316', role: 'AI退休规划师' },
+            'AI Nursing Home Manager': { icon: '🏠', color: '#a855f7', role: 'AI养老院经理' },
+            // Cycle 398 新增角色 - AI智能搬家服务
+            'AI Moving Planner': { icon: '📦', color: '#f59e0b', role: 'AI搬家规划师' },
+            'AI Furniture Assembler': { icon: '🪑', color: '#ec4899', role: 'AI家具装配师' },
+            'AI Packing Expert': { icon: '📦', color: '#8b5cf6', role: 'AI打包专家' },
+            'AI Storage Manager': { icon: '🏚️', color: '#64748b', role: 'AI仓储管理员' },
+            'AI Logistics Coordinator': { icon: '🚚', color: '#22c55e', role: 'AI物流协调师' },
+            // Cycle 398 新增角色 - AI智能洗衣服务
+            'AI Laundry Expert': { icon: '👕', color: '#06b6d4', role: 'AI洗衣专家' },
+            'AI Dry Cleaner': { icon: '👔', color: '#0ea5e9', role: 'AI干洗师' },
+            'AI Stain Remover': { icon: '✨', color: '#f43f5e', role: 'AI去渍师' },
+            'AI Fabric Care': { icon: '🧵', color: '#a855f7', role: 'AI面料护理师' },
+            'AI Laundry Route': { icon: '🚲', color: '#84cc16', role: 'AI取送路线规划师' },
+            // Cycle 398 新增角色 - AI智能水利工程
+            'AI Water Engineer': { icon: '🌊', color: '#0ea5e9', role: 'AI水利工程师' },
+            'AI Dam Designer': { icon: '🧱', color: '#14b8a6', role: 'AI大坝设计师' },
+            'AI Flood Control': { icon: '🌊', color: '#22c55e', role: 'AI防洪工程师' },
+            'AI Irrigation System': { icon: '🚿', color: '#f97316', role: 'AI灌溉系统工程师' },
+            'AI Drainage Engineer': { icon: '🌧️', color: '#64748b', role: 'AI排水工程师' },
+            // Cycle 398 新增角色 - AI智能测绘遥感
+            'AI Surveyor': { icon: '📐', color: '#f59e0b', role: 'AI测绘工程师' },
+            'AI GIS Analyst': { icon: '🗺️', color: '#22c55e', role: 'AI地理信息分析师' },
+            'AI Cartographer': { icon: '🗺️', color: '#8b5cf6', role: 'AI地图制图师' },
+            'AI Remote Sensing': { icon: '📡', color: '#06b6d4', role: 'AI遥感工程师' },
+            'AI Drone Mapping': { icon: '🚁', color: '#ec4899', role: 'AI无人机测绘师' },
+            // Cycle 398 新增角色 - AI智能园艺
+            'AI Horticulturist': { icon: '🌳', color: '#10b981', role: 'AI园艺师' },
+            'AI Landscape Architect': { icon: '🏡', color: '#22c55e', role: 'AI园林设计师' },
+            'AI Garden Maintenance': { icon: '✂️', color: '#84cc16', role: 'AI园林养护师' },
+            'AI Plant Doctor': { icon: '🌿', color: '#14b8a6', role: 'AI植物医生' },
+            'AI Irrigation Designer': { icon: '💧', color: '#0ea5e9', role: 'AI灌溉设计师' },
+            // Cycle 398 新增角色 - AI智能矿山
+            'AI Mining Engineer': { icon: '⛏️', color: '#64748b', role: 'AI矿业工程师' },
+            'AI Mine Safety': { icon: '⚠️', color: '#f97316', role: 'AI矿山安全工程师' },
+            'AI Mineral Analysis': { icon: '🔬', color: '#8b5cf6', role: 'AI矿物分析师' },
+            'AI Blast Design': { icon: '🧨', color: '#ec4899', role: 'AI爆破设计师' },
+            'AI Mine Planning': { icon: '📐', color: '#f59e0b', role: 'AI矿山规划师' }
         };
 
         // 拖拽相关变量
