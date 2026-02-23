@@ -14331,6 +14331,144 @@
                     { from: 'AI Compositor', to: 'AI Visual Effects Supervisor', content: '合成完成' },
                     { from: 'AI Visual Effects Supervisor', to: 'AI VFX Artist', content: '特效审核反馈' }
                 ]
+            },
+            // Cycle 359 新增模板 - AI智能康复医疗系统
+            {
+                id: 'ai-rehabilitation-system',
+                name: 'AI智能康复医疗系统',
+                icon: '🏥',
+                desc: '从康复评估到治疗计划的完整康复医疗流程',
+                agents: ['AI Rehabilitation Doctor', 'AI Physical Therapist', 'AI Occupational Therapist', 'AI Rehabilitation Nurse', 'AI Rehabilitation Planner'],
+                positions: [
+                    { role: 'AI Rehabilitation Doctor', x: 400, y: 50 },
+                    { role: 'AI Physical Therapist', x: 200, y: 180 },
+                    { role: 'AI Occupational Therapist', x: 600, y: 180 },
+                    { role: 'AI Rehabilitation Nurse', x: 200, y: 310 },
+                    { role: 'AI Rehabilitation Planner', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Rehabilitation Doctor', to: 'AI Physical Therapist', content: '康复医嘱下达' },
+                    { from: 'AI Rehabilitation Doctor', to: 'AI Occupational Therapist', content: '作业治疗方案' },
+                    { from: 'AI Rehabilitation Doctor', to: 'AI Rehabilitation Planner', content: '康复计划制定' },
+                    { from: 'AI Physical Therapist', to: 'AI Rehabilitation Nurse', content: '物理治疗记录' },
+                    { from: 'AI Occupational Therapist', to: 'AI Rehabilitation Nurse', content: '作业治疗记录' },
+                    { from: 'AI Rehabilitation Nurse', to: 'AI Rehabilitation Doctor', content: '患者恢复情况' }
+                ]
+            },
+            // Cycle 359 新增模板 - AI智能心理咨询系统
+            {
+                id: 'ai-psychology-system',
+                name: 'AI智能心理咨询系统',
+                icon: '🧠',
+                desc: '从心理评估到咨询服务的完整心理咨询流程',
+                agents: ['AI Clinical Psychologist', 'AI Child Psychologist', 'AI Family Counselor', 'AI Career Counselor', 'AI Crisis Intervention'],
+                positions: [
+                    { role: 'AI Clinical Psychologist', x: 400, y: 50 },
+                    { role: 'AI Child Psychologist', x: 200, y: 180 },
+                    { role: 'AI Family Counselor', x: 600, y: 180 },
+                    { role: 'AI Career Counselor', x: 200, y: 310 },
+                    { role: 'AI Crisis Intervention', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Clinical Psychologist', to: 'AI Child Psychologist', content: '儿童心理评估' },
+                    { from: 'AI Clinical Psychologist', to: 'AI Family Counselor', content: '家庭心理评估' },
+                    { from: 'AI Clinical Psychologist', to: 'AI Career Counselor', content: '职业心理评估' },
+                    { from: 'AI Child Psychologist', to: 'AI Crisis Intervention', content: '儿童危机预警' },
+                    { from: 'AI Family Counselor', to: 'AI Crisis Intervention', content: '家庭危机预警' },
+                    { from: 'AI Crisis Intervention', to: 'AI Clinical Psychologist', content: '危机干预报告' }
+                ]
+            },
+            // Cycle 359 新增模板 - AI智能养老社区系统
+            {
+                id: 'ai-elderly-care-system',
+                name: 'AI智能养老社区系统',
+                icon: '🏘️',
+                desc: '从养老服务到社区管理的完整养老社区流程',
+                agents: ['AI Community Manager', 'AI Elderly Care Coordinator', 'AI Senior Activity Planner', 'AI Caregiver Manager', 'AI Health Monitor'],
+                positions: [
+                    { role: 'AI Community Manager', x: 400, y: 50 },
+                    { role: 'AI Elderly Care Coordinator', x: 200, y: 180 },
+                    { role: 'AI Senior Activity Planner', x: 600, y: 180 },
+                    { role: 'AI Caregiver Manager', x: 200, y: 310 },
+                    { role: 'AI Health Monitor', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Community Manager', to: 'AI Elderly Care Coordinator', content: '养老服务计划' },
+                    { from: 'AI Community Manager', to: 'AI Senior Activity Planner', content: '社区活动安排' },
+                    { from: 'AI Elderly Care Coordinator', to: 'AI Caregiver Manager', content: '护理员调配' },
+                    { from: 'AI Elderly Care Coordinator', to: 'AI Health Monitor', content: '健康监测需求' },
+                    { from: 'AI Health Monitor', to: 'AI Community Manager', content: '健康报告' },
+                    { from: 'AI Senior Activity Planner', to: 'AI Elderly Care Coordinator', content: '活动长者名单' }
+                ]
+            },
+            // Cycle 359 新增模板 - AI智能家居服务系统
+            {
+                id: 'ai-home-service-system',
+                name: 'AI智能家居服务系统',
+                icon: '🏠',
+                desc: '从家政服务到家居维护的完整家居服务流程',
+                agents: ['AI Home Service Coordinator', 'AI House Cleaner', 'AI Meal Planning', 'AI Errand Runner', 'AI Home Maintenance'],
+                positions: [
+                    { role: 'AI Home Service Coordinator', x: 400, y: 50 },
+                    { role: 'AI House Cleaner', x: 200, y: 180 },
+                    { role: 'AI Meal Planning', x: 600, y: 180 },
+                    { role: 'AI Errand Runner', x: 200, y: 310 },
+                    { role: 'AI Home Maintenance', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Home Service Coordinator', to: 'AI House Cleaner', content: '保洁任务派单' },
+                    { from: 'AI Home Service Coordinator', to: 'AI Meal Planning', content: '膳食安排' },
+                    { from: 'AI Home Service Coordinator', to: 'AI Errand Runner', content: '跑腿任务派单' },
+                    { from: 'AI Home Service Coordinator', to: 'AI Home Maintenance', content: '维修任务派单' },
+                    { from: 'AI House Cleaner', to: 'AI Home Service Coordinator', content: '保洁完成报告' },
+                    { from: 'AI Home Maintenance', to: 'AI Home Service Coordinator', content: '维修完成报告' }
+                ]
+            },
+            // Cycle 359 新增模板 - AI智能环保监测系统
+            {
+                id: 'ai-environment-monitor-system',
+                name: 'AI智能环保监测系统',
+                icon: '🌿',
+                desc: '从环境监测到预警响应的完整环保监测流程',
+                agents: ['AI Environmental Monitor', 'AI Air Quality Analyst', 'AI Water Quality Tester', 'AI Noise Level Monitor', 'AI Pollution Alert'],
+                positions: [
+                    { role: 'AI Environmental Monitor', x: 400, y: 50 },
+                    { role: 'AI Air Quality Analyst', x: 200, y: 180 },
+                    { role: 'AI Water Quality Tester', x: 600, y: 180 },
+                    { role: 'AI Noise Level Monitor', x: 200, y: 310 },
+                    { role: 'AI Pollution Alert', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Monitor', to: 'AI Air Quality Analyst', content: '空气质量数据' },
+                    { from: 'AI Environmental Monitor', to: 'AI Water Quality Tester', content: '水质监测数据' },
+                    { from: 'AI Environmental Monitor', to: 'AI Noise Level Monitor', content: '噪音监测数据' },
+                    { from: 'AI Air Quality Analyst', to: 'AI Pollution Alert', content: '空气污染预警' },
+                    { from: 'AI Water Quality Tester', to: 'AI Pollution Alert', content: '水污染预警' },
+                    { from: 'AI Pollution Alert', to: 'AI Environmental Monitor', content: '预警响应报告' }
+                ]
+            },
+            // Cycle 359 新增模板 - AI智能能源审计系统
+            {
+                id: 'ai-energy-audit-system',
+                name: 'AI智能能源审计系统',
+                icon: '⚡',
+                desc: '从能源审计到节能优化的完整能源管理流程',
+                agents: ['AI Energy Auditor', 'AI Carbon Footprint', 'AI Energy Efficiency Expert', 'AI Renewable Energy Advisor', 'AI Utility Bill Analyzer'],
+                positions: [
+                    { role: 'AI Energy Auditor', x: 400, y: 50 },
+                    { role: 'AI Carbon Footprint', x: 200, y: 180 },
+                    { role: 'AI Energy Efficiency Expert', x: 600, y: 180 },
+                    { role: 'AI Renewable Energy Advisor', x: 200, y: 310 },
+                    { role: 'AI Utility Bill Analyzer', x: 600, y: 310 }
+                ],
+                messageFlows: [
+                    { from: 'AI Energy Auditor', to: 'AI Carbon Footprint', content: '碳足迹核算' },
+                    { from: 'AI Energy Auditor', to: 'AI Utility Bill Analyzer', content: '能耗数据分析' },
+                    { from: 'AI Energy Auditor', to: 'AI Renewable Energy Advisor', content: '新能源评估' },
+                    { from: 'AI Carbon Footprint', to: 'AI Energy Efficiency Expert', content: '碳减排建议' },
+                    { from: 'AI Utility Bill Analyzer', to: 'AI Energy Efficiency Expert', content: '节能建议' },
+                    { from: 'AI Energy Efficiency Expert', to: 'AI Energy Auditor', content: '能效优化报告' }
+                ]
             }
         ];
 
@@ -16279,7 +16417,43 @@
             'AI Compositor': { icon: '🔬', color: '#ec4899', role: 'AI合成师' },
             'AI Motion Graphics': { icon: '🎬', color: '#f59e0b', role: 'AI动效设计师' },
             'AI CGI Artist': { icon: '🖼️', color: '#3b82f6', role: 'AI CGI艺术家' },
-            'AI Visual Effects Supervisor': { icon: '🌟', color: '#22c55e', role: 'AI特效总监' }
+            'AI Visual Effects Supervisor': { icon: '🌟', color: '#22c55e', role: 'AI特效总监' },
+            // Cycle 359 新增角色 - AI 智能康复医疗
+            'AI Rehabilitation Doctor': { icon: '🏥', color: '#06b6d4', role: 'AI康复医生' },
+            'AI Physical Therapist': { icon: '💪', color: '#22c55e', role: 'AI物理治疗师' },
+            'AI Occupational Therapist': { icon: '🎯', color: '#f97316', role: 'AI作业治疗师' },
+            'AI Rehabilitation Nurse': { icon: '👩‍⚕️', color: '#ec4899', role: 'AI康复护士' },
+            'AI Rehabilitation Planner': { icon: '📋', color: '#8b5cf6', role: 'AI康复规划师' },
+            // Cycle 359 新增角色 - AI 智能心理咨询
+            'AI Clinical Psychologist': { icon: '🧠', color: '#a855f7', role: 'AI临床心理咨询师' },
+            'AI Child Psychologist': { icon: '👶', color: '#f43f5e', role: 'AI儿童心理咨询师' },
+            'AI Family Counselor': { icon: '👨‍👩‍👧', color: '#14b8a6', role: 'AI家庭咨询师' },
+            'AI Career Counselor': { icon: '💼', color: '#0ea5e9', role: 'AI职业咨询师' },
+            'AI Crisis Intervention': { icon: '🚨', color: '#dc2626', role: 'AI危机干预师' },
+            // Cycle 359 新增角色 - AI 智能养老社区
+            'AI Community Manager': { icon: '🏘️', color: '#64748b', role: 'AI社区经理' },
+            'AI Elderly Care Coordinator': { icon: '👴', color: '#f59e0b', role: 'AI养老协调员' },
+            'AI Senior Activity Planner': { icon: '🎪', color: '#ec4899', role: 'AI老年活动策划师' },
+            'AI Caregiver Manager': { icon: '🤝', color: '#22c55e', role: 'AI护理员管理员' },
+            'AI Health Monitor': { icon: '❤️', color: '#ef4444', role: 'AI健康监护师' },
+            // Cycle 359 新增角色 - AI 智能家居服务
+            'AI Home Service Coordinator': { icon: '🏠', color: '#8b5cf6', role: 'AI家政协调员' },
+            'AI House Cleaner': { icon: '🧹', color: '#06b6d4', role: 'AI家政保洁师' },
+            'AI Meal Planning': { icon: '🍽️', color: '#f97316', role: 'AI膳食规划师' },
+            'AI Errand Runner': { icon: '🏃', color: '#22c55e', role: 'AI跑腿服务师' },
+            'AI Home Maintenance': { icon: '🔧', color: '#64748b', role: 'AI家政维修师' },
+            // Cycle 359 新增角色 - AI 智能环保监测
+            'AI Environmental Monitor': { icon: '🌿', color: '#10b981', role: 'AI环境监测师' },
+            'AI Air Quality Analyst': { icon: '💨', color: '#0ea5e9', role: 'AI空气质量分析师' },
+            'AI Water Quality Tester': { icon: '💧', color: '#3b82f6', role: 'AI水质检测师' },
+            'AI Noise Level Monitor': { icon: '🔊', color: '#f59e0b', role: 'AI噪音监测师' },
+            'AI Pollution Alert': { icon: '🚨', color: '#dc2626', role: 'AI污染预警师' },
+            // Cycle 359 新增角色 - AI 智能能源审计
+            'AI Energy Auditor': { icon: '⚡', color: '#eab308', role: 'AI能源审计师' },
+            'AI Carbon Footprint': { icon: '🌍', color: '#22c55e', role: 'AI碳足迹审计师' },
+            'AI Energy Efficiency Expert': { icon: '💡', color: '#f97316', role: 'AI能效专家' },
+            'AI Renewable Energy Advisor': { icon: '🌞', color: '#eab308', role: 'AI可再生能源顾问' },
+            'AI Utility Bill Analyzer': { icon: '💰', color: '#14b8a6', role: 'AI水电费分析师' }
         };
 
         // 拖拽相关变量
