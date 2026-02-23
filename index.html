@@ -21514,6 +21514,172 @@
                     { from: 'AI Performance Coach', to: 'AI Sports Medicine', content: '医疗需求' },
                     { from: 'AI Scout', to: 'AI Sports Director', content: '人才评估报告' }
                 ]
+            },
+            // Cycle 415 新增模板 - AI智能物流运输系统
+            {
+                id: 'ai-logistics-transport',
+                name: 'AI智能物流运输系统',
+                icon: '🚚',
+                desc: '从仓储管理到配送优化的完整物流运输流程',
+                agents: ['AI Logistics Director', 'AI Warehouse Manager', 'AI Fleet Coordinator', 'AI Delivery Optimizer', 'AI Route Planner', 'AI Supply Chain Analyst'],
+                positions: [
+                    { role: 'AI Logistics Director', x: 400, y: 30 },
+                    { role: 'AI Warehouse Manager', x: 150, y: 150 },
+                    { role: 'AI Fleet Coordinator', x: 650, y: 150 },
+                    { role: 'AI Route Planner', x: 150, y: 270 },
+                    { role: 'AI Delivery Optimizer', x: 650, y: 270 },
+                    { role: 'AI Supply Chain Analyst', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Logistics Director', to: 'AI Warehouse Manager', content: '仓储任务分配' },
+                    { from: 'AI Logistics Director', to: 'AI Fleet Coordinator', content: '车队调度任务' },
+                    { from: 'AI Warehouse Manager', to: 'AI Route Planner', content: '出库信息' },
+                    { from: 'AI Fleet Coordinator', to: 'AI Route Planner', content: '车辆可用信息' },
+                    { from: 'AI Route Planner', to: 'AI Delivery Optimizer', content: '优化路线' },
+                    { from: 'AI Delivery Optimizer', to: 'AI Supply Chain Analyst', content: '配送数据分析' }
+                ]
+            },
+            // Cycle 415 新增模板 - AI智能医疗卫生系统
+            {
+                id: 'ai-medical-healthcare',
+                name: 'AI智能医疗卫生系统',
+                icon: '🏥',
+                desc: '从诊疗服务到健康管理的完整医疗卫生流程',
+                agents: ['AI Medical Director', 'AI Diagnostic Specialist', 'AI Treatment Planner', 'AI Patient Coordinator', 'AI Medical Records', 'AI Telemedicine'],
+                positions: [
+                    { role: 'AI Medical Director', x: 400, y: 30 },
+                    { role: 'AI Diagnostic Specialist', x: 150, y: 150 },
+                    { role: 'AI Treatment Planner', x: 650, y: 150 },
+                    { role: 'AI Patient Coordinator', x: 150, y: 270 },
+                    { role: 'AI Medical Records', x: 650, y: 270 },
+                    { role: 'AI Telemedicine', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Medical Director', to: 'AI Diagnostic Specialist', content: '诊断任务分配' },
+                    { from: 'AI Medical Director', to: 'AI Treatment Planner', content: '治疗计划需求' },
+                    { from: 'AI Diagnostic Specialist', to: 'AI Treatment Planner', content: '诊断结果' },
+                    { from: 'AI Treatment Planner', to: 'AI Patient Coordinator', content: '治疗安排' },
+                    { from: 'AI Patient Coordinator', to: 'AI Telemedicine', content: '远程诊疗安排' },
+                    { from: 'AI Telemedicine', to: 'AI Medical Records', content: '诊疗记录' }
+                ]
+            },
+            // Cycle 415 新增模板 - AI智能金融保险系统
+            {
+                id: 'ai-financial-insurance',
+                name: 'AI智能金融保险系统',
+                icon: '💰',
+                desc: '从投资顾问到风险管理的完整金融保险流程',
+                agents: ['AI Finance Director', 'AI Investment Advisor', 'AI Risk Analyst', 'AI Insurance Broker', 'AI Tax Consultant', 'AI Wealth Manager'],
+                positions: [
+                    { role: 'AI Finance Director', x: 400, y: 30 },
+                    { role: 'AI Investment Advisor', x: 150, y: 150 },
+                    { role: 'AI Risk Analyst', x: 650, y: 150 },
+                    { role: 'AI Insurance Broker', x: 150, y: 270 },
+                    { role: 'AI Tax Consultant', x: 650, y: 270 },
+                    { role: 'AI Wealth Manager', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Finance Director', to: 'AI Investment Advisor', content: '投资任务分配' },
+                    { from: 'AI Finance Director', to: 'AI Risk Analyst', content: '风险评估需求' },
+                    { from: 'AI Investment Advisor', to: 'AI Wealth Manager', content: '投资方案' },
+                    { from: 'AI Risk Analyst', to: 'AI Insurance Broker', content: '保险需求' },
+                    { from: 'AI Wealth Manager', to: 'AI Tax Consultant', content: '税务规划需求' }
+                ]
+            },
+            // Cycle 415 新增模板 - AI智能教育培训系统
+            {
+                id: 'ai-education-training-v2',
+                name: 'AI智能教育培训系统',
+                icon: '📚',
+                desc: '从课程设计到培训评估的完整教育培训流程',
+                agents: ['AI Education Director', 'AI Curriculum Designer', 'AI Online Tutor', 'AI Exam Proctor', 'AI Learning Analyst', 'AI Training Coordinator'],
+                positions: [
+                    { role: 'AI Education Director', x: 400, y: 30 },
+                    { role: 'AI Curriculum Designer', x: 150, y: 150 },
+                    { role: 'AI Online Tutor', x: 650, y: 150 },
+                    { role: 'AI Exam Proctor', x: 150, y: 270 },
+                    { role: 'AI Learning Analyst', x: 650, y: 270 },
+                    { role: 'AI Training Coordinator', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Education Director', to: 'AI Curriculum Designer', content: '课程设计需求' },
+                    { from: 'AI Education Director', to: 'AI Online Tutor', content: '教学任务分配' },
+                    { from: 'AI Curriculum Designer', to: 'AI Online Tutor', content: '课程内容' },
+                    { from: 'AI Online Tutor', to: 'AI Exam Proctor', content: '考试安排' },
+                    { from: 'AI Exam Proctor', to: 'AI Learning Analyst', content: '考试数据' },
+                    { from: 'AI Learning Analyst', to: 'AI Training Coordinator', content: '学习分析报告' }
+                ]
+            },
+            // Cycle 415 新增模板 - AI智能能源环保系统
+            {
+                id: 'ai-energy-environment',
+                name: 'AI智能能源环保系统',
+                icon: '⚡',
+                desc: '从能源管理到可持续发展的完整能源环保流程',
+                agents: ['AI Energy Director', 'AI Power Grid Manager', 'AI Renewable Engineer', 'AI Carbon Analyst', 'AI Environmental Engineer', 'AI Sustainability Advisor'],
+                positions: [
+                    { role: 'AI Energy Director', x: 400, y: 30 },
+                    { role: 'AI Power Grid Manager', x: 150, y: 150 },
+                    { role: 'AI Renewable Engineer', x: 650, y: 150 },
+                    { role: 'AI Carbon Analyst', x: 150, y: 270 },
+                    { role: 'AI Environmental Engineer', x: 650, y: 270 },
+                    { role: 'AI Sustainability Advisor', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Energy Director', to: 'AI Power Grid Manager', content: '电网管理任务' },
+                    { from: 'AI Energy Director', to: 'AI Renewable Engineer', content: '新能源项目' },
+                    { from: 'AI Power Grid Manager', to: 'AI Carbon Analyst', content: '碳排放数据' },
+                    { from: 'AI Renewable Engineer', to: 'AI Environmental Engineer', content: '环保评估需求' },
+                    { from: 'AI Carbon Analyst', to: 'AI Sustainability Advisor', content: '碳分析报告' },
+                    { from: 'AI Environmental Engineer', to: 'AI Sustainability Advisor', content: '环保建议' }
+                ]
+            },
+            // Cycle 415 新增模板 - AI智能零售电商系统
+            {
+                id: 'ai-retail-ecommerce-v2',
+                name: 'AI智能零售电商系统',
+                icon: '🛒',
+                desc: '从店铺运营到客户管理的完整零售电商流程',
+                agents: ['AI Retail Manager', 'AI Inventory Analyst', 'AI Visual Merchandiser', 'AI Pricing Strategist', 'AI Customer Insights', 'AI Marketing Strategist'],
+                positions: [
+                    { role: 'AI Retail Manager', x: 400, y: 30 },
+                    { role: 'AI Inventory Analyst', x: 150, y: 150 },
+                    { role: 'AI Visual Merchandiser', x: 650, y: 150 },
+                    { role: 'AI Pricing Strategist', x: 150, y: 270 },
+                    { role: 'AI Customer Insights', x: 650, y: 270 },
+                    { role: 'AI Marketing Strategist', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Retail Manager', to: 'AI Inventory Analyst', content: '库存管理需求' },
+                    { from: 'AI Retail Manager', to: 'AI Visual Merchandiser', content: '陈列设计需求' },
+                    { from: 'AI Inventory Analyst', to: 'AI Pricing Strategist', content: '库存数据' },
+                    { from: 'AI Visual Merchandiser', to: 'AI Customer Insights', content: '陈列效果' },
+                    { from: 'AI Pricing Strategist', to: 'AI Marketing Strategist', content: '定价策略' },
+                    { from: 'AI Customer Insights', to: 'AI Marketing Strategist', content: '客户洞察' }
+                ]
+            },
+            // Cycle 415 新增模板 - AI智能法律服务系统
+            {
+                id: 'ai-legal-service-v2',
+                name: 'AI智能法律服务系统',
+                icon: '⚖️',
+                desc: '从法律咨询到诉讼代理的完整法律服务流程',
+                agents: ['AI Legal Director', 'AI Legal Consultant', 'AI Contract Drafter', 'AI Litigation Attorney', 'AI Compliance Officer', 'AI Paralegal'],
+                positions: [
+                    { role: 'AI Legal Director', x: 400, y: 30 },
+                    { role: 'AI Legal Consultant', x: 150, y: 150 },
+                    { role: 'AI Contract Drafter', x: 650, y: 150 },
+                    { role: 'AI Litigation Attorney', x: 150, y: 270 },
+                    { role: 'AI Compliance Officer', x: 650, y: 270 },
+                    { role: 'AI Paralegal', x: 400, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Legal Director', to: 'AI Legal Consultant', content: '法律咨询任务' },
+                    { from: 'AI Legal Director', to: 'AI Contract Drafter', content: '合同起草任务' },
+                    { from: 'AI Legal Consultant', to: 'AI Litigation Attorney', content: '诉讼需求' },
+                    { from: 'AI Contract Drafter', to: 'AI Compliance Officer', content: '合规审查' },
+                    { from: 'AI Litigation Attorney', to: 'AI Paralegal', content: '诉讼支持需求' }
+                ]
             }
         ];
 
@@ -25677,7 +25843,42 @@
             'AI Mechanic Assistant': { icon: '🔧', color: '#f97316', role: 'AI修理技师助理' },
             'AI Auto Insurance': { icon: '🛡️', color: '#3b82f6', role: 'AI车险顾问' },
             'AI Driving Instructor': { icon: '🎓', color: '#8b5cf6', role: 'AI驾驶教练' },
-            'AI Car Detailer': { icon: '✨', color: '#ec4899', role: 'AI汽车美容师' }
+            'AI Car Detailer': { icon: '✨', color: '#ec4899', role: 'AI汽车美容师' },
+            // Cycle 415 新增角色 - AI智能物流运输
+            'AI Logistics Director': { icon: '🚚', color: '#f97316', role: 'AI物流运输总监' },
+            'AI Warehouse Manager': { icon: '🏭', color: '#22c55e', role: 'AI仓储经理' },
+            'AI Fleet Coordinator': { icon: '🚛', color: '#3b82f6', role: 'AI车队协调师' },
+            'AI Delivery Optimizer': { icon: '📦', color: '#8b5cf6', role: 'AI配送优化师' },
+            'AI Route Planner': { icon: '🗺️', color: '#06b6d4', role: 'AI路线规划师' },
+            'AI Supply Chain Analyst': { icon: '🔗', color: '#f59e0b', role: 'AI供应链分析师' },
+            // Cycle 415 新增角色 - AI智能医疗卫生
+            'AI Medical Director': { icon: '🏥', color: '#ef4444', role: 'AI医疗卫生总监' },
+            'AI Diagnostic Specialist': { icon: '🔬', color: '#22c55e', role: 'AI诊断专家' },
+            'AI Treatment Planner': { icon: '💊', color: '#8b5cf6', role: 'AI治疗规划师' },
+            'AI Patient Coordinator': { icon: '🤝', color: '#f97316', role: 'AI患者协调师' },
+            'AI Medical Records': { icon: '📋', color: '#06b6d4', role: 'AI病历管理师' },
+            'AI Telemedicine': { icon: '📞', color: '#3b82f6', role: 'AI远程医疗师' },
+            // Cycle 415 新增角色 - AI智能金融保险
+            'AI Finance Director': { icon: '💰', color: '#22c55e', role: 'AI金融保险总监' },
+            'AI Investment Advisor': { icon: '📈', color: '#f97316', role: 'AI投资顾问' },
+            'AI Risk Analyst': { icon: '⚠️', color: '#ef4444', role: 'AI风险分析师' },
+            'AI Insurance Broker': { icon: '🛡️', color: '#3b82f6', role: 'AI保险经纪人' },
+            'AI Tax Consultant': { icon: '💵', color: '#8b5cf6', role: 'AI税务顾问' },
+            'AI Wealth Manager': { icon: '💎', color: '#f59e0b', role: 'AI财富管理师' },
+            // Cycle 415 新增角色 - AI智能教育培训
+            'AI Education Director': { icon: '📚', color: '#8b5cf6', role: 'AI教育培训总监' },
+            'AI Curriculum Designer': { icon: '📖', color: '#22c55e', role: 'AI课程设计师' },
+            'AI Online Tutor': { icon: '🎓', color: '#f97316', role: 'AI在线导师' },
+            'AI Exam Proctor': { icon: '👁️', color: '#3b82f6', role: 'AI智能监考' },
+            'AI Learning Analyst': { icon: '📊', color: '#06b6d4', role: 'AI学习分析师' },
+            'AI Training Coordinator': { icon: '📋', color: '#f59e0b', role: 'AI培训协调师' },
+            // Cycle 415 新增角色 - AI智能能源环保
+            'AI Energy Director': { icon: '⚡', color: '#eab308', role: 'AI能源环保总监' },
+            'AI Power Grid Manager': { icon: '🔌', color: '#22c55e', role: 'AI电网管理师' },
+            'AI Renewable Engineer': { icon: '🌞', color: '#f97316', role: 'AI新能源工程师' },
+            'AI Carbon Analyst': { icon: '🌍', color: '#3b82f6', role: 'AI碳分析师' },
+            'AI Environmental Engineer': { icon: '🌿', color: '#10b981', role: 'AI环保工程师' },
+            'AI Sustainability Advisor': { icon: '🌱', color: '#8b5cf6', role: 'AI可持续发展顾问' }
         };
 
         // 拖拽相关变量
