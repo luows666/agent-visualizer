@@ -27460,6 +27460,167 @@
                     { from: 'AI Transport Dispatcher', to: 'AI Cleaning Coordinator', content: '清洁还原' },
                     { from: 'AI Cleaning Coordinator', to: 'AI Customer Service Rep', content: '客户服务' }
                 ]
+            },
+            // AI智能剧院演出服务管理系统
+            {
+                id: 'ai-theater-services',
+                name: 'AI智能剧院演出服务管理系统',
+                icon: '🎭',
+                desc: '智能剧院演出服务管理，包括剧目策划、演员经纪、票务销售、场馆运营等',
+                agents: ['AI Theater Director', 'AI Playwright', 'AI Talent Agent', 'AI Ticket Manager', 'AI Venue Operator', 'AI Audience Experience'],
+                positions: [
+                    { role: 'AI Theater Director', x: 400, y: 30 },
+                    { role: 'AI Playwright', x: 150, y: 150 },
+                    { role: 'AI Talent Agent', x: 650, y: 150 },
+                    { role: 'AI Ticket Manager', x: 150, y: 300 },
+                    { role: 'AI Venue Operator', x: 400, y: 350 },
+                    { role: 'AI Audience Experience', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Theater Director', to: 'AI Playwright', content: '剧目策划' },
+                    { from: 'AI Theater Director', to: 'AI Talent Agent', content: '演员经纪' },
+                    { from: 'AI Playwright', to: 'AI Ticket Manager', content: '票务销售' },
+                    { from: 'AI Talent Agent', to: 'AI Venue Operator', content: '场馆运营' },
+                    { from: 'AI Venue Operator', to: 'AI Audience Experience', content: '观众体验' }
+                ]
+            },
+            // AI智能游泳健身服务管理系统
+            {
+                id: 'ai-swimming-fitness-services',
+                name: 'AI智能游泳健身服务管理系统',
+                icon: '🏊',
+                desc: '智能游泳健身服务管理，包括泳池运营、健身课程、私教管理会员营销等',
+                agents: ['AI Fitness Director', 'AI Pool Manager', 'AI Class Instructor', 'AI Personal Trainer', 'AI Member Manager', 'AI Marketing Rep'],
+                positions: [
+                    { role: 'AI Fitness Director', x: 400, y: 30 },
+                    { role: 'AI Pool Manager', x: 150, y: 150 },
+                    { role: 'AI Class Instructor', x: 650, y: 150 },
+                    { role: 'AI Personal Trainer', x: 150, y: 300 },
+                    { role: 'AI Member Manager', x: 400, y: 350 },
+                    { role: 'AI Marketing Rep', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fitness Director', to: 'AI Pool Manager', content: '泳池运营' },
+                    { from: 'AI Fitness Director', to: 'AI Class Instructor', content: '健身课程' },
+                    { from: 'AI Pool Manager', to: 'AI Personal Trainer', content: '私教管理' },
+                    { from: 'AI Class Instructor', to: 'AI Member Manager', content: '会员管理' },
+                    { from: 'AI Member Manager', to: 'AI Marketing Rep', content: '营销推广' }
+                ]
+            },
+            // AI智能茶楼休闲服务管理系统
+            {
+                id: 'ai-teahouse-services',
+                name: 'AI智能茶楼休闲服务管理系统',
+                icon: '🍵',
+                desc: '智能茶楼休闲服务管理，包括茶艺表演茶叶销售、空间租赁、会员服务等',
+                agents: ['AI Teahouse Director', 'AI Tea Art Performer', 'AI Tea Sales Manager', 'AI Space Coordinator', 'AI Member Service', 'AI Event Planner'],
+                positions: [
+                    { role: 'AI Teahouse Director', x: 400, y: 30 },
+                    { role: 'AI Tea Art Performer', x: 150, y: 150 },
+                    { role: 'AI Tea Sales Manager', x: 650, y: 150 },
+                    { role: 'AI Space Coordinator', x: 150, y: 300 },
+                    { role: 'AI Member Service', x: 400, y: 350 },
+                    { role: 'AI Event Planner', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Teahouse Director', to: 'AI Tea Art Performer', content: '茶艺表演' },
+                    { from: 'AI Teahouse Director', to: 'AI Tea Sales Manager', content: '茶叶销售' },
+                    { from: 'AI Tea Art Performer', to: 'AI Space Coordinator', content: '空间租赁' },
+                    { from: 'AI Tea Sales Manager', to: 'AI Member Service', content: '会员服务' },
+                    { from: 'AI Member Service', to: 'AI Event Planner', content: '活动策划' }
+                ]
+            },
+            // AI智能棋牌娱乐服务管理系统
+            {
+                id: 'ai-chess-card-services',
+                name: 'AI智能棋牌娱乐服务管理系统',
+                icon: '♠️',
+                desc: '智能棋牌娱乐服务管理，包括棋牌赛事组织、游戏裁判、会员管理、社交活动等',
+                agents: ['AI Entertainment Director', 'AI Tournament Organizer', 'AI Game Referee', 'AI Member Manager', 'AI Social Coordinator', 'AI Prize Manager'],
+                positions: [
+                    { role: 'AI Entertainment Director', x: 400, y: 30 },
+                    { role: 'AI Tournament Organizer', x: 150, y: 150 },
+                    { role: 'AI Game Referee', x: 650, y: 150 },
+                    { role: 'AI Member Manager', x: 150, y: 300 },
+                    { role: 'AI Social Coordinator', x: 400, y: 350 },
+                    { role: 'AI Prize Manager', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Entertainment Director', to: 'AI Tournament Organizer', content: '赛事组织' },
+                    { from: 'AI Entertainment Director', to: 'AI Game Referee', content: '游戏裁判' },
+                    { from: 'AI Tournament Organizer', to: 'AI Member Manager', content: '会员管理' },
+                    { from: 'AI Game Referee', to: 'AI Social Coordinator', content: '社交活动' },
+                    { from: 'AI Social Coordinator', to: 'AI Prize Manager', content: '奖品管理' }
+                ]
+            },
+            // AI智能KTV娱乐服务管理系统
+            {
+                id: 'ai-ktv-services',
+                name: 'AI智能KTV娱乐服务管理系统',
+                icon: '🎤',
+                desc: '智能KTV娱乐服务管理，包括包房预订、歌曲管理、音响设备、活动策划等',
+                agents: ['AI KTV Director', 'AI Room Reservation', 'AI Song Manager', 'AI Equipment Tech', 'AI Event Planner', 'AI Customer Service'],
+                positions: [
+                    { role: 'AI KTV Director', x: 400, y: 30 },
+                    { role: 'AI Room Reservation', x: 150, y: 150 },
+                    { role: 'AI Song Manager', x: 650, y: 150 },
+                    { role: 'AI Equipment Tech', x: 150, y: 300 },
+                    { role: 'AI Event Planner', x: 400, y: 350 },
+                    { role: 'AI Customer Service', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI KTV Director', to: 'AI Room Reservation', content: '包房预订' },
+                    { from: 'AI KTV Director', to: 'AI Song Manager', content: '歌曲管理' },
+                    { from: 'AI Room Reservation', to: 'AI Equipment Tech', content: '音响设备' },
+                    { from: 'AI Song Manager', to: 'AI Event Planner', content: '活动策划' },
+                    { from: 'AI Event Planner', to: 'AI Customer Service', content: '客户服务' }
+                ]
+            },
+            // AI智能足浴保健服务管理系统
+            {
+                id: 'ai-foot-spa-services',
+                name: 'AI智能足浴保健服务管理系统',
+                icon: '🦶',
+                desc: '智能足浴保健服务管理，包括技师管理、预约服务、产品销售、会员服务等',
+                agents: ['AI Foot Spa Director', 'AI Technician Manager', 'AI Booking Service', 'AI Product Sales', 'AI Member Service', 'AI Health Consultant'],
+                positions: [
+                    { role: 'AI Foot Spa Director', x: 400, y: 30 },
+                    { role: 'AI Technician Manager', x: 150, y: 150 },
+                    { role: 'AI Booking Service', x: 650, y: 150 },
+                    { role: 'AI Product Sales', x: 150, y: 300 },
+                    { role: 'AI Member Service', x: 400, y: 350 },
+                    { role: 'AI Health Consultant', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Foot Spa Director', to: 'AI Technician Manager', content: '技师管理' },
+                    { from: 'AI Foot Spa Director', to: 'AI Booking Service', content: '预约服务' },
+                    { from: 'AI Technician Manager', to: 'AI Product Sales', content: '产品销售' },
+                    { from: 'AI Booking Service', to: 'AI Member Service', content: '会员服务' },
+                    { from: 'AI Member Service', to: 'AI Health Consultant', content: '健康顾问' }
+                ]
+            },
+            // AI智能牙科保健服务管理系统
+            {
+                id: 'ai-dental-services',
+                name: 'AI智能牙科保健服务管理系统',
+                icon: '🦷',
+                desc: '智能牙科保健服务管理，包括诊疗预约、医生管理、器械消毒、患者档案等',
+                agents: ['AI Dental Director', 'AI Appointment Manager', 'AI Dentist Coordinator', 'AI Sterilization Manager', 'AI Patient Records', 'AI Insurance Coordinator'],
+                positions: [
+                    { role: 'AI Dental Director', x: 400, y: 30 },
+                    { role: 'AI Appointment Manager', x: 150, y: 150 },
+                    { role: 'AI Dentist Coordinator', x: 650, y: 150 },
+                    { role: 'AI Sterilization Manager', x: 150, y: 300 },
+                    { role: 'AI Patient Records', x: 400, y: 350 },
+                    { role: 'AI Insurance Coordinator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Dental Director', to: 'AI Appointment Manager', content: '诊疗预约' },
+                    { from: 'AI Dental Director', to: 'AI Dentist Coordinator', content: '医生管理' },
+                    { from: 'AI Appointment Manager', to: 'AI Sterilization Manager', content: '器械消毒' },
+                    { from: 'AI Dentist Coordinator', to: 'AI Patient Records', content: '患者档案' },
+                    { from: 'AI Patient Records', to: 'AI Insurance Coordinator', content: '保险协调' }
+                ]
             }
         ];
 
@@ -33264,7 +33425,56 @@
             'AI Transport Dispatcher': { icon: '🚚', color: '#22c55e', role: 'AI运输调度员' },
             'AI Warehouse Manager': { icon: '🏭', color: '#ec4899', role: 'AI仓储经理' },
             'AI Cleaning Coordinator': { icon: '🧹', color: '#06b6d4', role: 'AI清洁协调员' },
-            'AI Customer Service Rep': { icon: '📞', color: '#14b8a6', role: 'AI客服代表' }
+            'AI Customer Service Rep': { icon: '📞', color: '#14b8a6', role: 'AI客服代表' },
+            // AI智能剧院演出服务管理系统
+            'AI Theater Director': { icon: '🎭', color: '#8b5cf6', role: 'AI剧院演出总监' },
+            'AI Playwright': { icon: '📜', color: '#f59e0b', role: 'AI剧作家' },
+            'AI Talent Agent': { icon: '🎬', color: '#22c55e', role: 'AI演员经纪人' },
+            'AI Ticket Manager': { icon: '🎟️', color: '#ec4899', role: 'AI票务经理' },
+            'AI Venue Operator': { icon: '🏛️', color: '#06b6d4', role: 'AI场馆运营员' },
+            'AI Audience Experience': { icon: '👏', color: '#14b8a6', role: 'AI观众体验官' },
+            // AI智能游泳健身服务管理系统
+            'AI Fitness Director': { icon: '🏋️', color: '#3b82f6', role: 'AI健身总监' },
+            'AI Pool Manager': { icon: '🏊', color: '#f59e0b', role: 'AI泳池经理' },
+            'AI Class Instructor': { icon: '🧘', color: '#22c55e', role: 'AI课程教练' },
+            'AI Personal Trainer': { icon: '💪', color: '#ec4899', role: 'AI私人教练' },
+            'AI Member Manager': { icon: '👥', color: '#06b6d4', role: 'AI会员经理' },
+            'AI Marketing Rep': { icon: '📣', color: '#14b8a6', role: 'AI营销代表' },
+            // AI智能茶楼休闲服务管理系统
+            'AI Teahouse Director': { icon: '🍵', color: '#8b5cf6', role: 'AI茶楼总监' },
+            'AI Tea Art Performer': { icon: '🫖', color: '#f59e0b', role: 'AI茶艺师' },
+            'AI Tea Sales Manager': { icon: '🍃', color: '#22c55e', role: 'AI茶叶销售经理' },
+            'AI Space Coordinator': { icon: '🏠', color: '#ec4899', role: 'AI空间协调员' },
+            'AI Member Service': { icon: '💁', color: '#06b6d4', role: 'AI会员服务员' },
+            'AI Event Planner': { icon: '🎪', color: '#14b8a6', role: 'AI活动策划师' },
+            // AI智能棋牌娱乐服务管理系统
+            'AI Entertainment Director': { icon: '🎲', color: '#3b82f6', role: 'AI娱乐总监' },
+            'AI Tournament Organizer': { icon: '🏆', color: '#f59e0b', role: 'AI赛事组织者' },
+            'AI Game Referee': { icon: '⚖️', color: '#22c55e', role: 'AI游戏裁判' },
+            'AI Member Manager': { icon: '👤', color: '#ec4899', role: 'AI会员管理员' },
+            'AI Social Coordinator': { icon: '🤝', color: '#06b6d4', role: 'AI社交协调员' },
+            'AI Prize Manager': { icon: '🎁', color: '#14b8a6', role: 'AI奖品经理' },
+            // AI智能KTV娱乐服务管理系统
+            'AI KTV Director': { icon: '🎤', color: '#8b5cf6', role: 'AI KTV总监' },
+            'AI Room Reservation': { icon: '🚪', color: '#f59e0b', role: 'AI包房预订员' },
+            'AI Song Manager': { icon: '🎵', color: '#22c55e', role: 'AI歌曲管理员' },
+            'AI Equipment Tech': { icon: '🔊', color: '#ec4899', role: 'AI音响技师' },
+            'AI Event Planner': { icon: '🎉', color: '#06b6d4', role: 'AI活动策划员' },
+            'AI Customer Service': { icon: '🎧', color: '#14b8a6', role: 'AI客服专员' },
+            // AI智能足浴保健服务管理系统
+            'AI Foot Spa Director': { icon: '🦶', color: '#3b82f6', role: 'AI足浴总监' },
+            'AI Technician Manager': { icon: '👨‍⚕️', color: '#f59e0b', role: 'AI技师经理' },
+            'AI Booking Service': { icon: '📅', color: '#22c55e', role: 'AI预约服务员' },
+            'AI Product Sales': { icon: '💆', color: '#ec4899', role: 'AI产品销售员' },
+            'AI Member Service': { icon: '💳', color: '#06b6d4', role: 'AI会员服务员' },
+            'AI Health Consultant': { icon: '🩺', color: '#14b8a6', role: 'AI健康顾问' },
+            // AI智能牙科保健服务管理系统
+            'AI Dental Director': { icon: '🦷', color: '#8b5cf6', role: 'AI牙科总监' },
+            'AI Appointment Manager': { icon: '📆', color: '#f59e0b', role: 'AI预约经理' },
+            'AI Dentist Coordinator': { icon: '👨‍⚕️', color: '#22c55e', role: 'AI牙医协调员' },
+            'AI Sterilization Manager': { icon: '🧼', color: '#ec4899', role: 'AI消毒经理' },
+            'AI Patient Records': { icon: '📋', color: '#06b6d4', role: 'AI患者档案员' },
+            'AI Insurance Coordinator': { icon: '🏥', color: '#14b8a6', role: 'AI保险协调员' }
         };
 
         // 拖拽相关变量
