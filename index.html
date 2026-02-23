@@ -22563,8 +22563,166 @@
             }
         ];
 
+        // Cycle 422 新增模板
+        const cycle422Templates = [
+            {
+                id: 'ai-cinema-service',
+                name: 'AI智能电影院服务系统',
+                icon: '🎬',
+                desc: '从电影排片到观众服务的完整电影院服务流程',
+                agents: ['AI Cinema Director', 'AI Film Scheduler', 'AI Ticket Manager', 'AI Concession Manager', 'AI Auditorium Tech', 'AI Customer Relations'],
+                positions: [
+                    { role: 'AI Cinema Director', x: 400, y: 30 },
+                    { role: 'AI Film Scheduler', x: 150, y: 150 },
+                    { role: 'AI Ticket Manager', x: 650, y: 150 },
+                    { role: 'AI Concession Manager', x: 150, y: 270 },
+                    { role: 'AI Auditorium Tech', x: 400, y: 350 },
+                    { role: 'AI Customer Relations', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Cinema Director', to: 'AI Film Scheduler', content: '排片需求' },
+                    { from: 'AI Cinema Director', to: 'AI Ticket Manager', content: '票务需求' },
+                    { from: 'AI Cinema Director', to: 'AI Concession Manager', content: '卖品需求' },
+                    { from: 'AI Film Scheduler', to: 'AI Auditorium Tech', content: '技术需求' },
+                    { from: 'AI Ticket Manager', to: 'AI Customer Relations', content: '客服需求' }
+                ]
+            },
+            {
+                id: 'ai-auto-dealer-service',
+                name: 'AI智能4S店服务系统',
+                icon: '🚗',
+                desc: '从汽车销售到售后服务的完整4S店服务流程',
+                agents: ['AI Auto Dealer Director', 'AI Sales Consultant', 'AI Test Drive Coordinator', 'AI Finance Manager', 'AI Service Advisor', 'AI Parts Manager'],
+                positions: [
+                    { role: 'AI Auto Dealer Director', x: 400, y: 30 },
+                    { role: 'AI Sales Consultant', x: 150, y: 150 },
+                    { role: 'AI Test Drive Coordinator', x: 650, y: 150 },
+                    { role: 'AI Finance Manager', x: 150, y: 270 },
+                    { role: 'AI Service Advisor', x: 400, y: 350 },
+                    { role: 'AI Parts Manager', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Auto Dealer Director', to: 'AI Sales Consultant', content: '销售需求' },
+                    { from: 'AI Auto Dealer Director', to: 'AI Test Drive Coordinator', content: '试驾需求' },
+                    { from: 'AI Auto Dealer Director', to: 'AI Finance Manager', content: '金融需求' },
+                    { from: 'AI Sales Consultant', to: 'AI Service Advisor', content: '服务需求' },
+                    { from: 'AI Test Drive Coordinator', to: 'AI Parts Manager', content: '配件需求' }
+                ]
+            },
+            {
+                id: 'ai-express-logistics-service',
+                name: 'AI智能快递物流服务系统',
+                icon: '📦',
+                desc: '从揽收到配送的完整快递物流服务流程',
+                agents: ['AI Logistics Director', 'AI Route Optimizer', 'AI Warehouse Manager', 'AI Courier Coordinator', 'AI Tracking Specialist', 'AI Customer Support'],
+                positions: [
+                    { role: 'AI Logistics Director', x: 400, y: 30 },
+                    { role: 'AI Route Optimizer', x: 150, y: 150 },
+                    { role: 'AI Warehouse Manager', x: 650, y: 150 },
+                    { role: 'AI Courier Coordinator', x: 150, y: 270 },
+                    { role: 'AI Tracking Specialist', x: 400, y: 350 },
+                    { role: 'AI Customer Support', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Logistics Director', to: 'AI Route Optimizer', content: '路线需求' },
+                    { from: 'AI Logistics Director', to: 'AI Warehouse Manager', content: '仓储需求' },
+                    { from: 'AI Logistics Director', to: 'AI Courier Coordinator', content: '配送需求' },
+                    { from: 'AI Route Optimizer', to: 'AI Tracking Specialist', content: '追踪需求' },
+                    { from: 'AI Warehouse Manager', to: 'AI Customer Support', content: '客服需求' }
+                ]
+            },
+            {
+                id: 'ai-housekeeping-service',
+                name: 'AI智能家政服务系统',
+                icon: '🏠',
+                desc: '从家务料理到居家护理的完整家政服务流程',
+                agents: ['AI Housekeeping Director', 'AI Cleaning Supervisor', 'AI Nanny Coordinator', 'AI Elderly Care Provider', 'AI Cook Chef', 'AI Home Repair Tech'],
+                positions: [
+                    { role: 'AI Housekeeping Director', x: 400, y: 30 },
+                    { role: 'AI Cleaning Supervisor', x: 150, y: 150 },
+                    { role: 'AI Nanny Coordinator', x: 650, y: 150 },
+                    { role: 'AI Elderly Care Provider', x: 150, y: 270 },
+                    { role: 'AI Cook Chef', x: 400, y: 350 },
+                    { role: 'AI Home Repair Tech', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Housekeeping Director', to: 'AI Cleaning Supervisor', content: '清洁需求' },
+                    { from: 'AI Housekeeping Director', to: 'AI Nanny Coordinator', content: '育儿需求' },
+                    { from: 'AI Housekeeping Director', to: 'AI Elderly Care Provider', content: '养老需求' },
+                    { from: 'AI Nanny Coordinator', to: 'AI Cook Chef', content: '做饭需求' },
+                    { from: 'AI Elderly Care Provider', to: 'AI Home Repair Tech', content: '维修需求' }
+                ]
+            },
+            {
+                id: 'ai-advertising-service',
+                name: 'AI智能广告服务系统',
+                icon: '📢',
+                desc: '从广告策划到效果分析的完整广告服务流程',
+                agents: ['AI Advertising Director', 'AI Media Planner', 'AI Creative Writer', 'AI Graphic Designer', 'AI Ad Analyst', 'AI Campaign Manager'],
+                positions: [
+                    { role: 'AI Advertising Director', x: 400, y: 30 },
+                    { role: 'AI Media Planner', x: 150, y: 150 },
+                    { role: 'AI Creative Writer', x: 650, y: 150 },
+                    { role: 'AI Graphic Designer', x: 150, y: 270 },
+                    { role: 'AI Ad Analyst', x: 400, y: 350 },
+                    { role: 'AI Campaign Manager', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Advertising Director', to: 'AI Media Planner', content: '媒体需求' },
+                    { from: 'AI Advertising Director', to: 'AI Creative Writer', content: '创意需求' },
+                    { from: 'AI Advertising Director', to: 'AI Graphic Designer', content: '设计需求' },
+                    { from: 'AI Creative Writer', to: 'AI Ad Analyst', content: '分析需求' },
+                    { from: 'AI Graphic Designer', to: 'AI Campaign Manager', content: '活动需求' }
+                ]
+            },
+            {
+                id: 'ai-printing-service',
+                name: 'AI智能印刷服务系统',
+                icon: '🖨️',
+                desc: '从设计印刷到交付的完整印刷服务流程',
+                agents: ['AI Print Director', 'AI Design Prepress', 'AI Print Operator', 'AI Quality Controller', 'AI Delivery Coordinator', 'AI Production Planner'],
+                positions: [
+                    { role: 'AI Print Director', x: 400, y: 30 },
+                    { role: 'AI Design Prepress', x: 150, y: 150 },
+                    { role: 'AI Print Operator', x: 650, y: 150 },
+                    { role: 'AI Quality Controller', x: 150, y: 270 },
+                    { role: 'AI Delivery Coordinator', x: 400, y: 350 },
+                    { role: 'AI Production Planner', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Print Director', to: 'AI Design Prepress', content: '设计需求' },
+                    { from: 'AI Print Director', to: 'AI Print Operator', content: '印刷需求' },
+                    { from: 'AI Print Director', to: 'AI Production Planner', content: '计划需求' },
+                    { from: 'AI Print Operator', to: 'AI Quality Controller', content: '质检需求' },
+                    { from: 'AI Quality Controller', to: 'AI Delivery Coordinator', content: '配送需求' }
+                ]
+            },
+            {
+                id: 'ai-photography-service',
+                name: 'AI智能摄影服务系统',
+                icon: '📷',
+                desc: '从摄影拍摄到后期制作的完整摄影服务流程',
+                agents: ['AI Photography Director', 'AI Portrait Photographer', 'AI Wedding Photographer', 'AI Product Photographer', 'AI Photo Editor', 'AI Album Designer'],
+                positions: [
+                    { role: 'AI Photography Director', x: 400, y: 30 },
+                    { role: 'AI Portrait Photographer', x: 150, y: 150 },
+                    { role: 'AI Wedding Photographer', x: 650, y: 150 },
+                    { role: 'AI Product Photographer', x: 150, y: 270 },
+                    { role: 'AI Photo Editor', x: 400, y: 350 },
+                    { role: 'AI Album Designer', x: 650, y: 270 }
+                ],
+                messageFlows: [
+                    { from: 'AI Photography Director', to: 'AI Portrait Photographer', content: '人像需求' },
+                    { from: 'AI Photography Director', to: 'AI Wedding Photographer', content: '婚礼需求' },
+                    { from: 'AI Photography Director', to: 'AI Product Photographer', content: '产品需求' },
+                    { from: 'AI Portrait Photographer', to: 'AI Photo Editor', content: '后期需求' },
+                    { from: 'AI Photo Editor', to: 'AI Album Designer', content: '相册需求' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -27025,7 +27183,56 @@
             'AI Geriatric Doctor': { icon: '👨‍⚕️', color: '#06b6d4', role: 'AI老年病医生' },
             'AI Retirement Planner': { icon: '📋', color: '#f97316', role: 'AI退休规划师' },
             'AI Nursing Home Manager': { icon: '🏠', color: '#8b5cf6', role: 'AI养老院经理' },
-            'AI Senior Activity Planner': { icon: '🎪', color: '#a855f7', role: 'AI老年活动策划师' }
+            'AI Senior Activity Planner': { icon: '🎪', color: '#a855f7', role: 'AI老年活动策划师' },
+            // Cycle 422 新增角色 - AI智能电影院服务
+            'AI Cinema Director': { icon: '🎬', color: '#dc2626', role: 'AI电影院服务总监' },
+            'AI Film Scheduler': { icon: '📅', color: '#f97316', role: 'AI排片经理' },
+            'AI Ticket Manager': { icon: '🎟️', color: '#22c55e', role: 'AI票务经理' },
+            'AI Concession Manager': { icon: '🍿', color: '#f59e0b', role: 'AI卖品经理' },
+            'AI Auditorium Tech': { icon: '🔊', color: '#8b5cf6', role: 'AI影厅技术员' },
+            'AI Customer Relations': { icon: '🤝', color: '#ec4899', role: 'AI客户关系经理' },
+            // Cycle 422 新增角色 - AI智能4S店服务
+            'AI Auto Dealer Director': { icon: '🚗', color: '#3b82f6', role: 'AI4S店服务总监' },
+            'AI Sales Consultant': { icon: '💼', color: '#10b981', role: 'AI销售顾问' },
+            'AI Test Drive Coordinator': { icon: '🚙', color: '#f59e0b', role: 'AI试驾协调员' },
+            'AI Finance Manager': { icon: '💰', color: '#8b5cf6', role: 'AI金融服务经理' },
+            'AI Service Advisor': { icon: '🔧', color: '#06b6d4', role: 'AI服务顾问' },
+            'AI Parts Manager': { icon: '⚙️', color: '#64748b', role: 'AI配件经理' },
+            // Cycle 422 新增角色 - AI智能快递物流服务
+            'AI Logistics Director': { icon: '📦', color: '#f97316', role: 'AI快递物流总监' },
+            'AI Route Optimizer': { icon: '🗺️', color: '#22c55e', role: 'AI路线优化师' },
+            'AI Warehouse Manager': { icon: '🏭', color: '#8b5cf6', role: 'AI仓储经理' },
+            'AI Courier Coordinator': { icon: '🚴', color: '#06b6d4', role: 'AI快递协调员' },
+            'AI Tracking Specialist': { icon: '📍', color: '#ec4899', role: 'AI追踪专员' },
+            'AI Customer Support': { icon: '🎧', color: '#14b8a6', role: 'AI客服专员' },
+            // Cycle 422 新增角色 - AI智能家政服务
+            'AI Housekeeping Director': { icon: '🏠', color: '#a855f7', role: 'AI家政服务总监' },
+            'AI Cleaning Supervisor': { icon: '🧹', color: '#22c55e', role: 'AI清洁主管' },
+            'AI Nanny Coordinator': { icon: '👶', color: '#ec4899', role: 'AI育儿保姆协调员' },
+            'AI Elderly Care Provider': { icon: '👴', color: '#f97316', role: 'AI养老护理员' },
+            'AI Cook Chef': { icon: '👨‍🍳', color: '#f59e0b', role: 'AI做饭厨师' },
+            'AI Home Repair Tech': { icon: '🔧', color: '#64748b', role: 'AI家电维修技师' },
+            // Cycle 422 新增角色 - AI智能广告服务
+            'AI Advertising Director': { icon: '📢', color: '#ef4444', role: 'AI广告服务总监' },
+            'AI Media Planner': { icon: '📺', color: '#3b82f6', role: 'AI媒体策划师' },
+            'AI Creative Writer': { icon: '✍️', color: '#8b5cf6', role: 'AI创意文案师' },
+            'AI Graphic Designer': { icon: '🎨', color: '#ec4899', role: 'AI平面设计师' },
+            'AI Ad Analyst': { icon: '📊', color: '#22c55e', role: 'AI广告分析师' },
+            'AI Campaign Manager': { icon: '🎯', color: '#f97316', role: 'AI广告活动经理' },
+            // Cycle 422 新增角色 - AI智能印刷服务
+            'AI Print Director': { icon: '🖨️', color: '#06b6d4', role: 'AI印刷服务总监' },
+            'AI Design Prepress': { icon: '📐', color: '#8b5cf6', role: 'AI印前设计师' },
+            'AI Print Operator': { icon: '⚙️', color: '#64748b', role: 'AI印刷操作员' },
+            'AI Quality Controller': { icon: '✅', color: '#22c55e', role: 'AI质量控制员' },
+            'AI Delivery Coordinator': { icon: '🚚', color: '#f97316', role: 'AI配送协调员' },
+            'AI Production Planner': { icon: '📋', color: '#3b82f6', role: 'AI生产计划员' },
+            // Cycle 422 新增角色 - AI智能摄影服务
+            'AI Photography Director': { icon: '📷', color: '#ec4899', role: 'AI摄影服务总监' },
+            'AI Portrait Photographer': { icon: '👤', color: '#f97316', role: 'AI人像摄影师' },
+            'AI Wedding Photographer': { icon: '💒', color: '#a855f7', role: 'AI婚礼摄影师' },
+            'AI Product Photographer': { icon: '📦', color: '#22c55e', role: 'AI产品摄影师' },
+            'AI Photo Editor': { icon: '🎞️', color: '#8b5cf6', role: 'AI照片修图师' },
+            'AI Album Designer': { icon: '📒', color: '#06b6d4', role: 'AI相册设计师' }
         };
 
         // 拖拽相关变量
