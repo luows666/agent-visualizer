@@ -28575,8 +28575,165 @@
             }
         ];
 
+        const cycle458Templates = [
+            {
+                id: 'ai-retail-ecommerce',
+                name: 'AI智能零售电商系统',
+                icon: '🛒',
+                desc: '智能零售电商管理，包括商品管理、订单处理、客户服务等',
+                agents: ['AI Retail Director', 'AI Product Manager', 'AI Order Processor', 'AI Customer Service', 'AI Inventory Manager', 'AI Marketing Specialist'],
+                positions: [
+                    { role: 'AI Retail Director', x: 400, y: 30 },
+                    { role: 'AI Product Manager', x: 150, y: 150 },
+                    { role: 'AI Order Processor', x: 650, y: 150 },
+                    { role: 'AI Customer Service', x: 150, y: 300 },
+                    { role: 'AI Inventory Manager', x: 400, y: 350 },
+                    { role: 'AI Marketing Specialist', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Retail Director', to: 'AI Product Manager', content: '商品策略' },
+                    { from: 'AI Retail Director', to: 'AI Order Processor', content: '订单处理' },
+                    { from: 'AI Product Manager', to: 'AI Customer Service', content: '客户服务' },
+                    { from: 'AI Order Processor', to: 'AI Inventory Manager', content: '库存管理' },
+                    { from: 'AI Customer Service', to: 'AI Marketing Specialist', content: '营销推广' }
+                ]
+            },
+            {
+                id: 'ai-media-communication',
+                name: 'AI智能媒体传播系统',
+                icon: '📺',
+                desc: '智能媒体传播管理，包括内容制作、渠道分发、舆情监测等',
+                agents: ['AI Media Director', 'AI Content Creator', 'AI Channel Distributor', 'AI Public Opinion Monitor', 'AI Brand Manager', 'AI Analytics Specialist'],
+                positions: [
+                    { role: 'AI Media Director', x: 400, y: 30 },
+                    { role: 'AI Content Creator', x: 150, y: 150 },
+                    { role: 'AI Channel Distributor', x: 650, y: 150 },
+                    { role: 'AI Public Opinion Monitor', x: 150, y: 300 },
+                    { role: 'AI Brand Manager', x: 400, y: 350 },
+                    { role: 'AI Analytics Specialist', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Media Director', to: 'AI Content Creator', content: '内容创作' },
+                    { from: 'AI Media Director', to: 'AI Channel Distributor', content: '渠道分发' },
+                    { from: 'AI Content Creator', to: 'AI Public Opinion Monitor', content: '舆情监测' },
+                    { from: 'AI Channel Distributor', to: 'AI Brand Manager', content: '品牌管理' },
+                    { from: 'AI Public Opinion Monitor', to: 'AI Analytics Specialist', content: '数据分析' }
+                ]
+            },
+            {
+                id: 'ai-real-estate',
+                name: 'AI智能建筑房产系统',
+                icon: '🏠',
+                desc: '智能建筑房产管理，包括房源管理、交易流程、物业服务等',
+                agents: ['AI Real Estate Director', 'AI Property Lister', 'AI Transaction Manager', 'AI Property Manager', 'AI Valuation Expert', 'AI Client Relations'],
+                positions: [
+                    { role: 'AI Real Estate Director', x: 400, y: 30 },
+                    { role: 'AI Property Lister', x: 150, y: 150 },
+                    { role: 'AI Transaction Manager', x: 650, y: 150 },
+                    { role: 'AI Property Manager', x: 150, y: 300 },
+                    { role: 'AI Valuation Expert', x: 400, y: 350 },
+                    { role: 'AI Client Relations', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Real Estate Director', to: 'AI Property Lister', content: '房源管理' },
+                    { from: 'AI Real Estate Director', to: 'AI Transaction Manager', content: '交易流程' },
+                    { from: 'AI Property Lister', to: 'AI Property Manager', content: '物业服务' },
+                    { from: 'AI Transaction Manager', to: 'AI Valuation Expert', content: '估值评估' },
+                    { from: 'AI Property Manager', to: 'AI Client Relations', content: '客户关系' }
+                ]
+            },
+            {
+                id: 'ai-transport-logistics',
+                name: 'AI智能交通物流系统',
+                icon: '🚚',
+                desc: '智能交通物流管理，包括运输调度、路线规划、货物追踪等',
+                agents: ['AI Logistics Director', 'AI Transport Scheduler', 'AI Route Planner', 'AI Cargo Tracker', 'AI Fleet Manager', 'AI Delivery Coordinator'],
+                positions: [
+                    { role: 'AI Logistics Director', x: 400, y: 30 },
+                    { role: 'AI Transport Scheduler', x: 150, y: 150 },
+                    { role: 'AI Route Planner', x: 650, y: 150 },
+                    { role: 'AI Cargo Tracker', x: 150, y: 300 },
+                    { role: 'AI Fleet Manager', x: 400, y: 350 },
+                    { role: 'AI Delivery Coordinator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Logistics Director', to: 'AI Transport Scheduler', content: '运输调度' },
+                    { from: 'AI Logistics Director', to: 'AI Route Planner', content: '路线规划' },
+                    { from: 'AI Transport Scheduler', to: 'AI Cargo Tracker', content: '货物追踪' },
+                    { from: 'AI Route Planner', to: 'AI Fleet Manager', content: '车队管理' },
+                    { from: 'AI Cargo Tracker', to: 'AI Delivery Coordinator', content: '配送协调' }
+                ]
+            },
+            {
+                id: 'ai-food-beverage',
+                name: 'AI智能餐饮美食系统',
+                icon: '🍽️',
+                desc: '智能餐饮美食管理，包括菜品研发、食材采购、顾客服务等',
+                agents: ['AI F&B Director', 'AI Menu Designer', 'AI Ingredient Purchaser', 'AI Kitchen Manager', 'AI Customer Relations', 'AI Quality Controller'],
+                positions: [
+                    { role: 'AI F&B Director', x: 400, y: 30 },
+                    { role: 'AI Menu Designer', x: 150, y: 150 },
+                    { role: 'AI Ingredient Purchaser', x: 650, y: 150 },
+                    { role: 'AI Kitchen Manager', x: 150, y: 300 },
+                    { role: 'AI Customer Relations', x: 400, y: 350 },
+                    { role: 'AI Quality Controller', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI F&B Director', to: 'AI Menu Designer', content: '菜品研发' },
+                    { from: 'AI F&B Director', to: 'AI Ingredient Purchaser', content: '食材采购' },
+                    { from: 'AI Menu Designer', to: 'AI Kitchen Manager', content: '厨房管理' },
+                    { from: 'AI Ingredient Purchaser', to: 'AI Quality Controller', content: '质量控制' },
+                    { from: 'AI Kitchen Manager', to: 'AI Customer Relations', content: '顾客服务' }
+                ]
+            },
+            {
+                id: 'ai-sports-fitness',
+                name: 'AI智能体育健身系统',
+                icon: '🏋️',
+                desc: '智能体育健身管理，包括课程安排、私教匹配、健康监测等',
+                agents: ['AI Sports Director', 'AI Course Scheduler', 'AI Trainer Matcher', 'AI Health Monitor', 'AI Equipment Manager', 'AI Member Services'],
+                positions: [
+                    { role: 'AI Sports Director', x: 400, y: 30 },
+                    { role: 'AI Course Scheduler', x: 150, y: 150 },
+                    { role: 'AI Trainer Matcher', x: 650, y: 150 },
+                    { role: 'AI Health Monitor', x: 150, y: 300 },
+                    { role: 'AI Equipment Manager', x: 400, y: 350 },
+                    { role: 'AI Member Services', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sports Director', to: 'AI Course Scheduler', content: '课程安排' },
+                    { from: 'AI Sports Director', to: 'AI Trainer Matcher', content: '私教匹配' },
+                    { from: 'AI Course Scheduler', to: 'AI Health Monitor', content: '健康监测' },
+                    { from: 'AI Trainer Matcher', to: 'AI Equipment Manager', content: '设备管理' },
+                    { from: 'AI Health Monitor', to: 'AI Member Services', content: '会员服务' }
+                ]
+            },
+            {
+                id: 'ai-cultural-entertainment',
+                name: 'AI智能文化娱乐系统',
+                icon: '🎭',
+                desc: '智能文化娱乐管理，包括活动策划、演出管理、票务服务等',
+                agents: ['AI Entertainment Director', 'AI Event Planner', 'AI Show Manager', 'AI Ticket Agent', 'AI Audience Analyst', 'AI Content Curator'],
+                positions: [
+                    { role: 'AI Entertainment Director', x: 400, y: 30 },
+                    { role: 'AI Event Planner', x: 150, y: 150 },
+                    { role: 'AI Show Manager', x: 650, y: 150 },
+                    { role: 'AI Ticket Agent', x: 150, y: 300 },
+                    { role: 'AI Audience Analyst', x: 400, y: 350 },
+                    { role: 'AI Content Curator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Entertainment Director', to: 'AI Event Planner', content: '活动策划' },
+                    { from: 'AI Entertainment Director', to: 'AI Show Manager', content: '演出管理' },
+                    { from: 'AI Event Planner', to: 'AI Ticket Agent', content: '票务服务' },
+                    { from: 'AI Show Manager', to: 'AI Audience Analyst', content: '观众分析' },
+                    { from: 'AI Ticket Agent', to: 'AI Content Curator', content: '内容策划' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates];
 
         // Agent 角色配置
         const agentRoles = {
