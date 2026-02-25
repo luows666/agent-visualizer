@@ -33921,8 +33921,166 @@
             }
         ];
 
+        // Cycle 493 新增模板
+        const cycle493Templates = [
+            {
+                id: 'ai-realestate-smart',
+                name: 'AI智慧房地产系统',
+                icon: '🏠',
+                desc: '智慧房地产，包括房产交易、物业管理、市场分析等',
+                agents: ['AI RealEstateSmart Director', 'AI Property Trade', 'AI Property Manage', 'AI Market Analysis', 'AI RealEstate AI', 'AI RealEstate Analytics'],
+                positions: [
+                    { role: 'AI RealEstateSmart Director', x: 400, y: 30 },
+                    { role: 'AI Property Trade', x: 150, y: 150 },
+                    { role: 'AI Property Manage', x: 650, y: 150 },
+                    { role: 'AI Market Analysis', x: 150, y: 300 },
+                    { role: 'AI RealEstate AI', x: 400, y: 350 },
+                    { role: 'AI RealEstate Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI RealEstateSmart Director', to: 'AI Property Trade', content: '房产交易' },
+                    { from: 'AI RealEstateSmart Director', to: 'AI RealEstate Analytics', content: '房产分析' },
+                    { from: 'AI Property Trade', to: 'AI Property Manage', content: '物业管理' },
+                    { from: 'AI Property Manage', to: 'AI Market Analysis', content: '市场分析' },
+                    { from: 'AI Market Analysis', to: 'AI RealEstate AI', content: '房产AI' }
+                ]
+            },
+            {
+                id: 'ai-tourism-smart',
+                name: 'AI智慧旅游系统',
+                icon: '✈️',
+                desc: '智慧旅游，包括行程规划、景区服务、旅游营销等',
+                agents: ['AI TourismSmart Director', 'AI Trip Plan', 'AI Scenic Service', 'AI Tourism Market', 'AI Tourism AI', 'AI Tourism Analytics'],
+                positions: [
+                    { role: 'AI TourismSmart Director', x: 400, y: 30 },
+                    { role: 'AI Trip Plan', x: 150, y: 150 },
+                    { role: 'AI Scenic Service', x: 650, y: 150 },
+                    { role: 'AI Tourism Market', x: 150, y: 300 },
+                    { role: 'AI Tourism AI', x: 400, y: 350 },
+                    { role: 'AI Tourism Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI TourismSmart Director', to: 'AI Trip Plan', content: '行程规划' },
+                    { from: 'AI TourismSmart Director', to: 'AI Tourism Analytics', content: '旅游分析' },
+                    { from: 'AI Trip Plan', to: 'AI Scenic Service', content: '景区服务' },
+                    { from: 'AI Scenic Service', to: 'AI Tourism Market', content: '旅游营销' },
+                    { from: 'AI Tourism Market', to: 'AI Tourism AI', content: '旅游AI' }
+                ]
+            },
+            {
+                id: 'ai-restaurant-smart',
+                name: 'AI智慧餐饮系统',
+                icon: '🍽️',
+                desc: '智慧餐饮，包括菜品研发、厨房管理、客户体验等',
+                agents: ['AI RestaurantSmart Director', 'AI Dish Develop', 'AI Kitchen Manage', 'AI Customer Experience', 'AI Restaurant AI', 'AI Restaurant Analytics'],
+                positions: [
+                    { role: 'AI RestaurantSmart Director', x: 400, y: 30 },
+                    { role: 'AI Dish Develop', x: 150, y: 150 },
+                    { role: 'AI Kitchen Manage', x: 650, y: 150 },
+                    { role: 'AI Customer Experience', x: 150, y: 300 },
+                    { role: 'AI Restaurant AI', x: 400, y: 350 },
+                    { role: 'AI Restaurant Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI RestaurantSmart Director', to: 'AI Dish Develop', content: '菜品研发' },
+                    { from: 'AI RestaurantSmart Director', to: 'AI Restaurant Analytics', content: '餐饮分析' },
+                    { from: 'AI Dish Develop', to: 'AI Kitchen Manage', content: '厨房管理' },
+                    { from: 'AI Kitchen Manage', to: 'AI Customer Experience', content: '客户体验' },
+                    { from: 'AI Customer Experience', to: 'AI Restaurant AI', content: '餐饮AI' }
+                ]
+            },
+            {
+                id: 'ai-education2-smart',
+                name: 'AI智慧教育系统',
+                icon: '📚',
+                desc: '智慧教育，包括课程设计、学习管理、教育评估等',
+                agents: ['AI Education2Smart Director', 'AI Course Design', 'AI Learning Manage', 'AI Education Assess', 'AI Education2 AI', 'AI Education2 Analytics'],
+                positions: [
+                    { role: 'AI Education2Smart Director', x: 400, y: 30 },
+                    { role: 'AI Course Design', x: 150, y: 150 },
+                    { role: 'AI Learning Manage', x: 650, y: 150 },
+                    { role: 'AI Education Assess', x: 150, y: 300 },
+                    { role: 'AI Education2 AI', x: 400, y: 350 },
+                    { role: 'AI Education2 Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Education2Smart Director', to: 'AI Course Design', content: '课程设计' },
+                    { from: 'AI Education2Smart Director', to: 'AI Education2 Analytics', content: '教育分析' },
+                    { from: 'AI Course Design', to: 'AI Learning Manage', content: '学习管理' },
+                    { from: 'AI Learning Manage', to: 'AI Education Assess', content: '教育评估' },
+                    { from: 'AI Education Assess', to: 'AI Education2 AI', content: '教育AI' }
+                ]
+            },
+            {
+                id: 'ai-agriculture-smart',
+                name: 'AI智慧农业系统',
+                icon: '🌾',
+                desc: '智慧农业，包括种植管理、养殖管理、农产销售等',
+                agents: ['AI AgricultureSmart Director', 'AI Crop Manage', 'AI Livestock Manage', 'AI Farm Product Sales', 'AI Agriculture AI', 'AI Agriculture Analytics'],
+                positions: [
+                    { role: 'AI AgricultureSmart Director', x: 400, y: 30 },
+                    { role: 'AI Crop Manage', x: 150, y: 150 },
+                    { role: 'AI Livestock Manage', x: 650, y: 150 },
+                    { role: 'AI Farm Product Sales', x: 150, y: 300 },
+                    { role: 'AI Agriculture AI', x: 400, y: 350 },
+                    { role: 'AI Agriculture Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI AgricultureSmart Director', to: 'AI Crop Manage', content: '种植管理' },
+                    { from: 'AI AgricultureSmart Director', to: 'AI Agriculture Analytics', content: '农业分析' },
+                    { from: 'AI Crop Manage', to: 'AI Livestock Manage', content: '养殖管理' },
+                    { from: 'AI Livestock Manage', to: 'AI Farm Product Sales', content: '农产销售' },
+                    { from: 'AI Farm Product Sales', to: 'AI Agriculture AI', content: '农业AI' }
+                ]
+            },
+            {
+                id: 'ai-construction-smart',
+                name: 'AI智慧建筑系统',
+                icon: '🏗️',
+                desc: '智慧建筑，包括设计规划、施工管理、安全监控等',
+                agents: ['AI ConstructionSmart Director', 'AI Design Plan', 'AI Construction Manage', 'AI Safety Monitor', 'AI Construction AI', 'AI Construction Analytics'],
+                positions: [
+                    { role: 'AI ConstructionSmart Director', x: 400, y: 30 },
+                    { role: 'AI Design Plan', x: 150, y: 150 },
+                    { role: 'AI Construction Manage', x: 650, y: 150 },
+                    { role: 'AI Safety Monitor', x: 150, y: 300 },
+                    { role: 'AI Construction AI', x: 400, y: 350 },
+                    { role: 'AI Construction Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI ConstructionSmart Director', to: 'AI Design Plan', content: '设计规划' },
+                    { from: 'AI ConstructionSmart Director', to: 'AI Construction Analytics', content: '建筑分析' },
+                    { from: 'AI Design Plan', to: 'AI Construction Manage', content: '施工管理' },
+                    { from: 'AI Construction Manage', to: 'AI Safety Monitor', content: '安全监控' },
+                    { from: 'AI Safety Monitor', to: 'AI Construction AI', content: '建筑AI' }
+                ]
+            },
+            {
+                id: 'ai-sports2-smart',
+                name: 'AI智慧体育系统',
+                icon: '⚽',
+                desc: '智慧体育，包括赛事运营、训练管理、体育传媒等',
+                agents: ['AI Sports2Smart Director', 'AI Event Operate', 'AI Training Manage', 'AI Sports Media', 'AI Sports2 AI', 'AI Sports2 Analytics'],
+                positions: [
+                    { role: 'AI Sports2Smart Director', x: 400, y: 30 },
+                    { role: 'AI Event Operate', x: 150, y: 150 },
+                    { role: 'AI Training Manage', x: 650, y: 150 },
+                    { role: 'AI Sports Media', x: 150, y: 300 },
+                    { role: 'AI Sports2 AI', x: 400, y: 350 },
+                    { role: 'AI Sports2 Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sports2Smart Director', to: 'AI Event Operate', content: '赛事运营' },
+                    { from: 'AI Sports2Smart Director', to: 'AI Sports2 Analytics', content: '体育分析' },
+                    { from: 'AI Event Operate', to: 'AI Training Manage', content: '训练管理' },
+                    { from: 'AI Training Manage', to: 'AI Sports Media', content: '体育传媒' },
+                    { from: 'AI Sports Media', to: 'AI Sports2 AI', content: '体育AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -40737,7 +40895,57 @@
             'AI UnderwritingPrice': { icon: '💰', color: '#3b82f6', role: 'AI核保定价' },
             'AI Customer Manage': { icon: '👤', color: '#f59e0b', role: 'AI客户管理' },
             'AI Insurance AI': { icon: '🤖', color: '#8b5cf6', role: 'AI保险AI' },
-            'AI Insurance Analytics': { icon: '📊', color: '#06b6d4', role: 'AI保险分析' }
+            'AI Insurance Analytics': { icon: '📊', color: '#06b6d4', role: 'AI保险分析' },
+            // Cycle 493 新增 Agent Roles
+            // AI智慧房地产系统
+            'AI RealEstateSmart Director': { icon: '🏠', color: '#0ea5e9', role: 'AI房产总监' },
+            'AI Property Trade': { icon: '🏦', color: '#22c55e', role: 'AI房产交易' },
+            'AI Property Manage': { icon: '🔑', color: '#3b82f6', role: 'AI物业管理' },
+            'AI Market Analysis': { icon: '📈', color: '#f59e0b', role: 'AI市场分析' },
+            'AI RealEstate AI': { icon: '🤖', color: '#8b5cf6', role: 'AI房产AI' },
+            'AI RealEstate Analytics': { icon: '📊', color: '#06b6d4', role: 'AI房产分析' },
+            // AI智慧旅游系统
+            'AI TourismSmart Director': { icon: '✈️', color: '#6366f1', role: 'AI旅游总监' },
+            'AI Trip Plan': { icon: '🗺️', color: '#22c55e', role: 'AI行程规划' },
+            'AI Scenic Service': { icon: '🏞️', color: '#3b82f6', role: 'AI景区服务' },
+            'AI Tourism Market': { icon: '📢', color: '#f59e0b', role: 'AI旅游营销' },
+            'AI Tourism AI': { icon: '🤖', color: '#8b5cf6', role: 'AI旅游AI' },
+            'AI Tourism Analytics': { icon: '📊', color: '#06b6d4', role: 'AI旅游分析' },
+            // AI智慧餐饮系统
+            'AI RestaurantSmart Director': { icon: '🍽️', color: '#7c3aed', role: 'AI餐饮总监' },
+            'AI Dish Develop': { icon: '🍳', color: '#22c55e', role: 'AI菜品研发' },
+            'AI Kitchen Manage': { icon: '👨‍🍳', color: '#3b82f6', role: 'AI厨房管理' },
+            'AI Customer Experience': { icon: '😊', color: '#f59e0b', role: 'AI客户体验' },
+            'AI Restaurant AI': { icon: '🤖', color: '#8b5cf6', role: 'AI餐饮AI' },
+            'AI Restaurant Analytics': { icon: '📊', color: '#06b6d4', role: 'AI餐饮分析' },
+            // AI智慧教育系统
+            'AI Education2Smart Director': { icon: '📚', color: '#ec4899', role: 'AI教育总监' },
+            'AI Course Design': { icon: '📖', color: '#22c55e', role: 'AI课程设计' },
+            'AI Learning Manage': { icon: '🎓', color: '#3b82f6', role: 'AI学习管理' },
+            'AI Education Assess': { icon: '📝', color: '#f59e0b', role: 'AI教育评估' },
+            'AI Education2 AI': { icon: '🤖', color: '#8b5cf6', role: 'AI教育AI' },
+            'AI Education2 Analytics': { icon: '📊', color: '#06b6d4', role: 'AI教育分析' },
+            // AI智慧农业系统
+            'AI AgricultureSmart Director': { icon: '🌾', color: '#14b8a6', role: 'AI农业总监' },
+            'AI Crop Manage': { icon: '🌱', color: '#22c55e', role: 'AI种植管理' },
+            'AI Livestock Manage': { icon: '🐄', color: '#3b82f6', role: 'AI养殖管理' },
+            'AI Farm Product Sales': { icon: '🛒', color: '#f59e0b', role: 'AI农产销售' },
+            'AI Agriculture AI': { icon: '🤖', color: '#8b5cf6', role: 'AI农业AI' },
+            'AI Agriculture Analytics': { icon: '📊', color: '#06b6d4', role: 'AI农业分析' },
+            // AI智慧建筑系统
+            'AI ConstructionSmart Director': { icon: '🏗️', color: '#f97316', role: 'AI建筑总监' },
+            'AI Design Plan': { icon: '📐', color: '#22c55e', role: 'AI设计规划' },
+            'AI Construction Manage': { icon: '👷', color: '#3b82f6', role: 'AI施工管理' },
+            'AI Safety Monitor': { icon: '⚠️', color: '#f59e0b', role: 'AI安全监控' },
+            'AI Construction AI': { icon: '🤖', color: '#8b5cf6', role: 'AI建筑AI' },
+            'AI Construction Analytics': { icon: '📊', color: '#06b6d4', role: 'AI建筑分析' },
+            // AI智慧体育系统
+            'AI Sports2Smart Director': { icon: '⚽', color: '#dc2626', role: 'AI体育总监' },
+            'AI Event Operate': { icon: '🏆', color: '#22c55e', role: 'AI赛事运营' },
+            'AI Training Manage': { icon: '💪', color: '#3b82f6', role: 'AI训练管理' },
+            'AI Sports Media': { icon: '📺', color: '#f59e0b', role: 'AI体育传媒' },
+            'AI Sports2 AI': { icon: '🤖', color: '#8b5cf6', role: 'AI体育AI' },
+            'AI Sports2 Analytics': { icon: '📊', color: '#06b6d4', role: 'AI体育分析' }
         };
 
         // 拖拽相关变量
