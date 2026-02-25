@@ -35670,8 +35670,173 @@
             }
         ];
 
+        // Cycle 504 新增模板 - 7个行业服务系统
+        const cycle504Templates = [
+            // AI智能卫星互联网系统
+            {
+                id: 'ai-satellite-internet',
+                name: 'AI智能卫星互联网系统',
+                icon: '🛰️',
+                desc: '智能卫星互联网系统，包括卫星组网、信号传输、全球覆盖等',
+                agents: ['AI SatelliteNet Director', 'AI Satellite Constellation', 'AI Signal Trans', 'AI Global Coverage', 'AI SatelliteNet AI', 'AI Satellite Analytics'],
+                positions: [
+                    { role: 'AI SatelliteNet Director', x: 400, y: 30 },
+                    { role: 'AI Satellite Constellation', x: 150, y: 150 },
+                    { role: 'AI Signal Trans', x: 650, y: 150 },
+                    { role: 'AI Global Coverage', x: 150, y: 300 },
+                    { role: 'AI SatelliteNet AI', x: 400, y: 350 },
+                    { role: 'AI Satellite Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SatelliteNet Director', to: 'AI Satellite Constellation', content: '卫星组网' },
+                    { from: 'AI SatelliteNet Director', to: 'AI Satellite Analytics', content: '卫星分析' },
+                    { from: 'AI Satellite Constellation', to: 'AI Signal Trans', content: '信号传输' },
+                    { from: 'AI Signal Trans', to: 'AI Global Coverage', content: '全球覆盖' },
+                    { from: 'AI Global Coverage', to: 'AI SatelliteNet AI', content: '卫星互联网AI' }
+                ]
+            },
+            // AI智能脑机接口系统
+            {
+                id: 'ai-brain-computer',
+                name: 'AI智能脑机接口系统',
+                icon: '🧠',
+                desc: '智能脑机接口系统，包括神经信号采集、脑电解析、人机交互等',
+                agents: ['AI BCI Director', 'AI Neural Signal', 'AI EEG Analysis', 'AI Human Machine', 'AI BCI AI', 'AI BCI Analytics'],
+                positions: [
+                    { role: 'AI BCI Director', x: 400, y: 30 },
+                    { role: 'AI Neural Signal', x: 150, y: 150 },
+                    { role: 'AI EEG Analysis', x: 650, y: 150 },
+                    { role: 'AI Human Machine', x: 150, y: 300 },
+                    { role: 'AI BCI AI', x: 400, y: 350 },
+                    { role: 'AI BCI Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI BCI Director', to: 'AI Neural Signal', content: '神经信号采集' },
+                    { from: 'AI BCI Director', to: 'AI BCI Analytics', content: '脑机分析' },
+                    { from: 'AI Neural Signal', to: 'AI EEG Analysis', content: '脑电解析' },
+                    { from: 'AI EEG Analysis', to: 'AI Human Machine', content: '人机交互' },
+                    { from: 'AI Human Machine', to: 'AI BCI AI', content: '脑机接口AI' }
+                ]
+            },
+            // AI智能可控核聚变系统
+            {
+                id: 'ai-nuclear-fusion',
+                name: 'AI智能可控核聚变系统',
+                icon: '⚛️',
+                desc: '智能可控核聚变系统，包括等离子体控制、聚变反应、能量输出等',
+                agents: ['AI Fusion Director', 'AI Plasma Ctrl', 'AI Fusion React', 'AI Energy Output', 'AI Fusion AI', 'AI Fusion Analytics'],
+                positions: [
+                    { role: 'AI Fusion Director', x: 400, y: 30 },
+                    { role: 'AI Plasma Ctrl', x: 150, y: 150 },
+                    { role: 'AI Fusion React', x: 650, y: 150 },
+                    { role: 'AI Energy Output', x: 150, y: 300 },
+                    { role: 'AI Fusion AI', x: 400, y: 350 },
+                    { role: 'AI Fusion Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fusion Director', to: 'AI Plasma Ctrl', content: '等离子体控制' },
+                    { from: 'AI Fusion Director', to: 'AI Fusion Analytics', content: '聚变分析' },
+                    { from: 'AI Plasma Ctrl', to: 'AI Fusion React', content: '聚变反应' },
+                    { from: 'AI Fusion React', to: 'AI Energy Output', content: '能量输出' },
+                    { from: 'AI Energy Output', to: 'AI Fusion AI', content: '核聚变AI' }
+                ]
+            },
+            // AI智能碳捕集封存系统
+            {
+                id: 'ai-carbon-capture',
+                name: 'AI智能碳捕集封存系统',
+                icon: '🌍',
+                desc: '智能碳捕集封存系统，包括碳捕集、碳运输、碳封存等',
+                agents: ['AI CCS Director', 'AI Carbon Capture', 'AI Carbon Trans', 'AI Carbon Storage', 'AI CCS AI', 'AI CCS Analytics'],
+                positions: [
+                    { role: 'AI CCS Director', x: 400, y: 30 },
+                    { role: 'AI Carbon Capture', x: 150, y: 150 },
+                    { role: 'AI Carbon Trans', x: 650, y: 150 },
+                    { role: 'AI Carbon Storage', x: 150, y: 300 },
+                    { role: 'AI CCS AI', x: 400, y: 350 },
+                    { role: 'AI CCS Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI CCS Director', to: 'AI Carbon Capture', content: '碳捕集' },
+                    { from: 'AI CCS Director', to: 'AI CCS Analytics', content: '碳封存分析' },
+                    { from: 'AI Carbon Capture', to: 'AI Carbon Trans', content: '碳运输' },
+                    { from: 'AI Carbon Trans', to: 'AI Carbon Storage', content: '碳封存' },
+                    { from: 'AI Carbon Storage', to: 'AI CCS AI', content: '碳捕集AI' }
+                ]
+            },
+            // AI智能氢能源系统
+            {
+                id: 'ai-hydrogen-energy',
+                name: 'AI智能氢能源系统',
+                icon: '💨',
+                desc: '智能氢能源系统，包括制氢、储氢、氢燃料电池等',
+                agents: ['AI Hydrogen Director', 'AI Hydrogen Prod', 'AI Hydrogen Storage', 'AI Fuel Cell', 'AI Hydrogen AI', 'AI Hydrogen Analytics'],
+                positions: [
+                    { role: 'AI Hydrogen Director', x: 400, y: 30 },
+                    { role: 'AI Hydrogen Prod', x: 150, y: 150 },
+                    { role: 'AI Hydrogen Storage', x: 650, y: 150 },
+                    { role: 'AI Fuel Cell', x: 150, y: 300 },
+                    { role: 'AI Hydrogen AI', x: 400, y: 350 },
+                    { role: 'AI Hydrogen Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Hydrogen Director', to: 'AI Hydrogen Prod', content: '制氢' },
+                    { from: 'AI Hydrogen Director', to: 'AI Hydrogen Analytics', content: '氢能分析' },
+                    { from: 'AI Hydrogen Prod', to: 'AI Hydrogen Storage', content: '储氢' },
+                    { from: 'AI Hydrogen Storage', to: 'AI Fuel Cell', content: '氢燃料电池' },
+                    { from: 'AI Fuel Cell', to: 'AI Hydrogen AI', content: '氢能源AI' }
+                ]
+            },
+            // AI智能6G通信系统
+            {
+                id: 'ai-6g-comm',
+                name: 'AI智能6G通信系统',
+                icon: '📶',
+                desc: '智能6G通信系统，包括太赫兹通信、智能反射面、空天地一体化等',
+                agents: ['AI 6G Director', 'AI Terahertz', 'AI RIS Tech', 'AI Space Air', 'AI 6G AI', 'AI 6G Analytics'],
+                positions: [
+                    { role: 'AI 6G Director', x: 400, y: 30 },
+                    { role: 'AI Terahertz', x: 150, y: 150 },
+                    { role: 'AI RIS Tech', x: 650, y: 150 },
+                    { role: 'AI Space Air', x: 150, y: 300 },
+                    { role: 'AI 6G AI', x: 400, y: 350 },
+                    { role: 'AI 6G Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI 6G Director', to: 'AI Terahertz', content: '太赫兹通信' },
+                    { from: 'AI 6G Director', to: 'AI 6G Analytics', content: '6G分析' },
+                    { from: 'AI Terahertz', to: 'AI RIS Tech', content: '智能反射面' },
+                    { from: 'AI RIS Tech', to: 'AI Space Air', content: '空天地一体化' },
+                    { from: 'AI Space Air', to: 'AI 6G AI', content: '6G通信AI' }
+                ]
+            },
+            // AI智能数字孪生系统
+            {
+                id: 'ai-digital-twin',
+                name: 'AI智能数字孪生系统',
+                icon: '👥',
+                desc: '智能数字孪生系统，包括三维建模、实时仿真、虚实交互等',
+                agents: ['AI DigitalTwin Director', 'AI 3D Modeling', 'AI RealTime Sim', 'AI Virtual Reality', 'AI DigitalTwin AI', 'AI DigitalTwin Analytics'],
+                positions: [
+                    { role: 'AI DigitalTwin Director', x: 400, y: 30 },
+                    { role: 'AI 3D Modeling', x: 150, y: 150 },
+                    { role: 'AI RealTime Sim', x: 650, y: 150 },
+                    { role: 'AI Virtual Reality', x: 150, y: 300 },
+                    { role: 'AI DigitalTwin AI', x: 400, y: 350 },
+                    { role: 'AI DigitalTwin Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI DigitalTwin Director', to: 'AI 3D Modeling', content: '三维建模' },
+                    { from: 'AI DigitalTwin Director', to: 'AI DigitalTwin Analytics', content: '数字孪生分析' },
+                    { from: 'AI 3D Modeling', to: 'AI RealTime Sim', content: '实时仿真' },
+                    { from: 'AI RealTime Sim', to: 'AI Virtual Reality', content: '虚实交互' },
+                    { from: 'AI Virtual Reality', to: 'AI DigitalTwin AI', content: '数字孪生AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -43028,7 +43193,56 @@
             'AI Microbe Engineer': { icon: '🦠', color: '#8b5cf6', role: 'AI微生物工程师' },
             'AI Bio Manufacturer': { icon: '🏭', color: '#22c55e', role: 'AI生物制造专家' },
             'AI CRISPR Expert': { icon: '✂️', color: '#ec4899', role: 'AICRISPR专家' },
-            'AI Bioinformatics Analyst': { icon: '📊', color: '#f59e0b', role: 'AI生物信息分析师' }
+            'AI Bioinformatics Analyst': { icon: '📊', color: '#f59e0b', role: 'AI生物信息分析师' },
+            // Cycle 504 - AI智能卫星互联网系统
+            'AI SatelliteNet Director': { icon: '🛰️', color: '#8b5cf6', role: 'AI卫星互联网总监' },
+            'AI Satellite Constellation': { icon: '🛸', color: '#22c55e', role: 'AI卫星组网' },
+            'AI Signal Trans': { icon: '📡', color: '#3b82f6', role: 'AI信号传输' },
+            'AI Global Coverage': { icon: '🌍', color: '#f59e0b', role: 'AI全球覆盖' },
+            'AI SatelliteNet AI': { icon: '🤖', color: '#ec4899', role: 'AI卫星互联网AI' },
+            'AI Satellite Analytics': { icon: '📊', color: '#06b6d4', role: 'AI卫星分析' },
+            // Cycle 504 - AI智能脑机接口系统
+            'AI BCI Director': { icon: '🧠', color: '#8b5cf6', role: 'AI脑机接口总监' },
+            'AI Neural Signal': { icon: '🔬', color: '#22c55e', role: 'AI神经信号' },
+            'AI EEG Analysis': { icon: '📈', color: '#3b82f6', role: 'AI脑电解析' },
+            'AI Human Machine': { icon: '🤝', color: '#f59e0b', role: 'AI人机交互' },
+            'AI BCI AI': { icon: '🤖', color: '#ec4899', role: 'AI脑机接口AI' },
+            'AI BCI Analytics': { icon: '📊', color: '#06b6d4', role: 'AI脑机分析' },
+            // Cycle 504 - AI智能可控核聚变系统
+            'AI Fusion Director': { icon: '⚛️', color: '#8b5cf6', role: 'AI可控核聚变总监' },
+            'AI Plasma Ctrl': { icon: '🔥', color: '#22c55e', role: 'AI等离子体控制' },
+            'AI Fusion React': { icon: '⚡', color: '#3b82f6', role: 'AI聚变反应' },
+            'AI Energy Output': { icon: '🔋', color: '#f59e0b', role: 'AI能量输出' },
+            'AI Fusion AI': { icon: '🤖', color: '#ec4899', role: 'AI核聚变AI' },
+            'AI Fusion Analytics': { icon: '📊', color: '#06b6d4', role: 'AI聚变分析' },
+            // Cycle 504 - AI智能碳捕集封存系统
+            'AI CCS Director': { icon: '🌍', color: '#8b5cf6', role: 'AI碳捕集封存总监' },
+            'AI Carbon Capture': { icon: '🧪', color: '#22c55e', role: 'AI碳捕集' },
+            'AI Carbon Trans': { icon: '🚛', color: '#3b82f6', role: 'AI碳运输' },
+            'AI Carbon Storage': { icon: '🏤', color: '#f59e0b', role: 'AI碳封存' },
+            'AI CCS AI': { icon: '🤖', color: '#ec4899', role: 'AI碳捕集AI' },
+            'AI CCS Analytics': { icon: '📊', color: '#06b6d4', role: 'AI碳封存分析' },
+            // Cycle 504 - AI智能氢能源系统
+            'AI Hydrogen Director': { icon: '💨', color: '#8b5cf6', role: 'AI氢能源总监' },
+            'AI Hydrogen Prod': { icon: '⚗️', color: '#22c55e', role: 'AI制氢' },
+            'AI Hydrogen Storage': { icon: '🫁', color: '#3b82f6', role: 'AI储氢' },
+            'AI Fuel Cell': { icon: '🔋', color: '#f59e0b', role: 'AI氢燃料电池' },
+            'AI Hydrogen AI': { icon: '🤖', color: '#ec4899', role: 'AI氢能源AI' },
+            'AI Hydrogen Analytics': { icon: '📊', color: '#06b6d4', role: 'AI氢能分析' },
+            // Cycle 504 - AI智能6G通信系统
+            'AI 6G Director': { icon: '📶', color: '#8b5cf6', role: 'AI6G通信总监' },
+            'AI Terahertz': { icon: '📻', color: '#22c55e', role: 'AI太赫兹通信' },
+            'AI RIS Tech': { icon: '📲', color: '#3b82f6', role: 'AI智能反射面' },
+            'AI Space Air': { icon: '🛸', color: '#f59e0b', role: 'AI空天地一体化' },
+            'AI 6G AI': { icon: '🤖', color: '#ec4899', role: 'AI6G通信AI' },
+            'AI 6G Analytics': { icon: '📊', color: '#06b6d4', role: 'AI6G分析' },
+            // Cycle 504 - AI智能数字孪生系统
+            'AI DigitalTwin Director': { icon: '👥', color: '#8b5cf6', role: 'AI数字孪生总监' },
+            'AI 3D Modeling': { icon: '🎲', color: '#22c55e', role: 'AI三维建模' },
+            'AI RealTime Sim': { icon: '⏱️', color: '#3b82f6', role: 'AI实时仿真' },
+            'AI Virtual Reality': { icon: '🥽', color: '#f59e0b', role: 'AI虚实交互' },
+            'AI DigitalTwin AI': { icon: '🤖', color: '#ec4899', role: 'AI数字孪生AI' },
+            'AI DigitalTwin Analytics': { icon: '📊', color: '#06b6d4', role: 'AI数字孪生分析' }
         };
 
         // 拖拽相关变量
