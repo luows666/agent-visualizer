@@ -32342,11 +32342,323 @@
                     { from: 'AI Process Control', to: 'AI Sludge Process', content: '污泥处理' },
                     { from: 'AI Sludge Process', to: 'AI Sewage AI', content: '污水AI' }
                 ]
+            },
+            {
+                id: 'ai-substation-smart',
+                name: 'AI智慧变电站系统',
+                icon: '⚡',
+                desc: '智慧变电站管理，包括电力监控、设备守护、故障检测等',
+                agents: ['AI SubstationSmart Director', 'AI Power Monitor', 'AI Equipment Guard', 'AI Fault Detect', 'AI Substation AI', 'AI Substation Analytics'],
+                positions: [
+                    { role: 'AI SubstationSmart Director', x: 400, y: 30 },
+                    { role: 'AI Power Monitor', x: 150, y: 150 },
+                    { role: 'AI Equipment Guard', x: 650, y: 150 },
+                    { role: 'AI Fault Detect', x: 150, y: 300 },
+                    { role: 'AI Substation AI', x: 400, y: 350 },
+                    { role: 'AI Substation Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SubstationSmart Director', to: 'AI Power Monitor', content: '电力监控' },
+                    { from: 'AI SubstationSmart Director', to: 'AI Substation Analytics', content: '变电站分析' },
+                    { from: 'AI Power Monitor', to: 'AI Equipment Guard', content: '设备守护' },
+                    { from: 'AI Equipment Guard', to: 'AI Fault Detect', content: '故障检测' },
+                    { from: 'AI Fault Detect', to: 'AI Substation AI', content: '变电站AI' }
+                ]
+            },
+            {
+                id: 'ai-windpower-smart',
+                name: 'AI智慧风力发电系统',
+                icon: '🌀',
+                desc: '智慧风电管理，包括风机控制、功率预测、电网融合等',
+                agents: ['AI WindpowerSmart Director', 'AI Turbine Control', 'AI Wind Predict', 'AI Grid Integrate', 'AI Windpower AI', 'AI Windpower Analytics'],
+                positions: [
+                    { role: 'AI WindpowerSmart Director', x: 400, y: 30 },
+                    { role: 'AI Turbine Control', x: 150, y: 150 },
+                    { role: 'AI Wind Predict', x: 650, y: 150 },
+                    { role: 'AI Grid Integrate', x: 150, y: 300 },
+                    { role: 'AI Windpower AI', x: 400, y: 350 },
+                    { role: 'AI Windpower Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI WindpowerSmart Director', to: 'AI Turbine Control', content: '风机控制' },
+                    { from: 'AI WindpowerSmart Director', to: 'AI Windpower Analytics', content: '风电分析' },
+                    { from: 'AI Turbine Control', to: 'AI Wind Predict', content: '功率预测' },
+                    { from: 'AI Wind Predict', to: 'AI Grid Integrate', content: '电网融合' },
+                    { from: 'AI Grid Integrate', to: 'AI Windpower AI', content: '风电AI' }
+                ]
+            },
+            {
+                id: 'ai-solarpower-smart',
+                name: 'AI智慧光伏发电系统',
+                icon: '☀️',
+                desc: '智慧光伏管理，包括面板监测、光照预测、逆变器控制等',
+                agents: ['AI SolarpowerSmart Director', 'AI Panel Monitor', 'AI Solar Predict', 'AI Inverter Control', 'AI Solarpower AI', 'AI Solarpower Analytics'],
+                positions: [
+                    { role: 'AI SolarpowerSmart Director', x: 400, y: 30 },
+                    { role: 'AI Panel Monitor', x: 150, y: 150 },
+                    { role: 'AI Solar Predict', x: 650, y: 150 },
+                    { role: 'AI Inverter Control', x: 150, y: 300 },
+                    { role: 'AI Solarpower AI', x: 400, y: 350 },
+                    { role: 'AI Solarpower Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SolarpowerSmart Director', to: 'AI Panel Monitor', content: '面板监测' },
+                    { from: 'AI SolarpowerSmart Director', to: 'AI Solarpower Analytics', content: '光伏分析' },
+                    { from: 'AI Panel Monitor', to: 'AI Solar Predict', content: '光照预测' },
+                    { from: 'AI Solar Predict', to: 'AI Inverter Control', content: '逆变器控制' },
+                    { from: 'AI Inverter Control', to: 'AI Solarpower AI', content: '光伏AI' }
+                ]
+            },
+            {
+                id: 'ai-incinerator-smart',
+                name: 'AI智慧垃圾焚烧系统',
+                icon: '🔥',
+                desc: '智慧垃圾焚烧管理，包括燃烧控制、排放监测、灰渣处理等',
+                agents: ['AI IncineratorSmart Director', 'AI Combustion Control', 'AI Emission Monitor', 'AI Ash Process', 'AI Incinerator AI', 'AI Incinerator Analytics'],
+                positions: [
+                    { role: 'AI IncineratorSmart Director', x: 400, y: 30 },
+                    { role: 'AI Combustion Control', x: 150, y: 150 },
+                    { role: 'AI Emission Monitor', x: 650, y: 150 },
+                    { role: 'AI Ash Process', x: 150, y: 300 },
+                    { role: 'AI Incinerator AI', x: 400, y: 350 },
+                    { role: 'AI Incinerator Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI IncineratorSmart Director', to: 'AI Combustion Control', content: '燃烧控制' },
+                    { from: 'AI IncineratorSmart Director', to: 'AI Incinerator Analytics', content: '焚烧分析' },
+                    { from: 'AI Combustion Control', to: 'AI Emission Monitor', content: '排放监测' },
+                    { from: 'AI Emission Monitor', to: 'AI Ash Process', content: '灰渣处理' },
+                    { from: 'AI Ash Process', to: 'AI Incinerator AI', content: '焚烧AI' }
+                ]
+            },
+            {
+                id: 'ai-hazmat-smart',
+                name: 'AI智慧危险品仓储系统',
+                icon: '☢️',
+                desc: '智慧危化品仓储，包括危化品监护、泄漏检测、应急处置等',
+                agents: ['AI HazmatSmart Director', 'AI Chemical Guard', 'AI Leak Detect', 'AI Emergency Dispose', 'AI Hazmat AI', 'AI Hazmat Analytics'],
+                positions: [
+                    { role: 'AI HazmatSmart Director', x: 400, y: 30 },
+                    { role: 'AI Chemical Guard', x: 150, y: 150 },
+                    { role: 'AI Leak Detect', x: 650, y: 150 },
+                    { role: 'AI Emergency Dispose', x: 150, y: 300 },
+                    { role: 'AI Hazmat AI', x: 400, y: 350 },
+                    { role: 'AI Hazmat Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HazmatSmart Director', to: 'AI Chemical Guard', content: '危化品监护' },
+                    { from: 'AI HazmatSmart Director', to: 'AI Hazmat Analytics', content: '危化品分析' },
+                    { from: 'AI Chemical Guard', to: 'AI Leak Detect', content: '泄漏检测' },
+                    { from: 'AI Leak Detect', to: 'AI Emergency Dispose', content: '应急处置' },
+                    { from: 'AI Emergency Dispose', to: 'AI Hazmat AI', content: '危化品AI' }
+                ]
+            },
+            {
+                id: 'ai-coldchain-smart',
+                name: 'AI智慧冷链物流系统',
+                icon: '❄️',
+                desc: '智慧冷链物流，包括温度监控、冷库管理、路线优化等',
+                agents: ['AI ColdchainSmart Director', 'AI Temp Monitor', 'AI Cold Storage', 'AI Route Optimize', 'AI Coldchain AI', 'AI Coldchain Analytics'],
+                positions: [
+                    { role: 'AI ColdchainSmart Director', x: 400, y: 30 },
+                    { role: 'AI Temp Monitor', x: 150, y: 150 },
+                    { role: 'AI Cold Storage', x: 650, y: 150 },
+                    { role: 'AI Route Optimize', x: 150, y: 300 },
+                    { role: 'AI Coldchain AI', x: 400, y: 350 },
+                    { role: 'AI Coldchain Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI ColdchainSmart Director', to: 'AI Temp Monitor', content: '温度监控' },
+                    { from: 'AI ColdchainSmart Director', to: 'AI Coldchain Analytics', content: '冷链分析' },
+                    { from: 'AI Temp Monitor', to: 'AI Cold Storage', content: '冷库管理' },
+                    { from: 'AI Cold Storage', to: 'AI Route Optimize', content: '路线优化' },
+                    { from: 'AI Route Optimize', to: 'AI Coldchain AI', content: '冷链AI' }
+                ]
+            },
+            {
+                id: 'ai-classroom-smart',
+                name: 'AI智慧教室系统',
+                icon: '🏫',
+                desc: '智慧教室管理，包括备课助手、学生评估、教室设备等',
+                agents: ['AI ClassroomSmart Director', 'AI Lesson Plan', 'AI Student Assess', 'AI Classroom Device', 'AI Classroom AI', 'AI Classroom Analytics'],
+                positions: [
+                    { role: 'AI ClassroomSmart Director', x: 400, y: 30 },
+                    { role: 'AI Lesson Plan', x: 150, y: 150 },
+                    { role: 'AI Student Assess', x: 650, y: 150 },
+                    { role: 'AI Classroom Device', x: 150, y: 300 },
+                    { role: 'AI Classroom AI', x: 400, y: 350 },
+                    { role: 'AI Classroom Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI ClassroomSmart Director', to: 'AI Lesson Plan', content: '备课助手' },
+                    { from: 'AI ClassroomSmart Director', to: 'AI Classroom Analytics', content: '教室分析' },
+                    { from: 'AI Lesson Plan', to: 'AI Student Assess', content: '学生评估' },
+                    { from: 'AI Student Assess', to: 'AI Classroom Device', content: '教室设备' },
+                    { from: 'AI Classroom Device', to: 'AI Classroom AI', content: '教室AI' }
+                ]
+            }
+        ];
+
+        // Cycle 484 新增模板
+        const cycle484Templates = [
+            {
+                id: 'ai-substation-smart',
+                name: 'AI智慧变电站系统',
+                icon: '⚡',
+                desc: '智慧变电站管理，包括电力监控、设备守护、故障检测等',
+                agents: ['AI SubstationSmart Director', 'AI Power Monitor', 'AI Equipment Guard', 'AI Fault Detect', 'AI Substation AI', 'AI Substation Analytics'],
+                positions: [
+                    { role: 'AI SubstationSmart Director', x: 400, y: 30 },
+                    { role: 'AI Power Monitor', x: 150, y: 150 },
+                    { role: 'AI Equipment Guard', x: 650, y: 150 },
+                    { role: 'AI Fault Detect', x: 150, y: 300 },
+                    { role: 'AI Substation AI', x: 400, y: 350 },
+                    { role: 'AI Substation Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SubstationSmart Director', to: 'AI Power Monitor', content: '电力监控' },
+                    { from: 'AI SubstationSmart Director', to: 'AI Substation Analytics', content: '变电站分析' },
+                    { from: 'AI Power Monitor', to: 'AI Equipment Guard', content: '设备守护' },
+                    { from: 'AI Equipment Guard', to: 'AI Fault Detect', content: '故障检测' },
+                    { from: 'AI Fault Detect', to: 'AI Substation AI', content: '变电站AI' }
+                ]
+            },
+            {
+                id: 'ai-windpower-smart',
+                name: 'AI智慧风力发电系统',
+                icon: '🌀',
+                desc: '智慧风电管理，包括风机控制、功率预测、电网融合等',
+                agents: ['AI WindpowerSmart Director', 'AI Turbine Control', 'AI Wind Predict', 'AI Grid Integrate', 'AI Windpower AI', 'AI Windpower Analytics'],
+                positions: [
+                    { role: 'AI WindpowerSmart Director', x: 400, y: 30 },
+                    { role: 'AI Turbine Control', x: 150, y: 150 },
+                    { role: 'AI Wind Predict', x: 650, y: 150 },
+                    { role: 'AI Grid Integrate', x: 150, y: 300 },
+                    { role: 'AI Windpower AI', x: 400, y: 350 },
+                    { role: 'AI Windpower Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI WindpowerSmart Director', to: 'AI Turbine Control', content: '风机控制' },
+                    { from: 'AI WindpowerSmart Director', to: 'AI Windpower Analytics', content: '风电分析' },
+                    { from: 'AI Turbine Control', to: 'AI Wind Predict', content: '功率预测' },
+                    { from: 'AI Wind Predict', to: 'AI Grid Integrate', content: '电网融合' },
+                    { from: 'AI Grid Integrate', to: 'AI Windpower AI', content: '风电AI' }
+                ]
+            },
+            {
+                id: 'ai-solarpower-smart',
+                name: 'AI智慧光伏发电系统',
+                icon: '☀️',
+                desc: '智慧光伏管理，包括面板监测、光照预测、逆变器控制等',
+                agents: ['AI SolarpowerSmart Director', 'AI Panel Monitor', 'AI Solar Predict', 'AI Inverter Control', 'AI Solarpower AI', 'AI Solarpower Analytics'],
+                positions: [
+                    { role: 'AI SolarpowerSmart Director', x: 400, y: 30 },
+                    { role: 'AI Panel Monitor', x: 150, y: 150 },
+                    { role: 'AI Solar Predict', x: 650, y: 150 },
+                    { role: 'AI Inverter Control', x: 150, y: 300 },
+                    { role: 'AI Solarpower AI', x: 400, y: 350 },
+                    { role: 'AI Solarpower Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SolarpowerSmart Director', to: 'AI Panel Monitor', content: '面板监测' },
+                    { from: 'AI SolarpowerSmart Director', to: 'AI Solarpower Analytics', content: '光伏分析' },
+                    { from: 'AI Panel Monitor', to: 'AI Solar Predict', content: '光照预测' },
+                    { from: 'AI Solar Predict', to: 'AI Inverter Control', content: '逆变器控制' },
+                    { from: 'AI Inverter Control', to: 'AI Solarpower AI', content: '光伏AI' }
+                ]
+            },
+            {
+                id: 'ai-incinerator-smart',
+                name: 'AI智慧垃圾焚烧系统',
+                icon: '🔥',
+                desc: '智慧垃圾焚烧管理，包括燃烧控制、排放监测、灰渣处理等',
+                agents: ['AI IncineratorSmart Director', 'AI Combustion Control', 'AI Emission Monitor', 'AI Ash Process', 'AI Incinerator AI', 'AI Incinerator Analytics'],
+                positions: [
+                    { role: 'AI IncineratorSmart Director', x: 400, y: 30 },
+                    { role: 'AI Combustion Control', x: 150, y: 150 },
+                    { role: 'AI Emission Monitor', x: 650, y: 150 },
+                    { role: 'AI Ash Process', x: 150, y: 300 },
+                    { role: 'AI Incinerator AI', x: 400, y: 350 },
+                    { role: 'AI Incinerator Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI IncineratorSmart Director', to: 'AI Combustion Control', content: '燃烧控制' },
+                    { from: 'AI IncineratorSmart Director', to: 'AI Incinerator Analytics', content: '焚烧分析' },
+                    { from: 'AI Combustion Control', to: 'AI Emission Monitor', content: '排放监测' },
+                    { from: 'AI Emission Monitor', to: 'AI Ash Process', content: '灰渣处理' },
+                    { from: 'AI Ash Process', to: 'AI Incinerator AI', content: '焚烧AI' }
+                ]
+            },
+            {
+                id: 'ai-hazmat-smart',
+                name: 'AI智慧危险品仓储系统',
+                icon: '☢️',
+                desc: '智慧危化品仓储，包括危化品监护、泄漏检测、应急处置等',
+                agents: ['AI HazmatSmart Director', 'AI Chemical Guard', 'AI Leak Detect', 'AI Emergency Dispose', 'AI Hazmat AI', 'AI Hazmat Analytics'],
+                positions: [
+                    { role: 'AI HazmatSmart Director', x: 400, y: 30 },
+                    { role: 'AI Chemical Guard', x: 150, y: 150 },
+                    { role: 'AI Leak Detect', x: 650, y: 150 },
+                    { role: 'AI Emergency Dispose', x: 150, y: 300 },
+                    { role: 'AI Hazmat AI', x: 400, y: 350 },
+                    { role: 'AI Hazmat Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HazmatSmart Director', to: 'AI Chemical Guard', content: '危化品监护' },
+                    { from: 'AI HazmatSmart Director', to: 'AI Hazmat Analytics', content: '危化品分析' },
+                    { from: 'AI Chemical Guard', to: 'AI Leak Detect', content: '泄漏检测' },
+                    { from: 'AI Leak Detect', to: 'AI Emergency Dispose', content: '应急处置' },
+                    { from: 'AI Emergency Dispose', to: 'AI Hazmat AI', content: '危化品AI' }
+                ]
+            },
+            {
+                id: 'ai-coldchain-smart',
+                name: 'AI智慧冷链物流系统',
+                icon: '❄️',
+                desc: '智慧冷链物流，包括温度监控、冷库管理、路线优化等',
+                agents: ['AI ColdchainSmart Director', 'AI Temp Monitor', 'AI Cold Storage', 'AI Route Optimize', 'AI Coldchain AI', 'AI Coldchain Analytics'],
+                positions: [
+                    { role: 'AI ColdchainSmart Director', x: 400, y: 30 },
+                    { role: 'AI Temp Monitor', x: 150, y: 150 },
+                    { role: 'AI Cold Storage', x: 650, y: 150 },
+                    { role: 'AI Route Optimize', x: 150, y: 300 },
+                    { role: 'AI Coldchain AI', x: 400, y: 350 },
+                    { role: 'AI Coldchain Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI ColdchainSmart Director', to: 'AI Temp Monitor', content: '温度监控' },
+                    { from: 'AI ColdchainSmart Director', to: 'AI Coldchain Analytics', content: '冷链分析' },
+                    { from: 'AI Temp Monitor', to: 'AI Cold Storage', content: '冷库管理' },
+                    { from: 'AI Cold Storage', to: 'AI Route Optimize', content: '路线优化' },
+                    { from: 'AI Route Optimize', to: 'AI Coldchain AI', content: '冷链AI' }
+                ]
+            },
+            {
+                id: 'ai-classroom-smart',
+                name: 'AI智慧教室系统',
+                icon: '🏫',
+                desc: '智慧教室管理，包括备课助手、学生评估、教室设备等',
+                agents: ['AI ClassroomSmart Director', 'AI Lesson Plan', 'AI Student Assess', 'AI Classroom Device', 'AI Classroom AI', 'AI Classroom Analytics'],
+                positions: [
+                    { role: 'AI ClassroomSmart Director', x: 400, y: 30 },
+                    { role: 'AI Lesson Plan', x: 150, y: 150 },
+                    { role: 'AI Student Assess', x: 650, y: 150 },
+                    { role: 'AI Classroom Device', x: 150, y: 300 },
+                    { role: 'AI Classroom AI', x: 400, y: 350 },
+                    { role: 'AI Classroom Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI ClassroomSmart Director', to: 'AI Lesson Plan', content: '备课助手' },
+                    { from: 'AI ClassroomSmart Director', to: 'AI Classroom Analytics', content: '教室分析' },
+                    { from: 'AI Lesson Plan', to: 'AI Student Assess', content: '学生评估' },
+                    { from: 'AI Student Assess', to: 'AI Classroom Device', content: '教室设备' },
+                    { from: 'AI Classroom Device', to: 'AI Classroom AI', content: '教室AI' }
+                ]
             }
         ];
 
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -38711,7 +39023,56 @@
             'AI Process Control': { icon: '⚙️', color: '#f59e0b', role: 'AI工艺控制' },
             'AI Sludge Process': { icon: '🛢️', color: '#a855f7', role: 'AI污泥处理' },
             'AI Sewage AI': { icon: '🤖', color: '#22c55e', role: 'AI污水AI' },
-            'AI Sewage Analytics': { icon: '📊', color: '#06b6d4', role: 'AI污水分析' }
+            'AI Sewage Analytics': { icon: '📊', color: '#06b6d4', role: 'AI污水分析' },
+            // Cycle 484 新增 - AI智慧变电站系统
+            'AI SubstationSmart Director': { icon: '⚡', color: '#f59e0b', role: 'AI变电站总监' },
+            'AI Power Monitor': { icon: '📡', color: '#3b82f6', role: 'AI电力监控' },
+            'AI Equipment Guard': { icon: '🛡️', color: '#22c55e', role: 'AI设备守护' },
+            'AI Fault Detect': { icon: '🔍', color: '#ef4444', role: 'AI故障检测' },
+            'AI Substation AI': { icon: '🤖', color: '#8b5cf6', role: 'AI变电站AI' },
+            'AI Substation Analytics': { icon: '📊', color: '#06b6d4', role: 'AI变电站分析' },
+            // Cycle 484 新增 - AI智慧风力发电系统
+            'AI WindpowerSmart Director': { icon: '🌀', color: '#06b6d4', role: 'AI风电总监' },
+            'AI Turbine Control': { icon: '🎯', color: '#22c55e', role: 'AI风机控制' },
+            'AI Wind Predict': { icon: '🌬️', color: '#3b82f6', role: 'AI功率预测' },
+            'AI Grid Integrate': { icon: '🔗', color: '#a855f7', role: 'AI电网融合' },
+            'AI Windpower AI': { icon: '🤖', color: '#ec4899', role: 'AI风电AI' },
+            'AI Windpower Analytics': { icon: '📈', color: '#14b8a6', role: 'AI风电分析' },
+            // Cycle 484 新增 - AI智慧光伏发电系统
+            'AI SolarpowerSmart Director': { icon: '☀️', color: '#eab308', role: 'AI光伏总监' },
+            'AI Panel Monitor': { icon: '☀️', color: '#f59e0b', role: 'AI面板监测' },
+            'AI Solar Predict': { icon: '🌞', color: '#22c55e', role: 'AI光照预测' },
+            'AI Inverter Control': { icon: '⚡', color: '#3b82f6', role: 'AI逆变器控制' },
+            'AI Solarpower AI': { icon: '🤖', color: '#8b5cf6', role: 'AI光伏AI' },
+            'AI Solarpower Analytics': { icon: '📊', color: '#06b6d4', role: 'AI光伏分析' },
+            // Cycle 484 新增 - AI智慧垃圾焚烧系统
+            'AI IncineratorSmart Director': { icon: '🔥', color: '#dc2626', role: 'AI垃圾焚烧总监' },
+            'AI Combustion Control': { icon: '🔥', color: '#f97316', role: 'AI燃烧控制' },
+            'AI Emission Monitor': { icon: '💨', color: '#3b82f6', role: 'AI排放监测' },
+            'AI Ash Process': { icon: '🧱', color: '#64748b', role: 'AI灰渣处理' },
+            'AI Incinerator AI': { icon: '🤖', color: '#8b5cf6', role: 'AI焚烧AI' },
+            'AI Incinerator Analytics': { icon: '📈', color: '#14b8a6', role: 'AI焚烧分析' },
+            // Cycle 484 新增 - AI智慧危险品仓储系统
+            'AI HazmatSmart Director': { icon: '☢️', color: '#ef4444', role: 'AI危化品总监' },
+            'AI Chemical Guard': { icon: '🧪', color: '#3b82f6', role: 'AI危化品监护' },
+            'AI Leak Detect': { icon: '🔦', color: '#f59e0b', role: 'AI泄漏检测' },
+            'AI Emergency Dispose': { icon: '🚨', color: '#dc2626', role: 'AI应急处置' },
+            'AI Hazmat AI': { icon: '🤖', color: '#8b5cf6', role: 'AI危化品AI' },
+            'AI Hazmat Analytics': { icon: '📊', color: '#06b6d4', role: 'AI危化品分析' },
+            // Cycle 484 新增 - AI智慧冷链物流系统
+            'AI ColdchainSmart Director': { icon: '❄️', color: '#0ea5e9', role: 'AI冷链总监' },
+            'AI Temp Monitor': { icon: '🌡️', color: '#3b82f6', role: 'AI温度监控' },
+            'AI Cold Storage': { icon: '🏭', color: '#22c55e', role: 'AI冷库管理' },
+            'AI Route Optimize': { icon: '🗺️', color: '#a855f7', role: 'AI路线优化' },
+            'AI Coldchain AI': { icon: '🤖', color: '#ec4899', role: 'AI冷链AI' },
+            'AI Coldchain Analytics': { icon: '📈', color: '#14b8a6', role: 'AI冷链分析' },
+            // Cycle 484 新增 - AI智慧教室系统
+            'AI ClassroomSmart Director': { icon: '🏫', color: '#7c3aed', role: 'AI教室总监' },
+            'AI Lesson Plan': { icon: '📚', color: '#f59e0b', role: 'AI备课助手' },
+            'AI Student Assess': { icon: '📝', color: '#3b82f6', role: 'AI学生评估' },
+            'AI Classroom Device': { icon: '💻', color: '#22c55e', role: 'AI教室设备' },
+            'AI Classroom AI': { icon: '🤖', color: '#8b5cf6', role: 'AI教室AI' },
+            'AI Classroom Analytics': { icon: '📊', color: '#06b6d4', role: 'AI教室分析' }
         };
 
         // 拖拽相关变量
