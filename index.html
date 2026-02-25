@@ -29361,8 +29361,166 @@
             }
         ];
 
+        // Cycle 463 - 新增行业服务系统模板
+        const cycle463Templates = [
+            {
+                id: 'ai-smart-logistics',
+                name: 'AI智能智慧物流系统',
+                icon: '🚚',
+                desc: '智能物流管理，包括运输调度、仓储配送、供应链优化等',
+                agents: ['AI Logistics Director', 'AI Transport Scheduler', 'AI Warehouse Manager', 'AI Delivery Coordinator', 'AI Supply Optimizer', 'AI Fleet Controller'],
+                positions: [
+                    { role: 'AI Logistics Director', x: 400, y: 30 },
+                    { role: 'AI Transport Scheduler', x: 150, y: 150 },
+                    { role: 'AI Warehouse Manager', x: 650, y: 150 },
+                    { role: 'AI Delivery Coordinator', x: 150, y: 300 },
+                    { role: 'AI Supply Optimizer', x: 400, y: 350 },
+                    { role: 'AI Fleet Controller', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Logistics Director', to: 'AI Transport Scheduler', content: '运输任务' },
+                    { from: 'AI Logistics Director', to: 'AI Warehouse Manager', content: '仓储任务' },
+                    { from: 'AI Transport Scheduler', to: 'AI Delivery Coordinator', content: '配送需求' },
+                    { from: 'AI Warehouse Manager', to: 'AI Supply Optimizer', content: '供应链优化' },
+                    { from: 'AI Delivery Coordinator', to: 'AI Fleet Controller', content: '车队调度' }
+                ]
+            },
+            {
+                id: 'ai-smart-energy',
+                name: 'AI智能智慧能源系统',
+                icon: '⚡',
+                desc: '智能能源管理，包括电网调度、能源交易、设备监控等',
+                agents: ['AI Energy Director', 'AI Grid Scheduler', 'AI Energy Trader', 'AI Equipment Monitor', 'AI Power Analyst', 'AI Renewable Manager'],
+                positions: [
+                    { role: 'AI Energy Director', x: 400, y: 30 },
+                    { role: 'AI Grid Scheduler', x: 150, y: 150 },
+                    { role: 'AI Energy Trader', x: 650, y: 150 },
+                    { role: 'AI Equipment Monitor', x: 150, y: 300 },
+                    { role: 'AI Power Analyst', x: 400, y: 350 },
+                    { role: 'AI Renewable Manager', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Energy Director', to: 'AI Grid Scheduler', content: '电网调度' },
+                    { from: 'AI Energy Director', to: 'AI Energy Trader', content: '能源交易' },
+                    { from: 'AI Grid Scheduler', to: 'AI Equipment Monitor', content: '设备监控' },
+                    { from: 'AI Energy Trader', to: 'AI Power Analyst', content: '电力分析' },
+                    { from: 'AI Equipment Monitor', to: 'AI Renewable Manager', content: '可再生能源管理' }
+                ]
+            },
+            {
+                id: 'ai-smart-construction',
+                name: 'AI智能智慧建筑系统',
+                icon: '🏗️',
+                desc: '智能建筑管理，包括项目施工、安全监控、成本控制等',
+                agents: ['AI Construction Director', 'AI Project Manager', 'AI Safety Supervisor', 'AI Cost Controller', 'AI Quality Inspector', 'AI BIM Coordinator'],
+                positions: [
+                    { role: 'AI Construction Director', x: 400, y: 30 },
+                    { role: 'AI Project Manager', x: 150, y: 150 },
+                    { role: 'AI Safety Supervisor', x: 650, y: 150 },
+                    { role: 'AI Cost Controller', x: 150, y: 300 },
+                    { role: 'AI Quality Inspector', x: 400, y: 350 },
+                    { role: 'AI BIM Coordinator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Construction Director', to: 'AI Project Manager', content: '项目管理' },
+                    { from: 'AI Construction Director', to: 'AI Safety Supervisor', content: '安全监督' },
+                    { from: 'AI Project Manager', to: 'AI Cost Controller', content: '成本控制' },
+                    { from: 'AI Safety Supervisor', to: 'AI Quality Inspector', content: '质量检查' },
+                    { from: 'AI Cost Controller', to: 'AI BIM Coordinator', content: 'BIM协调' }
+                ]
+            },
+            {
+                id: 'ai-smart-agriculture',
+                name: 'AI智能智慧农业系统',
+                icon: '🌾',
+                desc: '智能农业管理，包括种植指导、农机调度、产量预测等',
+                agents: ['AI Agriculture Director', 'AI Crop Advisor', 'AI Machinery Scheduler', 'AI Yield Predictor', 'AI Soil Analyst', 'AI Pest Controller'],
+                positions: [
+                    { role: 'AI Agriculture Director', x: 400, y: 30 },
+                    { role: 'AI Crop Advisor', x: 150, y: 150 },
+                    { role: 'AI Machinery Scheduler', x: 650, y: 150 },
+                    { role: 'AI Yield Predictor', x: 150, y: 300 },
+                    { role: 'AI Soil Analyst', x: 400, y: 350 },
+                    { role: 'AI Pest Controller', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Agriculture Director', to: 'AI Crop Advisor', content: '种植指导' },
+                    { from: 'AI Agriculture Director', to: 'AI Machinery Scheduler', content: '农机调度' },
+                    { from: 'AI Crop Advisor', to: 'AI Yield Predictor', content: '产量预测' },
+                    { from: 'AI Machinery Scheduler', to: 'AI Soil Analyst', content: '土壤分析' },
+                    { from: 'AI Yield Predictor', to: 'AI Pest Controller', content: '病虫害防治' }
+                ]
+            },
+            {
+                id: 'ai-smart-tourism',
+                name: 'AI智能智慧旅游系统',
+                icon: '🌍',
+                desc: '智能旅游管理，包括景区运营、票务服务、游客导览等',
+                agents: ['AI Tourism Director', 'AI Scenic Operator', 'AI Ticket Manager', 'AI Tour Guide', 'AI Visitor Analyst', 'AI Hotel Coordinator'],
+                positions: [
+                    { role: 'AI Tourism Director', x: 400, y: 30 },
+                    { role: 'AI Scenic Operator', x: 150, y: 150 },
+                    { role: 'AI Ticket Manager', x: 650, y: 150 },
+                    { role: 'AI Tour Guide', x: 150, y: 300 },
+                    { role: 'AI Visitor Analyst', x: 400, y: 350 },
+                    { role: 'AI Hotel Coordinator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Tourism Director', to: 'AI Scenic Operator', content: '景区运营' },
+                    { from: 'AI Tourism Director', to: 'AI Ticket Manager', content: '票务管理' },
+                    { from: 'AI Scenic Operator', to: 'AI Tour Guide', content: '导览需求' },
+                    { from: 'AI Ticket Manager', to: 'AI Visitor Analyst', content: '游客分析' },
+                    { from: 'AI Tour Guide', to: 'AI Hotel Coordinator', content: '酒店协调' }
+                ]
+            },
+            {
+                id: 'ai-smart-media',
+                name: 'AI智能智慧媒体系统',
+                icon: '📺',
+                desc: '智能媒体管理，包括内容创作、节目制作、广告投放等',
+                agents: ['AI Media Director', 'AI Content Creator', 'AI Program Producer', 'AI Ad Strategist', 'AI Audience Analyst', 'AI Broadcast Engineer'],
+                positions: [
+                    { role: 'AI Media Director', x: 400, y: 30 },
+                    { role: 'AI Content Creator', x: 150, y: 150 },
+                    { role: 'AI Program Producer', x: 650, y: 150 },
+                    { role: 'AI Ad Strategist', x: 150, y: 300 },
+                    { role: 'AI Audience Analyst', x: 400, y: 350 },
+                    { role: 'AI Broadcast Engineer', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Media Director', to: 'AI Content Creator', content: '内容创作' },
+                    { from: 'AI Media Director', to: 'AI Program Producer', content: '节目制作' },
+                    { from: 'AI Content Creator', to: 'AI Ad Strategist', content: '广告策略' },
+                    { from: 'AI Program Producer', to: 'AI Audience Analyst', content: '受众分析' },
+                    { from: 'AI Ad Strategist', to: 'AI Broadcast Engineer', content: '播出工程' }
+                ]
+            },
+            {
+                id: 'ai-smart-sports',
+                name: 'AI智能智慧体育系统',
+                icon: '⚽',
+                desc: '智能体育管理，包括赛事运营、训练指导、场馆管理等',
+                agents: ['AI Sports Director', 'AI Event Manager', 'AI Training Coach', 'AI Venue Manager', 'AI Athlete Analyst', 'AI Fan Engagement'],
+                positions: [
+                    { role: 'AI Sports Director', x: 400, y: 30 },
+                    { role: 'AI Event Manager', x: 150, y: 150 },
+                    { role: 'AI Training Coach', x: 650, y: 150 },
+                    { role: 'AI Venue Manager', x: 150, y: 300 },
+                    { role: 'AI Athlete Analyst', x: 400, y: 350 },
+                    { role: 'AI Fan Engagement', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sports Director', to: 'AI Event Manager', content: '赛事管理' },
+                    { from: 'AI Sports Director', to: 'AI Training Coach', content: '训练指导' },
+                    { from: 'AI Event Manager', to: 'AI Venue Manager', content: '场馆管理' },
+                    { from: 'AI Training Coach', to: 'AI Athlete Analyst', content: '运动员分析' },
+                    { from: 'AI Venue Manager', to: 'AI Fan Engagement', content: '球迷互动' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates];
 
         // Agent 角色配置
         const agentRoles = {
