@@ -35354,8 +35354,166 @@
             }
         ];
 
+        // Cycle 502 - 新增行业服务系统模板
+        const cycle502Templates = [
+            {
+                id: 'ai-satellite-remote-sensing',
+                name: 'AI智能卫星遥感系统',
+                icon: '🛰️',
+                desc: '卫星遥感数据处理与分析，包括地形测绘、气象监测、环境监测等',
+                agents: ['AI Satellite Director', 'AI Remote Sensing Analyst', 'AI Image Processor', 'AI Terrain Mapper', 'AI Weather Monitor', 'AI Environment Analyst'],
+                positions: [
+                    { role: 'AI Satellite Director', x: 400, y: 30 },
+                    { role: 'AI Remote Sensing Analyst', x: 150, y: 150 },
+                    { role: 'AI Image Processor', x: 650, y: 150 },
+                    { role: 'AI Terrain Mapper', x: 150, y: 300 },
+                    { role: 'AI Weather Monitor', x: 400, y: 350 },
+                    { role: 'AI Environment Analyst', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Satellite Director', to: 'AI Remote Sensing Analyst', content: '遥感分析需求' },
+                    { from: 'AI Satellite Director', to: 'AI Image Processor', content: '图像处理需求' },
+                    { from: 'AI Remote Sensing Analyst', to: 'AI Terrain Mapper', content: '地形测绘需求' },
+                    { from: 'AI Image Processor', to: 'AI Weather Monitor', content: '气象监测需求' },
+                    { from: 'AI Terrain Mapper', to: 'AI Environment Analyst', content: '环境分析需求' }
+                ]
+            },
+            {
+                id: 'ai-brain-computer-interface',
+                name: 'AI智能脑机接口系统',
+                icon: '🧠',
+                desc: '脑机接口技术研发与应用，包括神经信号采集、意念控制、康复训练等',
+                agents: ['AI BCI Director', 'AI Neural Signal Processor', 'AI Mind Control Engineer', 'AI Rehabilitation Specialist', 'AI Signal Analyzer', 'AI Cognitive Researcher'],
+                positions: [
+                    { role: 'AI BCI Director', x: 400, y: 30 },
+                    { role: 'AI Neural Signal Processor', x: 150, y: 150 },
+                    { role: 'AI Mind Control Engineer', x: 650, y: 150 },
+                    { role: 'AI Rehabilitation Specialist', x: 150, y: 300 },
+                    { role: 'AI Signal Analyzer', x: 400, y: 350 },
+                    { role: 'AI Cognitive Researcher', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI BCI Director', to: 'AI Neural Signal Processor', content: '神经信号处理' },
+                    { from: 'AI BCI Director', to: 'AI Mind Control Engineer', content: '意念控制需求' },
+                    { from: 'AI Neural Signal Processor', to: 'AI Signal Analyzer', content: '信号分析' },
+                    { from: 'AI Mind Control Engineer', to: 'AI Rehabilitation Specialist', content: '康复训练需求' },
+                    { from: 'AI Signal Analyzer', to: 'AI Cognitive Researcher', content: '认知研究需求' }
+                ]
+            },
+            {
+                id: 'ai-hydrogen-energy',
+                name: 'AI智能氢能管理系统',
+                icon: '⚡',
+                desc: '氢能生产、储存、运输全流程管理，包括电解制氢、储氢技术、氢燃料电池等',
+                agents: ['AI Hydrogen Director', 'AI Electrolysis Engineer', 'AI Storage Specialist', 'AI Transport Manager', 'AI Fuel Cell Expert', 'AI Safety Officer'],
+                positions: [
+                    { role: 'AI Hydrogen Director', x: 400, y: 30 },
+                    { role: 'AI Electrolysis Engineer', x: 150, y: 150 },
+                    { role: 'AI Storage Specialist', x: 650, y: 150 },
+                    { role: 'AI Transport Manager', x: 150, y: 300 },
+                    { role: 'AI Fuel Cell Expert', x: 400, y: 350 },
+                    { role: 'AI Safety Officer', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Hydrogen Director', to: 'AI Electrolysis Engineer', content: '制氢需求' },
+                    { from: 'AI Hydrogen Director', to: 'AI Storage Specialist', content: '储氢需求' },
+                    { from: 'AI Electrolysis Engineer', to: 'AI Transport Manager', content: '运输需求' },
+                    { from: 'AI Storage Specialist', to: 'AI Fuel Cell Expert', content: '燃料电池需求' },
+                    { from: 'AI Transport Manager', to: 'AI Safety Officer', content: '安全需求' }
+                ]
+            },
+            {
+                id: 'ai-carbon-trading',
+                name: 'AI智能碳交易平台',
+                icon: '🌱',
+                desc: '碳排放权交易管理，包括碳核算、交易匹配、减排方案等',
+                agents: ['AI Carbon Director', 'AI Carbon Accountant', 'AI Trading Matcher', 'AI Emission Reducer', 'AI Carbon Auditor', 'AI Compliance Officer'],
+                positions: [
+                    { role: 'AI Carbon Director', x: 400, y: 30 },
+                    { role: 'AI Carbon Accountant', x: 150, y: 150 },
+                    { role: 'AI Trading Matcher', x: 650, y: 150 },
+                    { role: 'AI Emission Reducer', x: 150, y: 300 },
+                    { role: 'AI Carbon Auditor', x: 400, y: 350 },
+                    { role: 'AI Compliance Officer', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Carbon Director', to: 'AI Carbon Accountant', content: '碳核算需求' },
+                    { from: 'AI Carbon Director', to: 'AI Trading Matcher', content: '交易匹配需求' },
+                    { from: 'AI Carbon Accountant', to: 'AI Emission Reducer', content: '减排方案需求' },
+                    { from: 'AI Trading Matcher', to: 'AI Carbon Auditor', content: '审计需求' },
+                    { from: 'AI Emission Reducer', to: 'AI Compliance Officer', content: '合规需求' }
+                ]
+            },
+            {
+                id: 'ai-metaverse-social',
+                name: 'AI智能元宇宙社交系统',
+                icon: '🌐',
+                desc: '元宇宙社交平台构建，包括虚拟身份、社交场景、沉浸式交互等',
+                agents: ['AI Metaverse Director', 'AI Virtual Identity Manager', 'AI Social Scene Designer', 'AI Immersive Engineer', 'AI Avatar Creator', 'AI Content Moderator'],
+                positions: [
+                    { role: 'AI Metaverse Director', x: 400, y: 30 },
+                    { role: 'AI Virtual Identity Manager', x: 150, y: 150 },
+                    { role: 'AI Social Scene Designer', x: 650, y: 150 },
+                    { role: 'AI Immersive Engineer', x: 150, y: 300 },
+                    { role: 'AI Avatar Creator', x: 400, y: 350 },
+                    { role: 'AI Content Moderator', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Metaverse Director', to: 'AI Virtual Identity Manager', content: '虚拟身份需求' },
+                    { from: 'AI Metaverse Director', to: 'AI Social Scene Designer', content: '社交场景需求' },
+                    { from: 'AI Virtual Identity Manager', to: 'AI Avatar Creator', content: '虚拟形象需求' },
+                    { from: 'AI Social Scene Designer', to: 'AI Immersive Engineer', content: '沉浸式体验需求' },
+                    { from: 'AI Avatar Creator', to: 'AI Content Moderator', content: '内容审核需求' }
+                ]
+            },
+            {
+                id: 'ai-6g-communication',
+                name: 'AI智能6G通信系统',
+                icon: '📡',
+                desc: '第六代移动通信技术研发，包括太赫兹通信、智能网络、星地一体等',
+                agents: ['AI 6G Director', 'AI Terahertz Engineer', 'AI Network Architect', 'AI Satellite Ground Integrator', 'AI Spectrum Manager', 'AI Signal Processing Expert'],
+                positions: [
+                    { role: 'AI 6G Director', x: 400, y: 30 },
+                    { role: 'AI Terahertz Engineer', x: 150, y: 150 },
+                    { role: 'AI Network Architect', x: 650, y: 150 },
+                    { role: 'AI Satellite Ground Integrator', x: 150, y: 300 },
+                    { role: 'AI Spectrum Manager', x: 400, y: 350 },
+                    { role: 'AI Signal Processing Expert', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI 6G Director', to: 'AI Terahertz Engineer', content: '太赫兹技术需求' },
+                    { from: 'AI 6G Director', to: 'AI Network Architect', content: '网络架构需求' },
+                    { from: 'AI Terahertz Engineer', to: 'AI Signal Processing Expert', content: '信号处理需求' },
+                    { from: 'AI Network Architect', to: 'AI Satellite Ground Integrator', content: '星地融合需求' },
+                    { from: 'AI Satellite Ground Integrator', to: 'AI Spectrum Manager', content: '频谱管理需求' }
+                ]
+            },
+            {
+                id: 'ai-quantum-cloud-computing',
+                name: 'AI智能量子云计算系统',
+                icon: '💻',
+                desc: '量子云计算平台建设，包括量子算法、量子模拟、云端量子服务等',
+                agents: ['AI Quantum Cloud Director', 'AI Quantum Algorithm Expert', 'AI Quantum Simulator', 'AI Cloud Service Manager', 'AI Quantum Security Specialist', 'AI Quantum Application Developer'],
+                positions: [
+                    { role: 'AI Quantum Cloud Director', x: 400, y: 30 },
+                    { role: 'AI Quantum Algorithm Expert', x: 150, y: 150 },
+                    { role: 'AI Quantum Simulator', x: 650, y: 150 },
+                    { role: 'AI Cloud Service Manager', x: 150, y: 300 },
+                    { role: 'AI Quantum Security Specialist', x: 400, y: 350 },
+                    { role: 'AI Quantum Application Developer', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Quantum Cloud Director', to: 'AI Quantum Algorithm Expert', content: '量子算法需求' },
+                    { from: 'AI Quantum Cloud Director', to: 'AI Quantum Simulator', content: '量子模拟需求' },
+                    { from: 'AI Quantum Algorithm Expert', to: 'AI Quantum Application Developer', content: '应用开发需求' },
+                    { from: 'AI Quantum Simulator', to: 'AI Cloud Service Manager', content: '云服务需求' },
+                    { from: 'AI Quantum Application Developer', to: 'AI Quantum Security Specialist', content: '量子安全需求' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -42616,7 +42774,57 @@
             'AI Pest Detect': { icon: '🐛', color: '#10b981', role: 'AI病虫害检测' },
             'AI Yield Forecast': { icon: '📊', color: '#8b5cf6', role: 'AI产量预测' },
             'AI Agri AI': { icon: '🤖', color: '#ec4899', role: 'AI农业AI' },
-            'AI Agri Analytics': { icon: '📈', color: '#f59e0b', role: 'AI农业分析' }
+            'AI Agri Analytics': { icon: '📈', color: '#f59e0b', role: 'AI农业分析' },
+            // Cycle 502 新增角色 - 7个行业服务系统
+            // AI智能卫星遥感系统
+            'AI Satellite Director': { icon: '🛰️', color: '#6366f1', role: 'AI卫星总监' },
+            'AI Remote Sensing Analyst': { icon: '📡', color: '#8b5cf6', role: 'AI遥感分析师' },
+            'AI Image Processor': { icon: '🖼️', color: '#3b82f6', role: 'AI图像处理' },
+            'AI Terrain Mapper': { icon: '🏔️', color: '#22c55e', role: 'AI地形测绘' },
+            'AI Weather Monitor': { icon: '🌤️', color: '#14b8a6', role: 'AI气象监测' },
+            'AI Environment Analyst': { icon: '🌍', color: '#10b981', role: 'AI环境分析' },
+            // AI智能脑机接口系统
+            'AI BCI Director': { icon: '🧠', color: '#ec4899', role: 'AI脑机接口总监' },
+            'AI Neural Signal Processor': { icon: '📊', color: '#f43f5e', role: 'AI神经信号处理' },
+            'AI Mind Control Engineer': { icon: '🎮', color: '#8b5cf6', role: 'AI意念控制工程师' },
+            'AI Rehabilitation Specialist': { icon: '🏥', color: '#3b82f6', role: 'AI康复专家' },
+            'AI Signal Analyzer': { icon: '📈', color: '#22c55e', role: 'AI信号分析' },
+            'AI Cognitive Researcher': { icon: '🔬', color: '#14b8a6', role: 'AI认知研究员' },
+            // AI智能氢能管理系统
+            'AI Hydrogen Director': { icon: '⚡', color: '#f59e0b', role: 'AI氢能总监' },
+            'AI Electrolysis Engineer': { icon: '🔋', color: '#3b82f6', role: 'AI电解工程师' },
+            'AI Storage Specialist': { icon: '🛢️', color: '#22c55e', role: 'AI储氢专家' },
+            'AI Transport Manager': { icon: '🚛', color: '#ec4899', role: 'AI运输管理' },
+            'AI Fuel Cell Expert': { icon: '🔌', color: '#8b5cf6', role: 'AI燃料电池专家' },
+            'AI Safety Officer': { icon: '⛑️', color: '#ef4444', role: 'AI安全员' },
+            // AI智能碳交易平台
+            'AI Carbon Director': { icon: '🌱', color: '#22c55e', role: 'AI碳交易总监' },
+            'AI Carbon Accountant': { icon: '📒', color: '#3b82f6', role: 'AI碳核算会计' },
+            'AI Trading Matcher': { icon: '🤝', color: '#8b5cf6', role: 'AI交易匹配' },
+            'AI Emission Reducer': { icon: '♻️', color: '#14b8a6', role: 'AI减排专家' },
+            'AI Carbon Auditor': { icon: '🔍', color: '#f59e0b', role: 'AI碳审计员' },
+            'AI Compliance Officer': { icon: '📋', color: '#ec4899', role: 'AI合规官' },
+            // AI智能元宇宙社交系统
+            'AI Metaverse Director': { icon: '🌐', color: '#8b5cf6', role: 'AI元宇宙总监' },
+            'AI Virtual Identity Manager': { icon: '👤', color: '#3b82f6', role: 'AI虚拟身份管理' },
+            'AI Social Scene Designer': { icon: '🎨', color: '#ec4899', role: 'AI社交场景设计' },
+            'AI Immersive Engineer': { icon: '🥽', color: '#22c55e', role: 'AI沉浸式工程师' },
+            'AI Avatar Creator': { icon: '🎭', color: '#f43f5e', role: 'AI虚拟形象创建' },
+            'AI Content Moderator': { icon: '🛡️', color: '#14b8a6', role: 'AI内容审核' },
+            // AI智能6G通信系统
+            'AI 6G Director': { icon: '📡', color: '#0ea5e9', role: 'AI6G通信总监' },
+            'AI Terahertz Engineer': { icon: '📶', color: '#3b82f6', role: 'AI太赫兹工程师' },
+            'AI Network Architect': { icon: '🏗️', color: '#8b5cf6', role: 'AI网络架构师' },
+            'AI Satellite Ground Integrator': { icon: '🛰️', color: '#22c55e', role: 'AI星地融合专家' },
+            'AI Spectrum Manager': { icon: '📻', color: '#f59e0b', role: 'AI频谱管理' },
+            'AI Signal Processing Expert': { icon: '📊', color: '#ec4899', role: 'AI信号处理专家' },
+            // AI智能量子云计算系统
+            'AI Quantum Cloud Director': { icon: '💻', color: '#6366f1', role: 'AI量子云总监' },
+            'AI Quantum Algorithm Expert': { icon: '🔢', color: '#8b5cf6', role: 'AI量子算法专家' },
+            'AI Quantum Simulator': { icon: '🔬', color: '#3b82f6', role: 'AI量子模拟器' },
+            'AI Cloud Service Manager': { icon: '☁️', color: '#22c55e', role: 'AI云服务管理' },
+            'AI Quantum Security Specialist': { icon: '🔐', color: '#14b8a6', role: 'AI量子安全专家' },
+            'AI Quantum Application Developer': { icon: '👨‍💻', color: '#ec4899', role: 'AI量子应用开发' }
         };
 
         // 拖拽相关变量
