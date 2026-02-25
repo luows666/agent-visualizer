@@ -31872,8 +31872,165 @@
             }
         ];
 
+        const cycle481Templates = [
+            {
+                id: 'aiart',
+                name: 'AI智慧传媒系统',
+                icon: '📺',
+                desc: '智慧传媒管理，包括内容创作、传播分析、媒体运营等',
+                agents: ['AI MediaSmart Director', 'AI Content Create', 'AI Media Analytics', 'AI Media Operate', 'AI Broadcast AI', 'AI Media AI'],
+                positions: [
+                    { role: 'AI MediaSmart Director', x: 400, y: 30 },
+                    { role: 'AI Content Create', x: 150, y: 150 },
+                    { role: 'AI Media Analytics', x: 650, y: 150 },
+                    { role: 'AI Media Operate', x: 150, y: 300 },
+                    { role: 'AI Broadcast AI', x: 400, y: 350 },
+                    { role: 'AI Media AI', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI MediaSmart Director', to: 'AI Content Create', content: '内容创作' },
+                    { from: 'AI MediaSmart Director', to: 'AI Media Analytics', content: '传播分析' },
+                    { from: 'AI Content Create', to: 'AI Media Operate', content: '媒体运营' },
+                    { from: 'AI Media Operate', to: 'AI Broadcast AI', content: '广播AI' },
+                    { from: 'AI Broadcast AI', to: 'AI Media AI', content: '媒体AI' }
+                ]
+            },
+            {
+                id: 'ai-research-smart',
+                name: 'AI智慧科研系统',
+                icon: '🔬',
+                desc: '智慧科研管理，包括课题研究、实验分析、成果转化等',
+                agents: ['AI ResearchSmart Director', 'AI Research Topic', 'AI Experiment AI', 'AI Research Analysis', 'AI Transform AI', 'AI Research AI'],
+                positions: [
+                    { role: 'AI ResearchSmart Director', x: 400, y: 30 },
+                    { role: 'AI Research Topic', x: 150, y: 150 },
+                    { role: 'AI Experiment AI', x: 650, y: 150 },
+                    { role: 'AI Research Analysis', x: 150, y: 300 },
+                    { role: 'AI Transform AI', x: 400, y: 350 },
+                    { role: 'AI Research AI', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI ResearchSmart Director', to: 'AI Research Topic', content: '课题研究' },
+                    { from: 'AI ResearchSmart Director', to: 'AI Research Analysis', content: '研究分析' },
+                    { from: 'AI Research Topic', to: 'AI Experiment AI', content: '实验分析' },
+                    { from: 'AI Experiment AI', to: 'AI Transform AI', content: '成果转化' },
+                    { from: 'AI Transform AI', to: 'AI Research AI', content: '科研AI' }
+                ]
+            },
+            {
+                id: 'ai-consulting-smart',
+                name: 'AI智慧咨询系统',
+                icon: '💼',
+                desc: '智慧咨询服务，包括战略咨询、管理咨询、技术咨询等',
+                agents: ['AI ConsultingSmart Director', 'AI Strategy Consult', 'AI Manage Consult', 'AI Tech Consult', 'AI Consult AI', 'AI Consult Analytics'],
+                positions: [
+                    { role: 'AI ConsultingSmart Director', x: 400, y: 30 },
+                    { role: 'AI Strategy Consult', x: 150, y: 150 },
+                    { role: 'AI Manage Consult', x: 650, y: 150 },
+                    { role: 'AI Tech Consult', x: 150, y: 300 },
+                    { role: 'AI Consult AI', x: 400, y: 350 },
+                    { role: 'AI Consult Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI ConsultingSmart Director', to: 'AI Strategy Consult', content: '战略咨询' },
+                    { from: 'AI ConsultingSmart Director', to: 'AI Consult Analytics', content: '咨询分析' },
+                    { from: 'AI Strategy Consult', to: 'AI Manage Consult', content: '管理咨询' },
+                    { from: 'AI Manage Consult', to: 'AI Tech Consult', content: '技术咨询' },
+                    { from: 'AI Tech Consult', to: 'AI Consult AI', content: '咨询AI' }
+                ]
+            },
+            {
+                id: 'ai-exhibition-smart',
+                name: 'AI智慧会展系统',
+                icon: '🎪',
+                desc: '智慧会展管理，包括展会策划、展商服务、现场管理等',
+                agents: ['AI ExhibitionSmart Director', 'AI Event Plan', 'AI Exhibitor Service', 'AI Event Site', 'AI Event AI', 'AI Event Analytics'],
+                positions: [
+                    { role: 'AI ExhibitionSmart Director', x: 400, y: 30 },
+                    { role: 'AI Event Plan', x: 150, y: 150 },
+                    { role: 'AI Exhibitor Service', x: 650, y: 150 },
+                    { role: 'AI Event Site', x: 150, y: 300 },
+                    { role: 'AI Event AI', x: 400, y: 350 },
+                    { role: 'AI Event Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI ExhibitionSmart Director', to: 'AI Event Plan', content: '展会策划' },
+                    { from: 'AI ExhibitionSmart Director', to: 'AI Event Analytics', content: '会展分析' },
+                    { from: 'AI Event Plan', to: 'AI Exhibitor Service', content: '展商服务' },
+                    { from: 'AI Exhibitor Service', to: 'AI Event Site', content: '现场管理' },
+                    { from: 'AI Event Site', to: 'AI Event AI', content: '会展AI' }
+                ]
+            },
+            {
+                id: 'ai-gardening-smart',
+                name: 'AI智慧园林系统',
+                icon: '🌳',
+                desc: '智慧园林管理，包括景观设计、植物养护、园林AI等',
+                agents: ['AI GardeningSmart Director', 'AI Landscape Design', 'AI Plant Care', 'AI Garden AI', 'AI Garden Maintain', 'AI Garden Analytics'],
+                positions: [
+                    { role: 'AI GardeningSmart Director', x: 400, y: 30 },
+                    { role: 'AI Landscape Design', x: 150, y: 150 },
+                    { role: 'AI Plant Care', x: 650, y: 150 },
+                    { role: 'AI Garden AI', x: 150, y: 300 },
+                    { role: 'AI Garden Maintain', x: 400, y: 350 },
+                    { role: 'AI Garden Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI GardeningSmart Director', to: 'AI Landscape Design', content: '景观设计' },
+                    { from: 'AI GardeningSmart Director', to: 'AI Garden Analytics', content: '园林分析' },
+                    { from: 'AI Landscape Design', to: 'AI Plant Care', content: '植物养护' },
+                    { from: 'AI Plant Care', to: 'AI Garden Maintain', content: '园林维护' },
+                    { from: 'AI Garden Maintain', to: 'AI Garden AI', content: '园林AI' }
+                ]
+            },
+            {
+                id: 'ai-port-smart',
+                name: 'AI智慧港口系统',
+                icon: '⚓',
+                desc: '智慧港口管理，包括航线调度、装卸作业、港口AI等',
+                agents: ['AI PortSmart Director', 'AI Route Dispatch', 'AI Cargo Operate', 'AI Port AI', 'AI Port Logistics', 'AI Port Analytics'],
+                positions: [
+                    { role: 'AI PortSmart Director', x: 400, y: 30 },
+                    { role: 'AI Route Dispatch', x: 150, y: 150 },
+                    { role: 'AI Cargo Operate', x: 650, y: 150 },
+                    { role: 'AI Port AI', x: 150, y: 300 },
+                    { role: 'AI Port Logistics', x: 400, y: 350 },
+                    { role: 'AI Port Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI PortSmart Director', to: 'AI Route Dispatch', content: '航线调度' },
+                    { from: 'AI PortSmart Director', to: 'AI Port Analytics', content: '港口分析' },
+                    { from: 'AI Route Dispatch', to: 'AI Cargo Operate', content: '装卸作业' },
+                    { from: 'AI Cargo Operate', to: 'AI Port Logistics', content: '港口物流' },
+                    { from: 'AI Port Logistics', to: 'AI Port AI', content: '港口AI' }
+                ]
+            },
+            {
+                id: 'ai-warehouse-smart',
+                name: 'AI智慧仓储系统',
+                icon: '🏭',
+                desc: '智慧仓储管理，包括库存管理、订单处理、仓储AI等',
+                agents: ['AI WarehouseSmart Director', 'AI Inventory Manage', 'AI Order Process', 'AI Warehouse AI', 'AI Warehouse Robot', 'AI Warehouse Analytics'],
+                positions: [
+                    { role: 'AI WarehouseSmart Director', x: 400, y: 30 },
+                    { role: 'AI Inventory Manage', x: 150, y: 150 },
+                    { role: 'AI Order Process', x: 650, y: 150 },
+                    { role: 'AI Warehouse AI', x: 150, y: 300 },
+                    { role: 'AI Warehouse Robot', x: 400, y: 350 },
+                    { role: 'AI Warehouse Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI WarehouseSmart Director', to: 'AI Inventory Manage', content: '库存管理' },
+                    { from: 'AI WarehouseSmart Director', to: 'AI Warehouse Analytics', content: '仓储分析' },
+                    { from: 'AI Inventory Manage', to: 'AI Order Process', content: '订单处理' },
+                    { from: 'AI Order Process', to: 'AI Warehouse Robot', content: '仓储机器人' },
+                    { from: 'AI Warehouse Robot', to: 'AI Warehouse AI', content: '仓储AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -38090,7 +38247,57 @@
             'AI Approval Processor': { icon: '✅', color: '#3b82f6', role: 'AI审批办理' },
             'AI Citizen Services': { icon: '👤', color: '#22c55e', role: 'AI市民服务' },
             'AI Complaint Handler': { icon: '📞', color: '#ec4899', role: 'AI投诉处理' },
-            'AI Policy Analyst': { icon: '📊', color: '#8b5cf6', role: 'AI政策分析师' }
+            'AI Policy Analyst': { icon: '📊', color: '#8b5cf6', role: 'AI政策分析师' },
+            // Cycle 481 新增角色 - 7个行业服务系统
+            // AI智慧传媒系统
+            'AI MediaSmart Director': { icon: '📺', color: '#ef4444', role: 'AI传媒总监' },
+            'AI Content Create': { icon: '✍️', color: '#f59e0b', role: 'AI内容创作' },
+            'AI Media Analytics': { icon: '📊', color: '#3b82f6', role: 'AI媒体分析' },
+            'AI Media Operate': { icon: '🎛️', color: '#22c55e', role: 'AI媒体运营' },
+            'AI Broadcast AI': { icon: '📡', color: '#ec4899', role: 'AI广播AI' },
+            'AI Media AI': { icon: '🤖', color: '#8b5cf6', role: 'AI媒体AI' },
+            // AI智慧科研系统
+            'AI ResearchSmart Director': { icon: '🔬', color: '#7c3aed', role: 'AI科研总监' },
+            'AI Research Topic': { icon: '📋', color: '#f59e0b', role: 'AI课题研究' },
+            'AI Experiment AI': { icon: '🧪', color: '#3b82f6', role: 'AI实验分析' },
+            'AI Research Analysis': { icon: '📈', color: '#22c55e', role: 'AI研究分析' },
+            'AI Transform AI': { icon: '🔄', color: '#ec4899', role: 'AI成果转化' },
+            'AI Research AI': { icon: '🧠', color: '#8b5cf6', role: 'AI科研AI' },
+            // AI智慧咨询系统
+            'AI ConsultingSmart Director': { icon: '💼', color: '#14b8a6', role: 'AI咨询总监' },
+            'AI Strategy Consult': { icon: '🎯', color: '#f59e0b', role: 'AI战略咨询' },
+            'AI Manage Consult': { icon: '📊', color: '#3b82f6', role: 'AI管理咨询' },
+            'AI Tech Consult': { icon: '🔧', color: '#22c55e', role: 'AI技术咨询' },
+            'AI Consult AI': { icon: '💬', color: '#ec4899', role: 'AI咨询AI' },
+            'AI Consult Analytics': { icon: '📉', color: '#8b5cf6', role: 'AI咨询分析' },
+            // AI智慧会展系统
+            'AI ExhibitionSmart Director': { icon: '🎪', color: '#f97316', role: 'AI会展总监' },
+            'AI Event Plan': { icon: '📅', color: '#f59e0b', role: 'AI展会策划' },
+            'AI Exhibitor Service': { icon: '🤝', color: '#3b82f6', role: 'AI展商服务' },
+            'AI Event Site': { icon: '🏟️', color: '#22c55e', role: 'AI现场管理' },
+            'AI Event AI': { icon: '🎬', color: '#ec4899', role: 'AI会展AI' },
+            'AI Event Analytics': { icon: '📊', color: '#8b5cf6', role: 'AI会展分析' },
+            // AI智慧园林系统
+            'AI GardeningSmart Director': { icon: '🌳', color: '#22c55e', role: 'AI园林总监' },
+            'AI Landscape Design': { icon: '🎨', color: '#f59e0b', role: 'AI景观设计' },
+            'AI Plant Care': { icon: '🌱', color: '#3b82f6', role: 'AI植物养护' },
+            'AI Garden AI': { icon: '🌿', color: '#ec4899', role: 'AI园林AI' },
+            'AI Garden Maintain': { icon: '🛠️', color: '#8b5cf6', role: 'AI园林维护' },
+            'AI Garden Analytics': { icon: '📈', color: '#06b6d4', role: 'AI园林分析' },
+            // AI智慧港口系统
+            'AI PortSmart Director': { icon: '⚓', color: '#0ea5e9', role: 'AI港口总监' },
+            'AI Route Dispatch': { icon: '🗺️', color: '#f59e0b', role: 'AI航线调度' },
+            'AI Cargo Operate': { icon: '📦', color: '#3b82f6', role: 'AI装卸作业' },
+            'AI Port AI': { icon: '🚢', color: '#22c55e', role: 'AI港口AI' },
+            'AI Port Logistics': { icon: '🔗', color: '#ec4899', role: 'AI港口物流' },
+            'AI Port Analytics': { icon: '📊', color: '#8b5cf6', role: 'AI港口分析' },
+            // AI智慧仓储系统
+            'AI WarehouseSmart Director': { icon: '🏭', color: '#64748b', role: 'AI仓储总监' },
+            'AI Inventory Manage': { icon: '📋', color: '#f59e0b', role: 'AI库存管理' },
+            'AI Order Process': { icon: '📝', color: '#3b82f6', role: 'AI订单处理' },
+            'AI Warehouse AI': { icon: '🤖', color: '#22c55e', role: 'AI仓储AI' },
+            'AI Warehouse Robot': { icon: '🦾', color: '#ec4899', role: 'AI仓储机器人' },
+            'AI Warehouse Analytics': { icon: '📈', color: '#8b5cf6', role: 'AI仓储分析' }
         };
 
         // 拖拽相关变量
