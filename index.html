@@ -32029,8 +32029,166 @@
             }
         ];
 
+        // Cycle 482 新增模板
+        const cycle482Templates = [
+            {
+                id: 'ai-aviation-smart',
+                name: 'AI智慧航空系统',
+                icon: '✈️',
+                desc: '智慧航空管理，包括航班调度、客货运服务、机场AI等',
+                agents: ['AI AviationSmart Director', 'AI Flight Dispatch', 'AI Passenger Service', 'AI Cargo Service', 'AI Airport AI', 'AI Aviation Analytics'],
+                positions: [
+                    { role: 'AI AviationSmart Director', x: 400, y: 30 },
+                    { role: 'AI Flight Dispatch', x: 150, y: 150 },
+                    { role: 'AI Passenger Service', x: 650, y: 150 },
+                    { role: 'AI Cargo Service', x: 150, y: 300 },
+                    { role: 'AI Airport AI', x: 400, y: 350 },
+                    { role: 'AI Aviation Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI AviationSmart Director', to: 'AI Flight Dispatch', content: '航班调度' },
+                    { from: 'AI AviationSmart Director', to: 'AI Aviation Analytics', content: '航空分析' },
+                    { from: 'AI Flight Dispatch', to: 'AI Passenger Service', content: '客服务' },
+                    { from: 'AI Passenger Service', to: 'AI Cargo Service', content: '货运服务' },
+                    { from: 'AI Cargo Service', to: 'AI Airport AI', content: '机场AI' }
+                ]
+            },
+            {
+                id: 'ai-railway-smart',
+                name: 'AI智慧铁路系统',
+                icon: '🚂',
+                desc: '智慧铁路管理，包括列车调度、客运服务、铁路物流等',
+                agents: ['AI RailwaySmart Director', 'AI Train Dispatch', 'AI Rail Passenger', 'AI Rail Logistics', 'AI Railway AI', 'AI Railway Analytics'],
+                positions: [
+                    { role: 'AI RailwaySmart Director', x: 400, y: 30 },
+                    { role: 'AI Train Dispatch', x: 150, y: 150 },
+                    { role: 'AI Rail Passenger', x: 650, y: 150 },
+                    { role: 'AI Rail Logistics', x: 150, y: 300 },
+                    { role: 'AI Railway AI', x: 400, y: 350 },
+                    { role: 'AI Railway Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI RailwaySmart Director', to: 'AI Train Dispatch', content: '列车调度' },
+                    { from: 'AI RailwaySmart Director', to: 'AI Railway Analytics', content: '铁路分析' },
+                    { from: 'AI Train Dispatch', to: 'AI Rail Passenger', content: '客运服务' },
+                    { from: 'AI Rail Passenger', to: 'AI Rail Logistics', content: '铁路物流' },
+                    { from: 'AI Rail Logistics', to: 'AI Railway AI', content: '铁路AI' }
+                ]
+            },
+            {
+                id: 'ai-subway-smart',
+                name: 'AI智慧地铁系统',
+                icon: '🚇',
+                desc: '智慧地铁管理，包括列车运行、客流分析、车站服务等',
+                agents: ['AI SubwaySmart Director', 'AI Train Operation', 'AI Passenger Flow', 'AI Station Service', 'AI Subway AI', 'AI Subway Analytics'],
+                positions: [
+                    { role: 'AI SubwaySmart Director', x: 400, y: 30 },
+                    { role: 'AI Train Operation', x: 150, y: 150 },
+                    { role: 'AI Passenger Flow', x: 650, y: 150 },
+                    { role: 'AI Station Service', x: 150, y: 300 },
+                    { role: 'AI Subway AI', x: 400, y: 350 },
+                    { role: 'AI Subway Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SubwaySmart Director', to: 'AI Train Operation', content: '列车运行' },
+                    { from: 'AI SubwaySmart Director', to: 'AI Subway Analytics', content: '地铁分析' },
+                    { from: 'AI Train Operation', to: 'AI Passenger Flow', content: '客流分析' },
+                    { from: 'AI Passenger Flow', to: 'AI Station Service', content: '车站服务' },
+                    { from: 'AI Station Service', to: 'AI Subway AI', content: '地铁AI' }
+                ]
+            },
+            {
+                id: 'ai-highway-smart',
+                name: 'AI智慧公路系统',
+                icon: '🛣️',
+                desc: '智慧公路管理，包括路况监控、收费管理、养护巡查等',
+                agents: ['AI HighwaySmart Director', 'AI Traffic Monitor', 'AI Toll Manage', 'AI Road Maintain', 'AI Highway AI', 'AI Highway Analytics'],
+                positions: [
+                    { role: 'AI HighwaySmart Director', x: 400, y: 30 },
+                    { role: 'AI Traffic Monitor', x: 150, y: 150 },
+                    { role: 'AI Toll Manage', x: 650, y: 150 },
+                    { role: 'AI Road Maintain', x: 150, y: 300 },
+                    { role: 'AI Highway AI', x: 400, y: 350 },
+                    { role: 'AI Highway Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HighwaySmart Director', to: 'AI Traffic Monitor', content: '路况监控' },
+                    { from: 'AI HighwaySmart Director', to: 'AI Highway Analytics', content: '公路分析' },
+                    { from: 'AI Traffic Monitor', to: 'AI Toll Manage', content: '收费管理' },
+                    { from: 'AI Toll Manage', to: 'AI Road Maintain', content: '养护巡查' },
+                    { from: 'AI Road Maintain', to: 'AI Highway AI', content: '公路AI' }
+                ]
+            },
+            {
+                id: 'ai-municipal-smart',
+                name: 'AI智慧市政系统',
+                icon: '🏙️',
+                desc: '智慧市政管理，包括城市管理、公共设施、数字政务等',
+                agents: ['AI MunicipalSmart Director', 'AI City Manage', 'AI Public Facility', 'AI Digital Gov', 'AI Municipal AI', 'AI Municipal Analytics'],
+                positions: [
+                    { role: 'AI MunicipalSmart Director', x: 400, y: 30 },
+                    { role: 'AI City Manage', x: 150, y: 150 },
+                    { role: 'AI Public Facility', x: 650, y: 150 },
+                    { role: 'AI Digital Gov', x: 150, y: 300 },
+                    { role: 'AI Municipal AI', x: 400, y: 350 },
+                    { role: 'AI Municipal Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI MunicipalSmart Director', to: 'AI City Manage', content: '城市管理' },
+                    { from: 'AI MunicipalSmart Director', to: 'AI Municipal Analytics', content: '市政分析' },
+                    { from: 'AI City Manage', to: 'AI Public Facility', content: '公共设施' },
+                    { from: 'AI Public Facility', to: 'AI Digital Gov', content: '数字政务' },
+                    { from: 'AI Digital Gov', to: 'AI Municipal AI', content: '市政AI' }
+                ]
+            },
+            {
+                id: 'ai-sanitation-smart',
+                name: 'AI智慧环卫系统',
+                icon: '🧹',
+                desc: '智慧环卫管理，包括垃圾处理、街道清扫、环卫AI等',
+                agents: ['AI SanitationSmart Director', 'AI Waste Manage', 'AI Street Clean', 'AI Sanitation AI', 'AI Recycle Process', 'AI Sanitation Analytics'],
+                positions: [
+                    { role: 'AI SanitationSmart Director', x: 400, y: 30 },
+                    { role: 'AI Waste Manage', x: 150, y: 150 },
+                    { role: 'AI Street Clean', x: 650, y: 150 },
+                    { role: 'AI Sanitation AI', x: 150, y: 300 },
+                    { role: 'AI Recycle Process', x: 400, y: 350 },
+                    { role: 'AI Sanitation Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SanitationSmart Director', to: 'AI Waste Manage', content: '垃圾处理' },
+                    { from: 'AI SanitationSmart Director', to: 'AI Sanitation Analytics', content: '环卫分析' },
+                    { from: 'AI Waste Manage', to: 'AI Street Clean', content: '街道清扫' },
+                    { from: 'AI Street Clean', to: 'AI Recycle Process', content: '回收处理' },
+                    { from: 'AI Recycle Process', to: 'AI Sanitation AI', content: '环卫AI' }
+                ]
+            },
+            {
+                id: 'ai-pipeline-smart',
+                name: 'AI智慧管网系统',
+                icon: '🔌',
+                desc: '智慧管网管理，包括供水管网、燃气管网、热力管网等',
+                agents: ['AI PipelineSmart Director', 'AI Water Pipeline', 'AI Gas Pipeline', 'AI Heat Pipeline', 'AI Pipeline AI', 'AI Pipeline Analytics'],
+                positions: [
+                    { role: 'AI PipelineSmart Director', x: 400, y: 30 },
+                    { role: 'AI Water Pipeline', x: 150, y: 150 },
+                    { role: 'AI Gas Pipeline', x: 650, y: 150 },
+                    { role: 'AI Heat Pipeline', x: 150, y: 300 },
+                    { role: 'AI Pipeline AI', x: 400, y: 350 },
+                    { role: 'AI Pipeline Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI PipelineSmart Director', to: 'AI Water Pipeline', content: '供水管网' },
+                    { from: 'AI PipelineSmart Director', to: 'AI Pipeline Analytics', content: '管网分析' },
+                    { from: 'AI Water Pipeline', to: 'AI Gas Pipeline', content: '燃气管网' },
+                    { from: 'AI Gas Pipeline', to: 'AI Heat Pipeline', content: '热力管网' },
+                    { from: 'AI Heat Pipeline', to: 'AI Pipeline AI', content: '管网AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -38297,7 +38455,56 @@
             'AI Order Process': { icon: '📝', color: '#3b82f6', role: 'AI订单处理' },
             'AI Warehouse AI': { icon: '🤖', color: '#22c55e', role: 'AI仓储AI' },
             'AI Warehouse Robot': { icon: '🦾', color: '#ec4899', role: 'AI仓储机器人' },
-            'AI Warehouse Analytics': { icon: '📈', color: '#8b5cf6', role: 'AI仓储分析' }
+            'AI Warehouse Analytics': { icon: '📈', color: '#8b5cf6', role: 'AI仓储分析' },
+            // Cycle 482 新增 - AI智慧航空系统
+            'AI AviationSmart Director': { icon: '✈️', color: '#3b82f6', role: 'AI航空总监' },
+            'AI Flight Dispatch': { icon: '🎯', color: '#ef4444', role: 'AI航班调度' },
+            'AI Passenger Service': { icon: '👥', color: '#10b981', role: 'AI客服务' },
+            'AI Cargo Service': { icon: '📦', color: '#f59e0b', role: 'AI货运服务' },
+            'AI Airport AI': { icon: '🤖', color: '#8b5cf6', role: 'AI机场AI' },
+            'AI Aviation Analytics': { icon: '📊', color: '#06b6d4', role: 'AI航空分析' },
+            // Cycle 482 新增 - AI智慧铁路系统
+            'AI RailwaySmart Director': { icon: '🚂', color: '#dc2626', role: 'AI铁路总监' },
+            'AI Train Dispatch': { icon: '🚦', color: '#f97316', role: 'AI列车调度' },
+            'AI Rail Passenger': { icon: '🚃', color: '#14b8a6', role: 'AI客运服务' },
+            'AI Rail Logistics': { icon: '🚚', color: '#a855f7', role: 'AI铁路物流' },
+            'AI Railway AI': { icon: '🤖', color: '#22c55e', role: 'AI铁路AI' },
+            'AI Railway Analytics': { icon: '📈', color: '#0ea5e9', role: 'AI铁路分析' },
+            // Cycle 482 新增 - AI智慧地铁系统
+            'AI SubwaySmart Director': { icon: '🚇', color: '#2563eb', role: 'AI地铁总监' },
+            'AI Train Operation': { icon: '⚡', color: '#f59e0b', role: 'AI列车运行' },
+            'AI Passenger Flow': { icon: '👣', color: '#ec4899', role: 'AI客流分析' },
+            'AI Station Service': { icon: '🏪', color: '#8b5cf6', role: 'AI车站服务' },
+            'AI Subway AI': { icon: '🤖', color: '#06b6d4', role: 'AI地铁AI' },
+            'AI Subway Analytics': { icon: '📊', color: '#10b981', role: 'AI地铁分析' },
+            // Cycle 482 新增 - AI智慧公路系统
+            'AI HighwaySmart Director': { icon: '🛣️', color: '#64748b', role: 'AI公路总监' },
+            'AI Traffic Monitor': { icon: '📹', color: '#ef4444', role: 'AI路况监控' },
+            'AI Toll Manage': { icon: '💰', color: '#22c55e', role: 'AI收费管理' },
+            'AI Road Maintain': { icon: '🔧', color: '#f97316', role: 'AI养护巡查' },
+            'AI Highway AI': { icon: '🤖', color: '#8b5cf6', role: 'AI公路AI' },
+            'AI Highway Analytics': { icon: '📈', color: '#06b6d4', role: 'AI公路分析' },
+            // Cycle 482 新增 - AI智慧市政系统
+            'AI MunicipalSmart Director': { icon: '🏙️', color: '#7c3aed', role: 'AI市政总监' },
+            'AI City Manage': { icon: '🏗️', color: '#14b8a6', role: 'AI城市管理' },
+            'AI Public Facility': { icon: '🏛️', color: '#f59e0b', role: 'AI公共设施' },
+            'AI Digital Gov': { icon: '💻', color: '#3b82f6', role: 'AI数字政务' },
+            'AI Municipal AI': { icon: '🤖', color: '#ec4899', role: 'AI市政AI' },
+            'AI Municipal Analytics': { icon: '📊', color: '#a855f7', role: 'AI市政分析' },
+            // Cycle 482 新增 - AI智慧环卫系统
+            'AI SanitationSmart Director': { icon: '🧹', color: '#84cc16', role: 'AI环卫总监' },
+            'AI Waste Manage': { icon: '🗑️', color: '#dc2626', role: 'AI垃圾处理' },
+            'AI Street Clean': { icon: '🖌️', color: '#22c55e', role: 'AI街道清扫' },
+            'AI Sanitation AI': { icon: '🤖', color: '#8b5cf6', role: 'AI环卫AI' },
+            'AI Recycle Process': { icon: '♻️', color: '#f97316', role: 'AI回收处理' },
+            'AI Sanitation Analytics': { icon: '📈', color: '#06b6d4', role: 'AI环卫分析' },
+            // Cycle 482 新增 - AI智慧管网系统
+            'AI PipelineSmart Director': { icon: '🔌', color: '#0ea5e9', role: 'AI管网总监' },
+            'AI Water Pipeline': { icon: '💧', color: '#3b82f6', role: 'AI供水管网' },
+            'AI Gas Pipeline': { icon: '🔥', color: '#ef4444', role: 'AI燃气管网' },
+            'AI Heat Pipeline': { icon: '♨️', color: '#f59e0b', role: 'AI热力管网' },
+            'AI Pipeline AI': { icon: '🤖', color: '#a855f7', role: 'AI管网AI' },
+            'AI Pipeline Analytics': { icon: '📊', color: '#14b8a6', role: 'AI管网分析' }
         };
 
         // 拖拽相关变量
