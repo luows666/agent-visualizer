@@ -34237,8 +34237,166 @@
             }
         ];
 
+        // Cycle 495 新增模板
+        const cycle495Templates = [
+            {
+                id: 'ai-education-smart',
+                name: 'AI智慧教育系统',
+                icon: '🎓',
+                desc: '智慧教育，包括课程设计、学习跟踪、成绩评估等',
+                agents: ['AI EduSmart Director', 'AI Course Design', 'AI Learning Track', 'AI Grade Evaluate', 'AI Edu AI', 'AI Edu Analytics'],
+                positions: [
+                    { role: 'AI EduSmart Director', x: 400, y: 30 },
+                    { role: 'AI Course Design', x: 150, y: 150 },
+                    { role: 'AI Learning Track', x: 650, y: 150 },
+                    { role: 'AI Grade Evaluate', x: 150, y: 300 },
+                    { role: 'AI Edu AI', x: 400, y: 350 },
+                    { role: 'AI Edu Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI EduSmart Director', to: 'AI Course Design', content: '课程设计' },
+                    { from: 'AI EduSmart Director', to: 'AI Edu Analytics', content: '教育分析' },
+                    { from: 'AI Course Design', to: 'AI Learning Track', content: '学习跟踪' },
+                    { from: 'AI Learning Track', to: 'AI Grade Evaluate', content: '成绩评估' },
+                    { from: 'AI Grade Evaluate', to: 'AI Edu AI', content: '教育AI' }
+                ]
+            },
+            {
+                id: 'ai-medical-smart',
+                name: 'AI智慧医疗系统',
+                icon: '🏥',
+                desc: '智慧医疗，包括诊断辅助、患者管理、医疗影像等',
+                agents: ['AI MedicalSmart Director', 'AI Diagnose Assist', 'AI Patient Manage', 'AI Medical Imaging', 'AI Medical AI', 'AI Medical Analytics'],
+                positions: [
+                    { role: 'AI MedicalSmart Director', x: 400, y: 30 },
+                    { role: 'AI Diagnose Assist', x: 150, y: 150 },
+                    { role: 'AI Patient Manage', x: 650, y: 150 },
+                    { role: 'AI Medical Imaging', x: 150, y: 300 },
+                    { role: 'AI Medical AI', x: 400, y: 350 },
+                    { role: 'AI Medical Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI MedicalSmart Director', to: 'AI Diagnose Assist', content: '诊断辅助' },
+                    { from: 'AI MedicalSmart Director', to: 'AI Medical Analytics', content: '医疗分析' },
+                    { from: 'AI Diagnose Assist', to: 'AI Patient Manage', content: '患者管理' },
+                    { from: 'AI Patient Manage', to: 'AI Medical Imaging', content: '医疗影像' },
+                    { from: 'AI Medical Imaging', to: 'AI Medical AI', content: '医疗AI' }
+                ]
+            },
+            {
+                id: 'ai-finance-smart',
+                name: 'AI智慧金融系统',
+                icon: '🏦',
+                desc: '智慧金融，包括风险评估、投资分析、欺诈检测等',
+                agents: ['AI FinanceSmart Director', 'AI Risk Assess', 'AI Invest Analysis', 'AI Fraud Detect', 'AI Finance AI', 'AI Finance Analytics'],
+                positions: [
+                    { role: 'AI FinanceSmart Director', x: 400, y: 30 },
+                    { role: 'AI Risk Assess', x: 150, y: 150 },
+                    { role: 'AI Invest Analysis', x: 650, y: 150 },
+                    { role: 'AI Fraud Detect', x: 150, y: 300 },
+                    { role: 'AI Finance AI', x: 400, y: 350 },
+                    { role: 'AI Finance Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI FinanceSmart Director', to: 'AI Risk Assess', content: '风险评估' },
+                    { from: 'AI FinanceSmart Director', to: 'AI Finance Analytics', content: '金融分析' },
+                    { from: 'AI Risk Assess', to: 'AI Invest Analysis', content: '投资分析' },
+                    { from: 'AI Invest Analysis', to: 'AI Fraud Detect', content: '欺诈检测' },
+                    { from: 'AI Fraud Detect', to: 'AI Finance AI', content: '金融AI' }
+                ]
+            },
+            {
+                id: 'ai-retail-smart',
+                name: 'AI智慧零售系统',
+                icon: '🛒',
+                desc: '智慧零售，包括库存管理、促销策略、客户分析等',
+                agents: ['AI RetailSmart Director', 'AI Inventory Manage', 'AI Promo Strategy', 'AI Customer Analysis', 'AI Retail AI', 'AI Retail Analytics'],
+                positions: [
+                    { role: 'AI RetailSmart Director', x: 400, y: 30 },
+                    { role: 'AI Inventory Manage', x: 150, y: 150 },
+                    { role: 'AI Promo Strategy', x: 650, y: 150 },
+                    { role: 'AI Customer Analysis', x: 150, y: 300 },
+                    { role: 'AI Retail AI', x: 400, y: 350 },
+                    { role: 'AI Retail Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI RetailSmart Director', to: 'AI Inventory Manage', content: '库存管理' },
+                    { from: 'AI RetailSmart Director', to: 'AI Retail Analytics', content: '零售分析' },
+                    { from: 'AI Inventory Manage', to: 'AI Promo Strategy', content: '促销策略' },
+                    { from: 'AI Promo Strategy', to: 'AI Customer Analysis', content: '客户分析' },
+                    { from: 'AI Customer Analysis', to: 'AI Retail AI', content: '零售AI' }
+                ]
+            },
+            {
+                id: 'ai-tourism-smart',
+                name: 'AI智慧旅游系统',
+                icon: '✈️',
+                desc: '智慧旅游，包括行程规划、景区管理、预订系统等',
+                agents: ['AI TourismSmart Director', 'AI Trip Plan', 'AI Scenic Manage', 'AI Booking System', 'AI Tourism AI', 'AI Tourism Analytics'],
+                positions: [
+                    { role: 'AI TourismSmart Director', x: 400, y: 30 },
+                    { role: 'AI Trip Plan', x: 150, y: 150 },
+                    { role: 'AI Scenic Manage', x: 650, y: 150 },
+                    { role: 'AI Booking System', x: 150, y: 300 },
+                    { role: 'AI Tourism AI', x: 400, y: 350 },
+                    { role: 'AI Tourism Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI TourismSmart Director', to: 'AI Trip Plan', content: '行程规划' },
+                    { from: 'AI TourismSmart Director', to: 'AI Tourism Analytics', content: '旅游分析' },
+                    { from: 'AI Trip Plan', to: 'AI Scenic Manage', content: '景区管理' },
+                    { from: 'AI Scenic Manage', to: 'AI Booking System', content: '预订系统' },
+                    { from: 'AI Booking System', to: 'AI Tourism AI', content: '旅游AI' }
+                ]
+            },
+            {
+                id: 'ai-realestate-smart',
+                name: 'AI智慧房地产系统',
+                icon: '🏠',
+                desc: '智慧房产，包括房源管理、VR看房、交易流程等',
+                agents: ['AI RESmart Director', 'AI Property Manage', 'AI VR Viewing', 'AI Transaction Flow', 'AI RealEstate AI', 'AI RealEstate Analytics'],
+                positions: [
+                    { role: 'AI RESmart Director', x: 400, y: 30 },
+                    { role: 'AI Property Manage', x: 150, y: 150 },
+                    { role: 'AI VR Viewing', x: 650, y: 150 },
+                    { role: 'AI Transaction Flow', x: 150, y: 300 },
+                    { role: 'AI RealEstate AI', x: 400, y: 350 },
+                    { role: 'AI RealEstate Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI RESmart Director', to: 'AI Property Manage', content: '房源管理' },
+                    { from: 'AI RESmart Director', to: 'AI RealEstate Analytics', content: '房产分析' },
+                    { from: 'AI Property Manage', to: 'AI VR Viewing', content: 'VR看房' },
+                    { from: 'AI VR Viewing', to: 'AI Transaction Flow', content: '交易流程' },
+                    { from: 'AI Transaction Flow', to: 'AI RealEstate AI', content: '房产AI' }
+                ]
+            },
+            {
+                id: 'ai-environment-smart',
+                name: 'AI智慧环保系统',
+                icon: '🌿',
+                desc: '智慧环保，包括污染监测、资源回收、生态分析等',
+                agents: ['AI EnvSmart Director', 'AI Pollution Monitor', 'AI Resource Recycle', 'AI Eco Analysis', 'AI Env AI', 'AI Env Analytics'],
+                positions: [
+                    { role: 'AI EnvSmart Director', x: 400, y: 30 },
+                    { role: 'AI Pollution Monitor', x: 150, y: 150 },
+                    { role: 'AI Resource Recycle', x: 650, y: 150 },
+                    { role: 'AI Eco Analysis', x: 150, y: 300 },
+                    { role: 'AI Env AI', x: 400, y: 350 },
+                    { role: 'AI Env Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI EnvSmart Director', to: 'AI Pollution Monitor', content: '污染监测' },
+                    { from: 'AI EnvSmart Director', to: 'AI Env Analytics', content: '环保分析' },
+                    { from: 'AI Pollution Monitor', to: 'AI Resource Recycle', content: '资源回收' },
+                    { from: 'AI Resource Recycle', to: 'AI Eco Analysis', content: '生态分析' },
+                    { from: 'AI Eco Analysis', to: 'AI Env AI', content: '环保AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -41153,7 +41311,57 @@
             'AI Broadcast Schedule': { icon: '📅', color: '#3b82f6', role: 'AI播出调度' },
             'AI Audience Analysis': { icon: '👀', color: '#f59e0b', role: 'AI受众分析' },
             'AI Media AI': { icon: '🤖', color: '#8b5cf6', role: 'AI媒体AI' },
-            'AI Media Analytics': { icon: '📊', color: '#06b6d4', role: 'AI媒体分析' }
+            'AI Media Analytics': { icon: '📊', color: '#06b6d4', role: 'AI媒体分析' },
+            // Cycle 495 新增 Agent Roles
+            // AI智慧教育系统
+            'AI EduSmart Director': { icon: '🎓', color: '#0891b2', role: 'AI教育总监' },
+            'AI Course Design': { icon: '📚', color: '#22c55e', role: 'AI课程设计' },
+            'AI Learning Track': { icon: '📈', color: '#3b82f6', role: 'AI学习跟踪' },
+            'AI Grade Evaluate': { icon: '📝', color: '#f59e0b', role: 'AI成绩评估' },
+            'AI Edu AI': { icon: '🤖', color: '#8b5cf6', role: 'AI教育AI' },
+            'AI Edu Analytics': { icon: '📊', color: '#06b6d4', role: 'AI教育分析' },
+            // AI智慧医疗系统
+            'AI MedicalSmart Director': { icon: '🏥', color: '#dc2626', role: 'AI医疗总监' },
+            'AI Diagnose Assist': { icon: '🔬', color: '#22c55e', role: 'AI诊断辅助' },
+            'AI Patient Manage': { icon: '👤', color: '#3b82f6', role: 'AI患者管理' },
+            'AI Medical Imaging': { icon: '🖼️', color: '#f59e0b', role: 'AI医疗影像' },
+            'AI Medical AI': { icon: '🤖', color: '#8b5cf6', role: 'AI医疗AI' },
+            'AI Medical Analytics': { icon: '📊', color: '#06b6d4', role: 'AI医疗分析' },
+            // AI智慧金融系统
+            'AI FinanceSmart Director': { icon: '🏦', color: '#15803d', role: 'AI金融总监' },
+            'AI Risk Assess': { icon: '⚖️', color: '#22c55e', role: 'AI风险评估' },
+            'AI Invest Analysis': { icon: '📈', color: '#3b82f6', role: 'AI投资分析' },
+            'AI Fraud Detect': { icon: '🔍', color: '#f59e0b', role: 'AI欺诈检测' },
+            'AI Finance AI': { icon: '🤖', color: '#8b5cf6', role: 'AI金融AI' },
+            'AI Finance Analytics': { icon: '📊', color: '#06b6d4', role: 'AI金融分析' },
+            // AI智慧零售系统
+            'AI RetailSmart Director': { icon: '🛒', color: '#c026d3', role: 'AI零售总监' },
+            'AI Inventory Manage': { icon: '📦', color: '#22c55e', role: 'AI库存管理' },
+            'AI Promo Strategy': { icon: '🎯', color: '#3b82f6', role: 'AI促销策略' },
+            'AI Customer Analysis': { icon: '👥', color: '#f59e0b', role: 'AI客户分析' },
+            'AI Retail AI': { icon: '🤖', color: '#8b5cf6', role: 'AI零售AI' },
+            'AI Retail Analytics': { icon: '📊', color: '#06b6d4', role: 'AI零售分析' },
+            // AI智慧旅游系统
+            'AI TourismSmart Director': { icon: '✈️', color: '#0d9488', role: 'AI旅游总监' },
+            'AI Trip Plan': { icon: '🗺️', color: '#22c55e', role: 'AI行程规划' },
+            'AI Scenic Manage': { icon: '🏞️', color: '#3b82f6', role: 'AI景区管理' },
+            'AI Booking System': { icon: '🎫', color: '#f59e0b', role: 'AI预订系统' },
+            'AI Tourism AI': { icon: '🤖', color: '#8b5cf6', role: 'AI旅游AI' },
+            'AI Tourism Analytics': { icon: '📊', color: '#06b6d4', role: 'AI旅游分析' },
+            // AI智慧房地产系统
+            'AI RESmart Director': { icon: '🏠', color: '#ea580c', role: 'AI房产总监' },
+            'AI Property Manage': { icon: '🏘️', color: '#22c55e', role: 'AI房源管理' },
+            'AI VR Viewing': { icon: '👓', color: '#3b82f6', role: 'AI VR看房' },
+            'AI Transaction Flow': { icon: '📄', color: '#f59e0b', role: 'AI交易流程' },
+            'AI RealEstate AI': { icon: '🤖', color: '#8b5cf6', role: 'AI房产AI' },
+            'AI RealEstate Analytics': { icon: '📊', color: '#06b6d4', role: 'AI房产分析' },
+            // AI智慧环保系统
+            'AI EnvSmart Director': { icon: '🌿', color: '#16a34a', role: 'AI环保总监' },
+            'AI Pollution Monitor': { icon: '🌡️', color: '#22c55e', role: 'AI污染监测' },
+            'AI Resource Recycle': { icon: '♻️', color: '#3b82f6', role: 'AI资源回收' },
+            'AI Eco Analysis': { icon: '🌍', color: '#f59e0b', role: 'AI生态分析' },
+            'AI Env AI': { icon: '🤖', color: '#8b5cf6', role: 'AI环保AI' },
+            'AI Env Analytics': { icon: '📊', color: '#06b6d4', role: 'AI环保分析' }
         };
 
         // 拖拽相关变量
