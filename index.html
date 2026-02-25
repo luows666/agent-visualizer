@@ -29870,8 +29870,166 @@
             }
         ];
 
+        // Cycle 466 新增 - 7个行业服务系统模板
+        const cycle466Templates = [
+            {
+                id: 'ai-smart-housekeeping',
+                name: 'AI智能智慧家政系统',
+                icon: '🧹',
+                desc: '智能家政服务管理，包括保洁、保姆、月嫂、育儿等',
+                agents: ['AI家政总监', 'AI保洁调度', 'AI保姆匹配', 'AI月嫂顾问', 'AI育儿导师', 'AI客服协调'],
+                positions: [
+                    { role: 'AI家政总监', x: 400, y: 30 },
+                    { role: 'AI保洁调度', x: 150, y: 150 },
+                    { role: 'AI保姆匹配', x: 650, y: 150 },
+                    { role: 'AI月嫂顾问', x: 150, y: 300 },
+                    { role: 'AI育儿导师', x: 400, y: 350 },
+                    { role: 'AI客服协调', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI家政总监', to: 'AI保洁调度', content: '保洁任务派单' },
+                    { from: 'AI家政总监', to: 'AI保姆匹配', content: '保姆需求匹配' },
+                    { from: 'AI保洁调度', to: 'AI客服协调', content: '服务反馈' },
+                    { from: 'AI保姆匹配', to: 'AI月嫂顾问', content: '月嫂咨询' },
+                    { from: 'AI月嫂顾问', to: 'AI育儿导师', content: '育儿指导' }
+                ]
+            },
+            {
+                id: 'ai-smart-security',
+                name: 'AI智能智慧安保系统',
+                icon: '🛡️',
+                desc: '智能安保服务管理，包括门卫、巡逻、押运、监控等',
+                agents: ['AI安保总监', 'AI门卫调度', 'AI巡逻队', 'AI押运指挥', 'AI监控中心', 'AI应急响应'],
+                positions: [
+                    { role: 'AI安保总监', x: 400, y: 30 },
+                    { role: 'AI门卫调度', x: 150, y: 150 },
+                    { role: 'AI巡逻队', x: 650, y: 150 },
+                    { role: 'AI押运指挥', x: 150, y: 300 },
+                    { role: 'AI监控中心', x: 400, y: 350 },
+                    { role: 'AI应急响应', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI安保总监', to: 'AI门卫调度', content: '门卫任务分配' },
+                    { from: 'AI安保总监', to: 'AI巡逻队', content: '巡逻路线安排' },
+                    { from: 'AI门卫调度', to: 'AI监控中心', content: '监控协调' },
+                    { from: 'AI巡逻队', to: 'AI押运指挥', content: '押运支持' },
+                    { from: 'AI监控中心', to: 'AI应急响应', content: '应急联动' }
+                ]
+            },
+            {
+                id: 'ai-smart-consulting',
+                name: 'AI智能智慧咨询系统',
+                icon: '💬',
+                desc: '智能咨询服务管理，包括法律咨询、财务咨询、管理咨询等',
+                agents: ['AI咨询总监', 'AI法律顾问', 'AI财务顾问', 'AI管理咨询师', 'AI行业分析师', 'AI项目协调'],
+                positions: [
+                    { role: 'AI咨询总监', x: 400, y: 30 },
+                    { role: 'AI法律顾问', x: 150, y: 150 },
+                    { role: 'AI财务顾问', x: 650, y: 150 },
+                    { role: 'AI管理咨询师', x: 150, y: 300 },
+                    { role: 'AI行业分析师', x: 400, y: 350 },
+                    { role: 'AI项目协调', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI咨询总监', to: 'AI法律顾问', content: '法律咨询任务' },
+                    { from: 'AI咨询总监', to: 'AI财务顾问', content: '财务咨询任务' },
+                    { from: 'AI法律顾问', to: 'AI管理咨询师', content: '管理建议' },
+                    { from: 'AI财务顾问', to: 'AI行业分析师', content: '行业分析' },
+                    { from: 'AI行业分析师', to: 'AI项目协调', content: '项目协调' }
+                ]
+            },
+            {
+                id: 'ai-smart-training',
+                name: 'AI智能智慧培训系统',
+                icon: '📚',
+                desc: '智能培训服务管理，包括技能培训、认证培训、企业内训等',
+                agents: ['AI培训总监', 'AI课程设计', 'AI讲师匹配', 'AI学员管理', 'AI考核评估', 'AI培训运营'],
+                positions: [
+                    { role: 'AI培训总监', x: 400, y: 30 },
+                    { role: 'AI课程设计', x: 150, y: 150 },
+                    { role: 'AI讲师匹配', x: 650, y: 150 },
+                    { role: 'AI学员管理', x: 150, y: 300 },
+                    { role: 'AI考核评估', x: 400, y: 350 },
+                    { role: 'AI培训运营', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI培训总监', to: 'AI课程设计', content: '课程规划' },
+                    { from: 'AI培训总监', to: 'AI讲师匹配', content: '讲师对接' },
+                    { from: 'AI课程设计', to: 'AI学员管理', content: '学员安排' },
+                    { from: 'AI讲师匹配', to: 'AI考核评估', content: '考核评估' },
+                    { from: 'AI考核评估', to: 'AI培训运营', content: '运营支持' }
+                ]
+            },
+            {
+                id: 'ai-smart-rental',
+                name: 'AI智能智慧租赁系统',
+                icon: '🔑',
+                desc: '智能租赁服务管理，包括设备租赁、车辆租赁、房产租赁等',
+                agents: ['AI租赁总监', 'AI设备租赁', 'AI车辆租赁', 'AI房产租赁', 'AI租客匹配', 'AI租赁客服'],
+                positions: [
+                    { role: 'AI租赁总监', x: 400, y: 30 },
+                    { role: 'AI设备租赁', x: 150, y: 150 },
+                    { role: 'AI车辆租赁', x: 650, y: 150 },
+                    { role: 'AI房产租赁', x: 150, y: 300 },
+                    { role: 'AI租客匹配', x: 400, y: 350 },
+                    { role: 'AI租赁客服', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI租赁总监', to: 'AI设备租赁', content: '设备调配' },
+                    { from: 'AI租赁总监', to: 'AI车辆租赁', content: '车辆调度' },
+                    { from: 'AI设备租赁', to: 'AI租客匹配', content: '租客对接' },
+                    { from: 'AI车辆租赁', to: 'AI房产租赁', content: '房产协调' },
+                    { from: 'AI租客匹配', to: 'AI租赁客服', content: '客服支持' }
+                ]
+            },
+            {
+                id: 'ai-smart-recycling',
+                name: 'AI智能智慧回收系统',
+                icon: '♻️',
+                desc: '智能回收服务管理，包括废品回收、二手交易、资源再利用等',
+                agents: ['AI回收总监', 'AI废品回收', 'AI二手交易', 'AI资源再利用', 'AI环保检测', 'AI回收客服'],
+                positions: [
+                    { role: 'AI回收总监', x: 400, y: 30 },
+                    { role: 'AI废品回收', x: 150, y: 150 },
+                    { role: 'AI二手交易', x: 650, y: 150 },
+                    { role: 'AI资源再利用', x: 150, y: 300 },
+                    { role: 'AI环保检测', x: 400, y: 350 },
+                    { role: 'AI回收客服', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI回收总监', to: 'AI废品回收', content: '回收任务分配' },
+                    { from: 'AI回收总监', to: 'AI二手交易', content: '二手交易协调' },
+                    { from: 'AI废品回收', to: 'AI环保检测', content: '环保检测' },
+                    { from: 'AI二手交易', to: 'AI资源再利用', content: '资源再利用' },
+                    { from: 'AI环保检测', to: 'AI回收客服', content: '客服支持' }
+                ]
+            },
+            {
+                id: 'ai-smart-installation',
+                name: 'AI智能智慧安装系统',
+                icon: '🔧',
+                desc: '智能安装服务管理，包括家电安装、家具安装、设备安装等',
+                agents: ['AI安装总监', 'AI家电安装', 'AI家具安装', 'AI设备安装', 'AI安装质检', 'AI安装客服'],
+                positions: [
+                    { role: 'AI安装总监', x: 400, y: 30 },
+                    { role: 'AI家电安装', x: 150, y: 150 },
+                    { role: 'AI家具安装', x: 650, y: 150 },
+                    { role: 'AI设备安装', x: 150, y: 300 },
+                    { role: 'AI安装质检', x: 400, y: 350 },
+                    { role: 'AI安装客服', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI安装总监', to: 'AI家电安装', content: '安装任务派单' },
+                    { from: 'AI安装总监', to: 'AI家具安装', content: '家具安装安排' },
+                    { from: 'AI家电安装', to: 'AI安装质检', content: '质量检查' },
+                    { from: 'AI家具安装', to: 'AI设备安装', content: '设备协调' },
+                    { from: 'AI安装质检', to: 'AI安装客服', content: '客户反馈' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -36403,7 +36561,57 @@
             'AI Quality Inspector': { icon: '✅', color: '#3b82f6', role: 'AI质量检测' },
             'AI Equipment Monitor': { icon: '🔧', color: '#22c55e', role: 'AI设备监控' },
             'AI Supply Coordinator': { icon: '🤝', color: '#ec4899', role: 'AI供应协调' },
-            'AI Process Optimizer': { icon: '⚙️', color: '#8b5cf6', role: 'AI流程优化' }
+            'AI Process Optimizer': { icon: '⚙️', color: '#8b5cf6', role: 'AI流程优化' },
+            // Cycle 466 新增角色 - 7个行业服务系统
+            // AI智能智慧家政系统
+            'AI家政总监': { icon: '🧹', color: '#f97316', role: 'AI家政总监' },
+            'AI保洁调度': { icon: '🧽', color: '#f59e0b', role: 'AI保洁调度' },
+            'AI保姆匹配': { icon: '👩‍🦰', color: '#3b82f6', role: 'AI保姆匹配' },
+            'AI月嫂顾问': { icon: '👶', color: '#22c55e', role: 'AI月嫂顾问' },
+            'AI育儿导师': { icon: '📖', color: '#ec4899', role: 'AI育儿导师' },
+            'AI客服协调': { icon: '📞', color: '#8b5cf6', role: 'AI客服协调' },
+            // AI智能智慧安保系统
+            'AI安保总监': { icon: '🛡️', color: '#dc2626', role: 'AI安保总监' },
+            'AI门卫调度': { icon: '🚪', color: '#f59e0b', role: 'AI门卫调度' },
+            'AI巡逻队': { icon: '👮', color: '#3b82f6', role: 'AI巡逻队' },
+            'AI押运指挥': { icon: '💼', color: '#22c55e', role: 'AI押运指挥' },
+            'AI监控中心': { icon: '📹', color: '#ec4899', role: 'AI监控中心' },
+            'AI应急响应': { icon: '🚨', color: '#8b5cf6', role: 'AI应急响应' },
+            // AI智能智慧咨询系统
+            'AI咨询总监': { icon: '💬', color: '#14b8a6', role: 'AI咨询总监' },
+            'AI法律顾问': { icon: '⚖️', color: '#f59e0b', role: 'AI法律顾问' },
+            'AI财务顾问': { icon: '💰', color: '#3b82f6', role: 'AI财务顾问' },
+            'AI管理咨询师': { icon: '📊', color: '#22c55e', role: 'AI管理咨询师' },
+            'AI行业分析师': { icon: '📈', color: '#ec4899', role: 'AI行业分析师' },
+            'AI项目协调': { icon: '🤝', color: '#8b5cf6', role: 'AI项目协调' },
+            // AI智能智慧培训系统
+            'AI培训总监': { icon: '📚', color: '#f43f5e', role: 'AI培训总监' },
+            'AI课程设计': { icon: '📝', color: '#f59e0b', role: 'AI课程设计' },
+            'AI讲师匹配': { icon: '👨‍🏫', color: '#3b82f6', role: 'AI讲师匹配' },
+            'AI学员管理': { icon: '🎓', color: '#22c55e', role: 'AI学员管理' },
+            'AI考核评估': { icon: '📋', color: '#ec4899', role: 'AI考核评估' },
+            'AI培训运营': { icon: '⚙️', color: '#8b5cf6', role: 'AI培训运营' },
+            // AI智能智慧租赁系统
+            'AI租赁总监': { icon: '🔑', color: '#0d9488', role: 'AI租赁总监' },
+            'AI设备租赁': { icon: '🏗️', color: '#f59e0b', role: 'AI设备租赁' },
+            'AI车辆租赁': { icon: '🚗', color: '#3b82f6', role: 'AI车辆租赁' },
+            'AI房产租赁': { icon: '🏠', color: '#22c55e', role: 'AI房产租赁' },
+            'AI租客匹配': { icon: '🤝', color: '#ec4899', role: 'AI租客匹配' },
+            'AI租赁客服': { icon: '📞', color: '#8b5cf6', role: 'AI租赁客服' },
+            // AI智能智慧回收系统
+            'AI回收总监': { icon: '♻️', color: '#06b6d4', role: 'AI回收总监' },
+            'AI废品回收': { icon: '🗑️', color: '#f59e0b', role: 'AI废品回收' },
+            'AI二手交易': { icon: '💱', color: '#3b82f6', role: 'AI二手交易' },
+            'AI资源再利用': { icon: '🌱', color: '#22c55e', role: 'AI资源再利用' },
+            'AI环保检测': { icon: '🔬', color: '#ec4899', role: 'AI环保检测' },
+            'AI回收客服': { icon: '📞', color: '#8b5cf6', role: 'AI回收客服' },
+            // AI智能智慧安装系统
+            'AI安装总监': { icon: '🔧', color: '#0891b2', role: 'AI安装总监' },
+            'AI家电安装': { icon: '📺', color: '#f59e0b', role: 'AI家电安装' },
+            'AI家具安装': { icon: '🪑', color: '#3b82f6', role: 'AI家具安装' },
+            'AI设备安装': { icon: '🏭', color: '#22c55e', role: 'AI设备安装' },
+            'AI安装质检': { icon: '✅', color: '#ec4899', role: 'AI安装质检' },
+            'AI安装客服': { icon: '📞', color: '#8b5cf6', role: 'AI安装客服' }
         };
 
         // 拖拽相关变量
