@@ -30343,8 +30343,173 @@
             }
         ];
 
+        // Cycle 469 新增 - 7个行业服务系统模板
+        const cycle469Templates = [
+            {
+                id: 'ai-smart-catering',
+                name: 'AI智能智慧餐饮系统',
+                icon: '🍽️',
+                desc: '智能餐饮服务管理，包括点餐、厨房、配送、会员等',
+                agents: ['AI餐饮总监', 'AI点餐管理', 'AI厨房调度', 'AI配送安排', 'AI会员服务', 'AI餐饮客服'],
+                positions: [
+                    { role: 'AI餐饮总监', x: 400, y: 30 },
+                    { role: 'AI点餐管理', x: 150, y: 150 },
+                    { role: 'AI厨房调度', x: 650, y: 150 },
+                    { role: 'AI配送安排', x: 150, y: 300 },
+                    { role: 'AI会员服务', x: 400, y: 350 },
+                    { role: 'AI餐饮客服', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI餐饮总监', to: 'AI点餐管理', content: '菜单安排' },
+                    { from: 'AI餐饮总监', to: 'AI厨房调度', content: '厨房调度' },
+                    { from: 'AI点餐管理', to: 'AI厨房调度', content: '订单传递' },
+                    { from: 'AI厨房调度', to: 'AI配送安排', content: '出餐安排' },
+                    { from: 'AI点餐管理', to: 'AI会员服务', content: '会员服务' },
+                    { from: 'AI配送安排', to: 'AI餐饮客服', content: '客户反馈' }
+                ]
+            },
+            {
+                id: 'ai-smart-hotel',
+                name: 'AI智能智慧酒店系统',
+                icon: '🏨',
+                desc: '智能酒店服务管理，包括预订、入住、客房、会员等',
+                agents: ['AI酒店总监', 'AI预订管理', 'AI入住办理', 'AI客房服务', 'AI会员管理', 'AI酒店客服'],
+                positions: [
+                    { role: 'AI酒店总监', x: 400, y: 30 },
+                    { role: 'AI预订管理', x: 150, y: 150 },
+                    { role: 'AI入住办理', x: 650, y: 150 },
+                    { role: 'AI客房服务', x: 150, y: 300 },
+                    { role: 'AI会员管理', x: 400, y: 350 },
+                    { role: 'AI酒店客服', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI酒店总监', to: 'AI预订管理', content: '预订策略' },
+                    { from: 'AI酒店总监', to: 'AI客房服务', content: '房态安排' },
+                    { from: 'AI预订管理', to: 'AI入住办理', content: '预订确认' },
+                    { from: 'AI入住办理', to: 'AI客房服务', content: '入住安排' },
+                    { from: 'AI预订管理', to: 'AI会员管理', content: '会员服务' },
+                    { from: 'AI客房服务', to: 'AI酒店客服', content: '客户反馈' }
+                ]
+            },
+            {
+                id: 'ai-smart-medical',
+                name: 'AI智能智慧医疗系统',
+                icon: '🏥',
+                desc: '智能医疗服务管理，包括预约、诊疗、药房、健康等',
+                agents: ['AI医疗总监', 'AI预约管理', 'AI诊疗调度', 'AI药房管理', 'AI健康顾问', 'AI医疗客服'],
+                positions: [
+                    { role: 'AI医疗总监', x: 400, y: 30 },
+                    { role: 'AI预约管理', x: 150, y: 150 },
+                    { role: 'AI诊疗调度', x: 650, y: 150 },
+                    { role: 'AI药房管理', x: 150, y: 300 },
+                    { role: 'AI健康顾问', x: 400, y: 350 },
+                    { role: 'AI医疗客服', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI医疗总监', to: 'AI预约管理', content: '预约策略' },
+                    { from: 'AI医疗总监', to: 'AI诊疗调度', content: '诊疗安排' },
+                    { from: 'AI预约管理', to: 'AI诊疗调度', content: '预约确认' },
+                    { from: 'AI诊疗调度', to: 'AI药房管理', content: '处方传递' },
+                    { from: 'AI诊疗调度', to: 'AI健康顾问', content: '健康建议' },
+                    { from: 'AI药房管理', to: 'AI医疗客服', content: '用药指导' }
+                ]
+            },
+            {
+                id: 'ai-smart-financial',
+                name: 'AI智能智慧金融系统',
+                icon: '🏦',
+                desc: '智能金融服务管理，包括理财、贷款、风控、客服等',
+                agents: ['AI金融总监', 'AI理财管理', 'AI贷款审批', 'AI风控管理', 'AI投资顾问', 'AI金融客服'],
+                positions: [
+                    { role: 'AI金融总监', x: 400, y: 30 },
+                    { role: 'AI理财管理', x: 150, y: 150 },
+                    { role: 'AI贷款审批', x: 650, y: 150 },
+                    { role: 'AI风控管理', x: 150, y: 300 },
+                    { role: 'AI投资顾问', x: 400, y: 350 },
+                    { role: 'AI金融客服', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI金融总监', to: 'AI理财管理', content: '产品策略' },
+                    { from: 'AI金融总监', to: 'AI贷款审批', content: '审批策略' },
+                    { from: 'AI理财管理', to: 'AI风控管理', content: '风险评估' },
+                    { from: 'AI贷款审批', to: 'AI风控管理', content: '贷前风控' },
+                    { from: 'AI理财管理', to: 'AI投资顾问', content: '投资建议' },
+                    { from: 'AI投资顾问', to: 'AI金融客服', content: '客户咨询' }
+                ]
+            },
+            {
+                id: 'ai-smart-logistics',
+                name: 'AI智能智慧物流系统',
+                icon: '🚚',
+                desc: '智能物流服务管理，包括运输、仓储、配送、跟踪等',
+                agents: ['AI物流总监', 'AI运输调度', 'AI仓储管理', 'AI配送安排', 'AI跟踪服务', 'AI物流客服'],
+                positions: [
+                    { role: 'AI物流总监', x: 400, y: 30 },
+                    { role: 'AI运输调度', x: 150, y: 150 },
+                    { role: 'AI仓储管理', x: 650, y: 150 },
+                    { role: 'AI配送安排', x: 150, y: 300 },
+                    { role: 'AI跟踪服务', x: 400, y: 350 },
+                    { role: 'AI物流客服', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI物流总监', to: 'AI运输调度', content: '运输策略' },
+                    { from: 'AI物流总监', to: 'AI仓储管理', content: '仓储策略' },
+                    { from: 'AI运输调度', to: 'AI配送安排', content: '配送安排' },
+                    { from: 'AI仓储管理', to: 'AI配送安排', content: '出库安排' },
+                    { from: 'AI配送安排', to: 'AI跟踪服务', content: '物流跟踪' },
+                    { from: 'AI跟踪服务', to: 'AI物流客服', content: '客户查询' }
+                ]
+            },
+            {
+                id: 'ai-smart-manufacturing',
+                name: 'AI智能智慧制造系统',
+                icon: '🏭',
+                desc: '智能制造服务管理，包括生产、质量、设备、维护等',
+                agents: ['AI制造总监', 'AI生产调度', 'AI质量管理', 'AI设备管理', 'AI维护安排', 'AI制造客服'],
+                positions: [
+                    { role: 'AI制造总监', x: 400, y: 30 },
+                    { role: 'AI生产调度', x: 150, y: 150 },
+                    { role: 'AI质量管理', x: 650, y: 150 },
+                    { role: 'AI设备管理', x: 150, y: 300 },
+                    { role: 'AI维护安排', x: 400, y: 350 },
+                    { role: 'AI制造客服', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI制造总监', to: 'AI生产调度', content: '生产计划' },
+                    { from: 'AI制造总监', to: 'AI质量管理', content: '质量标准' },
+                    { from: 'AI生产调度', to: 'AI设备管理', content: '设备安排' },
+                    { from: 'AI质量管理', to: 'AI维护安排', content: '质量反馈' },
+                    { from: 'AI设备管理', to: 'AI维护安排', content: '维护计划' },
+                    { from: 'AI质量管理', to: 'AI制造客服', content: '客户反馈' }
+                ]
+            },
+            {
+                id: 'ai-smart-energy',
+                name: 'AI智能智慧能源系统',
+                icon: '⚡',
+                desc: '智能能源服务管理，包括供电、节能、监控、维护等',
+                agents: ['AI能源总监', 'AI供电调度', 'AI节能管理', 'AI监控中心', 'AI维护管理', 'AI能源客服'],
+                positions: [
+                    { role: 'AI能源总监', x: 400, y: 30 },
+                    { role: 'AI供电调度', x: 150, y: 150 },
+                    { role: 'AI节能管理', x: 650, y: 150 },
+                    { role: 'AI监控中心', x: 150, y: 300 },
+                    { role: 'AI维护管理', x: 400, y: 350 },
+                    { role: 'AI能源客服', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI能源总监', to: 'AI供电调度', content: '供电策略' },
+                    { from: 'AI能源总监', to: 'AI节能管理', content: '节能目标' },
+                    { from: 'AI供电调度', to: 'AI监控中心', content: '供电监控' },
+                    { from: 'AI节能管理', to: 'AI监控中心', content: '能耗监测' },
+                    { from: 'AI监控中心', to: 'AI维护管理', content: '异常处理' },
+                    { from: 'AI维护管理', to: 'AI能源客服', content: '客户咨询' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -37026,7 +37191,57 @@
             'AI摄影摄像': { icon: '📷', color: '#3b82f6', role: 'AI摄影摄像' },
             'AI主持调度': { icon: '🎤', color: '#22c55e', role: 'AI主持调度' },
             'AI场地布置': { icon: '🎪', color: '#ec4899', role: 'AI场地布置' },
-            'AI婚庆客服': { icon: '📞', color: '#8b5cf6', role: 'AI婚庆客服' }
+            'AI婚庆客服': { icon: '📞', color: '#8b5cf6', role: 'AI婚庆客服' },
+            // Cycle 469 新增角色 - 7个行业服务系统
+            // AI智能智慧餐饮系统
+            'AI餐饮总监': { icon: '🍽️', color: '#f97316', role: 'AI餐饮总监' },
+            'AI点餐管理': { icon: '📱', color: '#f59e0b', role: 'AI点餐管理' },
+            'AI厨房调度': { icon: '👨‍🍳', color: '#3b82f6', role: 'AI厨房调度' },
+            'AI配送安排': { icon: '🚴', color: '#22c55e', role: 'AI配送安排' },
+            'AI会员服务': { icon: '👥', color: '#ec4899', role: 'AI会员服务' },
+            'AI餐饮客服': { icon: '📞', color: '#8b5cf6', role: 'AI餐饮客服' },
+            // AI智能智慧酒店系统
+            'AI酒店总监': { icon: '🏨', color: '#14b8a6', role: 'AI酒店总监' },
+            'AI预订管理': { icon: '📅', color: '#f59e0b', role: 'AI预订管理' },
+            'AI入住办理': { icon: '🛎️', color: '#3b82f6', role: 'AI入住办理' },
+            'AI客房服务': { icon: '🛏️', color: '#22c55e', role: 'AI客房服务' },
+            'AI会员管理': { icon: '💳', color: '#ec4899', role: 'AI会员管理' },
+            'AI酒店客服': { icon: '📞', color: '#8b5cf6', role: 'AI酒店客服' },
+            // AI智能智慧医疗系统
+            'AI医疗总监': { icon: '🏥', color: '#06b6d4', role: 'AI医疗总监' },
+            'AI预约管理': { icon: '📆', color: '#f59e0b', role: 'AI预约管理' },
+            'AI诊疗调度': { icon: '🩺', color: '#3b82f6', role: 'AI诊疗调度' },
+            'AI药房管理': { icon: '💊', color: '#22c55e', role: 'AI药房管理' },
+            'AI健康顾问': { icon: '💪', color: '#ec4899', role: 'AI健康顾问' },
+            'AI医疗客服': { icon: '📞', color: '#8b5cf6', role: 'AI医疗客服' },
+            // AI智能智慧金融系统
+            'AI金融总监': { icon: '🏦', color: '#f97316', role: 'AI金融总监' },
+            'AI理财管理': { icon: '💰', color: '#f59e0b', role: 'AI理财管理' },
+            'AI贷款审批': { icon: '📝', color: '#3b82f6', role: 'AI贷款审批' },
+            'AI风控管理': { icon: '🛡️', color: '#dc2626', role: 'AI风控管理' },
+            'AI投资顾问': { icon: '📈', color: '#22c55e', role: 'AI投资顾问' },
+            'AI金融客服': { icon: '📞', color: '#8b5cf6', role: 'AI金融客服' },
+            // AI智能智慧物流系统
+            'AI物流总监': { icon: '🚚', color: '#0891b2', role: 'AI物流总监' },
+            'AI运输调度': { icon: '🗺️', color: '#f59e0b', role: 'AI运输调度' },
+            'AI仓储管理': { icon: '🏭', color: '#3b82f6', role: 'AI仓储管理' },
+            'AI配送安排': { icon: '📦', color: '#22c55e', role: 'AI配送安排' },
+            'AI跟踪服务': { icon: '🔎', color: '#ec4899', role: 'AI跟踪服务' },
+            'AI物流客服': { icon: '📞', color: '#8b5cf6', role: 'AI物流客服' },
+            // AI智能智慧制造系统
+            'AI制造总监': { icon: '🏭', color: '#f97316', role: 'AI制造总监' },
+            'AI生产调度': { icon: '⚙️', color: '#f59e0b', role: 'AI生产调度' },
+            'AI质量管理': { icon: '✅', color: '#3b82f6', role: 'AI质量管理' },
+            'AI设备管理': { icon: '🔧', color: '#22c55e', role: 'AI设备管理' },
+            'AI维护安排': { icon: '🛠️', color: '#ec4899', role: 'AI维护安排' },
+            'AI制造客服': { icon: '📞', color: '#8b5cf6', role: 'AI制造客服' },
+            // AI智能智慧能源系统
+            'AI能源总监': { icon: '⚡', color: '#eab308', role: 'AI能源总监' },
+            'AI供电调度': { icon: '🔌', color: '#f59e0b', role: 'AI供电调度' },
+            'AI节能管理': { icon: '💡', color: '#22c55e', role: 'AI节能管理' },
+            'AI监控中心': { icon: '📊', color: '#3b82f6', role: 'AI监控中心' },
+            'AI维护管理': { icon: '🔩', color: '#ec4899', role: 'AI维护管理' },
+            'AI能源客服': { icon: '📞', color: '#8b5cf6', role: 'AI能源客服' }
         };
 
         // 拖拽相关变量
