@@ -30980,8 +30980,165 @@
             }
         ];
 
+        const cycle473Templates = [
+            {
+                id: 'ai-elderly-care-service',
+                name: 'AI智慧养老服务系统',
+                icon: '👴',
+                desc: '智能化养老服务体系，提供健康管理、生活照料、精神陪伴等服务',
+                agents: ['AI养老管家', 'AI健康监测', 'AI生活照料', 'AI康复护理', 'AI紧急救援', 'AI精神陪伴'],
+                positions: [
+                    { role: 'AI养老管家', x: 400, y: 30 },
+                    { role: 'AI健康监测', x: 150, y: 150 },
+                    { role: 'AI生活照料', x: 650, y: 150 },
+                    { role: 'AI康复护理', x: 150, y: 300 },
+                    { role: 'AI紧急救援', x: 650, y: 300 },
+                    { role: 'AI精神陪伴', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI养老管家', to: 'AI健康监测', content: '健康监测需求' },
+                    { from: 'AI养老管家', to: 'AI生活照料', content: '生活照料需求' },
+                    { from: 'AI养老管家', to: 'AI康复护理', content: '康复护理需求' },
+                    { from: 'AI养老管家', to: 'AI紧急救援', content: '紧急救援需求' },
+                    { from: 'AI养老管家', to: 'AI精神陪伴', content: '陪伴需求' }
+                ]
+            },
+            {
+                id: 'ai-logistics-system',
+                name: 'AI智慧物流系统',
+                icon: '🚚',
+                desc: '智能化物流管理体系，实现仓储、运输、配送全流程优化',
+                agents: ['AI物流总监', 'AI仓储管理', 'AI运输调度', 'AI配送优化', 'AI需求预测', 'AI冷链管理'],
+                positions: [
+                    { role: 'AI物流总监', x: 400, y: 30 },
+                    { role: 'AI仓储管理', x: 150, y: 150 },
+                    { role: 'AI运输调度', x: 650, y: 150 },
+                    { role: 'AI配送优化', x: 150, y: 300 },
+                    { role: 'AI需求预测', x: 650, y: 300 },
+                    { role: 'AI冷链管理', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI物流总监', to: 'AI仓储管理', content: '仓储任务' },
+                    { from: 'AI物流总监', to: 'AI运输调度', content: '运输任务' },
+                    { from: 'AI物流总监', to: 'AI需求预测', content: '预测需求' },
+                    { from: 'AI仓储管理', to: 'AI配送优化', content: '配送需求' },
+                    { from: 'AI运输调度', to: 'AI冷链管理', content: '冷链需求' }
+                ]
+            },
+            {
+                id: 'ai-energy-management-system',
+                name: 'AI智慧能源管理系统',
+                icon: '⚡',
+                desc: '智能化能源管理平台，实现能源生产、分配、消费优化',
+                agents: ['AI能源总监', 'AI电网调度', 'AI能耗分析', 'AI新能源预测', 'AI碳排放管理', 'AI能源交易'],
+                positions: [
+                    { role: 'AI能源总监', x: 400, y: 30 },
+                    { role: 'AI电网调度', x: 150, y: 150 },
+                    { role: 'AI能耗分析', x: 650, y: 150 },
+                    { role: 'AI新能源预测', x: 150, y: 300 },
+                    { role: 'AI碳排放管理', x: 650, y: 300 },
+                    { role: 'AI能源交易', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI能源总监', to: 'AI电网调度', content: '调度需求' },
+                    { from: 'AI能源总监', to: 'AI能耗分析', content: '分析需求' },
+                    { from: 'AI能源总监', to: 'AI新能源预测', content: '预测需求' },
+                    { from: 'AI能耗分析', to: 'AI碳排放管理', content: '碳排数据' },
+                    { from: 'AI新能源预测', to: 'AI能源交易', content: '交易建议' }
+                ]
+            },
+            {
+                id: 'ai-manufacturing-system',
+                name: 'AI智能制造系统',
+                icon: '🏭',
+                desc: '智能化制造管理平台，实现生产计划、质量控制、设备维护优化',
+                agents: ['AI制造总监', 'AI生产计划', 'AI质量控制', 'AI设备维护', 'AI供应链管理', 'AI工艺优化'],
+                positions: [
+                    { role: 'AI制造总监', x: 400, y: 30 },
+                    { role: 'AI生产计划', x: 150, y: 150 },
+                    { role: 'AI质量控制', x: 650, y: 150 },
+                    { role: 'AI设备维护', x: 150, y: 300 },
+                    { role: 'AI供应链管理', x: 650, y: 300 },
+                    { role: 'AI工艺优化', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI制造总监', to: 'AI生产计划', content: '生产计划' },
+                    { from: 'AI制造总监', to: 'AI质量控制', content: '质量要求' },
+                    { from: 'AI制造总监', to: 'AI设备维护', content: '维护需求' },
+                    { from: 'AI生产计划', to: 'AI供应链管理', content: '供应链需求' },
+                    { from: 'AI质量控制', to: 'AI工艺优化', content: '优化建议' }
+                ]
+            },
+            {
+                id: 'ai-retail-system',
+                name: 'AI智慧零售系统',
+                icon: '🛒',
+                desc: '智能化零售管理平台，实现商品管理、库存优化、顾客体验提升',
+                agents: ['AI零售总监', 'AI商品管理', 'AI库存优化', 'AI顾客分析', 'AI营销推荐', 'AI门店管理'],
+                positions: [
+                    { role: 'AI零售总监', x: 400, y: 30 },
+                    { role: 'AI商品管理', x: 150, y: 150 },
+                    { role: 'AI库存优化', x: 650, y: 150 },
+                    { role: 'AI顾客分析', x: 150, y: 300 },
+                    { role: 'AI营销推荐', x: 650, y: 300 },
+                    { role: 'AI门店管理', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI零售总监', to: 'AI商品管理', content: '商品策略' },
+                    { from: 'AI零售总监', to: 'AI库存优化', content: '库存需求' },
+                    { from: 'AI零售总监', to: 'AI顾客分析', content: '分析需求' },
+                    { from: 'AI顾客分析', to: 'AI营销推荐', content: '推荐需求' },
+                    { from: 'AI库存优化', to: 'AI门店管理', content: '门店补货' }
+                ]
+            },
+            {
+                id: 'ai-construction-system',
+                name: 'AI智慧建筑系统',
+                icon: '🏗️',
+                desc: '智能化建筑管理平台，实现项目管理、施工监控、安全管理',
+                agents: ['AI建筑总监', 'AI项目管理', 'AI施工监控', 'AI安全管理', 'AI成本控制', 'AIBIM管理'],
+                positions: [
+                    { role: 'AI建筑总监', x: 400, y: 30 },
+                    { role: 'AI项目管理', x: 150, y: 150 },
+                    { role: 'AI施工监控', x: 650, y: 150 },
+                    { role: 'AI安全管理', x: 150, y: 300 },
+                    { role: 'AI成本控制', x: 650, y: 300 },
+                    { role: 'AIBIM管理', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI建筑总监', to: 'AI项目管理', content: '项目需求' },
+                    { from: 'AI建筑总监', to: 'AI施工监控', content: '监控需求' },
+                    { from: 'AI建筑总监', to: 'AI安全管理', content: '安全需求' },
+                    { from: 'AI项目管理', to: 'AI成本控制', content: '成本数据' },
+                    { from: 'AI施工监控', to: 'AIBIM管理', content: 'BIM数据' }
+                ]
+            },
+            {
+                id: 'ai-media-system',
+                name: 'AI智慧媒体系统',
+                icon: '📺',
+                desc: '智能化媒体内容管理平台，实现内容创作、分发、运营优化',
+                agents: ['AI媒体总监', 'AI内容创作', 'AI内容审核', 'AI分发策略', 'AI数据分析', 'AI版权管理'],
+                positions: [
+                    { role: 'AI媒体总监', x: 400, y: 30 },
+                    { role: 'AI内容创作', x: 150, y: 150 },
+                    { role: 'AI内容审核', x: 650, y: 150 },
+                    { role: 'AI分发策略', x: 150, y: 300 },
+                    { role: 'AI数据分析', x: 650, y: 300 },
+                    { role: 'AI版权管理', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI媒体总监', to: 'AI内容创作', content: '创作需求' },
+                    { from: 'AI媒体总监', to: 'AI内容审核', content: '审核需求' },
+                    { from: 'AI媒体总监', to: 'AI分发策略', content: '分发需求' },
+                    { from: 'AI内容创作', to: 'AI数据分析', content: '数据需求' },
+                    { from: 'AI内容审核', to: 'AI版权管理', content: '版权需求' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -37762,7 +37919,57 @@
             'AI生产排程': { icon: '📅', color: '#22c55e', role: 'AI生产排程' },
             'AI色彩管理': { icon: '🎨', color: '#f59e0b', role: 'AI色彩管理' },
             'AI质量检测': { icon: '🔍', color: '#ec4899', role: 'AI质量检测' },
-            'AI物流配送': { icon: '🚚', color: '#8b5cf6', role: 'AI物流配送' }
+            'AI物流配送': { icon: '🚚', color: '#8b5cf6', role: 'AI物流配送' },
+            // Cycle 473 新增角色 - 7个行业服务系统
+            // AI智慧养老服务系统
+            'AI养老管家': { icon: '👴', color: '#f97316', role: 'AI养老管家' },
+            'AI健康监测': { icon: '💓', color: '#3b82f6', role: 'AI健康监测' },
+            'AI生活照料': { icon: '🧹', color: '#22c55e', role: 'AI生活照料' },
+            'AI康复护理': { icon: '💪', color: '#ec4899', role: 'AI康复护理' },
+            'AI紧急救援': { icon: '🚨', color: '#dc2626', role: 'AI紧急救援' },
+            'AI精神陪伴': { icon: '💬', color: '#8b5cf6', role: 'AI精神陪伴' },
+            // AI智慧物流系统
+            'AI物流总监': { icon: '🚚', color: '#06b6d4', role: 'AI物流总监' },
+            'AI仓储管理': { icon: '🏚️', color: '#f59e0b', role: 'AI仓储管理' },
+            'AI运输调度': { icon: '🗺️', color: '#3b82f6', role: 'AI运输调度' },
+            'AI配送优化': { icon: '📦', color: '#22c55e', role: 'AI配送优化' },
+            'AI需求预测': { icon: '📈', color: '#ec4899', role: 'AI需求预测' },
+            'AI冷链管理': { icon: '❄️', color: '#8b5cf6', role: 'AI冷链管理' },
+            // AI智慧能源管理系统
+            'AI能源总监': { icon: '⚡', color: '#eab308', role: 'AI能源总监' },
+            'AI电网调度': { icon: '🔌', color: '#3b82f6', role: 'AI电网调度' },
+            'AI能耗分析': { icon: '📊', color: '#22c55e', role: 'AI能耗分析' },
+            'AI新能源预测': { icon: '🌱', color: '#f59e0b', role: 'AI新能源预测' },
+            'AI碳排放管理': { icon: '🌍', color: '#ec4899', role: 'AI碳排放管理' },
+            'AI能源交易': { icon: '💹', color: '#8b5cf6', role: 'AI能源交易' },
+            // AI智能制造系统
+            'AI制造总监': { icon: '🏭', color: '#78716c', role: 'AI制造总监' },
+            'AI生产计划': { icon: '📋', color: '#f59e0b', role: 'AI生产计划' },
+            'AI质量控制': { icon: '✅', color: '#3b82f6', role: 'AI质量控制' },
+            'AI设备维护': { icon: '🔧', color: '#22c55e', role: 'AI设备维护' },
+            'AI供应链管理': { icon: '🔗', color: '#ec4899', role: 'AI供应链管理' },
+            'AI工艺优化': { icon: '⚙️', color: '#8b5cf6', role: 'AI工艺优化' },
+            // AI智慧零售系统
+            'AI零售总监': { icon: '🛒', color: '#f43f5e', role: 'AI零售总监' },
+            'AI商品管理': { icon: '🏷️', color: '#f59e0b', role: 'AI商品管理' },
+            'AI库存优化': { icon: '📦', color: '#3b82f6', role: 'AI库存优化' },
+            'AI顾客分析': { icon: '👥', color: '#22c55e', role: 'AI顾客分析' },
+            'AI营销推荐': { icon: '📢', color: '#ec4899', role: 'AI营销推荐' },
+            'AI门店管理': { icon: '🏪', color: '#8b5cf6', role: 'AI门店管理' },
+            // AI智慧建筑系统
+            'AI建筑总监': { icon: '🏗️', color: '#78716c', role: 'AI建筑总监' },
+            'AI项目管理': { icon: '📋', color: '#f59e0b', role: 'AI项目管理' },
+            'AI施工监控': { icon: '📹', color: '#3b82f6', role: 'AI施工监控' },
+            'AI安全管理': { icon: '🛡️', color: '#dc2626', role: 'AI安全管理' },
+            'AI成本控制': { icon: '💰', color: '#22c55e', role: 'AI成本控制' },
+            'AIBIM管理': { icon: '📐', color: '#8b5cf6', role: 'AIBIM管理' },
+            // AI智慧媒体系统
+            'AI媒体总监': { icon: '📺', color: '#f43f5e', role: 'AI媒体总监' },
+            'AI内容创作': { icon: '🎬', color: '#f59e0b', role: 'AI内容创作' },
+            'AI内容审核': { icon: '✅', color: '#3b82f6', role: 'AI内容审核' },
+            'AI分发策略': { icon: '📡', color: '#22c55e', role: 'AI分发策略' },
+            'AI数据分析': { icon: '📊', color: '#ec4899', role: 'AI数据分析' },
+            'AI版权管理': { icon: '📚', color: '#8b5cf6', role: 'AI版权管理' }
         };
 
         // 拖拽相关变量
