@@ -35024,8 +35024,173 @@
             }
         ];
 
+        // Cycle 500 - 新增行业服务系统模板
+        const cycle500Templates = [
+            // AI智能量子计算系统
+            {
+                id: 'ai-quantum-computing',
+                name: 'AI智能量子计算系统',
+                icon: '⚛️',
+                desc: '智能量子计算，包括量子算法、量子模拟、量子加密等',
+                agents: ['AI Quantum Director', 'AI Quantum Algorithm', 'AI Quantum Sim', 'AI Quantum Crypto', 'AI Quantum AI', 'AI Quantum Analytics'],
+                positions: [
+                    { role: 'AI Quantum Director', x: 400, y: 30 },
+                    { role: 'AI Quantum Algorithm', x: 150, y: 150 },
+                    { role: 'AI Quantum Sim', x: 650, y: 150 },
+                    { role: 'AI Quantum Crypto', x: 150, y: 300 },
+                    { role: 'AI Quantum AI', x: 400, y: 350 },
+                    { role: 'AI Quantum Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Quantum Director', to: 'AI Quantum Algorithm', content: '量子算法' },
+                    { from: 'AI Quantum Director', to: 'AI Quantum Analytics', content: '量子分析' },
+                    { from: 'AI Quantum Algorithm', to: 'AI Quantum Sim', content: '量子模拟' },
+                    { from: 'AI Quantum Sim', to: 'AI Quantum Crypto', content: '量子加密' },
+                    { from: 'AI Quantum Crypto', to: 'AI Quantum AI', content: '量子AI' }
+                ]
+            },
+            // AI智能智慧城市系统
+            {
+                id: 'ai-smart-city',
+                name: 'AI智能智慧城市系统',
+                icon: '🏙️',
+                desc: '智慧城市管理，包括城市感知、智能交通、公共服务、城市规划等',
+                agents: ['AI SmartCity Director', 'AI City Sensor', 'AI Smart Transit', 'AI Public Service', 'AI SmartCity AI', 'AI City Planning'],
+                positions: [
+                    { role: 'AI SmartCity Director', x: 400, y: 30 },
+                    { role: 'AI City Sensor', x: 150, y: 150 },
+                    { role: 'AI Smart Transit', x: 650, y: 150 },
+                    { role: 'AI Public Service', x: 150, y: 300 },
+                    { role: 'AI SmartCity AI', x: 400, y: 350 },
+                    { role: 'AI City Planning', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SmartCity Director', to: 'AI City Sensor', content: '城市感知' },
+                    { from: 'AI SmartCity Director', to: 'AI City Planning', content: '城市规划' },
+                    { from: 'AI City Sensor', to: 'AI Smart Transit', content: '智能交通' },
+                    { from: 'AI Smart Transit', to: 'AI Public Service', content: '公共服务' },
+                    { from: 'AI Public Service', to: 'AI SmartCity AI', content: '城市AI' }
+                ]
+            },
+            // AI智能海洋经济系统
+            {
+                id: 'ai-ocean-economy',
+                name: 'AI智能海洋经济系统',
+                icon: '🌊',
+                desc: '智能海洋经济，包括海洋渔业、海洋油气、海洋旅游、海洋科研等',
+                agents: ['AI Ocean Director', 'AI Ocean Fishery', 'AI Ocean OilGas', 'AI Ocean Tourism', 'AI Ocean AI', 'AI Ocean Research'],
+                positions: [
+                    { role: 'AI Ocean Director', x: 400, y: 30 },
+                    { role: 'AI Ocean Fishery', x: 150, y: 150 },
+                    { role: 'AI Ocean OilGas', x: 650, y: 150 },
+                    { role: 'AI Ocean Tourism', x: 150, y: 300 },
+                    { role: 'AI Ocean AI', x: 400, y: 350 },
+                    { role: 'AI Ocean Research', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Ocean Director', to: 'AI Ocean Fishery', content: '海洋渔业' },
+                    { from: 'AI Ocean Director', to: 'AI Ocean Research', content: '海洋科研' },
+                    { from: 'AI Ocean Fishery', to: 'AI Ocean OilGas', content: '海洋油气' },
+                    { from: 'AI Ocean OilGas', to: 'AI Ocean Tourism', content: '海洋旅游' },
+                    { from: 'AI Ocean Tourism', to: 'AI Ocean AI', content: '海洋AI' }
+                ]
+            },
+            // AI智能智慧交通系统
+            {
+                id: 'ai-intelligent-transport',
+                name: 'AI智能智慧交通系统',
+                icon: '🚇',
+                desc: '智慧交通管理，包括车路协同、自动驾驶、 Traffic优化、物流调度等',
+                agents: ['AI Transport Director', 'AI V2X System', 'AI AutoDrive', 'AI Traffic Optim', 'AI Transport AI', 'AI Logistics Sched'],
+                positions: [
+                    { role: 'AI Transport Director', x: 400, y: 30 },
+                    { role: 'AI V2X System', x: 150, y: 150 },
+                    { role: 'AI AutoDrive', x: 650, y: 150 },
+                    { role: 'AI Traffic Optim', x: 150, y: 300 },
+                    { role: 'AI Transport AI', x: 400, y: 350 },
+                    { role: 'AI Logistics Sched', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Transport Director', to: 'AI V2X System', content: '车路协同' },
+                    { from: 'AI Transport Director', to: 'AI Traffic Optim', content: '交通优化' },
+                    { from: 'AI V2X System', to: 'AI AutoDrive', content: '自动驾驶' },
+                    { from: 'AI AutoDrive', to: 'AI Logistics Sched', content: '物流调度' },
+                    { from: 'AI Logistics Sched', to: 'AI Transport AI', content: '交通AI' }
+                ]
+            },
+            // AI智能文化遗产系统
+            {
+                id: 'ai-cultural-heritage',
+                name: 'AI智能文化遗产系统',
+                icon: '🏛️',
+                desc: '智能文化遗产，包括文物修复、文化保护、数字博物馆、文化传播等',
+                agents: ['AI Heritage Director', 'AI Artifact Restore', 'AI Cultural Protect', 'AI Digital Museum', 'AI Heritage AI', 'AI Cultural Spread'],
+                positions: [
+                    { role: 'AI Heritage Director', x: 400, y: 30 },
+                    { role: 'AI Artifact Restore', x: 150, y: 150 },
+                    { role: 'AI Cultural Protect', x: 650, y: 150 },
+                    { role: 'AI Digital Museum', x: 150, y: 300 },
+                    { role: 'AI Heritage AI', x: 400, y: 350 },
+                    { role: 'AI Cultural Spread', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Heritage Director', to: 'AI Artifact Restore', content: '文物修复' },
+                    { from: 'AI Heritage Director', to: 'AI Cultural Spread', content: '文化传播' },
+                    { from: 'AI Artifact Restore', to: 'AI Cultural Protect', content: '文化保护' },
+                    { from: 'AI Cultural Protect', to: 'AI Digital Museum', content: '数字博物馆' },
+                    { from: 'AI Digital Museum', to: 'AI Heritage AI', content: '遗产AI' }
+                ]
+            },
+            // AI智能体育赛事系统
+            {
+                id: 'ai-sports-events',
+                name: 'AI智能体育赛事系统',
+                icon: '⚽',
+                desc: '智能体育赛事，包括赛事运营、运动员训练、赛事直播、体育分析等',
+                agents: ['AI Sports Director', 'AI Event Operator', 'AI Athlete Train', 'AI Live Broadcast', 'AI Sports AI', 'AI Sports Analytics'],
+                positions: [
+                    { role: 'AI Sports Director', x: 400, y: 30 },
+                    { role: 'AI Event Operator', x: 150, y: 150 },
+                    { role: 'AI Athlete Train', x: 650, y: 150 },
+                    { role: 'AI Live Broadcast', x: 150, y: 300 },
+                    { role: 'AI Sports AI', x: 400, y: 350 },
+                    { role: 'AI Sports Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sports Director', to: 'AI Event Operator', content: '赛事运营' },
+                    { from: 'AI Sports Director', to: 'AI Sports Analytics', content: '体育分析' },
+                    { from: 'AI Event Operator', to: 'AI Athlete Train', content: '运动员训练' },
+                    { from: 'AI Athlete Train', to: 'AI Live Broadcast', content: '赛事直播' },
+                    { from: 'AI Live Broadcast', to: 'AI Sports AI', content: '体育AI' }
+                ]
+            },
+            // AI智能智慧家居系统
+            {
+                id: 'ai-smart-home',
+                name: 'AI智能智慧家居系统',
+                icon: '🏠',
+                desc: '智慧家居管理，包括智能控制、能源管理、安全防护、健康监测等',
+                agents: ['AI HomeDirector', 'AI Smart Control', 'AI Energy Mgmt', 'AI Security Protect', 'AI Home AI', 'AI Health Monitor'],
+                positions: [
+                    { role: 'AI HomeDirector', x: 400, y: 30 },
+                    { role: 'AI Smart Control', x: 150, y: 150 },
+                    { role: 'AI Energy Mgmt', x: 650, y: 150 },
+                    { role: 'AI Security Protect', x: 150, y: 300 },
+                    { role: 'AI Home AI', x: 400, y: 350 },
+                    { role: 'AI Health Monitor', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HomeDirector', to: 'AI Smart Control', content: '智能控制' },
+                    { from: 'AI HomeDirector', to: 'AI Health Monitor', content: '健康监测' },
+                    { from: 'AI Smart Control', to: 'AI Energy Mgmt', content: '能源管理' },
+                    { from: 'AI Energy Mgmt', to: 'AI Security Protect', content: '安全防护' },
+                    { from: 'AI Security Protect', to: 'AI Home AI', content: '家居AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -42188,7 +42353,56 @@
             'AI Orbit Design': { icon: '🌐', color: '#3b82f6', role: 'AI轨道设计' },
             'AI Deep Space': { icon: '🌌', color: '#f59e0b', role: 'AI深空探测' },
             'AI SpaceExplore AI': { icon: '🤖', color: '#8b5cf6', role: 'AI太空探索AI' },
-            'AI SpaceExplore Analytics': { icon: '📊', color: '#06b6d4', role: 'AI太空探索分析' }
+            'AI SpaceExplore Analytics': { icon: '📊', color: '#06b6d4', role: 'AI太空探索分析' },
+            // Cycle 500 - AI智能量子计算系统
+            'AI Quantum Director': { icon: '⚛️', color: '#8b5cf6', role: 'AI量子计算总监' },
+            'AI Quantum Algorithm': { icon: '🔢', color: '#22c55e', role: 'AI量子算法' },
+            'AI Quantum Sim': { icon: '🧪', color: '#3b82f6', role: 'AI量子模拟' },
+            'AI Quantum Crypto': { icon: '🔐', color: '#f59e0b', role: 'AI量子加密' },
+            'AI Quantum AI': { icon: '🤖', color: '#ec4899', role: 'AI量子AI' },
+            'AI Quantum Analytics': { icon: '📊', color: '#06b6d4', role: 'AI量子分析' },
+            // Cycle 500 - AI智能智慧城市系统
+            'AI SmartCity Director': { icon: '🏙️', color: '#f97316', role: 'AI智慧城市总监' },
+            'AI City Sensor': { icon: '📡', color: '#22c55e', role: 'AI城市感知' },
+            'AI Smart Transit': { icon: '🚇', color: '#3b82f6', role: 'AI智能交通' },
+            'AI Public Service': { icon: '🏛️', color: '#ec4899', role: 'AI公共服务' },
+            'AI SmartCity AI': { icon: '🤖', color: '#8b5cf6', role: 'AI城市AI' },
+            'AI City Planning': { icon: '📐', color: '#06b6d4', role: 'AI城市规划' },
+            // Cycle 500 - AI智能海洋经济系统
+            'AI Ocean Director': { icon: '🌊', color: '#0ea5e9', role: 'AI海洋经济总监' },
+            'AI Ocean Fishery': { icon: '🐟', color: '#22c55e', role: 'AI海洋渔业' },
+            'AI Ocean OilGas': { icon: '🛢️', color: '#f59e0b', role: 'AI海洋油气' },
+            'AI Ocean Tourism': { icon: '🏖️', color: '#ec4899', role: 'AI海洋旅游' },
+            'AI Ocean AI': { icon: '🤖', color: '#8b5cf6', role: 'AI海洋AI' },
+            'AI Ocean Research': { icon: '🔬', color: '#06b6d4', role: 'AI海洋科研' },
+            // Cycle 500 - AI智能智慧交通系统
+            'AI Transport Director': { icon: '🚇', color: '#6366f1', role: 'AI智慧交通总监' },
+            'AI V2X System': { icon: '📶', color: '#22c55e', role: 'AI车路协同' },
+            'AI AutoDrive': { icon: '🚗', color: '#3b82f6', role: 'AI自动驾驶' },
+            'AI Traffic Optim': { icon: '🚦', color: '#f59e0b', role: 'AI交通优化' },
+            'AI Transport AI': { icon: '🤖', color: '#8b5cf6', role: 'AI交通AI' },
+            'AI Logistics Sched': { icon: '📦', color: '#06b6d4', role: 'AI物流调度' },
+            // Cycle 500 - AI智能文化遗产系统
+            'AI Heritage Director': { icon: '🏛️', color: '#a855f7', role: 'AI文化遗产总监' },
+            'AI Artifact Restore': { icon: '🖼️', color: '#22c55e', role: 'AI文物修复' },
+            'AI Cultural Protect': { icon: '🛡️', color: '#3b82f6', role: 'AI文化保护' },
+            'AI Digital Museum': { icon: '🎨', color: '#ec4899', role: 'AI数字博物馆' },
+            'AI Heritage AI': { icon: '🤖', color: '#8b5cf6', role: 'AI遗产AI' },
+            'AI Cultural Spread': { icon: '📢', color: '#06b6d4', role: 'AI文化传播' },
+            // Cycle 500 - AI智能体育赛事系统
+            'AI Sports Director': { icon: '⚽', color: '#22c55e', role: 'AI体育赛事总监' },
+            'AI Event Operator': { icon: '🎯', color: '#f59e0b', role: 'AI赛事运营' },
+            'AI Athlete Train': { icon: '🏃', color: '#3b82f6', role: 'AI运动员训练' },
+            'AI Live Broadcast': { icon: '📺', color: '#ec4899', role: 'AI赛事直播' },
+            'AI Sports AI': { icon: '🤖', color: '#8b5cf6', role: 'AI体育AI' },
+            'AI Sports Analytics': { icon: '📊', color: '#06b6d4', role: 'AI体育分析' },
+            // Cycle 500 - AI智能智慧家居系统
+            'AI HomeDirector': { icon: '🏠', color: '#f97316', role: 'AI智慧家居总监' },
+            'AI Smart Control': { icon: '🎚️', color: '#22c55e', role: 'AI智能控制' },
+            'AI Energy Mgmt': { icon: '⚡', color: '#f59e0b', role: 'AI能源管理' },
+            'AI Security Protect': { icon: '🔒', color: '#3b82f6', role: 'AI安全防护' },
+            'AI Home AI': { icon: '🤖', color: '#8b5cf6', role: 'AI家居AI' },
+            'AI Health Monitor': { icon: '❤️', color: '#ec4899', role: 'AI健康监测' }
         };
 
         // 拖拽相关变量
