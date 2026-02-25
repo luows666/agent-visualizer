@@ -30666,8 +30666,165 @@
             }
         ];
 
+        const cycle471Templates = [
+            {
+                id: 'ai-smart-security',
+                name: 'AI智慧安保系统',
+                icon: '🛡️',
+                desc: '智能安保服务管理，包括门禁、监控、巡逻、押运等',
+                agents: ['AI安保总监', 'AI门禁管理', 'AI监控中心', 'AI巡逻调度', 'AI押运指挥', 'AI应急响应'],
+                positions: [
+                    { role: 'AI安保总监', x: 400, y: 30 },
+                    { role: 'AI门禁管理', x: 150, y: 150 },
+                    { role: 'AI监控中心', x: 650, y: 150 },
+                    { role: 'AI巡逻调度', x: 150, y: 300 },
+                    { role: 'AI押运指挥', x: 400, y: 350 },
+                    { role: 'AI应急响应', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI安保总监', to: 'AI门禁管理', content: '门禁任务' },
+                    { from: 'AI安保总监', to: 'AI监控中心', content: '监控需求' },
+                    { from: 'AI安保总监', to: 'AI巡逻调度', content: '巡逻任务' },
+                    { from: 'AI门禁管理', to: 'AI押运指挥', content: '押运需求' },
+                    { from: 'AI监控中心', to: 'AI应急响应', content: '应急需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-elderly-care',
+                name: 'AI智慧养老系统',
+                icon: '👴',
+                desc: '智能养老服务管理，包括健康监测、生活护理、康复训练等',
+                agents: ['AI养老总监', 'AI健康监测', 'AI生活护理', 'AI康复训练', 'AI营养配餐', 'AI心理关怀'],
+                positions: [
+                    { role: 'AI养老总监', x: 400, y: 30 },
+                    { role: 'AI健康监测', x: 150, y: 150 },
+                    { role: 'AI生活护理', x: 650, y: 150 },
+                    { role: 'AI康复训练', x: 150, y: 300 },
+                    { role: 'AI营养配餐', x: 400, y: 350 },
+                    { role: 'AI心理关怀', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI养老总监', to: 'AI健康监测', content: '监测任务' },
+                    { from: 'AI养老总监', to: 'AI生活护理', content: '护理任务' },
+                    { from: 'AI养老总监', to: 'AI康复训练', content: '康复需求' },
+                    { from: 'AI健康监测', to: 'AI营养配餐', content: '配餐需求' },
+                    { from: 'AI生活护理', to: 'AI心理关怀', content: '心理需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-fitness',
+                name: 'AI智慧健身系统',
+                icon: '💪',
+                desc: '智能健身服务管理，包括私教、团课、康复、营养指导等',
+                agents: ['AI健身总监', 'AI私教管理', 'AI团课安排', 'AI康复指导', 'AI营养师', 'AI体测分析'],
+                positions: [
+                    { role: 'AI健身总监', x: 400, y: 30 },
+                    { role: 'AI私教管理', x: 150, y: 150 },
+                    { role: 'AI团课安排', x: 650, y: 150 },
+                    { role: 'AI康复指导', x: 150, y: 300 },
+                    { role: 'AI营养师', x: 400, y: 350 },
+                    { role: 'AI体测分析', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI健身总监', to: 'AI私教管理', content: '私教任务' },
+                    { from: 'AI健身总监', to: 'AI团课安排', content: '团课需求' },
+                    { from: 'AI健身总监', to: 'AI康复指导', content: '康复需求' },
+                    { from: 'AI私教管理', to: 'AI体测分析', content: '体测需求' },
+                    { from: 'AI团课安排', to: 'AI营养师', content: '营养需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-beauty',
+                name: 'AI智慧美容系统',
+                icon: '💅',
+                desc: '智能美容服务管理，包括美发、美甲、美容、SPA等',
+                agents: ['AI美容总监', 'AI美发管理', 'AI美甲服务', 'AI美容护理', 'AI水疗管理', 'AI客户顾问'],
+                positions: [
+                    { role: 'AI美容总监', x: 400, y: 30 },
+                    { role: 'AI美发管理', x: 150, y: 150 },
+                    { role: 'AI美甲服务', x: 650, y: 150 },
+                    { role: 'AI美容护理', x: 150, y: 300 },
+                    { role: 'AI水疗管理', x: 400, y: 350 },
+                    { role: 'AI客户顾问', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI美容总监', to: 'AI美发管理', content: '美发任务' },
+                    { from: 'AI美容总监', to: 'AI美甲服务', content: '美甲任务' },
+                    { from: 'AI美容总监', to: 'AI美容护理', content: '护理需求' },
+                    { from: 'AI美发管理', to: 'AI水疗管理', content: '水疗需求' },
+                    { from: 'AI美甲服务', to: 'AI客户顾问', content: '客户需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-pet',
+                name: 'AI智慧宠物服务系统',
+                icon: '🐕',
+                desc: '智能宠物服务管理，包括寄养、美容、医疗、训练等',
+                agents: ['AI宠物总监', 'AI寄养管理', 'AI宠物美容', 'AI宠物医疗', 'AI宠物训练', 'AI宠物营养'],
+                positions: [
+                    { role: 'AI宠物总监', x: 400, y: 30 },
+                    { role: 'AI寄养管理', x: 150, y: 150 },
+                    { role: 'AI宠物美容', x: 650, y: 150 },
+                    { role: 'AI宠物医疗', x: 150, y: 300 },
+                    { role: 'AI宠物训练', x: 400, y: 350 },
+                    { role: 'AI宠物营养', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI宠物总监', to: 'AI寄养管理', content: '寄养任务' },
+                    { from: 'AI宠物总监', to: 'AI宠物美容', content: '美容任务' },
+                    { from: 'AI宠物总监', to: 'AI宠物医疗', content: '医疗任务' },
+                    { from: 'AI寄养管理', to: 'AI宠物训练', content: '训练需求' },
+                    { from: 'AI宠物医疗', to: 'AI宠物营养', content: '营养需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-education',
+                name: 'AI智慧教育培训系统',
+                icon: '🎓',
+                desc: '智能教育培训服务管理，包括K12、职业教育、语言培训等',
+                agents: ['AI教育总监', 'AIK12管理', 'AI职业教育', 'AI语言培训', 'AI课程研发', 'AI学习顾问'],
+                positions: [
+                    { role: 'AI教育总监', x: 400, y: 30 },
+                    { role: 'AIK12管理', x: 150, y: 150 },
+                    { role: 'AI职业教育', x: 650, y: 150 },
+                    { role: 'AI语言培训', x: 150, y: 300 },
+                    { role: 'AI课程研发', x: 400, y: 350 },
+                    { role: 'AI学习顾问', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI教育总监', to: 'AIK12管理', content: 'K12任务' },
+                    { from: 'AI教育总监', to: 'AI职业教育', content: '职教任务' },
+                    { from: 'AI教育总监', to: 'AI语言培训', content: '语培需求' },
+                    { from: 'AIK12管理', to: 'AI课程研发', content: '研发需求' },
+                    { from: 'AI职业教育', to: 'AI学习顾问', content: '顾问需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-car-service',
+                name: 'AI智慧汽车服务系统',
+                icon: '🚗',
+                desc: '智能汽车服务管理，包括洗车、维修、保养、保险等',
+                agents: ['AI汽车总监', 'AI洗车管理', 'AI汽车维修', 'AI汽车保养', 'AI车险服务', 'AI车管家'],
+                positions: [
+                    { role: 'AI汽车总监', x: 400, y: 30 },
+                    { role: 'AI洗车管理', x: 150, y: 150 },
+                    { role: 'AI汽车维修', x: 650, y: 150 },
+                    { role: 'AI汽车保养', x: 150, y: 300 },
+                    { role: 'AI车险服务', x: 400, y: 350 },
+                    { role: 'AI车管家', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI汽车总监', to: 'AI洗车管理', content: '洗车任务' },
+                    { from: 'AI汽车总监', to: 'AI汽车维修', content: '维修任务' },
+                    { from: 'AI汽车总监', to: 'AI汽车保养', content: '保养任务' },
+                    { from: 'AI汽车维修', to: 'AI车险服务', content: '保险需求' },
+                    { from: 'AI汽车保养', to: 'AI车管家', content: '管家需求' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates];
 
         // Agent 角色配置
         const agentRoles = {
