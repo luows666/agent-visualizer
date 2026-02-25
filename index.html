@@ -33605,8 +33605,166 @@
             }
         ];
 
+        // Cycle 491 新增模板
+        const cycle491Templates = [
+            {
+                id: 'ai-medical-smart',
+                name: 'AI智慧医疗健康系统',
+                icon: '🏥',
+                desc: '智慧医疗健康，包括预约挂号、诊断辅助、健康管理等',
+                agents: ['AI MedicalSmart Director', 'AI Appointment Register', 'AI Diagnosis Assist', 'AI Health Manage', 'AI Medical AI', 'AI Medical Analytics'],
+                positions: [
+                    { role: 'AI MedicalSmart Director', x: 400, y: 30 },
+                    { role: 'AI Appointment Register', x: 150, y: 150 },
+                    { role: 'AI Diagnosis Assist', x: 650, y: 150 },
+                    { role: 'AI Health Manage', x: 150, y: 300 },
+                    { role: 'AI Medical AI', x: 400, y: 350 },
+                    { role: 'AI Medical Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI MedicalSmart Director', to: 'AI Appointment Register', content: '预约挂号' },
+                    { from: 'AI MedicalSmart Director', to: 'AI Medical Analytics', content: '医疗分析' },
+                    { from: 'AI Appointment Register', to: 'AI Diagnosis Assist', content: '诊断辅助' },
+                    { from: 'AI Diagnosis Assist', to: 'AI Health Manage', content: '健康管理' },
+                    { from: 'AI Health Manage', to: 'AI Medical AI', content: '医疗AI' }
+                ]
+            },
+            {
+                id: 'ai-education-smart',
+                name: 'AI智慧教育培训系统',
+                icon: '📚',
+                desc: '智慧教育培训，包括课程推荐、学习跟踪、在线考试等',
+                agents: ['AI EducationSmart Director', 'AI Course Recommend', 'AI Learning Track', 'AI Exam Online', 'AI Education AI', 'AI Education Analytics'],
+                positions: [
+                    { role: 'AI EducationSmart Director', x: 400, y: 30 },
+                    { role: 'AI Course Recommend', x: 150, y: 150 },
+                    { role: 'AI Learning Track', x: 650, y: 150 },
+                    { role: 'AI Exam Online', x: 150, y: 300 },
+                    { role: 'AI Education AI', x: 400, y: 350 },
+                    { role: 'AI Education Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI EducationSmart Director', to: 'AI Course Recommend', content: '课程推荐' },
+                    { from: 'AI EducationSmart Director', to: 'AI Education Analytics', content: '教育分析' },
+                    { from: 'AI Course Recommend', to: 'AI Learning Track', content: '学习跟踪' },
+                    { from: 'AI Learning Track', to: 'AI Exam Online', content: '在线考试' },
+                    { from: 'AI Exam Online', to: 'AI Education AI', content: '教育AI' }
+                ]
+            },
+            {
+                id: 'ai-finance-smart',
+                name: 'AI智慧金融服务系统',
+                icon: '🏦',
+                desc: '智慧金融服务，包括风险评估、投资顾问、欺诈检测等',
+                agents: ['AI FinanceSmart Director', 'AI Risk Assess', 'AI Investment Advisor', 'AI Fraud Detect', 'AI Finance AI', 'AI Finance Analytics'],
+                positions: [
+                    { role: 'AI FinanceSmart Director', x: 400, y: 30 },
+                    { role: 'AI Risk Assess', x: 150, y: 150 },
+                    { role: 'AI Investment Advisor', x: 650, y: 150 },
+                    { role: 'AI Fraud Detect', x: 150, y: 300 },
+                    { role: 'AI Finance AI', x: 400, y: 350 },
+                    { role: 'AI Finance Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI FinanceSmart Director', to: 'AI Risk Assess', content: '风险评估' },
+                    { from: 'AI FinanceSmart Director', to: 'AI Finance Analytics', content: '金融分析' },
+                    { from: 'AI Risk Assess', to: 'AI Investment Advisor', content: '投资顾问' },
+                    { from: 'AI Investment Advisor', to: 'AI Fraud Detect', content: '欺诈检测' },
+                    { from: 'AI Fraud Detect', to: 'AI Finance AI', content: '金融AI' }
+                ]
+            },
+            {
+                id: 'ai-manufacturing-smart',
+                name: 'AI智慧制造业系统',
+                icon: '🏭',
+                desc: '智慧制造业，包括生产调度、质量检测、设备维护等',
+                agents: ['AI ManufacturingSmart Director', 'AI Production Dispatch', 'AI Quality Inspect', 'AI Equipment Maintain', 'AI Manufacturing AI', 'AI Manufacturing Analytics'],
+                positions: [
+                    { role: 'AI ManufacturingSmart Director', x: 400, y: 30 },
+                    { role: 'AI Production Dispatch', x: 150, y: 150 },
+                    { role: 'AI Quality Inspect', x: 650, y: 150 },
+                    { role: 'AI Equipment Maintain', x: 150, y: 300 },
+                    { role: 'AI Manufacturing AI', x: 400, y: 350 },
+                    { role: 'AI Manufacturing Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI ManufacturingSmart Director', to: 'AI Production Dispatch', content: '生产调度' },
+                    { from: 'AI ManufacturingSmart Director', to: 'AI Manufacturing Analytics', content: '制造分析' },
+                    { from: 'AI Production Dispatch', to: 'AI Quality Inspect', content: '质量检测' },
+                    { from: 'AI Quality Inspect', to: 'AI Equipment Maintain', content: '设备维护' },
+                    { from: 'AI Equipment Maintain', to: 'AI Manufacturing AI', content: '制造AI' }
+                ]
+            },
+            {
+                id: 'ai-retail-smart',
+                name: 'AI智慧零售业系统',
+                icon: '🛒',
+                desc: '智慧零售业，包括库存管理、促销推荐、顾客分析等',
+                agents: ['AI RetailSmart Director', 'AI Inventory Manage', 'AI Promotion Recommend', 'AI Customer Analyze', 'AI Retail AI', 'AI Retail Analytics'],
+                positions: [
+                    { role: 'AI RetailSmart Director', x: 400, y: 30 },
+                    { role: 'AI Inventory Manage', x: 150, y: 150 },
+                    { role: 'AI Promotion Recommend', x: 650, y: 150 },
+                    { role: 'AI Customer Analyze', x: 150, y: 300 },
+                    { role: 'AI Retail AI', x: 400, y: 350 },
+                    { role: 'AI Retail Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI RetailSmart Director', to: 'AI Inventory Manage', content: '库存管理' },
+                    { from: 'AI RetailSmart Director', to: 'AI Retail Analytics', content: '零售分析' },
+                    { from: 'AI Inventory Manage', to: 'AI Promotion Recommend', content: '促销推荐' },
+                    { from: 'AI Promotion Recommend', to: 'AI Customer Analyze', content: '顾客分析' },
+                    { from: 'AI Customer Analyze', to: 'AI Retail AI', content: '零售AI' }
+                ]
+            },
+            {
+                id: 'ai-logistics-smart',
+                name: 'AI智慧物流运输系统',
+                icon: '🚛',
+                desc: '智慧物流运输，包括路径优化、车队管理、货物追踪等',
+                agents: ['AI LogisticsSmart Director', 'AI Route Optimize', 'AI Fleet Manage', 'AI Cargo Track', 'AI Logistics AI', 'AI Logistics Analytics'],
+                positions: [
+                    { role: 'AI LogisticsSmart Director', x: 400, y: 30 },
+                    { role: 'AI Route Optimize', x: 150, y: 150 },
+                    { role: 'AI Fleet Manage', x: 650, y: 150 },
+                    { role: 'AI Cargo Track', x: 150, y: 300 },
+                    { role: 'AI Logistics AI', x: 400, y: 350 },
+                    { role: 'AI Logistics Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI LogisticsSmart Director', to: 'AI Route Optimize', content: '路径优化' },
+                    { from: 'AI LogisticsSmart Director', to: 'AI Logistics Analytics', content: '物流分析' },
+                    { from: 'AI Route Optimize', to: 'AI Fleet Manage', content: '车队管理' },
+                    { from: 'AI Fleet Manage', to: 'AI Cargo Track', content: '货物追踪' },
+                    { from: 'AI Cargo Track', to: 'AI Logistics AI', content: '物流AI' }
+                ]
+            },
+            {
+                id: 'ai-energy-smart-v2',
+                name: 'AI智慧能源管理系统',
+                icon: '⚡',
+                desc: '智慧能源管理，包括负荷预测、设备调度、能耗优化等',
+                agents: ['AI EnergySmartV2 Director', 'AI Load Forecast', 'AI Equipment Dispatch', 'AI Energy Optimize', 'AI EnergyV2 AI', 'AI EnergyV2 Analytics'],
+                positions: [
+                    { role: 'AI EnergySmartV2 Director', x: 400, y: 30 },
+                    { role: 'AI Load Forecast', x: 150, y: 150 },
+                    { role: 'AI Equipment Dispatch', x: 650, y: 150 },
+                    { role: 'AI Energy Optimize', x: 150, y: 300 },
+                    { role: 'AI EnergyV2 AI', x: 400, y: 350 },
+                    { role: 'AI EnergyV2 Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI EnergySmartV2 Director', to: 'AI Load Forecast', content: '负荷预测' },
+                    { from: 'AI EnergySmartV2 Director', to: 'AI EnergyV2 Analytics', content: '能源分析' },
+                    { from: 'AI Load Forecast', to: 'AI Equipment Dispatch', content: '设备调度' },
+                    { from: 'AI Equipment Dispatch', to: 'AI Energy Optimize', content: '能耗优化' },
+                    { from: 'AI Energy Optimize', to: 'AI EnergyV2 AI', content: '能源AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -40320,7 +40478,58 @@
             'AI Rescue Command': { icon: '🚑', color: '#3b82f6', role: 'AI救援指挥' },
             'AI Damage Assess': { icon: '📋', color: '#f59e0b', role: 'AI灾后评估' },
             'AI Emergency AI': { icon: '🤖', color: '#8b5cf6', role: 'AI应急AI' },
-            'AI Emergency Analytics': { icon: '📊', color: '#06b6d4', role: 'AI应急分析' }
+            'AI Emergency Analytics': { icon: '📊', color: '#06b6d4', role: 'AI应急分析' },
+            // Cycle 491 新增 Agent Roles
+            // AI智慧医疗健康系统
+            'AI MedicalSmart Director': { icon: '🏥', color: '#14b8a6', role: 'AI医疗总监' },
+            'AI Appointment Register': { icon: '📅', color: '#22c55e', role: 'AI预约挂号' },
+            'AI Diagnosis Assist': { icon: '🩺', color: '#3b82f6', role: 'AI诊断辅助' },
+            'AI Health Manage': { icon: '💪', color: '#f59e0b', role: 'AI健康管理' },
+            'AI Medical AI': { icon: '🤖', color: '#8b5cf6', role: 'AI医疗AI' },
+            'AI Medical Analytics': { icon: '📊', color: '#06b6d4', role: 'AI医疗分析' },
+            // AI智慧教育培训系统
+            'AI EducationSmart Director': { icon: '📚', color: '#ec4899', role: 'AI教育总监' },
+            'AI Course Recommend': { icon: '🎓', color: '#22c55e', role: 'AI课程推荐' },
+            'AI Learning Track': { icon: '📈', color: '#3b82f6', role: 'AI学习跟踪' },
+            'AI Exam Online': { icon: '✍️', color: '#f59e0b', role: 'AI在线考试' },
+            'AI Education AI': { icon: '🤖', color: '#8b5cf6', role: 'AI教育AI' },
+            'AI Education Analytics': { icon: '📊', color: '#06b6d4', role: 'AI教育分析' },
+            // AI智慧金融服务系统
+            'AI FinanceSmart Director': { icon: '🏦', color: '#0ea5e9', role: 'AI金融总监' },
+            'AI Risk Assess': { icon: '⚖️', color: '#22c55e', role: 'AI风险评估' },
+            'AI Investment Advisor': { icon: '💼', color: '#3b82f6', role: 'AI投资顾问' },
+            'AI Fraud Detect': { icon: '🔍', color: '#f59e0b', role: 'AI欺诈检测' },
+            'AI Finance AI': { icon: '🤖', color: '#8b5cf6', role: 'AI金融AI' },
+            'AI Finance Analytics': { icon: '📊', color: '#06b6d4', role: 'AI金融分析' },
+            // AI智慧制造业系统
+            'AI ManufacturingSmart Director': { icon: '🏭', color: '#f97316', role: 'AI制造总监' },
+            'AI Production Dispatch': { icon: '⚙️', color: '#22c55e', role: 'AI生产调度' },
+            'AI Quality Inspect': { icon: '✅', color: '#3b82f6', role: 'AI质量检测' },
+            'AI Equipment Maintain': { icon: '🔧', color: '#f59e0b', role: 'AI设备维护' },
+            'AI Manufacturing AI': { icon: '🤖', color: '#8b5cf6', role: 'AI制造AI' },
+            'AI Manufacturing Analytics': { icon: '📊', color: '#06b6d4', role: 'AI制造分析' },
+            color: '#06b6d4', role: 'AI制造分析' },
+            // AI智慧零售业系统
+            'AI RetailSmart Director': { icon: '🛒', color: '#a855f7', role: 'AI零售总监' },
+            'AI Inventory Manage': { icon: '📦', color: '#22c55e', role: 'AI库存管理' },
+            'AI Promotion Recommend': { icon: '🏷️', color: '#3b82f6', role: 'AI促销推荐' },
+            'AI Customer Analyze': { icon: '👥', color: '#f59e0b', role: 'AI顾客分析' },
+            'AI Retail AI': { icon: '🤖', color: '#8b5cf6', role: 'AI零售AI' },
+            'AI Retail Analytics': { icon: '📊', color: '#06b6d4', role: 'AI零售分析' },
+            // AI智慧物流运输系统
+            'AI LogisticsSmart Director': { icon: '🚛', color: '#84cc16', role: 'AI物流总监' },
+            'AI Route Optimize': { icon: '🛣️', color: '#22c55e', role: 'AI路径优化' },
+            'AI Fleet Manage': { icon: '🚚', color: '#3b82f6', role: 'AI车队管理' },
+            'AI Cargo Track': { icon: '📍', color: '#f59e0b', role: 'AI货物追踪' },
+            'AI Logistics AI': { icon: '🤖', color: '#8b5cf6', role: 'AI物流AI' },
+            'AI Logistics Analytics': { icon: '📊', color: '#06b6d4', role: 'AI物流分析' },
+            // AI智慧能源管理系统
+            'AI EnergySmartV2 Director': { icon: '⚡', color: '#eab308', role: 'AI能源总监' },
+            'AI Load Forecast': { icon: '📉', color: '#22c55e', role: 'AI负荷预测' },
+            'AI Equipment Dispatch': { icon: '📤', color: '#3b82f6', role: 'AI设备调度' },
+            'AI Energy Optimize': { icon: '♻️', color: '#f59e0b', role: 'AI能耗优化' },
+            'AI EnergyV2 AI': { icon: '🤖', color: '#8b5cf6', role: 'AI能源AI' },
+            'AI EnergyV2 Analytics': { icon: '📊', color: '#06b6d4', role: 'AI能源分析' }
         };
 
         // 拖拽相关变量
