@@ -33763,8 +33763,166 @@
             }
         ];
 
+        // Cycle 492 新增模板
+        const cycle492Templates = [
+            {
+                id: 'ai-ocean-smart',
+                name: 'AI智慧海洋产业系统',
+                icon: '🌊',
+                desc: '智慧海洋产业，包括水产养殖、海洋科技、海洋资源管理等',
+                agents: ['AI OceanSmart Director', 'AI Aquaculture', 'AI OceanTech', 'AI Ocean Resource', 'AI Ocean AI', 'AI Ocean Analytics'],
+                positions: [
+                    { role: 'AI OceanSmart Director', x: 400, y: 30 },
+                    { role: 'AI Aquaculture', x: 150, y: 150 },
+                    { role: 'AI OceanTech', x: 650, y: 150 },
+                    { role: 'AI Ocean Resource', x: 150, y: 300 },
+                    { role: 'AI Ocean AI', x: 400, y: 350 },
+                    { role: 'AI Ocean Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI OceanSmart Director', to: 'AI Aquaculture', content: '水产养殖' },
+                    { from: 'AI OceanSmart Director', to: 'AI Ocean Analytics', content: '海洋分析' },
+                    { from: 'AI Aquaculture', to: 'AI OceanTech', content: '海洋科技' },
+                    { from: 'AI OceanTech', to: 'AI Ocean Resource', content: '海洋资源' },
+                    { from: 'AI Ocean Resource', to: 'AI Ocean AI', content: '海洋AI' }
+                ]
+            },
+            {
+                id: 'ai-aerospace-smart',
+                name: 'AI智慧航空航天系统',
+                icon: '🛸',
+                desc: '智慧航空航天，包括航空制造、航天技术、卫星应用等',
+                agents: ['AI AerospaceSmart Director', 'AI Aviation Manufacture', 'AI Space Tech', 'AI Satellite App', 'AI Aerospace AI', 'AI Aerospace Analytics'],
+                positions: [
+                    { role: 'AI AerospaceSmart Director', x: 400, y: 30 },
+                    { role: 'AI Aviation Manufacture', x: 150, y: 150 },
+                    { role: 'AI Space Tech', x: 650, y: 150 },
+                    { role: 'AI Satellite App', x: 150, y: 300 },
+                    { role: 'AI Aerospace AI', x: 400, y: 350 },
+                    { role: 'AI Aerospace Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI AerospaceSmart Director', to: 'AI Aviation Manufacture', content: '航空制造' },
+                    { from: 'AI AerospaceSmart Director', to: 'AI Aerospace Analytics', content: '航天分析' },
+                    { from: 'AI Aviation Manufacture', to: 'AI Space Tech', content: '航天技术' },
+                    { from: 'AI Space Tech', to: 'AI Satellite App', content: '卫星应用' },
+                    { from: 'AI Satellite App', to: 'AI Aerospace AI', content: '航天AI' }
+                ]
+            },
+            {
+                id: 'ai-legal-smart',
+                name: 'AI智慧法律服务系统',
+                icon: '⚖️',
+                desc: '智慧法律服务，包括法律咨询、合同审查、诉讼支持等',
+                agents: ['AI LegalSmart Director', 'AI Legal Consult', 'AI Contract Review', 'AI Litigation Support', 'AI Legal AI', 'AI Legal Analytics'],
+                positions: [
+                    { role: 'AI LegalSmart Director', x: 400, y: 30 },
+                    { role: 'AI Legal Consult', x: 150, y: 150 },
+                    { role: 'AI Contract Review', x: 650, y: 150 },
+                    { role: 'AI Litigation Support', x: 150, y: 300 },
+                    { role: 'AI Legal AI', x: 400, y: 350 },
+                    { role: 'AI Legal Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI LegalSmart Director', to: 'AI Legal Consult', content: '法律咨询' },
+                    { from: 'AI LegalSmart Director', to: 'AI Legal Analytics', content: '法律分析' },
+                    { from: 'AI Legal Consult', to: 'AI Contract Review', content: '合同审查' },
+                    { from: 'AI Contract Review', to: 'AI Litigation Support', content: '诉讼支持' },
+                    { from: 'AI Litigation Support', to: 'AI Legal AI', content: '法律AI' }
+                ]
+            },
+            {
+                id: 'ai-hr-smart',
+                name: 'AI智慧人力资源系统',
+                icon: '👥',
+                desc: '智慧人力资源，包括招聘培训、绩效管理、员工关系等',
+                agents: ['AI HRSmart Director', 'AI Recruitment Train', 'AI Performance Manage', 'AI Employee Relations', 'AI HR AI', 'AI HR Analytics'],
+                positions: [
+                    { role: 'AI HRSmart Director', x: 400, y: 30 },
+                    { role: 'AI Recruitment Train', x: 150, y: 150 },
+                    { role: 'AI Performance Manage', x: 650, y: 150 },
+                    { role: 'AI Employee Relations', x: 150, y: 300 },
+                    { role: 'AI HR AI', x: 400, y: 350 },
+                    { role: 'AI HR Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HRSmart Director', to: 'AI Recruitment Train', content: '招聘培训' },
+                    { from: 'AI HRSmart Director', to: 'AI HR Analytics', content: '人力分析' },
+                    { from: 'AI Recruitment Train', to: 'AI Performance Manage', content: '绩效管理' },
+                    { from: 'AI Performance Manage', to: 'AI Employee Relations', content: '员工关系' },
+                    { from: 'AI Employee Relations', to: 'AI HR AI', content: '人力AI' }
+                ]
+            },
+            {
+                id: 'ai-psychology-smart',
+                name: 'AI智慧心理咨询系统',
+                icon: '🧠',
+                desc: '智慧心理咨询，包括心理评估、咨询辅导、危机干预等',
+                agents: ['AI PsychologySmart Director', 'AI Psychological Assess', 'AI Counseling Guide', 'AI Crisis Intervene', 'AI Psychology AI', 'AI Psychology Analytics'],
+                positions: [
+                    { role: 'AI PsychologySmart Director', x: 400, y: 30 },
+                    { role: 'AI Psychological Assess', x: 150, y: 150 },
+                    { role: 'AI Counseling Guide', x: 650, y: 150 },
+                    { role: 'AI Crisis Intervene', x: 150, y: 300 },
+                    { role: 'AI Psychology AI', x: 400, y: 350 },
+                    { role: 'AI Psychology Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI PsychologySmart Director', to: 'AI Psychological Assess', content: '心理评估' },
+                    { from: 'AI PsychologySmart Director', to: 'AI Psychology Analytics', content: '心理分析' },
+                    { from: 'AI Psychological Assess', to: 'AI Counseling Guide', content: '咨询辅导' },
+                    { from: 'AI Counseling Guide', to: 'AI Crisis Intervene', content: '危机干预' },
+                    { from: 'AI Crisis Intervene', to: 'AI Psychology AI', content: '心理AI' }
+                ]
+            },
+            {
+                id: 'ai-film-smart',
+                name: 'AI智慧影视制作系统',
+                icon: '🎬',
+                desc: '智慧影视制作，包括剧本创作、拍摄制作、发行推广等',
+                agents: ['AI FilmSmart Director', 'AI Script Create', 'AI Film Production', 'AI Film Release', 'AI Film AI', 'AI Film Analytics'],
+                positions: [
+                    { role: 'AI FilmSmart Director', x: 400, y: 30 },
+                    { role: 'AI Script Create', x: 150, y: 150 },
+                    { role: 'AI Film Production', x: 650, y: 150 },
+                    { role: 'AI Film Release', x: 150, y: 300 },
+                    { role: 'AI Film AI', x: 400, y: 350 },
+                    { role: 'AI Film Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI FilmSmart Director', to: 'AI Script Create', content: '剧本创作' },
+                    { from: 'AI FilmSmart Director', to: 'AI Film Analytics', content: '影视分析' },
+                    { from: 'AI Script Create', to: 'AI Film Production', content: '拍摄制作' },
+                    { from: 'AI Film Production', to: 'AI Film Release', content: '发行推广' },
+                    { from: 'AI Film Release', to: 'AI Film AI', content: '影视AI' }
+                ]
+            },
+            {
+                id: 'ai-insurance-smart',
+                name: 'AI智慧保险服务系统',
+                icon: '🛡️',
+                desc: '智慧保险服务，包括保险理赔、核保定价、客户管理等',
+                agents: ['AI InsuranceSmart Director', 'AI Claims Process', 'AI UnderwritingPrice', 'AI Customer Manage', 'AI Insurance AI', 'AI Insurance Analytics'],
+                positions: [
+                    { role: 'AI InsuranceSmart Director', x: 400, y: 30 },
+                    { role: 'AI Claims Process', x: 150, y: 150 },
+                    { role: 'AI UnderwritingPrice', x: 650, y: 150 },
+                    { role: 'AI Customer Manage', x: 150, y: 300 },
+                    { role: 'AI Insurance AI', x: 400, y: 350 },
+                    { role: 'AI Insurance Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI InsuranceSmart Director', to: 'AI Claims Process', content: '保险理赔' },
+                    { from: 'AI InsuranceSmart Director', to: 'AI Insurance Analytics', content: '保险分析' },
+                    { from: 'AI Claims Process', to: 'AI UnderwritingPrice', content: '核保定价' },
+                    { from: 'AI UnderwritingPrice', to: 'AI Customer Manage', content: '客户管理' },
+                    { from: 'AI Customer Manage', to: 'AI Insurance AI', content: '保险AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -40529,7 +40687,57 @@
             'AI Equipment Dispatch': { icon: '📤', color: '#3b82f6', role: 'AI设备调度' },
             'AI Energy Optimize': { icon: '♻️', color: '#f59e0b', role: 'AI能耗优化' },
             'AI EnergyV2 AI': { icon: '🤖', color: '#8b5cf6', role: 'AI能源AI' },
-            'AI EnergyV2 Analytics': { icon: '📊', color: '#06b6d4', role: 'AI能源分析' }
+            'AI EnergyV2 Analytics': { icon: '📊', color: '#06b6d4', role: 'AI能源分析' },
+            // Cycle 492 新增 Agent Roles
+            // AI智慧海洋产业系统
+            'AI OceanSmart Director': { icon: '🌊', color: '#0ea5e9', role: 'AI海洋总监' },
+            'AI Aquaculture': { icon: '🐟', color: '#22c55e', role: 'AI水产养殖' },
+            'AI OceanTech': { icon: '🔬', color: '#3b82f6', role: 'AI海洋科技' },
+            'AI Ocean Resource': { icon: '💎', color: '#f59e0b', role: 'AI海洋资源' },
+            'AI Ocean AI': { icon: '🤖', color: '#8b5cf6', role: 'AI海洋AI' },
+            'AI Ocean Analytics': { icon: '📊', color: '#06b6d4', role: 'AI海洋分析' },
+            // AI智慧航空航天系统
+            'AI AerospaceSmart Director': { icon: '🛸', color: '#6366f1', role: 'AI航天总监' },
+            'AI Aviation Manufacture': { icon: '✈️', color: '#22c55e', role: 'AI航空制造' },
+            'AI Space Tech': { icon: '🚀', color: '#3b82f6', role: 'AI航天技术' },
+            'AI Satellite App': { icon: '🛰️', color: '#f59e0b', role: 'AI卫星应用' },
+            'AI Aerospace AI': { icon: '🤖', color: '#8b5cf6', role: 'AI航天AI' },
+            'AI Aerospace Analytics': { icon: '📊', color: '#06b6d4', role: 'AI航天分析' },
+            // AI智慧法律服务系统
+            'AI LegalSmart Director': { icon: '⚖️', color: '#7c3aed', role: 'AI法律总监' },
+            'AI Legal Consult': { icon: '📜', color: '#22c55e', role: 'AI法律咨询' },
+            'AI Contract Review': { icon: '📋', color: '#3b82f6', role: 'AI合同审查' },
+            'AI Litigation Support': { icon: '⚔️', color: '#f59e0b', role: 'AI诉讼支持' },
+            'AI Legal AI': { icon: '🤖', color: '#8b5cf6', role: 'AI法律AI' },
+            'AI Legal Analytics': { icon: '📊', color: '#06b6d4', role: 'AI法律分析' },
+            // AI智慧人力资源系统
+            'AI HRSmart Director': { icon: '👥', color: '#ec4899', role: 'AI人力总监' },
+            'AI Recruitment Train': { icon: '🎯', color: '#22c55e', role: 'AI招聘培训' },
+            'AI Performance Manage': { icon: '📈', color: '#3b82f6', role: 'AI绩效管理' },
+            'AI Employee Relations': { icon: '🤝', color: '#f59e0b', role: 'AI员工关系' },
+            'AI HR AI': { icon: '🤖', color: '#8b5cf6', role: 'AI人力AI' },
+            'AI HR Analytics': { icon: '📊', color: '#06b6d4', role: 'AI人力分析' },
+            // AI智慧心理咨询系统
+            'AI PsychologySmart Director': { icon: '🧠', color: '#14b8a6', role: 'AI心理总监' },
+            'AI Psychological Assess': { icon: '📝', color: '#22c55e', role: 'AI心理评估' },
+            'AI Counseling Guide': { icon: '💬', color: '#3b82f6', role: 'AI咨询辅导' },
+            'AI Crisis Intervene': { icon: '🚨', color: '#f59e0b', role: 'AI危机干预' },
+            'AI Psychology AI': { icon: '🤖', color: '#8b5cf6', role: 'AI心理AI' },
+            'AI Psychology Analytics': { icon: '📊', color: '#06b6d4', role: 'AI心理分析' },
+            // AI智慧影视制作系统
+            'AI FilmSmart Director': { icon: '🎬', color: '#f97316', role: 'AI影视总监' },
+            'AI Script Create': { icon: '✍️', color: '#22c55e', role: 'AI剧本创作' },
+            'AI Film Production': { icon: '🎥', color: '#3b82f6', role: 'AI拍摄制作' },
+            'AI Film Release': { icon: '📢', color: '#f59e0b', role: 'AI发行推广' },
+            'AI Film AI': { icon: '🤖', color: '#8b5cf6', role: 'AI影视AI' },
+            'AI Film Analytics': { icon: '📊', color: '#06b6d4', role: 'AI影视分析' },
+            // AI智慧保险服务系统
+            'AI InsuranceSmart Director': { icon: '🛡️', color: '#dc2626', role: 'AI保险总监' },
+            'AI Claims Process': { icon: '📄', color: '#22c55e', role: 'AI保险理赔' },
+            'AI UnderwritingPrice': { icon: '💰', color: '#3b82f6', role: 'AI核保定价' },
+            'AI Customer Manage': { icon: '👤', color: '#f59e0b', role: 'AI客户管理' },
+            'AI Insurance AI': { icon: '🤖', color: '#8b5cf6', role: 'AI保险AI' },
+            'AI Insurance Analytics': { icon: '📊', color: '#06b6d4', role: 'AI保险分析' }
         };
 
         // 拖拽相关变量
