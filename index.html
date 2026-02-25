@@ -29677,8 +29677,201 @@
             }
         ];
 
+        // Cycle 465 行业服务系统模板
+        const cycle465Templates = [
+            // AI智能智慧医疗系统
+            {
+                id: 'cycle465_medical',
+                name: 'AI智能智慧医疗系统',
+                icon: '🏥',
+                desc: '智能医疗服务和健康管理平台',
+                agents: [
+                    'AI Medical Director', 'AI Diagnosis Assistant', 'AI Patient Manager',
+                    'AI Treatment Planner', 'AI Pharmacy Coordinator', 'AI Medical Records'
+                ],
+                positions: [
+                    { name: 'AI Medical Director', x: 400, y: 80 },
+                    { name: 'AI Diagnosis Assistant', x: 200, y: 200 },
+                    { name: 'AI Patient Manager', x: 600, y: 200 },
+                    { name: 'AI Treatment Planner', x: 200, y: 320 },
+                    { name: 'AI Pharmacy Coordinator', x: 600, y: 320 },
+                    { name: 'AI Medical Records', x: 400, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'AI Medical Director', to: 'AI Diagnosis Assistant', content: '诊断任务' },
+                    { from: 'AI Medical Director', to: 'AI Patient Manager', content: '患者管理' },
+                    { from: 'AI Diagnosis Assistant', to: 'AI Treatment Planner', content: '治疗方案' },
+                    { from: 'AI Patient Manager', to: 'AI Treatment Planner', content: '患者数据' },
+                    { from: 'AI Treatment Planner', to: 'AI Pharmacy Coordinator', content: '处方调配' },
+                    { from: 'AI Treatment Planner', to: 'AI Medical Records', content: '病历记录' }
+                ]
+            },
+            // AI智能智慧教育系统
+            {
+                id: 'cycle465_education',
+                name: 'AI智能智慧教育系统',
+                icon: '🎓',
+                desc: '智能教育平台和在线学习系统',
+                agents: [
+                    'AI Education Director', 'AI Curriculum Designer', 'AI Teacher Assistant',
+                    'AI Student Tracker', 'AI Assessment Engine', 'AI Learning Advisor'
+                ],
+                positions: [
+                    { name: 'AI Education Director', x: 400, y: 80 },
+                    { name: 'AI Curriculum Designer', x: 200, y: 200 },
+                    { name: 'AI Teacher Assistant', x: 600, y: 200 },
+                    { name: 'AI Student Tracker', x: 200, y: 320 },
+                    { name: 'AI Assessment Engine', x: 600, y: 320 },
+                    { name: 'AI Learning Advisor', x: 400, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'AI Education Director', to: 'AI Curriculum Designer', content: '课程设计' },
+                    { from: 'AI Education Director', to: 'AI Teacher Assistant', content: '教学辅助' },
+                    { from: 'AI Curriculum Designer', to: 'AI Student Tracker', content: '学习跟踪' },
+                    { from: 'AI Teacher Assistant', to: 'AI Assessment Engine', content: '评估任务' },
+                    { from: 'AI Student Tracker', to: 'AI Learning Advisor', content: '学习建议' },
+                    { from: 'AI Assessment Engine', to: 'AI Learning Advisor', content: '评估结果' }
+                ]
+            },
+            // AI智能智慧金融系统
+            {
+                id: 'cycle465_finance',
+                name: 'AI智能智慧金融系统',
+                icon: '🏦',
+                desc: '智能金融服务和投资管理系统',
+                agents: [
+                    'AI Finance Director', 'AI Investment Advisor', 'AI Risk Analyst',
+                    'AI Portfolio Manager', 'AI Fraud Detector', 'AI Tax Planner'
+                ],
+                positions: [
+                    { name: 'AI Finance Director', x: 400, y: 80 },
+                    { name: 'AI Investment Advisor', x: 200, y: 200 },
+                    { name: 'AI Risk Analyst', x: 600, y: 200 },
+                    { name: 'AI Portfolio Manager', x: 200, y: 320 },
+                    { name: 'AI Fraud Detector', x: 600, y: 320 },
+                    { name: 'AI Tax Planner', x: 400, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'AI Finance Director', to: 'AI Investment Advisor', content: '投资决策' },
+                    { from: 'AI Finance Director', to: 'AI Risk Analyst', content: '风险评估' },
+                    { from: 'AI Investment Advisor', to: 'AI Portfolio Manager', content: '投资组合' },
+                    { from: 'AI Risk Analyst', to: 'AI Fraud Detector', content: '欺诈检测' },
+                    { from: 'AI Portfolio Manager', to: 'AI Tax Planner', content: '税务规划' },
+                    { from: 'AI Fraud Detector', to: 'AI Risk Analyst', content: '风险报告' }
+                ]
+            },
+            // AI智能智慧零售系统
+            {
+                id: 'cycle465_retail',
+                name: 'AI智能智慧零售系统',
+                icon: '🛒',
+                desc: '智能零售和电子商务平台',
+                agents: [
+                    'AI Retail Director', 'AI Inventory Manager', 'AI Pricing Strategist',
+                    'AI Customer Recommender', 'AI Checkout Assistant', 'AI Store Analytics'
+                ],
+                positions: [
+                    { name: 'AI Retail Director', x: 400, y: 80 },
+                    { name: 'AI Inventory Manager', x: 200, y: 200 },
+                    { name: 'AI Pricing Strategist', x: 600, y: 200 },
+                    { name: 'AI Customer Recommender', x: 200, y: 320 },
+                    { name: 'AI Checkout Assistant', x: 600, y: 320 },
+                    { name: 'AI Store Analytics', x: 400, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'AI Retail Director', to: 'AI Inventory Manager', content: '库存管理' },
+                    { from: 'AI Retail Director', to: 'AI Pricing Strategist', content: '定价策略' },
+                    { from: 'AI Inventory Manager', to: 'AI Customer Recommender', content: '推荐系统' },
+                    { from: 'AI Pricing Strategist', to: 'AI Checkout Assistant', content: '结账流程' },
+                    { from: 'AI Customer Recommender', to: 'AI Store Analytics', content: '数据分析' },
+                    { from: 'AI Checkout Assistant', to: 'AI Store Analytics', content: '销售数据' }
+                ]
+            },
+            // AI智能智慧物流系统
+            {
+                id: 'cycle465_logistics',
+                name: 'AI智能智慧物流系统',
+                icon: '🚚',
+                desc: '智能物流和供应链管理系统',
+                agents: [
+                    'AI Logistics Director', 'AI Route Optimizer', 'AI Warehouse Manager',
+                    'AI Fleet Coordinator', 'AI Delivery Tracker', 'AI Supply Chain Analyst'
+                ],
+                positions: [
+                    { name: 'AI Logistics Director', x: 400, y: 80 },
+                    { name: 'AI Route Optimizer', x: 200, y: 200 },
+                    { name: 'AI Warehouse Manager', x: 600, y: 200 },
+                    { name: 'AI Fleet Coordinator', x: 200, y: 320 },
+                    { name: 'AI Delivery Tracker', x: 600, y: 320 },
+                    { name: 'AI Supply Chain Analyst', x: 400, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'AI Logistics Director', to: 'AI Route Optimizer', content: '路线规划' },
+                    { from: 'AI Logistics Director', to: 'AI Warehouse Manager', content: '仓储管理' },
+                    { from: 'AI Route Optimizer', to: 'AI Fleet Coordinator', content: '车队调度' },
+                    { from: 'AI Warehouse Manager', to: 'AI Delivery Tracker', content: '配送跟踪' },
+                    { from: 'AI Fleet Coordinator', to: 'AI Supply Chain Analyst', content: '供应链分析' },
+                    { from: 'AI Delivery Tracker', to: 'AI Supply Chain Analyst', content: '配送数据' }
+                ]
+            },
+            // AI智能智慧能源系统
+            {
+                id: 'cycle465_energy',
+                name: 'AI智能智慧能源系统',
+                icon: '⚡',
+                desc: '智能能源管理和电网优化系统',
+                agents: [
+                    'AI Energy Director', 'AI Grid Optimizer', 'AI Power Scheduler',
+                    'AI Consumption Analyzer', 'AI Renewable Integrator', 'AI Energy Trader'
+                ],
+                positions: [
+                    { name: 'AI Energy Director', x: 400, y: 80 },
+                    { name: 'AI Grid Optimizer', x: 200, y: 200 },
+                    { name: 'AI Power Scheduler', x: 600, y: 200 },
+                    { name: 'AI Consumption Analyzer', x: 200, y: 320 },
+                    { name: 'AI Renewable Integrator', x: 600, y: 320 },
+                    { name: 'AI Energy Trader', x: 400, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'AI Energy Director', to: 'AI Grid Optimizer', content: '电网优化' },
+                    { from: 'AI Energy Director', to: 'AI Power Scheduler', content: '电力调度' },
+                    { from: 'AI Grid Optimizer', to: 'AI Consumption Analyzer', content: '能耗分析' },
+                    { from: 'AI Power Scheduler', to: 'AI Renewable Integrator', content: '新能源整合' },
+                    { from: 'AI Consumption Analyzer', to: 'AI Energy Trader', content: '能源交易' },
+                    { from: 'AI Renewable Integrator', to: 'AI Energy Trader', content: '市场数据' }
+                ]
+            },
+            // AI智能智慧制造系统
+            {
+                id: 'cycle465_manufacturing',
+                name: 'AI智能智慧制造系统',
+                icon: '🏭',
+                desc: '智能制造和工业自动化系统',
+                agents: [
+                    'AI Manufacturing Director', 'AI Production Planner', 'AI Quality Inspector',
+                    'AI Equipment Monitor', 'AI Supply Coordinator', 'AI Process Optimizer'
+                ],
+                positions: [
+                    { name: 'AI Manufacturing Director', x: 400, y: 80 },
+                    { name: 'AI Production Planner', x: 200, y: 200 },
+                    { name: 'AI Quality Inspector', x: 600, y: 200 },
+                    { name: 'AI Equipment Monitor', x: 200, y: 320 },
+                    { name: 'AI Supply Coordinator', x: 600, y: 320 },
+                    { name: 'AI Process Optimizer', x: 400, y: 420 }
+                ],
+                messageFlows: [
+                    { from: 'AI Manufacturing Director', to: 'AI Production Planner', content: '生产计划' },
+                    { from: 'AI Manufacturing Director', to: 'AI Quality Inspector', content: '质量检查' },
+                    { from: 'AI Production Planner', to: 'AI Equipment Monitor', content: '设备监控' },
+                    { from: 'AI Quality Inspector', to: 'AI Supply Coordinator', content: '供应链协调' },
+                    { from: 'AI Equipment Monitor', to: 'AI Process Optimizer', content: '流程优化' },
+                    { from: 'AI Supply Coordinator', to: 'AI Process Optimizer', content: '供应数据' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -36160,7 +36353,57 @@
             'AI Ticket Seller': { icon: '🎫', color: '#3b82f6', role: 'AI票务销售' },
             'AI Artist Manager': { icon: '⭐', color: '#22c55e', role: 'AI艺人管理' },
             'AI Audience Engagement': { icon: '🎉', color: '#ec4899', role: 'AI观众互动' },
-            'AI Content Curator': { icon: '📚', color: '#8b5cf6', role: 'AI内容策划' }
+            'AI Content Curator': { icon: '📚', color: '#8b5cf6', role: 'AI内容策划' },
+            // Cycle 465 新增角色 - 7个行业服务系统
+            // AI智能智慧医疗系统
+            'AI Medical Director': { icon: '🏥', color: '#7c3aed', role: 'AI医疗总监' },
+            'AI Diagnosis Assistant': { icon: '🔬', color: '#f59e0b', role: 'AI诊断助手' },
+            'AI Patient Manager': { icon: '👨‍⚕️', color: '#3b82f6', role: 'AI患者管理' },
+            'AI Treatment Planner': { icon: '📋', color: '#22c55e', role: 'AI治疗规划' },
+            'AI Pharmacy Coordinator': { icon: '💊', color: '#ec4899', role: 'AI药房协调' },
+            'AI Medical Records': { icon: '📂', color: '#8b5cf6', role: 'AI病历管理' },
+            // AI智能智慧教育系统
+            'AI Education Director': { icon: '🎓', color: '#f43f5e', role: 'AI教育总监' },
+            'AI Curriculum Designer': { icon: '📚', color: '#f59e0b', role: 'AI课程设计' },
+            'AI Teacher Assistant': { icon: '👨‍🏫', color: '#3b82f6', role: 'AI助教' },
+            'AI Student Tracker': { icon: '📊', color: '#22c55e', role: 'AI学情跟踪' },
+            'AI Assessment Engine': { icon: '📝', color: '#ec4899', role: 'AI评估引擎' },
+            'AI Learning Advisor': { icon: '💡', color: '#8b5cf6', role: 'AI学习顾问' },
+            // AI智能智慧金融系统
+            'AI Finance Director': { icon: '🏦', color: '#f97316', role: 'AI金融总监' },
+            'AI Investment Advisor': { icon: '💹', color: '#f59e0b', role: 'AI投资顾问' },
+            'AI Risk Analyst': { icon: '⚠️', color: '#3b82f6', role: 'AI风险分析' },
+            'AI Portfolio Manager': { icon: '📈', color: '#22c55e', role: 'AI投资组合管理' },
+            'AI Fraud Detector': { icon: '🔍', color: '#ec4899', role: 'AI欺诈检测' },
+            'AI Tax Planner': { icon: '📑', color: '#8b5cf6', role: 'AI税务规划' },
+            // AI智能智慧零售系统
+            'AI Retail Director': { icon: '🛒', color: '#dc2626', role: 'AI零售总监' },
+            'AI Inventory Manager': { icon: '📦', color: '#f59e0b', role: 'AI库存管理' },
+            'AI Pricing Strategist': { icon: '💰', color: '#3b82f6', role: 'AI定价策略' },
+            'AI Customer Recommender': { icon: '🎯', color: '#22c55e', role: 'AI推荐系统' },
+            'AI Checkout Assistant': { icon: '💳', color: '#ec4899', role: 'AI结账助手' },
+            'AI Store Analytics': { icon: '📊', color: '#8b5cf6', role: 'AI门店分析' },
+            // AI智能智慧物流系统
+            'AI Logistics Director': { icon: '🚚', color: '#ea580c', role: 'AI物流总监' },
+            'AI Route Optimizer': { icon: '🗺️', color: '#f59e0b', role: 'AI路线优化' },
+            'AI Warehouse Manager': { icon: '🏭', color: '#3b82f6', role: 'AI仓储管理' },
+            'AI Fleet Coordinator': { icon: '🚛', color: '#22c55e', role: 'AI车队协调' },
+            'AI Delivery Tracker': { icon: '📍', color: '#ec4899', role: 'AI配送追踪' },
+            'AI Supply Chain Analyst': { icon: '🔗', color: '#8b5cf6', role: 'AI供应链分析' },
+            // AI智能智慧能源系统
+            'AI Energy Director': { icon: '⚡', color: '#06b6d4', role: 'AI能源总监' },
+            'AI Grid Optimizer': { icon: '🔌', color: '#f59e0b', role: 'AI电网优化' },
+            'AI Power Scheduler': { icon: '📅', color: '#3b82f6', role: 'AI电力调度' },
+            'AI Consumption Analyzer': { icon: '📊', color: '#22c55e', role: 'AI能耗分析' },
+            'AI Renewable Integrator': { icon: '🌱', color: '#ec4899', role: 'AI新能源整合' },
+            'AI Energy Trader': { icon: '💱', color: '#8b5cf6', role: 'AI能源交易' },
+            // AI智能智慧制造系统
+            'AI Manufacturing Director': { icon: '🏭', color: '#0d9488', role: 'AI制造总监' },
+            'AI Production Planner': { icon: '📋', color: '#f59e0b', role: 'AI生产计划' },
+            'AI Quality Inspector': { icon: '✅', color: '#3b82f6', role: 'AI质量检测' },
+            'AI Equipment Monitor': { icon: '🔧', color: '#22c55e', role: 'AI设备监控' },
+            'AI Supply Coordinator': { icon: '🤝', color: '#ec4899', role: 'AI供应协调' },
+            'AI Process Optimizer': { icon: '⚙️', color: '#8b5cf6', role: 'AI流程优化' }
         };
 
         // 拖拽相关变量
