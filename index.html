@@ -30823,8 +30823,165 @@
             }
         ];
 
+        const cycle472Templates = [
+            {
+                id: 'ai-smart-tourism',
+                name: 'AI智能智慧旅游系统',
+                icon: '✈️',
+                desc: '智能旅游服务管理，包括行程规划、景点导览、旅游预订等',
+                agents: ['AI旅游总监', 'AI行程规划', 'AI景点导览', 'AI旅游预订', 'AI旅游客服', 'AI旅游分析'],
+                positions: [
+                    { role: 'AI旅游总监', x: 400, y: 30 },
+                    { role: 'AI行程规划', x: 150, y: 150 },
+                    { role: 'AI景点导览', x: 650, y: 150 },
+                    { role: 'AI旅游预订', x: 150, y: 300 },
+                    { role: 'AI旅游客服', x: 400, y: 350 },
+                    { role: 'AI旅游分析', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI旅游总监', to: 'AI行程规划', content: '规划任务' },
+                    { from: 'AI旅游总监', to: 'AI景点导览', content: '导览需求' },
+                    { from: 'AI旅游总监', to: 'AI旅游预订', content: '预订任务' },
+                    { from: 'AI行程规划', to: 'AI旅游预订', content: '预订确认' },
+                    { from: 'AI景点导览', to: 'AI旅游客服', content: '客服需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-sports',
+                name: 'AI智能智慧体育系统',
+                icon: '⚽',
+                desc: '智能体育服务管理，包括赛事组织、训练指导、体育场馆等',
+                agents: ['AI体育总监', 'AI赛事组织', 'AI训练指导', 'AI场馆管理', 'AI体育传媒', 'AI体育分析'],
+                positions: [
+                    { role: 'AI体育总监', x: 400, y: 30 },
+                    { role: 'AI赛事组织', x: 150, y: 150 },
+                    { role: 'AI训练指导', x: 650, y: 150 },
+                    { role: 'AI场馆管理', x: 150, y: 300 },
+                    { role: 'AI体育传媒', x: 400, y: 350 },
+                    { role: 'AI体育分析', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI体育总监', to: 'AI赛事组织', content: '赛事任务' },
+                    { from: 'AI体育总监', to: 'AI训练指导', content: '训练任务' },
+                    { from: 'AI体育总监', to: 'AI场馆管理', content: '场馆需求' },
+                    { from: 'AI赛事组织', to: 'AI体育传媒', content: '媒体需求' },
+                    { from: 'AI训练指导', to: 'AI体育分析', content: '分析需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-beauty',
+                name: 'AI智能智慧美容系统',
+                icon: '💅',
+                desc: '智能美容服务管理，包括美容护理、化妆造型、美甲美睫等',
+                agents: ['AI美容总监', 'AI美容护理', 'AI化妆造型', 'AI美甲设计', 'AI美睫师', 'AI美容顾问'],
+                positions: [
+                    { role: 'AI美容总监', x: 400, y: 30 },
+                    { role: 'AI美容护理', x: 150, y: 150 },
+                    { role: 'AI化妆造型', x: 650, y: 150 },
+                    { role: 'AI美甲设计', x: 150, y: 300 },
+                    { role: 'AI美睫师', x: 400, y: 350 },
+                    { role: 'AI美容顾问', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI美容总监', to: 'AI美容护理', content: '护理任务' },
+                    { from: 'AI美容总监', to: 'AI化妆造型', content: '造型需求' },
+                    { from: 'AI美容总监', to: 'AI美容顾问', content: '顾问需求' },
+                    { from: 'AI美容护理', to: 'AI美甲设计', content: '美甲需求' },
+                    { from: 'AI化妆造型', to: 'AI美睫师', content: '美睫需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-fitness',
+                name: 'AI智能智慧健身系统',
+                icon: '🏋️',
+                desc: '智能健身服务管理，包括健身指导、课程安排、营养配餐等',
+                agents: ['AI健身总监', 'AI健身教练', 'AI课程安排', 'AI营养配餐', 'AI体测分析', 'AI健身顾问'],
+                positions: [
+                    { role: 'AI健身总监', x: 400, y: 30 },
+                    { role: 'AI健身教练', x: 150, y: 150 },
+                    { role: 'AI课程安排', x: 650, y: 150 },
+                    { role: 'AI营养配餐', x: 150, y: 300 },
+                    { role: 'AI体测分析', x: 400, y: 350 },
+                    { role: 'AI健身顾问', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI健身总监', to: 'AI健身教练', content: '教练任务' },
+                    { from: 'AI健身总监', to: 'AI课程安排', content: '课程需求' },
+                    { from: 'AI健身总监', to: 'AI健身顾问', content: '顾问需求' },
+                    { from: 'AI健身教练', to: 'AI营养配餐', content: '营养需求' },
+                    { from: 'AI课程安排', to: 'AI体测分析', content: '体测需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-entertainment',
+                name: 'AI智能智慧娱乐系统',
+                icon: '🎭',
+                desc: '智能娱乐服务管理，包括演出策划、活动组织、票务管理等',
+                agents: ['AI娱乐总监', 'AI演出策划', 'AI活动组织', 'AI票务管理', 'AI艺人经纪', 'AI娱乐营销'],
+                positions: [
+                    { role: 'AI娱乐总监', x: 400, y: 30 },
+                    { role: 'AI演出策划', x: 150, y: 150 },
+                    { role: 'AI活动组织', x: 650, y: 150 },
+                    { role: 'AI票务管理', x: 150, y: 300 },
+                    { role: 'AI艺人经纪', x: 400, y: 350 },
+                    { role: 'AI娱乐营销', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI娱乐总监', to: 'AI演出策划', content: '策划任务' },
+                    { from: 'AI娱乐总监', to: 'AI活动组织', content: '活动需求' },
+                    { from: 'AI娱乐总监', to: 'AI艺人经纪', content: '经纪需求' },
+                    { from: 'AI演出策划', to: 'AI票务管理', content: '票务需求' },
+                    { from: 'AI活动组织', to: 'AI娱乐营销', content: '营销需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-gaming',
+                name: 'AI智能智慧游戏系统',
+                icon: '🎮',
+                desc: '智能游戏服务管理，包括游戏开发、赛事运营、游戏客服等',
+                agents: ['AI游戏总监', 'AI游戏开发', 'AI赛事运营', 'AI游戏客服', 'AI游戏运营', 'AI游戏分析'],
+                positions: [
+                    { role: 'AI游戏总监', x: 400, y: 30 },
+                    { role: 'AI游戏开发', x: 150, y: 150 },
+                    { role: 'AI赛事运营', x: 650, y: 150 },
+                    { role: 'AI游戏客服', x: 150, y: 300 },
+                    { role: 'AI游戏运营', x: 400, y: 350 },
+                    { role: 'AI游戏分析', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI游戏总监', to: 'AI游戏开发', content: '开发任务' },
+                    { from: 'AI游戏总监', to: 'AI赛事运营', content: '赛事需求' },
+                    { from: 'AI游戏总监', to: 'AI游戏运营', content: '运营需求' },
+                    { from: 'AI游戏开发', to: 'AI游戏客服', content: '客服需求' },
+                    { from: 'AI赛事运营', to: 'AI游戏分析', content: '分析需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-music',
+                name: 'AI智能智慧音乐系统',
+                icon: '🎵',
+                desc: '智能音乐服务管理，包括音乐创作、演出策划、音乐培训等',
+                agents: ['AI音乐总监', 'AI音乐创作', 'AI演出策划', 'AI音乐培训', 'AI版权管理', 'AI音乐营销'],
+                positions: [
+                    { role: 'AI音乐总监', x: 400, y: 30 },
+                    { role: 'AI音乐创作', x: 150, y: 150 },
+                    { role: 'AI演出策划', x: 650, y: 150 },
+                    { role: 'AI音乐培训', x: 150, y: 300 },
+                    { role: 'AI版权管理', x: 400, y: 350 },
+                    { role: 'AI音乐营销', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI音乐总监', to: 'AI音乐创作', content: '创作任务' },
+                    { from: 'AI音乐总监', to: 'AI演出策划', content: '策划需求' },
+                    { from: 'AI音乐总监', to: 'AI版权管理', content: '版权需求' },
+                    { from: 'AI音乐创作', to: 'AI音乐培训', content: '培训需求' },
+                    { from: 'AI演出策划', to: 'AI音乐营销', content: '营销需求' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates];
 
         // Agent 角色配置
         const agentRoles = {
