@@ -34395,8 +34395,166 @@
             }
         ];
 
+        // Cycle 496 新增模板
+        const cycle496Templates = [
+            {
+                id: 'ai-smart-manufacturing',
+                name: 'AI智慧智能制造系统',
+                icon: '🏭',
+                desc: '智慧智能制造，包括生产调度、质量控制、设备维护等',
+                agents: ['AI MfgSmart Director', 'AI Production Schedule', 'AI Quality Control', 'AI Equipment Maint', 'AI Mfg AI', 'AI Mfg Analytics'],
+                positions: [
+                    { role: 'AI MfgSmart Director', x: 400, y: 30 },
+                    { role: 'AI Production Schedule', x: 150, y: 150 },
+                    { role: 'AI Quality Control', x: 650, y: 150 },
+                    { role: 'AI Equipment Maint', x: 150, y: 300 },
+                    { role: 'AI Mfg AI', x: 400, y: 350 },
+                    { role: 'AI Mfg Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI MfgSmart Director', to: 'AI Production Schedule', content: '生产调度' },
+                    { from: 'AI MfgSmart Director', to: 'AI Mfg Analytics', content: '制造分析' },
+                    { from: 'AI Production Schedule', to: 'AI Quality Control', content: '质量控制' },
+                    { from: 'AI Quality Control', to: 'AI Equipment Maint', content: '设备维护' },
+                    { from: 'AI Equipment Maint', to: 'AI Mfg AI', content: '制造AI' }
+                ]
+            },
+            {
+                id: 'ai-blockchain',
+                name: 'AI智慧区块链系统',
+                icon: '⛓️',
+                desc: '智慧区块链，包括智能合约、共识机制、链上分析等',
+                agents: ['AI ChainSmart Director', 'AI Smart Contract', 'AI Consensus Mech', 'AI Chain Analytics', 'AI Chain AI', 'AI Chain Security'],
+                positions: [
+                    { role: 'AI ChainSmart Director', x: 400, y: 30 },
+                    { role: 'AI Smart Contract', x: 150, y: 150 },
+                    { role: 'AI Consensus Mech', x: 650, y: 150 },
+                    { role: 'AI Chain Analytics', x: 150, y: 300 },
+                    { role: 'AI Chain AI', x: 400, y: 350 },
+                    { role: 'AI Chain Security', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI ChainSmart Director', to: 'AI Smart Contract', content: '智能合约' },
+                    { from: 'AI ChainSmart Director', to: 'AI Chain Security', content: '链上安全' },
+                    { from: 'AI Smart Contract', to: 'AI Consensus Mech', content: '共识机制' },
+                    { from: 'AI Consensus Mech', to: 'AI Chain Analytics', content: '链上分析' },
+                    { from: 'AI Chain Analytics', to: 'AI Chain AI', content: '区块链AI' }
+                ]
+            },
+            {
+                id: 'ai-metaverse',
+                name: 'AI智慧元宇宙系统',
+                icon: '🌌',
+                desc: '智慧元宇宙，包括虚拟世界构建、Avatar设计、社交系统等',
+                agents: ['AI MetaSmart Director', 'AI World Build', 'AI Avatar Design', 'AI Social System', 'AI Meta AI', 'AI Meta Analytics'],
+                positions: [
+                    { role: 'AI MetaSmart Director', x: 400, y: 30 },
+                    { role: 'AI World Build', x: 150, y: 150 },
+                    { role: 'AI Avatar Design', x: 650, y: 150 },
+                    { role: 'AI Social System', x: 150, y: 300 },
+                    { role: 'AI Meta AI', x: 400, y: 350 },
+                    { role: 'AI Meta Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI MetaSmart Director', to: 'AI World Build', content: '世界构建' },
+                    { from: 'AI MetaSmart Director', to: 'AI Meta Analytics', content: '元宇宙分析' },
+                    { from: 'AI World Build', to: 'AI Avatar Design', content: 'Avatar设计' },
+                    { from: 'AI Avatar Design', to: 'AI Social System', content: '社交系统' },
+                    { from: 'AI Social System', to: 'AI Meta AI', content: '元宇宙AI' }
+                ]
+            },
+            {
+                id: 'ai-quantum-computing',
+                name: 'AI智慧量子计算系统',
+                icon: '⚛️',
+                desc: '智慧量子计算，包括量子算法、量子模拟、量子纠错等',
+                agents: ['AI QuantumSmart Director', 'AI Quantum Algorithm', 'AI Quantum Sim', 'AI Quantum Error', 'AI Quantum AI', 'AI Quantum Analytics'],
+                positions: [
+                    { role: 'AI QuantumSmart Director', x: 400, y: 30 },
+                    { role: 'AI Quantum Algorithm', x: 150, y: 150 },
+                    { role: 'AI Quantum Sim', x: 650, y: 150 },
+                    { role: 'AI Quantum Error', x: 150, y: 300 },
+                    { role: 'AI Quantum AI', x: 400, y: 350 },
+                    { role: 'AI Quantum Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI QuantumSmart Director', to: 'AI Quantum Algorithm', content: '量子算法' },
+                    { from: 'AI QuantumSmart Director', to: 'AI Quantum Analytics', content: '量子分析' },
+                    { from: 'AI Quantum Algorithm', to: 'AI Quantum Sim', content: '量子模拟' },
+                    { from: 'AI Quantum Sim', to: 'AI Quantum Error', content: '量子纠错' },
+                    { from: 'AI Quantum Error', to: 'AI Quantum AI', content: '量子AI' }
+                ]
+            },
+            {
+                id: 'ai-space-exploration',
+                name: 'AI智慧太空探索系统',
+                icon: '🚀',
+                desc: '智慧太空探索，包括轨道设计、卫星控制、太空任务等',
+                agents: ['AI SpaceSmart Director', 'AI Orbit Design', 'AI Satellite Ctrl', 'AI Mission Plan', 'AI Space AI', 'AI Space Analytics'],
+                positions: [
+                    { role: 'AI SpaceSmart Director', x: 400, y: 30 },
+                    { role: 'AI Orbit Design', x: 150, y: 150 },
+                    { role: 'AI Satellite Ctrl', x: 650, y: 150 },
+                    { role: 'AI Mission Plan', x: 150, y: 300 },
+                    { role: 'AI Space AI', x: 400, y: 350 },
+                    { role: 'AI Space Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SpaceSmart Director', to: 'AI Orbit Design', content: '轨道设计' },
+                    { from: 'AI SpaceSmart Director', to: 'AI Space Analytics', content: '太空分析' },
+                    { from: 'AI Orbit Design', to: 'AI Satellite Ctrl', content: '卫星控制' },
+                    { from: 'AI Satellite Ctrl', to: 'AI Mission Plan', content: '任务规划' },
+                    { from: 'AI Mission Plan', to: 'AI Space AI', content: '太空AI' }
+                ]
+            },
+            {
+                id: 'ai-deep-sea',
+                name: 'AI智慧深海作业系统',
+                icon: '🌊',
+                desc: '智慧深海作业，包括水下探测、潜水器控制、海洋资源开发等',
+                agents: ['AI DeepSeaSmart Director', 'AI Underwater Detect', 'AI Sub Ctrl', 'AI Ocean Resource', 'AI DeepSea AI', 'AI DeepSea Analytics'],
+                positions: [
+                    { role: 'AI DeepSeaSmart Director', x: 400, y: 30 },
+                    { role: 'AI Underwater Detect', x: 150, y: 150 },
+                    { role: 'AI Sub Ctrl', x: 650, y: 150 },
+                    { role: 'AI Ocean Resource', x: 150, y: 300 },
+                    { role: 'AI DeepSea AI', x: 400, y: 350 },
+                    { role: 'AI DeepSea Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI DeepSeaSmart Director', to: 'AI Underwater Detect', content: '水下探测' },
+                    { from: 'AI DeepSeaSmart Director', to: 'AI DeepSea Analytics', content: '深海分析' },
+                    { from: 'AI Underwater Detect', to: 'AI Sub Ctrl', content: '潜水器控制' },
+                    { from: 'AI Sub Ctrl', to: 'AI Ocean Resource', content: '海洋资源' },
+                    { from: 'AI Ocean Resource', to: 'AI DeepSea AI', content: '深海AI' }
+                ]
+            },
+            {
+                id: 'ai-virtual-reality',
+                name: 'AI智慧虚拟现实系统',
+                icon: '🥽',
+                desc: '智慧虚拟现实，包括VR内容创作、交互设计、场景渲染等',
+                agents: ['AI VRSmart Director', 'AI VR Content', 'AI VR Interaction', 'AI VR Render', 'AI VR AI', 'AI VR Analytics'],
+                positions: [
+                    { role: 'AI VRSmart Director', x: 400, y: 30 },
+                    { role: 'AI VR Content', x: 150, y: 150 },
+                    { role: 'AI VR Interaction', x: 650, y: 150 },
+                    { role: 'AI VR Render', x: 150, y: 300 },
+                    { role: 'AI VR AI', x: 400, y: 350 },
+                    { role: 'AI VR Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI VRSmart Director', to: 'AI VR Content', content: 'VR内容' },
+                    { from: 'AI VRSmart Director', to: 'AI VR Analytics', content: 'VR分析' },
+                    { from: 'AI VR Content', to: 'AI VR Interaction', content: '交互设计' },
+                    { from: 'AI VR Interaction', to: 'AI VR Render', content: '场景渲染' },
+                    { from: 'AI VR Render', to: 'AI VR AI', content: 'VR AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -41361,7 +41519,57 @@
             'AI Resource Recycle': { icon: '♻️', color: '#3b82f6', role: 'AI资源回收' },
             'AI Eco Analysis': { icon: '🌍', color: '#f59e0b', role: 'AI生态分析' },
             'AI Env AI': { icon: '🤖', color: '#8b5cf6', role: 'AI环保AI' },
-            'AI Env Analytics': { icon: '📊', color: '#06b6d4', role: 'AI环保分析' }
+            'AI Env Analytics': { icon: '📊', color: '#06b6d4', role: 'AI环保分析' },
+            // Cycle 496 新增 Agent Roles
+            // AI智慧智能制造系统
+            'AI MfgSmart Director': { icon: '🏭', color: '#0891b2', role: 'AI制造总监' },
+            'AI Production Schedule': { icon: '📅', color: '#22c55e', role: 'AI生产调度' },
+            'AI Quality Control': { icon: '✅', color: '#3b82f6', role: 'AI质量控制' },
+            'AI Equipment Maint': { icon: '🔧', color: '#f59e0b', role: 'AI设备维护' },
+            'AI Mfg AI': { icon: '🤖', color: '#8b5cf6', role: 'AI制造AI' },
+            'AI Mfg Analytics': { icon: '📊', color: '#06b6d4', role: 'AI制造分析' },
+            // AI智慧区块链系统
+            'AI ChainSmart Director': { icon: '⛓️', color: '#7c3aed', role: 'AI区块链总监' },
+            'AI Smart Contract': { icon: '📄', color: '#22c55e', role: 'AI智能合约' },
+            'AI Consensus Mech': { icon: '⚖️', color: '#3b82f6', role: 'AI共识机制' },
+            'AI Chain Analytics': { icon: '📊', color: '#f59e0b', role: 'AI链上分析' },
+            'AI Chain AI': { icon: '🤖', color: '#8b5cf6', role: 'AI区块链AI' },
+            'AI Chain Security': { icon: '🛡️', color: '#dc2626', role: 'AI链上安全' },
+            // AI智慧元宇宙系统
+            'AI MetaSmart Director': { icon: '🌌', color: '#c026d3', role: 'AI元宇宙总监' },
+            'AI World Build': { icon: '🏗️', color: '#22c55e', role: 'AI世界构建' },
+            'AI Avatar Design': { icon: '🎭', color: '#3b82f6', role: 'AIAvatar设计' },
+            'AI Social System': { icon: '🌐', color: '#f59e0b', role: 'AI社交系统' },
+            'AI Meta AI': { icon: '🤖', color: '#8b5cf6', role: 'AI元宇宙AI' },
+            'AI Meta Analytics': { icon: '📊', color: '#06b6d4', role: 'AI元宇宙分析' },
+            // AI智慧量子计算系统
+            'AI QuantumSmart Director': { icon: '⚛️', color: '#0d9488', role: 'AI量子计算总监' },
+            'AI Quantum Algorithm': { icon: '🔢', color: '#22c55e', role: 'AI量子算法' },
+            'AI Quantum Sim': { icon: '🧪', color: '#3b82f6', role: 'AI量子模拟' },
+            'AI Quantum Error': { icon: '🔄', color: '#f59e0b', role: 'AI量子纠错' },
+            'AI Quantum AI': { icon: '🤖', color: '#8b5cf6', role: 'AI量子AI' },
+            'AI Quantum Analytics': { icon: '📊', color: '#06b6d4', role: 'AI量子分析' },
+            // AI智慧太空探索系统
+            'AI SpaceSmart Director': { icon: '🚀', color: '#ea580c', role: 'AI太空总监' },
+            'AI Orbit Design': { icon: '🛰️', color: '#22c55e', role: 'AI轨道设计' },
+            'AI Satellite Ctrl': { icon: '📡', color: '#3b82f6', role: 'AI卫星控制' },
+            'AI Mission Plan': { icon: '🎯', color: '#f59e0b', role: 'AI任务规划' },
+            'AI Space AI': { icon: '🤖', color: '#8b5cf6', role: 'AI太空AI' },
+            'AI Space Analytics': { icon: '📊', color: '#06b6d4', role: 'AI太空分析' },
+            // AI智慧深海作业系统
+            'AI DeepSeaSmart Director': { icon: '🌊', color: '#0891b2', role: 'AI深海总监' },
+            'AI Underwater Detect': { icon: '🔍', color: '#22c55e', role: 'AI水下探测' },
+            'AI Sub Ctrl': { icon: '🎮', color: '#3b82f6', role: 'AI潜水器控制' },
+            'AI Ocean Resource': { icon: '💎', color: '#f59e0b', role: 'AI海洋资源' },
+            'AI DeepSea AI': { icon: '🤖', color: '#8b5cf6', role: 'AI深海AI' },
+            'AI DeepSea Analytics': { icon: '📊', color: '#06b6d4', role: 'AI深海分析' },
+            // AI智慧虚拟现实系统
+            'AI VRSmart Director': { icon: '🥽', color: '#8b5cf6', role: 'AI虚拟现实总监' },
+            'AI VR Content': { icon: '🎬', color: '#22c55e', role: 'AI VR内容' },
+            'AI VR Interaction': { icon: '👆', color: '#3b82f6', role: 'AI VR交互' },
+            'AI VR Render': { icon: '🎨', color: '#f59e0b', role: 'AI VR渲染' },
+            'AI VR AI': { icon: '🤖', color: '#8b5cf6', role: 'AI VR AI' },
+            'AI VR Analytics': { icon: '📊', color: '#06b6d4', role: 'AI VR分析' }
         };
 
         // 拖拽相关变量
