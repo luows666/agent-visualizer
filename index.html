@@ -34550,6 +34550,161 @@
                     { from: 'AI VR Interaction', to: 'AI VR Render', content: '场景渲染' },
                     { from: 'AI VR Render', to: 'AI VR AI', content: 'VR AI' }
                 ]
+            },
+            // Cycle 497 新增系统
+            {
+                id: 'ai-nuclear-energy',
+                name: 'AI智慧核能系统',
+                icon: '⚛️',
+                desc: '智慧核能，包括核电站运营、核安全管理、辐射监测等',
+                agents: ['AI NuclearSmart Director', 'AI Nuclear Oper', 'AI Nuclear Safety', 'AI Radiation Monitor', 'AI Nuclear AI', 'AI Nuclear Analytics'],
+                positions: [
+                    { role: 'AI NuclearSmart Director', x: 400, y: 30 },
+                    { role: 'AI Nuclear Oper', x: 150, y: 150 },
+                    { role: 'AI Nuclear Safety', x: 650, y: 150 },
+                    { role: 'AI Radiation Monitor', x: 150, y: 300 },
+                    { role: 'AI Nuclear AI', x: 400, y: 350 },
+                    { role: 'AI Nuclear Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI NuclearSmart Director', to: 'AI Nuclear Oper', content: '核电站运营' },
+                    { from: 'AI NuclearSmart Director', to: 'AI Nuclear Analytics', content: '核能分析' },
+                    { from: 'AI Nuclear Oper', to: 'AI Nuclear Safety', content: '核安全管理' },
+                    { from: 'AI Nuclear Safety', to: 'AI Radiation Monitor', content: '辐射监测' },
+                    { from: 'AI Radiation Monitor', to: 'AI Nuclear AI', content: '核能AI' }
+                ]
+            },
+            {
+                id: 'ai-satellite-internet',
+                name: 'AI智慧卫星互联网系统',
+                icon: '🛰️',
+                desc: '智慧卫星互联网，包括卫星星座、地面站管理、信号传输等',
+                agents: ['AI SatNetSmart Director', 'AI Satellite Constellation', 'AI Ground Station', 'AI Signal Trans', 'AI SatNet AI', 'AI SatNet Analytics'],
+                positions: [
+                    { role: 'AI SatNetSmart Director', x: 400, y: 30 },
+                    { role: 'AI Satellite Constellation', x: 150, y: 150 },
+                    { role: 'AI Ground Station', x: 650, y: 150 },
+                    { role: 'AI Signal Trans', x: 150, y: 300 },
+                    { role: 'AI SatNet AI', x: 400, y: 350 },
+                    { role: 'AI SatNet Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SatNetSmart Director', to: 'AI Satellite Constellation', content: '卫星星座' },
+                    { from: 'AI SatNetSmart Director', to: 'AI SatNet Analytics', content: '卫星网络分析' },
+                    { from: 'AI Satellite Constellation', to: 'AI Ground Station', content: '地面站管理' },
+                    { from: 'AI Ground Station', to: 'AI Signal Trans', content: '信号传输' },
+                    { from: 'AI Signal Trans', to: 'AI SatNet AI', content: '卫星AI' }
+                ]
+            },
+            {
+                id: 'ai-brain-computer',
+                name: 'AI智慧脑机接口系统',
+                icon: '🧠',
+                desc: '智慧脑机接口，包括神经信号采集、BCI控制、认知计算等',
+                agents: ['AI BCISmart Director', 'AI Neural Signal', 'AI BCI Control', 'AI Cognitive Comp', 'AI BCI AI', 'AI BCI Analytics'],
+                positions: [
+                    { role: 'AI BCISmart Director', x: 400, y: 30 },
+                    { role: 'AI Neural Signal', x: 150, y: 150 },
+                    { role: 'AI BCI Control', x: 650, y: 150 },
+                    { role: 'AI Cognitive Comp', x: 150, y: 300 },
+                    { role: 'AI BCI AI', x: 400, y: 350 },
+                    { role: 'AI BCI Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI BCISmart Director', to: 'AI Neural Signal', content: '神经信号采集' },
+                    { from: 'AI BCISmart Director', to: 'AI BCI Analytics', content: '脑机分析' },
+                    { from: 'AI Neural Signal', to: 'AI BCI Control', content: 'BCI控制' },
+                    { from: 'AI BCI Control', to: 'AI Cognitive Comp', content: '认知计算' },
+                    { from: 'AI Cognitive Comp', to: 'AI BCI AI', content: '脑机AI' }
+                ]
+            },
+            {
+                id: 'ai-synthetic-biology',
+                name: 'AI智慧合成生物学系统',
+                icon: '🧬',
+                desc: '智慧合成生物学，包括基因设计、细胞工程、生物制造等',
+                agents: ['AI BioSmart Director', 'AI Gene Design', 'AI Cell Engineer', 'AI Bio Mfg', 'AI Bio AI', 'AI Bio Analytics'],
+                positions: [
+                    { role: 'AI BioSmart Director', x: 400, y: 30 },
+                    { role: 'AI Gene Design', x: 150, y: 150 },
+                    { role: 'AI Cell Engineer', x: 650, y: 150 },
+                    { role: 'AI Bio Mfg', x: 150, y: 300 },
+                    { role: 'AI Bio AI', x: 400, y: 350 },
+                    { role: 'AI Bio Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI BioSmart Director', to: 'AI Gene Design', content: '基因设计' },
+                    { from: 'AI BioSmart Director', to: 'AI Bio Analytics', content: '生物分析' },
+                    { from: 'AI Gene Design', to: 'AI Cell Engineer', content: '细胞工程' },
+                    { from: 'AI Cell Engineer', to: 'AI Bio Mfg', content: '生物制造' },
+                    { from: 'AI Bio Mfg', to: 'AI Bio AI', content: '生物AI' }
+                ]
+            },
+            {
+                id: 'ai-nuclear-fusion',
+                name: 'AI智慧可控核聚变系统',
+                icon: '☀️',
+                desc: '智慧可控核聚变，包括等离子体控制、聚变反应、能量转换等',
+                agents: ['AI FusionSmart Director', 'AI Plasma Control', 'AI Fusion React', 'AI Energy Conv', 'AI Fusion AI', 'AI Fusion Analytics'],
+                positions: [
+                    { role: 'AI FusionSmart Director', x: 400, y: 30 },
+                    { role: 'AI Plasma Control', x: 150, y: 150 },
+                    { role: 'AI Fusion React', x: 650, y: 150 },
+                    { role: 'AI Energy Conv', x: 150, y: 300 },
+                    { role: 'AI Fusion AI', x: 400, y: 350 },
+                    { role: 'AI Fusion Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI FusionSmart Director', to: 'AI Plasma Control', content: '等离子体控制' },
+                    { from: 'AI FusionSmart Director', to: 'AI Fusion Analytics', content: '聚变分析' },
+                    { from: 'AI Plasma Control', to: 'AI Fusion React', content: '聚变反应' },
+                    { from: 'AI Fusion React', to: 'AI Energy Conv', content: '能量转换' },
+                    { from: 'AI Energy Conv', to: 'AI Fusion AI', content: '聚变AI' }
+                ]
+            },
+            {
+                id: 'ai-hydrogen-energy',
+                name: 'AI智慧氢能系统',
+                icon: '💧',
+                desc: '智慧氢能，包括制氢、储氢、氢燃料电池、氢气管网等',
+                agents: ['AI HydrogenSmart Director', 'AI Hydrogen Prod', 'AI Hydrogen Storage', 'AI Fuel Cell', 'AI Hydrogen AI', 'AI Hydrogen Analytics'],
+                positions: [
+                    { role: 'AI HydrogenSmart Director', x: 400, y: 30 },
+                    { role: 'AI Hydrogen Prod', x: 150, y: 150 },
+                    { role: 'AI Hydrogen Storage', x: 650, y: 150 },
+                    { role: 'AI Fuel Cell', x: 150, y: 300 },
+                    { role: 'AI Hydrogen AI', x: 400, y: 350 },
+                    { role: 'AI Hydrogen Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HydrogenSmart Director', to: 'AI Hydrogen Prod', content: '制氢' },
+                    { from: 'AI HydrogenSmart Director', to: 'AI Hydrogen Analytics', content: '氢能分析' },
+                    { from: 'AI Hydrogen Prod', to: 'AI Hydrogen Storage', content: '储氢' },
+                    { from: 'AI Hydrogen Storage', to: 'AI Fuel Cell', content: '氢燃料电池' },
+                    { from: 'AI Fuel Cell', to: 'AI Hydrogen AI', content: '氢能AI' }
+                ]
+            },
+            {
+                id: 'ai-carbon-neutral',
+                name: 'AI智慧碳中和系统',
+                icon: '🌱',
+                desc: '智慧碳中和，包括碳排放监测、碳交易、碳捕集、碳汇管理等',
+                agents: ['AI CarbonSmart Director', 'AI Carbon Monitor', 'AI Carbon Trade', 'AI Carbon Capture', 'AI Carbon AI', 'AI Carbon Analytics'],
+                positions: [
+                    { role: 'AI CarbonSmart Director', x: 400, y: 30 },
+                    { role: 'AI Carbon Monitor', x: 150, y: 150 },
+                    { role: 'AI Carbon Trade', x: 650, y: 150 },
+                    { role: 'AI Carbon Capture', x: 150, y: 300 },
+                    { role: 'AI Carbon AI', x: 400, y: 350 },
+                    { role: 'AI Carbon Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI CarbonSmart Director', to: 'AI Carbon Monitor', content: '碳排放监测' },
+                    { from: 'AI CarbonSmart Director', to: 'AI Carbon Analytics', content: '碳分析' },
+                    { from: 'AI Carbon Monitor', to: 'AI Carbon Trade', content: '碳交易' },
+                    { from: 'AI Carbon Trade', to: 'AI Carbon Capture', content: '碳捕集' },
+                    { from: 'AI Carbon Capture', to: 'AI Carbon AI', content: '碳中和AI' }
+                ]
             }
         ];
 
@@ -41569,7 +41724,57 @@
             'AI VR Interaction': { icon: '👆', color: '#3b82f6', role: 'AI VR交互' },
             'AI VR Render': { icon: '🎨', color: '#f59e0b', role: 'AI VR渲染' },
             'AI VR AI': { icon: '🤖', color: '#8b5cf6', role: 'AI VR AI' },
-            'AI VR Analytics': { icon: '📊', color: '#06b6d4', role: 'AI VR分析' }
+            'AI VR Analytics': { icon: '📊', color: '#06b6d4', role: 'AI VR分析' },
+            // Cycle 497 新增角色
+            // AI智慧核能系统
+            'AI NuclearSmart Director': { icon: '⚛️', color: '#8b5cf6', role: 'AI核能总监' },
+            'AI Nuclear Oper': { icon: '🔧', color: '#22c55e', role: 'AI核电站运营' },
+            'AI Nuclear Safety': { icon: '🛡️', color: '#3b82f6', role: 'AI核安全管理' },
+            'AI Radiation Monitor': { icon: '📡', color: '#f59e0b', role: 'AI辐射监测' },
+            'AI Nuclear AI': { icon: '🤖', color: '#8b5cf6', role: 'AI核能AI' },
+            'AI Nuclear Analytics': { icon: '📊', color: '#06b6d4', role: 'AI核能分析' },
+            // AI智慧卫星互联网系统
+            'AI SatNetSmart Director': { icon: '🛰️', color: '#8b5cf6', role: 'AI卫星互联网总监' },
+            'AI Satellite Constellation': { icon: '🛸', color: '#22c55e', role: 'AI卫星星座' },
+            'AI Ground Station': { icon: '📡', color: '#3b82f6', role: 'AI地面站' },
+            'AI Signal Trans': { icon: '📶', color: '#f59e0b', role: 'AI信号传输' },
+            'AI SatNet AI': { icon: '🤖', color: '#8b5cf6', role: 'AI卫星网络AI' },
+            'AI SatNet Analytics': { icon: '📊', color: '#06b6d4', role: 'AI卫星网络分析' },
+            // AI智慧脑机接口系统
+            'AI BCISmart Director': { icon: '🧠', color: '#8b5cf6', role: 'AI脑机接口总监' },
+            'AI Neural Signal': { icon: '📡', color: '#22c55e', role: 'AI神经信号' },
+            'AI BCI Control': { icon: '🎮', color: '#3b82f6', role: 'AI BCI控制' },
+            'AI Cognitive Comp': { icon: '🧮', color: '#f59e0b', role: 'AI认知计算' },
+            'AI BCI AI': { icon: '🤖', color: '#8b5cf6', role: 'AI脑机AI' },
+            'AI BCI Analytics': { icon: '📊', color: '#06b6d4', role: 'AI脑机分析' },
+            // AI智慧合成生物学系统
+            'AI BioSmart Director': { icon: '🧬', color: '#8b5cf6', role: 'AI合成生物学总监' },
+            'AI Gene Design': { icon: '🧪', color: '#22c55e', role: 'AI基因设计' },
+            'AI Cell Engineer': { icon: '🦠', color: '#3b82f6', role: 'AI细胞工程' },
+            'AI Bio Mfg': { icon: '🏭', color: '#f59e0b', role: 'AI生物制造' },
+            'AI Bio AI': { icon: '🤖', color: '#8b5cf6', role: 'AI生物AI' },
+            'AI Bio Analytics': { icon: '📊', color: '#06b6d4', role: 'AI生物分析' },
+            // AI智慧可控核聚变系统
+            'AI FusionSmart Director': { icon: '☀️', color: '#8b5cf6', role: 'AI核聚变总监' },
+            'AI Plasma Control': { icon: '🔥', color: '#22c55e', role: 'AI等离子体控制' },
+            'AI Fusion React': { icon: '⚡', color: '#3b82f6', role: 'AI聚变反应' },
+            'AI Energy Conv': { icon: '🔄', color: '#f59e0b', role: 'AI能量转换' },
+            'AI Fusion AI': { icon: '🤖', color: '#8b5cf6', role: 'AI聚变AI' },
+            'AI Fusion Analytics': { icon: '📊', color: '#06b6d4', role: 'AI聚变分析' },
+            // AI智慧氢能系统
+            'AI HydrogenSmart Director': { icon: '💧', color: '#8b5cf6', role: 'AI氢能总监' },
+            'AI Hydrogen Prod': { icon: '⚗️', color: '#22c55e', role: 'AI制氢' },
+            'AI Hydrogen Storage': { icon: '🛢️', color: '#3b82f6', role: 'AI储氢' },
+            'AI Fuel Cell': { icon: '🔋', color: '#f59e0b', role: 'AI氢燃料电池' },
+            'AI Hydrogen AI': { icon: '🤖', color: '#8b5cf6', role: 'AI氢能AI' },
+            'AI Hydrogen Analytics': { icon: '📊', color: '#06b6d4', role: 'AI氢能分析' },
+            // AI智慧碳中和系统
+            'AI CarbonSmart Director': { icon: '🌱', color: '#8b5cf6', role: 'AI碳中和总监' },
+            'AI Carbon Monitor': { icon: '📡', color: '#22c55e', role: 'AI碳排放监测' },
+            'AI Carbon Trade': { icon: '💹', color: '#3b82f6', role: 'AI碳交易' },
+            'AI Carbon Capture': { icon: '🧯', color: '#f59e0b', role: 'AI碳捕集' },
+            'AI Carbon AI': { icon: '🤖', color: '#8b5cf6', role: 'AI碳中和AI' },
+            'AI Carbon Analytics': { icon: '📊', color: '#06b6d4', role: 'AI碳分析' }
         };
 
         // 拖拽相关变量
