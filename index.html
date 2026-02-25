@@ -33131,8 +33131,166 @@
             }
         ];
 
+        // Cycle 488 新增模板
+        const cycle488Templates = [
+            {
+                id: 'ai-banking-smart',
+                name: 'AI智慧银行系统',
+                icon: '🏦',
+                desc: '智慧银行管理，包括风险管理、客户服务、信贷评估等',
+                agents: ['AI BankingSmart Director', 'AI Risk Manage', 'AI Customer Service', 'AI Credit Assess', 'AI Banking AI', 'AI Banking Analytics'],
+                positions: [
+                    { role: 'AI BankingSmart Director', x: 400, y: 30 },
+                    { role: 'AI Risk Manage', x: 150, y: 150 },
+                    { role: 'AI Customer Service', x: 650, y: 150 },
+                    { role: 'AI Credit Assess', x: 150, y: 300 },
+                    { role: 'AI Banking AI', x: 400, y: 350 },
+                    { role: 'AI Banking Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI BankingSmart Director', to: 'AI Risk Manage', content: '风险管理' },
+                    { from: 'AI BankingSmart Director', to: 'AI Banking Analytics', content: '银行分析' },
+                    { from: 'AI Risk Manage', to: 'AI Customer Service', content: '客户服务' },
+                    { from: 'AI Customer Service', to: 'AI Credit Assess', content: '信贷评估' },
+                    { from: 'AI Credit Assess', to: 'AI Banking AI', content: '银行AI' }
+                ]
+            },
+            {
+                id: 'ai-insurance-smart',
+                name: 'AI智慧保险系统',
+                icon: '🛡️',
+                desc: '智慧保险管理，包括核保理赔、风险评估、产品设计等',
+                agents: ['AI InsuranceSmart Director', 'AI Underwriting', 'AI Claims Process', 'AI Risk Assess', 'AI Insurance AI', 'AI Insurance Analytics'],
+                positions: [
+                    { role: 'AI InsuranceSmart Director', x: 400, y: 30 },
+                    { role: 'AI Underwriting', x: 150, y: 150 },
+                    { role: 'AI Claims Process', x: 650, y: 150 },
+                    { role: 'AI Risk Assess', x: 150, y: 300 },
+                    { role: 'AI Insurance AI', x: 400, y: 350 },
+                    { role: 'AI Insurance Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI InsuranceSmart Director', to: 'AI Underwriting', content: '核保理赔' },
+                    { from: 'AI InsuranceSmart Director', to: 'AI Insurance Analytics', content: '保险分析' },
+                    { from: 'AI Underwriting', to: 'AI Claims Process', content: '理赔处理' },
+                    { from: 'AI Claims Process', to: 'AI Risk Assess', content: '风险评估' },
+                    { from: 'AI Risk Assess', to: 'AI Insurance AI', content: '保险AI' }
+                ]
+            },
+            {
+                id: 'ai-securities-smart',
+                name: 'AI智慧证券系统',
+                icon: '📈',
+                desc: '智慧证券管理，包括投资分析、交易执行、合规监控等',
+                agents: ['AI SecuritiesSmart Director', 'AI Investment Analysis', 'AI Trading Execute', 'AI Compliance Monitor', 'AI Securities AI', 'AI Securities Analytics'],
+                positions: [
+                    { role: 'AI SecuritiesSmart Director', x: 400, y: 30 },
+                    { role: 'AI Investment Analysis', x: 150, y: 150 },
+                    { role: 'AI Trading Execute', x: 650, y: 150 },
+                    { role: 'AI Compliance Monitor', x: 150, y: 300 },
+                    { role: 'AI Securities AI', x: 400, y: 350 },
+                    { role: 'AI Securities Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SecuritiesSmart Director', to: 'AI Investment Analysis', content: '投资分析' },
+                    { from: 'AI SecuritiesSmart Director', to: 'AI Securities Analytics', content: '证券分析' },
+                    { from: 'AI Investment Analysis', to: 'AI Trading Execute', content: '交易执行' },
+                    { from: 'AI Trading Execute', to: 'AI Compliance Monitor', content: '合规监控' },
+                    { from: 'AI Compliance Monitor', to: 'AI Securities AI', content: '证券AI' }
+                ]
+            },
+            {
+                id: 'ai-telecom-smart',
+                name: 'AI智慧电信运营系统',
+                icon: '📱',
+                desc: '智慧电信运营，包括网络优化、用户运营、业务支撑等',
+                agents: ['AI TelecomSmart Director', 'AI Network Optimize', 'AI User Operations', 'AI Business Support', 'AI Telecom AI', 'AI Telecom Analytics'],
+                positions: [
+                    { role: 'AI TelecomSmart Director', x: 400, y: 30 },
+                    { role: 'AI Network Optimize', x: 150, y: 150 },
+                    { role: 'AI User Operations', x: 650, y: 150 },
+                    { role: 'AI Business Support', x: 150, y: 300 },
+                    { role: 'AI Telecom AI', x: 400, y: 350 },
+                    { role: 'AI Telecom Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI TelecomSmart Director', to: 'AI Network Optimize', content: '网络优化' },
+                    { from: 'AI TelecomSmart Director', to: 'AI Telecom Analytics', content: '电信分析' },
+                    { from: 'AI Network Optimize', to: 'AI User Operations', content: '用户运营' },
+                    { from: 'AI User Operations', to: 'AI Business Support', content: '业务支撑' },
+                    { from: 'AI Business Support', to: 'AI Telecom AI', content: '电信AI' }
+                ]
+            },
+            {
+                id: 'ai-powergrid-smart',
+                name: 'AI智慧电网系统',
+                icon: '⚡',
+                desc: '智慧电网管理，包括调度运行、设备运维、负荷预测等',
+                agents: ['AI PowerGridSmart Director', 'AI Dispatch Operation', 'AI Equipment Maintain', 'AI Load Forecast', 'AI PowerGrid AI', 'AI PowerGrid Analytics'],
+                positions: [
+                    { role: 'AI PowerGridSmart Director', x: 400, y: 30 },
+                    { role: 'AI Dispatch Operation', x: 150, y: 150 },
+                    { role: 'AI Equipment Maintain', x: 650, y: 150 },
+                    { role: 'AI Load Forecast', x: 150, y: 300 },
+                    { role: 'AI PowerGrid AI', x: 400, y: 350 },
+                    { role: 'AI PowerGrid Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI PowerGridSmart Director', to: 'AI Dispatch Operation', content: '调度运行' },
+                    { from: 'AI PowerGridSmart Director', to: 'AI PowerGrid Analytics', content: '电网分析' },
+                    { from: 'AI Dispatch Operation', to: 'AI Equipment Maintain', content: '设备运维' },
+                    { from: 'AI Equipment Maintain', to: 'AI Load Forecast', content: '负荷预测' },
+                    { from: 'AI Load Forecast', to: 'AI PowerGrid AI', content: '电网AI' }
+                ]
+            },
+            {
+                id: 'ai-railway-smart',
+                name: 'AI智慧铁路系统',
+                icon: '🚂',
+                desc: '智慧铁路管理，包括运输调度、客货服务、安全监控等',
+                agents: ['AI RailwaySmart Director', 'AI Transport Dispatch', 'AI Passenger Service', 'AI Safety Monitor', 'AI Railway AI', 'AI Railway Analytics'],
+                positions: [
+                    { role: 'AI RailwaySmart Director', x: 400, y: 30 },
+                    { role: 'AI Transport Dispatch', x: 150, y: 150 },
+                    { role: 'AI Passenger Service', x: 650, y: 150 },
+                    { role: 'AI Safety Monitor', x: 150, y: 300 },
+                    { role: 'AI Railway AI', x: 400, y: 350 },
+                    { role: 'AI Railway Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI RailwaySmart Director', to: 'AI Transport Dispatch', content: '运输调度' },
+                    { from: 'AI RailwaySmart Director', to: 'AI Railway Analytics', content: '铁路分析' },
+                    { from: 'AI Transport Dispatch', to: 'AI Passenger Service', content: '客货服务' },
+                    { from: 'AI Passenger Service', to: 'AI Safety Monitor', content: '安全监控' },
+                    { from: 'AI Safety Monitor', to: 'AI Railway AI', content: '铁路AI' }
+                ]
+            },
+            {
+                id: 'ai-broadcasting-smart',
+                name: 'AI智慧公共广播系统',
+                icon: '📢',
+                desc: '智慧公共广播，包括内容制作、节目调度、应急发布等',
+                agents: ['AI BroadcastingSmart Director', 'AI Content Production', 'AI Program Schedule', 'AI Emergency Publish', 'AI Broadcasting AI', 'AI Broadcasting Analytics'],
+                positions: [
+                    { role: 'AI BroadcastingSmart Director', x: 400, y: 30 },
+                    { role: 'AI Content Production', x: 150, y: 150 },
+                    { role: 'AI Program Schedule', x: 650, y: 150 },
+                    { role: 'AI Emergency Publish', x: 150, y: 300 },
+                    { role: 'AI Broadcasting AI', x: 400, y: 350 },
+                    { role: 'AI Broadcasting Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI BroadcastingSmart Director', to: 'AI Content Production', content: '内容制作' },
+                    { from: 'AI BroadcastingSmart Director', to: 'AI Broadcasting Analytics', content: '广播分析' },
+                    { from: 'AI Content Production', to: 'AI Program Schedule', content: '节目调度' },
+                    { from: 'AI Program Schedule', to: 'AI Emergency Publish', content: '应急发布' },
+                    { from: 'AI Emergency Publish', to: 'AI Broadcasting AI', content: '广播AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -39696,7 +39854,57 @@
             'AI Fitting Process': { icon: '⚓', color: '#3b82f6', role: 'AI舾装工艺' },
             'AI Safety Manage': { icon: '🛡️', color: '#dc2626', role: 'AI安全管理' },
             'AI Shipbuilding AI': { icon: '🤖', color: '#8b5cf6', role: 'AI船舶AI' },
-            'AI Shipbuilding Analytics': { icon: '📊', color: '#06b6d4', role: 'AI船舶分析' }
+            'AI Shipbuilding Analytics': { icon: '📊', color: '#06b6d4', role: 'AI船舶分析' },
+            // Cycle 488 新增 Agent Roles
+            // AI智慧银行系统
+            'AI BankingSmart Director': { icon: '🏦', color: '#15803d', role: 'AI银行总监' },
+            'AI Risk Manage': { icon: '🛡️', color: '#dc2626', role: 'AI风险管理' },
+            'AI Customer Service': { icon: '👥', color: '#3b82f6', role: 'AI客户服务' },
+            'AI Credit Assess': { icon: '💰', color: '#f59e0b', role: 'AI信贷评估' },
+            'AI Banking AI': { icon: '🤖', color: '#8b5cf6', role: 'AI银行AI' },
+            'AI Banking Analytics': { icon: '📊', color: '#06b6d4', role: 'AI银行分析' },
+            // AI智慧保险系统
+            'AI InsuranceSmart Director': { icon: '🛡️', color: '#7c3aed', role: 'AI保险总监' },
+            'AI Underwriting': { icon: '📋', color: '#22c55e', role: 'AI核保理赔' },
+            'AI Claims Process': { icon: '🔄', color: '#3b82f6', role: 'AI理赔处理' },
+            'AI Risk Assess': { icon: '⚖️', color: '#f59e0b', role: 'AI风险评估' },
+            'AI Insurance AI': { icon: '🤖', color: '#8b5cf6', role: 'AI保险AI' },
+            'AI Insurance Analytics': { icon: '📊', color: '#06b6d4', role: 'AI保险分析' },
+            // AI智慧证券系统
+            'AI SecuritiesSmart Director': { icon: '📈', color: '#ea580c', role: 'AI证券总监' },
+            'AI Investment Analysis': { icon: '🔍', color: '#22c55e', role: 'AI投资分析' },
+            'AI Trading Execute': { icon: '💹', color: '#3b82f6', role: 'AI交易执行' },
+            'AI Compliance Monitor': { icon: '👮', color: '#f59e0b', role: 'AI合规监控' },
+            'AI Securities AI': { icon: '🤖', color: '#8b5cf6', role: 'AI证券AI' },
+            'AI Securities Analytics': { icon: '📊', color: '#06b6d4', role: 'AI证券分析' },
+            // AI智慧电信运营系统
+            'AI TelecomSmart Director': { icon: '📱', color: '#0891b2', role: 'AI电信总监' },
+            'AI Network Optimize': { icon: '📶', color: '#22c55e', role: 'AI网络优化' },
+            'AI User Operations': { icon: '👤', color: '#3b82f6', role: 'AI用户运营' },
+            'AI Business Support': { icon: '💼', color: '#f59e0b', role: 'AI业务支撑' },
+            'AI Telecom AI': { icon: '🤖', color: '#8b5cf6', role: 'AI电信AI' },
+            'AI Telecom Analytics': { icon: '📊', color: '#06b6d4', role: 'AI电信分析' },
+            // AI智慧电网系统
+            'AI PowerGridSmart Director': { icon: '⚡', color: '#eab308', role: 'AI电网总监' },
+            'AI Dispatch Operation': { icon: '🎛️', color: '#22c55e', role: 'AI调度运行' },
+            'AI Equipment Maintain': { icon: '🔧', color: '#3b82f6', role: 'AI设备运维' },
+            'AI Load Forecast': { icon: '📈', color: '#f59e0b', role: 'AI负荷预测' },
+            'AI PowerGrid AI': { icon: '🤖', color: '#8b5cf6', role: 'AI电网AI' },
+            'AI PowerGrid Analytics': { icon: '📊', color: '#06b6d4', role: 'AI电网分析' },
+            // AI智慧铁路系统
+            'AI RailwaySmart Director': { icon: '🚂', color: '#b45309', role: 'AI铁路总监' },
+            'AI Transport Dispatch': { icon: '🚦', color: '#22c55e', role: 'AI运输调度' },
+            'AI Passenger Service': { icon: '🚃', color: '#3b82f6', role: 'AI客货服务' },
+            'AI Safety Monitor': { icon: '👁️', color: '#dc2626', role: 'AI安全监控' },
+            'AI Railway AI': { icon: '🤖', color: '#8b5cf6', role: 'AI铁路AI' },
+            'AI Railway Analytics': { icon: '📊', color: '#06b6d4', role: 'AI铁路分析' },
+            // AI智慧公共广播系统
+            'AI BroadcastingSmart Director': { icon: '📢', color: '#c026d3', role: 'AI广播总监' },
+            'AI Content Production': { icon: '🎬', color: '#22c55e', role: 'AI内容制作' },
+            'AI Program Schedule': { icon: '📺', color: '#3b82f6', role: 'AI节目调度' },
+            'AI Emergency Publish': { icon: '🚨', color: '#dc2626', role: 'AI应急发布' },
+            'AI Broadcasting AI': { icon: '🤖', color: '#8b5cf6', role: 'AI广播AI' },
+            'AI Broadcasting Analytics': { icon: '📊', color: '#06b6d4', role: 'AI广播分析' }
         };
 
         // 拖拽相关变量
