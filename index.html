@@ -32187,8 +32187,166 @@
             }
         ];
 
+        // Cycle 483 新增模板
+        const cycle483Templates = [
+            {
+                id: 'ai-shipping-smart',
+                name: 'AI智慧航运系统',
+                icon: '🚢',
+                desc: '智慧航运管理，包括船舶调度、港口作业、海运物流等',
+                agents: ['AI ShippingSmart Director', 'AI Ship Dispatch', 'AI Port Operation', 'AI Shipping Logistics', 'AI Shipping AI', 'AI Shipping Analytics'],
+                positions: [
+                    { role: 'AI ShippingSmart Director', x: 400, y: 30 },
+                    { role: 'AI Ship Dispatch', x: 150, y: 150 },
+                    { role: 'AI Port Operation', x: 650, y: 150 },
+                    { role: 'AI Shipping Logistics', x: 150, y: 300 },
+                    { role: 'AI Shipping AI', x: 400, y: 350 },
+                    { role: 'AI Shipping Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI ShippingSmart Director', to: 'AI Ship Dispatch', content: '船舶调度' },
+                    { from: 'AI ShippingSmart Director', to: 'AI Shipping Analytics', content: '航运分析' },
+                    { from: 'AI Ship Dispatch', to: 'AI Port Operation', content: '港口作业' },
+                    { from: 'AI Port Operation', to: 'AI Shipping Logistics', content: '海运物流' },
+                    { from: 'AI Shipping Logistics', to: 'AI Shipping AI', content: '航运AI' }
+                ]
+            },
+            {
+                id: 'ai-bridge-smart',
+                name: 'AI智慧桥梁系统',
+                icon: '🌉',
+                desc: '智慧桥梁管理，包括结构监测、养护管理、交通管控等',
+                agents: ['AI BridgeSmart Director', 'AI Structure Monitor', 'AI Bridge Maintain', 'AI Traffic Control', 'AI Bridge AI', 'AI Bridge Analytics'],
+                positions: [
+                    { role: 'AI BridgeSmart Director', x: 400, y: 30 },
+                    { role: 'AI Structure Monitor', x: 150, y: 150 },
+                    { role: 'AI Bridge Maintain', x: 650, y: 150 },
+                    { role: 'AI Traffic Control', x: 150, y: 300 },
+                    { role: 'AI Bridge AI', x: 400, y: 350 },
+                    { role: 'AI Bridge Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI BridgeSmart Director', to: 'AI Structure Monitor', content: '结构监测' },
+                    { from: 'AI BridgeSmart Director', to: 'AI Bridge Analytics', content: '桥梁分析' },
+                    { from: 'AI Structure Monitor', to: 'AI Bridge Maintain', content: '养护管理' },
+                    { from: 'AI Bridge Maintain', to: 'AI Traffic Control', content: '交通管控' },
+                    { from: 'AI Traffic Control', to: 'AI Bridge AI', content: '桥梁AI' }
+                ]
+            },
+            {
+                id: 'ai-tunnel-smart',
+                name: 'AI智慧隧道系统',
+                icon: '🚇',
+                desc: '智慧隧道管理，包括环境监测、通风控制、应急响应等',
+                agents: ['AI TunnelSmart Director', 'AI Environment Monitor', 'AI Ventilation Control', 'AI Emergency Response', 'AI Tunnel AI', 'AI Tunnel Analytics'],
+                positions: [
+                    { role: 'AI TunnelSmart Director', x: 400, y: 30 },
+                    { role: 'AI Environment Monitor', x: 150, y: 150 },
+                    { role: 'AI Ventilation Control', x: 650, y: 150 },
+                    { role: 'AI Emergency Response', x: 150, y: 300 },
+                    { role: 'AI Tunnel AI', x: 400, y: 350 },
+                    { role: 'AI Tunnel Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI TunnelSmart Director', to: 'AI Environment Monitor', content: '环境监测' },
+                    { from: 'AI TunnelSmart Director', to: 'AI Tunnel Analytics', content: '隧道分析' },
+                    { from: 'AI Environment Monitor', to: 'AI Ventilation Control', content: '通风控制' },
+                    { from: 'AI Ventilation Control', to: 'AI Emergency Response', content: '应急响应' },
+                    { from: 'AI Emergency Response', to: 'AI Tunnel AI', content: '隧道AI' }
+                ]
+            },
+            {
+                id: 'ai-parking-smart',
+                name: 'AI智慧停车场系统',
+                icon: '🅿️',
+                desc: '智慧停车场管理，包括车位引导、收费管理、车辆识别等',
+                agents: ['AI ParkingSmart Director', 'AI Space Guide', 'AI Toll Manage', 'AI Vehicle Recognize', 'AI Parking AI', 'AI Parking Analytics'],
+                positions: [
+                    { role: 'AI ParkingSmart Director', x: 400, y: 30 },
+                    { role: 'AI Space Guide', x: 150, y: 150 },
+                    { role: 'AI Toll Manage', x: 650, y: 150 },
+                    { role: 'AI Vehicle Recognize', x: 150, y: 300 },
+                    { role: 'AI Parking AI', x: 400, y: 350 },
+                    { role: 'AI Parking Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI ParkingSmart Director', to: 'AI Space Guide', content: '车位引导' },
+                    { from: 'AI ParkingSmart Director', to: 'AI Parking Analytics', content: '停车分析' },
+                    { from: 'AI Space Guide', to: 'AI Toll Manage', content: '收费管理' },
+                    { from: 'AI Toll Manage', to: 'AI Vehicle Recognize', content: '车辆识别' },
+                    { from: 'AI Vehicle Recognize', to: 'AI Parking AI', content: '停车AI' }
+                ]
+            },
+            {
+                id: 'ai-charging-smart',
+                name: 'AI智慧充电桩系统',
+                icon: '⚡',
+                desc: '智慧充电桩管理，包括充电调度、能耗监控、支付结算等',
+                agents: ['AI ChargingSmart Director', 'AI Charge Dispatch', 'AI Energy Monitor', 'AI Payment Settle', 'AI Charging AI', 'AI Charging Analytics'],
+                positions: [
+                    { role: 'AI ChargingSmart Director', x: 400, y: 30 },
+                    { role: 'AI Charge Dispatch', x: 150, y: 150 },
+                    { role: 'AI Energy Monitor', x: 650, y: 150 },
+                    { role: 'AI Payment Settle', x: 150, y: 300 },
+                    { role: 'AI Charging AI', x: 400, y: 350 },
+                    { role: 'AI Charging Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI ChargingSmart Director', to: 'AI Charge Dispatch', content: '充电调度' },
+                    { from: 'AI ChargingSmart Director', to: 'AI Charging Analytics', content: '充电分析' },
+                    { from: 'AI Charge Dispatch', to: 'AI Energy Monitor', content: '能耗监控' },
+                    { from: 'AI Energy Monitor', to: 'AI Payment Settle', content: '支付结算' },
+                    { from: 'AI Payment Settle', to: 'AI Charging AI', content: '充电AI' }
+                ]
+            },
+            {
+                id: 'ai-lightpole-smart',
+                name: 'AI智慧灯杆系统',
+                icon: '💡',
+                desc: '智慧灯杆管理，包括照明控制、信息发布、5G基站等',
+                agents: ['AI LightpoleSmart Director', 'AI Light Control', 'AI Info Publish', 'AI Pole 5G', 'AI Lightpole AI', 'AI Lightpole Analytics'],
+                positions: [
+                    { role: 'AI LightpoleSmart Director', x: 400, y: 30 },
+                    { role: 'AI Light Control', x: 150, y: 150 },
+                    { role: 'AI Info Publish', x: 650, y: 150 },
+                    { role: 'AI Pole 5G', x: 150, y: 300 },
+                    { role: 'AI Lightpole AI', x: 400, y: 350 },
+                    { role: 'AI Lightpole Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI LightpoleSmart Director', to: 'AI Light Control', content: '照明控制' },
+                    { from: 'AI LightpoleSmart Director', to: 'AI Lightpole Analytics', content: '灯杆分析' },
+                    { from: 'AI Light Control', to: 'AI Info Publish', content: '信息发布' },
+                    { from: 'AI Info Publish', to: 'AI Pole 5G', content: '5G基站' },
+                    { from: 'AI Pole 5G', to: 'AI Lightpole AI', content: '灯杆AI' }
+                ]
+            },
+            {
+                id: 'ai-sewage-smart',
+                name: 'AI智慧污水处理系统',
+                icon: '🌊',
+                desc: '智慧污水处理，包括水质监测、工艺控制、污泥处理等',
+                agents: ['AI SewageSmart Director', 'AI Water Quality', 'AI Process Control', 'AI Sludge Process', 'AI Sewage AI', 'AI Sewage Analytics'],
+                positions: [
+                    { role: 'AI SewageSmart Director', x: 400, y: 30 },
+                    { role: 'AI Water Quality', x: 150, y: 150 },
+                    { role: 'AI Process Control', x: 650, y: 150 },
+                    { role: 'AI Sludge Process', x: 150, y: 300 },
+                    { role: 'AI Sewage AI', x: 400, y: 350 },
+                    { role: 'AI Sewage Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SewageSmart Director', to: 'AI Water Quality', content: '水质监测' },
+                    { from: 'AI SewageSmart Director', to: 'AI Sewage Analytics', content: '污水分析' },
+                    { from: 'AI Water Quality', to: 'AI Process Control', content: '工艺控制' },
+                    { from: 'AI Process Control', to: 'AI Sludge Process', content: '污泥处理' },
+                    { from: 'AI Sludge Process', to: 'AI Sewage AI', content: '污水AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -38504,7 +38662,56 @@
             'AI Gas Pipeline': { icon: '🔥', color: '#ef4444', role: 'AI燃气管网' },
             'AI Heat Pipeline': { icon: '♨️', color: '#f59e0b', role: 'AI热力管网' },
             'AI Pipeline AI': { icon: '🤖', color: '#a855f7', role: 'AI管网AI' },
-            'AI Pipeline Analytics': { icon: '📊', color: '#14b8a6', role: 'AI管网分析' }
+            'AI Pipeline Analytics': { icon: '📊', color: '#14b8a6', role: 'AI管网分析' },
+            // Cycle 483 新增 - AI智慧航运系统
+            'AI ShippingSmart Director': { icon: '🚢', color: '#0ea5e9', role: 'AI航运总监' },
+            'AI Ship Dispatch': { icon: '⚓', color: '#f59e0b', role: 'AI船舶调度' },
+            'AI Port Operation': { icon: '🏗️', color: '#22c55e', role: 'AI港口作业' },
+            'AI Shipping Logistics': { icon: '📦', color: '#a855f7', role: 'AI海运物流' },
+            'AI Shipping AI': { icon: '🤖', color: '#ec4899', role: 'AI航运AI' },
+            'AI Shipping Analytics': { icon: '📊', color: '#06b6d4', role: 'AI航运分析' },
+            // Cycle 483 新增 - AI智慧桥梁系统
+            'AI BridgeSmart Director': { icon: '🌉', color: '#64748b', role: 'AI桥梁总监' },
+            'AI Structure Monitor': { icon: '📡', color: '#ef4444', role: 'AI结构监测' },
+            'AI Bridge Maintain': { icon: '🔧', color: '#22c55e', role: 'AI桥梁养护' },
+            'AI Traffic Control': { icon: '🚦', color: '#f97316', role: 'AI交通管控' },
+            'AI Bridge AI': { icon: '🤖', color: '#8b5cf6', role: 'AI桥梁AI' },
+            'AI Bridge Analytics': { icon: '📈', color: '#14b8a6', role: 'AI桥梁分析' },
+            // Cycle 483 新增 - AI智慧隧道系统
+            'AI TunnelSmart Director': { icon: '🚇', color: '#1e40af', role: 'AI隧道总监' },
+            'AI Environment Monitor': { icon: '🌡️', color: '#10b981', role: 'AI环境监测' },
+            'AI Ventilation Control': { icon: '💨', color: '#3b82f6', role: 'AI通风控制' },
+            'AI Emergency Response': { icon: '🚨', color: '#ef4444', role: 'AI应急响应' },
+            'AI Tunnel AI': { icon: '🤖', color: '#8b5cf6', role: 'AI隧道AI' },
+            'AI Tunnel Analytics': { icon: '📊', color: '#06b6d4', role: 'AI隧道分析' },
+            // Cycle 483 新增 - AI智慧停车场系统
+            'AI ParkingSmart Director': { icon: '🅿️', color: '#7c3aed', role: 'AI停车场总监' },
+            'AI Space Guide': { icon: '🧭', color: '#f59e0b', role: 'AI车位引导' },
+            'AI Toll Manage': { icon: '💰', color: '#22c55e', role: 'AI收费管理' },
+            'AI Vehicle Recognize': { icon: '🚗', color: '#ec4899', role: 'AI车辆识别' },
+            'AI Parking AI': { icon: '🤖', color: '#a855f7', role: 'AI停车AI' },
+            'AI Parking Analytics': { icon: '📈', color: '#14b8a6', role: 'AI停车分析' },
+            // Cycle 483 新增 - AI智慧充电桩系统
+            'AI ChargingSmart Director': { icon: '⚡', color: '#eab308', role: 'AI充电桩总监' },
+            'AI Charge Dispatch': { icon: '🔋', color: '#22c55e', role: 'AI充电调度' },
+            'AI Energy Monitor': { icon: '📡', color: '#3b82f6', role: 'AI能耗监控' },
+            'AI Payment Settle': { icon: '💳', color: '#ec4899', role: 'AI支付结算' },
+            'AI Charging AI': { icon: '🤖', color: '#8b5cf6', role: 'AI充电AI' },
+            'AI Charging Analytics': { icon: '📊', color: '#06b6d4', role: 'AI充电分析' },
+            // Cycle 483 新增 - AI智慧灯杆系统
+            'AI LightpoleSmart Director': { icon: '💡', color: '#fcd34d', role: 'AI灯杆总监' },
+            'AI Light Control': { icon: '💡', color: '#fbbf24', role: 'AI照明控制' },
+            'AI Info Publish': { icon: '📢', color: '#3b82f6', role: 'AI信息发布' },
+            'AI Pole 5G': { icon: '📶', color: '#8b5cf6', role: 'AI灯杆5G' },
+            'AI Lightpole AI': { icon: '🤖', color: '#22c55e', role: 'AI灯杆AI' },
+            'AI Lightpole Analytics': { icon: '📈', color: '#14b8a6', role: 'AI灯杆分析' },
+            // Cycle 483 新增 - AI智慧污水处理系统
+            'AI SewageSmart Director': { icon: '🌊', color: '#0ea5e9', role: 'AI污水处理总监' },
+            'AI Water Quality': { icon: '💧', color: '#3b82f6', role: 'AI水质监测' },
+            'AI Process Control': { icon: '⚙️', color: '#f59e0b', role: 'AI工艺控制' },
+            'AI Sludge Process': { icon: '🛢️', color: '#a855f7', role: 'AI污泥处理' },
+            'AI Sewage AI': { icon: '🤖', color: '#22c55e', role: 'AI污水AI' },
+            'AI Sewage Analytics': { icon: '📊', color: '#06b6d4', role: 'AI污水分析' }
         };
 
         // 拖拽相关变量
