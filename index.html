@@ -31465,8 +31465,165 @@
             }
         ];
 
+        const cycle476Templates = [
+            {
+                id: 'ai-smart-farm-system',
+                name: 'AI智慧农业系统',
+                icon: '🌾',
+                desc: '智能化农业管理平台，实现种植、养殖、收获全流程自动化',
+                agents: ['AI农业总监', 'AI种植管理', 'AI养殖管理', 'AI收获预测', 'AI病虫害防治', 'AI农业客服'],
+                positions: [
+                    { role: 'AI农业总监', x: 400, y: 30 },
+                    { role: 'AI种植管理', x: 150, y: 150 },
+                    { role: 'AI养殖管理', x: 650, y: 150 },
+                    { role: 'AI收获预测', x: 150, y: 300 },
+                    { role: 'AI病虫害防治', x: 650, y: 300 },
+                    { role: 'AI农业客服', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI农业总监', to: 'AI种植管理', content: '种植计划' },
+                    { from: 'AI农业总监', to: 'AI养殖管理', content: '养殖计划' },
+                    { from: 'AI农业总监', to: 'AI收获预测', content: '预测需求' },
+                    { from: 'AI种植管理', to: 'AI病虫害防治', content: '防治需求' },
+                    { from: 'AI养殖管理', to: 'AI农业客服', content: '客服需求' }
+                ]
+            },
+            {
+                id: 'ai-education-system',
+                name: 'AI智慧教育系统',
+                icon: '📚',
+                desc: '智能化教育管理平台，实现教学、评估、个性化学习全流程优化',
+                agents: ['AI教育总监', 'AI教学设计', 'AI学习评估', 'AI个性化辅导', 'AI课程管理', 'AI教育客服'],
+                positions: [
+                    { role: 'AI教育总监', x: 400, y: 30 },
+                    { role: 'AI教学设计', x: 150, y: 150 },
+                    { role: 'AI学习评估', x: 650, y: 150 },
+                    { role: 'AI个性化辅导', x: 150, y: 300 },
+                    { role: 'AI课程管理', x: 650, y: 300 },
+                    { role: 'AI教育客服', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI教育总监', to: 'AI教学设计', content: '教学需求' },
+                    { from: 'AI教育总监', to: 'AI学习评估', content: '评估需求' },
+                    { from: 'AI教育总监', to: 'AI个性化辅导', content: '辅导需求' },
+                    { from: 'AI学习评估', to: 'AI课程管理', content: '课程需求' },
+                    { from: 'AI个性化辅导', to: 'AI教育客服', content: '客服需求' }
+                ]
+            },
+            {
+                id: 'ai-medical-system',
+                name: 'AI智慧医疗系统',
+                icon: '🏥',
+                desc: '智能化医疗服务平台，实现诊断、治疗、护理全流程智能化',
+                agents: ['AI医疗总监', 'AI诊断辅助', 'AI治疗方案', 'AI护理管理', 'AI药品管理', 'AI医疗客服'],
+                positions: [
+                    { role: 'AI医疗总监', x: 400, y: 30 },
+                    { role: 'AI诊断辅助', x: 150, y: 150 },
+                    { role: 'AI治疗方案', x: 650, y: 150 },
+                    { role: 'AI护理管理', x: 150, y: 300 },
+                    { role: 'AI药品管理', x: 650, y: 300 },
+                    { role: 'AI医疗客服', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI医疗总监', to: 'AI诊断辅助', content: '诊断需求' },
+                    { from: 'AI医疗总监', to: 'AI治疗方案', content: '治疗需求' },
+                    { from: 'AI医疗总监', to: 'AI护理管理', content: '护理需求' },
+                    { from: 'AI诊断辅助', to: 'AI药品管理', content: '药品需求' },
+                    { from: 'AI治疗方案', to: 'AI医疗客服', content: '客服需求' }
+                ]
+            },
+            {
+                id: 'ai-finance-system',
+                name: 'AI智慧金融系统',
+                icon: '💳',
+                desc: '智能化金融服务平台，实现投资、风险、客服全流程自动化',
+                agents: ['AI金融总监', 'AI投资管理', 'AI风险控制', 'AI资产管理', 'AI信用评估', 'AI金融客服'],
+                positions: [
+                    { role: 'AI金融总监', x: 400, y: 30 },
+                    { role: 'AI投资管理', x: 150, y: 150 },
+                    { role: 'AI风险控制', x: 650, y: 150 },
+                    { role: 'AI资产管理', x: 150, y: 300 },
+                    { role: 'AI信用评估', x: 650, y: 300 },
+                    { role: 'AI金融客服', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI金融总监', to: 'AI投资管理', content: '投资需求' },
+                    { from: 'AI金融总监', to: 'AI风险控制', content: '风控需求' },
+                    { from: 'AI金融总监', to: 'AI资产管理', content: '资产需求' },
+                    { from: 'AI投资管理', to: 'AI信用评估', content: '信用需求' },
+                    { from: 'AI风险控制', to: 'AI金融客服', content: '客服需求' }
+                ]
+            },
+            {
+                id: 'ai-tourism-system',
+                name: 'AI智慧旅游系统',
+                icon: '✈️',
+                desc: '智能化旅游服务平台，实现行程规划、预订、体验全流程优化',
+                agents: ['AI旅游总监', 'AI行程规划', 'AI酒店预订', 'AI景点推荐', 'AI导游服务', 'AI旅游客服'],
+                positions: [
+                    { role: 'AI旅游总监', x: 400, y: 30 },
+                    { role: 'AI行程规划', x: 150, y: 150 },
+                    { role: 'AI酒店预订', x: 650, y: 150 },
+                    { role: 'AI景点推荐', x: 150, y: 300 },
+                    { role: 'AI导游服务', x: 650, y: 300 },
+                    { role: 'AI旅游客服', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI旅游总监', to: 'AI行程规划', content: '规划需求' },
+                    { from: 'AI旅游总监', to: 'AI酒店预订', content: '预订需求' },
+                    { from: 'AI旅游总监', to: 'AI景点推荐', content: '推荐需求' },
+                    { from: 'AI行程规划', to: 'AI导游服务', content: '导游需求' },
+                    { from: 'AI酒店预订', to: 'AI旅游客服', content: '客服需求' }
+                ]
+            },
+            {
+                id: 'ai-entertainment-system',
+                name: 'AI智慧娱乐系统',
+                icon: '🎭',
+                desc: '智能化娱乐服务平台，实现内容创作、演出、互动全流程优化',
+                agents: ['AI娱乐总监', 'AI内容创作', 'AI演出策划', 'AI观众分析', 'AI版权管理', 'AI娱乐客服'],
+                positions: [
+                    { role: 'AI娱乐总监', x: 400, y: 30 },
+                    { role: 'AI内容创作', x: 150, y: 150 },
+                    { role: 'AI演出策划', x: 650, y: 150 },
+                    { role: 'AI观众分析', x: 150, y: 300 },
+                    { role: 'AI版权管理', x: 650, y: 300 },
+                    { role: 'AI娱乐客服', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI娱乐总监', to: 'AI内容创作', content: '创作需求' },
+                    { from: 'AI娱乐总监', to: 'AI演出策划', content: '策划需求' },
+                    { from: 'AI娱乐总监', to: 'AI观众分析', content: '分析需求' },
+                    { from: 'AI内容创作', to: 'AI版权管理', content: '版权需求' },
+                    { from: 'AI演出策划', to: 'AI娱乐客服', content: '客服需求' }
+                ]
+            },
+            {
+                id: 'ai-sports-system',
+                name: 'AI智慧体育系统',
+                icon: '⚽',
+                desc: '智能化体育服务平台，实现训练、比赛、健康管理全流程优化',
+                agents: ['AI体育总监', 'AI训练管理', 'AI比赛分析', 'AI健康管理', 'AI赛事运营', 'AI体育客服'],
+                positions: [
+                    { role: 'AI体育总监', x: 400, y: 30 },
+                    { role: 'AI训练管理', x: 150, y: 150 },
+                    { role: 'AI比赛分析', x: 650, y: 150 },
+                    { role: 'AI健康管理', x: 150, y: 300 },
+                    { role: 'AI赛事运营', x: 650, y: 300 },
+                    { role: 'AI体育客服', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI体育总监', to: 'AI训练管理', content: '训练需求' },
+                    { from: 'AI体育总监', to: 'AI比赛分析', content: '分析需求' },
+                    { from: 'AI体育总监', to: 'AI健康管理', content: '健康需求' },
+                    { from: 'AI训练管理', to: 'AI赛事运营', content: '赛事需求' },
+                    { from: 'AI比赛分析', to: 'AI体育客服', content: '客服需求' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -38421,7 +38578,56 @@
             'AI情绪疏导': { icon: '💭', color: '#3b82f6', role: 'AI情绪疏导' },
             'AI认知疗法': { icon: '🎯', color: '#22c55e', role: 'AI认知疗法' },
             'AI危机干预': { icon: '🚨', color: '#f59e0b', role: 'AI危机干预' },
-            'AI心理健康': { icon: '🌿', color: '#14b8a6', role: 'AI心理健康' }
+            'AI心理健康': { icon: '🌿', color: '#14b8a6', role: 'AI心理健康' },
+            // Cycle 476 新增角色 - 智慧农业系统
+            'AI农业总监': { icon: '🌾', color: '#84cc16', role: 'AI农业总监' },
+            'AI种植管理': { icon: '🌱', color: '#22c55e', role: 'AI种植管理' },
+            'AI养殖管理': { icon: '🐄', color: '#f59e0b', role: 'AI养殖管理' },
+            'AI收获预测': { icon: '📊', color: '#3b82f6', role: 'AI收获预测' },
+            'AI病虫害防治': { icon: '🐛', color: '#ec4899', role: 'AI病虫害防治' },
+            'AI农业客服': { icon: '📞', color: '#8b5cf6', role: 'AI农业客服' },
+            // Cycle 476 新增角色 - 智慧教育系统
+            'AI教育总监': { icon: '📚', color: '#3b82f6', role: 'AI教育总监' },
+            'AI教学设计': { icon: '📝', color: '#22c55e', role: 'AI教学设计' },
+            'AI学习评估': { icon: '📋', color: '#f59e0b', role: 'AI学习评估' },
+            'AI个性化辅导': { icon: '🎯', color: '#ec4899', role: 'AI个性化辅导' },
+            'AI课程管理': { icon: '🏫', color: '#8b5cf6', role: 'AI课程管理' },
+            'AI教育客服': { icon: '💬', color: '#06b6d4', role: 'AI教育客服' },
+            // Cycle 476 新增角色 - 智慧医疗系统
+            'AI医疗总监': { icon: '🏥', color: '#ef4444', role: 'AI医疗总监' },
+            'AI诊断辅助': { icon: '🔬', color: '#3b82f6', role: 'AI诊断辅助' },
+            'AI治疗方案': { icon: '💊', color: '#22c55e', role: 'AI治疗方案' },
+            'AI护理管理': { icon: '👩‍⚕️', color: '#ec4899', role: 'AI护理管理' },
+            'AI药品管理': { icon: '💉', color: '#8b5cf6', role: 'AI药品管理' },
+            'AI医疗客服': { icon: '📞', color: '#06b6d4', role: 'AI医疗客服' },
+            // Cycle 476 新增角色 - 智慧金融系统
+            'AI金融总监': { icon: '💳', color: '#f59e0b', role: 'AI金融总监' },
+            'AI投资管理': { icon: '📈', color: '#22c55e', role: 'AI投资管理' },
+            'AI风险控制': { icon: '🛡️', color: '#dc2626', role: 'AI风险控制' },
+            'AI资产管理': { icon: '💰', color: '#84cc16', role: 'AI资产管理' },
+            'AI信用评估': { icon: '📊', color: '#3b82f6', role: 'AI信用评估' },
+            'AI金融客服': { icon: '💬', color: '#8b5cf6', role: 'AI金融客服' },
+            // Cycle 476 新增角色 - 智慧旅游系统
+            'AI旅游总监': { icon: '✈️', color: '#0ea5e9', role: 'AI旅游总监' },
+            'AI行程规划': { icon: '🗺️', color: '#22c55e', role: 'AI行程规划' },
+            'AI酒店预订': { icon: '🏨', color: '#f59e0b', role: 'AI酒店预订' },
+            'AI景点推荐': { icon: '🏞️', color: '#3b82f6', role: 'AI景点推荐' },
+            'AI导游服务': { icon: '🎤', color: '#ec4899', role: 'AI导游服务' },
+            'AI旅游客服': { icon: '📞', color: '#8b5cf6', role: 'AI旅游客服' },
+            // Cycle 476 新增角色 - 智慧娱乐系统
+            'AI娱乐总监': { icon: '🎭', color: '#f43f5e', role: 'AI娱乐总监' },
+            'AI内容创作': { icon: '🎬', color: '#22c55e', role: 'AI内容创作' },
+            'AI演出策划': { icon: '🎪', color: '#f59e0b', role: 'AI演出策划' },
+            'AI观众分析': { icon: '👥', color: '#3b82f6', role: 'AI观众分析' },
+            'AI版权管理': { icon: '©️', color: '#ec4899', role: 'AI版权管理' },
+            'AI娱乐客服': { icon: '💬', color: '#8b5cf6', role: 'AI娱乐客服' },
+            // Cycle 476 新增角色 - 智慧体育系统
+            'AI体育总监': { icon: '⚽', color: '#22c55e', role: 'AI体育总监' },
+            'AI训练管理': { icon: '🏋️', color: '#f59e0b', role: 'AI训练管理' },
+            'AI比赛分析': { icon: '📊', color: '#3b82f6', role: 'AI比赛分析' },
+            'AI健康管理': { icon: '💪', color: '#ec4899', role: 'AI健康管理' },
+            'AI赛事运营': { icon: '🏆', color: '#8b5cf6', role: 'AI赛事运营' },
+            'AI体育客服': { icon: '📞', color: '#06b6d4', role: 'AI体育客服' }
         };
 
         // 拖拽相关变量
