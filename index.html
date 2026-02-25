@@ -34866,8 +34866,166 @@
             }
         ];
 
+        // Cycle 499 新增模板
+        const cycle499Templates = [
+            {
+                id: 'ai-blockchain',
+                name: 'AI智慧区块链系统',
+                icon: '🔗',
+                desc: '智慧区块链，包括分布式账本、智能合约、数字资产等',
+                agents: ['AI Blockchain Director', 'AI Distributed Ledger', 'AI Smart Contract', 'AI Digital Asset', 'AI Blockchain AI', 'AI Blockchain Analytics'],
+                positions: [
+                    { role: 'AI Blockchain Director', x: 400, y: 30 },
+                    { role: 'AI Distributed Ledger', x: 150, y: 150 },
+                    { role: 'AI Smart Contract', x: 650, y: 150 },
+                    { role: 'AI Digital Asset', x: 150, y: 300 },
+                    { role: 'AI Blockchain AI', x: 400, y: 350 },
+                    { role: 'AI Blockchain Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Blockchain Director', to: 'AI Distributed Ledger', content: '分布式账本' },
+                    { from: 'AI Blockchain Director', to: 'AI Blockchain Analytics', content: '区块链分析' },
+                    { from: 'AI Distributed Ledger', to: 'AI Smart Contract', content: '智能合约' },
+                    { from: 'AI Smart Contract', to: 'AI Digital Asset', content: '数字资产' },
+                    { from: 'AI Digital Asset', to: 'AI Blockchain AI', content: '区块链AI' }
+                ]
+            },
+            {
+                id: 'ai-vr-ar',
+                name: 'AI智慧虚拟现实系统',
+                icon: '🥽',
+                desc: '智慧虚拟现实，包括VR/AR内容生成、沉浸式体验、虚拟社交等',
+                agents: ['AI VRAR Director', 'AI VR Content', 'AI AR Overlay', 'AI Immersive Exp', 'AI VRAR AI', 'AI VRAR Analytics'],
+                positions: [
+                    { role: 'AI VRAR Director', x: 400, y: 30 },
+                    { role: 'AI VR Content', x: 150, y: 150 },
+                    { role: 'AI AR Overlay', x: 650, y: 150 },
+                    { role: 'AI Immersive Exp', x: 150, y: 300 },
+                    { role: 'AI VRAR AI', x: 400, y: 350 },
+                    { role: 'AI VRAR Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI VRAR Director', to: 'AI VR Content', content: 'VR内容生成' },
+                    { from: 'AI VRAR Director', to: 'AI VRAR Analytics', content: 'VR/AR分析' },
+                    { from: 'AI VR Content', to: 'AI AR Overlay', content: 'AR叠加' },
+                    { from: 'AI AR Overlay', to: 'AI Immersive Exp', content: '沉浸体验' },
+                    { from: 'AI Immersive Exp', to: 'AI VRAR AI', content: 'VR/AR AI' }
+                ]
+            },
+            {
+                id: 'ai-cybersecurity',
+                name: 'AI智慧网络安全系统',
+                icon: '🛡️',
+                desc: '智慧网络安全，包括威胁检测、漏洞扫描、安全审计等',
+                agents: ['AI CyberSec Director', 'AI Threat Detect', 'AI Vuln Scan', 'AI Security Audit', 'AI CyberSec AI', 'AI CyberSec Analytics'],
+                positions: [
+                    { role: 'AI CyberSec Director', x: 400, y: 30 },
+                    { role: 'AI Threat Detect', x: 150, y: 150 },
+                    { role: 'AI Vuln Scan', x: 650, y: 150 },
+                    { role: 'AI Security Audit', x: 150, y: 300 },
+                    { role: 'AI CyberSec AI', x: 400, y: 350 },
+                    { role: 'AI CyberSec Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI CyberSec Director', to: 'AI Threat Detect', content: '威胁检测' },
+                    { from: 'AI CyberSec Director', to: 'AI CyberSec Analytics', content: '安全分析' },
+                    { from: 'AI Threat Detect', to: 'AI Vuln Scan', content: '漏洞扫描' },
+                    { from: 'AI Vuln Scan', to: 'AI Security Audit', content: '安全审计' },
+                    { from: 'AI Security Audit', to: 'AI CyberSec AI', content: '网络安全AI' }
+                ]
+            },
+            {
+                id: 'ai-smart-mfg',
+                name: 'AI智慧智能制造系统',
+                icon: '🏭',
+                desc: '智慧智能制造，包括工业自动化、预测性维护、柔性生产等',
+                agents: ['AI SmartMfg Director', 'AI Indus Automation', 'AI Pred Maint', 'AI Flexible Prod', 'AI SmartMfg AI', 'AI SmartMfg Analytics'],
+                positions: [
+                    { role: 'AI SmartMfg Director', x: 400, y: 30 },
+                    { role: 'AI Indus Automation', x: 150, y: 150 },
+                    { role: 'AI Pred Maint', x: 650, y: 150 },
+                    { role: 'AI Flexible Prod', x: 150, y: 300 },
+                    { role: 'AI SmartMfg AI', x: 400, y: 350 },
+                    { role: 'AI SmartMfg Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SmartMfg Director', to: 'AI Indus Automation', content: '工业自动化' },
+                    { from: 'AI SmartMfg Director', to: 'AI SmartMfg Analytics', content: '制造分析' },
+                    { from: 'AI Indus Automation', to: 'AI Pred Maint', content: '预测性维护' },
+                    { from: 'AI Pred Maint', to: 'AI Flexible Prod', content: '柔性生产' },
+                    { from: 'AI Flexible Prod', to: 'AI SmartMfg AI', content: '智能制造AI' }
+                ]
+            },
+            {
+                id: 'ai-biopharma',
+                name: 'AI智慧生物制药系统',
+                icon: '💊',
+                desc: '智慧生物制药，包括药物研发、临床试验、药品生产等',
+                agents: ['AI BioPharma Director', 'AI Drug Discovery', 'AI Clin Trial', 'AI Drug Mfg', 'AI BioPharma AI', 'AI BioPharma Analytics'],
+                positions: [
+                    { role: 'AI BioPharma Director', x: 400, y: 30 },
+                    { role: 'AI Drug Discovery', x: 150, y: 150 },
+                    { role: 'AI Clin Trial', x: 650, y: 150 },
+                    { role: 'AI Drug Mfg', x: 150, y: 300 },
+                    { role: 'AI BioPharma AI', x: 400, y: 350 },
+                    { role: 'AI BioPharma Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI BioPharma Director', to: 'AI Drug Discovery', content: '药物研发' },
+                    { from: 'AI BioPharma Director', to: 'AI BioPharma Analytics', content: '制药分析' },
+                    { from: 'AI Drug Discovery', to: 'AI Clin Trial', content: '临床试验' },
+                    { from: 'AI Clin Trial', to: 'AI Drug Mfg', content: '药品生产' },
+                    { from: 'AI Drug Mfg', to: 'AI BioPharma AI', content: '生物制药AI' }
+                ]
+            },
+            {
+                id: 'ai-new-energy',
+                name: 'AI智慧新能源系统',
+                icon: '⚡',
+                desc: '智慧新能源，包括太阳能、风能、储能管理、能源互联网等',
+                agents: ['AI NewEnergy Director', 'AI Solar Power', 'AI Wind Power', 'AI Energy Storage', 'AI NewEnergy AI', 'AI NewEnergy Analytics'],
+                positions: [
+                    { role: 'AI NewEnergy Director', x: 400, y: 30 },
+                    { role: 'AI Solar Power', x: 150, y: 150 },
+                    { role: 'AI Wind Power', x: 650, y: 150 },
+                    { role: 'AI Energy Storage', x: 150, y: 300 },
+                    { role: 'AI NewEnergy AI', x: 400, y: 350 },
+                    { role: 'AI NewEnergy Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI NewEnergy Director', to: 'AI Solar Power', content: '太阳能' },
+                    { from: 'AI NewEnergy Director', to: 'AI NewEnergy Analytics', content: '新能源分析' },
+                    { from: 'AI Solar Power', to: 'AI Wind Power', content: '风能' },
+                    { from: 'AI Wind Power', to: 'AI Energy Storage', content: '储能管理' },
+                    { from: 'AI Energy Storage', to: 'AI NewEnergy AI', content: '新能源AI' }
+                ]
+            },
+            {
+                id: 'ai-space-explore',
+                name: 'AI智慧太空探索系统',
+                icon: '🚀',
+                desc: '智慧太空探索，包括卫星控制、轨道设计、深空探测、太空资源等',
+                agents: ['AI SpaceExplore Director', 'AI Satellite Ctrl', 'AI Orbit Design', 'AI Deep Space', 'AI SpaceExplore AI', 'AI SpaceExplore Analytics'],
+                positions: [
+                    { role: 'AI SpaceExplore Director', x: 400, y: 30 },
+                    { role: 'AI Satellite Ctrl', x: 150, y: 150 },
+                    { role: 'AI Orbit Design', x: 650, y: 150 },
+                    { role: 'AI Deep Space', x: 150, y: 300 },
+                    { role: 'AI SpaceExplore AI', x: 400, y: 350 },
+                    { role: 'AI SpaceExplore Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SpaceExplore Director', to: 'AI Satellite Ctrl', content: '卫星控制' },
+                    { from: 'AI SpaceExplore Director', to: 'AI SpaceExplore Analytics', content: '太空探索分析' },
+                    { from: 'AI Satellite Ctrl', to: 'AI Orbit Design', content: '轨道设计' },
+                    { from: 'AI Orbit Design', to: 'AI Deep Space', content: '深空探测' },
+                    { from: 'AI Deep Space', to: 'AI SpaceExplore AI', content: '太空探索AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -41981,7 +42139,56 @@
             'AI PV Materials': { icon: '☀️', color: '#3b82f6', role: 'AI光伏材料' },
             'AI Energy Storage': { icon: '🔋', color: '#f59e0b', role: 'AI储能材料' },
             'AI AdvMaterials AI': { icon: '🤖', color: '#8b5cf6', role: 'AI先进材料AI' },
-            'AI AdvMaterials Analytics': { icon: '📊', color: '#06b6d4', role: 'AI先进材料分析' }
+            'AI AdvMaterials Analytics': { icon: '📊', color: '#06b6d4', role: 'AI先进材料分析' },
+            // Cycle 499 - AI智慧区块链系统
+            'AI Blockchain Director': { icon: '🔗', color: '#8b5cf6', role: 'AI区块链总监' },
+            'AI Distributed Ledger': { icon: '📒', color: '#22c55e', role: 'AI分布式账本' },
+            'AI Smart Contract': { icon: '📝', color: '#3b82f6', role: 'AI智能合约' },
+            'AI Digital Asset': { icon: '💰', color: '#f59e0b', role: 'AI数字资产' },
+            'AI Blockchain AI': { icon: '🤖', color: '#8b5cf6', role: 'AI区块链AI' },
+            'AI Blockchain Analytics': { icon: '📊', color: '#06b6d4', role: 'AI区块链分析' },
+            // Cycle 499 - AI智慧虚拟现实系统
+            'AI VRAR Director': { icon: '🥽', color: '#8b5cf6', role: 'AI虚拟现实总监' },
+            'AI VR Content': { icon: '🎮', color: '#22c55e', role: 'AI VR内容' },
+            'AI AR Overlay': { icon: '🔍', color: '#3b82f6', role: 'AI AR叠加' },
+            'AI Immersive Exp': { icon: '🌟', color: '#f59e0b', role: 'AI沉浸体验' },
+            'AI VRAR AI': { icon: '🤖', color: '#8b5cf6', role: 'AI虚拟现实AI' },
+            'AI VRAR Analytics': { icon: '📊', color: '#06b6d4', role: 'AI虚拟现实分析' },
+            // Cycle 499 - AI智慧网络安全系统
+            'AI CyberSec Director': { icon: '🛡️', color: '#8b5cf6', role: 'AI网络安全总监' },
+            'AI Threat Detect': { icon: '🔍', color: '#22c55e', role: 'AI威胁检测' },
+            'AI Vuln Scan': { icon: '🔎', color: '#3b82f6', role: 'AI漏洞扫描' },
+            'AI Security Audit': { icon: '📋', color: '#f59e0b', role: 'AI安全审计' },
+            'AI CyberSec AI': { icon: '🤖', color: '#8b5cf6', role: 'AI网络安全AI' },
+            'AI CyberSec Analytics': { icon: '📊', color: '#06b6d4', role: 'AI网络安全分析' },
+            // Cycle 499 - AI智慧智能制造系统
+            'AI SmartMfg Director': { icon: '🏭', color: '#8b5cf6', role: 'AI智能制造总监' },
+            'AI Indus Automation': { icon: '⚙️', color: '#22c55e', role: 'AI工业自动化' },
+            'AI Pred Maint': { icon: '🔧', color: '#3b82f6', role: 'AI预测性维护' },
+            'AI Flexible Prod': { icon: '🔄', color: '#f59e0b', role: 'AI柔性生产' },
+            'AI SmartMfg AI': { icon: '🤖', color: '#8b5cf6', role: 'AI智能制造AI' },
+            'AI SmartMfg Analytics': { icon: '📊', color: '#06b6d4', role: 'AI智能制造分析' },
+            // Cycle 499 - AI智慧生物制药系统
+            'AI BioPharma Director': { icon: '💊', color: '#8b5cf6', role: 'AI生物制药总监' },
+            'AI Drug Discovery': { icon: '🔬', color: '#22c55e', role: 'AI药物研发' },
+            'AI Clin Trial': { icon: '🏥', color: '#3b82f6', role: 'AI临床试验' },
+            'AI Drug Mfg': { icon: '⚗️', color: '#f59e0b', role: 'AI药品生产' },
+            'AI BioPharma AI': { icon: '🤖', color: '#8b5cf6', role: 'AI生物制药AI' },
+            'AI BioPharma Analytics': { icon: '📊', color: '#06b6d4', role: 'AI生物制药分析' },
+            // Cycle 499 - AI智慧新能源系统
+            'AI NewEnergy Director': { icon: '⚡', color: '#8b5cf6', role: 'AI新能源总监' },
+            'AI Solar Power': { icon: '☀️', color: '#22c55e', role: 'AI太阳能' },
+            'AI Wind Power': { icon: '🌬️', color: '#3b82f6', role: 'AI风能' },
+            'AI Energy Storage': { icon: '🔋', color: '#f59e0b', role: 'AI储能管理' },
+            'AI NewEnergy AI': { icon: '🤖', color: '#8b5cf6', role: 'AI新能源AI' },
+            'AI NewEnergy Analytics': { icon: '📊', color: '#06b6d4', role: 'AI新能源分析' },
+            // Cycle 499 - AI智慧太空探索系统
+            'AI SpaceExplore Director': { icon: '🚀', color: '#8b5cf6', role: 'AI太空探索总监' },
+            'AI Satellite Ctrl': { icon: '🛰️', color: '#22c55e', role: 'AI卫星控制' },
+            'AI Orbit Design': { icon: '🌐', color: '#3b82f6', role: 'AI轨道设计' },
+            'AI Deep Space': { icon: '🌌', color: '#f59e0b', role: 'AI深空探测' },
+            'AI SpaceExplore AI': { icon: '🤖', color: '#8b5cf6', role: 'AI太空探索AI' },
+            'AI SpaceExplore Analytics': { icon: '📊', color: '#06b6d4', role: 'AI太空探索分析' }
         };
 
         // 拖拽相关变量
