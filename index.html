@@ -30980,6 +30980,170 @@
             }
         ];
 
+        const cycle474Templates = [
+            // 智慧通讯系统
+            {
+                id: 'ai-smart-communications',
+                name: 'AI智慧通讯系统',
+                icon: '📡',
+                desc: '智能化通讯服务管理体系，实现网络运维、客户服务的全面智能化',
+                agents: ['AI通讯总监', 'AI网络运维', 'AI客户服务', 'AI业务拓展', 'AI技术支持', 'AI数据分析'],
+                positions: [
+                    { role: 'AI通讯总监', x: 400, y: 30 },
+                    { role: 'AI网络运维', x: 150, y: 150 },
+                    { role: 'AI客户服务', x: 650, y: 150 },
+                    { role: 'AI业务拓展', x: 150, y: 300 },
+                    { role: 'AI技术支持', x: 650, y: 300 },
+                    { role: 'AI数据分析', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI通讯总监', to: 'AI网络运维', content: '网络运维需求' },
+                    { from: 'AI通讯总监', to: 'AI客户服务', content: '客户服务需求' },
+                    { from: 'AI通讯总监', to: 'AI业务拓展', content: '业务拓展计划' },
+                    { from: 'AI网络运维', to: 'AI技术支持', content: '技术支持需求' },
+                    { from: 'AI客户服务', to: 'AI数据分析', content: '服务数据分析' }
+                ]
+            },
+            // 智慧航天系统
+            {
+                id: 'ai-smart-aerospace',
+                name: 'AI智慧航天系统',
+                icon: '🚀',
+                desc: '智能化航天技术管理体系，实现卫星发射、轨道管理的全面智能化',
+                agents: ['AI航天总监', 'AI卫星工程师', 'AI发射控制', 'AI轨道工程师', 'AI测控通信', 'AI航天安全'],
+                positions: [
+                    { role: 'AI航天总监', x: 400, y: 30 },
+                    { role: 'AI卫星工程师', x: 150, y: 150 },
+                    { role: 'AI发射控制', x: 650, y: 150 },
+                    { role: 'AI轨道工程师', x: 150, y: 300 },
+                    { role: 'AI测控通信', x: 650, y: 300 },
+                    { role: 'AI航天安全', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI航天总监', to: 'AI卫星工程师', content: '卫星设计需求' },
+                    { from: 'AI航天总监', to: 'AI发射控制', content: '发射任务计划' },
+                    { from: 'AI卫星工程师', to: 'AI轨道工程师', content: '轨道设计要求' },
+                    { from: 'AI发射控制', to: 'AI测控通信', content: '测控需求' },
+                    { from: 'AI测控通信', to: 'AI航天安全', content: '安全监控数据' }
+                ]
+            },
+            // 智慧海洋系统
+            {
+                id: 'ai-smart-ocean',
+                name: 'AI智慧海洋系统',
+                icon: '🌊',
+                desc: '智能化海洋资源管理体系，实现海洋开发、海洋保护的全面智能化',
+                agents: ['AI海洋总监', 'AI海洋探测', 'AI海洋工程', 'AI海洋环保', 'AI航运管理', 'AI海洋科研'],
+                positions: [
+                    { role: 'AI海洋总监', x: 400, y: 30 },
+                    { role: 'AI海洋探测', x: 150, y: 150 },
+                    { role: 'AI海洋工程', x: 650, y: 150 },
+                    { role: 'AI海洋环保', x: 150, y: 300 },
+                    { role: 'AI航运管理', x: 650, y: 300 },
+                    { role: 'AI海洋科研', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI海洋总监', to: 'AI海洋探测', content: '探测任务需求' },
+                    { from: 'AI海洋总监', to: 'AI海洋工程', content: '工程计划需求' },
+                    { from: 'AI海洋探测', to: 'AI海洋科研', content: '探测数据研究' },
+                    { from: 'AI海洋工程', to: 'AI海洋环保', content: '环保要求' },
+                    { from: 'AI航运管理', to: 'AI海洋总监', content: '航运调度报告' }
+                ]
+            },
+            // 智慧矿业系统
+            {
+                id: 'ai-smart-mining',
+                name: 'AI智慧矿业系统',
+                icon: '⛏️',
+                desc: '智能化矿业生产管理体系，实现开采、安全、管理的全面智能化',
+                agents: ['AI矿业总监', 'AI地质勘探', 'AI开采工程师', 'AI安全管理', 'AI选矿工程师', 'AI矿山环保'],
+                positions: [
+                    { role: 'AI矿业总监', x: 400, y: 30 },
+                    { role: 'AI地质勘探', x: 150, y: 150 },
+                    { role: 'AI开采工程师', x: 650, y: 150 },
+                    { role: 'AI安全管理', x: 150, y: 300 },
+                    { role: 'AI选矿工程师', x: 650, y: 300 },
+                    { role: 'AI矿山环保', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI矿业总监', to: 'AI地质勘探', content: '勘探任务需求' },
+                    { from: 'AI矿业总监', to: 'AI开采工程师', content: '开采计划需求' },
+                    { from: 'AI地质勘探', to: 'AI选矿工程师', content: '矿石分析数据' },
+                    { from: 'AI开采工程师', to: 'AI安全管理', content: '安全监控需求' },
+                    { from: 'AI安全管理', to: 'AI矿山环保', content: '环保监控数据' }
+                ]
+            },
+            // 智慧化工系统
+            {
+                id: 'ai-smart-chemical',
+                name: 'AI智慧化工系统',
+                icon: '⚗️',
+                desc: '智能化化工生产管理体系，实现工艺控制、安全环保的全面智能化',
+                agents: ['AI化工总监', 'AI工艺工程', 'AI生产控制', 'AI安全管理', 'AI质量检测', 'AI环保监测'],
+                positions: [
+                    { role: 'AI化工总监', x: 400, y: 30 },
+                    { role: 'AI工艺工程', x: 150, y: 150 },
+                    { role: 'AI生产控制', x: 650, y: 150 },
+                    { role: 'AI安全管理', x: 150, y: 300 },
+                    { role: 'AI质量检测', x: 650, y: 300 },
+                    { role: 'AI环保监测', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI化工总监', to: 'AI工艺工程', content: '工艺设计需求' },
+                    { from: 'AI化工总监', to: 'AI生产控制', content: '生产计划需求' },
+                    { from: 'AI工艺工程', to: 'AI质量检测', content: '质量标准要求' },
+                    { from: 'AI生产控制', to: 'AI安全管理', content: '安全监控需求' },
+                    { from: 'AI安全管理', to: 'AI环保监测', content: '环保监测需求' }
+                ]
+            },
+            // 智慧纺织系统
+            {
+                id: 'ai-smart-textile',
+                name: 'AI智慧纺织系统',
+                icon: '🧵',
+                desc: '智能化纺织生产管理体系，实现设计、生产、质量的全面智能化',
+                agents: ['AI纺织总监', 'AI设计创作', 'AI生产管理', 'AI质量控制', 'AI供应链管理', 'AI客户服务'],
+                positions: [
+                    { role: 'AI纺织总监', x: 400, y: 30 },
+                    { role: 'AI设计创作', x: 150, y: 150 },
+                    { role: 'AI生产管理', x: 650, y: 150 },
+                    { role: 'AI质量控制', x: 150, y: 300 },
+                    { role: 'AI供应链管理', x: 650, y: 300 },
+                    { role: 'AI客户服务', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI纺织总监', to: 'AI设计创作', content: '设计需求' },
+                    { from: 'AI纺织总监', to: 'AI生产管理', content: '生产计划' },
+                    { from: 'AI设计创作', to: 'AI质量控制', content: '质量标准' },
+                    { from: 'AI生产管理', to: 'AI供应链管理', content: '供应链需求' },
+                    { from: 'AI质量控制', to: 'AI客户服务', content: '客户服务反馈' }
+                ]
+            },
+            // 智慧印刷系统
+            {
+                id: 'ai-smart-printing',
+                name: 'AI智慧印刷系统',
+                icon: '🖨️',
+                desc: '智能化印刷服务体系，实现设计、生产、交付的全面智能化',
+                agents: ['AI印刷总监', 'AI印前设计', 'AI生产排程', 'AI色彩管理', 'AI质量检测', 'AI物流配送'],
+                positions: [
+                    { role: 'AI印刷总监', x: 400, y: 30 },
+                    { role: 'AI印前设计', x: 150, y: 150 },
+                    { role: 'AI生产排程', x: 650, y: 150 },
+                    { role: 'AI色彩管理', x: 150, y: 300 },
+                    { role: 'AI质量检测', x: 650, y: 300 },
+                    { role: 'AI物流配送', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI印刷总监', to: 'AI印前设计', content: '设计需求' },
+                    { from: 'AI印刷总监', to: 'AI生产排程', content: '生产计划' },
+                    { from: 'AI印前设计', to: 'AI色彩管理', content: '色彩要求' },
+                    { from: 'AI生产排程', to: 'AI质量检测', content: '质量标准' },
+                    { from: 'AI质量检测', to: 'AI物流配送', content: '配送需求' }
+                ]
+            }
+        ];
+
         const cycle473Templates = [
             {
                 id: 'ai-elderly-care-service',
@@ -31138,7 +31302,7 @@
         ];
 
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -37920,6 +38084,32 @@
             'AI色彩管理': { icon: '🎨', color: '#f59e0b', role: 'AI色彩管理' },
             'AI质量检测': { icon: '🔍', color: '#ec4899', role: 'AI质量检测' },
             'AI物流配送': { icon: '🚚', color: '#8b5cf6', role: 'AI物流配送' },
+            // Cycle 474 新增角色 - 智慧通讯系统
+            'AI网络运维': { icon: '🌐', color: '#14b8a6', role: 'AI网络运维' },
+            'AI客户服务': { icon: '🎧', color: '#f43f5e', role: 'AI客户服务' },
+            'AI业务拓展': { icon: '📈', color: '#0d9488', role: 'AI业务拓展' },
+            'AI技术支持': { icon: '🔧', color: '#0891b2', role: 'AI技术支持' },
+            // Cycle 474 新增角色 - 智慧航天系统
+            'AI卫星工程师': { icon: '🛰️', color: '#f97316', role: 'AI卫星工程师' },
+            'AI发射控制': { icon: '🎯', color: '#22c55e', role: 'AI发射控制' },
+            'AI轨道工程师': { icon: '🛸', color: '#a855f7', role: 'AI轨道工程师' },
+            'AI测控通信': { icon: '📡', color: '#3b82f6', role: 'AI测控通信' },
+            'AI航天安全': { icon: '🛡️', color: '#dc2626', role: 'AI航天安全' },
+            // Cycle 474 新增角色 - 智慧海洋系统
+            'AI海洋探测': { icon: '🔭', color: '#06b6d4', role: 'AI海洋探测' },
+            'AI海洋工程': { icon: '🏗️', color: '#0ea5e9', role: 'AI海洋工程' },
+            'AI海洋环保': { icon: '🌿', color: '#22c55e', role: 'AI海洋环保' },
+            'AI航运管理': { icon: '🚢', color: '#3b82f6', role: 'AI航运管理' },
+            'AI海洋科研': { icon: '🔬', color: '#8b5cf6', role: 'AI海洋科研' },
+            // Cycle 474 新增角色 - 智慧矿业系统
+            'AI地质勘探': { icon: '🗺️', color: '#f59e0b', role: 'AI地质勘探' },
+            'AI开采工程师': { icon: '⛏️', color: '#ec4899', role: 'AI开采工程师' },
+            'AI选矿工程师': { icon: '💎', color: '#a855f7', role: 'AI选矿工程师' },
+            'AI矿山环保': { icon: '🌱', color: '#22c55e', role: 'AI矿山环保' },
+            // Cycle 474 新增角色 - 智慧化工系统
+            'AI工艺工程': { icon: '📐', color: '#6366f1', role: 'AI工艺工程' },
+            // Cycle 474 新增角色 - 智慧纺织系统
+            'AI供应链管理': { icon: '🔗', color: '#f97316', role: 'AI供应链管理' },
             // Cycle 473 新增角色 - 7个行业服务系统
             // AI智慧养老服务系统
             'AI养老管家': { icon: '👴', color: '#f97316', role: 'AI养老管家' },
