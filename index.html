@@ -34708,8 +34708,166 @@
             }
         ];
 
+        // Cycle 498 新增模板
+        const cycle498Templates = [
+            {
+                id: 'ai-quantum-comm',
+                name: 'AI智慧量子通信系统',
+                icon: '🔐',
+                desc: '智慧量子通信，包括量子密钥分发、量子隐形传态、量子网络等',
+                agents: ['AI QuantumComm Director', 'AI QKD System', 'AI Quantum Teleport', 'AI Quantum Network', 'AI QuantumComm AI', 'AI QuantumComm Analytics'],
+                positions: [
+                    { role: 'AI QuantumComm Director', x: 400, y: 30 },
+                    { role: 'AI QKD System', x: 150, y: 150 },
+                    { role: 'AI Quantum Teleport', x: 650, y: 150 },
+                    { role: 'AI Quantum Network', x: 150, y: 300 },
+                    { role: 'AI QuantumComm AI', x: 400, y: 350 },
+                    { role: 'AI QuantumComm Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI QuantumComm Director', to: 'AI QKD System', content: '量子密钥分发' },
+                    { from: 'AI QuantumComm Director', to: 'AI QuantumComm Analytics', content: '量子通信分析' },
+                    { from: 'AI QKD System', to: 'AI Quantum Teleport', content: '量子隐形传态' },
+                    { from: 'AI Quantum Teleport', to: 'AI Quantum Network', content: '量子网络' },
+                    { from: 'AI Quantum Network', to: 'AI QuantumComm AI', content: '量子通信AI' }
+                ]
+            },
+            {
+                id: 'ai-gene-editing',
+                name: 'AI智慧基因编辑系统',
+                icon: '🧬',
+                desc: '智慧基因编辑，包括CRISPR设计、基因治疗、基因合成等',
+                agents: ['AI GeneEdit Director', 'AI CRISPR Design', 'AI Gene Therapy', 'AI Gene Synthesis', 'AI GeneEdit AI', 'AI GeneEdit Analytics'],
+                positions: [
+                    { role: 'AI GeneEdit Director', x: 400, y: 30 },
+                    { role: 'AI CRISPR Design', x: 150, y: 150 },
+                    { role: 'AI Gene Therapy', x: 650, y: 150 },
+                    { role: 'AI Gene Synthesis', x: 150, y: 300 },
+                    { role: 'AI GeneEdit AI', x: 400, y: 350 },
+                    { role: 'AI GeneEdit Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI GeneEdit Director', to: 'AI CRISPR Design', content: 'CRISPR设计' },
+                    { from: 'AI GeneEdit Director', to: 'AI GeneEdit Analytics', content: '基因编辑分析' },
+                    { from: 'AI CRISPR Design', to: 'AI Gene Therapy', content: '基因治疗' },
+                    { from: 'AI Gene Therapy', to: 'AI Gene Synthesis', content: '基因合成' },
+                    { from: 'AI Gene Synthesis', to: 'AI GeneEdit AI', content: '基因编辑AI' }
+                ]
+            },
+            {
+                id: 'ai-autonomous-driving',
+                name: 'AI智慧自动驾驶系统',
+                icon: '🚗',
+                desc: '智慧自动驾驶，包括感知算法、路径规划、车辆控制等',
+                agents: ['AI AutoDrive Director', 'AI Perception', 'AI Path Planning', 'AI Vehicle Ctrl', 'AI AutoDrive AI', 'AI AutoDrive Analytics'],
+                positions: [
+                    { role: 'AI AutoDrive Director', x: 400, y: 30 },
+                    { role: 'AI Perception', x: 150, y: 150 },
+                    { role: 'AI Path Planning', x: 650, y: 150 },
+                    { role: 'AI Vehicle Ctrl', x: 150, y: 300 },
+                    { role: 'AI AutoDrive AI', x: 400, y: 350 },
+                    { role: 'AI AutoDrive Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI AutoDrive Director', to: 'AI Perception', content: '感知算法' },
+                    { from: 'AI AutoDrive Director', to: 'AI AutoDrive Analytics', content: '自动驾驶分析' },
+                    { from: 'AI Perception', to: 'AI Path Planning', content: '路径规划' },
+                    { from: 'AI Path Planning', to: 'AI Vehicle Ctrl', content: '车辆控制' },
+                    { from: 'AI Vehicle Ctrl', to: 'AI AutoDrive AI', content: '自动驾驶AI' }
+                ]
+            },
+            {
+                id: 'ai-smart-city',
+                name: 'AI智慧智慧城市系统',
+                icon: '🏙️',
+                desc: '智慧城市，包括交通管理、能源优化、公共安全、智慧政务等',
+                agents: ['AI SmartCity Director', 'AI Traffic Mgmt', 'AI Energy Optim', 'AI Public Safety', 'AI SmartCity AI', 'AI SmartCity Analytics'],
+                positions: [
+                    { role: 'AI SmartCity Director', x: 400, y: 30 },
+                    { role: 'AI Traffic Mgmt', x: 150, y: 150 },
+                    { role: 'AI Energy Optim', x: 650, y: 150 },
+                    { role: 'AI Public Safety', x: 150, y: 300 },
+                    { role: 'AI SmartCity AI', x: 400, y: 350 },
+                    { role: 'AI SmartCity Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SmartCity Director', to: 'AI Traffic Mgmt', content: '交通管理' },
+                    { from: 'AI SmartCity Director', to: 'AI SmartCity Analytics', content: '城市分析' },
+                    { from: 'AI Traffic Mgmt', to: 'AI Energy Optim', content: '能源优化' },
+                    { from: 'AI Energy Optim', to: 'AI Public Safety', content: '公共安全' },
+                    { from: 'AI Public Safety', to: 'AI SmartCity AI', content: '智慧城市AI' }
+                ]
+            },
+            {
+                id: 'ai-aerospace',
+                name: 'AI智慧航空航天系统',
+                icon: '✈️',
+                desc: '智慧航空航天，包括飞行控制、航电系统、适航认证等',
+                agents: ['AI Aerospace Director', 'AI Flight Ctrl', 'AI Avionics', 'AI Airworthiness', 'AI Aerospace AI', 'AI Aerospace Analytics'],
+                positions: [
+                    { role: 'AI Aerospace Director', x: 400, y: 30 },
+                    { role: 'AI Flight Ctrl', x: 150, y: 150 },
+                    { role: 'AI Avionics', x: 650, y: 150 },
+                    { role: 'AI Airworthiness', x: 150, y: 300 },
+                    { role: 'AI Aerospace AI', x: 400, y: 350 },
+                    { role: 'AI Aerospace Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Aerospace Director', to: 'AI Flight Ctrl', content: '飞行控制' },
+                    { from: 'AI Aerospace Director', to: 'AI Aerospace Analytics', content: '航空航天分析' },
+                    { from: 'AI Flight Ctrl', to: 'AI Avionics', content: '航电系统' },
+                    { from: 'AI Avionics', to: 'AI Airworthiness', content: '适航认证' },
+                    { from: 'AI Airworthiness', to: 'AI Aerospace AI', content: '航空航天AI' }
+                ]
+            },
+            {
+                id: 'ai-marine-economy',
+                name: 'AI智慧海洋经济系统',
+                icon: '⚓',
+                desc: '智慧海洋经济，包括海洋养殖、海洋油气、海洋运输、海洋旅游等',
+                agents: ['AI MarineEco Director', 'AI Marine Farming', 'AI Offshore Oil', 'AI Maritime Trans', 'AI MarineEco AI', 'AI MarineEco Analytics'],
+                positions: [
+                    { role: 'AI MarineEco Director', x: 400, y: 30 },
+                    { role: 'AI Marine Farming', x: 150, y: 150 },
+                    { role: 'AI Offshore Oil', x: 650, y: 150 },
+                    { role: 'AI Maritime Trans', x: 150, y: 300 },
+                    { role: 'AI MarineEco AI', x: 400, y: 350 },
+                    { role: 'AI MarineEco Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI MarineEco Director', to: 'AI Marine Farming', content: '海洋养殖' },
+                    { from: 'AI MarineEco Director', to: 'AI MarineEco Analytics', content: '海洋经济分析' },
+                    { from: 'AI Marine Farming', to: 'AI Offshore Oil', content: '海洋油气' },
+                    { from: 'AI Offshore Oil', to: 'AI Maritime Trans', content: '海洋运输' },
+                    { from: 'AI Maritime Trans', to: 'AI MarineEco AI', content: '海洋经济AI' }
+                ]
+            },
+            {
+                id: 'ai-advanced-materials',
+                name: 'AI智慧先进材料系统',
+                icon: '🔬',
+                desc: '智慧先进材料，包括纳米材料、光伏材料、储能材料、生物材料等',
+                agents: ['AI AdvMaterials Director', 'AI Nano Materials', 'AI PV Materials', 'AI Energy Storage', 'AI AdvMaterials AI', 'AI AdvMaterials Analytics'],
+                positions: [
+                    { role: 'AI AdvMaterials Director', x: 400, y: 30 },
+                    { role: 'AI Nano Materials', x: 150, y: 150 },
+                    { role: 'AI PV Materials', x: 650, y: 150 },
+                    { role: 'AI Energy Storage', x: 150, y: 300 },
+                    { role: 'AI AdvMaterials AI', x: 400, y: 350 },
+                    { role: 'AI AdvMaterials Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI AdvMaterials Director', to: 'AI Nano Materials', content: '纳米材料' },
+                    { from: 'AI AdvMaterials Director', to: 'AI AdvMaterials Analytics', content: '材料分析' },
+                    { from: 'AI Nano Materials', to: 'AI PV Materials', content: '光伏材料' },
+                    { from: 'AI PV Materials', to: 'AI Energy Storage', content: '储能材料' },
+                    { from: 'AI Energy Storage', to: 'AI AdvMaterials AI', content: '先进材料AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -41774,7 +41932,56 @@
             'AI Carbon Trade': { icon: '💹', color: '#3b82f6', role: 'AI碳交易' },
             'AI Carbon Capture': { icon: '🧯', color: '#f59e0b', role: 'AI碳捕集' },
             'AI Carbon AI': { icon: '🤖', color: '#8b5cf6', role: 'AI碳中和AI' },
-            'AI Carbon Analytics': { icon: '📊', color: '#06b6d4', role: 'AI碳分析' }
+            'AI Carbon Analytics': { icon: '📊', color: '#06b6d4', role: 'AI碳分析' },
+            // Cycle 498 - AI智慧量子通信系统
+            'AI QuantumComm Director': { icon: '🔐', color: '#8b5cf6', role: 'AI量子通信总监' },
+            'AI QKD System': { icon: '🔑', color: '#22c55e', role: 'AI量子密钥分发' },
+            'AI Quantum Teleport': { icon: '✨', color: '#3b82f6', role: 'AI量子隐形传态' },
+            'AI Quantum Network': { icon: '🌐', color: '#f59e0b', role: 'AI量子网络' },
+            'AI QuantumComm AI': { icon: '🤖', color: '#8b5cf6', role: 'AI量子通信AI' },
+            'AI QuantumComm Analytics': { icon: '📊', color: '#06b6d4', role: 'AI量子通信分析' },
+            // Cycle 498 - AI智慧基因编辑系统
+            'AI GeneEdit Director': { icon: '🧬', color: '#8b5cf6', role: 'AI基因编辑总监' },
+            'AI CRISPR Design': { icon: '✂️', color: '#22c55e', role: 'AICRISPR设计' },
+            'AI Gene Therapy': { icon: '💊', color: '#3b82f6', role: 'AI基因治疗' },
+            'AI Gene Synthesis': { icon: '🧪', color: '#f59e0b', role: 'AI基因合成' },
+            'AI GeneEdit AI': { icon: '🤖', color: '#8b5cf6', role: 'AI基因编辑AI' },
+            'AI GeneEdit Analytics': { icon: '📊', color: '#06b6d4', role: 'AI基因编辑分析' },
+            // Cycle 498 - AI智慧自动驾驶系统
+            'AI AutoDrive Director': { icon: '🚗', color: '#8b5cf6', role: 'AI自动驾驶总监' },
+            'AI Perception': { icon: '👁️', color: '#22c55e', role: 'AI感知算法' },
+            'AI Path Planning': { icon: '🗺️', color: '#3b82f6', role: 'AI路径规划' },
+            'AI Vehicle Ctrl': { icon: '🎮', color: '#f59e0b', role: 'AI车辆控制' },
+            'AI AutoDrive AI': { icon: '🤖', color: '#8b5cf6', role: 'AI自动驾驶AI' },
+            'AI AutoDrive Analytics': { icon: '📊', color: '#06b6d4', role: 'AI自动驾驶分析' },
+            // Cycle 498 - AI智慧智慧城市系统
+            'AI SmartCity Director': { icon: '🏙️', color: '#8b5cf6', role: 'AI智慧城市总监' },
+            'AI Traffic Mgmt': { icon: '🚦', color: '#22c55e', role: 'AI交通管理' },
+            'AI Energy Optim': { icon: '⚡', color: '#3b82f6', role: 'AI能源优化' },
+            'AI Public Safety': { icon: '🛡️', color: '#f59e0b', role: 'AI公共安全' },
+            'AI SmartCity AI': { icon: '🤖', color: '#8b5cf6', role: 'AI智慧城市AI' },
+            'AI SmartCity Analytics': { icon: '📊', color: '#06b6d4', role: 'AI智慧城市分析' },
+            // Cycle 498 - AI智慧航空航天系统
+            'AI Aerospace Director': { icon: '✈️', color: '#8b5cf6', role: 'AI航空航天总监' },
+            'AI Flight Ctrl': { icon: '🎯', color: '#22c55e', role: 'AI飞行控制' },
+            'AI Avionics': { icon: '📡', color: '#3b82f6', role: 'AI航电系统' },
+            'AI Airworthiness': { icon: '✅', color: '#f59e0b', role: 'AI适航认证' },
+            'AI Aerospace AI': { icon: '🤖', color: '#8b5cf6', role: 'AI航空航天AI' },
+            'AI Aerospace Analytics': { icon: '📊', color: '#06b6d4', role: 'AI航空航天分析' },
+            // Cycle 498 - AI智慧海洋经济系统
+            'AI MarineEco Director': { icon: '⚓', color: '#8b5cf6', role: 'AI海洋经济总监' },
+            'AI Marine Farming': { icon: '🐟', color: '#22c55e', role: 'AI海洋养殖' },
+            'AI Offshore Oil': { icon: '🛢️', color: '#3b82f6', role: 'AI海洋油气' },
+            'AI Maritime Trans': { icon: '🚢', color: '#f59e0b', role: 'AI海洋运输' },
+            'AI MarineEco AI': { icon: '🤖', color: '#8b5cf6', role: 'AI海洋经济AI' },
+            'AI MarineEco Analytics': { icon: '📊', color: '#06b6d4', role: 'AI海洋经济分析' },
+            // Cycle 498 - AI智慧先进材料系统
+            'AI AdvMaterials Director': { icon: '🔬', color: '#8b5cf6', role: 'AI先进材料总监' },
+            'AI Nano Materials': { icon: '⚛️', color: '#22c55e', role: 'AI纳米材料' },
+            'AI PV Materials': { icon: '☀️', color: '#3b82f6', role: 'AI光伏材料' },
+            'AI Energy Storage': { icon: '🔋', color: '#f59e0b', role: 'AI储能材料' },
+            'AI AdvMaterials AI': { icon: '🤖', color: '#8b5cf6', role: 'AI先进材料AI' },
+            'AI AdvMaterials Analytics': { icon: '📊', color: '#06b6d4', role: 'AI先进材料分析' }
         };
 
         // 拖拽相关变量
