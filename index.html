@@ -32973,8 +32973,166 @@
             }
         ];
 
+        // Cycle 487 新增模板
+        const cycle487Templates = [
+            {
+                id: 'ai-chemical-smart',
+                name: 'AI智慧化工系统',
+                icon: '⚗️',
+                desc: '智慧化工管理，包括生产调度、安全监控、工艺优化等',
+                agents: ['AI ChemicalSmart Director', 'AI Production Schedule', 'AI Safety Monitor', 'AI Process Optimize', 'AI Chemical AI', 'AI Chemical Analytics'],
+                positions: [
+                    { role: 'AI ChemicalSmart Director', x: 400, y: 30 },
+                    { role: 'AI Production Schedule', x: 150, y: 150 },
+                    { role: 'AI Safety Monitor', x: 650, y: 150 },
+                    { role: 'AI Process Optimize', x: 150, y: 300 },
+                    { role: 'AI Chemical AI', x: 400, y: 350 },
+                    { role: 'AI Chemical Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI ChemicalSmart Director', to: 'AI Production Schedule', content: '生产调度' },
+                    { from: 'AI ChemicalSmart Director', to: 'AI Chemical Analytics', content: '化工分析' },
+                    { from: 'AI Production Schedule', to: 'AI Safety Monitor', content: '安全监控' },
+                    { from: 'AI Safety Monitor', to: 'AI Process Optimize', content: '工艺优化' },
+                    { from: 'AI Process Optimize', to: 'AI Chemical AI', content: '化工AI' }
+                ]
+            },
+            {
+                id: 'ai-metallurgy-smart',
+                name: 'AI智慧冶金系统',
+                icon: '🔩',
+                desc: '智慧冶金管理，包括冶炼控制、质量检测、能源管理等',
+                agents: ['AI MetallurgySmart Director', 'AI Smelting Control', 'AI Quality Detect', 'AI Energy Manage', 'AI Metallurgy AI', 'AI Metallurgy Analytics'],
+                positions: [
+                    { role: 'AI MetallurgySmart Director', x: 400, y: 30 },
+                    { role: 'AI Smelting Control', x: 150, y: 150 },
+                    { role: 'AI Quality Detect', x: 650, y: 150 },
+                    { role: 'AI Energy Manage', x: 150, y: 300 },
+                    { role: 'AI Metallurgy AI', x: 400, y: 350 },
+                    { role: 'AI Metallurgy Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI MetallurgySmart Director', to: 'AI Smelting Control', content: '冶炼控制' },
+                    { from: 'AI MetallurgySmart Director', to: 'AI Metallurgy Analytics', content: '冶金分析' },
+                    { from: 'AI Smelting Control', to: 'AI Quality Detect', content: '质量检测' },
+                    { from: 'AI Quality Detect', to: 'AI Energy Manage', content: '能源管理' },
+                    { from: 'AI Energy Manage', to: 'AI Metallurgy AI', content: '冶金AI' }
+                ]
+            },
+            {
+                id: 'ai-pharma-smart',
+                name: 'AI智慧制药系统',
+                icon: '💊',
+                desc: '智慧制药管理，包括研发支持、生产管理、质量合规等',
+                agents: ['AI PharmaSmart Director', 'AI R&D Support', 'AI Production Manage', 'AI Quality Compliance', 'AI Pharma AI', 'AI Pharma Analytics'],
+                positions: [
+                    { role: 'AI PharmaSmart Director', x: 400, y: 30 },
+                    { role: 'AI R&D Support', x: 150, y: 150 },
+                    { role: 'AI Production Manage', x: 650, y: 150 },
+                    { role: 'AI Quality Compliance', x: 150, y: 300 },
+                    { role: 'AI Pharma AI', x: 400, y: 350 },
+                    { role: 'AI Pharma Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI PharmaSmart Director', to: 'AI R&D Support', content: '研发支持' },
+                    { from: 'AI PharmaSmart Director', to: 'AI Pharma Analytics', content: '制药分析' },
+                    { from: 'AI R&D Support', to: 'AI Production Manage', content: '生产管理' },
+                    { from: 'AI Production Manage', to: 'AI Quality Compliance', content: '质量合规' },
+                    { from: 'AI Quality Compliance', to: 'AI Pharma AI', content: '制药AI' }
+                ]
+            },
+            {
+                id: 'ai-semiconductor-smart',
+                name: 'AI智慧半导体系统',
+                icon: '💻',
+                desc: '智慧半导体管理，包括晶圆制造、封装测试、良率分析等',
+                agents: ['AI SemiconductorSmart Director', 'AI Wafer Fab', 'AI Package Test', 'AI Yield Analysis', 'AI Semiconductor AI', 'AI Semiconductor Analytics'],
+                positions: [
+                    { role: 'AI SemiconductorSmart Director', x: 400, y: 30 },
+                    { role: 'AI Wafer Fab', x: 150, y: 150 },
+                    { role: 'AI Package Test', x: 650, y: 150 },
+                    { role: 'AI Yield Analysis', x: 150, y: 300 },
+                    { role: 'AI Semiconductor AI', x: 400, y: 350 },
+                    { role: 'AI Semiconductor Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SemiconductorSmart Director', to: 'AI Wafer Fab', content: '晶圆制造' },
+                    { from: 'AI SemiconductorSmart Director', to: 'AI Semiconductor Analytics', content: '半导体分析' },
+                    { from: 'AI Wafer Fab', to: 'AI Package Test', content: '封装测试' },
+                    { from: 'AI Package Test', to: 'AI Yield Analysis', content: '良率分析' },
+                    { from: 'AI Yield Analysis', to: 'AI Semiconductor AI', content: '半导体AI' }
+                ]
+            },
+            {
+                id: 'ai-automotive-smart',
+                name: 'AI智慧汽车制造系统',
+                icon: '🚗',
+                desc: '智慧汽车制造，包括装配工艺、质量检测、供应链管理等',
+                agents: ['AI AutomotiveSmart Director', 'AI Assembly Process', 'AI Quality Inspect', 'AI Supply Chain', 'AI Automotive AI', 'AI Automotive Analytics'],
+                positions: [
+                    { role: 'AI AutomotiveSmart Director', x: 400, y: 30 },
+                    { role: 'AI Assembly Process', x: 150, y: 150 },
+                    { role: 'AI Quality Inspect', x: 650, y: 150 },
+                    { role: 'AI Supply Chain', x: 150, y: 300 },
+                    { role: 'AI Automotive AI', x: 400, y: 350 },
+                    { role: 'AI Automotive Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI AutomotiveSmart Director', to: 'AI Assembly Process', content: '装配工艺' },
+                    { from: 'AI AutomotiveSmart Director', to: 'AI Automotive Analytics', content: '汽车分析' },
+                    { from: 'AI Assembly Process', to: 'AI Quality Inspect', content: '质量检测' },
+                    { from: 'AI Quality Inspect', to: 'AI Supply Chain', content: '供应链管理' },
+                    { from: 'AI Supply Chain', to: 'AI Automotive AI', content: '汽车AI' }
+                ]
+            },
+            {
+                id: 'ai-aerospace-smart',
+                name: 'AI智慧航空航天系统',
+                icon: '✈️',
+                desc: '智慧航空航天，包括飞行控制、维护保养、航线优化等',
+                agents: ['AI AerospaceSmart Director', 'AI Flight Control', 'AI Maintenance', 'AI Route Optimize', 'AI Aerospace AI', 'AI Aerospace Analytics'],
+                positions: [
+                    { role: 'AI AerospaceSmart Director', x: 400, y: 30 },
+                    { role: 'AI Flight Control', x: 150, y: 150 },
+                    { role: 'AI Maintenance', x: 650, y: 150 },
+                    { role: 'AI Route Optimize', x: 150, y: 300 },
+                    { role: 'AI Aerospace AI', x: 400, y: 350 },
+                    { role: 'AI Aerospace Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI AerospaceSmart Director', to: 'AI Flight Control', content: '飞行控制' },
+                    { from: 'AI AerospaceSmart Director', to: 'AI Aerospace Analytics', content: '航空分析' },
+                    { from: 'AI Flight Control', to: 'AI Maintenance', content: '维护保养' },
+                    { from: 'AI Maintenance', to: 'AI Route Optimize', content: '航线优化' },
+                    { from: 'AI Route Optimize', to: 'AI Aerospace AI', content: '航空AI' }
+                ]
+            },
+            {
+                id: 'ai-shipbuilding-smart',
+                name: 'AI智慧船舶制造系统',
+                icon: '🚢',
+                desc: '智慧船舶制造，包括船体建造、舾装工艺、安全管理等',
+                agents: ['AI ShipbuildingSmart Director', 'AI Hull Build', 'AI Fitting Process', 'AI Safety Manage', 'AI Shipbuilding AI', 'AI Shipbuilding Analytics'],
+                positions: [
+                    { role: 'AI ShipbuildingSmart Director', x: 400, y: 30 },
+                    { role: 'AI Hull Build', x: 150, y: 150 },
+                    { role: 'AI Fitting Process', x: 650, y: 150 },
+                    { role: 'AI Safety Manage', x: 150, y: 300 },
+                    { role: 'AI Shipbuilding AI', x: 400, y: 350 },
+                    { role: 'AI Shipbuilding Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI ShipbuildingSmart Director', to: 'AI Hull Build', content: '船体建造' },
+                    { from: 'AI ShipbuildingSmart Director', to: 'AI Shipbuilding Analytics', content: '船舶分析' },
+                    { from: 'AI Hull Build', to: 'AI Fitting Process', content: '舾装工艺' },
+                    { from: 'AI Fitting Process', to: 'AI Safety Manage', content: '安全管理' },
+                    { from: 'AI Safety Manage', to: 'AI Shipbuilding AI', content: '船舶AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -39488,7 +39646,57 @@
             'AI Leak Detect': { icon: '🔎', color: '#3b82f6', role: 'AI泄漏检测' },
             'AI Fault Warning': { icon: '⚡', color: '#dc2626', role: 'AI故障预警' },
             'AI Pipeline AI': { icon: '🤖', color: '#8b5cf6', role: 'AI管网AI' },
-            'AI Pipeline Analytics': { icon: '📊', color: '#06b6d4', role: 'AI管网分析' }
+            'AI Pipeline Analytics': { icon: '📊', color: '#06b6d4', role: 'AI管网分析' },
+            // Cycle 487 新增 Agent Roles
+            // AI智慧化工系统
+            'AI ChemicalSmart Director': { icon: '⚗️', color: '#0d9488', role: 'AI化工总监' },
+            'AI Production Schedule': { icon: '📅', color: '#22c55e', role: 'AI生产调度' },
+            'AI Safety Monitor': { icon: '🛡️', color: '#dc2626', role: 'AI安全监控' },
+            'AI Process Optimize': { icon: '⚙️', color: '#3b82f6', role: 'AI工艺优化' },
+            'AI Chemical AI': { icon: '🤖', color: '#8b5cf6', role: 'AI化工AI' },
+            'AI Chemical Analytics': { icon: '📊', color: '#06b6d4', role: 'AI化工分析' },
+            // AI智慧冶金系统
+            'AI MetallurgySmart Director': { icon: '🔩', color: '#a855f7', role: 'AI冶金总监' },
+            'AI Smelting Control': { icon: '🔥', color: '#f97316', role: 'AI冶炼控制' },
+            'AI Quality Detect': { icon: '🔬', color: '#3b82f6', role: 'AI质量检测' },
+            'AI Energy Manage': { icon: '⚡', color: '#eab308', role: 'AI能源管理' },
+            'AI Metallurgy AI': { icon: '🤖', color: '#8b5cf6', role: 'AI冶金AI' },
+            'AI Metallurgy Analytics': { icon: '📊', color: '#06b6d4', role: 'AI冶金分析' },
+            // AI智慧制药系统
+            'AI PharmaSmart Director': { icon: '💊', color: '#ec4899', role: 'AI制药总监' },
+            'AI R&D Support': { icon: '🔬', color: '#22c55e', role: 'AI研发支持' },
+            'AI Production Manage': { icon: '🏭', color: '#3b82f6', role: 'AI生产管理' },
+            'AI Quality Compliance': { icon: '✅', color: '#14b8a6', role: 'AI质量合规' },
+            'AI Pharma AI': { icon: '🤖', color: '#8b5cf6', role: 'AI制药AI' },
+            'AI Pharma Analytics': { icon: '📊', color: '#06b6d4', role: 'AI制药分析' },
+            // AI智慧半导体系统
+            'AI SemiconductorSmart Director': { icon: '💻', color: '#0ea5e9', role: 'AI半导体总监' },
+            'AI Wafer Fab': { icon: '🧊', color: '#22c55e', role: 'AI晶圆制造' },
+            'AI Package Test': { icon: '🧪', color: '#3b82f6', role: 'AI封装测试' },
+            'AI Yield Analysis': { icon: '📈', color: '#f59e0b', role: 'AI良率分析' },
+            'AI Semiconductor AI': { icon: '🤖', color: '#8b5cf6', role: 'AI半导体AI' },
+            'AI Semiconductor Analytics': { icon: '📊', color: '#06b6d4', role: 'AI半导体分析' },
+            // AI智慧汽车制造系统
+            'AI AutomotiveSmart Director': { icon: '🚗', color: '#f97316', role: 'AI汽车总监' },
+            'AI Assembly Process': { icon: '🔧', color: '#22c55e', role: 'AI装配工艺' },
+            'AI Quality Inspect': { icon: '🔍', color: '#3b82f6', role: 'AI质量检测' },
+            'AI Supply Chain': { icon: '📦', color: '#f59e0b', role: 'AI供应链管理' },
+            'AI Automotive AI': { icon: '🤖', color: '#8b5cf6', role: 'AI汽车AI' },
+            'AI Automotive Analytics': { icon: '📊', color: '#06b6d4', role: 'AI汽车分析' },
+            // AI智慧航空航天系统
+            'AI AerospaceSmart Director': { icon: '✈️', color: '#6366f1', role: 'AI航空总监' },
+            'AI Flight Control': { icon: '🎯', color: '#22c55e', role: 'AI飞行控制' },
+            'AI Maintenance': { icon: '🔧', color: '#3b82f6', role: 'AI维护保养' },
+            'AI Route Optimize': { icon: '🛫', color: '#f59e0b', role: 'AI航线优化' },
+            'AI Aerospace AI': { icon: '🤖', color: '#8b5cf6', role: 'AI航空AI' },
+            'AI Aerospace Analytics': { icon: '📊', color: '#06b6d4', role: 'AI航空分析' },
+            // AI智慧船舶制造系统
+            'AI ShipbuildingSmart Director': { icon: '🚢', color: '#0891b2', role: 'AI船舶总监' },
+            'AI Hull Build': { icon: '🏗️', color: '#22c55e', role: 'AI船体建造' },
+            'AI Fitting Process': { icon: '⚓', color: '#3b82f6', role: 'AI舾装工艺' },
+            'AI Safety Manage': { icon: '🛡️', color: '#dc2626', role: 'AI安全管理' },
+            'AI Shipbuilding AI': { icon: '🤖', color: '#8b5cf6', role: 'AI船舶AI' },
+            'AI Shipbuilding Analytics': { icon: '📊', color: '#06b6d4', role: 'AI船舶分析' }
         };
 
         // 拖拽相关变量
