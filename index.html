@@ -31144,6 +31144,170 @@
             }
         ];
 
+        const cycle475Templates = [
+            // 智慧珠宝系统
+            {
+                id: 'ai-smart-jewelry',
+                name: 'AI智慧珠宝系统',
+                icon: '💎',
+                desc: '智能化珠宝销售服务体系，实现设计定制、鉴定评估的全面智能化',
+                agents: ['AI珠宝总监', 'AI设计定制', 'AI鉴定评估', 'AI采购管理', 'AI营销推广', 'AI客户服务'],
+                positions: [
+                    { role: 'AI珠宝总监', x: 400, y: 30 },
+                    { role: 'AI设计定制', x: 150, y: 150 },
+                    { role: 'AI鉴定评估', x: 650, y: 150 },
+                    { role: 'AI采购管理', x: 150, y: 300 },
+                    { role: 'AI营销推广', x: 650, y: 300 },
+                    { role: 'AI客户服务', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI珠宝总监', to: 'AI设计定制', content: '设计需求' },
+                    { from: 'AI珠宝总监', to: 'AI鉴定评估', content: '鉴定任务' },
+                    { from: 'AI珠宝总监', to: 'AI采购管理', content: '采购计划' },
+                    { from: 'AI设计定制', to: 'AI营销推广', content: '新品推广' },
+                    { from: 'AI鉴定评估', to: 'AI客户服务', content: '鉴定报告' }
+                ]
+            },
+            // 智慧茶叶系统
+            {
+                id: 'ai-smart-tea',
+                name: 'AI智慧茶叶系统',
+                icon: '🍵',
+                desc: '智能化茶叶销售服务体系，实现种植指导、品鉴推荐的全面智能化',
+                agents: ['AI茶叶总监', 'AI种植指导', 'AI品鉴师', 'AI茶艺培训', 'AI库存管理', 'AI销售顾问'],
+                positions: [
+                    { role: 'AI茶叶总监', x: 400, y: 30 },
+                    { role: 'AI种植指导', x: 150, y: 150 },
+                    { role: 'AI品鉴师', x: 650, y: 150 },
+                    { role: 'AI茶艺培训', x: 150, y: 300 },
+                    { role: 'AI库存管理', x: 650, y: 300 },
+                    { role: 'AI销售顾问', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI茶叶总监', to: 'AI种植指导', content: '种植指导需求' },
+                    { from: 'AI茶叶总监', to: 'AI品鉴师', content: '品鉴任务' },
+                    { from: 'AI茶叶总监', to: 'AI茶艺培训', content: '培训计划' },
+                    { from: 'AI品鉴师', to: 'AI销售顾问', content: '产品推荐' },
+                    { from: 'AI种植指导', to: 'AI库存管理', content: '库存需求' }
+                ]
+            },
+            // 智慧乐器系统
+            {
+                id: 'ai-smart-music-instrument',
+                name: 'AI智慧乐器系统',
+                icon: '🎸',
+                desc: '智能化乐器销售服务体系，实现乐器销售、教学指导的全面智能化',
+                agents: ['AI乐器总监', 'AI乐器销售', 'AI音乐教学', 'AI乐器维修', 'AI配件管理', 'AI演出经纪'],
+                positions: [
+                    { role: 'AI乐器总监', x: 400, y: 30 },
+                    { role: 'AI乐器销售', x: 150, y: 150 },
+                    { role: 'AI音乐教学', x: 650, y: 150 },
+                    { role: 'AI乐器维修', x: 150, y: 300 },
+                    { role: 'AI配件管理', x: 650, y: 300 },
+                    { role: 'AI演出经纪', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI乐器总监', to: 'AI乐器销售', content: '销售目标' },
+                    { from: 'AI乐器总监', to: 'AI音乐教学', content: '教学计划' },
+                    { from: 'AI乐器总监', to: 'AI演出经纪', content: '演出安排' },
+                    { from: 'AI乐器销售', to: 'AI配件管理', content: '配件需求' },
+                    { from: 'AI乐器维修', to: 'AI客户服务', content: '维修反馈' }
+                ]
+            },
+            // 智慧图书系统
+            {
+                id: 'ai-smart-book',
+                name: 'AI智慧图书系统',
+                icon: '📚',
+                desc: '智能化图书销售服务体系，实现图书推荐、阅读推荐的全面智能化',
+                agents: ['AI图书总监', 'AI图书采购', 'AI阅读推荐', 'AI书店运营', 'AI会员管理', 'AI活动策划'],
+                positions: [
+                    { role: 'AI图书总监', x: 400, y: 30 },
+                    { role: 'AI图书采购', x: 150, y: 150 },
+                    { role: 'AI阅读推荐', x: 650, y: 150 },
+                    { role: 'AI书店运营', x: 150, y: 300 },
+                    { role: 'AI会员管理', x: 650, y: 300 },
+                    { role: 'AI活动策划', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI图书总监', to: 'AI图书采购', content: '采购计划' },
+                    { from: 'AI图书总监', to: 'AI阅读推荐', content: '推荐需求' },
+                    { from: 'AI图书总监', to: 'AI活动策划', content: '活动计划' },
+                    { from: 'AI阅读推荐', to: 'AI会员管理', content: '会员推荐' },
+                    { from: 'AI书店运营', to: 'AI图书采购', content: '库存需求' }
+                ]
+            },
+            // 智慧消防系统
+            {
+                id: 'ai-smart-fire',
+                name: 'AI智慧消防系统',
+                icon: '🧯',
+                desc: '智能化消防服务体系，实现消防检测、培训演练的全面智能化',
+                agents: ['AI消防总监', 'AI火警监测', 'AI应急响应', 'AI消防培训', 'AI设备检测', 'AI风险评估'],
+                positions: [
+                    { role: 'AI消防总监', x: 400, y: 30 },
+                    { role: 'AI火警监测', x: 150, y: 150 },
+                    { role: 'AI应急响应', x: 650, y: 150 },
+                    { role: 'AI消防培训', x: 150, y: 300 },
+                    { role: 'AI设备检测', x: 650, y: 300 },
+                    { role: 'AI风险评估', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI消防总监', to: 'AI火警监测', content: '监测需求' },
+                    { from: 'AI消防总监', to: 'AI应急响应', content: '响应计划' },
+                    { from: 'AI消防总监', to: 'AI风险评估', content: '评估需求' },
+                    { from: 'AI火警监测', to: 'AI应急响应', content: '预警信息' },
+                    { from: 'AI设备检测', to: 'AI消防培训', content: '培训需求' }
+                ]
+            },
+            // 智慧移民服务系统
+            {
+                id: 'ai-smart-immigration',
+                name: 'AI智慧移民服务系统',
+                icon: '🌍',
+                desc: '智能化移民服务体系，实现签证办理、移民咨询的全面智能化',
+                agents: ['AI移民总监', 'AI签证办理', 'AI移民咨询', 'AI文案准备', 'AI面试辅导', 'AI安家服务'],
+                positions: [
+                    { role: 'AI移民总监', x: 400, y: 30 },
+                    { role: 'AI签证办理', x: 150, y: 150 },
+                    { role: 'AI移民咨询', x: 650, y: 150 },
+                    { role: 'AI文案准备', x: 150, y: 300 },
+                    { role: 'AI面试辅导', x: 650, y: 300 },
+                    { role: 'AI安家服务', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI移民总监', to: 'AI签证办理', content: '办理需求' },
+                    { from: 'AI移民总监', to: 'AI移民咨询', content: '咨询需求' },
+                    { from: 'AI移民总监', to: 'AI文案准备', content: '文案需求' },
+                    { from: 'AI签证办理', to: 'AI面试辅导', content: '面试安排' },
+                    { from: 'AI文案准备', to: 'AI安家服务', content: '安家需求' }
+                ]
+            },
+            // 智慧演艺系统
+            {
+                id: 'ai-smart-performing',
+                name: 'AI智慧演艺系统',
+                icon: '🎭',
+                desc: '智能化演艺服务体系，实现演出策划、艺人管理的全面智能化',
+                agents: ['AI演艺总监', 'AI演出策划', 'AI艺人经纪', 'AI舞台技术', 'AI票务管理', 'AI市场推广'],
+                positions: [
+                    { role: 'AI演艺总监', x: 400, y: 30 },
+                    { role: 'AI演出策划', x: 150, y: 150 },
+                    { role: 'AI艺人经纪', x: 650, y: 150 },
+                    { role: 'AI舞台技术', x: 150, y: 300 },
+                    { role: 'AI票务管理', x: 650, y: 300 },
+                    { role: 'AI市场推广', x: 400, y: 400 }
+                ],
+                messageFlows: [
+                    { from: 'AI演艺总监', to: 'AI演出策划', content: '策划需求' },
+                    { from: 'AI演艺总监', to: 'AI艺人经纪', content: '艺人需求' },
+                    { from: 'AI演艺总监', to: 'AI市场推广', content: '推广计划' },
+                    { from: 'AI演出策划', to: 'AI舞台技术', content: '技术需求' },
+                    { from: 'AI艺人经纪', to: 'AI票务管理', content: '票务安排' }
+                ]
+            }
+        ];
+
         const cycle473Templates = [
             {
                 id: 'ai-elderly-care-service',
@@ -31302,7 +31466,7 @@
         ];
 
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -38159,7 +38323,56 @@
             'AI内容审核': { icon: '✅', color: '#3b82f6', role: 'AI内容审核' },
             'AI分发策略': { icon: '📡', color: '#22c55e', role: 'AI分发策略' },
             'AI数据分析': { icon: '📊', color: '#ec4899', role: 'AI数据分析' },
-            'AI版权管理': { icon: '📚', color: '#8b5cf6', role: 'AI版权管理' }
+            'AI版权管理': { icon: '📚', color: '#8b5cf6', role: 'AI版权管理' },
+            // Cycle 475 新增角色 - 智慧珠宝系统
+            'AI珠宝总监': { icon: '💎', color: '#06b6d4', role: 'AI珠宝总监' },
+            'AI设计定制': { icon: '✨', color: '#f59e0b', role: 'AI设计定制' },
+            'AI鉴定评估': { icon: '🔍', color: '#3b82f6', role: 'AI鉴定评估' },
+            'AI采购管理': { icon: '🛒', color: '#22c55e', role: 'AI采购管理' },
+            'AI营销推广': { icon: '📢', color: '#ec4899', role: 'AI营销推广' },
+            'AI客户服务': { icon: '💬', color: '#8b5cf6', role: 'AI客户服务' },
+            // Cycle 475 新增角色 - 智慧茶叶系统
+            'AI茶叶总监': { icon: '🍵', color: '#84cc16', role: 'AI茶叶总监' },
+            'AI种植指导': { icon: '🌱', color: '#22c55e', role: 'AI种植指导' },
+            'AI品鉴师': { icon: '👃', color: '#f59e0b', role: 'AI品鉴师' },
+            'AI茶艺培训': { icon: '🎓', color: '#3b82f6', role: 'AI茶艺培训' },
+            'AI库存管理': { icon: '📦', color: '#ec4899', role: 'AI库存管理' },
+            'AI销售顾问': { icon: '💼', color: '#8b5cf6', role: 'AI销售顾问' },
+            // Cycle 475 新增角色 - 智慧乐器系统
+            'AI乐器总监': { icon: '🎸', color: '#f97316', role: 'AI乐器总监' },
+            'AI乐器销售': { icon: '🛒', color: '#3b82f6', role: 'AI乐器销售' },
+            'AI音乐教学': { icon: '🎵', color: '#8b5cf6', role: 'AI音乐教学' },
+            'AI乐器维修': { icon: '🔧', color: '#22c55e', role: 'AI乐器维修' },
+            'AI配件管理': { icon: '🔩', color: '#ec4899', role: 'AI配件管理' },
+            'AI演出经纪': { icon: '🎫', color: '#f59e0b', role: 'AI演出经纪' },
+            // Cycle 475 新增角色 - 智慧图书系统
+            'AI图书总监': { icon: '📚', color: '#dc2626', role: 'AI图书总监' },
+            'AI图书采购': { icon: '📦', color: '#f59e0b', role: 'AI图书采购' },
+            'AI阅读推荐': { icon: '📖', color: '#3b82f6', role: 'AI阅读推荐' },
+            'AI书店运营': { icon: '🏪', color: '#22c55e', role: 'AI书店运营' },
+            'AI会员管理': { icon: '👤', color: '#ec4899', role: 'AI会员管理' },
+            'AI活动策划': { icon: '🎪', color: '#8b5cf6', role: 'AI活动策划' },
+            // Cycle 475 新增角色 - 智慧消防系统
+            'AI消防总监': { icon: '🧯', color: '#dc2626', role: 'AI消防总监' },
+            'AI火警监测': { icon: '🔔', color: '#f59e0b', role: 'AI火警监测' },
+            'AI应急响应': { icon: '🚨', color: '#3b82f6', role: 'AI应急响应' },
+            'AI消防培训': { icon: '🎓', color: '#22c55e', role: 'AI消防培训' },
+            'AI设备检测': { icon: '🔍', color: '#ec4899', role: 'AI设备检测' },
+            'AI风险评估': { icon: '⚠️', color: '#8b5cf6', role: 'AI风险评估' },
+            // Cycle 475 新增角色 - 智慧移民服务系统
+            'AI移民总监': { icon: '🌍', color: '#0ea5e9', role: 'AI移民总监' },
+            'AI签证办理': { icon: '📋', color: '#f59e0b', role: 'AI签证办理' },
+            'AI移民咨询': { icon: '💬', color: '#3b82f6', role: 'AI移民咨询' },
+            'AI文案准备': { icon: '📝', color: '#22c55e', role: 'AI文案准备' },
+            'AI面试辅导': { icon: '🎓', color: '#ec4899', role: 'AI面试辅导' },
+            'AI安家服务': { icon: '🏠', color: '#8b5cf6', role: 'AI安家服务' },
+            // Cycle 475 新增角色 - 智慧演艺系统
+            'AI演艺总监': { icon: '🎭', color: '#a855f7', role: 'AI演艺总监' },
+            'AI演出策划': { icon: '🎪', color: '#f59e0b', role: 'AI演出策划' },
+            'AI艺人经纪': { icon: '⭐', color: '#3b82f6', role: 'AI艺人经纪' },
+            'AI舞台技术': { icon: '🎬', color: '#22c55e', role: 'AI舞台技术' },
+            'AI票务管理': { icon: '🎫', color: '#ec4899', role: 'AI票务管理' },
+            'AI市场推广': { icon: '📢', color: '#8b5cf6', role: 'AI市场推广' }
         };
 
         // 拖拽相关变量
