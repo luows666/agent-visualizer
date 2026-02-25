@@ -34079,8 +34079,166 @@
             }
         ];
 
+        // Cycle 494 新增模板
+        const cycle494Templates = [
+            {
+                id: 'ai-logistics-smart',
+                name: 'AI智慧物流系统',
+                icon: '🚚',
+                desc: '智慧物流，包括仓储管理、配送调度、物流跟踪等',
+                agents: ['AI LogisticsSmart Director', 'AI Warehouse Manage', 'AI Delivery Schedule', 'AI Logistics Track', 'AI Logistics AI', 'AI Logistics Analytics'],
+                positions: [
+                    { role: 'AI LogisticsSmart Director', x: 400, y: 30 },
+                    { role: 'AI Warehouse Manage', x: 150, y: 150 },
+                    { role: 'AI Delivery Schedule', x: 650, y: 150 },
+                    { role: 'AI Logistics Track', x: 150, y: 300 },
+                    { role: 'AI Logistics AI', x: 400, y: 350 },
+                    { role: 'AI Logistics Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI LogisticsSmart Director', to: 'AI Warehouse Manage', content: '仓储管理' },
+                    { from: 'AI LogisticsSmart Director', to: 'AI Logistics Analytics', content: '物流分析' },
+                    { from: 'AI Warehouse Manage', to: 'AI Delivery Schedule', content: '配送调度' },
+                    { from: 'AI Delivery Schedule', to: 'AI Logistics Track', content: '物流跟踪' },
+                    { from: 'AI Logistics Track', to: 'AI Logistics AI', content: '物流AI' }
+                ]
+            },
+            {
+                id: 'ai-manufacturing-smart',
+                name: 'AI智慧制造系统',
+                icon: '🏭',
+                desc: '智慧制造，包括生产计划、质量管理、设备维护等',
+                agents: ['AI MfgSmart Director', 'AI Production Plan', 'AI Quality Manage', 'AI Equipment Maint', 'AI Mfg AI', 'AI Mfg Analytics'],
+                positions: [
+                    { role: 'AI MfgSmart Director', x: 400, y: 30 },
+                    { role: 'AI Production Plan', x: 150, y: 150 },
+                    { role: 'AI Quality Manage', x: 650, y: 150 },
+                    { role: 'AI Equipment Maint', x: 150, y: 300 },
+                    { role: 'AI Mfg AI', x: 400, y: 350 },
+                    { role: 'AI Mfg Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI MfgSmart Director', to: 'AI Production Plan', content: '生产计划' },
+                    { from: 'AI MfgSmart Director', to: 'AI Mfg Analytics', content: '制造分析' },
+                    { from: 'AI Production Plan', to: 'AI Quality Manage', content: '质量管理' },
+                    { from: 'AI Quality Manage', to: 'AI Equipment Maint', content: '设备维护' },
+                    { from: 'AI Equipment Maint', to: 'AI Mfg AI', content: '制造AI' }
+                ]
+            },
+            {
+                id: 'ai-entertainment-smart',
+                name: 'AI智慧娱乐系统',
+                icon: '🎭',
+                desc: '智慧娱乐，包括内容创作、用户互动、版权管理等',
+                agents: ['AI EntertainmentSmart Director', 'AI Content Create', 'AI User Interact', 'AI Copyright Manage', 'AI Entertainment AI', 'AI Entertainment Analytics'],
+                positions: [
+                    { role: 'AI EntertainmentSmart Director', x: 400, y: 30 },
+                    { role: 'AI Content Create', x: 150, y: 150 },
+                    { role: 'AI User Interact', x: 650, y: 150 },
+                    { role: 'AI Copyright Manage', x: 150, y: 300 },
+                    { role: 'AI Entertainment AI', x: 400, y: 350 },
+                    { role: 'AI Entertainment Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI EntertainmentSmart Director', to: 'AI Content Create', content: '内容创作' },
+                    { from: 'AI EntertainmentSmart Director', to: 'AI Entertainment Analytics', content: '娱乐分析' },
+                    { from: 'AI Content Create', to: 'AI User Interact', content: '用户互动' },
+                    { from: 'AI User Interact', to: 'AI Copyright Manage', content: '版权管理' },
+                    { from: 'AI Copyright Manage', to: 'AI Entertainment AI', content: '娱乐AI' }
+                ]
+            },
+            {
+                id: 'ai-hr-smart',
+                name: 'AI智慧人力资源系统',
+                icon: '👥',
+                desc: '智慧HR，包括招聘管理、员工培训、绩效评估等',
+                agents: ['AI HRSmart Director', 'AI Recruiting Manage', 'AI Employee Train', 'AI Performance Eval', 'AI HR AI', 'AI HR Analytics'],
+                positions: [
+                    { role: 'AI HRSmart Director', x: 400, y: 30 },
+                    { role: 'AI Recruiting Manage', x: 150, y: 150 },
+                    { role: 'AI Employee Train', x: 650, y: 150 },
+                    { role: 'AI Performance Eval', x: 150, y: 300 },
+                    { role: 'AI HR AI', x: 400, y: 350 },
+                    { role: 'AI HR Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HRSmart Director', to: 'AI Recruiting Manage', content: '招聘管理' },
+                    { from: 'AI HRSmart Director', to: 'AI HR Analytics', content: 'HR分析' },
+                    { from: 'AI Recruiting Manage', to: 'AI Employee Train', content: '员工培训' },
+                    { from: 'AI Employee Train', to: 'AI Performance Eval', content: '绩效评估' },
+                    { from: 'AI Performance Eval', to: 'AI HR AI', content: 'HR AI' }
+                ]
+            },
+            {
+                id: 'ai-legal-smart',
+                name: 'AI智慧法律服务系统',
+                icon: '⚖️',
+                desc: '智慧法律，包括合同审核、案件分析、法律咨询等',
+                agents: ['AI LegalSmart Director', 'AI Contract Review', 'AI Case Analysis', 'AI Legal Consult', 'AI Legal AI', 'AI Legal Analytics'],
+                positions: [
+                    { role: 'AI LegalSmart Director', x: 400, y: 30 },
+                    { role: 'AI Contract Review', x: 150, y: 150 },
+                    { role: 'AI Case Analysis', x: 650, y: 150 },
+                    { role: 'AI Legal Consult', x: 150, y: 300 },
+                    { role: 'AI Legal AI', x: 400, y: 350 },
+                    { role: 'AI Legal Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI LegalSmart Director', to: 'AI Contract Review', content: '合同审核' },
+                    { from: 'AI LegalSmart Director', to: 'AI Legal Analytics', content: '法律分析' },
+                    { from: 'AI Contract Review', to: 'AI Case Analysis', content: '案件分析' },
+                    { from: 'AI Case Analysis', to: 'AI Legal Consult', content: '法律咨询' },
+                    { from: 'AI Legal Consult', to: 'AI Legal AI', content: '法律AI' }
+                ]
+            },
+            {
+                id: 'ai-energy-smart',
+                name: 'AI智慧能源管理系统',
+                icon: '⚡',
+                desc: '智慧能源，包括电网调度、能源交易、设备监控等',
+                agents: ['AI EnergySmart Director', 'AI Grid Schedule', 'AI Energy Trade', 'AI Equipment Monitor', 'AI Energy AI', 'AI Energy Analytics'],
+                positions: [
+                    { role: 'AI EnergySmart Director', x: 400, y: 30 },
+                    { role: 'AI Grid Schedule', x: 150, y: 150 },
+                    { role: 'AI Energy Trade', x: 650, y: 150 },
+                    { role: 'AI Equipment Monitor', x: 150, y: 300 },
+                    { role: 'AI Energy AI', x: 400, y: 350 },
+                    { role: 'AI Energy Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI EnergySmart Director', to: 'AI Grid Schedule', content: '电网调度' },
+                    { from: 'AI EnergySmart Director', to: 'AI Energy Analytics', content: '能源分析' },
+                    { from: 'AI Grid Schedule', to: 'AI Energy Trade', content: '能源交易' },
+                    { from: 'AI Energy Trade', to: 'AI Equipment Monitor', content: '设备监控' },
+                    { from: 'AI Equipment Monitor', to: 'AI Energy AI', content: '能源AI' }
+                ]
+            },
+            {
+                id: 'ai-media-smart',
+                name: 'AI智慧媒体系统',
+                icon: '📺',
+                desc: '智慧媒体，包括内容制作、播出调度、受众分析等',
+                agents: ['AI MediaSmart Director', 'AI Content Produce', 'AI Broadcast Schedule', 'AI Audience Analysis', 'AI Media AI', 'AI Media Analytics'],
+                positions: [
+                    { role: 'AI MediaSmart Director', x: 400, y: 30 },
+                    { role: 'AI Content Produce', x: 150, y: 150 },
+                    { role: 'AI Broadcast Schedule', x: 650, y: 150 },
+                    { role: 'AI Audience Analysis', x: 150, y: 300 },
+                    { role: 'AI Media AI', x: 400, y: 350 },
+                    { role: 'AI Media Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI MediaSmart Director', to: 'AI Content Produce', content: '内容制作' },
+                    { from: 'AI MediaSmart Director', to: 'AI Media Analytics', content: '媒体分析' },
+                    { from: 'AI Content Produce', to: 'AI Broadcast Schedule', content: '播出调度' },
+                    { from: 'AI Broadcast Schedule', to: 'AI Audience Analysis', content: '受众分析' },
+                    { from: 'AI Audience Analysis', to: 'AI Media AI', content: '媒体AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -40945,7 +41103,57 @@
             'AI Training Manage': { icon: '💪', color: '#3b82f6', role: 'AI训练管理' },
             'AI Sports Media': { icon: '📺', color: '#f59e0b', role: 'AI体育传媒' },
             'AI Sports2 AI': { icon: '🤖', color: '#8b5cf6', role: 'AI体育AI' },
-            'AI Sports2 Analytics': { icon: '📊', color: '#06b6d4', role: 'AI体育分析' }
+            'AI Sports2 Analytics': { icon: '📊', color: '#06b6d4', role: 'AI体育分析' },
+            // Cycle 494 新增 Agent Roles
+            // AI智慧物流系统
+            'AI LogisticsSmart Director': { icon: '🚚', color: '#0891b2', role: 'AI物流总监' },
+            'AI Warehouse Manage': { icon: '🏭', color: '#22c55e', role: 'AI仓储管理' },
+            'AI Delivery Schedule': { icon: '🗺️', color: '#3b82f6', role: 'AI配送调度' },
+            'AI Logistics Track': { icon: '📍', color: '#f59e0b', role: 'AI物流跟踪' },
+            'AI Logistics AI': { icon: '🤖', color: '#8b5cf6', role: 'AI物流AI' },
+            'AI Logistics Analytics': { icon: '📊', color: '#06b6d4', role: 'AI物流分析' },
+            // AI智慧制造系统
+            'AI MfgSmart Director': { icon: '🏭', color: '#ea580c', role: 'AI制造总监' },
+            'AI Production Plan': { icon: '📋', color: '#22c55e', role: 'AI生产计划' },
+            'AI Quality Manage': { icon: '✅', color: '#3b82f6', role: 'AI质量管理' },
+            'AI Equipment Maint': { icon: '🔧', color: '#f59e0b', role: 'AI设备维护' },
+            'AI Mfg AI': { icon: '🤖', color: '#8b5cf6', role: 'AI制造AI' },
+            'AI Mfg Analytics': { icon: '📊', color: '#06b6d4', role: 'AI制造分析' },
+            // AI智慧娱乐系统
+            'AI EntertainmentSmart Director': { icon: '🎭', color: '#c026d3', role: 'AI娱乐总监' },
+            'AI Content Create': { icon: '🎬', color: '#22c55e', role: 'AI内容创作' },
+            'AI User Interact': { icon: '💬', color: '#3b82f6', role: 'AI用户互动' },
+            'AI Copyright Manage': { icon: '📜', color: '#f59e0b', role: 'AI版权管理' },
+            'AI Entertainment AI': { icon: '🤖', color: '#8b5cf6', role: 'AI娱乐AI' },
+            'AI Entertainment Analytics': { icon: '📊', color: '#06b6d4', role: 'AI娱乐分析' },
+            // AI智慧人力资源系统
+            'AI HRSmart Director': { icon: '👥', color: '#0d9488', role: 'AI人力资源总监' },
+            'AI Recruiting Manage': { icon: '📋', color: '#22c55e', role: 'AI招聘管理' },
+            'AI Employee Train': { icon: '📚', color: '#3b82f6', role: 'AI员工培训' },
+            'AI Performance Eval': { icon: '📊', color: '#f59e0b', role: 'AI绩效评估' },
+            'AI HR AI': { icon: '🤖', color: '#8b5cf6', role: 'AI HR AI' },
+            'AI HR Analytics': { icon: '📈', color: '#06b6d4', role: 'AI HR分析' },
+            // AI智慧法律服务系统
+            'AI LegalSmart Director': { icon: '⚖️', color: '#475569', role: 'AI法律总监' },
+            'AI Contract Review': { icon: '📝', color: '#22c55e', role: 'AI合同审核' },
+            'AI Case Analysis': { icon: '🔍', color: '#3b82f6', role: 'AI案件分析' },
+            'AI Legal Consult': { icon: '💼', color: '#f59e0b', role: 'AI法律咨询' },
+            'AI Legal AI': { icon: '🤖', color: '#8b5cf6', role: 'AI法律AI' },
+            'AI Legal Analytics': { icon: '📊', color: '#06b6d4', role: 'AI法律分析' },
+            // AI智慧能源管理系统
+            'AI EnergySmart Director': { icon: '⚡', color: '#facc15', role: 'AI能源总监' },
+            'AI Grid Schedule': { icon: '🔌', color: '#22c55e', role: 'AI电网调度' },
+            'AI Energy Trade': { icon: '💰', color: '#3b82f6', role: 'AI能源交易' },
+            'AI Equipment Monitor': { icon: '📡', color: '#f59e0b', role: 'AI设备监控' },
+            'AI Energy AI': { icon: '🤖', color: '#8b5cf6', role: 'AI能源AI' },
+            'AI Energy Analytics': { icon: '📊', color: '#06b6d4', role: 'AI能源分析' },
+            // AI智慧媒体系统
+            'AI MediaSmart Director': { icon: '📺', color: '#be123c', role: 'AI媒体总监' },
+            'AI Content Produce': { icon: '🎥', color: '#22c55e', role: 'AI内容制作' },
+            'AI Broadcast Schedule': { icon: '📅', color: '#3b82f6', role: 'AI播出调度' },
+            'AI Audience Analysis': { icon: '👀', color: '#f59e0b', role: 'AI受众分析' },
+            'AI Media AI': { icon: '🤖', color: '#8b5cf6', role: 'AI媒体AI' },
+            'AI Media Analytics': { icon: '📊', color: '#06b6d4', role: 'AI媒体分析' }
         };
 
         // 拖拽相关变量
