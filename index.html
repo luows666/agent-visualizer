@@ -30508,8 +30508,166 @@
             }
         ];
 
+        // Cycle 470 - 新增行业服务系统模板
+        const cycle470Templates = [
+            {
+                id: 'ai-smart-home-service',
+                name: 'AI智慧家政系统',
+                icon: '🏠',
+                desc: '智能家政服务管理，包括保洁、保姆、月嫂、管家等服务',
+                agents: ['AI家政总监', 'AI保洁管家', 'AI保姆管理', 'AI月嫂调度', 'AI管家服务', 'AI客户经理'],
+                positions: [
+                    { role: 'AI家政总监', x: 400, y: 30 },
+                    { role: 'AI保洁管家', x: 150, y: 150 },
+                    { role: 'AI保姆管理', x: 650, y: 150 },
+                    { role: 'AI月嫂调度', x: 150, y: 300 },
+                    { role: 'AI管家服务', x: 400, y: 350 },
+                    { role: 'AI客户经理', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI家政总监', to: 'AI保洁管家', content: '保洁任务' },
+                    { from: 'AI家政总监', to: 'AI保姆管理', content: '保姆任务' },
+                    { from: 'AI家政总监', to: 'AI月嫂调度', content: '月嫂任务' },
+                    { from: 'AI保洁管家', to: 'AI管家服务', content: '服务反馈' },
+                    { from: 'AI保姆管理', to: 'AI客户经理', content: '客户需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-moving',
+                name: 'AI智慧搬家系统',
+                icon: '🚛',
+                desc: '智能搬家服务管理，包括物品打包、搬运、运输、还原等',
+                agents: ['AI搬家总监', 'AI打包管理', 'AI搬运调度', 'AI运输安排', 'AI还原管家', 'AI客服协调'],
+                positions: [
+                    { role: 'AI搬家总监', x: 400, y: 30 },
+                    { role: 'AI打包管理', x: 150, y: 150 },
+                    { role: 'AI搬运调度', x: 650, y: 150 },
+                    { role: 'AI运输安排', x: 150, y: 300 },
+                    { role: 'AI还原管家', x: 400, y: 350 },
+                    { role: 'AI客服协调', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI搬家总监', to: 'AI打包管理', content: '打包任务' },
+                    { from: 'AI搬家总监', to: 'AI搬运调度', content: '搬运任务' },
+                    { from: 'AI打包管理', to: 'AI运输安排', content: '运输需求' },
+                    { from: 'AI搬运调度', to: 'AI还原管家', content: '还原需求' },
+                    { from: 'AI运输安排', to: 'AI客服协调', content: '客服协调' }
+                ]
+            },
+            {
+                id: 'ai-smart-photography',
+                name: 'AI智慧摄影系统',
+                icon: '📷',
+                desc: '智能摄影服务管理，包括写真、婚礼、商业、活动摄影等',
+                agents: ['AI摄影总监', 'AI写真策划', 'AI婚礼摄影', 'AI商业拍摄', 'AI活动摄像', 'AI后期制作'],
+                positions: [
+                    { role: 'AI摄影总监', x: 400, y: 30 },
+                    { role: 'AI写真策划', x: 150, y: 150 },
+                    { role: 'AI婚礼摄影', x: 650, y: 150 },
+                    { role: 'AI商业拍摄', x: 150, y: 300 },
+                    { role: 'AI活动摄像', x: 400, y: 350 },
+                    { role: 'AI后期制作', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI摄影总监', to: 'AI写真策划', content: '写真需求' },
+                    { from: 'AI摄影总监', to: 'AI婚礼摄影', content: '婚礼需求' },
+                    { from: 'AI摄影总监', to: 'AI商业拍摄', content: '商业需求' },
+                    { from: 'AI婚礼摄影', to: 'AI后期制作', content: '后期需求' },
+                    { from: 'AI商业拍摄', to: 'AI活动摄像', content: '活动需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-wedding',
+                name: 'AI智慧婚庆系统',
+                icon: '💒',
+                desc: '智能婚庆服务管理，包括婚礼策划、场地布置、主持摄像等',
+                agents: ['AI婚庆总监', 'AI婚礼策划', 'AI场地布置', 'AI主持摄像', 'AI花艺设计', 'AI婚礼管家'],
+                positions: [
+                    { role: 'AI婚庆总监', x: 400, y: 30 },
+                    { role: 'AI婚礼策划', x: 150, y: 150 },
+                    { role: 'AI场地布置', x: 650, y: 150 },
+                    { role: 'AI主持摄像', x: 150, y: 300 },
+                    { role: 'AI花艺设计', x: 400, y: 350 },
+                    { role: 'AI婚礼管家', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI婚庆总监', to: 'AI婚礼策划', content: '策划需求' },
+                    { from: 'AI婚庆总监', to: 'AI场地布置', content: '场地需求' },
+                    { from: 'AI婚礼策划', to: 'AI主持摄像', content: '主持需求' },
+                    { from: 'AI场地布置', to: 'AI花艺设计', content: '花艺需求' },
+                    { from: 'AI花艺设计', to: 'AI婚礼管家', content: '管家协调' }
+                ]
+            },
+            {
+                id: 'ai-smart-repair',
+                name: 'AI智慧维修系统',
+                icon: '🔧',
+                desc: '智能维修服务管理，包括家电维修、水电维修、汽车维修等',
+                agents: ['AI维修总监', 'AI家电维修', 'AI水电维修', 'AI汽车维修', 'AI维修调度', 'AI客服支持'],
+                positions: [
+                    { role: 'AI维修总监', x: 400, y: 30 },
+                    { role: 'AI家电维修', x: 150, y: 150 },
+                    { role: 'AI水电维修', x: 650, y: 150 },
+                    { role: 'AI汽车维修', x: 150, y: 300 },
+                    { role: 'AI维修调度', x: 400, y: 350 },
+                    { role: 'AI客服支持', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI维修总监', to: 'AI家电维修', content: '家电任务' },
+                    { from: 'AI维修总监', to: 'AI水电维修', content: '水电任务' },
+                    { from: 'AI维修总监', to: 'AI汽车维修', content: '汽车任务' },
+                    { from: 'AI家电维修', to: 'AI维修调度', content: '调度需求' },
+                    { from: 'AI水电维修', to: 'AI客服支持', content: '客服需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-laundry',
+                name: 'AI智慧洗涤系统',
+                icon: '🧺',
+                desc: '智能洗涤服务管理，包括干洗、水洗、熨烫、皮具护理等',
+                agents: ['AI洗涤总监', 'AI干洗管理', 'AI水洗调度', 'AI熨烫服务', 'AI皮具护理', 'AI配送协调'],
+                positions: [
+                    { role: 'AI洗涤总监', x: 400, y: 30 },
+                    { role: 'AI干洗管理', x: 150, y: 150 },
+                    { role: 'AI水洗调度', x: 650, y: 150 },
+                    { role: 'AI熨烫服务', x: 150, y: 300 },
+                    { role: 'AI皮具护理', x: 400, y: 350 },
+                    { role: 'AI配送协调', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI洗涤总监', to: 'AI干洗管理', content: '干洗任务' },
+                    { from: 'AI洗涤总监', to: 'AI水洗调度', content: '水洗任务' },
+                    { from: 'AI干洗管理', to: 'AI熨烫服务', content: '熨烫需求' },
+                    { from: 'AI水洗调度', to: 'AI皮具护理', content: '护理需求' },
+                    { from: 'AI熨烫服务', to: 'AI配送协调', content: '配送需求' }
+                ]
+            },
+            {
+                id: 'ai-smart-environmental',
+                name: 'AI智慧环保系统',
+                icon: '🌱',
+                desc: '智能环保服务管理，包括垃圾分类、污水处理、空气净化等',
+                agents: ['AI环保总监', 'AI垃圾分类', 'AI污水处理', 'AI空气净化', 'AI环境监测', 'AI绿色咨询'],
+                positions: [
+                    { role: 'AI环保总监', x: 400, y: 30 },
+                    { role: 'AI垃圾分类', x: 150, y: 150 },
+                    { role: 'AI污水处理', x: 650, y: 150 },
+                    { role: 'AI空气净化', x: 150, y: 300 },
+                    { role: 'AI环境监测', x: 400, y: 350 },
+                    { role: 'AI绿色咨询', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI环保总监', to: 'AI垃圾分类', content: '分类任务' },
+                    { from: 'AI环保总监', to: 'AI污水处理', content: '处理任务' },
+                    { from: 'AI环保总监', to: 'AI空气净化', content: '净化任务' },
+                    { from: 'AI垃圾分类', to: 'AI环境监测', content: '监测需求' },
+                    { from: 'AI污水处理', to: 'AI绿色咨询', content: '咨询需求' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates];
 
         // Agent 角色配置
         const agentRoles = {
