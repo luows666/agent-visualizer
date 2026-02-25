@@ -32657,8 +32657,166 @@
             }
         ];
 
+        // Cycle 485 新增模板
+        const cycle485Templates = [
+            {
+                id: 'ai-hydropower-smart',
+                name: 'AI智慧水电站系统',
+                icon: '💧',
+                desc: '智慧水电站管理，包括水轮机控制、水文预测、发电优化等',
+                agents: ['AI HydropowerSmart Director', 'AI Turbine Control', 'AI Hydrology Predict', 'AI Power Optimize', 'AI Hydropower AI', 'AI Hydropower Analytics'],
+                positions: [
+                    { role: 'AI HydropowerSmart Director', x: 400, y: 30 },
+                    { role: 'AI Turbine Control', x: 150, y: 150 },
+                    { role: 'AI Hydrology Predict', x: 650, y: 150 },
+                    { role: 'AI Power Optimize', x: 150, y: 300 },
+                    { role: 'AI Hydropower AI', x: 400, y: 350 },
+                    { role: 'AI Hydropower Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HydropowerSmart Director', to: 'AI Turbine Control', content: '水轮机控制' },
+                    { from: 'AI HydropowerSmart Director', to: 'AI Hydropower Analytics', content: '水电分析' },
+                    { from: 'AI Turbine Control', to: 'AI Hydrology Predict', content: '水文预测' },
+                    { from: 'AI Hydrology Predict', to: 'AI Power Optimize', content: '发电优化' },
+                    { from: 'AI Power Optimize', to: 'AI Hydropower AI', content: '水电AI' }
+                ]
+            },
+            {
+                id: 'ai-oildrilling-smart',
+                name: 'AI智慧石油钻井系统',
+                icon: '🛢️',
+                desc: '智慧石油钻井，包括钻井控制、地质分析、井壁稳定等',
+                agents: ['AI OildrillingSmart Director', 'AI Drilling Control', 'AI Geology Analyze', 'AI Well Stability', 'AI Oildrilling AI', 'AI Oildrilling Analytics'],
+                positions: [
+                    { role: 'AI OildrillingSmart Director', x: 400, y: 30 },
+                    { role: 'AI Drilling Control', x: 150, y: 150 },
+                    { role: 'AI Geology Analyze', x: 650, y: 150 },
+                    { role: 'AI Well Stability', x: 150, y: 300 },
+                    { role: 'AI Oildrilling AI', x: 400, y: 350 },
+                    { role: 'AI Oildrilling Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI OildrillingSmart Director', to: 'AI Drilling Control', content: '钻井控制' },
+                    { from: 'AI OildrillingSmart Director', to: 'AI Oildrilling Analytics', content: '钻井分析' },
+                    { from: 'AI Drilling Control', to: 'AI Geology Analyze', content: '地质分析' },
+                    { from: 'AI Geology Analyze', to: 'AI Well Stability', content: '井壁稳定' },
+                    { from: 'AI Well Stability', to: 'AI Oildrilling AI', content: '钻井AI' }
+                ]
+            },
+            {
+                id: 'ai-coalmine-smart',
+                name: 'AI智慧煤矿系统',
+                icon: '⛏️',
+                desc: '智慧煤矿管理，包括采掘控制、瓦斯监测、通风系统等',
+                agents: ['AI CoalmineSmart Director', 'AI Mining Control', 'AI Gas Monitor', 'AI Ventilation', 'AI Coalmine AI', 'AI Coalmine Analytics'],
+                positions: [
+                    { role: 'AI CoalmineSmart Director', x: 400, y: 30 },
+                    { role: 'AI Mining Control', x: 150, y: 150 },
+                    { role: 'AI Gas Monitor', x: 650, y: 150 },
+                    { role: 'AI Ventilation', x: 150, y: 300 },
+                    { role: 'AI Coalmine AI', x: 400, y: 350 },
+                    { role: 'AI Coalmine Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI CoalmineSmart Director', to: 'AI Mining Control', content: '采掘控制' },
+                    { from: 'AI CoalmineSmart Director', to: 'AI Coalmine Analytics', content: '煤矿分析' },
+                    { from: 'AI Mining Control', to: 'AI Gas Monitor', content: '瓦斯监测' },
+                    { from: 'AI Gas Monitor', to: 'AI Ventilation', content: '通风系统' },
+                    { from: 'AI Ventilation', to: 'AI Coalmine AI', content: '煤矿AI' }
+                ]
+            },
+            {
+                id: 'ai-port-smart',
+                name: 'AI智慧港口系统',
+                icon: '⚓',
+                desc: '智慧港口运营，包括船舶调度、集装箱管理、装卸作业等',
+                agents: ['AI PortSmart Director', 'AI Ship Scheduling', 'AI Container Manage', 'AI Cargo Handling', 'AI Port AI', 'AI Port Analytics'],
+                positions: [
+                    { role: 'AI PortSmart Director', x: 400, y: 30 },
+                    { role: 'AI Ship Scheduling', x: 150, y: 150 },
+                    { role: 'AI Container Manage', x: 650, y: 150 },
+                    { role: 'AI Cargo Handling', x: 150, y: 300 },
+                    { role: 'AI Port AI', x: 400, y: 350 },
+                    { role: 'AI Port Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI PortSmart Director', to: 'AI Ship Scheduling', content: '船舶调度' },
+                    { from: 'AI PortSmart Director', to: 'AI Port Analytics', content: '港口分析' },
+                    { from: 'AI Ship Scheduling', to: 'AI Container Manage', content: '集装箱管理' },
+                    { from: 'AI Container Manage', to: 'AI Cargo Handling', content: '装卸作业' },
+                    { from: 'AI Cargo Handling', to: 'AI Port AI', content: '港口AI' }
+                ]
+            },
+            {
+                id: 'ai-airport-smart',
+                name: 'AI智慧机场系统',
+                icon: '✈️',
+                desc: '智慧机场管理，包括航班调度、行李处理、安检监控等',
+                agents: ['AI AirportSmart Director', 'AI Flight Scheduling', 'AI Baggage Handle', 'AI Security Monitor', 'AI Airport AI', 'AI Airport Analytics'],
+                positions: [
+                    { role: 'AI AirportSmart Director', x: 400, y: 30 },
+                    { role: 'AI Flight Scheduling', x: 150, y: 150 },
+                    { role: 'AI Baggage Handle', x: 650, y: 150 },
+                    { role: 'AI Security Monitor', x: 150, y: 300 },
+                    { role: 'AI Airport AI', x: 400, y: 350 },
+                    { role: 'AI Airport Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI AirportSmart Director', to: 'AI Flight Scheduling', content: '航班调度' },
+                    { from: 'AI AirportSmart Director', to: 'AI Airport Analytics', content: '机场分析' },
+                    { from: 'AI Flight Scheduling', to: 'AI Baggage Handle', content: '行李处理' },
+                    { from: 'AI Baggage Handle', to: 'AI Security Monitor', content: '安检监控' },
+                    { from: 'AI Security Monitor', to: 'AI Airport AI', content: '机场AI' }
+                ]
+            },
+            {
+                id: 'ai-hospital-smart',
+                name: 'AI智慧医院系统',
+                icon: '🏥',
+                desc: '智慧医院管理，包括患者分诊、诊疗辅助、医疗影像等',
+                agents: ['AI HospitalSmart Director', 'AI Triage System', 'AI Diagnosis Assist', 'AI Medical Imaging', 'AI Hospital AI', 'AI Hospital Analytics'],
+                positions: [
+                    { role: 'AI HospitalSmart Director', x: 400, y: 30 },
+                    { role: 'AI Triage System', x: 150, y: 150 },
+                    { role: 'AI Diagnosis Assist', x: 650, y: 150 },
+                    { role: 'AI Medical Imaging', x: 150, y: 300 },
+                    { role: 'AI Hospital AI', x: 400, y: 350 },
+                    { role: 'AI Hospital Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HospitalSmart Director', to: 'AI Triage System', content: '患者分诊' },
+                    { from: 'AI HospitalSmart Director', to: 'AI Hospital Analytics', content: '医院分析' },
+                    { from: 'AI Triage System', to: 'AI Diagnosis Assist', content: '诊疗辅助' },
+                    { from: 'AI Diagnosis Assist', to: 'AI Medical Imaging', content: '医疗影像' },
+                    { from: 'AI Medical Imaging', to: 'AI Hospital AI', content: '医院AI' }
+                ]
+            },
+            {
+                id: 'ai-hotel-smart',
+                name: 'AI智慧酒店系统',
+                icon: '🏨',
+                desc: '智慧酒店管理，包括客房服务、预订管理、客户体验等',
+                agents: ['AI HotelSmart Director', 'AI Room Service', 'AI Booking Manage', 'AI Guest Experience', 'AI Hotel AI', 'AI Hotel Analytics'],
+                positions: [
+                    { role: 'AI HotelSmart Director', x: 400, y: 30 },
+                    { role: 'AI Room Service', x: 150, y: 150 },
+                    { role: 'AI Booking Manage', x: 650, y: 150 },
+                    { role: 'AI Guest Experience', x: 150, y: 300 },
+                    { role: 'AI Hotel AI', x: 400, y: 350 },
+                    { role: 'AI Hotel Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HotelSmart Director', to: 'AI Room Service', content: '客房服务' },
+                    { from: 'AI HotelSmart Director', to: 'AI Hotel Analytics', content: '酒店分析' },
+                    { from: 'AI Room Service', to: 'AI Booking Manage', content: '预订管理' },
+                    { from: 'AI Booking Manage', to: 'AI Guest Experience', content: '客户体验' },
+                    { from: 'AI Guest Experience', to: 'AI Hotel AI', content: '酒店AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -39072,7 +39230,57 @@
             'AI Student Assess': { icon: '📝', color: '#3b82f6', role: 'AI学生评估' },
             'AI Classroom Device': { icon: '💻', color: '#22c55e', role: 'AI教室设备' },
             'AI Classroom AI': { icon: '🤖', color: '#8b5cf6', role: 'AI教室AI' },
-            'AI Classroom Analytics': { icon: '📊', color: '#06b6d4', role: 'AI教室分析' }
+            'AI Classroom Analytics': { icon: '📊', color: '#06b6d4', role: 'AI教室分析' },
+            // Cycle 485 新增 Agent Roles
+            // AI智慧水电站系统
+            'AI HydropowerSmart Director': { icon: '💧', color: '#0ea5e9', role: 'AI水电总监' },
+            'AI Turbine Control': { icon: '⚙️', color: '#22c55e', role: 'AI水轮机控制' },
+            'AI Hydrology Predict': { icon: '🌊', color: '#3b82f6', role: 'AI水文预测' },
+            'AI Power Optimize': { icon: '⚡', color: '#f59e0b', role: 'AI发电优化' },
+            'AI Hydropower AI': { icon: '🤖', color: '#8b5cf6', role: 'AI水电AI' },
+            'AI Hydropower Analytics': { icon: '📊', color: '#06b6d4', role: 'AI水电分析' },
+            // AI智慧石油钻井系统
+            'AI OildrillingSmart Director': { icon: '🛢️', color: '#f97316', role: 'AI钻井总监' },
+            'AI Drilling Control': { icon: '🔩', color: '#64748b', role: 'AI钻井控制' },
+            'AI Geology Analyze': { icon: '🗺️', color: '#84cc16', role: 'AI地质分析' },
+            'AI Well Stability': { icon: '🏗️', color: '#a855f7', role: 'AI井壁稳定' },
+            'AI Oildrilling AI': { icon: '🤖', color: '#8b5cf6', role: 'AI钻井AI' },
+            'AI Oildrilling Analytics': { icon: '📊', color: '#06b6d4', role: 'AI钻井分析' },
+            // AI智慧煤矿系统
+            'AI CoalmineSmart Director': { icon: '⛏️', color: '#dc2626', role: 'AI煤矿总监' },
+            'AI Mining Control': { icon: '🔧', color: '#64748b', role: 'AI采掘控制' },
+            'AI Gas Monitor': { icon: '💨', color: '#22c55e', role: 'AI瓦斯监测' },
+            'AI Ventilation': { icon: '🌬️', color: '#0ea5e9', role: 'AI通风系统' },
+            'AI Coalmine AI': { icon: '🤖', color: '#8b5cf6', role: 'AI煤矿AI' },
+            'AI Coalmine Analytics': { icon: '📊', color: '#06b6d4', role: 'AI煤矿分析' },
+            // AI智慧港口系统
+            'AI PortSmart Director': { icon: '⚓', color: '#0d9488', role: 'AI港口总监' },
+            'AI Ship Scheduling': { icon: '🚢', color: '#3b82f6', role: 'AI船舶调度' },
+            'AI Container Manage': { icon: '📦', color: '#f59e0b', role: 'AI集装箱管理' },
+            'AI Cargo Handling': { icon: '🏭', color: '#84cc16', role: 'AI装卸作业' },
+            'AI Port AI': { icon: '🤖', color: '#8b5cf6', role: 'AI港口AI' },
+            'AI Port Analytics': { icon: '📊', color: '#06b6d4', role: 'AI港口分析' },
+            // AI智慧机场系统
+            'AI AirportSmart Director': { icon: '✈️', color: '#0ea5e9', role: 'AI机场总监' },
+            'AI Flight Scheduling': { icon: '🛫', color: '#22c55e', role: 'AI航班调度' },
+            'AI Baggage Handle': { icon: '🧳', color: '#f97316', role: 'AI行李处理' },
+            'AI Security Monitor': { icon: '🔒', color: '#dc2626', role: 'AI安检监控' },
+            'AI Airport AI': { icon: '🤖', color: '#8b5cf6', role: 'AI机场AI' },
+            'AI Airport Analytics': { icon: '📊', color: '#06b6d4', role: 'AI机场分析' },
+            // AI智慧医院系统
+            'AI HospitalSmart Director': { icon: '🏥', color: '#ec4899', role: 'AI医院总监' },
+            'AI Triage System': { icon: '🏥', color: '#f97316', role: 'AI患者分诊' },
+            'AI Diagnosis Assist': { icon: '🩺', color: '#3b82f6', role: 'AI诊疗辅助' },
+            'AI Medical Imaging': { icon: '🖼️', color: '#a855f7', role: 'AI医疗影像' },
+            'AI Hospital AI': { icon: '🤖', color: '#8b5cf6', role: 'AI医院AI' },
+            'AI Hospital Analytics': { icon: '📊', color: '#06b6d4', role: 'AI医院分析' },
+            // AI智慧酒店系统
+            'AI HotelSmart Director': { icon: '🏨', color: '#f59e0b', role: 'AI酒店总监' },
+            'AI Room Service': { icon: '🛏️', color: '#22c55e', role: 'AI客房服务' },
+            'AI Booking Manage': { icon: '📅', color: '#3b82f6', role: 'AI预订管理' },
+            'AI Guest Experience': { icon: '😊', color: '#ec4899', role: 'AI客户体验' },
+            'AI Hotel AI': { icon: '🤖', color: '#8b5cf6', role: 'AI酒店AI' },
+            'AI Hotel Analytics': { icon: '📊', color: '#06b6d4', role: 'AI酒店分析' }
         };
 
         // 拖拽相关变量
