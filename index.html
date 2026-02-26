@@ -39795,8 +39795,173 @@
             }
         ];
 
+        // Cycle 529 - AI智能安防、建筑、人力资源、娱乐、制造、零售、旅游服务系统
+        const cycle529Templates = [
+            // AI智能安防服务系统
+            {
+                id: 'ai-security-service',
+                name: 'AI智能安防服务系统',
+                icon: '🛡️',
+                desc: '智能安防服务系统，包括监控分析、人脸识别、门禁管理等',
+                agents: ['AI Security Director', 'AI Surveillance Analysis', 'AI Face Recognition', 'AI Access Control', 'AI Security AI', 'AI Security Analytics'],
+                positions: [
+                    { role: 'AI Security Director', x: 400, y: 30 },
+                    { role: 'AI Surveillance Analysis', x: 150, y: 150 },
+                    { role: 'AI Face Recognition', x: 650, y: 150 },
+                    { role: 'AI Access Control', x: 150, y: 300 },
+                    { role: 'AI Security AI', x: 400, y: 350 },
+                    { role: 'AI Security Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Security Director', to: 'AI Surveillance Analysis', content: '监控分析' },
+                    { from: 'AI Security Director', to: 'AI Security Analytics', content: '安防分析' },
+                    { from: 'AI Surveillance Analysis', to: 'AI Face Recognition', content: '人脸识别' },
+                    { from: 'AI Face Recognition', to: 'AI Access Control', content: '门禁管理' },
+                    { from: 'AI Access Control', to: 'AI Security AI', content: '安防AI' }
+                ]
+            },
+            // AI智能建筑服务系统
+            {
+                id: 'ai-construction-service',
+                name: 'AI智能建筑服务系统',
+                icon: '🏗️',
+                desc: '智能建筑服务系统，包括BIM设计、施工管理、设施运维等',
+                agents: ['AI Construction Director', 'AI BIM Design', 'AI Construction Management', 'AI Facility Maintenance', 'AI Construction AI', 'AI Construction Analytics'],
+                positions: [
+                    { role: 'AI Construction Director', x: 400, y: 30 },
+                    { role: 'AI BIM Design', x: 150, y: 150 },
+                    { role: 'AI Construction Management', x: 650, y: 150 },
+                    { role: 'AI Facility Maintenance', x: 150, y: 300 },
+                    { role: 'AI Construction AI', x: 400, y: 350 },
+                    { role: 'AI Construction Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Construction Director', to: 'AI BIM Design', content: 'BIM设计' },
+                    { from: 'AI Construction Director', to: 'AI Construction Analytics', content: '建筑分析' },
+                    { from: 'AI BIM Design', to: 'AI Construction Management', content: '施工管理' },
+                    { from: 'AI Construction Management', to: 'AI Facility Maintenance', content: '设施运维' },
+                    { from: 'AI Facility Maintenance', to: 'AI Construction AI', content: '建筑AI' }
+                ]
+            },
+            // AI智能人力资源服务系统
+            {
+                id: 'ai-hr-service',
+                name: 'AI智能人力资源服务系统',
+                icon: '👥',
+                desc: '智能人力资源服务系统，包括招聘管理、绩效评估、培训发展等',
+                agents: ['AI HR Director', 'AI Recruitment', 'AI Performance Review', 'AI Training Development', 'AI HR AI', 'AI HR Analytics'],
+                positions: [
+                    { role: 'AI HR Director', x: 400, y: 30 },
+                    { role: 'AI Recruitment', x: 150, y: 150 },
+                    { role: 'AI Performance Review', x: 650, y: 150 },
+                    { role: 'AI Training Development', x: 150, y: 300 },
+                    { role: 'AI HR AI', x: 400, y: 350 },
+                    { role: 'AI HR Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HR Director', to: 'AI Recruitment', content: '招聘管理' },
+                    { from: 'AI HR Director', to: 'AI HR Analytics', content: '人力分析' },
+                    { from: 'AI Recruitment', to: 'AI Performance Review', content: '绩效评估' },
+                    { from: 'AI Performance Review', to: 'AI Training Development', content: '培训发展' },
+                    { from: 'AI Training Development', to: 'AI HR AI', content: '人力AI' }
+                ]
+            },
+            // AI智能娱乐服务系统
+            {
+                id: 'ai-entertainment-service',
+                name: 'AI智能娱乐服务系统',
+                icon: '🎭',
+                desc: '智能娱乐服务系统，包括演出管理、内容创作、票务系统等',
+                agents: ['AI Entertainment Director', 'AI Show Management', 'AI Content Creation', 'AI Ticketing System', 'AI Entertainment AI', 'AI Entertainment Analytics'],
+                positions: [
+                    { role: 'AI Entertainment Director', x: 400, y: 30 },
+                    { role: 'AI Show Management', x: 150, y: 150 },
+                    { role: 'AI Content Creation', x: 650, y: 150 },
+                    { role: 'AI Ticketing System', x: 150, y: 300 },
+                    { role: 'AI Entertainment AI', x: 400, y: 350 },
+                    { role: 'AI Entertainment Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Entertainment Director', to: 'AI Show Management', content: '演出管理' },
+                    { from: 'AI Entertainment Director', to: 'AI Entertainment Analytics', content: '娱乐分析' },
+                    { from: 'AI Show Management', to: 'AI Content Creation', content: '内容创作' },
+                    { from: 'AI Content Creation', to: 'AI Ticketing System', content: '票务系统' },
+                    { from: 'AI Ticketing System', to: 'AI Entertainment AI', content: '娱乐AI' }
+                ]
+            },
+            // AI智能制造服务系统
+            {
+                id: 'ai-manufacturing-service',
+                name: 'AI智能制造服务系统',
+                icon: '🏭',
+                desc: '智能制造服务系统，包括生产计划、质量管理、设备维护等',
+                agents: ['AI Manufacturing Director', 'AI Production Planning', 'AI Quality Control', 'AI Equipment Maintenance', 'AI Manufacturing AI', 'AI Manufacturing Analytics'],
+                positions: [
+                    { role: 'AI Manufacturing Director', x: 400, y: 30 },
+                    { role: 'AI Production Planning', x: 150, y: 150 },
+                    { role: 'AI Quality Control', x: 650, y: 150 },
+                    { role: 'AI Equipment Maintenance', x: 150, y: 300 },
+                    { role: 'AI Manufacturing AI', x: 400, y: 350 },
+                    { role: 'AI Manufacturing Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Manufacturing Director', to: 'AI Production Planning', content: '生产计划' },
+                    { from: 'AI Manufacturing Director', to: 'AI Manufacturing Analytics', content: '制造分析' },
+                    { from: 'AI Production Planning', to: 'AI Quality Control', content: '质量管理' },
+                    { from: 'AI Quality Control', to: 'AI Equipment Maintenance', content: '设备维护' },
+                    { from: 'AI Equipment Maintenance', to: 'AI Manufacturing AI', content: '制造AI' }
+                ]
+            },
+            // AI智能零售服务系统
+            {
+                id: 'ai-retail-service',
+                name: 'AI智能零售服务系统',
+                icon: '🛒',
+                desc: '智能零售服务系统，包括商品管理、库存管理、客户分析等',
+                agents: ['AI Retail Director', 'AI Product Management', 'AI Inventory Management', 'AI Customer Analysis', 'AI Retail AI', 'AI Retail Analytics'],
+                positions: [
+                    { role: 'AI Retail Director', x: 400, y: 30 },
+                    { role: 'AI Product Management', x: 150, y: 150 },
+                    { role: 'AI Inventory Management', x: 650, y: 150 },
+                    { role: 'AI Customer Analysis', x: 150, y: 300 },
+                    { role: 'AI Retail AI', x: 400, y: 350 },
+                    { role: 'AI Retail Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Retail Director', to: 'AI Product Management', content: '商品管理' },
+                    { from: 'AI Retail Director', to: 'AI Retail Analytics', content: '零售分析' },
+                    { from: 'AI Product Management', to: 'AI Inventory Management', content: '库存管理' },
+                    { from: 'AI Inventory Management', to: 'AI Customer Analysis', content: '客户分析' },
+                    { from: 'AI Customer Analysis', to: 'AI Retail AI', content: '零售AI' }
+                ]
+            },
+            // AI智能旅游服务系统
+            {
+                id: 'ai-tourism-service',
+                name: 'AI智能旅游服务系统',
+                icon: '✈️',
+                desc: '智能旅游服务系统，包括行程规划、景区导览、旅游预订等',
+                agents: ['AI Tourism Director', 'AI Trip Planning', 'AI Scenic Guide', 'AI Travel Booking', 'AI Tourism AI', 'AI Tourism Analytics'],
+                positions: [
+                    { role: 'AI Tourism Director', x: 400, y: 30 },
+                    { role: 'AI Trip Planning', x: 150, y: 150 },
+                    { role: 'AI Scenic Guide', x: 650, y: 150 },
+                    { role: 'AI Travel Booking', x: 150, y: 300 },
+                    { role: 'AI Tourism AI', x: 400, y: 350 },
+                    { role: 'AI Tourism Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Tourism Director', to: 'AI Trip Planning', content: '行程规划' },
+                    { from: 'AI Tourism Director', to: 'AI Tourism Analytics', content: '旅游分析' },
+                    { from: 'AI Trip Planning', to: 'AI Scenic Guide', content: '景区导览' },
+                    { from: 'AI Scenic Guide', to: 'AI Travel Booking', content: '旅游预订' },
+                    { from: 'AI Travel Booking', to: 'AI Tourism AI', content: '旅游AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -48285,7 +48450,57 @@
             'AI Program Production': { icon: '🎬', color: '#22c55e', role: 'AI节目制作' },
             'AI Media Distribution': { icon: '📡', color: '#f97316', role: 'AI传播分析' },
             'AI Media AI': { icon: '🤖', color: '#8b5cf6', role: 'AI媒体AI' },
-            'AI Media Analytics': { icon: '📊', color: '#06b6d4', role: 'AI媒体分析' }
+            'AI Media Analytics': { icon: '📊', color: '#06b6d4', role: 'AI媒体分析' },
+            // Cycle 529 新增角色 - 7个行业服务系统
+            // AI智能安防服务系统
+            'AI Security Director': { icon: '🛡️', color: '#f59e0b', role: 'AI安防总监' },
+            'AI Surveillance Analysis': { icon: '📹', color: '#3b82f6', role: 'AI监控分析' },
+            'AI Face Recognition': { icon: '👤', color: '#22c55e', role: 'AI人脸识别' },
+            'AI Access Control': { icon: '🚪', color: '#f97316', role: 'AI门禁管理' },
+            'AI Security AI': { icon: '🤖', color: '#8b5cf6', role: 'AI安防AI' },
+            'AI Security Analytics': { icon: '📊', color: '#06b6d4', role: 'AI安防分析' },
+            // AI智能建筑服务系统
+            'AI Construction Director': { icon: '🏗️', color: '#f59e0b', role: 'AI建筑总监' },
+            'AI BIM Design': { icon: '📐', color: '#3b82f6', role: 'AIBIM设计' },
+            'AI Construction Management': { icon: '👷', color: '#22c55e', role: 'AI施工管理' },
+            'AI Facility Maintenance': { icon: '🔧', color: '#f97316', role: 'AI设施运维' },
+            'AI Construction AI': { icon: '🤖', color: '#8b5cf6', role: 'AI建筑AI' },
+            'AI Construction Analytics': { icon: '📊', color: '#06b6d4', role: 'AI建筑分析' },
+            // AI智能人力资源服务系统
+            'AI HR Director': { icon: '👥', color: '#f59e0b', role: 'AI人力总监' },
+            'AI Recruitment': { icon: '📋', color: '#3b82f6', role: 'AI招聘管理' },
+            'AI Performance Review': { icon: '📈', color: '#22c55e', role: 'AI绩效评估' },
+            'AI Training Development': { icon: '🎓', color: '#f97316', role: 'AI培训发展' },
+            'AI HR AI': { icon: '🤖', color: '#8b5cf6', role: 'AI人力AI' },
+            'AI HR Analytics': { icon: '📊', color: '#06b6d4', role: 'AI人力分析' },
+            // AI智能娱乐服务系统
+            'AI Entertainment Director': { icon: '🎭', color: '#f59e0b', role: 'AI娱乐总监' },
+            'AI Show Management': { icon: '🎪', color: '#3b82f6', role: 'AI演出管理' },
+            'AI Content Creation': { icon: '✨', color: '#22c55e', role: 'AI内容创作' },
+            'AI Ticketing System': { icon: '🎟️', color: '#f97316', role: 'AI票务系统' },
+            'AI Entertainment AI': { icon: '🤖', color: '#8b5cf6', role: 'AI娱乐AI' },
+            'AI Entertainment Analytics': { icon: '📊', color: '#06b6d4', role: 'AI娱乐分析' },
+            // AI智能制造服务系统
+            'AI Manufacturing Director': { icon: '🏭', color: '#f59e0b', role: 'AI制造总监' },
+            'AI Production Planning': { icon: '📋', color: '#3b82f6', role: 'AI生产计划' },
+            'AI Quality Control': { icon: '✅', color: '#22c55e', role: 'AI质量管理' },
+            'AI Equipment Maintenance': { icon: '🔧', color: '#f97316', role: 'AI设备维护' },
+            'AI Manufacturing AI': { icon: '🤖', color: '#8b5cf6', role: 'AI制造AI' },
+            'AI Manufacturing Analytics': { icon: '📊', color: '#06b6d4', role: 'AI制造分析' },
+            // AI智能零售服务系统
+            'AI Retail Director': { icon: '🛒', color: '#f59e0b', role: 'AI零售总监' },
+            'AI Product Management': { icon: '📦', color: '#3b82f6', role: 'AI商品管理' },
+            'AI Inventory Management': { icon: '📊', color: '#22c55e', role: 'AI库存管理' },
+            'AI Customer Analysis': { icon: '👤', color: '#f97316', role: 'AI客户分析' },
+            'AI Retail AI': { icon: '🤖', color: '#8b5cf6', role: 'AI零售AI' },
+            'AI Retail Analytics': { icon: '📈', color: '#06b6d4', role: 'AI零售分析' },
+            // AI智能旅游服务系统
+            'AI Tourism Director': { icon: '✈️', color: '#f59e0b', role: 'AI旅游总监' },
+            'AI Trip Planning': { icon: '🗺️', color: '#3b82f6', role: 'AI行程规划' },
+            'AI Scenic Guide': { icon: '🏞️', color: '#22c55e', role: 'AI景区导览' },
+            'AI Travel Booking': { icon: '🎫', color: '#f97316', role: 'AI旅游预订' },
+            'AI Tourism AI': { icon: '🤖', color: '#8b5cf6', role: 'AI旅游AI' },
+            'AI Tourism Analytics': { icon: '📊', color: '#06b6d4', role: 'AI旅游分析' }
         };
 
         // 拖拽相关变量
