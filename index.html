@@ -36660,8 +36660,173 @@
             }
         ];
 
+        // Cycle 510 新增模板 - 7个行业服务系统
+        const cycle510Templates = [
+            // AI智能保险服务系统
+            {
+                id: 'ai-insurance-service',
+                name: 'AI智能保险服务系统',
+                icon: '🏥',
+                desc: '智能保险服务系统，包括保险咨询、理赔管理、风险评估等',
+                agents: ['AI Insurance Director', 'AI Insurance Consultant', 'AI Claims Management', 'AI Risk Assessment', 'AI Insurance AI', 'AI Insurance Analytics'],
+                positions: [
+                    { role: 'AI Insurance Director', x: 400, y: 30 },
+                    { role: 'AI Insurance Consultant', x: 150, y: 150 },
+                    { role: 'AI Claims Management', x: 650, y: 150 },
+                    { role: 'AI Risk Assessment', x: 150, y: 300 },
+                    { role: 'AI Insurance AI', x: 400, y: 350 },
+                    { role: 'AI Insurance Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Insurance Director', to: 'AI Insurance Consultant', content: '保险咨询' },
+                    { from: 'AI Insurance Director', to: 'AI Insurance Analytics', content: '保险分析' },
+                    { from: 'AI Insurance Consultant', to: 'AI Claims Management', content: '理赔管理' },
+                    { from: 'AI Claims Management', to: 'AI Risk Assessment', content: '风险评估' },
+                    { from: 'AI Risk Assessment', to: 'AI Insurance AI', content: '保险AI' }
+                ]
+            },
+            // AI智能租赁服务系统
+            {
+                id: 'ai-rental-service',
+                name: 'AI智能租赁服务系统',
+                icon: '🏠',
+                desc: '智能租赁服务系统，包括房源管理、租客匹配、合同管理等',
+                agents: ['AI Rental Director', 'AI Property Management', 'AI Tenant Matching', 'AI Contract Management', 'AI Rental AI', 'AI Rental Analytics'],
+                positions: [
+                    { role: 'AI Rental Director', x: 400, y: 30 },
+                    { role: 'AI Property Management', x: 150, y: 150 },
+                    { role: 'AI Tenant Matching', x: 650, y: 150 },
+                    { role: 'AI Contract Management', x: 150, y: 300 },
+                    { role: 'AI Rental AI', x: 400, y: 350 },
+                    { role: 'AI Rental Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Rental Director', to: 'AI Property Management', content: '房源管理' },
+                    { from: 'AI Rental Director', to: 'AI Rental Analytics', content: '租赁分析' },
+                    { from: 'AI Property Management', to: 'AI Tenant Matching', content: '租客匹配' },
+                    { from: 'AI Tenant Matching', to: 'AI Contract Management', content: '合同管理' },
+                    { from: 'AI Contract Management', to: 'AI Rental AI', content: '租赁AI' }
+                ]
+            },
+            // AI智能装修服务系统
+            {
+                id: 'ai-renovation-service',
+                name: 'AI智能装修服务系统',
+                icon: '🎨',
+                desc: '智能装修服务系统，包括设计预览、进度管理、质量监控等',
+                agents: ['AI Renovation Director', 'AI Design Preview', 'AI Progress Management', 'AI Quality Control', 'AI Renovation AI', 'AI Renovation Analytics'],
+                positions: [
+                    { role: 'AI Renovation Director', x: 400, y: 30 },
+                    { role: 'AI Design Preview', x: 150, y: 150 },
+                    { role: 'AI Progress Management', x: 650, y: 150 },
+                    { role: 'AI Quality Control', x: 150, y: 300 },
+                    { role: 'AI Renovation AI', x: 400, y: 350 },
+                    { role: 'AI Renovation Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Renovation Director', to: 'AI Design Preview', content: '设计预览' },
+                    { from: 'AI Renovation Director', to: 'AI Renovation Analytics', content: '装修分析' },
+                    { from: 'AI Design Preview', to: 'AI Progress Management', content: '进度管理' },
+                    { from: 'AI Progress Management', to: 'AI Quality Control', content: '质量监控' },
+                    { from: 'AI Quality Control', to: 'AI Renovation AI', content: '装修AI' }
+                ]
+            },
+            // AI智能物流服务系统
+            {
+                id: 'ai-logistics-service',
+                name: 'AI智能物流服务系统',
+                icon: '🚚',
+                desc: '智能物流服务系统，包括路线规划、仓储管理、配送追踪等',
+                agents: ['AI Logistics Director', 'AI Route Planning', 'AI Warehouse Management', 'AI Delivery Tracking', 'AI Logistics AI', 'AI Logistics Analytics'],
+                positions: [
+                    { role: 'AI Logistics Director', x: 400, y: 30 },
+                    { role: 'AI Route Planning', x: 150, y: 150 },
+                    { role: 'AI Warehouse Management', x: 650, y: 150 },
+                    { role: 'AI Delivery Tracking', x: 150, y: 300 },
+                    { role: 'AI Logistics AI', x: 400, y: 350 },
+                    { role: 'AI Logistics Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Logistics Director', to: 'AI Route Planning', content: '路线规划' },
+                    { from: 'AI Logistics Director', to: 'AI Logistics Analytics', content: '物流分析' },
+                    { from: 'AI Route Planning', to: 'AI Warehouse Management', content: '仓储管理' },
+                    { from: 'AI Warehouse Management', to: 'AI Delivery Tracking', content: '配送追踪' },
+                    { from: 'AI Delivery Tracking', to: 'AI Logistics AI', content: '物流AI' }
+                ]
+            },
+            // AI智能教育服务系统
+            {
+                id: 'ai-education-service',
+                name: 'AI智能教育服务系统',
+                icon: '📚',
+                desc: '智能教育服务系统，包括课程推荐、学习跟踪、在线辅导等',
+                agents: ['AI Education Director', 'AI Course Recommendation', 'AI Learning Tracking', 'AI Online Tutoring', 'AI Education AI', 'AI Education Analytics'],
+                positions: [
+                    { role: 'AI Education Director', x: 400, y: 30 },
+                    { role: 'AI Course Recommendation', x: 150, y: 150 },
+                    { role: 'AI Learning Tracking', x: 650, y: 150 },
+                    { role: 'AI Online Tutoring', x: 150, y: 300 },
+                    { role: 'AI Education AI', x: 400, y: 350 },
+                    { role: 'AI Education Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Education Director', to: 'AI Course Recommendation', content: '课程推荐' },
+                    { from: 'AI Education Director', to: 'AI Education Analytics', content: '教育分析' },
+                    { from: 'AI Course Recommendation', to: 'AI Learning Tracking', content: '学习跟踪' },
+                    { from: 'AI Learning Tracking', to: 'AI Online Tutoring', content: '在线辅导' },
+                    { from: 'AI Online Tutoring', to: 'AI Education AI', content: '教育AI' }
+                ]
+            },
+            // AI智能旅游服务系统
+            {
+                id: 'ai-travel-service',
+                name: 'AI智能旅游服务系统',
+                icon: '✈️',
+                desc: '智能旅游服务系统，包括行程规划、景点推荐、预订管理等',
+                agents: ['AI Travel Director', 'AI Trip Planning', 'AI Attraction Recommendation', 'AI Booking Management', 'AI Travel AI', 'AI Travel Analytics'],
+                positions: [
+                    { role: 'AI Travel Director', x: 400, y: 30 },
+                    { role: 'AI Trip Planning', x: 150, y: 150 },
+                    { role: 'AI Attraction Recommendation', x: 650, y: 150 },
+                    { role: 'AI Booking Management', x: 150, y: 300 },
+                    { role: 'AI Travel AI', x: 400, y: 350 },
+                    { role: 'AI Travel Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Travel Director', to: 'AI Trip Planning', content: '行程规划' },
+                    { from: 'AI Travel Director', to: 'AI Travel Analytics', content: '旅游分析' },
+                    { from: 'AI Trip Planning', to: 'AI Attraction Recommendation', content: '景点推荐' },
+                    { from: 'AI Attraction Recommendation', to: 'AI Booking Management', content: '预订管理' },
+                    { from: 'AI Booking Management', to: 'AI Travel AI', content: '旅游AI' }
+                ]
+            },
+            // AI智能健身服务系统
+            {
+                id: 'ai-fitness-service',
+                name: 'AI智能健身服务系统',
+                icon: '💪',
+                desc: '智能健身服务系统，包括训练计划、体态分析、健康追踪等',
+                agents: ['AI Fitness Director', 'AI Training Plan', 'AI Posture Analysis', 'AI Health Tracking', 'AI Fitness AI', 'AI Fitness Analytics'],
+                positions: [
+                    { role: 'AI Fitness Director', x: 400, y: 30 },
+                    { role: 'AI Training Plan', x: 150, y: 150 },
+                    { role: 'AI Posture Analysis', x: 650, y: 150 },
+                    { role: 'AI Health Tracking', x: 150, y: 300 },
+                    { role: 'AI Fitness AI', x: 400, y: 350 },
+                    { role: 'AI Fitness Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fitness Director', to: 'AI Training Plan', content: '训练计划' },
+                    { from: 'AI Fitness Director', to: 'AI Fitness Analytics', content: '健身分析' },
+                    { from: 'AI Training Plan', to: 'AI Posture Analysis', content: '体态分析' },
+                    { from: 'AI Posture Analysis', to: 'AI Health Tracking', content: '健康追踪' },
+                    { from: 'AI Health Tracking', to: 'AI Fitness AI', content: '健身AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -44311,7 +44476,57 @@
             'AI Odds Calculation': { icon: '🔢', color: '#8b5cf6', role: 'AI赔率计算' },
             'AI Risk Management': { icon: '⚖️', color: '#ef4444', role: 'AI风险管理' },
             'AI Betting AI': { icon: '🤖', color: '#22c55e', role: 'AI投注AI' },
-            'AI Betting Analytics': { icon: '📊', color: '#06b6d4', role: 'AI投注分析' }
+            'AI Betting Analytics': { icon: '📊', color: '#06b6d4', role: 'AI投注分析' },
+            // Cycle 510 新增角色 - 7个行业服务系统
+            // AI智能保险服务系统
+            'AI Insurance Director': { icon: '🏥', color: '#8b5cf6', role: 'AI保险总监' },
+            'AI Insurance Consultant': { icon: '💬', color: '#3b82f6', role: 'AI保险咨询' },
+            'AI Claims Management': { icon: '📋', color: '#22c55e', role: 'AI理赔管理' },
+            'AI Risk Assessment': { icon: '⚖️', color: '#ef4444', role: 'AI风险评估' },
+            'AI Insurance AI': { icon: '🤖', color: '#f59e0b', role: 'AI保险AI' },
+            'AI Insurance Analytics': { icon: '📊', color: '#06b6d4', role: 'AI保险分析' },
+            // AI智能租赁服务系统
+            'AI Rental Director': { icon: '🏠', color: '#f59e0b', role: 'AI租赁总监' },
+            'AI Property Management': { icon: '🏢', color: '#3b82f6', role: 'AI房源管理' },
+            'AI Tenant Matching': { icon: '🔑', color: '#8b5cf6', role: 'AI租客匹配' },
+            'AI Contract Management': { icon: '📜', color: '#22c55e', role: 'AI合同管理' },
+            'AI Rental AI': { icon: '🤖', color: '#ec4899', role: 'AI租赁AI' },
+            'AI Rental Analytics': { icon: '📊', color: '#06b6d4', role: 'AI租赁分析' },
+            // AI智能装修服务系统
+            'AI Renovation Director': { icon: '🎨', color: '#ec4899', role: 'AI装修总监' },
+            'AI Design Preview': { icon: '🖼️', color: '#8b5cf6', role: 'AI设计预览' },
+            'AI Progress Management': { icon: '📅', color: '#3b82f6', role: 'AI进度管理' },
+            'AI Quality Control': { icon: '✅', color: '#22c55e', role: 'AI质量监控' },
+            'AI Renovation AI': { icon: '🤖', color: '#f59e0b', role: 'AI装修AI' },
+            'AI Renovation Analytics': { icon: '📊', color: '#06b6d4', role: 'AI装修分析' },
+            // AI智能物流服务系统
+            'AI Logistics Director': { icon: '🚚', color: '#3b82f6', role: 'AI物流总监' },
+            'AI Route Planning': { icon: '🗺️', color: '#8b5cf6', role: 'AI路线规划' },
+            'AI Warehouse Management': { icon: '🏭', color: '#22c55e', role: 'AI仓储管理' },
+            'AI Delivery Tracking': { icon: '📦', color: '#ec4899', role: 'AI配送追踪' },
+            'AI Logistics AI': { icon: '🤖', color: '#f59e0b', role: 'AI物流AI' },
+            'AI Logistics Analytics': { icon: '📊', color: '#06b6d4', role: 'AI物流分析' },
+            // AI智能教育服务系统
+            'AI Education Director': { icon: '📚', color: '#8b5cf6', role: 'AI教育总监' },
+            'AI Course Recommendation': { icon: '📖', color: '#3b82f6', role: 'AI课程推荐' },
+            'AI Learning Tracking': { icon: '📈', color: '#22c55e', role: 'AI学习跟踪' },
+            'AI Online Tutoring': { icon: '💻', color: '#ec4899', role: 'AI在线辅导' },
+            'AI Education AI': { icon: '🤖', color: '#f59e0b', role: 'AI教育AI' },
+            'AI Education Analytics': { icon: '📊', color: '#06b6d4', role: 'AI教育分析' },
+            // AI智能旅游服务系统
+            'AI Travel Director': { icon: '✈️', color: '#06b6d4', role: 'AI旅游总监' },
+            'AI Trip Planning': { icon: '🗓️', color: '#8b5cf6', role: 'AI行程规划' },
+            'AI Attraction Recommendation': { icon: '🏞️', color: '#3b82f6', role: 'AI景点推荐' },
+            'AI Booking Management': { icon: '🎫', color: '#22c55e', role: 'AI预订管理' },
+            'AI Travel AI': { icon: '🤖', color: '#f59e0b', role: 'AI旅游AI' },
+            'AI Travel Analytics': { icon: '📊', color: '#ec4899', role: 'AI旅游分析' },
+            // AI智能健身服务系统
+            'AI Fitness Director': { icon: '💪', color: '#ef4444', role: 'AI健身总监' },
+            'AI Training Plan': { icon: '🏋️', color: '#8b5cf6', role: 'AI训练计划' },
+            'AI Posture Analysis': { icon: '📸', color: '#3b82f6', role: 'AI体态分析' },
+            'AI Health Tracking': { icon: '💓', color: '#22c55e', role: 'AI健康追踪' },
+            'AI Fitness AI': { icon: '🤖', color: '#f59e0b', role: 'AI健身AI' },
+            'AI Fitness Analytics': { icon: '📊', color: '#06b6d4', role: 'AI健身分析' }
         };
 
         // 拖拽相关变量
