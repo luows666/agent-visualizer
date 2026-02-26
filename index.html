@@ -44733,8 +44733,173 @@
             }
         ];
 
+        // Cycle 559 新增模板 - 7个行业服务系统
+        const cycle559Templates = [
+            // AI智能智慧区块链服务系统
+            {
+                id: 'ai-blockchain',
+                name: 'AI智能智慧区块链服务系统',
+                icon: '🔗',
+                desc: '区块链服务系统，包括分布式账本、智能合约、加密货币等',
+                agents: ['AI Blockchain Director', 'AI Ledger Manager', 'AI Smart Contract', 'AI Crypto Trading', 'AI Blockchain AI', 'AI Blockchain Analytics'],
+                positions: [
+                    { role: 'AI Blockchain Director', x: 400, y: 30 },
+                    { role: 'AI Ledger Manager', x: 150, y: 150 },
+                    { role: 'AI Smart Contract', x: 650, y: 150 },
+                    { role: 'AI Crypto Trading', x: 150, y: 300 },
+                    { role: 'AI Blockchain AI', x: 400, y: 350 },
+                    { role: 'AI Blockchain Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Blockchain Director', to: 'AI Ledger Manager', content: '分布式账本' },
+                    { from: 'AI Blockchain Director', to: 'AI Blockchain Analytics', content: '区块链分析' },
+                    { from: 'AI Ledger Manager', to: 'AI Smart Contract', content: '智能合约' },
+                    { from: 'AI Smart Contract', to: 'AI Crypto Trading', content: '加密交易' },
+                    { from: 'AI Crypto Trading', to: 'AI Blockchain AI', content: '区块链AI' }
+                ]
+            },
+            // AI智能智慧机器人服务系统
+            {
+                id: 'ai-robotics',
+                name: 'AI智能智慧机器人服务系统',
+                icon: '🤖',
+                desc: '机器人服务系统，包括运动控制、视觉识别、人机交互等',
+                agents: ['AI Robotics Director', 'AI Motion Control', 'AI Vision System', 'AI Human Robot', 'AI Robotics AI', 'AI Robotics Analytics'],
+                positions: [
+                    { role: 'AI Robotics Director', x: 400, y: 30 },
+                    { role: 'AI Motion Control', x: 150, y: 150 },
+                    { role: 'AI Vision System', x: 650, y: 150 },
+                    { role: 'AI Human Robot', x: 150, y: 300 },
+                    { role: 'AI Robotics AI', x: 400, y: 350 },
+                    { role: 'AI Robotics Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Robotics Director', to: 'AI Motion Control', content: '运动控制' },
+                    { from: 'AI Robotics Director', to: 'AI Robotics Analytics', content: '机器人分析' },
+                    { from: 'AI Motion Control', to: 'AI Vision System', content: '视觉识别' },
+                    { from: 'AI Vision System', to: 'AI Human Robot', content: '人机交互' },
+                    { from: 'AI Human Robot', to: 'AI Robotics AI', content: '机器人AI' }
+                ]
+            },
+            // AI智能智慧边缘计算服务系统
+            {
+                id: 'ai-edge-computing',
+                name: 'AI智能智慧边缘计算服务系统',
+                icon: '📡',
+                desc: '边缘计算服务系统，包括边缘设备管理、实时数据处理、分布式推理等',
+                agents: ['AI Edge Director', 'AI Edge Device', 'AI RealTime Data', 'AI Distributed Inference', 'AI Edge AI', 'AI Edge Analytics'],
+                positions: [
+                    { role: 'AI Edge Director', x: 400, y: 30 },
+                    { role: 'AI Edge Device', x: 150, y: 150 },
+                    { role: 'AI RealTime Data', x: 650, y: 150 },
+                    { role: 'AI Distributed Inference', x: 150, y: 300 },
+                    { role: 'AI Edge AI', x: 400, y: 350 },
+                    { role: 'AI Edge Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Edge Director', to: 'AI Edge Device', content: '边缘设备' },
+                    { from: 'AI Edge Director', to: 'AI Edge Analytics', content: '边缘分析' },
+                    { from: 'AI Edge Device', to: 'AI RealTime Data', content: '实时数据' },
+                    { from: 'AI RealTime Data', to: 'AI Distributed Inference', content: '分布式推理' },
+                    { from: 'AI Distributed Inference', to: 'AI Edge AI', content: '边缘AI' }
+                ]
+            },
+            // AI智能智慧AI芯片服务系统
+            {
+                id: 'ai-chip',
+                name: 'AI智能智慧AI芯片服务系统',
+                icon: '💾',
+                desc: 'AI芯片服务系统，包括芯片设计、神经网络加速、异构计算等',
+                agents: ['AI Chip Director', 'AI Chip Design', 'AI NPU Accelerator', 'AI Heterogeneous', 'AI Chip AI', 'AI Chip Analytics'],
+                positions: [
+                    { role: 'AI Chip Director', x: 400, y: 30 },
+                    { role: 'AI Chip Design', x: 150, y: 150 },
+                    { role: 'AI NPU Accelerator', x: 650, y: 150 },
+                    { role: 'AI Heterogeneous', x: 150, y: 300 },
+                    { role: 'AI Chip AI', x: 400, y: 350 },
+                    { role: 'AI Chip Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Chip Director', to: 'AI Chip Design', content: '芯片设计' },
+                    { from: 'AI Chip Director', to: 'AI Chip Analytics', content: '芯片分析' },
+                    { from: 'AI Chip Design', to: 'AI NPU Accelerator', content: 'NPU加速' },
+                    { from: 'AI NPU Accelerator', to: 'AI Heterogeneous', content: '异构计算' },
+                    { from: 'AI Heterogeneous', to: 'AI Chip AI', content: '芯片AI' }
+                ]
+            },
+            // AI智能智慧虚拟现实服务系统
+            {
+                id: 'ai-vr',
+                name: 'AI智能智慧虚拟现实服务系统',
+                icon: '🥽',
+                desc: '虚拟现实服务系统，包括3D渲染、沉浸式体验、虚拟场景构建等',
+                agents: ['AI VR Director', 'AI 3D Rendering', 'AI Immersive', 'AI Virtual Scene', 'AI VR AI', 'AI VR Analytics'],
+                positions: [
+                    { role: 'AI VR Director', x: 400, y: 30 },
+                    { role: 'AI 3D Rendering', x: 150, y: 150 },
+                    { role: 'AI Immersive', x: 650, y: 150 },
+                    { role: 'AI Virtual Scene', x: 150, y: 300 },
+                    { role: 'AI VR AI', x: 400, y: 350 },
+                    { role: 'AI VR Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI VR Director', to: 'AI 3D Rendering', content: '3D渲染' },
+                    { from: 'AI VR Director', to: 'AI VR Analytics', content: 'VR分析' },
+                    { from: 'AI 3D Rendering', to: 'AI Immersive', content: '沉浸体验' },
+                    { from: 'AI Immersive', to: 'AI Virtual Scene', content: '虚拟场景' },
+                    { from: 'AI Virtual Scene', to: 'AI VR AI', content: 'VR AI' }
+                ]
+            },
+            // AI智能智慧增强现实服务系统
+            {
+                id: 'ai-ar',
+                name: 'AI智能智慧增强现实服务系统',
+                icon: '🕶️',
+                desc: '增强现实服务系统，包括空间感知、AR内容创作、实时叠加等',
+                agents: ['AI AR Director', 'AI Spatial感知', 'AI AR Content', 'AI Real Overlay', 'AI AR AI', 'AI AR Analytics'],
+                positions: [
+                    { role: 'AI AR Director', x: 400, y: 30 },
+                    { role: 'AI Spatial感知', x: 150, y: 150 },
+                    { role: 'AI AR Content', x: 650, y: 150 },
+                    { role: 'AI Real Overlay', x: 150, y: 300 },
+                    { role: 'AI AR AI', x: 400, y: 350 },
+                    { role: 'AI AR Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI AR Director', to: 'AI Spatial感知', content: '空间感知' },
+                    { from: 'AI AR Director', to: 'AI AR Analytics', content: 'AR分析' },
+                    { from: 'AI Spatial感知', to: 'AI AR Content', content: 'AR内容' },
+                    { from: 'AI AR Content', to: 'AI Real Overlay', content: '实时叠加' },
+                    { from: 'AI Real Overlay', to: 'AI AR AI', content: 'AR AI' }
+                ]
+            },
+            // AI智能智慧工业互联网服务系统
+            {
+                id: 'ai-industrial-internet',
+                name: 'AI智能智慧工业互联网服务系统',
+                icon: '🏭',
+                desc: '工业互联网服务系统，包括设备互联、生产优化、预测性维护等',
+                agents: ['AI Industrial Director', 'AI Device Connection', 'AI Production Opt', 'AI Predictive Maint', 'AI Industrial AI', 'AI Industrial Analytics'],
+                positions: [
+                    { role: 'AI Industrial Director', x: 400, y: 30 },
+                    { role: 'AI Device Connection', x: 150, y: 150 },
+                    { role: 'AI Production Opt', x: 650, y: 150 },
+                    { role: 'AI Predictive Maint', x: 150, y: 300 },
+                    { role: 'AI Industrial AI', x: 400, y: 350 },
+                    { role: 'AI Industrial Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Industrial Director', to: 'AI Device Connection', content: '设备互联' },
+                    { from: 'AI Industrial Director', to: 'AI Industrial Analytics', content: '工业分析' },
+                    { from: 'AI Device Connection', to: 'AI Production Opt', content: '生产优化' },
+                    { from: 'AI Production Opt', to: 'AI Predictive Maint', content: '预测维护' },
+                    { from: 'AI Predictive Maint', to: 'AI Industrial AI', content: '工业AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates, ...cycle545Templates, ...cycle546Templates, ...cycle547Templates, ...cycle548Templates, ...cycle549Templates, ...cycle550Templates, ...cycle551Templates, ...cycle552Templates, ...cycle553Templates, ...cycle554Templates, ...cycle557Templates, ...cycle558Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates, ...cycle545Templates, ...cycle546Templates, ...cycle547Templates, ...cycle548Templates, ...cycle549Templates, ...cycle550Templates, ...cycle551Templates, ...cycle552Templates, ...cycle553Templates, ...cycle554Templates, ...cycle557Templates, ...cycle558Templates, ...cycle559Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -54623,7 +54788,57 @@
             'AI Sentiment Analysis': { icon: '💭', color: '#22c55e', role: 'AI情感分析' },
             'AI Ticket Management': { icon: '📝', color: '#f97316', role: 'AI工单管理' },
             'AI CS AI': { icon: '🤖', color: '#8b5cf6', role: 'AI智能客服AI' },
-            'AI CS Analytics': { icon: '📊', color: '#06b6d4', role: 'AI客服分析' }
+            'AI CS Analytics': { icon: '📊', color: '#06b6d4', role: 'AI客服分析' },
+            // Cycle 559 新增角色 - 7个行业服务系统
+            // AI智能智慧区块链服务系统
+            'AI Blockchain Director': { icon: '🔗', color: '#f59e0b', role: 'AI区块链总监' },
+            'AI Ledger Manager': { icon: '📒', color: '#3b82f6', role: 'AI账本管理' },
+            'AI Smart Contract': { icon: '📜', color: '#22c55e', role: 'AI智能合约' },
+            'AI Crypto Trading': { icon: '💰', color: '#f97316', role: 'AI加密交易' },
+            'AI Blockchain AI': { icon: '🤖', color: '#8b5cf6', role: 'AI区块链AI' },
+            'AI Blockchain Analytics': { icon: '📊', color: '#06b6d4', role: 'AI区块链分析' },
+            // AI智能智慧机器人服务系统
+            'AI Robotics Director': { icon: '🤖', color: '#f59e0b', role: 'AI机器人总监' },
+            'AI Motion Control': { icon: '🎛️', color: '#3b82f6', role: 'AI运动控制' },
+            'AI Vision System': { icon: '👁️', color: '#22c55e', role: 'AI视觉系统' },
+            'AI Human Robot': { icon: '👥', color: '#f97316', role: 'AI人机交互' },
+            'AI Robotics AI': { icon: '🤖', color: '#8b5cf6', role: 'AI机器人AI' },
+            'AI Robotics Analytics': { icon: '📊', color: '#06b6d4', role: 'AI机器人分析' },
+            // AI智能智慧边缘计算服务系统
+            'AI Edge Director': { icon: '📡', color: '#f59e0b', role: 'AI边缘计算总监' },
+            'AI Edge Device': { icon: '📱', color: '#3b82f6', role: 'AI边缘设备' },
+            'AI RealTime Data': { icon: '⚡', color: '#22c55e', role: 'AI实时数据' },
+            'AI Distributed Inference': { icon: '🧠', color: '#f97316', role: 'AI分布式推理' },
+            'AI Edge AI': { icon: '🤖', color: '#8b5cf6', role: 'AI边缘AI' },
+            'AI Edge Analytics': { icon: '📊', color: '#06b6d4', role: 'AI边缘分析' },
+            // AI智能智慧AI芯片服务系统
+            'AI Chip Director': { icon: '💾', color: '#f59e0b', role: 'AI芯片总监' },
+            'AI Chip Design': { icon: '📐', color: '#3b82f6', role: 'AI芯片设计' },
+            'AI NPU Accelerator': { icon: '🚀', color: '#22c55e', role: 'AI NPU加速' },
+            'AI Heterogeneous': { icon: '🔀', color: '#f97316', role: 'AI异构计算' },
+            'AI Chip AI': { icon: '🤖', color: '#8b5cf6', role: 'AI芯片AI' },
+            'AI Chip Analytics': { icon: '📊', color: '#06b6d4', role: 'AI芯片分析' },
+            // AI智能智慧虚拟现实服务系统
+            'AI VR Director': { icon: '🥽', color: '#f59e0b', role: 'AI虚拟现实总监' },
+            'AI 3D Rendering': { icon: '🎨', color: '#3b82f6', role: 'AI 3D渲染' },
+            'AI Immersive': { icon: '🌟', color: '#22c55e', role: 'AI沉浸体验' },
+            'AI Virtual Scene': { icon: '🏞️', color: '#f97316', role: 'AI虚拟场景' },
+            'AI VR AI': { icon: '🤖', color: '#8b5cf6', role: 'AI虚拟现实AI' },
+            'AI VR Analytics': { icon: '📊', color: '#06b6d4', role: 'AI虚拟现实分析' },
+            // AI智能智慧增强现实服务系统
+            'AI AR Director': { icon: '🕶️', color: '#f59e0b', role: 'AI增强现实总监' },
+            'AI Spatial感知': { icon: '🗺️', color: '#3b82f6', role: 'AI空间感知' },
+            'AI AR Content': { icon: '📱', color: '#22c55e', role: 'AI AR内容' },
+            'AI Real Overlay': { icon: '✨', color: '#f97316', role: 'AI实时叠加' },
+            'AI AR AI': { icon: '🤖', color: '#8b5cf6', role: 'AI增强现实AI' },
+            'AI AR Analytics': { icon: '📊', color: '#06b6d4', role: 'AI增强现实分析' },
+            // AI智能智慧工业互联网服务系统
+            'AI Industrial Director': { icon: '🏭', color: '#f59e0b', role: 'AI工业互联网总监' },
+            'AI Device Connection': { icon: '🔗', color: '#3b82f6', role: 'AI设备互联' },
+            'AI Production Opt': { icon: '⚙️', color: '#22c55e', role: 'AI生产优化' },
+            'AI Predictive Maint': { icon: '🔧', color: '#f97316', role: 'AI预测维护' },
+            'AI Industrial AI': { icon: '🤖', color: '#8b5cf6', role: 'AI工业AI' },
+            'AI Industrial Analytics': { icon: '📊', color: '#06b6d4', role: 'AI工业分析' }
         };
 
         // 拖拽相关变量
