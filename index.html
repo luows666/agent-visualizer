@@ -45228,8 +45228,173 @@
             }
         ];
 
+        // Cycle 562 新增模板 - 7个行业服务系统
+        const cycle562Templates = [
+            // AI智能智慧智慧社区服务系统
+            {
+                id: 'ai-smart-community',
+                name: 'AI智能智慧智慧社区服务系统',
+                icon: '🏘️',
+                desc: '智慧社区服务系统，包括社区管理、居民服务、安防监控等',
+                agents: ['AI Community Director', 'AI Community Management', 'AI Resident Service', 'AI Security Monitor', 'AI Community AI', 'AI Community Analytics'],
+                positions: [
+                    { role: 'AI Community Director', x: 400, y: 30 },
+                    { role: 'AI Community Management', x: 150, y: 150 },
+                    { role: 'AI Resident Service', x: 650, y: 150 },
+                    { role: 'AI Security Monitor', x: 150, y: 300 },
+                    { role: 'AI Community AI', x: 400, y: 350 },
+                    { role: 'AI Community Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Community Director', to: 'AI Community Management', content: '社区管理' },
+                    { from: 'AI Community Director', to: 'AI Community Analytics', content: '社区分析' },
+                    { from: 'AI Community Management', to: 'AI Resident Service', content: '居民服务' },
+                    { from: 'AI Resident Service', to: 'AI Security Monitor', content: '安防监控' },
+                    { from: 'AI Security Monitor', to: 'AI Community AI', content: '社区AI' }
+                ]
+            },
+            // AI智能智慧智慧物业服务系统
+            {
+                id: 'ai-smart-property',
+                name: 'AI智能智慧智慧物业服务系统',
+                icon: '🏢',
+                desc: '智慧物业服务系统，包括设施维护、费用管理、服务预约等',
+                agents: ['AI Property Director', 'AI Facility Maintenance', 'AI Fee Management', 'AI Service Booking', 'AI Property AI', 'AI Property Analytics'],
+                positions: [
+                    { role: 'AI Property Director', x: 400, y: 30 },
+                    { role: 'AI Facility Maintenance', x: 150, y: 150 },
+                    { role: 'AI Fee Management', x: 650, y: 150 },
+                    { role: 'AI Service Booking', x: 150, y: 300 },
+                    { role: 'AI Property AI', x: 400, y: 350 },
+                    { role: 'AI Property Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Property Director', to: 'AI Facility Maintenance', content: '设施维护' },
+                    { from: 'AI Property Director', to: 'AI Property Analytics', content: '物业分析' },
+                    { from: 'AI Facility Maintenance', to: 'AI Fee Management', content: '费用管理' },
+                    { from: 'AI Fee Management', to: 'AI Service Booking', content: '服务预约' },
+                    { from: 'AI Service Booking', to: 'AI Property AI', content: '物业AI' }
+                ]
+            },
+            // AI智能智慧智慧养老服务系统
+            {
+                id: 'ai-smart-elderly-care',
+                name: 'AI智能智慧智慧养老服务系统',
+                icon: '👴',
+                desc: '智慧养老服务系统，包括健康监测、生活照料、紧急救助等',
+                agents: ['AI Elderly Care Director', 'AI Health Monitoring', 'AI Life Care', 'AI Emergency Rescue', 'AI Elderly Care AI', 'AI Elderly Care Analytics'],
+                positions: [
+                    { role: 'AI Elderly Care Director', x: 400, y: 30 },
+                    { role: 'AI Health Monitoring', x: 150, y: 150 },
+                    { role: 'AI Life Care', x: 650, y: 150 },
+                    { role: 'AI Emergency Rescue', x: 150, y: 300 },
+                    { role: 'AI Elderly Care AI', x: 400, y: 350 },
+                    { role: 'AI Elderly Care Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Elderly Care Director', to: 'AI Health Monitoring', content: '健康监测' },
+                    { from: 'AI Elderly Care Director', to: 'AI Elderly Care Analytics', content: '养老分析' },
+                    { from: 'AI Health Monitoring', to: 'AI Life Care', content: '生活照料' },
+                    { from: 'AI Life Care', to: 'AI Emergency Rescue', content: '紧急救助' },
+                    { from: 'AI Emergency Rescue', to: 'AI Elderly Care AI', content: '养老AI' }
+                ]
+            },
+            // AI智能智慧智慧环保服务系统
+            {
+                id: 'ai-smart-environment',
+                name: 'AI智能智慧智慧环保服务系统',
+                icon: '🌿',
+                desc: '智慧环保服务系统，包括空气质量监测、垃圾分类、污染治理等',
+                agents: ['AI Environment Director', 'AI Air Quality Monitor', 'AI Waste Sorting', 'AI Pollution Control', 'AI Environment AI', 'AI Environment Analytics'],
+                positions: [
+                    { role: 'AI Environment Director', x: 400, y: 30 },
+                    { role: 'AI Air Quality Monitor', x: 150, y: 150 },
+                    { role: 'AI Waste Sorting', x: 650, y: 150 },
+                    { role: 'AI Pollution Control', x: 150, y: 300 },
+                    { role: 'AI Environment AI', x: 400, y: 350 },
+                    { role: 'AI Environment Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environment Director', to: 'AI Air Quality Monitor', content: '空气质量' },
+                    { from: 'AI Environment Director', to: 'AI Environment Analytics', content: '环保分析' },
+                    { from: 'AI Air Quality Monitor', to: 'AI Waste Sorting', content: '垃圾分类' },
+                    { from: 'AI Waste Sorting', to: 'AI Pollution Control', content: '污染治理' },
+                    { from: 'AI Pollution Control', to: 'AI Environment AI', content: '环保AI' }
+                ]
+            },
+            // AI智能智慧智慧水资源服务系统
+            {
+                id: 'ai-smart-water',
+                name: 'AI智能智慧智慧水资源服务系统',
+                icon: '💧',
+                desc: '智慧水资源服务系统，包括供水调度、污水处理、水质监测等',
+                agents: ['AI Water Director', 'AI Water Supply', 'AI Sewage Treatment', 'AI Water Quality', 'AI Water AI', 'AI Water Analytics'],
+                positions: [
+                    { role: 'AI Water Director', x: 400, y: 30 },
+                    { role: 'AI Water Supply', x: 150, y: 150 },
+                    { role: 'AI Sewage Treatment', x: 650, y: 150 },
+                    { role: 'AI Water Quality', x: 150, y: 300 },
+                    { role: 'AI Water AI', x: 400, y: 350 },
+                    { role: 'AI Water Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Water Director', to: 'AI Water Supply', content: '供水调度' },
+                    { from: 'AI Water Director', to: 'AI Water Analytics', content: '水务分析' },
+                    { from: 'AI Water Supply', to: 'AI Sewage Treatment', content: '污水处理' },
+                    { from: 'AI Sewage Treatment', to: 'AI Water Quality', content: '水质监测' },
+                    { from: 'AI Water Quality', to: 'AI Water AI', content: '水务AI' }
+                ]
+            },
+            // AI智能智慧智慧市政服务系统
+            {
+                id: 'ai-smart-municipal',
+                name: 'AI智能智慧智慧市政服务系统',
+                icon: '🏙️',
+                desc: '智慧市政服务系统，包括城市管理、公共设施、应急响应等',
+                agents: ['AI Municipal Director', 'AI City Management', 'AI Public Facilities', 'AI Emergency Response', 'AI Municipal AI', 'AI Municipal Analytics'],
+                positions: [
+                    { role: 'AI Municipal Director', x: 400, y: 30 },
+                    { role: 'AI City Management', x: 150, y: 150 },
+                    { role: 'AI Public Facilities', x: 650, y: 150 },
+                    { role: 'AI Emergency Response', x: 150, y: 300 },
+                    { role: 'AI Municipal AI', x: 400, y: 350 },
+                    { role: 'AI Municipal Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Municipal Director', to: 'AI City Management', content: '城市管理' },
+                    { from: 'AI Municipal Director', to: 'AI Municipal Analytics', content: '市政分析' },
+                    { from: 'AI City Management', to: 'AI Public Facilities', content: '公共设施' },
+                    { from: 'AI Public Facilities', to: 'AI Emergency Response', content: '应急响应' },
+                    { from: 'AI Emergency Response', to: 'AI Municipal AI', content: '市政AI' }
+                ]
+            },
+            // AI智能智慧智慧应急服务系统
+            {
+                id: 'ai-smart-emergency',
+                name: 'AI智能智慧智慧应急服务系统',
+                icon: '🚨',
+                desc: '智慧应急服务系统，包括预警发布、救援调度、灾后评估等',
+                agents: ['AI Emergency Director', 'AI Warning Release', 'AI Rescue Dispatch', 'AI Damage Assessment', 'AI Emergency AI', 'AI Emergency Analytics'],
+                positions: [
+                    { role: 'AI Emergency Director', x: 400, y: 30 },
+                    { role: 'AI Warning Release', x: 150, y: 150 },
+                    { role: 'AI Rescue Dispatch', x: 650, y: 150 },
+                    { role: 'AI Damage Assessment', x: 150, y: 300 },
+                    { role: 'AI Emergency AI', x: 400, y: 350 },
+                    { role: 'AI Emergency Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Emergency Director', to: 'AI Warning Release', content: '预警发布' },
+                    { from: 'AI Emergency Director', to: 'AI Emergency Analytics', content: '应急分析' },
+                    { from: 'AI Warning Release', to: 'AI Rescue Dispatch', content: '救援调度' },
+                    { from: 'AI Rescue Dispatch', to: 'AI Damage Assessment', content: '灾后评估' },
+                    { from: 'AI Damage Assessment', to: 'AI Emergency AI', content: '应急AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates, ...cycle545Templates, ...cycle546Templates, ...cycle547Templates, ...cycle548Templates, ...cycle549Templates, ...cycle550Templates, ...cycle551Templates, ...cycle552Templates, ...cycle553Templates, ...cycle554Templates, ...cycle557Templates, ...cycle558Templates, ...cycle559Templates, ...cycle560Templates, ...cycle561Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates, ...cycle545Templates, ...cycle546Templates, ...cycle547Templates, ...cycle548Templates, ...cycle549Templates, ...cycle550Templates, ...cycle551Templates, ...cycle552Templates, ...cycle553Templates, ...cycle554Templates, ...cycle557Templates, ...cycle558Templates, ...cycle559Templates, ...cycle560Templates, ...cycle561Templates, ...cycle562Templates];
 
         // Agent 角色配置
         const agentRoles = {
