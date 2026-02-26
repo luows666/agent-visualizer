@@ -42927,8 +42927,173 @@
             }
         ];
 
+        // Cycle 548 新增模板 - 7个行业服务系统
+        const cycle548Templates = [
+            // AI智能智慧养老服务系统
+            {
+                id: 'ai-elderly-care-service',
+                name: 'AI智能智慧养老服务系统',
+                icon: '👴',
+                desc: '智慧养老服务系统，包括健康监测、生活照料、情感陪伴等',
+                agents: ['AI Elderly Care Director', 'AI Health Monitoring', 'AI Life Care', 'AI Companion', 'AI Elderly Care AI', 'AI Elderly Care Analytics'],
+                positions: [
+                    { role: 'AI Elderly Care Director', x: 400, y: 30 },
+                    { role: 'AI Health Monitoring', x: 150, y: 150 },
+                    { role: 'AI Life Care', x: 650, y: 150 },
+                    { role: 'AI Companion', x: 150, y: 300 },
+                    { role: 'AI Elderly Care AI', x: 400, y: 350 },
+                    { role: 'AI Elderly Care Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Elderly Care Director', to: 'AI Health Monitoring', content: '健康监测' },
+                    { from: 'AI Elderly Care Director', to: 'AI Elderly Care Analytics', content: '养老分析' },
+                    { from: 'AI Health Monitoring', to: 'AI Life Care', content: '生活照料' },
+                    { from: 'AI Life Care', to: 'AI Companion', content: '情感陪伴' },
+                    { from: 'AI Companion', to: 'AI Elderly Care AI', content: '养老AI' }
+                ]
+            },
+            // AI智能智慧文化创意服务系统
+            {
+                id: 'ai-cultural-creative-service',
+                name: 'AI智能智慧文化创意服务系统',
+                icon: '🎭',
+                desc: '智慧文化创意服务系统，包括创意设计、内容创作、文化传播等',
+                agents: ['AI Cultural Director', 'AI Creative Design', 'AI Content Creation', 'AI Cultural Promotion', 'AI Cultural AI', 'AI Cultural Analytics'],
+                positions: [
+                    { role: 'AI Cultural Director', x: 400, y: 30 },
+                    { role: 'AI Creative Design', x: 150, y: 150 },
+                    { role: 'AI Content Creation', x: 650, y: 150 },
+                    { role: 'AI Cultural Promotion', x: 150, y: 300 },
+                    { role: 'AI Cultural AI', x: 400, y: 350 },
+                    { role: 'AI Cultural Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Cultural Director', to: 'AI Creative Design', content: '创意设计' },
+                    { from: 'AI Cultural Director', to: 'AI Cultural Analytics', content: '文化分析' },
+                    { from: 'AI Creative Design', to: 'AI Content Creation', content: '内容创作' },
+                    { from: 'AI Content Creation', to: 'AI Cultural Promotion', content: '文化传播' },
+                    { from: 'AI Cultural Promotion', to: 'AI Cultural AI', content: '文化AI' }
+                ]
+            },
+            // AI智能智慧知识产权服务系统
+            {
+                id: 'ai-ip-service',
+                name: 'AI智能智慧知识产权服务系统',
+                icon: '💡',
+                desc: '智慧知识产权服务系统，包括专利申请、商标注册、版权保护等',
+                agents: ['AI IP Director', 'AI Patent Application', 'AI Trademark Registration', 'AI Copyright Protection', 'AI IP AI', 'AI IP Analytics'],
+                positions: [
+                    { role: 'AI IP Director', x: 400, y: 30 },
+                    { role: 'AI Patent Application', x: 150, y: 150 },
+                    { role: 'AI Trademark Registration', x: 650, y: 150 },
+                    { role: 'AI Copyright Protection', x: 150, y: 300 },
+                    { role: 'AI IP AI', x: 400, y: 350 },
+                    { role: 'AI IP Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI IP Director', to: 'AI Patent Application', content: '专利申请' },
+                    { from: 'AI IP Director', to: 'AI IP Analytics', content: '知产分析' },
+                    { from: 'AI Patent Application', to: 'AI Trademark Registration', content: '商标注册' },
+                    { from: 'AI Trademark Registration', to: 'AI Copyright Protection', content: '版权保护' },
+                    { from: 'AI Copyright Protection', to: 'AI IP AI', content: '知产AI' }
+                ]
+            },
+            // AI智能智慧会展服务系统
+            {
+                id: 'ai-exhibition-service',
+                name: 'AI智能智慧会展服务系统',
+                icon: '🏢',
+                desc: '智慧会展服务系统，包括展会策划、现场管理、观众服务等',
+                agents: ['AI Exhibition Director', 'AI Event Planning', 'AI On-site Management', 'AI Visitor Service', 'AI Exhibition AI', 'AI Exhibition Analytics'],
+                positions: [
+                    { role: 'AI Exhibition Director', x: 400, y: 30 },
+                    { role: 'AI Event Planning', x: 150, y: 150 },
+                    { role: 'AI On-site Management', x: 650, y: 150 },
+                    { role: 'AI Visitor Service', x: 150, y: 300 },
+                    { role: 'AI Exhibition AI', x: 400, y: 350 },
+                    { role: 'AI Exhibition Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Exhibition Director', to: 'AI Event Planning', content: '展会策划' },
+                    { from: 'AI Exhibition Director', to: 'AI Exhibition Analytics', content: '会展分析' },
+                    { from: 'AI Event Planning', to: 'AI On-site Management', content: '现场管理' },
+                    { from: 'AI On-site Management', to: 'AI Visitor Service', content: '观众服务' },
+                    { from: 'AI Visitor Service', to: 'AI Exhibition AI', content: '会展AI' }
+                ]
+            },
+            // AI智能智慧体育赛事服务系统
+            {
+                id: 'ai-sports-events-service',
+                name: 'AI智能智慧体育赛事服务系统',
+                icon: '🏅',
+                desc: '智慧体育赛事服务系统，包括赛事运营、运动员管理、观众体验等',
+                agents: ['AI Sports Events Director', 'AI Event Operations', 'AI Athlete Management', 'AI Audience Experience', 'AI Sports Events AI', 'AI Sports Events Analytics'],
+                positions: [
+                    { role: 'AI Sports Events Director', x: 400, y: 30 },
+                    { role: 'AI Event Operations', x: 150, y: 150 },
+                    { role: 'AI Athlete Management', x: 650, y: 150 },
+                    { role: 'AI Audience Experience', x: 150, y: 300 },
+                    { role: 'AI Sports Events AI', x: 400, y: 350 },
+                    { role: 'AI Sports Events Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sports Events Director', to: 'AI Event Operations', content: '赛事运营' },
+                    { from: 'AI Sports Events Director', to: 'AI Sports Events Analytics', content: '赛事分析' },
+                    { from: 'AI Event Operations', to: 'AI Athlete Management', content: '运动员管理' },
+                    { from: 'AI Athlete Management', to: 'AI Audience Experience', content: '观众体验' },
+                    { from: 'AI Audience Experience', to: 'AI Sports Events AI', content: '赛事AI' }
+                ]
+            },
+            // AI智能智慧社区养老服务系统
+            {
+                id: 'ai-community-elderly-service',
+                name: 'AI智能智慧社区养老服务系统',
+                icon: '🏘️',
+                desc: '智慧社区养老服务系统，包括社区关怀、上门服务、健康档案等',
+                agents: ['AI Community Elderly Director', 'AI Community Care', 'AI Home Service', 'AI Health Records', 'AI Community Elderly AI', 'AI Community Elderly Analytics'],
+                positions: [
+                    { role: 'AI Community Elderly Director', x: 400, y: 30 },
+                    { role: 'AI Community Care', x: 150, y: 150 },
+                    { role: 'AI Home Service', x: 650, y: 150 },
+                    { role: 'AI Health Records', x: 150, y: 300 },
+                    { role: 'AI Community Elderly AI', x: 400, y: 350 },
+                    { role: 'AI Community Elderly Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Community Elderly Director', to: 'AI Community Care', content: '社区关怀' },
+                    { from: 'AI Community Elderly Director', to: 'AI Community Elderly Analytics', content: '社区养老分析' },
+                    { from: 'AI Community Care', to: 'AI Home Service', content: '上门服务' },
+                    { from: 'AI Home Service', to: 'AI Health Records', content: '健康档案' },
+                    { from: 'AI Health Records', to: 'AI Community Elderly AI', content: '社区养老AI' }
+                ]
+            },
+            // AI智能智慧数字营销服务系统
+            {
+                id: 'ai-digital-marketing-service',
+                name: 'AI智能智慧数字营销服务系统',
+                icon: '📱',
+                desc: '智慧数字营销服务系统，包括广告投放、社交媒体、内容营销等',
+                agents: ['AI Digital Marketing Director', 'AI Ad Delivery', 'AI Social Media', 'AI Content Marketing', 'AI Digital Marketing AI', 'AI Digital Marketing Analytics'],
+                positions: [
+                    { role: 'AI Digital Marketing Director', x: 400, y: 30 },
+                    { role: 'AI Ad Delivery', x: 150, y: 150 },
+                    { role: 'AI Social Media', x: 650, y: 150 },
+                    { role: 'AI Content Marketing', x: 150, y: 300 },
+                    { role: 'AI Digital Marketing AI', x: 400, y: 350 },
+                    { role: 'AI Digital Marketing Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Digital Marketing Director', to: 'AI Ad Delivery', content: '广告投放' },
+                    { from: 'AI Digital Marketing Director', to: 'AI Digital Marketing Analytics', content: '营销分析' },
+                    { from: 'AI Ad Delivery', to: 'AI Social Media', content: '社交媒体' },
+                    { from: 'AI Social Media', to: 'AI Content Marketing', content: '内容营销' },
+                    { from: 'AI Content Marketing', to: 'AI Digital Marketing AI', content: '营销AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates, ...cycle545Templates, ...cycle546Templates, ...cycle547Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates, ...cycle545Templates, ...cycle546Templates, ...cycle547Templates, ...cycle548Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -52367,7 +52532,57 @@
             'AI Risk Auditor': { icon: '⚠️', color: '#3b82f6', role: 'AI风险审计员' },
             'AI Compliance Auditor': { icon: '✅', color: '#f59e0b', role: 'AI合规审计员' },
             'AI Audit Analyst': { icon: '📊', color: '#ec4899', role: 'AI审计分析师' },
-            'AI Documentation Specialist': { icon: '📁', color: '#06b6d4', role: 'AI文档专员' }
+            'AI Documentation Specialist': { icon: '📁', color: '#06b6d4', role: 'AI文档专员' },
+            // Cycle 548 新增角色 - 7个行业服务系统
+            // AI智能智慧养老服务系统
+            'AI Elderly Care Director': { icon: '👴', color: '#f59e0b', role: 'AI养老总监' },
+            'AI Health Monitoring': { icon: '💓', color: '#3b82f6', role: 'AI健康监测' },
+            'AI Life Care': { icon: '🧹', color: '#22c55e', role: 'AI生活照料' },
+            'AI Companion': { icon: '💬', color: '#f97316', role: 'AI情感陪伴' },
+            'AI Elderly Care AI': { icon: '🤖', color: '#8b5cf6', role: 'AI养老AI' },
+            'AI Elderly Care Analytics': { icon: '📊', color: '#06b6d4', role: 'AI养老分析' },
+            // AI智能智慧文化创意服务系统
+            'AI Cultural Director': { icon: '🎭', color: '#f59e0b', role: 'AI文化总监' },
+            'AI Creative Design': { icon: '🎨', color: '#3b82f6', role: 'AI创意设计' },
+            'AI Content Creation': { icon: '✍️', color: '#22c55e', role: 'AI内容创作' },
+            'AI Cultural Promotion': { icon: '📢', color: '#f97316', role: 'AI文化传播' },
+            'AI Cultural AI': { icon: '🤖', color: '#8b5cf6', role: 'AI文化AI' },
+            'AI Cultural Analytics': { icon: '📊', color: '#06b6d4', role: 'AI文化分析' },
+            // AI智能智慧知识产权服务系统
+            'AI IP Director': { icon: '💡', color: '#f59e0b', role: 'AI知产总监' },
+            'AI Patent Application': { icon: '📜', color: '#3b82f6', role: 'AI专利申请' },
+            'AI Trademark Registration': { icon: '🏷️', color: '#22c55e', role: 'AI商标注册' },
+            'AI Copyright Protection': { icon: '©️', color: '#f97316', role: 'AI版权保护' },
+            'AI IP AI': { icon: '🤖', color: '#8b5cf6', role: 'AI知产AI' },
+            'AI IP Analytics': { icon: '📊', color: '#06b6d4', role: 'AI知产分析' },
+            // AI智能智慧会展服务系统
+            'AI Exhibition Director': { icon: '🏢', color: '#f59e0b', role: 'AI会展总监' },
+            'AI Event Planning': { icon: '📋', color: '#3b82f6', role: 'AI展会策划' },
+            'AI On-site Management': { icon: '🎯', color: '#22c55e', role: 'AI现场管理' },
+            'AI Visitor Service': { icon: '👥', color: '#f97316', role: 'AI观众服务' },
+            'AI Exhibition AI': { icon: '🤖', color: '#8b5cf6', role: 'AI会展AI' },
+            'AI Exhibition Analytics': { icon: '📊', color: '#06b6d4', role: 'AI会展分析' },
+            // AI智能智慧体育赛事服务系统
+            'AI Sports Events Director': { icon: '🏅', color: '#f59e0b', role: 'AI赛事总监' },
+            'AI Event Operations': { icon: '⚙️', color: '#3b82f6', role: 'AI赛事运营' },
+            'AI Athlete Management': { icon: '🏃', color: '#22c55e', role: 'AI运动员管理' },
+            'AI Audience Experience': { icon: '🎉', color: '#f97316', role: 'AI观众体验' },
+            'AI Sports Events AI': { icon: '🤖', color: '#8b5cf6', role: 'AI赛事AI' },
+            'AI Sports Events Analytics': { icon: '📊', color: '#06b6d4', role: 'AI赛事分析' },
+            // AI智能智慧社区养老服务系统
+            'AI Community Elderly Director': { icon: '🏘️', color: '#f59e0b', role: 'AI社区养老总监' },
+            'AI Community Care': { icon: '❤️', color: '#3b82f6', role: 'AI社区关怀' },
+            'AI Home Service': { icon: '🏠', color: '#22c55e', role: 'AI上门服务' },
+            'AI Health Records': { icon: '📋', color: '#f97316', role: 'AI健康档案' },
+            'AI Community Elderly AI': { icon: '🤖', color: '#8b5cf6', role: 'AI社区养老AI' },
+            'AI Community Elderly Analytics': { icon: '📊', color: '#06b6d4', role: 'AI社区养老分析' },
+            // AI智能智慧数字营销服务系统
+            'AI Digital Marketing Director': { icon: '📱', color: '#f59e0b', role: 'AI数字营销总监' },
+            'AI Ad Delivery': { icon: '📣', color: '#3b82f6', role: 'AI广告投放' },
+            'AI Social Media': { icon: '🌐', color: '#22c55e', role: 'AI社交媒体' },
+            'AI Content Marketing': { icon: '📝', color: '#f97316', role: 'AI内容营销' },
+            'AI Digital Marketing AI': { icon: '🤖', color: '#8b5cf6', role: 'AI数字营销AI' },
+            'AI Digital Marketing Analytics': { icon: '📊', color: '#06b6d4', role: 'AI数字营销分析' }
         };
 
         // 拖拽相关变量
