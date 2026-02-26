@@ -45063,8 +45063,173 @@
             }
         ];
 
+        // Cycle 561 新增模板 - 7个行业服务系统
+        const cycle561Templates = [
+            // AI智能智慧智慧港口服务系统
+            {
+                id: 'ai-smart-port',
+                name: 'AI智能智慧智慧港口服务系统',
+                icon: '⚓',
+                desc: '智慧港口服务系统，包括码头运营、装卸调度、集疏运管理等',
+                agents: ['AI Port Director', 'AI Terminal Operations', 'AI Loading Scheduling', 'AI Transport Management', 'AI Port AI', 'AI Port Analytics'],
+                positions: [
+                    { role: 'AI Port Director', x: 400, y: 30 },
+                    { role: 'AI Terminal Operations', x: 150, y: 150 },
+                    { role: 'AI Loading Scheduling', x: 650, y: 150 },
+                    { role: 'AI Transport Management', x: 150, y: 300 },
+                    { role: 'AI Port AI', x: 400, y: 350 },
+                    { role: 'AI Port Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Port Director', to: 'AI Terminal Operations', content: '码头运营' },
+                    { from: 'AI Port Director', to: 'AI Port Analytics', content: '港口分析' },
+                    { from: 'AI Terminal Operations', to: 'AI Loading Scheduling', content: '装卸调度' },
+                    { from: 'AI Loading Scheduling', to: 'AI Transport Management', content: '集疏运管理' },
+                    { from: 'AI Transport Management', to: 'AI Port AI', content: '港口AI' }
+                ]
+            },
+            // AI智能智慧智慧机场服务系统
+            {
+                id: 'ai-smart-airport',
+                name: 'AI智能智慧智慧机场服务系统',
+                icon: '✈️',
+                desc: '智慧机场服务系统，包括航班保障、旅客服务、货运管理等',
+                agents: ['AI Airport Director', 'AI Flight Support', 'AI Passenger Service', 'AI Cargo Management', 'AI Airport AI', 'AI Airport Analytics'],
+                positions: [
+                    { role: 'AI Airport Director', x: 400, y: 30 },
+                    { role: 'AI Flight Support', x: 150, y: 150 },
+                    { role: 'AI Passenger Service', x: 650, y: 150 },
+                    { role: 'AI Cargo Management', x: 150, y: 300 },
+                    { role: 'AI Airport AI', x: 400, y: 350 },
+                    { role: 'AI Airport Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Airport Director', to: 'AI Flight Support', content: '航班保障' },
+                    { from: 'AI Airport Director', to: 'AI Airport Analytics', content: '机场分析' },
+                    { from: 'AI Flight Support', to: 'AI Passenger Service', content: '旅客服务' },
+                    { from: 'AI Passenger Service', to: 'AI Cargo Management', content: '货运管理' },
+                    { from: 'AI Cargo Management', to: 'AI Airport AI', content: '机场AI' }
+                ]
+            },
+            // AI智能智慧智慧铁路服务系统
+            {
+                id: 'ai-smart-railway',
+                name: 'AI智能智慧智慧铁路服务系统',
+                icon: '🚂',
+                desc: '智慧铁路服务系统，包括调度指挥、客货运输、设备维护等',
+                agents: ['AI Railway Director', 'AI Dispatch Command', 'AI Transport Service', 'AI Equipment Maintenance', 'AI Railway AI', 'AI Railway Analytics'],
+                positions: [
+                    { role: 'AI Railway Director', x: 400, y: 30 },
+                    { role: 'AI Dispatch Command', x: 150, y: 150 },
+                    { role: 'AI Transport Service', x: 650, y: 150 },
+                    { role: 'AI Equipment Maintenance', x: 150, y: 300 },
+                    { role: 'AI Railway AI', x: 400, y: 350 },
+                    { role: 'AI Railway Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Railway Director', to: 'AI Dispatch Command', content: '调度指挥' },
+                    { from: 'AI Railway Director', to: 'AI Railway Analytics', content: '铁路分析' },
+                    { from: 'AI Dispatch Command', to: 'AI Transport Service', content: '客货运输' },
+                    { from: 'AI Transport Service', to: 'AI Equipment Maintenance', content: '设备维护' },
+                    { from: 'AI Equipment Maintenance', to: 'AI Railway AI', content: '铁路AI' }
+                ]
+            },
+            // AI智能智慧智慧航道服务系统
+            {
+                id: 'ai-smart-waterway',
+                name: 'AI智能智慧智慧航道服务系统',
+                icon: '⚓',
+                desc: '智慧航道服务系统，包括航道维护、水位监测、船舶通行等',
+                agents: ['AI Waterway Director', 'AI Channel Maintenance', 'AI Water Level Monitor', 'AI Ship Traffic', 'AI Waterway AI', 'AI Waterway Analytics'],
+                positions: [
+                    { role: 'AI Waterway Director', x: 400, y: 30 },
+                    { role: 'AI Channel Maintenance', x: 150, y: 150 },
+                    { role: 'AI Water Level Monitor', x: 650, y: 150 },
+                    { role: 'AI Ship Traffic', x: 150, y: 300 },
+                    { role: 'AI Waterway AI', x: 400, y: 350 },
+                    { role: 'AI Waterway Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Waterway Director', to: 'AI Channel Maintenance', content: '航道维护' },
+                    { from: 'AI Waterway Director', to: 'AI Waterway Analytics', content: '航道分析' },
+                    { from: 'AI Channel Maintenance', to: 'AI Water Level Monitor', content: '水位监测' },
+                    { from: 'AI Water Level Monitor', to: 'AI Ship Traffic', content: '船舶通行' },
+                    { from: 'AI Ship Traffic', to: 'AI Waterway AI', content: '航道AI' }
+                ]
+            },
+            // AI智能智慧智慧管道服务系统
+            {
+                id: 'ai-smart-pipeline',
+                name: 'AI智能智慧智慧管道服务系统',
+                icon: '🛢️',
+                desc: '智慧管道服务系统，包括管道巡检、泄漏检测、调度运行等',
+                agents: ['AI Pipeline Director', 'AI Pipeline Inspection', 'AI Leak Detection', 'AI Dispatch Operation', 'AI Pipeline AI', 'AI Pipeline Analytics'],
+                positions: [
+                    { role: 'AI Pipeline Director', x: 400, y: 30 },
+                    { role: 'AI Pipeline Inspection', x: 150, y: 150 },
+                    { role: 'AI Leak Detection', x: 650, y: 150 },
+                    { role: 'AI Dispatch Operation', x: 150, y: 300 },
+                    { role: 'AI Pipeline AI', x: 400, y: 350 },
+                    { role: 'AI Pipeline Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Pipeline Director', to: 'AI Pipeline Inspection', content: '管道巡检' },
+                    { from: 'AI Pipeline Director', to: 'AI Pipeline Analytics', content: '管道分析' },
+                    { from: 'AI Pipeline Inspection', to: 'AI Leak Detection', content: '泄漏检测' },
+                    { from: 'AI Leak Detection', to: 'AI Dispatch Operation', content: '调度运行' },
+                    { from: 'AI Dispatch Operation', to: 'AI Pipeline AI', content: '管道AI' }
+                ]
+            },
+            // AI智能智慧智慧仓储服务系统
+            {
+                id: 'ai-smart-warehouse',
+                name: 'AI智能智慧智慧仓储服务系统',
+                icon: '🏭',
+                desc: '智慧仓储服务系统，包括库存管理、自动化作业、货物分拣等',
+                agents: ['AI Warehouse Director', 'AI Inventory Management', 'AI Automation Operation', 'AI Cargo Sorting', 'AI Warehouse AI', 'AI Warehouse Analytics'],
+                positions: [
+                    { role: 'AI Warehouse Director', x: 400, y: 30 },
+                    { role: 'AI Inventory Management', x: 150, y: 150 },
+                    { role: 'AI Automation Operation', x: 650, y: 150 },
+                    { role: 'AI Cargo Sorting', x: 150, y: 300 },
+                    { role: 'AI Warehouse AI', x: 400, y: 350 },
+                    { role: 'AI Warehouse Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Warehouse Director', to: 'AI Inventory Management', content: '库存管理' },
+                    { from: 'AI Warehouse Director', to: 'AI Warehouse Analytics', content: '仓储分析' },
+                    { from: 'AI Inventory Management', to: 'AI Automation Operation', content: '自动化作业' },
+                    { from: 'AI Automation Operation', to: 'AI Cargo Sorting', content: '货物分拣' },
+                    { from: 'AI Cargo Sorting', to: 'AI Warehouse AI', content: '仓储AI' }
+                ]
+            },
+            // AI智能智慧智慧配送服务系统
+            {
+                id: 'ai-smart-delivery',
+                name: 'AI智能智慧智慧配送服务系统',
+                icon: '🚚',
+                desc: '智慧配送服务系统，包括路径规划、末端配送、运力调度等',
+                agents: ['AI Delivery Director', 'AI Route Planning', 'AI Last Mile Delivery', 'AI Capacity Scheduling', 'AI Delivery AI', 'AI Delivery Analytics'],
+                positions: [
+                    { role: 'AI Delivery Director', x: 400, y: 30 },
+                    { role: 'AI Route Planning', x: 150, y: 150 },
+                    { role: 'AI Last Mile Delivery', x: 650, y: 150 },
+                    { role: 'AI Capacity Scheduling', x: 150, y: 300 },
+                    { role: 'AI Delivery AI', x: 400, y: 350 },
+                    { role: 'AI Delivery Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Delivery Director', to: 'AI Route Planning', content: '路径规划' },
+                    { from: 'AI Delivery Director', to: 'AI Delivery Analytics', content: '配送分析' },
+                    { from: 'AI Route Planning', to: 'AI Last Mile Delivery', content: '末端配送' },
+                    { from: 'AI Last Mile Delivery', to: 'AI Capacity Scheduling', content: '运力调度' },
+                    { from: 'AI Capacity Scheduling', to: 'AI Delivery AI', content: '配送AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates, ...cycle545Templates, ...cycle546Templates, ...cycle547Templates, ...cycle548Templates, ...cycle549Templates, ...cycle550Templates, ...cycle551Templates, ...cycle552Templates, ...cycle553Templates, ...cycle554Templates, ...cycle557Templates, ...cycle558Templates, ...cycle559Templates, ...cycle560Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates, ...cycle545Templates, ...cycle546Templates, ...cycle547Templates, ...cycle548Templates, ...cycle549Templates, ...cycle550Templates, ...cycle551Templates, ...cycle552Templates, ...cycle553Templates, ...cycle554Templates, ...cycle557Templates, ...cycle558Templates, ...cycle559Templates, ...cycle560Templates, ...cycle561Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -55053,7 +55218,57 @@
             'AI Mine Safety': { icon: '🛡️', color: '#22c55e', role: 'AI矿山安全' },
             'AI Resource Scheduling': { icon: '📦', color: '#f97316', role: 'AI资源调度' },
             'AI Mining AI': { icon: '🤖', color: '#8b5cf6', role: 'AI矿山AI' },
-            'AI Mining Analytics': { icon: '📊', color: '#06b6d4', role: 'AI矿山分析' }
+            'AI Mining Analytics': { icon: '📊', color: '#06b6d4', role: 'AI矿山分析' },
+            // Cycle 561 新增角色 - 7个行业服务系统
+            // AI智能智慧智慧港口服务系统
+            'AI Port Director': { icon: '⚓', color: '#f59e0b', role: 'AI智慧港口总监' },
+            'AI Terminal Operations': { icon: '🏭', color: '#3b82f6', role: 'AI码头运营' },
+            'AI Loading Scheduling': { icon: '📦', color: '#22c55e', role: 'AI装卸调度' },
+            'AI Transport Management': { icon: '🚛', color: '#f97316', role: 'AI集疏运管理' },
+            'AI Port AI': { icon: '🤖', color: '#8b5cf6', role: 'AI港口AI' },
+            'AI Port Analytics': { icon: '📊', color: '#06b6d4', role: 'AI港口分析' },
+            // AI智能智慧智慧机场服务系统
+            'AI Airport Director': { icon: '✈️', color: '#f59e0b', role: 'AI智慧机场总监' },
+            'AI Flight Support': { icon: '🛫', color: '#3b82f6', role: 'AI航班保障' },
+            'AI Passenger Service': { icon: '👤', color: '#22c55e', role: 'AI旅客服务' },
+            'AI Cargo Management': { icon: '📦', color: '#f97316', role: 'AI货运管理' },
+            'AI Airport AI': { icon: '🤖', color: '#8b5cf6', role: 'AI机场AI' },
+            'AI Airport Analytics': { icon: '📊', color: '#06b6d4', role: 'AI机场分析' },
+            // AI智能智慧智慧铁路服务系统
+            'AI Railway Director': { icon: '🚂', color: '#f59e0b', role: 'AI智慧铁路总监' },
+            'AI Dispatch Command': { icon: '🎛️', color: '#3b82f6', role: 'AI调度指挥' },
+            'AI Transport Service': { icon: '🚃', color: '#22c55e', role: 'AI客货运输' },
+            'AI Equipment Maintenance': { icon: '🔧', color: '#f97316', role: 'AI设备维护' },
+            'AI Railway AI': { icon: '🤖', color: '#8b5cf6', role: 'AI铁路AI' },
+            'AI Railway Analytics': { icon: '📊', color: '#06b6d4', role: 'AI铁路分析' },
+            // AI智能智慧智慧航道服务系统
+            'AI Waterway Director': { icon: '⚓', color: '#f59e0b', role: 'AI智慧航道总监' },
+            'AI Channel Maintenance': { icon: '🔧', color: '#3b82f6', role: 'AI航道维护' },
+            'AI Water Level Monitor': { icon: '🌊', color: '#22c55e', role: 'AI水位监测' },
+            'AI Ship Traffic': { icon: '🚢', color: '#f97316', role: 'AI船舶通行' },
+            'AI Waterway AI': { icon: '🤖', color: '#8b5cf6', role: 'AI航道AI' },
+            'AI Waterway Analytics': { icon: '📊', color: '#06b6d4', role: 'AI航道分析' },
+            // AI智能智慧智慧管道服务系统
+            'AI Pipeline Director': { icon: '🛢️', color: '#f59e0b', role: 'AI智慧管道总监' },
+            'AI Pipeline Inspection': { icon: '🔍', color: '#3b82f6', role: 'AI管道巡检' },
+            'AI Leak Detection': { icon: '🔊', color: '#22c55e', role: 'AI泄漏检测' },
+            'AI Dispatch Operation': { icon: '🎛️', color: '#f97316', role: 'AI调度运行' },
+            'AI Pipeline AI': { icon: '🤖', color: '#8b5cf6', role: 'AI管道AI' },
+            'AI Pipeline Analytics': { icon: '📊', color: '#06b6d4', role: 'AI管道分析' },
+            // AI智能智慧智慧仓储服务系统
+            'AI Warehouse Director': { icon: '🏭', color: '#f59e0b', role: 'AI智慧仓储总监' },
+            'AI Inventory Management': { icon: '📦', color: '#3b82f6', role: 'AI库存管理' },
+            'AI Automation Operation': { icon: '⚙️', color: '#22c55e', role: 'AI自动化作业' },
+            'AI Cargo Sorting': { icon: '🏷️', color: '#f97316', role: 'AI货物分拣' },
+            'AI Warehouse AI': { icon: '🤖', color: '#8b5cf6', role: 'AI仓储AI' },
+            'AI Warehouse Analytics': { icon: '📊', color: '#06b6d4', role: 'AI仓储分析' },
+            // AI智能智慧智慧配送服务系统
+            'AI Delivery Director': { icon: '🚚', color: '#f59e0b', role: 'AI智慧配送总监' },
+            'AI Route Planning': { icon: '🗺️', color: '#3b82f6', role: 'AI路径规划' },
+            'AI Last Mile Delivery': { icon: '📍', color: '#22c55e', role: 'AI末端配送' },
+            'AI Capacity Scheduling': { icon: '📅', color: '#f97316', role: 'AI运力调度' },
+            'AI Delivery AI': { icon: '🤖', color: '#8b5cf6', role: 'AI配送AI' },
+            'AI Delivery Analytics': { icon: '📊', color: '#06b6d4', role: 'AI配送分析' }
         };
 
         // 拖拽相关变量
