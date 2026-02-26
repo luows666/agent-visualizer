@@ -37650,8 +37650,173 @@
             }
         ];
 
+        // Cycle 516 - AI智能能源、旅游、餐饮、法律、媒体、人力资源、保险服务系统
+        const cycle516Templates = [
+            // AI智能能源服务系统
+            {
+                id: 'ai-energy-service',
+                name: 'AI智能能源服务系统',
+                icon: '⚡',
+                desc: '智能能源服务系统，包括电网调度、能源交易、负荷预测等',
+                agents: ['AI Energy Director', 'AI Grid Scheduling', 'AI Energy Trading', 'AI Load Forecasting', 'AI Energy AI', 'AI Energy Analytics'],
+                positions: [
+                    { role: 'AI Energy Director', x: 400, y: 30 },
+                    { role: 'AI Grid Scheduling', x: 150, y: 150 },
+                    { role: 'AI Energy Trading', x: 650, y: 150 },
+                    { role: 'AI Load Forecasting', x: 150, y: 300 },
+                    { role: 'AI Energy AI', x: 400, y: 350 },
+                    { role: 'AI Energy Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Energy Director', to: 'AI Grid Scheduling', content: '电网调度' },
+                    { from: 'AI Energy Director', to: 'AI Energy Analytics', content: '能源分析' },
+                    { from: 'AI Grid Scheduling', to: 'AI Energy Trading', content: '能源交易' },
+                    { from: 'AI Energy Trading', to: 'AI Load Forecasting', content: '负荷预测' },
+                    { from: 'AI Load Forecasting', to: 'AI Energy AI', content: '能源AI' }
+                ]
+            },
+            // AI智能旅游服务系统
+            {
+                id: 'ai-tourism-service',
+                name: 'AI智能旅游服务系统',
+                icon: '✈️',
+                desc: '智能旅游服务系统，包括行程规划、景点推荐、酒店预订等',
+                agents: ['AI Tourism Director', 'AI Trip Planning', 'AI Attraction Recommendation', 'AI Hotel Booking', 'AI Tourism AI', 'AI Tourism Analytics'],
+                positions: [
+                    { role: 'AI Tourism Director', x: 400, y: 30 },
+                    { role: 'AI Trip Planning', x: 150, y: 150 },
+                    { role: 'AI Attraction Recommendation', x: 650, y: 150 },
+                    { role: 'AI Hotel Booking', x: 150, y: 300 },
+                    { role: 'AI Tourism AI', x: 400, y: 350 },
+                    { role: 'AI Tourism Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Tourism Director', to: 'AI Trip Planning', content: '行程规划' },
+                    { from: 'AI Tourism Director', to: 'AI Tourism Analytics', content: '旅游分析' },
+                    { from: 'AI Trip Planning', to: 'AI Attraction Recommendation', content: '景点推荐' },
+                    { from: 'AI Attraction Recommendation', to: 'AI Hotel Booking', content: '酒店预订' },
+                    { from: 'AI Hotel Booking', to: 'AI Tourism AI', content: '旅游AI' }
+                ]
+            },
+            // AI智能餐饮服务系统
+            {
+                id: 'ai-restaurant-service',
+                name: 'AI智能餐饮服务系统',
+                icon: '🍽️',
+                desc: '智能餐饮服务系统，包括菜品推荐、供应链管理、门店运营等',
+                agents: ['AI Restaurant Director', 'AI Dish Recommendation', 'AI Supply Chain', 'AI Store Operations', 'AI Restaurant AI', 'AI Restaurant Analytics'],
+                positions: [
+                    { role: 'AI Restaurant Director', x: 400, y: 30 },
+                    { role: 'AI Dish Recommendation', x: 150, y: 150 },
+                    { role: 'AI Supply Chain', x: 650, y: 150 },
+                    { role: 'AI Store Operations', x: 150, y: 300 },
+                    { role: 'AI Restaurant AI', x: 400, y: 350 },
+                    { role: 'AI Restaurant Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Restaurant Director', to: 'AI Dish Recommendation', content: '菜品推荐' },
+                    { from: 'AI Restaurant Director', to: 'AI Restaurant Analytics', content: '餐饮分析' },
+                    { from: 'AI Dish Recommendation', to: 'AI Supply Chain', content: '供应链' },
+                    { from: 'AI Supply Chain', to: 'AI Store Operations', content: '门店运营' },
+                    { from: 'AI Store Operations', to: 'AI Restaurant AI', content: '餐饮AI' }
+                ]
+            },
+            // AI智能法律服务系统
+            {
+                id: 'ai-legal-service',
+                name: 'AI智能法律服务系统',
+                icon: '⚖️',
+                desc: '智能法律服务系统，包括合同审核、案件分析、咨询服务等',
+                agents: ['AI Legal Director', 'AI Contract Review', 'AI Case Analysis', 'AI Consulting Service', 'AI Legal AI', 'AI Legal Analytics'],
+                positions: [
+                    { role: 'AI Legal Director', x: 400, y: 30 },
+                    { role: 'AI Contract Review', x: 150, y: 150 },
+                    { role: 'AI Case Analysis', x: 650, y: 150 },
+                    { role: 'AI Consulting Service', x: 150, y: 300 },
+                    { role: 'AI Legal AI', x: 400, y: 350 },
+                    { role: 'AI Legal Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Legal Director', to: 'AI Contract Review', content: '合同审核' },
+                    { from: 'AI Legal Director', to: 'AI Legal Analytics', content: '法律分析' },
+                    { from: 'AI Contract Review', to: 'AI Case Analysis', content: '案件分析' },
+                    { from: 'AI Case Analysis', to: 'AI Consulting Service', content: '咨询服务' },
+                    { from: 'AI Consulting Service', to: 'AI Legal AI', content: '法律AI' }
+                ]
+            },
+            // AI智能媒体服务系统
+            {
+                id: 'ai-media-service',
+                name: 'AI智能媒体服务系统',
+                icon: '📺',
+                desc: '智能媒体服务系统，包括内容创作、发布管理、效果分析等',
+                agents: ['AI Media Director', 'AI Content Creation', 'AI Publishing Management', 'AI Effect Analysis', 'AI Media AI', 'AI Media Analytics'],
+                positions: [
+                    { role: 'AI Media Director', x: 400, y: 30 },
+                    { role: 'AI Content Creation', x: 150, y: 150 },
+                    { role: 'AI Publishing Management', x: 650, y: 150 },
+                    { role: 'AI Effect Analysis', x: 150, y: 300 },
+                    { role: 'AI Media AI', x: 400, y: 350 },
+                    { role: 'AI Media Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Media Director', to: 'AI Content Creation', content: '内容创作' },
+                    { from: 'AI Media Director', to: 'AI Media Analytics', content: '媒体分析' },
+                    { from: 'AI Content Creation', to: 'AI Publishing Management', content: '发布管理' },
+                    { from: 'AI Publishing Management', to: 'AI Effect Analysis', content: '效果分析' },
+                    { from: 'AI Effect Analysis', to: 'AI Media AI', content: '媒体AI' }
+                ]
+            },
+            // AI智能人力资源服务系统
+            {
+                id: 'ai-hr-service',
+                name: 'AI智能人力资源服务系统',
+                icon: '👥',
+                desc: '智能人力资源服务系统，包括招聘管理、培训发展、绩效评估等',
+                agents: ['AI HR Director', 'AI Recruitment Management', 'AI Training Development', 'AI Performance Evaluation', 'AI HR AI', 'AI HR Analytics'],
+                positions: [
+                    { role: 'AI HR Director', x: 400, y: 30 },
+                    { role: 'AI Recruitment Management', x: 150, y: 150 },
+                    { role: 'AI Training Development', x: 650, y: 150 },
+                    { role: 'AI Performance Evaluation', x: 150, y: 300 },
+                    { role: 'AI HR AI', x: 400, y: 350 },
+                    { role: 'AI HR Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HR Director', to: 'AI Recruitment Management', content: '招聘管理' },
+                    { from: 'AI HR Director', to: 'AI HR Analytics', content: '人力分析' },
+                    { from: 'AI Recruitment Management', to: 'AI Training Development', content: '培训发展' },
+                    { from: 'AI Training Development', to: 'AI Performance Evaluation', content: '绩效评估' },
+                    { from: 'AI Performance Evaluation', to: 'AI HR AI', content: '人力AI' }
+                ]
+            },
+            // AI智能保险服务系统
+            {
+                id: 'ai-insurance-service',
+                name: 'AI智能保险服务系统',
+                icon: '🛡️',
+                desc: '智能保险服务系统，包括风险评估、理赔处理、客户管理等',
+                agents: ['AI Insurance Director', 'AI Risk Assessment', 'AI Claims Processing', 'AI Customer Management', 'AI Insurance AI', 'AI Insurance Analytics'],
+                positions: [
+                    { role: 'AI Insurance Director', x: 400, y: 30 },
+                    { role: 'AI Risk Assessment', x: 150, y: 150 },
+                    { role: 'AI Claims Processing', x: 650, y: 150 },
+                    { role: 'AI Customer Management', x: 150, y: 300 },
+                    { role: 'AI Insurance AI', x: 400, y: 350 },
+                    { role: 'AI Insurance Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Insurance Director', to: 'AI Risk Assessment', content: '风险评估' },
+                    { from: 'AI Insurance Director', to: 'AI Insurance Analytics', content: '保险分析' },
+                    { from: 'AI Risk Assessment', to: 'AI Claims Processing', content: '理赔处理' },
+                    { from: 'AI Claims Processing', to: 'AI Customer Management', content: '客户管理' },
+                    { from: 'AI Customer Management', to: 'AI Insurance AI', content: '保险AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates];
 
         // Agent 角色配置
         const agentRoles = {
