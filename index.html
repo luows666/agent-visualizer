@@ -43917,8 +43917,173 @@
             }
         ];
 
+        // Cycle 554 新增模板 - 7个行业服务系统
+        const cycle554Templates = [
+            // AI智能智慧深空探测服务系统
+            {
+                id: 'ai-deep-space-exploration',
+                name: 'AI智能智慧深空探测服务系统',
+                icon: '🚀',
+                desc: '智慧深空探测服务系统，包括星际航行、行星探测、太空站运维等',
+                agents: ['AI Deep Space Director', 'AI Interstellar Travel', 'AI Planet Detection', 'AI Space Station', 'AI Deep Space AI', 'AI Deep Space Analytics'],
+                positions: [
+                    { role: 'AI Deep Space Director', x: 400, y: 30 },
+                    { role: 'AI Interstellar Travel', x: 150, y: 150 },
+                    { role: 'AI Planet Detection', x: 650, y: 150 },
+                    { role: 'AI Space Station', x: 150, y: 300 },
+                    { role: 'AI Deep Space AI', x: 400, y: 350 },
+                    { role: 'AI Deep Space Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Deep Space Director', to: 'AI Interstellar Travel', content: '星际航行' },
+                    { from: 'AI Deep Space Director', to: 'AI Deep Space Analytics', content: '深空分析' },
+                    { from: 'AI Interstellar Travel', to: 'AI Planet Detection', content: '行星探测' },
+                    { from: 'AI Planet Detection', to: 'AI Space Station', content: '太空站' },
+                    { from: 'AI Space Station', to: 'AI Deep Space AI', content: '深空探测AI' }
+                ]
+            },
+            // AI智能智慧智慧城市服务系统
+            {
+                id: 'ai-smart-city-comprehensive',
+                name: 'AI智能智慧智慧城市服务系统',
+                icon: '🏙️',
+                desc: '智慧城市服务系统，包括城市大脑、智慧交通、智慧环保等',
+                agents: ['AI Smart City Director', 'AI City Brain', 'AI Smart Traffic', 'AI Smart Environment', 'AI Smart City AI', 'AI Smart City Analytics'],
+                positions: [
+                    { role: 'AI Smart City Director', x: 400, y: 30 },
+                    { role: 'AI City Brain', x: 150, y: 150 },
+                    { role: 'AI Smart Traffic', x: 650, y: 150 },
+                    { role: 'AI Smart Environment', x: 150, y: 300 },
+                    { role: 'AI Smart City AI', x: 400, y: 350 },
+                    { role: 'AI Smart City Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Smart City Director', to: 'AI City Brain', content: '城市大脑' },
+                    { from: 'AI Smart City Director', to: 'AI Smart City Analytics', content: '城市分析' },
+                    { from: 'AI City Brain', to: 'AI Smart Traffic', content: '智慧交通' },
+                    { from: 'AI Smart Traffic', to: 'AI Smart Environment', content: '智慧环保' },
+                    { from: 'AI Smart Environment', to: 'AI Smart City AI', content: '智慧城市AI' }
+                ]
+            },
+            // AI智能智慧智能制造服务系统
+            {
+                id: 'ai-intelligent-manufacturing',
+                name: 'AI智能智慧智能制造服务系统',
+                icon: '🏭',
+                desc: '智能制造服务系统，包括智能工厂、工业机器人、柔性制造等',
+                agents: ['AI Manufacturing Director', 'AI Smart Factory', 'AI Industrial Robot', 'AI Flexible Manufacturing', 'AI Manufacturing AI', 'AI Manufacturing Analytics'],
+                positions: [
+                    { role: 'AI Manufacturing Director', x: 400, y: 30 },
+                    { role: 'AI Smart Factory', x: 150, y: 150 },
+                    { role: 'AI Industrial Robot', x: 650, y: 150 },
+                    { role: 'AI Flexible Manufacturing', x: 150, y: 300 },
+                    { role: 'AI Manufacturing AI', x: 400, y: 350 },
+                    { role: 'AI Manufacturing Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Manufacturing Director', to: 'AI Smart Factory', content: '智能工厂' },
+                    { from: 'AI Manufacturing Director', to: 'AI Manufacturing Analytics', content: '制造分析' },
+                    { from: 'AI Smart Factory', to: 'AI Industrial Robot', content: '工业机器人' },
+                    { from: 'AI Industrial Robot', to: 'AI Flexible Manufacturing', content: '柔性制造' },
+                    { from: 'AI Flexible Manufacturing', to: 'AI Manufacturing AI', content: '智能制造AI' }
+                ]
+            },
+            // AI智能智慧数字贸易服务系统
+            {
+                id: 'ai-digital-trade',
+                name: 'AI智能智慧数字贸易服务系统',
+                icon: '📦',
+                desc: '数字贸易服务系统，包括跨境支付、智慧物流、供应链金融等',
+                agents: ['AI Digital Trade Director', 'AI Cross-border Payment', 'AI Smart Logistics', 'AI Supply Chain Finance', 'AI Digital Trade AI', 'AI Digital Trade Analytics'],
+                positions: [
+                    { role: 'AI Digital Trade Director', x: 400, y: 30 },
+                    { role: 'AI Cross-border Payment', x: 150, y: 150 },
+                    { role: 'AI Smart Logistics', x: 650, y: 150 },
+                    { role: 'AI Supply Chain Finance', x: 150, y: 300 },
+                    { role: 'AI Digital Trade AI', x: 400, y: 350 },
+                    { role: 'AI Digital Trade Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Digital Trade Director', to: 'AI Cross-border Payment', content: '跨境支付' },
+                    { from: 'AI Digital Trade Director', to: 'AI Digital Trade Analytics', content: '贸易分析' },
+                    { from: 'AI Cross-border Payment', to: 'AI Smart Logistics', content: '智慧物流' },
+                    { from: 'AI Smart Logistics', to: 'AI Supply Chain Finance', content: '供应链金融' },
+                    { from: 'AI Supply Chain Finance', to: 'AI Digital Trade AI', content: '数字贸易AI' }
+                ]
+            },
+            // AI智能智慧虚拟偶像服务系统
+            {
+                id: 'ai-virtual-idol',
+                name: 'AI智能智慧虚拟偶像服务系统',
+                icon: '🎤',
+                desc: '虚拟偶像服务系统，包括虚拟形象、直播互动、粉丝运营等',
+                agents: ['AI Virtual Idol Director', 'AI Virtual Avatar', 'AI Live Interaction', 'AI Fan Operation', 'AI Virtual Idol AI', 'AI Virtual Idol Analytics'],
+                positions: [
+                    { role: 'AI Virtual Idol Director', x: 400, y: 30 },
+                    { role: 'AI Virtual Avatar', x: 150, y: 150 },
+                    { role: 'AI Live Interaction', x: 650, y: 150 },
+                    { role: 'AI Fan Operation', x: 150, y: 300 },
+                    { role: 'AI Virtual Idol AI', x: 400, y: 350 },
+                    { role: 'AI Virtual Idol Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Virtual Idol Director', to: 'AI Virtual Avatar', content: '虚拟形象' },
+                    { from: 'AI Virtual Idol Director', to: 'AI Virtual Idol Analytics', content: '偶像分析' },
+                    { from: 'AI Virtual Avatar', to: 'AI Live Interaction', content: '直播互动' },
+                    { from: 'AI Live Interaction', to: 'AI Fan Operation', content: '粉丝运营' },
+                    { from: 'AI Fan Operation', to: 'AI Virtual Idol AI', content: '虚拟偶像AI' }
+                ]
+            },
+            // AI智能智慧智慧农业服务系统
+            {
+                id: 'ai-smart-agriculture-comprehensive',
+                name: 'AI智能智慧智慧农业服务系统',
+                icon: '🌾',
+                desc: '智慧农业服务系统，包括精准农业、智慧灌溉、农产品溯源等',
+                agents: ['AI Agriculture Director', 'AI Precision Farming', 'AI Smart Irrigation', 'AI Traceability', 'AI Agriculture AI', 'AI Agriculture Analytics'],
+                positions: [
+                    { role: 'AI Agriculture Director', x: 400, y: 30 },
+                    { role: 'AI Precision Farming', x: 150, y: 150 },
+                    { role: 'AI Smart Irrigation', x: 650, y: 150 },
+                    { role: 'AI Traceability', x: 150, y: 300 },
+                    { role: 'AI Agriculture AI', x: 400, y: 350 },
+                    { role: 'AI Agriculture Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Agriculture Director', to: 'AI Precision Farming', content: '精准农业' },
+                    { from: 'AI Agriculture Director', to: 'AI Agriculture Analytics', content: '农业分析' },
+                    { from: 'AI Precision Farming', to: 'AI Smart Irrigation', content: '智慧灌溉' },
+                    { from: 'AI Smart Irrigation', to: 'AI Traceability', content: '农产品溯源' },
+                    { from: 'AI Traceability', to: 'AI Agriculture AI', content: '智慧农业AI' }
+                ]
+            },
+            // AI智能智慧智慧能源服务系统
+            {
+                id: 'ai-smart-energy-comprehensive',
+                name: 'AI智能智慧智慧能源服务系统',
+                icon: '⚡',
+                desc: '智慧能源服务系统，包括能源互联网、智慧电网、能源存储等',
+                agents: ['AI Energy Director', 'AI Energy Internet', 'AI Smart Grid', 'AI Energy Storage', 'AI Energy AI', 'AI Energy Analytics'],
+                positions: [
+                    { role: 'AI Energy Director', x: 400, y: 30 },
+                    { role: 'AI Energy Internet', x: 150, y: 150 },
+                    { role: 'AI Smart Grid', x: 650, y: 150 },
+                    { role: 'AI Energy Storage', x: 150, y: 300 },
+                    { role: 'AI Energy AI', x: 400, y: 350 },
+                    { role: 'AI Energy Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Energy Director', to: 'AI Energy Internet', content: '能源互联网' },
+                    { from: 'AI Energy Director', to: 'AI Energy Analytics', content: '能源分析' },
+                    { from: 'AI Energy Internet', to: 'AI Smart Grid', content: '智慧电网' },
+                    { from: 'AI Smart Grid', to: 'AI Energy Storage', content: '能源存储' },
+                    { from: 'AI Energy Storage', to: 'AI Energy AI', content: '智慧能源AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates, ...cycle545Templates, ...cycle546Templates, ...cycle547Templates, ...cycle548Templates, ...cycle549Templates, ...cycle550Templates, ...cycle551Templates, ...cycle552Templates, ...cycle553Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates, ...cycle545Templates, ...cycle546Templates, ...cycle547Templates, ...cycle548Templates, ...cycle549Templates, ...cycle550Templates, ...cycle551Templates, ...cycle552Templates, ...cycle553Templates, ...cycle554Templates];
 
         // Agent 角色配置
         const agentRoles = {
