@@ -40616,12 +40616,175 @@
                     { from: 'AI Training Analysis', to: 'AI Match Prediction', content: '赛事预测' },
                     { from: 'AI Match Prediction', to: 'AI Athlete Health', content: '运动员健康' },
                     { from: 'AI Athlete Health', to: 'AI Sports AI', content: '体育AI' }
+        ];
+
+        // Cycle 534 新增模板 - 7个行业服务系统
+        const cycle534Templates = [
+            // AI智能卫星遥感系统
+            {
+                id: 'ai-satellite-remote-sensing',
+                name: 'AI智能卫星遥感系统',
+                icon: '🛰️',
+                desc: '智能卫星遥感系统，包括卫星图像处理、地表监测、灾害预警等',
+                agents: ['AI Satellite Director', 'AI Image Processing', 'AI Surface Monitoring', 'AI Disaster Warning', 'AI Satellite AI', 'AI Satellite Analytics'],
+                positions: [
+                    { role: 'AI Satellite Director', x: 400, y: 30 },
+                    { role: 'AI Image Processing', x: 150, y: 150 },
+                    { role: 'AI Surface Monitoring', x: 650, y: 150 },
+                    { role: 'AI Disaster Warning', x: 150, y: 300 },
+                    { role: 'AI Satellite AI', x: 400, y: 350 },
+                    { role: 'AI Satellite Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Satellite Director', to: 'AI Image Processing', content: '图像处理' },
+                    { from: 'AI Satellite Director', to: 'AI Satellite Analytics', content: '遥感分析' },
+                    { from: 'AI Image Processing', to: 'AI Surface Monitoring', content: '地表监测' },
+                    { from: 'AI Surface Monitoring', to: 'AI Disaster Warning', content: '灾害预警' },
+                    { from: 'AI Disaster Warning', to: 'AI Satellite AI', content: '卫星AI' }
+                ]
+            },
+            // AI智能深海作业系统
+            {
+                id: 'ai-deep-sea-operation',
+                name: 'AI智能深海作业系统',
+                icon: '🔻',
+                desc: '智能深海作业系统，包括水下探测、海洋资源开发、深海作业控制等',
+                agents: ['AI DeepSea Director', 'AI Underwater Detection', 'AI Ocean Resource', 'AI DeepSea Control', 'AI DeepSea AI', 'AI DeepSea Analytics'],
+                positions: [
+                    { role: 'AI DeepSea Director', x: 400, y: 30 },
+                    { role: 'AI Underwater Detection', x: 150, y: 150 },
+                    { role: 'AI Ocean Resource', x: 650, y: 150 },
+                    { role: 'AI DeepSea Control', x: 150, y: 300 },
+                    { role: 'AI DeepSea AI', x: 400, y: 350 },
+                    { role: 'AI DeepSea Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI DeepSea Director', to: 'AI Underwater Detection', content: '水下探测' },
+                    { from: 'AI DeepSea Director', to: 'AI DeepSea Analytics', content: '深海分析' },
+                    { from: 'AI Underwater Detection', to: 'AI Ocean Resource', content: '海洋资源' },
+                    { from: 'AI Ocean Resource', to: 'AI DeepSea Control', content: '作业控制' },
+                    { from: 'AI DeepSea Control', to: 'AI DeepSea AI', content: '深海AI' }
+                ]
+            },
+            // AI智能核能应用系统
+            {
+                id: 'ai-nuclear-energy',
+                name: 'AI智能核能应用系统',
+                icon: '⚛️',
+                desc: '智能核能应用系统，包括核电站运维、辐射监测、核废料处理等',
+                agents: ['AI Nuclear Director', 'AI Plant Operation', 'AI Radiation Monitoring', 'AI Waste Handling', 'AI Nuclear AI', 'AI Nuclear Analytics'],
+                positions: [
+                    { role: 'AI Nuclear Director', x: 400, y: 30 },
+                    { role: 'AI Plant Operation', x: 150, y: 150 },
+                    { role: 'AI Radiation Monitoring', x: 650, y: 150 },
+                    { role: 'AI Waste Handling', x: 150, y: 300 },
+                    { role: 'AI Nuclear AI', x: 400, y: 350 },
+                    { role: 'AI Nuclear Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Nuclear Director', to: 'AI Plant Operation', content: '电站运维' },
+                    { from: 'AI Nuclear Director', to: 'AI Nuclear Analytics', content: '核能分析' },
+                    { from: 'AI Plant Operation', to: 'AI Radiation Monitoring', content: '辐射监测' },
+                    { from: 'AI Radiation Monitoring', to: 'AI Waste Handling', content: '废料处理' },
+                    { from: 'AI Waste Handling', to: 'AI Nuclear AI', content: '核能AI' }
+                ]
+            },
+            // AI智能氢能源系统
+            {
+                id: 'ai-hydrogen-energy',
+                name: 'AI智能氢能源系统',
+                icon: '💧',
+                desc: '智能氢能源系统，包括氢气生产、储运、燃料电池应用等',
+                agents: ['AI Hydrogen Director', 'AI Hydrogen Production', 'AI Hydrogen Storage', 'AI Fuel Cell', 'AI Hydrogen AI', 'AI Hydrogen Analytics'],
+                positions: [
+                    { role: 'AI Hydrogen Director', x: 400, y: 30 },
+                    { role: 'AI Hydrogen Production', x: 150, y: 150 },
+                    { role: 'AI Hydrogen Storage', x: 650, y: 150 },
+                    { role: 'AI Fuel Cell', x: 150, y: 300 },
+                    { role: 'AI Hydrogen AI', x: 400, y: 350 },
+                    { role: 'AI Hydrogen Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Hydrogen Director', to: 'AI Hydrogen Production', content: '氢气生产' },
+                    { from: 'AI Hydrogen Director', to: 'AI Hydrogen Analytics', content: '氢能分析' },
+                    { from: 'AI Hydrogen Production', to: 'AI Hydrogen Storage', content: '氢气储运' },
+                    { from: 'AI Hydrogen Storage', to: 'AI Fuel Cell', content: '燃料电池' },
+                    { from: 'AI Fuel Cell', to: 'AI Hydrogen AI', content: '氢能AI' }
+                ]
+            },
+            // AI智能可穿戴设备系统
+            {
+                id: 'ai-wearable-devices',
+                name: 'AI智能可穿戴设备系统',
+                icon: '⌚',
+                desc: '智能可穿戴设备系统，包括健康监测、运动追踪、情绪分析等',
+                agents: ['AI Wearable Director', 'AI Health Monitoring', 'AI Sports Tracking', 'AI Emotion Analysis', 'AI Wearable AI', 'AI Wearable Analytics'],
+                positions: [
+                    { role: 'AI Wearable Director', x: 400, y: 30 },
+                    { role: 'AI Health Monitoring', x: 150, y: 150 },
+                    { role: 'AI Sports Tracking', x: 650, y: 150 },
+                    { role: 'AI Emotion Analysis', x: 150, y: 300 },
+                    { role: 'AI Wearable AI', x: 400, y: 350 },
+                    { role: 'AI Wearable Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Wearable Director', to: 'AI Health Monitoring', content: '健康监测' },
+                    { from: 'AI Wearable Director', to: 'AI Wearable Analytics', content: '穿戴分析' },
+                    { from: 'AI Health Monitoring', to: 'AI Sports Tracking', content: '运动追踪' },
+                    { from: 'AI Sports Tracking', to: 'AI Emotion Analysis', content: '情绪分析' },
+                    { from: 'AI Emotion Analysis', to: 'AI Wearable AI', content: '穿戴AI' }
+                ]
+            },
+            // AI智能脑机接口系统
+            {
+                id: 'ai-brain-computer',
+                name: 'AI智能脑机接口系统',
+                icon: '🧠',
+                desc: '智能脑机接口系统，包括神经信号处理、意念控制、神经康复等',
+                agents: ['AI BCI Director', 'AI Neural Signal', 'AI Mind Control', 'AI Neural Rehab', 'AI BCI AI', 'AI BCI Analytics'],
+                positions: [
+                    { role: 'AI BCI Director', x: 400, y: 30 },
+                    { role: 'AI Neural Signal', x: 150, y: 150 },
+                    { role: 'AI Mind Control', x: 650, y: 150 },
+                    { role: 'AI Neural Rehab', x: 150, y: 300 },
+                    { role: 'AI BCI AI', x: 400, y: 350 },
+                    { role: 'AI BCI Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI BCI Director', to: 'AI Neural Signal', content: '神经信号' },
+                    { from: 'AI BCI Director', to: 'AI BCI Analytics', content: 'BCI分析' },
+                    { from: 'AI Neural Signal', to: 'AI Mind Control', content: '意念控制' },
+                    { from: 'AI Mind Control', to: 'AI Neural Rehab', content: '神经康复' },
+                    { from: 'AI Neural Rehab', to: 'AI BCI AI', content: 'BCI AI' }
+                ]
+            },
+            // AI智能6G通信系统
+            {
+                id: 'ai-6g-communication',
+                name: 'AI智能6G通信系统',
+                icon: '📡',
+                desc: '智能6G通信系统，包括全频段通信、智能组网、星地一体等',
+                agents: ['AI 6G Director', 'AI Full Band', 'AI Smart Network', 'AI Satellite Ground', 'AI 6G AI', 'AI 6G Analytics'],
+                positions: [
+                    { role: 'AI 6G Director', x: 400, y: 30 },
+                    { role: 'AI Full Band', x: 150, y: 150 },
+                    { role: 'AI Smart Network', x: 650, y: 150 },
+                    { role: 'AI Satellite Ground', x: 150, y: 300 },
+                    { role: 'AI 6G AI', x: 400, y: 350 },
+                    { role: 'AI 6G Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI 6G Director', to: 'AI Full Band', content: '全频段通信' },
+                    { from: 'AI 6G Director', to: 'AI 6G Analytics', content: '6G分析' },
+                    { from: 'AI Full Band', to: 'AI Smart Network', content: '智能组网' },
+                    { from: 'AI Smart Network', to: 'AI Satellite Ground', content: '星地一体' },
+                    { from: 'AI Satellite Ground', to: 'AI 6G AI', content: '6G AI' }
                 ]
             }
         ];
 
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -49360,7 +49523,56 @@
             'AI Match Prediction': { icon: '🔮', color: '#22c55e', role: 'AI赛事预测' },
             'AI Athlete Health': { icon: '💪', color: '#f97316', role: 'AI运动员健康' },
             'AI Sports AI': { icon: '🤖', color: '#8b5cf6', role: 'AI体育AI' },
-            'AI Sports Analytics': { icon: '📊', color: '#06b6d4', role: 'AI体育分析' }
+            'AI Sports Analytics': { icon: '📊', color: '#06b6d4', role: 'AI体育分析' },
+            // Cycle 534 - AI智能卫星遥感系统
+            'AI Satellite Director': { icon: '🛰️', color: '#8b5cf6', role: 'AI卫星遥感总监' },
+            'AI Image Processing': { icon: '🖼️', color: '#22c55e', role: 'AI图像处理' },
+            'AI Surface Monitoring': { icon: '🌍', color: '#3b82f6', role: 'AI地表监测' },
+            'AI Disaster Warning': { icon: '⚠️', color: '#f59e0b', role: 'AI灾害预警' },
+            'AI Satellite AI': { icon: '🤖', color: '#ec4899', role: 'AI卫星AI' },
+            'AI Satellite Analytics': { icon: '📊', color: '#06b6d4', role: 'AI遥感分析' },
+            // Cycle 534 - AI智能深海作业系统
+            'AI DeepSea Director': { icon: '🔻', color: '#8b5cf6', role: 'AI深海作业总监' },
+            'AI Underwater Detection': { icon: '🔍', color: '#22c55e', role: 'AI水下探测' },
+            'AI Ocean Resource': { icon: '🌊', color: '#3b82f6', role: 'AI海洋资源' },
+            'AI DeepSea Control': { icon: '🎛️', color: '#f59e0b', role: 'AI深海控制' },
+            'AI DeepSea AI': { icon: '🤖', color: '#ec4899', role: 'AI深海AI' },
+            'AI DeepSea Analytics': { icon: '📊', color: '#06b6d4', role: 'AI深海分析' },
+            // Cycle 534 - AI智能核能应用系统
+            'AI Nuclear Director': { icon: '⚛️', color: '#8b5cf6', role: 'AI核能应用总监' },
+            'AI Plant Operation': { icon: '🏭', color: '#22c55e', role: 'AI电站运维' },
+            'AI Radiation Monitoring': { icon: '☢️', color: '#3b82f6', role: 'AI辐射监测' },
+            'AI Waste Handling': { icon: '🗑️', color: '#f59e0b', role: 'AI废料处理' },
+            'AI Nuclear AI': { icon: '🤖', color: '#ec4899', role: 'AI核能AI' },
+            'AI Nuclear Analytics': { icon: '📊', color: '#06b6d4', role: 'AI核能分析' },
+            // Cycle 534 - AI智能氢能源系统
+            'AI Hydrogen Director': { icon: '💧', color: '#8b5cf6', role: 'AI氢能源总监' },
+            'AI Hydrogen Production': { icon: '⚗️', color: '#22c55e', role: 'AI氢气生产' },
+            'AI Hydrogen Storage': { icon: '🛢️', color: '#3b82f6', role: 'AI氢气储运' },
+            'AI Fuel Cell': { icon: '🔋', color: '#f59e0b', role: 'AI燃料电池' },
+            'AI Hydrogen AI': { icon: '🤖', color: '#ec4899', role: 'AI氢能AI' },
+            'AI Hydrogen Analytics': { icon: '📊', color: '#06b6d4', role: 'AI氢能分析' },
+            // Cycle 534 - AI智能可穿戴设备系统
+            'AI Wearable Director': { icon: '⌚', color: '#8b5cf6', role: 'AI可穿戴总监' },
+            'AI Health Monitoring': { icon: '💓', color: '#22c55e', role: 'AI健康监测' },
+            'AI Sports Tracking': { icon: '🏃', color: '#3b82f6', role: 'AI运动追踪' },
+            'AI Emotion Analysis': { icon: '😊', color: '#f59e0b', role: 'AI情绪分析' },
+            'AI Wearable AI': { icon: '🤖', color: '#ec4899', role: 'AI穿戴AI' },
+            'AI Wearable Analytics': { icon: '📊', color: '#06b6d4', role: 'AI穿戴分析' },
+            // Cycle 534 - AI智能脑机接口系统
+            'AI BCI Director': { icon: '🧠', color: '#8b5cf6', role: 'AI脑机接口总监' },
+            'AI Neural Signal': { icon: '📡', color: '#22c55e', role: 'AI神经信号' },
+            'AI Mind Control': { icon: '🎯', color: '#3b82f6', role: 'AI意念控制' },
+            'AI Neural Rehab': { icon: '🏥', color: '#f59e0b', role: 'AI神经康复' },
+            'AI BCI AI': { icon: '🤖', color: '#ec4899', role: 'AIBCI AI' },
+            'AI BCI Analytics': { icon: '📊', color: '#06b6d4', role: 'AIBCI分析' },
+            // Cycle 534 - AI智能6G通信系统
+            'AI 6G Director': { icon: '📡', color: '#8b5cf6', role: 'AI6G通信总监' },
+            'AI Full Band': { icon: '📶', color: '#22c55e', role: 'AI全频段通信' },
+            'AI Smart Network': { icon: '🌐', color: '#3b82f6', role: 'AI智能组网' },
+            'AI Satellite Ground': { icon: '🛰️', color: '#f59e0b', role: 'AI星地一体' },
+            'AI 6G AI': { icon: '🤖', color: '#ec4899', role: 'AI6G AI' },
+            'AI 6G Analytics': { icon: '📊', color: '#06b6d4', role: 'AI6G分析' }
         };
 
         // 拖拽相关变量
