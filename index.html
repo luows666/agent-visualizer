@@ -41608,8 +41608,173 @@
             }
         ];
 
+        // Cycle 540 新增模板 - 7个行业服务系统
+        const cycle540Templates = [
+            // AI智能智慧停车场系统
+            {
+                id: 'ai-parking-service',
+                name: 'AI智能智慧停车场系统',
+                icon: '🅿️',
+                desc: '智慧停车场服务系统，包括车位管理、收费管理、车辆识别等',
+                agents: ['AI Parking Director', 'AI Parking Management', 'AI Space Management', 'AI Billing System', 'AI Parking AI', 'AI Parking Analytics'],
+                positions: [
+                    { role: 'AI Parking Director', x: 400, y: 30 },
+                    { role: 'AI Parking Management', x: 150, y: 150 },
+                    { role: 'AI Space Management', x: 650, y: 150 },
+                    { role: 'AI Billing System', x: 150, y: 300 },
+                    { role: 'AI Parking AI', x: 400, y: 350 },
+                    { role: 'AI Parking Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Parking Director', to: 'AI Parking Management', content: '停车管理' },
+                    { from: 'AI Parking Director', to: 'AI Parking Analytics', content: '停车分析' },
+                    { from: 'AI Parking Management', to: 'AI Space Management', content: '车位管理' },
+                    { from: 'AI Space Management', to: 'AI Billing System', content: '收费系统' },
+                    { from: 'AI Billing System', to: 'AI Parking AI', content: '停车AI' }
+                ]
+            },
+            // AI智能智慧楼宇系统
+            {
+                id: 'ai-building-service',
+                name: 'AI智能智慧楼宇系统',
+                icon: '🏢',
+                desc: '智慧楼宇服务系统，包括设备管理、能源管理、空间管理等',
+                agents: ['AI Building Director', 'AI Building Management', 'AI Equipment Management', 'AI Energy Management', 'AI Building AI', 'AI Building Analytics'],
+                positions: [
+                    { role: 'AI Building Director', x: 400, y: 30 },
+                    { role: 'AI Building Management', x: 150, y: 150 },
+                    { role: 'AI Equipment Management', x: 650, y: 150 },
+                    { role: 'AI Energy Management', x: 150, y: 300 },
+                    { role: 'AI Building AI', x: 400, y: 350 },
+                    { role: 'AI Building Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Building Director', to: 'AI Building Management', content: '楼宇管理' },
+                    { from: 'AI Building Director', to: 'AI Building Analytics', content: '楼宇分析' },
+                    { from: 'AI Building Management', to: 'AI Equipment Management', content: '设备管理' },
+                    { from: 'AI Equipment Management', to: 'AI Energy Management', content: '能源管理' },
+                    { from: 'AI Energy Management', to: 'AI Building AI', content: '楼宇AI' }
+                ]
+            },
+            // AI智能智慧消防系统
+            {
+                id: 'ai-fire-service',
+                name: 'AI智能智慧消防系统',
+                icon: '🚒',
+                desc: '智慧消防服务系统，包括火灾预警、应急指挥、消防设备管理等',
+                agents: ['AI Fire Director', 'AI Fire Monitoring', 'AI Fire Warning', 'AI Emergency Command', 'AI Fire AI', 'AI Fire Analytics'],
+                positions: [
+                    { role: 'AI Fire Director', x: 400, y: 30 },
+                    { role: 'AI Fire Monitoring', x: 150, y: 150 },
+                    { role: 'AI Fire Warning', x: 650, y: 150 },
+                    { role: 'AI Emergency Command', x: 150, y: 300 },
+                    { role: 'AI Fire AI', x: 400, y: 350 },
+                    { role: 'AI Fire Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fire Director', to: 'AI Fire Monitoring', content: '消防监控' },
+                    { from: 'AI Fire Director', to: 'AI Fire Analytics', content: '消防分析' },
+                    { from: 'AI Fire Monitoring', to: 'AI Fire Warning', content: '火灾预警' },
+                    { from: 'AI Fire Warning', to: 'AI Emergency Command', content: '应急指挥' },
+                    { from: 'AI Emergency Command', to: 'AI Fire AI', content: '消防AI' }
+                ]
+            },
+            // AI智能智慧安防系统
+            {
+                id: 'ai-security-service',
+                name: 'AI智能智慧安防系统',
+                icon: '🔐',
+                desc: '智慧安防服务系统，包括门禁管理、视频监控、报警处理等',
+                agents: ['AI Security Director', 'AI Access Control', 'AI Video Surveillance', 'AI Alarm Processing', 'AI Security AI', 'AI Security Analytics'],
+                positions: [
+                    { role: 'AI Security Director', x: 400, y: 30 },
+                    { role: 'AI Access Control', x: 150, y: 150 },
+                    { role: 'AI Video Surveillance', x: 650, y: 150 },
+                    { role: 'AI Alarm Processing', x: 150, y: 300 },
+                    { role: 'AI Security AI', x: 400, y: 350 },
+                    { role: 'AI Security Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Security Director', to: 'AI Access Control', content: '门禁管理' },
+                    { from: 'AI Security Director', to: 'AI Security Analytics', content: '安防分析' },
+                    { from: 'AI Access Control', to: 'AI Video Surveillance', content: '视频监控' },
+                    { from: 'AI Video Surveillance', to: 'AI Alarm Processing', content: '报警处理' },
+                    { from: 'AI Alarm Processing', to: 'AI Security AI', content: '安防AI' }
+                ]
+            },
+            // AI智能智慧物业系统
+            {
+                id: 'ai-property-service',
+                name: 'AI智能智慧物业系统',
+                icon: '🏠',
+                desc: '智慧物业服务系统，包括维修管理、费用收缴、客户服务等',
+                agents: ['AI Property Director', 'AI Property Management', 'AI Maintenance Service', 'AI Fee Collection', 'AI Property AI', 'AI Property Analytics'],
+                positions: [
+                    { role: 'AI Property Director', x: 400, y: 30 },
+                    { role: 'AI Property Management', x: 150, y: 150 },
+                    { role: 'AI Maintenance Service', x: 650, y: 150 },
+                    { role: 'AI Fee Collection', x: 150, y: 300 },
+                    { role: 'AI Property AI', x: 400, y: 350 },
+                    { role: 'AI Property Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Property Director', to: 'AI Property Management', content: '物业管理' },
+                    { from: 'AI Property Director', to: 'AI Property Analytics', content: '物业分析' },
+                    { from: 'AI Property Management', to: 'AI Maintenance Service', content: '维修服务' },
+                    { from: 'AI Maintenance Service', to: 'AI Fee Collection', content: '费用收缴' },
+                    { from: 'AI Fee Collection', to: 'AI Property AI', content: '物业AI' }
+                ]
+            },
+            // AI智能智慧电梯系统
+            {
+                id: 'ai-elevator-service',
+                name: 'AI智能智慧电梯系统',
+                icon: '🏗️',
+                desc: '智慧电梯服务系统，包括设备监控、故障诊断、维保管理等',
+                agents: ['AI Elevator Director', 'AI Elevator Monitoring', 'AI Fault Diagnosis', 'AI Maintenance Management', 'AI Elevator AI', 'AI Elevator Analytics'],
+                positions: [
+                    { role: 'AI Elevator Director', x: 400, y: 30 },
+                    { role: 'AI Elevator Monitoring', x: 150, y: 150 },
+                    { role: 'AI Fault Diagnosis', x: 650, y: 150 },
+                    { role: 'AI Maintenance Management', x: 150, y: 300 },
+                    { role: 'AI Elevator AI', x: 400, y: 350 },
+                    { role: 'AI Elevator Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Elevator Director', to: 'AI Elevator Monitoring', content: '电梯监控' },
+                    { from: 'AI Elevator Director', to: 'AI Elevator Analytics', content: '电梯分析' },
+                    { from: 'AI Elevator Monitoring', to: 'AI Fault Diagnosis', content: '故障诊断' },
+                    { from: 'AI Fault Diagnosis', to: 'AI Maintenance Management', content: '维保管理' },
+                    { from: 'AI Maintenance Management', to: 'AI Elevator AI', content: '电梯AI' }
+                ]
+            },
+            // AI智能智慧照明系统
+            {
+                id: 'ai-lighting-service',
+                name: 'AI智能智慧照明系统',
+                icon: '💡',
+                desc: '智慧照明服务系统，包括照明控制、节能管理、光效调节等',
+                agents: ['AI Lighting Director', 'AI Lighting Control', 'AI Energy Saving', 'AI Light Adjustment', 'AI Lighting AI', 'AI Lighting Analytics'],
+                positions: [
+                    { role: 'AI Lighting Director', x: 400, y: 30 },
+                    { role: 'AI Lighting Control', x: 150, y: 150 },
+                    { role: 'AI Energy Saving', x: 650, y: 150 },
+                    { role: 'AI Light Adjustment', x: 150, y: 300 },
+                    { role: 'AI Lighting AI', x: 400, y: 350 },
+                    { role: 'AI Lighting Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Lighting Director', to: 'AI Lighting Control', content: '照明控制' },
+                    { from: 'AI Lighting Director', to: 'AI Lighting Analytics', content: '照明分析' },
+                    { from: 'AI Lighting Control', to: 'AI Energy Saving', content: '节能管理' },
+                    { from: 'AI Energy Saving', to: 'AI Light Adjustment', content: '光效调节' },
+                    { from: 'AI Light Adjustment', to: 'AI Lighting AI', content: '照明AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -50648,7 +50813,57 @@
             'AI Inventory Management': { icon: '🏪', color: '#22c55e', role: 'AI库存管理' },
             'AI Customer Analytics': { icon: '👥', color: '#f97316', role: 'AI客户分析' },
             'AI Retail AI': { icon: '🤖', color: '#8b5cf6', role: 'AI零售AI' },
-            'AI Retail Analytics': { icon: '📊', color: '#06b6d4', role: 'AI零售分析' }
+            'AI Retail Analytics': { icon: '📊', color: '#06b6d4', role: 'AI零售分析' },
+            // Cycle 540 新增角色 - 7个行业服务系统
+            // AI智能智慧停车场系统
+            'AI Parking Director': { icon: '🅿️', color: '#f59e0b', role: 'AI停车总监' },
+            'AI Parking Management': { icon: '📋', color: '#3b82f6', role: 'AI停车管理' },
+            'AI Space Management': { icon: '🚗', color: '#22c55e', role: 'AI车位管理' },
+            'AI Billing System': { icon: '💰', color: '#f97316', role: 'AI收费系统' },
+            'AI Parking AI': { icon: '🤖', color: '#8b5cf6', role: 'AI停车AI' },
+            'AI Parking Analytics': { icon: '📊', color: '#06b6d4', role: 'AI停车分析' },
+            // AI智能智慧楼宇系统
+            'AI Building Director': { icon: '🏢', color: '#f59e0b', role: 'AI楼宇总监' },
+            'AI Building Management': { icon: '🏗️', color: '#3b82f6', role: 'AI楼宇管理' },
+            'AI Equipment Management': { icon: '🔧', color: '#22c55e', role: 'AI设备管理' },
+            'AI Energy Management': { icon: '⚡', color: '#f97316', role: 'AI能源管理' },
+            'AI Building AI': { icon: '🤖', color: '#8b5cf6', role: 'AI楼宇AI' },
+            'AI Building Analytics': { icon: '📊', color: '#06b6d4', role: 'AI楼宇分析' },
+            // AI智能智慧消防系统
+            'AI Fire Director': { icon: '🚒', color: '#f59e0b', role: 'AI消防总监' },
+            'AI Fire Monitoring': { icon: '📹', color: '#3b82f6', role: 'AI消防监控' },
+            'AI Fire Warning': { icon: '⚠️', color: '#22c55e', role: 'AI火灾预警' },
+            'AI Emergency Command': { icon: '🚨', color: '#f97316', role: 'AI应急指挥' },
+            'AI Fire AI': { icon: '🤖', color: '#8b5cf6', role: 'AI消防AI' },
+            'AI Fire Analytics': { icon: '📊', color: '#06b6d4', role: 'AI消防分析' },
+            // AI智能智慧安防系统
+            'AI Security Director': { icon: '🔐', color: '#f59e0b', role: 'AI安防总监' },
+            'AI Access Control': { icon: '🚪', color: '#3b82f6', role: 'AI门禁管理' },
+            'AI Video Surveillance': { icon: '📹', color: '#22c55e', role: 'AI视频监控' },
+            'AI Alarm Processing': { icon: '🔔', color: '#f97316', role: 'AI报警处理' },
+            'AI Security AI': { icon: '🤖', color: '#8b5cf6', role: 'AI安防AI' },
+            'AI Security Analytics': { icon: '📊', color: '#06b6d4', role: 'AI安防分析' },
+            // AI智能智慧物业系统
+            'AI Property Director': { icon: '🏠', color: '#f59e0b', role: 'AI物业总监' },
+            'AI Property Management': { icon: '🏢', color: '#3b82f6', role: 'AI物业管理' },
+            'AI Maintenance Service': { icon: '🔧', color: '#22c55e', role: 'AI维修服务' },
+            'AI Fee Collection': { icon: '💳', color: '#f97316', role: 'AI费用收缴' },
+            'AI Property AI': { icon: '🤖', color: '#8b5cf6', role: 'AI物业AI' },
+            'AI Property Analytics': { icon: '📊', color: '#06b6d4', role: 'AI物业分析' },
+            // AI智能智慧电梯系统
+            'AI Elevator Director': { icon: '🏗️', color: '#f59e0b', role: 'AI电梯总监' },
+            'AI Elevator Monitoring': { icon: '📡', color: '#3b82f6', role: 'AI电梯监控' },
+            'AI Fault Diagnosis': { icon: '🔍', color: '#22c55e', role: 'AI故障诊断' },
+            'AI Maintenance Management': { icon: '⚙️', color: '#f97316', role: 'AI维保管理' },
+            'AI Elevator AI': { icon: '🤖', color: '#8b5cf6', role: 'AI电梯AI' },
+            'AI Elevator Analytics': { icon: '📊', color: '#06b6d4', role: 'AI电梯分析' },
+            // AI智能智慧照明系统
+            'AI Lighting Director': { icon: '💡', color: '#f59e0b', role: 'AI照明总监' },
+            'AI Lighting Control': { icon: '🎛️', color: '#3b82f6', role: 'AI照明控制' },
+            'AI Energy Saving': { icon: '🌱', color: '#22c55e', role: 'AI节能管理' },
+            'AI Light Adjustment': { icon: '🎚️', color: '#f97316', role: 'AI光效调节' },
+            'AI Lighting AI': { icon: '🤖', color: '#8b5cf6', role: 'AI照明AI' },
+            'AI Lighting Analytics': { icon: '📊', color: '#06b6d4', role: 'AI照明分析' }
         };
 
         // 拖拽相关变量
