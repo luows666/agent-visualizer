@@ -37155,8 +37155,173 @@
             }
         ];
 
+        // Cycle 513 新增模板 - 7个行业服务系统
+        const cycle513Templates = [
+            // AI智能媒体服务系统
+            {
+                id: 'ai-media-service',
+                name: 'AI智能媒体服务系统',
+                icon: '📺',
+                desc: '智能媒体服务系统，包括内容创作、发布管理、效果分析等',
+                agents: ['AI Media Director', 'AI Content Creation', 'AI Publishing Management', 'AI Analytics', 'AI Media AI', 'AI Media Analytics'],
+                positions: [
+                    { role: 'AI Media Director', x: 400, y: 30 },
+                    { role: 'AI Content Creation', x: 150, y: 150 },
+                    { role: 'AI Publishing Management', x: 650, y: 150 },
+                    { role: 'AI Analytics', x: 150, y: 300 },
+                    { role: 'AI Media AI', x: 400, y: 350 },
+                    { role: 'AI Media Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Media Director', to: 'AI Content Creation', content: '内容创作' },
+                    { from: 'AI Media Director', to: 'AI Media Analytics', content: '媒体分析' },
+                    { from: 'AI Content Creation', to: 'AI Publishing Management', content: '发布管理' },
+                    { from: 'AI Publishing Management', to: 'AI Analytics', content: '效果分析' },
+                    { from: 'AI Analytics', to: 'AI Media AI', content: '媒体AI' }
+                ]
+            },
+            // AI智能科研服务系统
+            {
+                id: 'ai-research-service',
+                name: 'AI智能科研服务系统',
+                icon: '🔬',
+                desc: '智能科研服务系统，包括文献分析、实验设计、数据处理等',
+                agents: ['AI Research Director', 'AI Literature Analysis', 'AI Experimental Design', 'AI Data Processing', 'AI Research AI', 'AI Research Analytics'],
+                positions: [
+                    { role: 'AI Research Director', x: 400, y: 30 },
+                    { role: 'AI Literature Analysis', x: 150, y: 150 },
+                    { role: 'AI Experimental Design', x: 650, y: 150 },
+                    { role: 'AI Data Processing', x: 150, y: 300 },
+                    { role: 'AI Research AI', x: 400, y: 350 },
+                    { role: 'AI Research Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Research Director', to: 'AI Literature Analysis', content: '文献分析' },
+                    { from: 'AI Research Director', to: 'AI Research Analytics', content: '科研分析' },
+                    { from: 'AI Literature Analysis', to: 'AI Experimental Design', content: '实验设计' },
+                    { from: 'AI Experimental Design', to: 'AI Data Processing', content: '数据处理' },
+                    { from: 'AI Data Processing', to: 'AI Research AI', content: '科研AI' }
+                ]
+            },
+            // AI智能心理咨询服务系统
+            {
+                id: 'ai-psychology-service',
+                name: 'AI智能心理咨询服务系统',
+                icon: '🧠',
+                desc: '智能心理咨询服务系统，包括情绪识别、在线咨询、心理干预等',
+                agents: ['AI Psychology Director', 'AI Emotion Recognition', 'AI Online Consultation', 'AI Psychological Intervention', 'AI Psychology AI', 'AI Psychology Analytics'],
+ Psychology AI', '                positions: [
+                    { role: 'AI Psychology Director', x: 400, y: 30 },
+                    { role: 'AI Emotion Recognition', x: 150, y: 150 },
+                    { role: 'AI Online Consultation', x: 650, y: 150 },
+                    { role: 'AI Psychological Intervention', x: 150, y: 300 },
+                    { role: 'AI Psychology AI', x: 400, y: 350 },
+                    { role: 'AI Psychology Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Psychology Director', to: 'AI Emotion Recognition', content: '情绪识别' },
+                    { from: 'AI Psychology Director', to: 'AI Psychology Analytics', content: '心理分析' },
+                    { from: 'AI Emotion Recognition', to: 'AI Online Consultation', content: '在线咨询' },
+                    { from: 'AI Online Consultation', to: 'AI Psychological Intervention', content: '心理干预' },
+                    { from: 'AI Psychological Intervention', to: 'AI Psychology AI', content: '心理AI' }
+                ]
+            },
+            // AI智能建筑服务系统
+            {
+                id: 'ai-construction-service',
+                name: 'AI智能建筑服务系统',
+                icon: '🏗️',
+                desc: '智能建筑服务系统，包括设计辅助、施工管理、安全监测等',
+                agents: ['AI Construction Director', 'AI Design Assistant', 'AI Construction Management', 'AI Safety Monitoring', 'AI Construction AI', 'AI Construction Analytics'],
+                positions: [
+                    { role: 'AI Construction Director', x: 400, y: 30 },
+                    { role: 'AI Design Assistant', x: 150, y: 150 },
+                    { role: 'AI Construction Management', x: 650, y: 150 },
+                    { role: 'AI Safety Monitoring', x: 150, y: 300 },
+                    { role: 'AI Construction AI', x: 400, y: 350 },
+                    { role: 'AI Construction Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Construction Director', to: 'AI Design Assistant', content: '设计辅助' },
+                    { from: 'AI Construction Director', to: 'AI Construction Analytics', content: '建筑分析' },
+                    { from: 'AI Design Assistant', to: 'AI Construction Management', content: '施工管理' },
+                    { from: 'AI Construction Management', to: 'AI Safety Monitoring', content: '安全监测' },
+                    { from: 'AI Safety Monitoring', to: 'AI Construction AI', content: '建筑AI' }
+                ]
+            },
+            // AI智能交通服务系统
+            {
+                id: 'ai-transport-service',
+                name: 'AI智能交通服务系统',
+                icon: '🚇',
+                desc: '智能交通服务系统，包括流量预测、信号调度、事故处理等',
+                agents: ['AI Transport Director', 'AI Traffic Prediction', 'AI Signal Control', 'AI Incident Handling', 'AI Transport AI', 'AI Transport Analytics'],
+                positions: [
+                    { role: 'AI Transport Director', x: 400, y: 30 },
+                    { role: 'AI Traffic Prediction', x: 150, y: 150 },
+                    { role: 'AI Signal Control', x: 650, y: 150 },
+                    { role: 'AI Incident Handling', x: 150, y: 300 },
+                    { role: 'AI Transport AI', x: 400, y: 350 },
+                    { role: 'AI Transport Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Transport Director', to: 'AI Traffic Prediction', content: '流量预测' },
+                    { from: 'AI Transport Director', to: 'AI Transport Analytics', content: '交通分析' },
+                    { from: 'AI Traffic Prediction', to: 'AI Signal Control', content: '信号调度' },
+                    { from: 'AI Signal Control', to: 'AI Incident Handling', content: '事故处理' },
+                    { from: 'AI Incident Handling', to: 'AI Transport AI', content: '交通AI' }
+                ]
+            },
+            // AI智能港口航运服务系统
+            {
+                id: 'ai-port-service',
+                name: 'AI智能港口航运服务系统',
+                icon: '⚓',
+                desc: '智能港口航运服务系统，包括码头管理、船舶调度、货物装卸等',
+                agents: ['AI Port Director', 'AI Terminal Management', 'AI Ship Scheduling', 'AI Cargo Handling', 'AI Port AI', 'AI Port Analytics'],
+                positions: [
+                    { role: 'AI Port Director', x: 400, y: 30 },
+                    { role: 'AI Terminal Management', x: 150, y: 150 },
+                    { role: 'AI Ship Scheduling', x: 650, y: 150 },
+                    { role: 'AI Cargo Handling', x: 150, y: 300 },
+                    { role: 'AI Port AI', x: 400, y: 350 },
+                    { role: 'AI Port Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Port Director', to: 'AI Terminal Management', content: '码头管理' },
+                    { from: 'AI Port Director', to: 'AI Port Analytics', content: '港口分析' },
+                    { from: 'AI Terminal Management', to: 'AI Ship Scheduling', content: '船舶调度' },
+                    { from: 'AI Ship Scheduling', to: 'AI Cargo Handling', content: '货物装卸' },
+                    { from: 'AI Cargo Handling', to: 'AI Port AI', content: '港口AI' }
+                ]
+            },
+            // AI智能文化演艺服务系统
+            {
+                id: 'ai-entertainment-service',
+                name: 'AI智能文化演艺服务系统',
+                icon: '🎭',
+                desc: '智能文化演艺服务系统，包括演出策划、票务管理、现场执行等',
+                agents: ['AI Entertainment Director', 'AI Show Planning', 'AI Ticket Management', 'AI Live Execution', 'AI Entertainment AI', 'AI Entertainment Analytics'],
+                positions: [
+                    { role: 'AI Entertainment Director', x: 400, y: 30 },
+                    { role: 'AI Show Planning', x: 150, y: 150 },
+                    { role: 'AI Ticket Management', x: 650, y: 150 },
+                    { role: 'AI Live Execution', x: 150, y: 300 },
+                    { role: 'AI Entertainment AI', x: 400, y: 350 },
+                    { role: 'AI Entertainment Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Entertainment Director', to: 'AI Show Planning', content: '演出策划' },
+                    { from: 'AI Entertainment Director', to: 'AI Entertainment Analytics', content: '演艺分析' },
+                    { from: 'AI Show Planning', to: 'AI Ticket Management', content: '票务管理' },
+                    { from: 'AI Ticket Management', to: 'AI Live Execution', content: '现场执行' },
+                    { from: 'AI Live Execution', to: 'AI Entertainment AI', content: '演艺AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -44956,7 +45121,56 @@
             'AI Quality Inspection': { icon: '🔍', color: '#22c55e', role: 'AI质量检测' },
             'AI Equipment Maintenance': { icon: '🔧', color: '#f59e0b', role: 'AI设备维护' },
             'AI Manufacturing AI': { icon: '🤖', color: '#ec4899', role: 'AI制造AI' },
-            'AI Manufacturing Analytics': { icon: '📊', color: '#06b6d4', role: 'AI制造分析' }
+            'AI Manufacturing Analytics': { icon: '📊', color: '#06b6d4', role: 'AI制造分析' },
+            // Cycle 513 新增角色 - 7个行业服务系统
+            // AI智能媒体服务系统
+            'AI Media Director': { icon: '📺', color: '#8b5cf6', role: 'AI媒体总监' },
+            'AI Content Creation': { icon: '✍️', color: '#3b82f6', role: 'AI内容创作' },
+            'AI Publishing Management': { icon: '📤', color: '#22c55e', role: 'AI发布管理' },
+            'AI Analytics': { icon: '📊', color: '#f59e0b', role: 'AI效果分析' },
+            'AI Media AI': { icon: '🤖', color: '#ec4899', role: 'AI媒体AI' },
+            'AI Media Analytics': { icon: '📈', color: '#06b6d4', role: 'AI媒体分析' },
+            // AI智能科研服务系统
+            'AI Research Director': { icon: '🔬', color: '#6366f1', role: 'AI科研总监' },
+            'AI Literature Analysis': { icon: '📚', color: '#3b82f6', role: 'AI文献分析' },
+            'AI Experimental Design': { icon: '🧪', color: '#22c55e', role: 'AI实验设计' },
+            'AI Data Processing': { icon: '💾', color: '#f59e0b', role: 'AI数据处理' },
+            'AI Research AI': { icon: '🤖', color: '#ec4899', role: 'AI科研AI' },
+            'AI Research Analytics': { icon: '📊', color: '#06b6d4', role: 'AI科研分析' },
+            // AI智能心理咨询服务系统
+            'AI Psychology Director': { icon: '🧠', color: '#a855f7', role: 'AI心理总监' },
+            'AI Emotion Recognition': { icon: '😊', color: '#3b82f6', role: 'AI情绪识别' },
+            'AI Psychological Intervention': { icon: '💬', color: '#22c55e', role: 'AI心理干预' },
+            'AI Psychology AI': { icon: '🤖', color: '#f59e0b', role: 'AI心理AI' },
+            'AI Psychology Analytics': { icon: '📊', color: '#06b6d4', role: 'AI心理分析' },
+            // AI智能建筑服务系统
+            'AI Construction Director': { icon: '🏗️', color: '#f97316', role: 'AI建筑总监' },
+            'AI Design Assistant': { icon: '📐', color: '#3b82f6', role: 'AI设计辅助' },
+            'AI Construction Management': { icon: '📋', color: '#22c55e', role: 'AI施工管理' },
+            'AI Safety Monitoring': { icon: '👷', color: '#ef4444', role: 'AI安全监测' },
+            'AI Construction AI': { icon: '🤖', color: '#ec4899', role: 'AI建筑AI' },
+            'AI Construction Analytics': { icon: '📊', color: '#06b6d4', role: 'AI建筑分析' },
+            // AI智能交通服务系统
+            'AI Transport Director': { icon: '🚇', color: '#06b6d4', role: 'AI交通总监' },
+            'AI Traffic Prediction': { icon: '🚦', color: '#3b82f6', role: 'AI流量预测' },
+            'AI Signal Control': { icon: '🔀', color: '#22c55e', role: 'AI信号调度' },
+            'AI Incident Handling': { icon: '🚨', color: '#ef4444', role: 'AI事故处理' },
+            'AI Transport AI': { icon: '🤖', color: '#ec4899', role: 'AI交通AI' },
+            'AI Transport Analytics': { icon: '📊', color: '#06b6d4', role: 'AI交通分析' },
+            // AI智能港口航运服务系统
+            'AI Port Director': { icon: '⚓', color: '#0ea5e9', role: 'AI港口总监' },
+            'AI Terminal Management': { icon: '🏭', color: '#3b82f6', role: 'AI码头管理' },
+            'AI Ship Scheduling': { icon: '🚢', color: '#22c55e', role: 'AI船舶调度' },
+            'AI Cargo Handling': { icon: '📦', color: '#f59e0b', role: 'AI货物装卸' },
+            'AI Port AI': { icon: '🤖', color: '#ec4899', role: 'AI港口AI' },
+            'AI Port Analytics': { icon: '📊', color: '#06b6d4', role: 'AI港口分析' },
+            // AI智能文化演艺服务系统
+            'AI Entertainment Director': { icon: '🎭', color: '#ec4899', role: 'AI演艺总监' },
+            'AI Show Planning': { icon: '🎪', color: '#8b5cf6', role: 'AI演出策划' },
+            'AI Ticket Management': { icon: '🎫', color: '#3b82f6', role: 'AI票务管理' },
+            'AI Live Execution': { icon: '🎬', color: '#22c55e', role: 'AI现场执行' },
+            'AI Entertainment AI': { icon: '🤖', color: '#f59e0b', role: 'AI演艺AI' },
+            'AI Entertainment Analytics': { icon: '📊', color: '#06b6d4', role: 'AI演艺分析' }
         };
 
         // 拖拽相关变量
