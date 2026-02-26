@@ -35835,8 +35835,173 @@
             }
         ];
 
+        // Cycle 505 新增模板 - 7个行业服务系统
+        const cycle505Templates = [
+            // AI智能量子通信系统
+            {
+                id: 'ai-quantum-comm',
+                name: 'AI智能量子通信系统',
+                icon: '🔐',
+                desc: '智能量子通信系统，包括量子密钥分发、量子纠缠、量子网络等',
+                agents: ['AI Quantum Comm Director', 'AI Quantum Key', 'AI Quantum Entangle', 'AI Quantum Network', 'AI Quantum Comm AI', 'AI Quantum Comm Analytics'],
+                positions: [
+                    { role: 'AI Quantum Comm Director', x: 400, y: 30 },
+                    { role: 'AI Quantum Key', x: 150, y: 150 },
+                    { role: 'AI Quantum Entangle', x: 650, y: 150 },
+                    { role: 'AI Quantum Network', x: 150, y: 300 },
+                    { role: 'AI Quantum Comm AI', x: 400, y: 350 },
+                    { role: 'AI Quantum Comm Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Quantum Comm Director', to: 'AI Quantum Key', content: '量子密钥分发' },
+                    { from: 'AI Quantum Comm Director', to: 'AI Quantum Comm Analytics', content: '量子通信分析' },
+                    { from: 'AI Quantum Key', to: 'AI Quantum Entangle', content: '量子纠缠' },
+                    { from: 'AI Quantum Entangle', to: 'AI Quantum Network', content: '量子网络' },
+                    { from: 'AI Quantum Network', to: 'AI Quantum Comm AI', content: '量子通信AI' }
+                ]
+            },
+            // AI智慧基因编辑系统
+            {
+                id: 'ai-gene-editing',
+                name: 'AI智慧基因编辑系统',
+                icon: '🧬',
+                desc: '智能基因编辑系统，包括CRISPR技术、基因治疗、遗传疾病等',
+                agents: ['AI Gene Edit Director', 'AI CRISPR Tech', 'AI Gene Therapy', 'AI Genetic Disease', 'AI Gene Edit AI', 'AI Gene Edit Analytics'],
+                positions: [
+                    { role: 'AI Gene Edit Director', x: 400, y: 30 },
+                    { role: 'AI CRISPR Tech', x: 150, y: 150 },
+                    { role: 'AI Gene Therapy', x: 650, y: 150 },
+                    { role: 'AI Genetic Disease', x: 150, y: 300 },
+                    { role: 'AI Gene Edit AI', x: 400, y: 350 },
+                    { role: 'AI Gene Edit Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Gene Edit Director', to: 'AI CRISPR Tech', content: 'CRISPR技术' },
+                    { from: 'AI Gene Edit Director', to: 'AI Gene Edit Analytics', content: '基因编辑分析' },
+                    { from: 'AI CRISPR Tech', to: 'AI Gene Therapy', content: '基因治疗' },
+                    { from: 'AI Gene Therapy', to: 'AI Genetic Disease', content: '遗传疾病' },
+                    { from: 'AI Genetic Disease', to: 'AI Gene Edit AI', content: '基因编辑AI' }
+                ]
+            },
+            // AI智慧自动驾驶系统
+            {
+                id: 'ai-autonomous-driving',
+                name: 'AI智慧自动驾驶系统',
+                icon: '🚗',
+                desc: '智能自动驾驶系统，包括环境感知、路径规划、车辆控制等',
+                agents: ['AI AutoDrive Director', 'AI Environment', 'AI Path Planning', 'AI Vehicle Ctrl', 'AI AutoDrive AI', 'AI AutoDrive Analytics'],
+                positions: [
+                    { role: 'AI AutoDrive Director', x: 400, y: 30 },
+                    { role: 'AI Environment', x: 150, y: 150 },
+                    { role: 'AI Path Planning', x: 650, y: 150 },
+                    { role: 'AI Vehicle Ctrl', x: 150, y: 300 },
+                    { role: 'AI AutoDrive AI', x: 400, y: 350 },
+                    { role: 'AI AutoDrive Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI AutoDrive Director', to: 'AI Environment', content: '环境感知' },
+                    { from: 'AI AutoDrive Director', to: 'AI AutoDrive Analytics', content: '自动驾驶分析' },
+                    { from: 'AI Environment', to: 'AI Path Planning', content: '路径规划' },
+                    { from: 'AI Path Planning', to: 'AI Vehicle Ctrl', content: '车辆控制' },
+                    { from: 'AI Vehicle Ctrl', to: 'AI AutoDrive AI', content: '自动驾驶AI' }
+                ]
+            },
+            // AI智慧智慧城市系统
+            {
+                id: 'ai-smart-city',
+                name: 'AI智慧智慧城市系统',
+                icon: '🏙️',
+                desc: '智能智慧城市系统，包括城市管理、公共服务、智慧交通等',
+                agents: ['AI SmartCity Director', 'AI City Management', 'AI Public Service', 'AI Smart Traffic', 'AI SmartCity AI', 'AI SmartCity Analytics'],
+                positions: [
+                    { role: 'AI SmartCity Director', x: 400, y: 30 },
+                    { role: 'AI City Management', x: 150, y: 150 },
+                    { role: 'AI Public Service', x: 650, y: 150 },
+                    { role: 'AI Smart Traffic', x: 150, y: 300 },
+                    { role: 'AI SmartCity AI', x: 400, y: 350 },
+                    { role: 'AI SmartCity Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SmartCity Director', to: 'AI City Management', content: '城市管理' },
+                    { from: 'AI SmartCity Director', to: 'AI SmartCity Analytics', content: '智慧城市分析' },
+                    { from: 'AI City Management', to: 'AI Public Service', content: '公共服务' },
+                    { from: 'AI Public Service', to: 'AI Smart Traffic', content: '智慧交通' },
+                    { from: 'AI Smart Traffic', to: 'AI SmartCity AI', content: '智慧城市AI' }
+                ]
+            },
+            // AI智慧航空航天系统
+            {
+                id: 'ai-aerospace',
+                name: 'AI智慧航空航天系统',
+                icon: '✈️',
+                desc: '智能航空航天系统，包括飞行器设计、导航系统、太空探索等',
+                agents: ['AI Aerospace Director', 'AI Aircraft Design', 'AI Navigation', 'AI Space Explore', 'AI Aerospace AI', 'AI Aerospace Analytics'],
+                positions: [
+                    { role: 'AI Aerospace Director', x: 400, y: 30 },
+                    { role: 'AI Aircraft Design', x: 150, y: 150 },
+                    { role: 'AI Navigation', x: 650, y: 150 },
+                    { role: 'AI Space Explore', x: 150, y: 300 },
+                    { role: 'AI Aerospace AI', x: 400, y: 350 },
+                    { role: 'AI Aerospace Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Aerospace Director', to: 'AI Aircraft Design', content: '飞行器设计' },
+                    { from: 'AI Aerospace Director', to: 'AI Aerospace Analytics', content: '航空航天分析' },
+                    { from: 'AI Aircraft Design', to: 'AI Navigation', content: '导航系统' },
+                    { from: 'AI Navigation', to: 'AI Space Explore', content: '太空探索' },
+                    { from: 'AI Space Explore', to: 'AI Aerospace AI', content: '航空航天AI' }
+                ]
+            },
+            // AI智慧海洋经济系统
+            {
+                id: 'ai-ocean-economy',
+                name: 'AI智慧海洋经济系统',
+                icon: '🌊',
+                desc: '智能海洋经济系统，包括海洋资源、海洋生态、海洋产业等',
+                agents: ['AI Ocean Director', 'AI Ocean Resource', 'AI Marine Ecology', 'AI Ocean Industry', 'AI Ocean AI', 'AI Ocean Analytics'],
+                positions: [
+                    { role: 'AI Ocean Director', x: 400, y: 30 },
+                    { role: 'AI Ocean Resource', x: 150, y: 150 },
+                    { role: 'AI Marine Ecology', x: 650, y: 150 },
+                    { role: 'AI Ocean Industry', x: 150, y: 300 },
+                    { role: 'AI Ocean AI', x: 400, y: 350 },
+                    { role: 'AI Ocean Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Ocean Director', to: 'AI Ocean Resource', content: '海洋资源' },
+                    { from: 'AI Ocean Director', to: 'AI Ocean Analytics', content: '海洋经济分析' },
+                    { from: 'AI Ocean Resource', to: 'AI Marine Ecology', content: '海洋生态' },
+                    { from: 'AI Marine Ecology', to: 'AI Ocean Industry', content: '海洋产业' },
+                    { from: 'AI Ocean Industry', to: 'AI Ocean AI', content: '海洋AI' }
+                ]
+            },
+            // AI智慧先进材料系统
+            {
+                id: 'ai-advanced-materials',
+                name: 'AI智慧先进材料系统',
+                icon: '⚗️',
+                desc: '智能先进材料系统，包括纳米材料、生物材料、智能材料等',
+                agents: ['AI Materials Director', 'AI Nano Material', 'AI Bio Material', 'AI Smart Material', 'AI Materials AI', 'AI Materials Analytics'],
+                positions: [
+                    { role: 'AI Materials Director', x: 400, y: 30 },
+                    { role: 'AI Nano Material', x: 150, y: 150 },
+                    { role: 'AI Bio Material', x: 650, y: 150 },
+                    { role: 'AI Smart Material', x: 150, y: 300 },
+                    { role: 'AI Materials AI', x: 400, y: 350 },
+                    { role: 'AI Materials Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Materials Director', to: 'AI Nano Material', content: '纳米材料' },
+                    { from: 'AI Materials Director', to: 'AI Materials Analytics', content: '先进材料分析' },
+                    { from: 'AI Nano Material', to: 'AI Bio Material', content: '生物材料' },
+                    { from: 'AI Bio Material', to: 'AI Smart Material', content: '智能材料' },
+                    { from: 'AI Smart Material', to: 'AI Materials AI', content: '材料AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -43242,7 +43407,56 @@
             'AI RealTime Sim': { icon: '⏱️', color: '#3b82f6', role: 'AI实时仿真' },
             'AI Virtual Reality': { icon: '🥽', color: '#f59e0b', role: 'AI虚实交互' },
             'AI DigitalTwin AI': { icon: '🤖', color: '#ec4899', role: 'AI数字孪生AI' },
-            'AI DigitalTwin Analytics': { icon: '📊', color: '#06b6d4', role: 'AI数字孪生分析' }
+            'AI DigitalTwin Analytics': { icon: '📊', color: '#06b6d4', role: 'AI数字孪生分析' },
+            // Cycle 505 - AI智能量子通信系统
+            'AI Quantum Comm Director': { icon: '🔐', color: '#8b5cf6', role: 'AI量子通信总监' },
+            'AI Quantum Key': { icon: '🔑', color: '#22c55e', role: 'AI量子密钥' },
+            'AI Quantum Entangle': { icon: '✨', color: '#3b82f6', role: 'AI量子纠缠' },
+            'AI Quantum Network': { icon: '🌐', color: '#f59e0b', role: 'AI量子网络' },
+            'AI Quantum Comm AI': { icon: '🤖', color: '#ec4899', role: 'AI量子通信AI' },
+            'AI Quantum Comm Analytics': { icon: '📊', color: '#06b6d4', role: 'AI量子通信分析' },
+            // Cycle 505 - AI智慧基因编辑系统
+            'AI Gene Edit Director': { icon: '🧬', color: '#8b5cf6', role: 'AI基因编辑总监' },
+            'AI CRISPR Tech': { icon: '✂️', color: '#22c55e', role: 'AICRISPR技术' },
+            'AI Gene Therapy': { icon: '💊', color: '#3b82f6', role: 'AI基因治疗' },
+            'AI Genetic Disease': { icon: '🏥', color: '#f59e0b', role: 'AI遗传疾病' },
+            'AI Gene Edit AI': { icon: '🤖', color: '#ec4899', role: 'AI基因编辑AI' },
+            'AI Gene Edit Analytics': { icon: '📊', color: '#06b6d4', role: 'AI基因编辑分析' },
+            // Cycle 505 - AI智慧自动驾驶系统
+            'AI AutoDrive Director': { icon: '🚗', color: '#8b5cf6', role: 'AI自动驾驶总监' },
+            'AI Environment': { icon: '👁️', color: '#22c55e', role: 'AI环境感知' },
+            'AI Path Planning': { icon: '🗺️', color: '#3b82f6', role: 'AI路径规划' },
+            'AI Vehicle Ctrl': { icon: '🎮', color: '#f59e0b', role: 'AI车辆控制' },
+            'AI AutoDrive AI': { icon: '🤖', color: '#ec4899', role: 'AI自动驾驶AI' },
+            'AI AutoDrive Analytics': { icon: '📊', color: '#06b6d4', role: 'AI自动驾驶分析' },
+            // Cycle 505 - AI智慧智慧城市系统
+            'AI SmartCity Director': { icon: '🏙️', color: '#8b5cf6', role: 'AI智慧城市总监' },
+            'AI City Management': { icon: '🏢', color: '#22c55e', role: 'AI城市管理' },
+            'AI Public Service': { icon: '🛎️', color: '#3b82f6', role: 'AI公共服务' },
+            'AI Smart Traffic': { icon: '🚦', color: '#f59e0b', role: 'AI智慧交通' },
+            'AI SmartCity AI': { icon: '🤖', color: '#ec4899', role: 'AI智慧城市AI' },
+            'AI SmartCity Analytics': { icon: '📊', color: '#06b6d4', role: 'AI智慧城市分析' },
+            // Cycle 505 - AI智慧航空航天系统
+            'AI Aerospace Director': { icon: '✈️', color: '#8b5cf6', role: 'AI航空航天总监' },
+            'AI Aircraft Design': { icon: '🛩️', color: '#22c55e', role: 'AI飞行器设计' },
+            'AI Navigation': { icon: '🧭', color: '#3b82f6', role: 'AI导航系统' },
+            'AI Space Explore': { icon: '🚀', color: '#f59e0b', role: 'AI太空探索' },
+            'AI Aerospace AI': { icon: '🤖', color: '#ec4899', role: 'AI航空航天AI' },
+            'AI Aerospace Analytics': { icon: '📊', color: '#06b6d4', role: 'AI航空航天分析' },
+            // Cycle 505 - AI智慧海洋经济系统
+            'AI Ocean Director': { icon: '🌊', color: '#8b5cf6', role: 'AI海洋经济总监' },
+            'AI Ocean Resource': { icon: '🐟', color: '#22c55e', role: 'AI海洋资源' },
+            'AI Marine Ecology': { icon: '🐠', color: '#3b82f6', role: 'AI海洋生态' },
+            'AI Ocean Industry': { icon: '⚓', color: '#f59e0b', role: 'AI海洋产业' },
+            'AI Ocean AI': { icon: '🤖', color: '#ec4899', role: 'AI海洋AI' },
+            'AI Ocean Analytics': { icon: '📊', color: '#06b6d4', role: 'AI海洋经济分析' },
+            // Cycle 505 - AI智慧先进材料系统
+            'AI Materials Director': { icon: '⚗️', color: '#8b5cf6', role: 'AI先进材料总监' },
+            'AI Nano Material': { icon: '🔬', color: '#22c55e', role: 'AI纳米材料' },
+            'AI Bio Material': { icon: '🧫', color: '#3b82f6', role: 'AI生物材料' },
+            'AI Smart Material': { icon: '💎', color: '#f59e0b', role: 'AI智能材料' },
+            'AI Materials AI': { icon: '🤖', color: '#ec4899', role: 'AI材料AI' },
+            'AI Materials Analytics': { icon: '📊', color: '#06b6d4', role: 'AI先进材料分析' }
         };
 
         // 拖拽相关变量
