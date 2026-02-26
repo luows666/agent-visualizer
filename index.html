@@ -36825,8 +36825,173 @@
             }
         ];
 
+        // Cycle 511 新增模板 - 7个行业服务系统
+        const cycle511Templates = [
+            // AI智能跨境电商服务系统
+            {
+                id: 'ai-crossborder-ecommerce',
+                name: 'AI智能跨境电商服务系统',
+                icon: '🌐',
+                desc: '智能跨境电商服务系统，包括海外仓储、清关物流、多语言客服等',
+                agents: ['AI Crossborder Director', 'AI Overseas Warehouse', 'AI Customs Clearance', 'AI Multilingual Support', 'AI Crossborder AI', 'AI Crossborder Analytics'],
+                positions: [
+                    { role: 'AI Crossborder Director', x: 400, y: 30 },
+                    { role: 'AI Overseas Warehouse', x: 150, y: 150 },
+                    { role: 'AI Customs Clearance', x: 650, y: 150 },
+                    { role: 'AI Multilingual Support', x: 150, y: 300 },
+                    { role: 'AI Crossborder AI', x: 400, y: 350 },
+                    { role: 'AI Crossborder Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Crossborder Director', to: 'AI Overseas Warehouse', content: '海外仓储' },
+                    { from: 'AI Crossborder Director', to: 'AI Crossborder Analytics', content: '跨境分析' },
+                    { from: 'AI Overseas Warehouse', to: 'AI Customs Clearance', content: '清关物流' },
+                    { from: 'AI Customs Clearance', to: 'AI Multilingual Support', content: '多语言客服' },
+                    { from: 'AI Multilingual Support', to: 'AI Crossborder AI', content: '跨境AI' }
+                ]
+            },
+            // AI智能金融服务系统
+            {
+                id: 'ai-financial-service',
+                name: 'AI智能金融服务系统',
+                icon: '🏦',
+                desc: '智能金融服务系统，包括投资理财、风险控制、信用评估等',
+                agents: ['AI Financial Director', 'AI Investment Advisor', 'AI Risk Control', 'AI Credit Assessment', 'AI Financial AI', 'AI Financial Analytics'],
+                positions: [
+                    { role: 'AI Financial Director', x: 400, y: 30 },
+                    { role: 'AI Investment Advisor', x: 150, y: 150 },
+                    { role: 'AI Risk Control', x: 650, y: 150 },
+                    { role: 'AI Credit Assessment', x: 150, y: 300 },
+                    { role: 'AI Financial AI', x: 400, y: 350 },
+                    { role: 'AI Financial Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Financial Director', to: 'AI Investment Advisor', content: '投资理财' },
+                    { from: 'AI Financial Director', to: 'AI Financial Analytics', content: '金融分析' },
+                    { from: 'AI Investment Advisor', to: 'AI Risk Control', content: '风险控制' },
+                    { from: 'AI Risk Control', to: 'AI Credit Assessment', content: '信用评估' },
+                    { from: 'AI Credit Assessment', to: 'AI Financial AI', content: '金融AI' }
+                ]
+            },
+            // AI智能医疗健康服务系统
+            {
+                id: 'ai-healthcare-service',
+                name: 'AI智能医疗健康服务系统',
+                icon: '🏥',
+                desc: '智能医疗健康服务系统，包括在线问诊、健康管理、药品配送等',
+                agents: ['AI Healthcare Director', 'AI Online Consultation', 'AI Health Management', 'AI Medicine Delivery', 'AI Healthcare AI', 'AI Healthcare Analytics'],
+                positions: [
+                    { role: 'AI Healthcare Director', x: 400, y: 30 },
+                    { role: 'AI Online Consultation', x: 150, y: 150 },
+                    { role: 'AI Health Management', x: 650, y: 150 },
+                    { role: 'AI Medicine Delivery', x: 150, y: 300 },
+                    { role: 'AI Healthcare AI', x: 400, y: 350 },
+                    { role: 'AI Healthcare Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Healthcare Director', to: 'AI Online Consultation', content: '在线问诊' },
+                    { from: 'AI Healthcare Director', to: 'AI Healthcare Analytics', content: '医疗分析' },
+                    { from: 'AI Online Consultation', to: 'AI Health Management', content: '健康管理' },
+                    { from: 'AI Health Management', to: 'AI Medicine Delivery', content: '药品配送' },
+                    { from: 'AI Medicine Delivery', to: 'AI Healthcare AI', content: '医疗AI' }
+                ]
+            },
+            // AI智能人力资源服务系统
+            {
+                id: 'ai-hr-service',
+                name: 'AI智能人力资源服务系统',
+                icon: '👥',
+                desc: '智能人力资源服务系统，包括招聘管理、培训发展、绩效评估等',
+                agents: ['AI HR Director', 'AI Recruitment Management', 'AI Training Development', 'AI Performance Evaluation', 'AI HR AI', 'AI HR Analytics'],
+                positions: [
+                    { role: 'AI HR Director', x: 400, y: 30 },
+                    { role: 'AI Recruitment Management', x: 150, y: 150 },
+                    { role: 'AI Training Development', x: 650, y: 150 },
+                    { role: 'AI Performance Evaluation', x: 150, y: 300 },
+                    { role: 'AI HR AI', x: 400, y: 350 },
+                    { role: 'AI HR Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HR Director', to: 'AI Recruitment Management', content: '招聘管理' },
+                    { from: 'AI HR Director', to: 'AI HR Analytics', content: '人力分析' },
+                    { from: 'AI Recruitment Management', to: 'AI Training Development', content: '培训发展' },
+                    { from: 'AI Training Development', to: 'AI Performance Evaluation', content: '绩效评估' },
+                    { from: 'AI Performance Evaluation', to: 'AI HR AI', content: '人力AI' }
+                ]
+            },
+            // AI智能餐饮服务系统
+            {
+                id: 'ai-dining-service',
+                name: 'AI智能餐饮服务系统',
+                icon: '🍽️',
+                desc: '智能餐饮服务系统，包括菜品推荐、预约订餐、外卖配送等',
+                agents: ['AI Dining Director', 'AI Dish Recommendation', 'AI Reservation Management', 'AI Delivery Coordination', 'AI Dining AI', 'AI Dining Analytics'],
+                positions: [
+                    { role: 'AI Dining Director', x: 400, y: 30 },
+                    { role: 'AI Dish Recommendation', x: 150, y: 150 },
+                    { role: 'AI Reservation Management', x: 650, y: 150 },
+                    { role: 'AI Delivery Coordination', x: 150, y: 300 },
+                    { role: 'AI Dining AI', x: 400, y: 350 },
+                    { role: 'AI Dining Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Dining Director', to: 'AI Dish Recommendation', content: '菜品推荐' },
+                    { from: 'AI Dining Director', to: 'AI Dining Analytics', content: '餐饮分析' },
+                    { from: 'AI Dish Recommendation', to: 'AI Reservation Management', content: '预约订餐' },
+                    { from: 'AI Reservation Management', to: 'AI Delivery Coordination', content: '外卖配送' },
+                    { from: 'AI Delivery Coordination', to: 'AI Dining AI', content: '餐饮AI' }
+                ]
+            },
+            // AI智能房产服务系统
+            {
+                id: 'ai-realestate-service',
+                name: 'AI智能房产服务系统',
+                icon: '🏘️',
+                desc: '智能房产服务系统，包括房源匹配、交易流程、估值评估等',
+                agents: ['AI Realestate Director', 'AI Property Matching', 'AI Transaction Process', 'AI Valuation Assessment', 'AI Realestate AI', 'AI Realestate Analytics'],
+                positions: [
+                    { role: 'AI Realestate Director', x: 400, y: 30 },
+                    { role: 'AI Property Matching', x: 150, y: 150 },
+                    { role: 'AI Transaction Process', x: 650, y: 150 },
+                    { role: 'AI Valuation Assessment', x: 150, y: 300 },
+                    { role: 'AI Realestate AI', x: 400, y: 350 },
+                    { role: 'AI Realestate Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Realestate Director', to: 'AI Property Matching', content: '房源匹配' },
+                    { from: 'AI Realestate Director', to: 'AI Realestate Analytics', content: '房产分析' },
+                    { from: 'AI Property Matching', to: 'AI Transaction Process', content: '交易流程' },
+                    { from: 'AI Transaction Process', to: 'AI Valuation Assessment', content: '估值评估' },
+                    { from: 'AI Valuation Assessment', to: 'AI Realestate AI', content: '房产AI' }
+                ]
+            },
+            // AI智能能源服务系统
+            {
+                id: 'ai-energy-service',
+                name: 'AI智能能源服务系统',
+                icon: '⚡',
+                desc: '智能能源服务系统，包括能耗监测、智能调度、绿色能源等',
+                agents: ['AI Energy Director', 'AI Energy Monitoring', 'AI Smart Scheduling', 'AI Green Energy', 'AI Energy AI', 'AI Energy Analytics'],
+                positions: [
+                    { role: 'AI Energy Director', x: 400, y: 30 },
+                    { role: 'AI Energy Monitoring', x: 150, y: 150 },
+                    { role: 'AI Smart Scheduling', x: 650, y: 150 },
+                    { role: 'AI Green Energy', x: 150, y: 300 },
+                    { role: 'AI Energy AI', x: 400, y: 350 },
+                    { role: 'AI Energy Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Energy Director', to: 'AI Energy Monitoring', content: '能耗监测' },
+                    { from: 'AI Energy Director', to: 'AI Energy Analytics', content: '能源分析' },
+                    { from: 'AI Energy Monitoring', to: 'AI Smart Scheduling', content: '智能调度' },
+                    { from: 'AI Smart Scheduling', to: 'AI Green Energy', content: '绿色能源' },
+                    { from: 'AI Green Energy', to: 'AI Energy AI', content: '能源AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -44526,7 +44691,57 @@
             'AI Posture Analysis': { icon: '📸', color: '#3b82f6', role: 'AI体态分析' },
             'AI Health Tracking': { icon: '💓', color: '#22c55e', role: 'AI健康追踪' },
             'AI Fitness AI': { icon: '🤖', color: '#f59e0b', role: 'AI健身AI' },
-            'AI Fitness Analytics': { icon: '📊', color: '#06b6d4', role: 'AI健身分析' }
+            'AI Fitness Analytics': { icon: '📊', color: '#06b6d4', role: 'AI健身分析' },
+            // Cycle 511 新增角色 - 7个行业服务系统
+            // AI智能跨境电商服务系统
+            'AI Crossborder Director': { icon: '🌐', color: '#8b5cf6', role: 'AI跨境总监' },
+            'AI Overseas Warehouse': { icon: '🏭', color: '#3b82f6', role: 'AI海外仓储' },
+            'AI Customs Clearance': { icon: '📋', color: '#22c55e', role: 'AI清关物流' },
+            'AI Multilingual Support': { icon: '🌍', color: '#ec4899', role: 'AI多语言客服' },
+            'AI Crossborder AI': { icon: '🤖', color: '#f59e0b', role: 'AI跨境AI' },
+            'AI Crossborder Analytics': { icon: '📊', color: '#06b6d4', role: 'AI跨境分析' },
+            // AI智能金融服务系统
+            'AI Financial Director': { icon: '🏦', color: '#f59e0b', role: 'AI金融总监' },
+            'AI Investment Advisor': { icon: '💹', color: '#8b5cf6', role: 'AI投资理财' },
+            'AI Risk Control': { icon: '⚖️', color: '#ef4444', role: 'AI风险控制' },
+            'AI Credit Assessment': { icon: '📈', color: '#3b82f6', role: 'AI信用评估' },
+            'AI Financial AI': { icon: '🤖', color: '#22c55e', role: 'AI金融AI' },
+            'AI Financial Analytics': { icon: '📊', color: '#06b6d4', role: 'AI金融分析' },
+            // AI智能医疗健康服务系统
+            'AI Healthcare Director': { icon: '🏥', color: '#ef4444', role: 'AI医疗总监' },
+            'AI Online Consultation': { icon: '💬', color: '#8b5cf6', role: 'AI在线问诊' },
+            'AI Health Management': { icon: '❤️', color: '#3b82f6', role: 'AI健康管理' },
+            'AI Medicine Delivery': { icon: '💊', color: '#22c55e', role: 'AI药品配送' },
+            'AI Healthcare AI': { icon: '🤖', color: '#f59e0b', role: 'AI医疗AI' },
+            'AI Healthcare Analytics': { icon: '📊', color: '#06b6d4', role: 'AI医疗分析' },
+            // AI智能人力资源服务系统
+            'AI HR Director': { icon: '👥', color: '#a855f7', role: 'AI人力总监' },
+            'AI Recruitment Management': { icon: '📋', color: '#8b5cf6', role: 'AI招聘管理' },
+            'AI Training Development': { icon: '📚', color: '#3b82f6', role: 'AI培训发展' },
+            'AI Performance Evaluation': { icon: '📊', color: '#22c55e', role: 'AI绩效评估' },
+            'AI HR AI': { icon: '🤖', color: '#f59e0b', role: 'AI人力AI' },
+            'AI HR Analytics': { icon: '📈', color: '#06b6d4', role: 'AI人力分析' },
+            // AI智能餐饮服务系统
+            'AI Dining Director': { icon: '🍽️', color: '#f97316', role: 'AI餐饮总监' },
+            'AI Dish Recommendation': { icon: '🍜', color: '#8b5cf6', role: 'AI菜品推荐' },
+            'AI Reservation Management': { icon: '📅', color: '#3b82f6', role: 'AI预约订餐' },
+            'AI Delivery Coordination': { icon: '🚴', color: '#22c55e', role: 'AI外卖配送' },
+            'AI Dining AI': { icon: '🤖', color: '#f59e0b', role: 'AI餐饮AI' },
+            'AI Dining Analytics': { icon: '📊', color: '#06b6d4', role: 'AI餐饮分析' },
+            // AI智能房产服务系统
+            'AI Realestate Director': { icon: '🏘️', color: '#ec4899', role: 'AI房产总监' },
+            'AI Property Matching': { icon: '🔑', color: '#8b5cf6', role: 'AI房源匹配' },
+            'AI Transaction Process': { icon: '📜', color: '#3b82f6', role: 'AI交易流程' },
+            'AI Valuation Assessment': { icon: '🏷️', color: '#22c55e', role: 'AI估值评估' },
+            'AI Realestate AI': { icon: '🤖', color: '#f59e0b', role: 'AI房产AI' },
+            'AI Realestate Analytics': { icon: '📊', color: '#06b6d4', role: 'AI房产分析' },
+            // AI智能能源服务系统
+            'AI Energy Director': { icon: '⚡', color: '#eab308', role: 'AI能源总监' },
+            'AI Energy Monitoring': { icon: '📡', color: '#8b5cf6', role: 'AI能耗监测' },
+            'AI Smart Scheduling': { icon: '🕐', color: '#3b82f6', role: 'AI智能调度' },
+            'AI Green Energy': { icon: '🌱', color: '#22c55e', role: 'AI绿色能源' },
+            'AI Energy AI': { icon: '🤖', color: '#f59e0b', role: 'AI能源AI' },
+            'AI Energy Analytics': { icon: '📊', color: '#06b6d4', role: 'AI能源分析' }
         };
 
         // 拖拽相关变量
