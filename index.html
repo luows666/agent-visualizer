@@ -42268,8 +42268,173 @@
             }
         ];
 
+        // Cycle 544 新增模板 - 7个行业服务系统
+        const cycle544Templates = [
+            // AI智能智慧医疗健康服务系统
+            {
+                id: 'ai-healthcare-service',
+                name: 'AI智能智慧医疗健康服务系统',
+                icon: '🏥',
+                desc: '智慧医疗健康服务系统，包括预约挂号、远程诊疗、健康管理等',
+                agents: ['AI Healthcare Director', 'AI Appointment Scheduling', 'AI Telemedicine', 'AI Health Management', 'AI Healthcare AI', 'AI Healthcare Analytics'],
+                positions: [
+                    { role: 'AI Healthcare Director', x: 400, y: 30 },
+                    { role: 'AI Appointment Scheduling', x: 150, y: 150 },
+                    { role: 'AI Telemedicine', x: 650, y: 150 },
+                    { role: 'AI Health Management', x: 150, y: 300 },
+                    { role: 'AI Healthcare AI', x: 400, y: 350 },
+                    { role: 'AI Healthcare Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Healthcare Director', to: 'AI Appointment Scheduling', content: '预约挂号' },
+                    { from: 'AI Healthcare Director', to: 'AI Healthcare Analytics', content: '医疗分析' },
+                    { from: 'AI Appointment Scheduling', to: 'AI Telemedicine', content: '远程诊疗' },
+                    { from: 'AI Telemedicine', to: 'AI Health Management', content: '健康管理' },
+                    { from: 'AI Health Management', to: 'AI Healthcare AI', content: '医疗AI' }
+                ]
+            },
+            // AI智能智慧教育培训服务系统
+            {
+                id: 'ai-education-service',
+                name: 'AI智能智慧教育培训服务系统',
+                icon: '🎓',
+                desc: '智慧教育培训服务系统，包括课程管理、学习追踪、在线考试等',
+                agents: ['AI Education Director', 'AI Course Management', 'AI Learning Tracking', 'AI Online Exam', 'AI Education AI', 'AI Education Analytics'],
+                positions: [
+                    { role: 'AI Education Director', x: 400, y: 30 },
+                    { role: 'AI Course Management', x: 150, y: 150 },
+                    { role: 'AI Learning Tracking', x: 650, y: 150 },
+                    { role: 'AI Online Exam', x: 150, y: 300 },
+                    { role: 'AI Education AI', x: 400, y: 350 },
+                    { role: 'AI Education Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Education Director', to: 'AI Course Management', content: '课程管理' },
+                    { from: 'AI Education Director', to: 'AI Education Analytics', content: '教育分析' },
+                    { from: 'AI Course Management', to: 'AI Learning Tracking', content: '学习追踪' },
+                    { from: 'AI Learning Tracking', to: 'AI Online Exam', content: '在线考试' },
+                    { from: 'AI Online Exam', to: 'AI Education AI', content: '教育AI' }
+                ]
+            },
+            // AI智能智慧零售服务系统
+            {
+                id: 'ai-retail-service',
+                name: 'AI智能智慧零售服务系统',
+                icon: '🛒',
+                desc: '智慧零售服务系统，包括商品管理、库存监控、智能推荐等',
+                agents: ['AI Retail Director', 'AI Product Management', 'AI Inventory Monitoring', 'AI Smart Recommendation', 'AI Retail AI', 'AI Retail Analytics'],
+                positions: [
+                    { role: 'AI Retail Director', x: 400, y: 30 },
+                    { role: 'AI Product Management', x: 150, y: 150 },
+                    { role: 'AI Inventory Monitoring', x: 650, y: 150 },
+                    { role: 'AI Smart Recommendation', x: 150, y: 300 },
+                    { role: 'AI Retail AI', x: 400, y: 350 },
+                    { role: 'AI Retail Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Retail Director', to: 'AI Product Management', content: '商品管理' },
+                    { from: 'AI Retail Director', to: 'AI Retail Analytics', content: '零售分析' },
+                    { from: 'AI Product Management', to: 'AI Inventory Monitoring', content: '库存监控' },
+                    { from: 'AI Inventory Monitoring', to: 'AI Smart Recommendation', content: '智能推荐' },
+                    { from: 'AI Smart Recommendation', to: 'AI Retail AI', content: '零售AI' }
+                ]
+            },
+            // AI智能智慧酒店服务系统
+            {
+                id: 'ai-hotel-service',
+                name: 'AI智能智慧酒店服务系统',
+                icon: '🏨',
+                desc: '智慧酒店服务系统，包括客房管理、预订系统、客户服务等',
+                agents: ['AI Hotel Director', 'AI Room Management', 'AI Booking System', 'AI Guest Service', 'AI Hotel AI', 'AI Hotel Analytics'],
+                positions: [
+                    { role: 'AI Hotel Director', x: 400, y: 30 },
+                    { role: 'AI Room Management', x: 150, y: 150 },
+                    { role: 'AI Booking System', x: 650, y: 150 },
+                    { role: 'AI Guest Service', x: 150, y: 300 },
+                    { role: 'AI Hotel AI', x: 400, y: 350 },
+                    { role: 'AI Hotel Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Hotel Director', to: 'AI Room Management', content: '客房管理' },
+                    { from: 'AI Hotel Director', to: 'AI Hotel Analytics', content: '酒店分析' },
+                    { from: 'AI Room Management', to: 'AI Booking System', content: '预订系统' },
+                    { from: 'AI Booking System', to: 'AI Guest Service', content: '客户服务' },
+                    { from: 'AI Guest Service', to: 'AI Hotel AI', content: '酒店AI' }
+                ]
+            },
+            // AI智能智慧体育服务系统
+            {
+                id: 'ai-sports-service',
+                name: 'AI智能智慧体育服务系统',
+                icon: '⚽',
+                desc: '智慧体育服务系统，包括赛事管理、场馆预约、运动分析等',
+                agents: ['AI Sports Director', 'AI Event Management', 'AI Venue Booking', 'AI Sports Analysis', 'AI Sports AI', 'AI Sports Analytics'],
+                positions: [
+                    { role: 'AI Sports Director', x: 400, y: 30 },
+                    { role: 'AI Event Management', x: 150, y: 150 },
+                    { role: 'AI Venue Booking', x: 650, y: 150 },
+                    { role: 'AI Sports Analysis', x: 150, y: 300 },
+                    { role: 'AI Sports AI', x: 400, y: 350 },
+                    { role: 'AI Sports Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Sports Director', to: 'AI Event Management', content: '赛事管理' },
+                    { from: 'AI Sports Director', to: 'AI Sports Analytics', content: '体育分析' },
+                    { from: 'AI Event Management', to: 'AI Venue Booking', content: '场馆预约' },
+                    { from: 'AI Venue Booking', to: 'AI Sports Analysis', content: '运动分析' },
+                    { from: 'AI Sports Analysis', to: 'AI Sports AI', content: '体育AI' }
+                ]
+            },
+            // AI智能智慧社区服务系统
+            {
+                id: 'ai-community-service',
+                name: 'AI智能智慧社区服务系统',
+                icon: '🏘️',
+                desc: '智慧社区服务系统，包括物业服务、安防管理、社区活动等',
+                agents: ['AI Community Director', 'AI Property Service', 'AI Security Management', 'AI Community Events', 'AI Community AI', 'AI Community Analytics'],
+                positions: [
+                    { role: 'AI Community Director', x: 400, y: 30 },
+                    { role: 'AI Property Service', x: 150, y: 150 },
+                    { role: 'AI Security Management', x: 650, y: 150 },
+                    { role: 'AI Community Events', x: 150, y: 300 },
+                    { role: 'AI Community AI', x: 400, y: 350 },
+                    { role: 'AI Community Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Community Director', to: 'AI Property Service', content: '物业服务' },
+                    { from: 'AI Community Director', to: 'AI Community Analytics', content: '社区分析' },
+                    { from: 'AI Property Service', to: 'AI Security Management', content: '安防管理' },
+                    { from: 'AI Security Management', to: 'AI Community Events', content: '社区活动' },
+                    { from: 'AI Community Events', to: 'AI Community AI', content: '社区AI' }
+                ]
+            },
+            // AI智能智慧公共服务系统
+            {
+                id: 'ai-government-service',
+                name: 'AI智能智慧公共服务系统',
+                icon: '🏛️',
+                desc: '智慧公共服务系统，包括政务服务、便民办事、公共信息等',
+                agents: ['AI Government Director', 'AI Government Service', 'AI Citizen Affairs', 'AI Public Information', 'AI Government AI', 'AI Government Analytics'],
+                positions: [
+                    { role: 'AI Government Director', x: 400, y: 30 },
+                    { role: 'AI Government Service', x: 150, y: 150 },
+                    { role: 'AI Citizen Affairs', x: 650, y: 150 },
+                    { role: 'AI Public Information', x: 150, y: 300 },
+                    { role: 'AI Government AI', x: 400, y: 350 },
+                    { role: 'AI Government Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Government Director', to: 'AI Government Service', content: '政务服务' },
+                    { from: 'AI Government Director', to: 'AI Government Analytics', content: '政务分析' },
+                    { from: 'AI Government Service', to: 'AI Citizen Affairs', content: '便民办事' },
+                    { from: 'AI Citizen Affairs', to: 'AI Public Information', content: '公共信息' },
+                    { from: 'AI Public Information', to: 'AI Government AI', content: '政务AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -51508,7 +51673,57 @@
             'AI Quality Inspection': { icon: '🔍', color: '#22c55e', role: 'AI质量检测' },
             'AI Equipment Maintenance': { icon: '🔧', color: '#f97316', role: 'AI设备维护' },
             'AI Manufacturing AI': { icon: '🤖', color: '#8b5cf6', role: 'AI制造AI' },
-            'AI Manufacturing Analytics': { icon: '📊', color: '#06b6d4', role: 'AI制造分析' }
+            'AI Manufacturing Analytics': { icon: '📊', color: '#06b6d4', role: 'AI制造分析' },
+            // Cycle 544 新增角色 - 7个行业服务系统
+            // AI智能智慧医疗健康服务系统
+            'AI Healthcare Director': { icon: '🏥', color: '#f59e0b', role: 'AI医疗总监' },
+            'AI Appointment Scheduling': { icon: '📅', color: '#3b82f6', role: 'AI预约挂号' },
+            'AI Telemedicine': { icon: '📞', color: '#22c55e', role: 'AI远程诊疗' },
+            'AI Health Management': { icon: '💊', color: '#f97316', role: 'AI健康管理' },
+            'AI Healthcare AI': { icon: '🤖', color: '#8b5cf6', role: 'AI医疗AI' },
+            'AI Healthcare Analytics': { icon: '📊', color: '#06b6d4', role: 'AI医疗分析' },
+            // AI智能智慧教育培训服务系统
+            'AI Education Director': { icon: '🎓', color: '#f59e0b', role: 'AI教育总监' },
+            'AI Course Management': { icon: '📚', color: '#3b82f6', role: 'AI课程管理' },
+            'AI Learning Tracking': { icon: '📈', color: '#22c55e', role: 'AI学习追踪' },
+            'AI Online Exam': { icon: '✍️', color: '#f97316', role: 'AI在线考试' },
+            'AI Education AI': { icon: '🤖', color: '#8b5cf6', role: 'AI教育AI' },
+            'AI Education Analytics': { icon: '📊', color: '#06b6d4', role: 'AI教育分析' },
+            // AI智能智慧零售服务系统
+            'AI Retail Director': { icon: '🛒', color: '#f59e0b', role: 'AI零售总监' },
+            'AI Product Management': { icon: '📦', color: '#3b82f6', role: 'AI商品管理' },
+            'AI Inventory Monitoring': { icon: '🏭', color: '#22c55e', role: 'AI库存监控' },
+            'AI Smart Recommendation': { icon: '🎯', color: '#f97316', role: 'AI智能推荐' },
+            'AI Retail AI': { icon: '🤖', color: '#8b5cf6', role: 'AI零售AI' },
+            'AI Retail Analytics': { icon: '📊', color: '#06b6d4', role: 'AI零售分析' },
+            // AI智能智慧酒店服务系统
+            'AI Hotel Director': { icon: '🏨', color: '#f59e0b', role: 'AI酒店总监' },
+            'AI Room Management': { icon: '🛏️', color: '#3b82f6', role: 'AI客房管理' },
+            'AI Booking System': { icon: '📅', color: '#22c55e', role: 'AI预订系统' },
+            'AI Guest Service': { icon: '👤', color: '#f97316', role: 'AI客户服务' },
+            'AI Hotel AI': { icon: '🤖', color: '#8b5cf6', role: 'AI酒店AI' },
+            'AI Hotel Analytics': { icon: '📊', color: '#06b6d4', role: 'AI酒店分析' },
+            // AI智能智慧体育服务系统
+            'AI Sports Director': { icon: '⚽', color: '#f59e0b', role: 'AI体育总监' },
+            'AI Event Management': { icon: '🏆', color: '#3b82f6', role: 'AI赛事管理' },
+            'AI Venue Booking': { icon: '🎟️', color: '#22c55e', role: 'AI场馆预约' },
+            'AI Sports Analysis': { icon: '📊', color: '#f97316', role: 'AI运动分析' },
+            'AI Sports AI': { icon: '🤖', color: '#8b5cf6', role: 'AI体育AI' },
+            'AI Sports Analytics': { icon: '📈', color: '#06b6d4', role: 'AI体育分析' },
+            // AI智能智慧社区服务系统
+            'AI Community Director': { icon: '🏘️', color: '#f59e0b', role: 'AI社区总监' },
+            'AI Property Service': { icon: '🏠', color: '#3b82f6', role: 'AI物业服务' },
+            'AI Security Management': { icon: '🔒', color: '#22c55e', role: 'AI安防管理' },
+            'AI Community Events': { icon: '🎉', color: '#f97316', role: 'AI社区活动' },
+            'AI Community AI': { icon: '🤖', color: '#8b5cf6', role: 'AI社区AI' },
+            'AI Community Analytics': { icon: '📊', color: '#06b6d4', role: 'AI社区分析' },
+            // AI智能智慧公共服务系统
+            'AI Government Director': { icon: '🏛️', color: '#f59e0b', role: 'AI政务总监' },
+            'AI Government Service': { icon: '📋', color: '#3b82f6', role: 'AI政务服务' },
+            'AI Citizen Affairs': { icon: '👥', color: '#22c55e', role: 'AI便民办事' },
+            'AI Public Information': { icon: '📢', color: '#f97316', role: 'AI公共信息' },
+            'AI Government AI': { icon: '🤖', color: '#8b5cf6', role: 'AI政务AI' },
+            'AI Government Analytics': { icon: '📊', color: '#06b6d4', role: 'AI政务分析' }
         };
 
         // 拖拽相关变量
