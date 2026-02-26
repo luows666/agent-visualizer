@@ -44898,8 +44898,173 @@
             }
         ];
 
+        // Cycle 560 新增模板 - 7个行业服务系统
+        const cycle560Templates = [
+            // AI智能智慧企业合规服务系统
+            {
+                id: 'ai-enterprise-compliance',
+                name: 'AI智能智慧企业合规服务系统',
+                icon: '⚖️',
+                desc: '企业合规服务系统，包括法规遵从、合规审计、风险评估等',
+                agents: ['AI Compliance Director', 'AI Legal Advisor', 'AI Compliance Audit', 'AI Risk Assessment', 'AI Compliance AI', 'AI Compliance Analytics'],
+                positions: [
+                    { role: 'AI Compliance Director', x: 400, y: 30 },
+                    { role: 'AI Legal Advisor', x: 150, y: 150 },
+                    { role: 'AI Compliance Audit', x: 650, y: 150 },
+                    { role: 'AI Risk Assessment', x: 150, y: 300 },
+                    { role: 'AI Compliance AI', x: 400, y: 350 },
+                    { role: 'AI Compliance Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Compliance Director', to: 'AI Legal Advisor', content: '法律咨询' },
+                    { from: 'AI Compliance Director', to: 'AI Compliance Analytics', content: '合规分析' },
+                    { from: 'AI Legal Advisor', to: 'AI Compliance Audit', content: '合规审计' },
+                    { from: 'AI Compliance Audit', to: 'AI Risk Assessment', content: '风险评估' },
+                    { from: 'AI Risk Assessment', to: 'AI Compliance AI', content: '合规AI' }
+                ]
+            },
+            // AI智能智慧企业风控服务系统
+            {
+                id: 'ai-enterprise-risk',
+                name: 'AI智能智慧企业风控服务系统',
+                icon: '🛡️',
+                desc: '企业风控服务系统，包括信用评估、欺诈检测、风险预警等',
+                agents: ['AI Risk Director', 'AI Credit Assessment', 'AI Fraud Detection', 'AI Risk Warning', 'AI Risk AI', 'AI Risk Analytics'],
+                positions: [
+                    { role: 'AI Risk Director', x: 400, y: 30 },
+                    { role: 'AI Credit Assessment', x: 150, y: 150 },
+                    { role: 'AI Fraud Detection', x: 650, y: 150 },
+                    { role: 'AI Risk Warning', x: 150, y: 300 },
+                    { role: 'AI Risk AI', x: 400, y: 350 },
+                    { role: 'AI Risk Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Risk Director', to: 'AI Credit Assessment', content: '信用评估' },
+                    { from: 'AI Risk Director', to: 'AI Risk Analytics', content: '风控分析' },
+                    { from: 'AI Credit Assessment', to: 'AI Fraud Detection', content: '欺诈检测' },
+                    { from: 'AI Fraud Detection', to: 'AI Risk Warning', content: '风险预警' },
+                    { from: 'AI Risk Warning', to: 'AI Risk AI', content: '风控AI' }
+                ]
+            },
+            // AI智能智慧供应链金融服务系统
+            {
+                id: 'ai-supply-chain-finance',
+                name: 'AI智能智慧供应链金融服务系统',
+                icon: '🔄',
+                desc: '供应链金融服务系统，包括贸易融资、资产证券化、风险管理等',
+                agents: ['AI SCF Director', 'AI Trade Finance', 'AI Asset Securitization', 'AI Supply Chain Risk', 'AI SCF AI', 'AI SCF Analytics'],
+                positions: [
+                    { role: 'AI SCF Director', x: 400, y: 30 },
+                    { role: 'AI Trade Finance', x: 150, y: 150 },
+                    { role: 'AI Asset Securitization', x: 650, y: 150 },
+                    { role: 'AI Supply Chain Risk', x: 150, y: 300 },
+                    { role: 'AI SCF AI', x: 400, y: 350 },
+                    { role: 'AI SCF Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI SCF Director', to: 'AI Trade Finance', content: '贸易融资' },
+                    { from: 'AI SCF Director', to: 'AI SCF Analytics', content: '供应链金融分析' },
+                    { from: 'AI Trade Finance', to: 'AI Asset Securitization', content: '资产证券化' },
+                    { from: 'AI Asset Securitization', to: 'AI Supply Chain Risk', content: '供应链风险' },
+                    { from: 'AI Supply Chain Risk', to: 'AI SCF AI', content: '供应链金融AI' }
+                ]
+            },
+            // AI智能智慧跨境支付服务系统
+            {
+                id: 'ai-cross-border-payment',
+                name: 'AI智能智慧跨境支付服务系统',
+                icon: '💳',
+                desc: '跨境支付服务系统，包括汇率管理、支付清算、跨境结算等',
+                agents: ['AI Payment Director', 'AI FX Manager', 'AI Payment Clearing', 'AI Cross Border Settle', 'AI Payment AI', 'AI Payment Analytics'],
+                positions: [
+                    { role: 'AI Payment Director', x: 400, y: 30 },
+                    { role: 'AI FX Manager', x: 150, y: 150 },
+                    { role: 'AI Payment Clearing', x: 650, y: 150 },
+                    { role: 'AI Cross Border Settle', x: 150, y: 300 },
+                    { role: 'AI Payment AI', x: 400, y: 350 },
+                    { role: 'AI Payment Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Payment Director', to: 'AI FX Manager', content: '汇率管理' },
+                    { from: 'AI Payment Director', to: 'AI Payment Analytics', content: '支付分析' },
+                    { from: 'AI FX Manager', to: 'AI Payment Clearing', content: '支付清算' },
+                    { from: 'AI Payment Clearing', to: 'AI Cross Border Settle', content: '跨境结算' },
+                    { from: 'AI Cross Border Settle', to: 'AI Payment AI', content: '支付AI' }
+                ]
+            },
+            // AI智能智慧数字身份服务系统
+            {
+                id: 'ai-digital-identity',
+                name: 'AI智能智慧数字身份服务系统',
+                icon: '🪪',
+                desc: '数字身份服务系统，包括身份认证、身份核验、隐私保护等',
+                agents: ['AI Identity Director', 'AI Identity Auth', 'AI Identity Verify', 'AI Privacy Protection', 'AI Identity AI', 'AI Identity Analytics'],
+                positions: [
+                    { role: 'AI Identity Director', x: 400, y: 30 },
+                    { role: 'AI Identity Auth', x: 150, y: 150 },
+                    { role: 'AI Identity Verify', x: 650, y: 150 },
+                    { role: 'AI Privacy Protection', x: 150, y: 300 },
+                    { role: 'AI Identity AI', x: 400, y: 350 },
+                    { role: 'AI Identity Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Identity Director', to: 'AI Identity Auth', content: '身份认证' },
+                    { from: 'AI Identity Director', to: 'AI Identity Analytics', content: '身份分析' },
+                    { from: 'AI Identity Auth', to: 'AI Identity Verify', content: '身份核验' },
+                    { from: 'AI Identity Verify', to: 'AI Privacy Protection', content: '隐私保护' },
+                    { from: 'AI Privacy Protection', to: 'AI Identity AI', content: '身份AI' }
+                ]
+            },
+            // AI智能智慧智慧工地服务系统
+            {
+                id: 'ai-smart-construction',
+                name: 'AI智能智慧智慧工地服务系统',
+                icon: '🏗️',
+                desc: '智慧工地服务系统，包括安全管理、质量监控、进度管理等',
+                agents: ['AI Construction Director', 'AI Safety Monitor', 'AI Quality Control', 'AI Progress Manager', 'AI Construction AI', 'AI Construction Analytics'],
+                positions: [
+                    { role: 'AI Construction Director', x: 400, y: 30 },
+                    { role: 'AI Safety Monitor', x: 150, y: 150 },
+                    { role: 'AI Quality Control', x: 650, y: 150 },
+                    { role: 'AI Progress Manager', x: 150, y: 300 },
+                    { role: 'AI Construction AI', x: 400, y: 350 },
+                    { role: 'AI Construction Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Construction Director', to: 'AI Safety Monitor', content: '安全管理' },
+                    { from: 'AI Construction Director', to: 'AI Construction Analytics', content: '工地分析' },
+                    { from: 'AI Safety Monitor', to: 'AI Quality Control', content: '质量监控' },
+                    { from: 'AI Quality Control', to: 'AI Progress Manager', content: '进度管理' },
+                    { from: 'AI Progress Manager', to: 'AI Construction AI', content: '工地AI' }
+                ]
+            },
+            // AI智能智慧智慧矿山服务系统
+            {
+                id: 'ai-smart-mining',
+                name: 'AI智能智慧智慧矿山服务系统',
+                icon: '⛏️',
+                desc: '智慧矿山服务系统，包括智能开采、矿山安全、资源调度等',
+                agents: ['AI Mining Director', 'AI Smart Mining', 'AI Mine Safety', 'AI Resource Scheduling', 'AI Mining AI', 'AI Mining Analytics'],
+                positions: [
+                    { role: 'AI Mining Director', x: 400, y: 30 },
+                    { role: 'AI Smart Mining', x: 150, y: 150 },
+                    { role: 'AI Mine Safety', x: 650, y: 150 },
+                    { role: 'AI Resource Scheduling', x: 150, y: 300 },
+                    { role: 'AI Mining AI', x: 400, y: 350 },
+                    { role: 'AI Mining Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Mining Director', to: 'AI Smart Mining', content: '智能开采' },
+                    { from: 'AI Mining Director', to: 'AI Mining Analytics', content: '矿山分析' },
+                    { from: 'AI Smart Mining', to: 'AI Mine Safety', content: '矿山安全' },
+                    { from: 'AI Mine Safety', to: 'AI Resource Scheduling', content: '资源调度' },
+                    { from: 'AI Resource Scheduling', to: 'AI Mining AI', content: '矿山AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates, ...cycle545Templates, ...cycle546Templates, ...cycle547Templates, ...cycle548Templates, ...cycle549Templates, ...cycle550Templates, ...cycle551Templates, ...cycle552Templates, ...cycle553Templates, ...cycle554Templates, ...cycle557Templates, ...cycle558Templates, ...cycle559Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates, ...cycle545Templates, ...cycle546Templates, ...cycle547Templates, ...cycle548Templates, ...cycle549Templates, ...cycle550Templates, ...cycle551Templates, ...cycle552Templates, ...cycle553Templates, ...cycle554Templates, ...cycle557Templates, ...cycle558Templates, ...cycle559Templates, ...cycle560Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -54838,7 +55003,57 @@
             'AI Production Opt': { icon: '⚙️', color: '#22c55e', role: 'AI生产优化' },
             'AI Predictive Maint': { icon: '🔧', color: '#f97316', role: 'AI预测维护' },
             'AI Industrial AI': { icon: '🤖', color: '#8b5cf6', role: 'AI工业AI' },
-            'AI Industrial Analytics': { icon: '📊', color: '#06b6d4', role: 'AI工业分析' }
+            'AI Industrial Analytics': { icon: '📊', color: '#06b6d4', role: 'AI工业分析' },
+            // Cycle 560 新增角色 - 7个行业服务系统
+            // AI智能智慧企业合规服务系统
+            'AI Compliance Director': { icon: '⚖️', color: '#f59e0b', role: 'AI企业合规总监' },
+            'AI Legal Advisor': { icon: '⚖️', color: '#3b82f6', role: 'AI法律顾问' },
+            'AI Compliance Audit': { icon: '📋', color: '#22c55e', role: 'AI合规审计' },
+            'AI Risk Assessment': { icon: '🛡️', color: '#f97316', role: 'AI风险评估' },
+            'AI Compliance AI': { icon: '🤖', color: '#8b5cf6', role: 'AI合规AI' },
+            'AI Compliance Analytics': { icon: '📊', color: '#06b6d4', role: 'AI合规分析' },
+            // AI智能智慧企业风控服务系统
+            'AI Risk Director': { icon: '🛡️', color: '#f59e0b', role: 'AI企业风控总监' },
+            'AI Credit Assessment': { icon: '💳', color: '#3b82f6', role: 'AI信用评估' },
+            'AI Fraud Detection': { icon: '🔍', color: '#22c55e', role: 'AI欺诈检测' },
+            'AI Risk Warning': { icon: '⚠️', color: '#f97316', role: 'AI风险预警' },
+            'AI Risk AI': { icon: '🤖', color: '#8b5cf6', role: 'AI风控AI' },
+            'AI Risk Analytics': { icon: '📊', color: '#06b6d4', role: 'AI风控分析' },
+            // AI智能智慧供应链金融服务系统
+            'AI SCF Director': { icon: '🔄', color: '#f59e0b', role: 'AI供应链金融总监' },
+            'AI Trade Finance': { icon: '💰', color: '#3b82f6', role: 'AI贸易融资' },
+            'AI Asset Securitization': { icon: '📦', color: '#22c55e', role: 'AI资产证券化' },
+            'AI Supply Chain Risk': { icon: '🔗', color: '#f97316', role: 'AI供应链风险' },
+            'AI SCF AI': { icon: '🤖', color: '#8b5cf6', role: 'AI供应链金融AI' },
+            'AI SCF Analytics': { icon: '📊', color: '#06b6d4', role: 'AI供应链金融分析' },
+            // AI智能智慧跨境支付服务系统
+            'AI Payment Director': { icon: '💳', color: '#f59e0b', role: 'AI跨境支付总监' },
+            'AI FX Manager': { icon: '💱', color: '#3b82f6', role: 'AI汇率管理' },
+            'AI Payment Clearing': { icon: '🏦', color: '#22c55e', role: 'AI支付清算' },
+            'AI Cross Border Settle': { icon: '🌍', color: '#f97316', role: 'AI跨境结算' },
+            'AI Payment AI': { icon: '🤖', color: '#8b5cf6', role: 'AI支付AI' },
+            'AI Payment Analytics': { icon: '📊', color: '#06b6d4', role: 'AI支付分析' },
+            // AI智能智慧数字身份服务系统
+            'AI Identity Director': { icon: '🪪', color: '#f59e0b', role: 'AI数字身份总监' },
+            'AI Identity Auth': { icon: '🔐', color: '#3b82f6', role: 'AI身份认证' },
+            'AI Identity Verify': { icon: '✅', color: '#22c55e', role: 'AI身份核验' },
+            'AI Privacy Protection': { icon: '🔒', color: '#f97316', role: 'AI隐私保护' },
+            'AI Identity AI': { icon: '🤖', color: '#8b5cf6', role: 'AI身份AI' },
+            'AI Identity Analytics': { icon: '📊', color: '#06b6d4', role: 'AI身份分析' },
+            // AI智能智慧智慧工地服务系统
+            'AI Construction Director': { icon: '🏗️', color: '#f59e0b', role: 'AI智慧工地总监' },
+            'AI Safety Monitor': { icon: '🛡️', color: '#3b82f6', role: 'AI安全管理' },
+            'AI Quality Control': { icon: '📋', color: '#22c55e', role: 'AI质量监控' },
+            'AI Progress Manager': { icon: '📅', color: '#f97316', role: 'AI进度管理' },
+            'AI Construction AI': { icon: '🤖', color: '#8b5cf6', role: 'AI工地AI' },
+            'AI Construction Analytics': { icon: '📊', color: '#06b6d4', role: 'AI工地分析' },
+            // AI智能智慧智慧矿山服务系统
+            'AI Mining Director': { icon: '⛏️', color: '#f59e0b', role: 'AI智慧矿山总监' },
+            'AI Smart Mining': { icon: '⛏️', color: '#3b82f6', role: 'AI智能开采' },
+            'AI Mine Safety': { icon: '🛡️', color: '#22c55e', role: 'AI矿山安全' },
+            'AI Resource Scheduling': { icon: '📦', color: '#f97316', role: 'AI资源调度' },
+            'AI Mining AI': { icon: '🤖', color: '#8b5cf6', role: 'AI矿山AI' },
+            'AI Mining Analytics': { icon: '📊', color: '#06b6d4', role: 'AI矿山分析' }
         };
 
         // 拖拽相关变量
