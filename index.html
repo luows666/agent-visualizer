@@ -42598,8 +42598,173 @@
             }
         ];
 
+        // Cycle 546 - 新增行业服务系统模板
+        const cycle546Templates = [
+            // AI智能智慧房地产服务系统
+            {
+                id: 'ai-real-estate',
+                name: 'AI智能智慧房地产服务系统',
+                icon: '🏠',
+                desc: '智慧房地产服务，包括房产交易、租赁管理、估值评估等',
+                agents: ['AI Real Estate Director', 'AI Property Lister', 'AI Property Valuer', 'AI Lease Manager', 'AI Buyer Matcher', 'AI Market Analyst'],
+                positions: [
+                    { role: 'AI Real Estate Director', x: 400, y: 30 },
+                    { role: 'AI Property Lister', x: 150, y: 150 },
+                    { role: 'AI Property Valuer', x: 650, y: 150 },
+                    { role: 'AI Lease Manager', x: 150, y: 300 },
+                    { role: 'AI Buyer Matcher', x: 400, y: 350 },
+                    { role: 'AI Market Analyst', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Real Estate Director', to: 'AI Property Lister', content: '房产上架' },
+                    { from: 'AI Real Estate Director', to: 'AI Market Analyst', content: '市场分析' },
+                    { from: 'AI Property Lister', to: 'AI Property Valuer', content: '房产估值' },
+                    { from: 'AI Property Valuer', to: 'AI Lease Manager', content: '租赁管理' },
+                    { from: 'AI Lease Manager', to: 'AI Buyer Matcher', content: '客户匹配' }
+                ]
+            },
+            // AI智能智慧美容美发服务系统
+            {
+                id: 'ai-beauty-salon',
+                name: 'AI智能智慧美容美发服务系统',
+                icon: '💇',
+                desc: '智慧美容美发服务，包括造型设计、护理服务、预约管理等',
+                agents: ['AI Beauty Director', 'AI Stylist Designer', 'AI Skin Care Specialist', 'AI Treatment Advisor', 'AI Appointment Manager', 'AI Product Consultant'],
+                positions: [
+                    { role: 'AI Beauty Director', x: 400, y: 30 },
+                    { role: 'AI Stylist Designer', x: 150, y: 150 },
+                    { role: 'AI Skin Care Specialist', x: 650, y: 150 },
+                    { role: 'AI Treatment Advisor', x: 150, y: 300 },
+                    { role: 'AI Appointment Manager', x: 400, y: 350 },
+                    { role: 'AI Product Consultant', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Beauty Director', to: 'AI Stylist Designer', content: '造型设计' },
+                    { from: 'AI Beauty Director', to: 'AI Product Consultant', content: '产品咨询' },
+                    { from: 'AI Stylist Designer', to: 'AI Skin Care Specialist', content: '护肤护理' },
+                    { from: 'AI Skin Care Specialist', to: 'AI Treatment Advisor', content: '护理建议' },
+                    { from: 'AI Treatment Advisor', to: 'AI Appointment Manager', content: '预约管理' }
+                ]
+            },
+            // AI智能智慧宠物服务系统
+            {
+                id: 'ai-pet-service',
+                name: 'AI智能智慧宠物服务系统',
+                icon: '🐾',
+                desc: '智慧宠物服务，包括宠物医疗、寄养服务、宠物美容等',
+                agents: ['AI Pet Director', 'AI Pet Doctor', 'AI Pet Groomer', 'AI Pet Trainer', 'AI Pet Boarding', 'AI Pet Nutritionist'],
+                positions: [
+                    { role: 'AI Pet Director', x: 400, y: 30 },
+                    { role: 'AI Pet Doctor', x: 150, y: 150 },
+                    { role: 'AI Pet Groomer', x: 650, y: 150 },
+                    { role: 'AI Pet Trainer', x: 150, y: 300 },
+                    { role: 'AI Pet Boarding', x: 400, y: 350 },
+                    { role: 'AI Pet Nutritionist', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Pet Director', to: 'AI Pet Doctor', content: '宠物医疗' },
+                    { from: 'AI Pet Director', to: 'AI Pet Nutritionist', content: '营养建议' },
+                    { from: 'AI Pet Doctor', to: 'AI Pet Groomer', content: '宠物美容' },
+                    { from: 'AI Pet Groomer', to: 'AI Pet Trainer', content: '宠物训练' },
+                    { from: 'AI Pet Trainer', to: 'AI Pet Boarding', content: '寄养服务' }
+                ]
+            },
+            // AI智能智慧家政服务系统
+            {
+                id: 'ai-housekeeping',
+                name: 'AI智能智慧家政服务系统',
+                icon: '🧹',
+                desc: '智慧家政服务，包括保洁服务、月嫂服务、家电维修等',
+                agents: ['AI Housekeeping Director', 'AI Cleaner Matcher', 'AI Nanny Service', 'AI Appliance Repair', 'AI Meal Service', 'AI Household Manager'],
+                positions: [
+                    { role: 'AI Housekeeping Director', x: 400, y: 30 },
+                    { role: 'AI Cleaner Matcher', x: 150, y: 150 },
+                    { role: 'AI Nanny Service', x: 650, y: 150 },
+                    { role: 'AI Appliance Repair', x: 150, y: 300 },
+                    { role: 'AI Meal Service', x: 400, y: 350 },
+                    { role: 'AI Household Manager', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Housekeeping Director', to: 'AI Cleaner Matcher', content: '保洁匹配' },
+                    { from: 'AI Housekeeping Director', to: 'AI Household Manager', content: '家政管理' },
+                    { from: 'AI Cleaner Matcher', to: 'AI Nanny Service', content: '月嫂服务' },
+                    { from: 'AI Nanny Service', to: 'AI Appliance Repair', content: '家电维修' },
+                    { from: 'AI Appliance Repair', to: 'AI Meal Service', content: '餐饮服务' }
+                ]
+            },
+            // AI智能智慧养老服务系统
+            {
+                id: 'ai-elderly-care',
+                name: 'AI智能智慧养老服务系统',
+                icon: '👴',
+                desc: '智慧养老服务，包括健康监测、生活照料、康复护理等',
+                agents: ['AI Elderly Care Director', 'AI Health Monitor', 'AI Life Companion', 'AI Rehab Specialist', 'AI Medical Coordinator', 'AI Family Liaison'],
+                positions: [
+                    { role: 'AI Elderly Care Director', x: 400, y: 30 },
+                    { role: 'AI Health Monitor', x: 150, y: 150 },
+                    { role: 'AI Life Companion', x: 650, y: 150 },
+                    { role: 'AI Rehab Specialist', x: 150, y: 300 },
+                    { role: 'AI Medical Coordinator', x: 400, y: 350 },
+                    { role: 'AI Family Liaison', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Elderly Care Director', to: 'AI Health Monitor', content: '健康监测' },
+                    { from: 'AI Elderly Care Director', to: 'AI Family Liaison', content: '家属联络' },
+                    { from: 'AI Health Monitor', to: 'AI Life Companion', content: '生活陪伴' },
+                    { from: 'AI Life Companion', to: 'AI Rehab Specialist', content: '康复护理' },
+                    { from: 'AI Rehab Specialist', to: 'AI Medical Coordinator', content: '医疗协调' }
+                ]
+            },
+            // AI智能智慧健身服务系统
+            {
+                id: 'ai-fitness',
+                name: 'AI智能智慧健身服务系统',
+                icon: '💪',
+                desc: '智慧健身服务，包括私教课程、健身计划、体态评估等',
+                agents: ['AI Fitness Director', 'AI Personal Trainer', 'AI Workout Planner', 'AI Body Analyzer', 'AI Nutrition Coach', 'AI Progress Tracker'],
+                positions: [
+                    { role: 'AI Fitness Director', x: 400, y: 30 },
+                    { role: 'AI Personal Trainer', x: 150, y: 150 },
+                    { role: 'AI Workout Planner', x: 650, y: 150 },
+                    { role: 'AI Body Analyzer', x: 150, y: 300 },
+                    { role: 'AI Nutrition Coach', x: 400, y: 350 },
+                    { role: 'AI Progress Tracker', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Fitness Director', to: 'AI Personal Trainer', content: '私教服务' },
+                    { from: 'AI Fitness Director', to: 'AI Progress Tracker', content: '进度追踪' },
+                    { from: 'AI Personal Trainer', to: 'AI Workout Planner', content: '训练计划' },
+                    { from: 'AI Workout Planner', to: 'AI Body Analyzer', content: '体态分析' },
+                    { from: 'AI Body Analyzer', to: 'AI Nutrition Coach', content: '营养指导' }
+                ]
+            },
+            // AI智能智慧婚庆服务系统
+            {
+                id: 'ai-wedding',
+                name: 'AI智能智慧婚庆服务系统',
+                icon: '💒',
+                desc: '智慧婚庆服务，包括婚礼策划、场地布置、摄影摄像等',
+                agents: ['AI Wedding Planner', 'AI Event Designer', 'AI Venue Coordinator', 'AI Photographer', 'AI Catering Manager', 'AI Guest Relations'],
+                positions: [
+                    { role: 'AI Wedding Planner', x: 400, y: 30 },
+                    { role: 'AI Event Designer', x: 150, y: 150 },
+                    { role: 'AI Venue Coordinator', x: 650, y: 150 },
+                    { role: 'AI Photographer', x: 150, y: 300 },
+                    { role: 'AI Catering Manager', x: 400, y: 350 },
+                    { role: 'AI Guest Relations', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Wedding Planner', to: 'AI Event Designer', content: '婚礼设计' },
+                    { from: 'AI Wedding Planner', to: 'AI Guest Relations', content: '宾客关系' },
+                    { from: 'AI Event Designer', to: 'AI Venue Coordinator', content: '场地协调' },
+                    { from: 'AI Venue Coordinator', to: 'AI Photographer', content: '摄影摄像' },
+                    { from: 'AI Photographer', to: 'AI Catering Manager', content: '餐饮管理' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates, ...cycle545Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates, ...cycle545Templates, ...cycle546Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -51938,7 +52103,57 @@
             'AI Training Coordinator': { icon: '📚', color: '#3b82f6', role: 'AI培训协调' },
             'AI Performance Analyst': { icon: '📈', color: '#f59e0b', role: 'AI绩效分析' },
             'AI Compensation Manager': { icon: '💵', color: '#ec4899', role: 'AI薪酬管理' },
-            'AI Employee Relations': { icon: '🤝', color: '#06b6d4', role: 'AI员工关系' }
+            'AI Employee Relations': { icon: '🤝', color: '#06b6d4', role: 'AI员工关系' },
+            // Cycle 546 - 行业服务系统 Agent 角色
+            // AI智能智慧房地产服务系统
+            'AI Real Estate Director': { icon: '🏠', color: '#8b5cf6', role: 'AI房地产总监' },
+            'AI Property Lister': { icon: '📋', color: '#22c55e', role: 'AI房产上架' },
+            'AI Property Valuer': { icon: '💰', color: '#3b82f6', role: 'AI房产估值' },
+            'AI Lease Manager': { icon: '🔑', color: '#f59e0b', role: 'AI租赁管理' },
+            'AI Buyer Matcher': { icon: '🤝', color: '#ec4899', role: 'AI客户匹配' },
+            'AI Market Analyst': { icon: '📊', color: '#06b6d4', role: 'AI市场分析' },
+            // AI智能智慧美容美发服务系统
+            'AI Beauty Director': { icon: '💇', color: '#8b5cf6', role: 'AI美容总监' },
+            'AI Stylist Designer': { icon: '💇‍♀️', color: '#22c55e', role: 'AI造型设计' },
+            'AI Skin Care Specialist': { icon: '✨', color: '#3b82f6', role: 'AI护肤护理' },
+            'AI Treatment Advisor': { icon: '💆', color: '#f59e0b', role: 'AI护理建议' },
+            'AI Appointment Manager': { icon: '📅', color: '#ec4899', role: 'AI预约管理' },
+            'AI Product Consultant': { icon: '💄', color: '#06b6d4', role: 'AI产品咨询' },
+            // AI智能智慧宠物服务系统
+            'AI Pet Director': { icon: '🐾', color: '#8b5cf6', role: 'AI宠物总监' },
+            'AI Pet Doctor': { icon: '🏥', color: '#22c55e', role: 'AI宠物医生' },
+            'AI Pet Groomer': { icon: '✂️', color: '#3b82f6', role: 'AI宠物美容' },
+            'AI Pet Trainer': { icon: '🎾', color: '#f59e0b', role: 'AI宠物训练' },
+            'AI Pet Boarding': { icon: '🏠', color: '#ec4899', role: 'AI宠物寄养' },
+            'AI Pet Nutritionist': { icon: '🍖', color: '#06b6d4', role: 'AI宠物营养' },
+            // AI智能智慧家政服务系统
+            'AI Housekeeping Director': { icon: '🧹', color: '#8b5cf6', role: 'AI家政总监' },
+            'AI Cleaner Matcher': { icon: '🧽', color: '#22c55e', role: 'AI保洁匹配' },
+            'AI Nanny Service': { icon: '👶', color: '#3b82f6', role: 'AI月嫂服务' },
+            'AI Appliance Repair': { icon: '🔧', color: '#f59e0b', role: 'AI家电维修' },
+            'AI Meal Service': { icon: '🍳', color: '#ec4899', role: 'AI餐饮服务' },
+            'AI Household Manager': { icon: '🏠', color: '#06b6d4', role: 'AI家政管理' },
+            // AI智能智慧养老服务系统
+            'AI Elderly Care Director': { icon: '👴', color: '#8b5cf6', role: 'AI养老总监' },
+            'AI Health Monitor': { icon: '💓', color: '#22c55e', role: 'AI健康监测' },
+            'AI Life Companion': { icon: '👥', color: '#3b82f6', role: 'AI生活陪伴' },
+            'AI Rehab Specialist': { icon: '🏋️', color: '#f59e0b', role: 'AI康复护理' },
+            'AI Medical Coordinator': { icon: '🏥', color: '#ec4899', role: 'AI医疗协调' },
+            'AI Family Liaison': { icon: '📞', color: '#06b6d4', role: 'AI家属联络' },
+            // AI智能智慧健身服务系统
+            'AI Fitness Director': { icon: '💪', color: '#8b5cf6', role: 'AI健身总监' },
+            'AI Personal Trainer': { icon: '🏋️‍♂️', color: '#22c55e', role: 'AI私教服务' },
+            'AI Workout Planner': { icon: '📋', color: '#3b82f6', role: 'AI训练计划' },
+            'AI Body Analyzer': { icon: '📊', color: '#f59e0b', role: 'AI体态分析' },
+            'AI Nutrition Coach': { icon: '🥗', color: '#ec4899', role: 'AI营养指导' },
+            'AI Progress Tracker': { icon: '📈', color: '#06b6d4', role: 'AI进度追踪' },
+            // AI智能智慧婚庆服务系统
+            'AI Wedding Planner': { icon: '💒', color: '#8b5cf6', role: 'AI婚庆总监' },
+            'AI Event Designer': { icon: '🎨', color: '#22c55e', role: 'AI婚礼设计' },
+            'AI Venue Coordinator': { icon: '🏛️', color: '#3b82f6', role: 'AI场地协调' },
+            'AI Photographer': { icon: '📷', color: '#f59e0b', role: 'AI摄影摄像' },
+            'AI Catering Manager': { icon: '🍽️', color: '#ec4899', role: 'AI餐饮管理' },
+            'AI Guest Relations': { icon: '🤵', color: '#06b6d4', role: 'AI宾客关系' }
         };
 
         // 拖拽相关变量
