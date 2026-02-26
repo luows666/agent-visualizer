@@ -39960,8 +39960,173 @@
             }
         ];
 
+        // Cycle 530 - AI智能法律、咨询、审计、保险、环保、科研、市政服务系统
+        const cycle530Templates = [
+            // AI智能法律服务系统
+            {
+                id: 'ai-legal-service',
+                name: 'AI智能法律服务系统',
+                icon: '⚖️',
+                desc: '智能法律服务系统，包括合同审核、案件分析、法律咨询等',
+                agents: ['AI Legal Director', 'AI Contract Review', 'AI Case Analysis', 'AI Legal Consultation', 'AI Legal AI', 'AI Legal Analytics'],
+                positions: [
+                    { role: 'AI Legal Director', x: 400, y: 30 },
+                    { role: 'AI Contract Review', x: 150, y: 150 },
+                    { role: 'AI Case Analysis', x: 650, y: 150 },
+                    { role: 'AI Legal Consultation', x: 150, y: 300 },
+                    { role: 'AI Legal AI', x: 400, y: 350 },
+                    { role: 'AI Legal Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Legal Director', to: 'AI Contract Review', content: '合同审核' },
+                    { from: 'AI Legal Director', to: 'AI Legal Analytics', content: '法律分析' },
+                    { from: 'AI Contract Review', to: 'AI Case Analysis', content: '案件分析' },
+                    { from: 'AI Case Analysis', to: 'AI Legal Consultation', content: '法律咨询' },
+                    { from: 'AI Legal Consultation', to: 'AI Legal AI', content: '法律AI' }
+                ]
+            },
+            // AI智能咨询服务系统
+            {
+                id: 'ai-consulting-service',
+                name: 'AI智能咨询服务系统',
+                icon: '💼',
+                desc: '智能咨询服务系统，包括战略咨询、管理咨询、技术咨询等',
+                agents: ['AI Consulting Director', 'AI Strategy Consulting', 'AI Management Consulting', 'AI Tech Consulting', 'AI Consulting AI', 'AI Consulting Analytics'],
+                positions: [
+                    { role: 'AI Consulting Director', x: 400, y: 30 },
+                    { role: 'AI Strategy Consulting', x: 150, y: 150 },
+                    { role: 'AI Management Consulting', x: 650, y: 150 },
+                    { role: 'AI Tech Consulting', x: 150, y: 300 },
+                    { role: 'AI Consulting AI', x: 400, y: 350 },
+                    { role: 'AI Consulting Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Consulting Director', to: 'AI Strategy Consulting', content: '战略咨询' },
+                    { from: 'AI Consulting Director', to: 'AI Consulting Analytics', content: '咨询分析' },
+                    { from: 'AI Strategy Consulting', to: 'AI Management Consulting', content: '管理咨询' },
+                    { from: 'AI Management Consulting', to: 'AI Tech Consulting', content: '技术咨询' },
+                    { from: 'AI Tech Consulting', to: 'AI Consulting AI', content: '咨询AI' }
+                ]
+            },
+            // AI智能审计服务系统
+            {
+                id: 'ai-audit-service',
+                name: 'AI智能审计服务系统',
+                icon: '📋',
+                desc: '智能审计服务系统，包括财务审计、合规审计、风险审计等',
+                agents: ['AI Audit Director', 'AI Financial Audit', 'AI Compliance Audit', 'AI Risk Audit', 'AI Audit AI', 'AI Audit Analytics'],
+                positions: [
+                    { role: 'AI Audit Director', x: 400, y: 30 },
+                    { role: 'AI Financial Audit', x: 150, y: 150 },
+                    { role: 'AI Compliance Audit', x: 650, y: 150 },
+                    { role: 'AI Risk Audit', x: 150, y: 300 },
+                    { role: 'AI Audit AI', x: 400, y: 350 },
+                    { role: 'AI Audit Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Audit Director', to: 'AI Financial Audit', content: '财务审计' },
+                    { from: 'AI Audit Director', to: 'AI Audit Analytics', content: '审计分析' },
+                    { from: 'AI Financial Audit', to: 'AI Compliance Audit', content: '合规审计' },
+                    { from: 'AI Compliance Audit', to: 'AI Risk Audit', content: '风险审计' },
+                    { from: 'AI Risk Audit', to: 'AI Audit AI', content: '审计AI' }
+                ]
+            },
+            // AI智能保险服务系统
+            {
+                id: 'ai-insurance-service',
+                name: 'AI智能保险服务系统',
+                icon: '🛡️',
+                desc: '智能保险服务系统，包括保险理赔、核保评估、客户服务等',
+                agents: ['AI Insurance Director', 'AI Claims Processing', 'AI Underwriting', 'AI Customer Service', 'AI Insurance AI', 'AI Insurance Analytics'],
+                positions: [
+                    { role: 'AI Insurance Director', x: 400, y: 30 },
+                    { role: 'AI Claims Processing', x: 150, y: 150 },
+                    { role: 'AI Underwriting', x: 650, y: 150 },
+                    { role: 'AI Customer Service', x: 150, y: 300 },
+                    { role: 'AI Insurance AI', x: 400, y: 350 },
+                    { role: 'AI Insurance Analytics', x: 650, y: ],
+                messageFlow 300 }
+               s: [
+                    { from: 'AI Insurance Director', to: 'AI Claims Processing', content: '理赔处理' },
+                    { from: 'AI Insurance Director', to: 'AI Insurance Analytics', content: '保险分析' },
+                    { from: 'AI Claims Processing', to: 'AI Underwriting', content: '核保评估' },
+                    { from: 'AI Underwriting', to: 'AI Customer Service', content: '客户服务' },
+                    { from: 'AI Customer Service', to: 'AI Insurance AI', content: '保险AI' }
+                ]
+            },
+            // AI智能环保服务系统
+            {
+                id: 'ai-environmental-service',
+                name: 'AI智能环保服务系统',
+                icon: '🌿',
+                desc: '智能环保服务系统，包括环境监测、污染治理、资源回收等',
+                agents: ['AI Environmental Director', 'AI Environmental Monitoring', 'AI Pollution Control', 'AI Resource Recycling', 'AI Environmental AI', 'AI Environmental Analytics'],
+                positions: [
+                    { role: 'AI Environmental Director', x: 400, y: 30 },
+                    { role: 'AI Environmental Monitoring', x: 150, y: 150 },
+                    { role: 'AI Pollution Control', x: 650, y: 150 },
+                    { role: 'AI Resource Recycling', x: 150, y: 300 },
+                    { role: 'AI Environmental AI', x: 400, y: 350 },
+                    { role: 'AI Environmental Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Director', to: 'AI Environmental Monitoring', content: '环境监测' },
+                    { from: 'AI Environmental Director', to: 'AI Environmental Analytics', content: '环保分析' },
+                    { from: 'AI Environmental Monitoring', to: 'AI Pollution Control', content: '污染治理' },
+                    { from: 'AI Pollution Control', to: 'AI Resource Recycling', content: '资源回收' },
+                    { from: 'AI Resource Recycling', to: 'AI Environmental AI', content: '环保AI' }
+                ]
+            },
+            // AI智能科研服务系统
+            {
+                id: 'ai-research-service',
+                name: 'AI智能科研服务系统',
+                icon: '🔬',
+                desc: '智能科研服务系统，包括实验设计、数据分析、论文撰写等',
+                agents: ['AI Research Director', 'AI Experiment Design', 'AI Data Analysis', 'AI Paper Writing', 'AI Research AI', 'AI Research Analytics'],
+                positions: [
+                    { role: 'AI Research Director', x: 400, y: 30 },
+                    { role: 'AI Experiment Design', x: 150, y: 150 },
+                    { role: 'AI Data Analysis', x: 650, y: 150 },
+                    { role: 'AI Paper Writing', x: 150, y: 300 },
+                    { role: 'AI Research AI', x: 400, y: 350 },
+                    { role: 'AI Research Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Research Director', to: 'AI Experiment Design', content: '实验设计' },
+                    { from: 'AI Research Director', to: 'AI Research Analytics', content: '科研分析' },
+                    { from: 'AI Experiment Design', to: 'AI Data Analysis', content: '数据分析' },
+                    { from: 'AI Data Analysis', to: 'AI Paper Writing', content: '论文撰写' },
+                    { from: 'AI Paper Writing', to: 'AI Research AI', content: '科研AI' }
+                ]
+            },
+            // AI智能市政服务系统
+            {
+                id: 'ai-municipal-service',
+                name: 'AI智能市政服务系统',
+                icon: '🏛️',
+                desc: '智能市政服务系统，包括城市管理、公共服务、应急响应等',
+                agents: ['AI Municipal Director', 'AI City Management', 'AI Public Service', 'AI Emergency Response', 'AI Municipal AI', 'AI Municipal Analytics'],
+                positions: [
+                    { role: 'AI Municipal Director', x: 400, y: 30 },
+                    { role: 'AI City Management', x: 150, y: 150 },
+                    { role: 'AI Public Service', x: 650, y: 150 },
+                    { role: 'AI Emergency Response', x: 150, y: 300 },
+                    { role: 'AI Municipal AI', x: 400, y: 350 },
+                    { role: 'AI Municipal Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Municipal Director', to: 'AI City Management', content: '城市管理' },
+                    { from: 'AI Municipal Director', to: 'AI Municipal Analytics', content: '市政分析' },
+                    { from: 'AI City Management', to: 'AI Public Service', content: '公共服务' },
+                    { from: 'AI Public Service', to: 'AI Emergency Response', content: '应急响应' },
+                    { from: 'AI Emergency Response', to: 'AI Municipal AI', content: '市政AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -48500,7 +48665,57 @@
             'AI Scenic Guide': { icon: '🏞️', color: '#22c55e', role: 'AI景区导览' },
             'AI Travel Booking': { icon: '🎫', color: '#f97316', role: 'AI旅游预订' },
             'AI Tourism AI': { icon: '🤖', color: '#8b5cf6', role: 'AI旅游AI' },
-            'AI Tourism Analytics': { icon: '📊', color: '#06b6d4', role: 'AI旅游分析' }
+            'AI Tourism Analytics': { icon: '📊', color: '#06b6d4', role: 'AI旅游分析' },
+            // Cycle 530 新增角色 - 7个行业服务系统
+            // AI智能法律服务系统
+            'AI Legal Director': { icon: '⚖️', color: '#f59e0b', role: 'AI法律总监' },
+            'AI Contract Review': { icon: '📜', color: '#3b82f6', role: 'AI合同审核' },
+            'AI Case Analysis': { icon: '🔍', color: '#22c55e', role: 'AI案件分析' },
+            'AI Legal Consultation': { icon: '💬', color: '#f97316', role: 'AI法律咨询' },
+            'AI Legal AI': { icon: '🤖', color: '#8b5cf6', role: 'AI法律AI' },
+            'AI Legal Analytics': { icon: '📊', color: '#06b6d4', role: 'AI法律分析' },
+            // AI智能咨询服务系统
+            'AI Consulting Director': { icon: '💼', color: '#f59e0b', role: 'AI咨询总监' },
+            'AI Strategy Consulting': { icon: '🎯', color: '#3b82f6', role: 'AI战略咨询' },
+            'AI Management Consulting': { icon: '📈', color: '#22c55e', role: 'AI管理咨询' },
+            'AI Tech Consulting': { icon: '💻', color: '#f97316', role: 'AI技术咨询' },
+            'AI Consulting AI': { icon: '🤖', color: '#8b5cf6', role: 'AI咨询AI' },
+            'AI Consulting Analytics': { icon: '📊', color: '#06b6d4', role: 'AI咨询分析' },
+            // AI智能审计服务系统
+            'AI Audit Director': { icon: '📋', color: '#f59e0b', role: 'AI审计总监' },
+            'AI Financial Audit': { icon: '💰', color: '#3b82f6', role: 'AI财务审计' },
+            'AI Compliance Audit': { icon: '✅', color: '#22c55e', role: 'AI合规审计' },
+            'AI Risk Audit': { icon: '⚠️', color: '#f97316', role: 'AI风险审计' },
+            'AI Audit AI': { icon: '🤖', color: '#8b5cf6', role: 'AI审计AI' },
+            'AI Audit Analytics': { icon: '📊', color: '#06b6d4', role: 'AI审计分析' },
+            // AI智能保险服务系统
+            'AI Insurance Director': { icon: '🛡️', color: '#f59e0b', role: 'AI保险总监' },
+            'AI Claims Processing': { icon: '📝', color: '#3b82f6', role: 'AI理赔处理' },
+            'AI Underwriting': { icon: '📋', color: '#22c55e', role: 'AI核保评估' },
+            'AI Customer Service': { icon: '👥', color: '#f97316', role: 'AI客户服务' },
+            'AI Insurance AI': { icon: '🤖', color: '#8b5cf6', role: 'AI保险AI' },
+            'AI Insurance Analytics': { icon: '📊', color: '#06b6d4', role: 'AI保险分析' },
+            // AI智能环保服务系统
+            'AI Environmental Director': { icon: '🌿', color: '#f59e0b', role: 'AI环保总监' },
+            'AI Environmental Monitoring': { icon: '🌍', color: '#3b82f6', role: 'AI环境监测' },
+            'AI Pollution Control': { icon: '🧹', color: '#22c55e', role: 'AI污染治理' },
+            'AI Resource Recycling': { icon: '♻️', color: '#f97316', role: 'AI资源回收' },
+            'AI Environmental AI': { icon: '🤖', color: '#8b5cf6', role: 'AI环保AI' },
+            'AI Environmental Analytics': { icon: '📊', color: '#06b6d4', role: 'AI环保分析' },
+            // AI智能科研服务系统
+            'AI Research Director': { icon: '🔬', color: '#f59e0b', role: 'AI科研总监' },
+            'AI Experiment Design': { icon: '🧪', color: '#3b82f6', role: 'AI实验设计' },
+            'AI Data Analysis': { icon: '📈', color: '#22c55e', role: 'AI数据分析' },
+            'AI Paper Writing': { icon: '📝', color: '#f97316', role: 'AI论文撰写' },
+            'AI Research AI': { icon: '🤖', color: '#8b5cf6', role: 'AI科研AI' },
+            'AI Research Analytics': { icon: '📊', color: '#06b6d4', role: 'AI科研分析' },
+            // AI智能市政服务系统
+            'AI Municipal Director': { icon: '🏛️', color: '#f59e0b', role: 'AI市政总监' },
+            'AI City Management': { icon: '🏙️', color: '#3b82f6', role: 'AI城市管理' },
+            'AI Public Service': { icon: '👥', color: '#22c55e', role: 'AI公共服务' },
+            'AI Emergency Response': { icon: '🚨', color: '#f97316', role: 'AI应急响应' },
+            'AI Municipal AI': { icon: '🤖', color: '#8b5cf6', role: 'AI市政AI' },
+            'AI Municipal Analytics': { icon: '📊', color: '#06b6d4', role: 'AI市政分析' }
         };
 
         // 拖拽相关变量
