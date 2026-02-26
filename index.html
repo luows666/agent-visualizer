@@ -41773,8 +41773,173 @@
             }
         ];
 
+        // Cycle 541 新增模板 - 7个行业服务系统
+        const cycle541Templates = [
+            // AI智能智慧供水系统
+            {
+                id: 'ai-water-supply-service',
+                name: 'AI智能智慧供水系统',
+                icon: '💧',
+                desc: '智慧供水服务系统，包括水务管理、水质监测、供水调度等',
+                agents: ['AI Water Supply Director', 'AI Water Management', 'AI Water Quality Monitoring', 'AI Water Supply Dispatch', 'AI Water Supply AI', 'AI Water Supply Analytics'],
+                positions: [
+                    { role: 'AI Water Supply Director', x: 400, y: 30 },
+                    { role: 'AI Water Management', x: 150, y: 150 },
+                    { role: 'AI Water Quality Monitoring', x: 650, y: 150 },
+                    { role: 'AI Water Supply Dispatch', x: 150, y: 300 },
+                    { role: 'AI Water Supply AI', x: 400, y: 350 },
+                    { role: 'AI Water Supply Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Water Supply Director', to: 'AI Water Management', content: '水务管理' },
+                    { from: 'AI Water Supply Director', to: 'AI Water Supply Analytics', content: '供水分析' },
+                    { from: 'AI Water Management', to: 'AI Water Quality Monitoring', content: '水质监测' },
+                    { from: 'AI Water Quality Monitoring', to: 'AI Water Supply Dispatch', content: '供水调度' },
+                    { from: 'AI Water Supply Dispatch', to: 'AI Water Supply AI', content: '供水AI' }
+                ]
+            },
+            // AI智能智慧排水系统
+            {
+                id: 'ai-drainage-service',
+                name: 'AI智能智慧排水系统',
+                icon: '🌊',
+                desc: '智慧排水服务系统，包括排水管网、污水处理、防涝预警等',
+                agents: ['AI Drainage Director', 'AI Drainage Management', 'AI Sewage Treatment', 'AI Flood Prevention', 'AI Drainage AI', 'AI Drainage Analytics'],
+                positions: [
+                    { role: 'AI Drainage Director', x: 400, y: 30 },
+                    { role: 'AI Drainage Management', x: 150, y: 150 },
+                    { role: 'AI Sewage Treatment', x: 650, y: 150 },
+                    { role: 'AI Flood Prevention', x: 150, y: 300 },
+                    { role: 'AI Drainage AI', x: 400, y: 350 },
+                    { role: 'AI Drainage Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Drainage Director', to: 'AI Drainage Management', content: '排水管理' },
+                    { from: 'AI Drainage Director', to: 'AI Drainage Analytics', content: '排水分析' },
+                    { from: 'AI Drainage Management', to: 'AI Sewage Treatment', content: '污水处理' },
+                    { from: 'AI Sewage Treatment', to: 'AI Flood Prevention', content: '防涝预警' },
+                    { from: 'AI Flood Prevention', to: 'AI Drainage AI', content: '排水AI' }
+                ]
+            },
+            // AI智能智慧燃气系统
+            {
+                id: 'ai-gas-service',
+                name: 'AI智能智慧燃气系统',
+                icon: '🔥',
+                desc: '智慧燃气服务系统，包括燃气输配、安全监控、泄漏检测等',
+                agents: ['AI Gas Director', 'AI Gas Distribution', 'AI Gas Safety Monitoring', 'AI Leak Detection', 'AI Gas AI', 'AI Gas Analytics'],
+                positions: [
+                    { role: 'AI Gas Director', x: 400, y: 30 },
+                    { role: 'AI Gas Distribution', x: 150, y: 150 },
+                    { role: 'AI Gas Safety Monitoring', x: 650, y: 150 },
+                    { role: 'AI Leak Detection', x: 150, y: 300 },
+                    { role: 'AI Gas AI', x: 400, y: 350 },
+                    { role: 'AI Gas Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Gas Director', to: 'AI Gas Distribution', content: '燃气输配' },
+                    { from: 'AI Gas Director', to: 'AI Gas Analytics', content: '燃气分析' },
+                    { from: 'AI Gas Distribution', to: 'AI Gas Safety Monitoring', content: '安全监控' },
+                    { from: 'AI Gas Safety Monitoring', to: 'AI Leak Detection', content: '泄漏检测' },
+                    { from: 'AI Leak Detection', to: 'AI Gas AI', content: '燃气AI' }
+                ]
+            },
+            // AI智能智慧供热系统
+            {
+                id: 'ai-heating-service',
+                name: 'AI智能智慧供热系统',
+                icon: '♨️',
+                desc: '智慧供热服务系统，包括热源管理、温度调控、能耗优化等',
+                agents: ['AI Heating Director', 'AI Heat Source Management', 'AI Temperature Control', 'AI Energy Optimization', 'AI Heating AI', 'AI Heating Analytics'],
+                positions: [
+                    { role: 'AI Heating Director', x: 400, y: 30 },
+                    { role: 'AI Heat Source Management', x: 150, y: 150 },
+                    { role: 'AI Temperature Control', x: 650, y: 150 },
+                    { role: 'AI Energy Optimization', x: 150, y: 300 },
+                    { role: 'AI Heating AI', x: 400, y: 350 },
+                    { role: 'AI Heating Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Heating Director', to: 'AI Heat Source Management', content: '热源管理' },
+                    { from: 'AI Heating Director', to: 'AI Heating Analytics', content: '供热分析' },
+                    { from: 'AI Heat Source Management', to: 'AI Temperature Control', content: '温度调控' },
+                    { from: 'AI Temperature Control', to: 'AI Energy Optimization', content: '能耗优化' },
+                    { from: 'AI Energy Optimization', to: 'AI Heating AI', content: '供热AI' }
+                ]
+            },
+            // AI智能智慧电网系统
+            {
+                id: 'ai-power-grid-service',
+                name: 'AI智能智慧电网系统',
+                icon: '⚡',
+                desc: '智慧电网服务系统，包括电力调度、负荷预测、故障检测等',
+                agents: ['AI Power Grid Director', 'AI Power Dispatch', 'AI Load Forecasting', 'AI Fault Detection', 'AI Power Grid AI', 'AI Power Grid Analytics'],
+                positions: [
+                    { role: 'AI Power Grid Director', x: 400, y: 30 },
+                    { role: 'AI Power Dispatch', x: 150, y: 150 },
+                    { role: 'AI Load Forecasting', x: 650, y: 150 },
+                    { role: 'AI Fault Detection', x: 150, y: 300 },
+                    { role: 'AI Power Grid AI', x: 400, y: 350 },
+                    { role: 'AI Power Grid Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Power Grid Director', to: 'AI Power Dispatch', content: '电力调度' },
+                    { from: 'AI Power Grid Director', to: 'AI Power Grid Analytics', content: '电网分析' },
+                    { from: 'AI Power Dispatch', to: 'AI Load Forecasting', content: '负荷预测' },
+                    { from: 'AI Load Forecasting', to: 'AI Fault Detection', content: '故障检测' },
+                    { from: 'AI Fault Detection', to: 'AI Power Grid AI', content: '电网AI' }
+                ]
+            },
+            // AI智能智慧通信系统
+            {
+                id: 'ai-communication-service',
+                name: 'AI智能智慧通信系统',
+                icon: '📡',
+                desc: '智慧通信服务系统，包括网络优化、信号覆盖、通信保障等',
+                agents: ['AI Communication Director', 'AI Network Optimization', 'AI Signal Coverage', 'AI Communication Support', 'AI Communication AI', 'AI Communication Analytics'],
+                positions: [
+                    { role: 'AI Communication Director', x: 400, y: 30 },
+                    { role: 'AI Network Optimization', x: 150, y: 150 },
+                    { role: 'AI Signal Coverage', x: 650, y: 150 },
+                    { role: 'AI Communication Support', x: 150, y: 300 },
+                    { role: 'AI Communication AI', x: 400, y: 350 },
+                    { role: 'AI Communication Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Communication Director', to: 'AI Network Optimization', content: '网络优化' },
+                    { from: 'AI Communication Director', to: 'AI Communication Analytics', content: '通信分析' },
+                    { from: 'AI Network Optimization', to: 'AI Signal Coverage', content: '信号覆盖' },
+                    { from: 'AI Signal Coverage', to: 'AI Communication Support', content: '通信保障' },
+                    { from: 'AI Communication Support', to: 'AI Communication AI', content: '通信AI' }
+                ]
+            },
+            // AI智能智慧环保监测系统
+            {
+                id: 'ai-environmental-service',
+                name: 'AI智能智慧环保监测系统',
+                icon: '🌿',
+                desc: '智慧环保监测服务系统，包括空气质量、水质监测、噪声监测等',
+                agents: ['AI Environmental Director', 'AI Air Quality Monitoring', 'AI Water Quality Test', 'AI Noise Monitoring', 'AI Environmental AI', 'AI Environmental Analytics'],
+                positions: [
+                    { role: 'AI Environmental Director', x: 400, y: 30 },
+                    { role: 'AI Air Quality Monitoring', x: 150, y: 150 },
+                    { role: 'AI Water Quality Test', x: 650, y: 150 },
+                    { role: 'AI Noise Monitoring', x: 150, y: 300 },
+                    { role: 'AI Environmental AI', x: 400, y: 350 },
+                    { role: 'AI Environmental Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Environmental Director', to: 'AI Air Quality Monitoring', content: '空气质量' },
+                    { from: 'AI Environmental Director', to: 'AI Environmental Analytics', content: '环保分析' },
+                    { from: 'AI Air Quality Monitoring', to: 'AI Water Quality Test', content: '水质监测' },
+                    { from: 'AI Water Quality Test', to: 'AI Noise Monitoring', content: '噪声监测' },
+                    { from: 'AI Noise Monitoring', to: 'AI Environmental AI', content: '环保AI' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -50863,7 +51028,57 @@
             'AI Energy Saving': { icon: '🌱', color: '#22c55e', role: 'AI节能管理' },
             'AI Light Adjustment': { icon: '🎚️', color: '#f97316', role: 'AI光效调节' },
             'AI Lighting AI': { icon: '🤖', color: '#8b5cf6', role: 'AI照明AI' },
-            'AI Lighting Analytics': { icon: '📊', color: '#06b6d4', role: 'AI照明分析' }
+            'AI Lighting Analytics': { icon: '📊', color: '#06b6d4', role: 'AI照明分析' },
+            // Cycle 541 新增角色 - 7个行业服务系统
+            // AI智能智慧供水系统
+            'AI Water Supply Director': { icon: '💧', color: '#f59e0b', role: 'AI供水总监' },
+            'AI Water Management': { icon: '🌊', color: '#3b82f6', role: 'AI水务管理' },
+            'AI Water Quality Monitoring': { icon: '🔬', color: '#22c55e', role: 'AI水质监测' },
+            'AI Water Supply Dispatch': { icon: '📞', color: '#f97316', role: 'AI供水调度' },
+            'AI Water Supply AI': { icon: '🤖', color: '#8b5cf6', role: 'AI供水AI' },
+            'AI Water Supply Analytics': { icon: '📊', color: '#06b6d4', role: 'AI供水分析' },
+            // AI智能智慧排水系统
+            'AI Drainage Director': { icon: '🌊', color: '#f59e0b', role: 'AI排水总监' },
+            'AI Drainage Management': { icon: '🔧', color: '#3b82f6', role: 'AI排水管理' },
+            'AI Sewage Treatment': { icon: '🧪', color: '#22c55e', role: 'AI污水处理' },
+            'AI Flood Prevention': { icon: '🛡️', color: '#f97316', role: 'AI防涝预警' },
+            'AI Drainage AI': { icon: '🤖', color: '#8b5cf6', role: 'AI排水AI' },
+            'AI Drainage Analytics': { icon: '📊', color: '#06b6d4', role: 'AI排水分析' },
+            // AI智能智慧燃气系统
+            'AI Gas Director': { icon: '🔥', color: '#f59e0b', role: 'AI燃气总监' },
+            'AI Gas Distribution': { icon: '📨', color: '#3b82f6', role: 'AI燃气输配' },
+            'AI Gas Safety Monitoring': { icon: '👁️', color: '#22c55e', role: 'AI安全监控' },
+            'AI Leak Detection': { icon: '🔎', color: '#f97316', role: 'AI泄漏检测' },
+            'AI Gas AI': { icon: '🤖', color: '#8b5cf6', role: 'AI燃气AI' },
+            'AI Gas Analytics': { icon: '📊', color: '#06b6d4', role: 'AI燃气分析' },
+            // AI智能智慧供热系统
+            'AI Heating Director': { icon: '♨️', color: '#f59e0b', role: 'AI供热总监' },
+            'AI Heat Source Management': { icon: '🔥', color: '#3b82f6', role: 'AI热源管理' },
+            'AI Temperature Control': { icon: '🌡️', color: '#22c55e', role: 'AI温度调控' },
+            'AI Energy Optimization': { icon: '⚡', color: '#f97316', role: 'AI能耗优化' },
+            'AI Heating AI': { icon: '🤖', color: '#8b5cf6', role: 'AI供热AI' },
+            'AI Heating Analytics': { icon: '📊', color: '#06b6d4', role: 'AI供热分析' },
+            // AI智能智慧电网系统
+            'AI Power Grid Director': { icon: '⚡', color: '#f59e0b', role: 'AI电网总监' },
+            'AI Power Dispatch': { icon: '📡', color: '#3b82f6', role: 'AI电力调度' },
+            'AI Load Forecasting': { icon: '📈', color: '#22c55e', role: 'AI负荷预测' },
+            'AI Fault Detection': { icon: '🔍', color: '#f97316', role: 'AI故障检测' },
+            'AI Power Grid AI': { icon: '🤖', color: '#8b5cf6', role: 'AI电网AI' },
+            'AI Power Grid Analytics': { icon: '📊', color: '#06b6d4', role: 'AI电网分析' },
+            // AI智能智慧通信系统
+            'AI Communication Director': { icon: '📡', color: '#f59e0b', role: 'AI通信总监' },
+            'AI Network Optimization': { icon: '🌐', color: '#3b82f6', role: 'AI网络优化' },
+            'AI Signal Coverage': { icon: '📶', color: '#22c55e', role: 'AI信号覆盖' },
+            'AI Communication Support': { icon: '🔧', color: '#f97316', role: 'AI通信保障' },
+            'AI Communication AI': { icon: '🤖', color: '#8b5cf6', role: 'AI通信AI' },
+            'AI Communication Analytics': { icon: '📊', color: '#06b6d4', role: 'AI通信分析' },
+            // AI智能智慧环保监测系统
+            'AI Environmental Director': { icon: '🌿', color: '#f59e0b', role: 'AI环保总监' },
+            'AI Air Quality Monitoring': { icon: '💨', color: '#3b82f6', role: 'AI空气质量监测' },
+            'AI Water Quality Test': { icon: '💧', color: '#22c55e', role: 'AI水质检测' },
+            'AI Noise Monitoring': { icon: '🔊', color: '#f97316', role: 'AI噪声监测' },
+            'AI Environmental AI': { icon: '🤖', color: '#8b5cf6', role: 'AI环保AI' },
+            'AI Environmental Analytics': { icon: '📊', color: '#06b6d4', role: 'AI环保分析' }
         };
 
         // 拖拽相关变量
