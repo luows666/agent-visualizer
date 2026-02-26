@@ -43257,8 +43257,173 @@
             }
         ];
 
+        // Cycle 550 - 新增 7 个行业服务系统模板
+        const cycle550Templates = [
+            // AI智能智慧新能源汽车服务系统
+            {
+                id: 'ai-ev-service',
+                name: 'AI智能智慧新能源汽车服务系统',
+                icon: '🚗',
+                desc: '智慧新能源汽车服务，包括充电管理、维修保养、车联网等',
+                agents: ['AI EV Director', 'AI Charging Manager', 'AI Vehicle Maintainer', 'AI Telematics Coordinator', 'AI Battery Manager', 'AI EV Customer Service'],
+                positions: [
+                    { role: 'AI EV Director', x: 400, y: 30 },
+                    { role: 'AI Charging Manager', x: 150, y: 150 },
+                    { role: 'AI Vehicle Maintainer', x: 650, y: 150 },
+                    { role: 'AI Telematics Coordinator', x: 150, y: 300 },
+                    { role: 'AI Battery Manager', x: 400, y: 350 },
+                    { role: 'AI EV Customer Service', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI EV Director', to: 'AI Charging Manager', content: '充电管理' },
+                    { from: 'AI EV Director', to: 'AI Vehicle Maintainer', content: '维修保养' },
+                    { from: 'AI Charging Manager', to: 'AI Telematics Coordinator', content: '车联网协调' },
+                    { from: 'AI Vehicle Maintainer', to: 'AI Battery Manager', content: '电池管理' },
+                    { from: 'AI Battery Manager', to: 'AI EV Customer Service', content: '客户服务' }
+                ]
+            },
+            // AI智能智慧跨境电商服务系统
+            {
+                id: 'ai-crossborder-ecommerce',
+                name: 'AI智能智慧跨境电商服务系统',
+                icon: '🌐',
+                desc: '智慧跨境电商服务，包括海外仓储、国际物流、通关报关等',
+                agents: ['AI Crossborder Director', 'AI Warehouse Manager', 'AI Logistics Coordinator', 'AI Customs Clearance', 'AI International Payment', 'AI Global Marketing'],
+                positions: [
+                    { role: 'AI Crossborder Director', x: 400, y: 30 },
+                    { role: 'AI Warehouse Manager', x: 150, y: 150 },
+                    { role: 'AI Logistics Coordinator', x: 650, y: 150 },
+                    { role: 'AI Customs Clearance', x: 150, y: 300 },
+                    { role: 'AI International Payment', x: 400, y: 350 },
+                    { role: 'AI Global Marketing', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Crossborder Director', to: 'AI Warehouse Manager', content: '海外仓储' },
+                    { from: 'AI Crossborder Director', to: 'AI Logistics Coordinator', content: '国际物流' },
+                    { from: 'AI Warehouse Manager', to: 'AI Customs Clearance', content: '通关报关' },
+                    { from: 'AI Logistics Coordinator', to: 'AI International Payment', content: '国际支付' },
+                    { from: 'AI International Payment', to: 'AI Global Marketing', content: '全球营销' }
+                ]
+            },
+            // AI智能智慧养老服务系统
+            {
+                id: 'ai-elderly-care',
+                name: 'AI智能智慧养老服务系统',
+                icon: '👴',
+                desc: '智慧养老服务，包括健康监测、生活照料、精神慰藉等',
+                agents: ['AI Elderly Care Director', 'AI Health Monitor', 'AI Life Caregiver', 'AI Companionship AI', 'AI Medical Coordinator', 'AI Emergency Response'],
+                positions: [
+                    { role: 'AI Elderly Care Director', x: 400, y: 30 },
+                    { role: 'AI Health Monitor', x: 150, y: 150 },
+                    { role: 'AI Life Caregiver', x: 650, y: 150 },
+                    { role: 'AI Companionship AI', x: 150, y: 300 },
+                    { role: 'AI Medical Coordinator', x: 400, y: 350 },
+                    { role: 'AI Emergency Response', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Elderly Care Director', to: 'AI Health Monitor', content: '健康监测' },
+                    { from: 'AI Elderly Care Director', to: 'AI Life Caregiver', content: '生活照料' },
+                    { from: 'AI Health Monitor', to: 'AI Companionship AI', content: '精神慰藉' },
+                    { from: 'AI Life Caregiver', to: 'AI Medical Coordinator', content: '医疗协调' },
+                    { from: 'AI Medical Coordinator', to: 'AI Emergency Response', content: '应急响应' }
+                ]
+            },
+            // AI智能智慧人力资源服务系统
+            {
+                id: 'ai-hr-service',
+                name: 'AI智能智慧人力资源服务系统',
+                icon: '👥',
+                desc: '智慧人力资源服务，包括招聘管理、培训发展、绩效评估等',
+                agents: ['AI HR Director', 'AI Recruitment Manager', 'AI Training Coordinator', 'AI Performance Assessor', 'AI Payroll Manager', 'AI Employee Relations'],
+                positions: [
+                    { role: 'AI HR Director', x: 400, y: 30 },
+                    { role: 'AI Recruitment Manager', x: 150, y: 150 },
+                    { role: 'AI Training Coordinator', x: 650, y: 150 },
+                    { role: 'AI Performance Assessor', x: 150, y: 300 },
+                    { role: 'AI Payroll Manager', x: 400, y: 350 },
+                    { role: 'AI Employee Relations', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI HR Director', to: 'AI Recruitment Manager', content: '招聘管理' },
+                    { from: 'AI HR Director', to: 'AI Training Coordinator', content: '培训发展' },
+                    { from: 'AI Recruitment Manager', to: 'AI Performance Assessor', content: '绩效评估' },
+                    { from: 'AI Training Coordinator', to: 'AI Payroll Manager', content: '薪资管理' },
+                    { from: 'AI Payroll Manager', to: 'AI Employee Relations', content: '员工关系' }
+                ]
+            },
+            // AI智能智慧知识产权服务系统
+            {
+                id: 'ai-ip-service',
+                name: 'AI智能智慧知识产权服务系统',
+                icon: '💡',
+                desc: '智慧知识产权服务，包括专利申请、商标注册、版权保护等',
+                agents: ['AI IP Director', 'AI Patent Manager', 'AI Trademark Registrar', 'AI Copyright Protector', 'AI IP Analyst', 'AI Legal Consultant'],
+                positions: [
+                    { role: 'AI IP Director', x: 400, y: 30 },
+                    { role: 'AI Patent Manager', x: 150, y: 150 },
+                    { role: 'AI Trademark Registrar', x: 650, y: 150 },
+                    { role: 'AI Copyright Protector', x: 150, y: 300 },
+                    { role: 'AI IP Analyst', x: 400, y: 350 },
+                    { role: 'AI Legal Consultant', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI IP Director', to: 'AI Patent Manager', content: '专利申请' },
+                    { from: 'AI IP Director', to: 'AI Trademark Registrar', content: '商标注册' },
+                    { from: 'AI Patent Manager', to: 'AI Copyright Protector', content: '版权保护' },
+                    { from: 'AI Trademark Registrar', to: 'AI IP Analyst', content: 'IP分析' },
+                    { from: 'AI IP Analyst', to: 'AI Legal Consultant', content: '法律咨询' }
+                ]
+            },
+            // AI智能智慧食品安全服务系统
+            {
+                id: 'ai-food-safety',
+                name: 'AI智能智慧食品安全服务系统',
+                icon: '🍎',
+                desc: '智慧食品安全服务，包括溯源管理、质量检测、监管执法等',
+                agents: ['AI Food Safety Director', 'AI Traceability Manager', 'AI Quality Inspector', 'AI Regulatory Enforcer', 'AI Hazard Analyst', 'AI Consumer Protection'],
+                positions: [
+                    { role: 'AI Food Safety Director', x: 400, y: 30 },
+                    { role: 'AI Traceability Manager', x: 150, y: 150 },
+                    { role: 'AI Quality Inspector', x: 650, y: 150 },
+                    { role: 'AI Regulatory Enforcer', x: 150, y: 300 },
+                    { role: 'AI Hazard Analyst', x: 400, y: 350 },
+                    { role: 'AI Consumer Protection', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Food Safety Director', to: 'AI Traceability Manager', content: '溯源管理' },
+                    { from: 'AI Food Safety Director', to: 'AI Quality Inspector', content: '质量检测' },
+                    { from: 'AI Traceability Manager', to: 'AI Regulatory Enforcer', content: '监管执法' },
+                    { from: 'AI Quality Inspector', to: 'AI Hazard Analyst', content: '风险分析' },
+                    { from: 'AI Hazard Analyst', to: 'AI Consumer Protection', content: '消费者保护' }
+                ]
+            },
+            // AI智能智慧应急管理服务系统
+            {
+                id: 'ai-emergency-management',
+                name: 'AI智能智慧应急管理服务系统',
+                icon: '🚨',
+                desc: '智慧应急管理服务，包括预警响应、救援指挥、灾后重建等',
+                agents: ['AI Emergency Director', 'AI Early Warning Manager', 'AI Rescue Commander', 'AI Disaster Analyst', 'AI Relief Coordinator', 'AI Recovery Planner'],
+                positions: [
+                    { role: 'AI Emergency Director', x: 400, y: 30 },
+                    { role: 'AI Early Warning Manager', x: 150, y: 150 },
+                    { role: 'AI Rescue Commander', x: 650, y: 150 },
+                    { role: 'AI Disaster Analyst', x: 150, y: 300 },
+                    { role: 'AI Relief Coordinator', x: 400, y: 350 },
+                    { role: 'AI Recovery Planner', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Emergency Director', to: 'AI Early Warning Manager', content: '预警响应' },
+                    { from: 'AI Emergency Director', to: 'AI Rescue Commander', content: '救援指挥' },
+                    { from: 'AI Early Warning Manager', to: 'AI Disaster Analyst', content: '灾情分析' },
+                    { from: 'AI Rescue Commander', to: 'AI Relief Coordinator', content: '救灾协调' },
+                    { from: 'AI Relief Coordinator', to: 'AI Recovery Planner', content: '灾后重建' }
+                ]
+            }
+        ];
+
         // 合并模板
-        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates, ...cycle545Templates, ...cycle546Templates, ...cycle547Templates, ...cycle548Templates, ...cycle549Templates];
+        workflowTemplates = [...workflowTemplates, ...cycle416Templates, ...cycle417Templates, ...cycle418Templates, ...cycle419Templates, ...cycle420Templates, ...cycle421Templates, ...cycle422Templates, ...cycle423Templates, ...cycle424Templates, ...cycle425Templates, ...cycle426Templates, ...cycle427Templates, ...cycle428Templates, ...cycle429Templates, ...cycle430Templates, ...cycle432Templates, ...cycle433Templates, ...cycle434Templates, ...cycle435Templates, ...cycle436Templates, ...cycle437Templates, ...cycle438Templates, ...cycle439Templates, ...cycle440Templates, ...cycle441Templates, ...cycle442Templates, ...cycle443Templates, ...cycle444Templates, ...cycle445Templates, ...cycle446Templates, ...cycle447Templates, ...cycle448Templates, ...cycle449Templates, ...cycle450Templates, ...cycle451Templates, ...cycle452Templates, ...cycle453Templates, ...cycle454Templates, ...cycle455Templates, ...cycle456Templates, ...cycle457Templates, ...cycle458Templates, ...cycle459Templates, ...cycle460Templates, ...cycle461Templates, ...cycle462Templates, ...cycle463Templates, ...cycle464Templates, ...cycle465Templates, ...cycle466Templates, ...cycle467Templates, ...cycle468Templates, ...cycle469Templates, ...cycle470Templates, ...cycle471Templates, ...cycle472Templates, ...cycle473Templates, ...cycle474Templates, ...cycle475Templates, ...cycle476Templates, ...cycle477Templates, ...cycle478Templates, ...cycle479Templates, ...cycle481Templates, ...cycle482Templates, ...cycle483Templates, ...cycle484Templates, ...cycle485Templates, ...cycle486Templates, ...cycle487Templates, ...cycle488Templates, ...cycle489Templates, ...cycle490Templates, ...cycle491Templates, ...cycle492Templates, ...cycle493Templates, ...cycle494Templates, ...cycle495Templates, ...cycle496Templates, ...cycle498Templates, ...cycle499Templates, ...cycle500Templates, ...cycle501Templates, ...cycle502Templates, ...cycle503Templates, ...cycle504Templates, ...cycle505Templates, ...cycle506Templates, ...cycle507Templates, ...cycle508Templates, ...cycle509Templates, ...cycle510Templates, ...cycle511Templates, ...cycle512Templates, ...cycle513Templates, ...cycle514Templates, ...cycle515Templates, ...cycle516Templates, ...cycle517Templates, ...cycle518Templates, ...cycle519Templates, ...cycle520Templates, ...cycle521Templates, ...cycle522Templates, ...cycle523Templates, ...cycle524Templates, ...cycle525Templates, ...cycle526Templates, ...cycle527Templates, ...cycle528Templates, ...cycle529Templates, ...cycle530Templates, ...cycle531Templates, ...cycle532Templates, ...cycle533Templates, ...cycle534Templates, ...cycle535Templates, ...cycle536Templates, ...cycle537Templates, ...cycle538Templates, ...cycle539Templates, ...cycle540Templates, ...cycle541Templates, ...cycle542Templates, ...cycle543Templates, ...cycle544Templates, ...cycle545Templates, ...cycle546Templates, ...cycle547Templates, ...cycle548Templates, ...cycle549Templates, ...cycle550Templates];
 
         // Agent 角色配置
         const agentRoles = {
@@ -52797,7 +52962,57 @@
             'AI Student Service': { icon: '🙋‍♂️', color: '#3b82f6', role: 'AI学生服务' },
             'AI Campus Life Coordinator': { icon: '🏃', color: '#f59e0b', role: 'AI校园生活' },
             'AI Exam Supervisor': { icon: '📝', color: '#ec4899', role: 'AI考务管理' },
-            'AI Career Advisor': { icon: '💼', color: '#06b6d4', role: 'AI职业规划' }
+            'AI Career Advisor': { icon: '💼', color: '#06b6d4', role: 'AI职业规划' },
+            // Cycle 550 - 新增 42 个 Agent 角色
+            // AI智能智慧新能源汽车服务系统
+            'AI EV Director': { icon: '🚗', color: '#8b5cf6', role: 'AI新能源汽车总监' },
+            'AI Charging Manager': { icon: '⚡', color: '#22c55e', role: 'AI充电管理' },
+            'AI Vehicle Maintainer': { icon: '🔧', color: '#3b82f6', role: 'AI车辆维护' },
+            'AI Telematics Coordinator': { icon: '📡', color: '#f59e0b', role: 'AI车联网协调' },
+            'AI Battery Manager': { icon: '🔋', color: '#ec4899', role: 'AI电池管理' },
+            'AI EV Customer Service': { icon: '📞', color: '#06b6d4', role: 'AI新能源汽车客服' },
+            // AI智能智慧跨境电商服务系统
+            'AI Crossborder Director': { icon: '🌐', color: '#8b5cf6', role: 'AI跨境电商总监' },
+            'AI Warehouse Manager': { icon: '🏭', color: '#22c55e', role: 'AI仓储管理' },
+            'AI Logistics Coordinator': { icon: '🚚', color: '#3b82f6', role: 'AI物流协调' },
+            'AI Customs Clearance': { icon: '📋', color: '#f59e0b', role: 'AI通关报关' },
+            'AI International Payment': { icon: '💳', color: '#ec4899', role: 'AI国际支付' },
+            'AI Global Marketing': { icon: '🌍', color: '#06b6d4', role: 'AI全球营销' },
+            // AI智能智慧养老服务系统
+            'AI Elderly Care Director': { icon: '👴', color: '#8b5cf6', role: 'AI养老服务总监' },
+            'AI Health Monitor': { icon: '💓', color: '#22c55e', role: 'AI健康监测' },
+            'AI Life Caregiver': { icon: '👵', color: '#3b82f6', role: 'AI生活照料' },
+            'AI Companionship AI': { icon: '💬', color: '#f59e0b', role: 'AI精神慰藉' },
+            'AI Medical Coordinator': { icon: '🏥', color: '#ec4899', role: 'AI医疗协调' },
+            'AI Emergency Response': { icon: '🚨', color: '#06b6d4', role: 'AI应急响应' },
+            // AI智能智慧人力资源服务系统
+            'AI HR Director': { icon: '👥', color: '#8b5cf6', role: 'AI人力资源总监' },
+            'AI Recruitment Manager': { icon: '📋', color: '#22c55e', role: 'AI招聘管理' },
+            'AI Training Coordinator': { icon: '📚', color: '#3b82f6', role: 'AI培训协调' },
+            'AI Performance Assessor': { icon: '📊', color: '#f59e0b', role: 'AI绩效评估' },
+            'AI Payroll Manager': { icon: '💰', color: '#ec4899', role: 'AI薪资管理' },
+            'AI Employee Relations': { icon: '🤝', color: '#06b6d4', role: 'AI员工关系' },
+            // AI智能智慧知识产权服务系统
+            'AI IP Director': { icon: '💡', color: '#8b5cf6', role: 'AI知识产权总监' },
+            'AI Patent Manager': { icon: '📑', color: '#22c55e', role: 'AI专利管理' },
+            'AI Trademark Registrar': { icon: '®️', color: '#3b82f6', role: 'AI商标注册' },
+            'AI Copyright Protector': { icon: '©️', color: '#f59e0b', role: 'AI版权保护' },
+            'AI IP Analyst': { icon: '🔍', color: '#ec4899', role: 'AI IP分析师' },
+            'AI Legal Consultant': { icon: '⚖️', color: '#06b6d4', role: 'AI法律顾问' },
+            // AI智能智慧食品安全服务系统
+            'AI Food Safety Director': { icon: '🍎', color: '#8b5cf6', role: 'AI食品安全总监' },
+            'AI Traceability Manager': { icon: '🔎', color: '#22c55e', role: 'AI溯源管理' },
+            'AI Quality Inspector': { icon: '🔬', color: '#3b82f6', role: 'AI质量检测' },
+            'AI Regulatory Enforcer': { icon: '📢', color: '#f59e0b', role: 'AI监管执法' },
+            'AI Hazard Analyst': { icon: '⚠️', color: '#ec4899', role: 'AI风险分析' },
+            'AI Consumer Protection': { icon: '🛡️', color: '#06b6d4', role: 'AI消费者保护' },
+            // AI智能智慧应急管理服务系统
+            'AI Emergency Director': { icon: '🚨', color: '#8b5cf6', role: 'AI应急管理总监' },
+            'AI Early Warning Manager': { icon: '📢', color: '#22c55e', role: 'AI预警响应' },
+            'AI Rescue Commander': { icon: '🏃', color: '#3b82f6', role: 'AI救援指挥' },
+            'AI Disaster Analyst': { icon: '📉', color: '#f59e0b', role: 'AI灾情分析' },
+            'AI Relief Coordinator': { icon: '❤️', color: '#ec4899', role: 'AI救灾协调' },
+            'AI Recovery Planner': { icon: '🏗️', color: '#06b6d4', role: 'AI重建规划' }
         };
 
         // 拖拽相关变量
