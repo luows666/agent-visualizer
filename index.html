@@ -44241,6 +44241,168 @@
                     { from: 'AI Pollution Control', to: 'AI Ecological Protection', content: '生态保护' },
                     { from: 'AI Ecological Protection', to: 'AI Environment AI', content: '智慧环保AI' }
                 ]
+            },
+            // Cycle 556 - 7 new industry service system templates
+            // AI智能智慧智慧安防服务系统
+            {
+                id: 'ai-smart-security-comprehensive',
+                name: 'AI智能智慧智慧安防服务系统',
+                icon: '🛡️',
+                desc: '智慧安防服务系统，包括视频监控、入侵检测、应急响应等',
+                agents: ['AI Security Director', 'AI Video Surveillance', 'AI Intrusion Detection', 'AI Emergency Response', 'AI Security AI', 'AI Security Analytics'],
+                positions: [
+                    { role: 'AI Security Director', x: 400, y: 30 },
+                    { role: 'AI Video Surveillance', x: 150, y: 150 },
+                    { role: 'AI Intrusion Detection', x: 650, y: 150 },
+                    { role: 'AI Emergency Response', x: 150, y: 300 },
+                    { role: 'AI Security AI', x: 400, y: 350 },
+                    { role: 'AI Security Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Security Director', to: 'AI Video Surveillance', content: '视频监控' },
+                    { from: 'AI Security Director', to: 'AI Security Analytics', content: '安防分析' },
+                    { from: 'AI Video Surveillance', to: 'AI Intrusion Detection', content: '入侵检测' },
+                    { from: 'AI Intrusion Detection', to: 'AI Emergency Response', content: '应急响应' },
+                    { from: 'AI Emergency Response', to: 'AI Security AI', content: '智慧安防AI' }
+                ]
+            },
+            // AI智能智慧智能制造服务系统
+            {
+                id: 'ai-smart-manufacturing-comprehensive',
+                name: 'AI智能智慧智能制造服务系统',
+                icon: '🏭',
+                desc: '智能制造服务系统，包括智能排产、质量检测、设备维护等',
+                agents: ['AI Manufacturing Director', 'AI Smart Scheduling', 'AI Quality Inspection', 'AI Equipment Maintenance', 'AI Manufacturing AI', 'AI Manufacturing Analytics'],
+                positions: [
+                    { role: 'AI Manufacturing Director', x: 400, y: 30 },
+                    { role: 'AI Smart Scheduling', x: 150, y: 150 },
+                    { role: 'AI Quality Inspection', x: 650, y: 150 },
+                    { role: 'AI Equipment Maintenance', x: 150, y: 300 },
+                    { role: 'AI Manufacturing AI', x: 400, y: 350 },
+                    { role: 'AI Manufacturing Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Manufacturing Director', to: 'AI Smart Scheduling', content: '智能排产' },
+                    { from: 'AI Manufacturing Director', to: 'AI Manufacturing Analytics', content: '制造分析' },
+                    { from: 'AI Smart Scheduling', to: 'AI Quality Inspection', content: '质量检测' },
+                    { from: 'AI Quality Inspection', to: 'AI Equipment Maintenance', content: '设备维护' },
+                    { from: 'AI Equipment Maintenance', to: 'AI Manufacturing AI', content: '智能制造AI' }
+                ]
+            },
+            // AI智能智慧智慧旅游服务系统
+            {
+                id: 'ai-smart-travel-comprehensive',
+                name: 'AI智能智慧智慧旅游服务系统',
+                icon: '✈️',
+                desc: '智慧旅游服务系统，包括行程规划、景点推荐、导游服务等',
+                agents: ['AI Travel Director', 'AI Trip Planner', 'AI Attraction Recommender', 'AI Tour Guide', 'AI Travel AI', 'AI Travel Analytics'],
+                positions: [
+                    { role: 'AI Travel Director', x: 400, y: 30 },
+                    { role: 'AI Trip Planner', x: 150, y: 150 },
+                    { role: 'AI Attraction Recommender', x: 650, y: 150 },
+                    { role: 'AI Tour Guide', x: 150, y: 300 },
+                    { role: 'AI Travel AI', x: 400, y: 350 },
+                    { role: 'AI Travel Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Travel Director', to: 'AI Trip Planner', content: '行程规划' },
+                    { from: 'AI Travel Director', to: 'AI Travel Analytics', content: '旅游分析' },
+                    { from: 'AI Trip Planner', to: 'AI Attraction Recommender', content: '景点推荐' },
+                    { from: 'AI Attraction Recommender', to: 'AI Tour Guide', content: '导游服务' },
+                    { from: 'AI Tour Guide', to: 'AI Travel AI', content: '智慧旅游AI' }
+                ]
+            },
+            // AI智能智慧餐饮服务系统
+            {
+                id: 'ai-smart-dining-comprehensive',
+                name: 'AI智能智慧餐饮服务系统',
+                icon: '🍽️',
+                desc: '智慧餐饮服务系统，包括菜单推荐、预订管理、厨房调度等',
+                agents: ['AI Dining Director', 'AI Menu Recommender', 'AI Reservation Manager', 'AI Kitchen Scheduler', 'AI Dining AI', 'AI Dining Analytics'],
+                positions: [
+                    { role: 'AI Dining Director', x: 400, y: 30 },
+                    { role: 'AI Menu Recommender', x: 150, y: 150 },
+                    { role: 'AI Reservation Manager', x: 650, y: 150 },
+                    { role: 'AI Kitchen Scheduler', x: 150, y: 300 },
+                    { role: 'AI Dining AI', x: 400, y: 350 },
+                    { role: 'AI Dining Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Dining Director', to: 'AI Menu Recommender', content: '菜单推荐' },
+                    { from: 'AI Dining Director', to: 'AI Dining Analytics', content: '餐饮分析' },
+                    { from: 'AI Menu Recommender', to: 'AI Reservation Manager', content: '预订管理' },
+                    { from: 'AI Reservation Manager', to: 'AI Kitchen Scheduler', content: '厨房调度' },
+                    { from: 'AI Kitchen Scheduler', to: 'AI Dining AI', content: '智慧餐饮AI' }
+                ]
+            },
+            // AI智能智慧娱乐服务系统
+            {
+                id: 'ai-smart-entertainment-comprehensive',
+                name: 'AI智能智慧娱乐服务系统',
+                icon: '🎭',
+                desc: '智慧娱乐服务系统，包括活动推荐、内容创作、票务管理等',
+                agents: ['AI Entertainment Director', 'AI Event Recommender', 'AI Content Creator', 'AI Ticket Manager', 'AI Entertainment AI', 'AI Entertainment Analytics'],
+                positions: [
+                    { role: 'AI Entertainment Director', x: 400, y: 30 },
+                    { role: 'AI Event Recommender', x: 150, y: 150 },
+                    { role: 'AI Content Creator', x: 650, y: 150 },
+                    { role: 'AI Ticket Manager', x: 150, y: 300 },
+                    { role: 'AI Entertainment AI', x: 400, y: 350 },
+                    { role: 'AI Entertainment Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Entertainment Director', to: 'AI Event Recommender', content: '活动推荐' },
+                    { from: 'AI Entertainment Director', to: 'AI Entertainment Analytics', content: '娱乐分析' },
+                    { from: 'AI Event Recommender', to: 'AI Content Creator', content: '内容创作' },
+                    { from: 'AI Content Creator', to: 'AI Ticket Manager', content: '票务管理' },
+                    { from: 'AI Ticket Manager', to: 'AI Entertainment AI', content: '智慧娱乐AI' }
+                ]
+            },
+            // AI智能智慧法律服务系统
+            {
+                id: 'ai-smart-legal-comprehensive',
+                name: 'AI智能智慧法律服务系统',
+                icon: '⚖️',
+                desc: '智慧法律服务系统，包括案例分析、合同审查、法律咨询等',
+                agents: ['AI Legal Director', 'AI Case Analyzer', 'AI Contract Reviewer', 'AI Legal Consultant', 'AI Legal AI', 'AI Legal Analytics'],
+                positions: [
+                    { role: 'AI Legal Director', x: 400, y: 30 },
+                    { role: 'AI Case Analyzer', x: 150, y: 150 },
+                    { role: 'AI Contract Reviewer', x: 650, y: 150 },
+                    { role: 'AI Legal Consultant', x: 150, y: 300 },
+                    { role: 'AI Legal AI', x: 400, y: 350 },
+                    { role: 'AI Legal Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Legal Director', to: 'AI Case Analyzer', content: '案例分析' },
+                    { from: 'AI Legal Director', to: 'AI Legal Analytics', content: '法律分析' },
+                    { from: 'AI Case Analyzer', to: 'AI Contract Reviewer', content: '合同审查' },
+                    { from: 'AI Contract Reviewer', to: 'AI Legal Consultant', content: '法律咨询' },
+                    { from: 'AI Legal Consultant', to: 'AI Legal AI', content: '智慧法律AI' }
+                ]
+            },
+            // AI智能智慧健康服务系统
+            {
+                id: 'ai-smart-health-comprehensive',
+                name: 'AI智能智慧健康服务系统',
+                icon: '💪',
+                desc: '智慧健康服务系统，包括健康监测、运动建议、营养规划等',
+                agents: ['AI Health Director', 'AI Health Monitor', 'AI Exercise Advisor', 'AI Nutrition Planner', 'AI Health AI', 'AI Health Analytics'],
+                positions: [
+                    { role: 'AI Health Director', x: 400, y: 30 },
+                    { role: 'AI Health Monitor', x: 150, y: 150 },
+                    { role: 'AI Exercise Advisor', x: 650, y: 150 },
+                    { role: 'AI Nutrition Planner', x: 150, y: 300 },
+                    { role: 'AI Health AI', x: 400, y: 350 },
+                    { role: 'AI Health Analytics', x: 650, y: 300 }
+                ],
+                messageFlows: [
+                    { from: 'AI Health Director', to: 'AI Health Monitor', content: '健康监测' },
+                    { from: 'AI Health Director', to: 'AI Health Analytics', content: '健康分析' },
+                    { from: 'AI Health Monitor', to: 'AI Exercise Advisor', content: '运动建议' },
+                    { from: 'AI Exercise Advisor', to: 'AI Nutrition Planner', content: '营养规划' },
+                    { from: 'AI Nutrition Planner', to: 'AI Health AI', content: '智慧健康AI' }
+                ]
             }
         ];
 
@@ -53984,7 +54146,57 @@
             'AI Broadband Internet': { icon: '📶', color: '#22c55e', role: 'AI宽带互联网' },
             'AI Remote Sensing': { icon: '🛰️', color: '#f97316', role: 'AI遥感监测' },
             'AI LEO AI': { icon: '🤖', color: '#8b5cf6', role: 'AI低轨卫星AI' },
-            'AI LEO Analytics': { icon: '📊', color: '#06b6d4', role: 'AI低轨分析' }
+            'AI LEO Analytics': { icon: '📊', color: '#06b6d4', role: 'AI低轨分析' },
+            // Cycle 556 新增角色 - 7个行业服务系统
+            // AI智能智慧智慧安防服务系统
+            'AI Security Director': { icon: '🛡️', color: '#f59e0b', role: 'AI安防总监' },
+            'AI Video Surveillance': { icon: '📹', color: '#3b82f6', role: 'AI视频监控' },
+            'AI Intrusion Detection': { icon: '🔔', color: '#22c55e', role: 'AI入侵检测' },
+            'AI Emergency Response': { icon: '🚨', color: '#f97316', role: 'AI应急响应' },
+            'AI Security AI': { icon: '🤖', color: '#8b5cf6', role: 'AI智慧安防AI' },
+            'AI Security Analytics': { icon: '📊', color: '#06b6d4', role: 'AI安防分析' },
+            // AI智能智慧智能制造服务系统
+            'AI Manufacturing Director': { icon: '🏭', color: '#f59e0b', role: 'AI制造总监' },
+            'AI Smart Scheduling': { icon: '📅', color: '#3b82f6', role: 'AI智能排产' },
+            'AI Quality Inspection': { icon: '✅', color: '#22c55e', role: 'AI质量检测' },
+            'AI Equipment Maintenance': { icon: '🔧', color: '#f97316', role: 'AI设备维护' },
+            'AI Manufacturing AI': { icon: '🤖', color: '#8b5cf6', role: 'AI智能制造AI' },
+            'AI Manufacturing Analytics': { icon: '📊', color: '#06b6d4', role: 'AI制造分析' },
+            // AI智能智慧智慧旅游服务系统
+            'AI Travel Director': { icon: '✈️', color: '#f59e0b', role: 'AI旅游总监' },
+            'AI Trip Planner': { icon: '🗺️', color: '#3b82f6', role: 'AI行程规划' },
+            'AI Attraction Recommender': { icon: '🏞️', color: '#22c55e', role: 'AI景点推荐' },
+            'AI Tour Guide': { icon: '🎤', color: '#f97316', role: 'AI导游服务' },
+            'AI Travel AI': { icon: '🤖', color: '#8b5cf6', role: 'AI智慧旅游AI' },
+            'AI Travel Analytics': { icon: '📊', color: '#06b6d4', role: 'AI旅游分析' },
+            // AI智能智慧餐饮服务系统
+            'AI Dining Director': { icon: '🍽️', color: '#f59e0b', role: 'AI餐饮总监' },
+            'AI Menu Recommender': { icon: '📋', color: '#3b82f6', role: 'AI菜单推荐' },
+            'AI Reservation Manager': { icon: '📞', color: '#22c55e', role: 'AI预订管理' },
+            'AI Kitchen Scheduler': { icon: '👨‍🍳', color: '#f97316', role: 'AI厨房调度' },
+            'AI Dining AI': { icon: '🤖', color: '#8b5cf6', role: 'AI智慧餐饮AI' },
+            'AI Dining Analytics': { icon: '📊', color: '#06b6d4', role: 'AI餐饮分析' },
+            // AI智能智慧娱乐服务系统
+            'AI Entertainment Director': { icon: '🎭', color: '#f59e0b', role: 'AI娱乐总监' },
+            'AI Event Recommender': { icon: '🎪', color: '#3b82f6', role: 'AI活动推荐' },
+            'AI Content Creator': { icon: '🎨', color: '#22c55e', role: 'AI内容创作' },
+            'AI Ticket Manager': { icon: '🎫', color: '#f97316', role: 'AI票务管理' },
+            'AI Entertainment AI': { icon: '🤖', color: '#8b5cf6', role: 'AI智慧娱乐AI' },
+            'AI Entertainment Analytics': { icon: '📊', color: '#06b6d4', role: 'AI娱乐分析' },
+            // AI智能智慧法律服务系统
+            'AI Legal Director': { icon: '⚖️', color: '#f59e0b', role: 'AI法律总监' },
+            'AI Case Analyzer': { icon: '🔍', color: '#3b82f6', role: 'AI案例分析' },
+            'AI Contract Reviewer': { icon: '📄', color: '#22c55e', role: 'AI合同审查' },
+            'AI Legal Consultant': { icon: '💬', color: '#f97316', role: 'AI法律咨询' },
+            'AI Legal AI': { icon: '🤖', color: '#8b5cf6', role: 'AI智慧法律AI' },
+            'AI Legal Analytics': { icon: '📊', color: '#06b6d4', role: 'AI法律分析' },
+            // AI智能智慧健康服务系统
+            'AI Health Director': { icon: '💪', color: '#f59e0b', role: 'AI健康总监' },
+            'AI Health Monitor': { icon: '💓', color: '#3b82f6', role: 'AI健康监测' },
+            'AI Exercise Advisor': { icon: '🏃', color: '#22c55e', role: 'AI运动建议' },
+            'AI Nutrition Planner': { icon: '🥗', color: '#f97316', role: 'AI营养规划' },
+            'AI Health AI': { icon: '🤖', color: '#8b5cf6', role: 'AI智慧健康AI' },
+            'AI Health Analytics': { icon: '📊', color: '#06b6d4', role: 'AI健康分析' }
         };
 
         // 拖拽相关变量
